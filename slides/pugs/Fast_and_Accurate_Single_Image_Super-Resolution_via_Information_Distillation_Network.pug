@@ -1,0 +1,28 @@
++slide
+  .title Fast and Accurate Single Image Super-Resolution via Information Distillation Network
+  .info
+    .authors Zheng Hui, Xiumei Wang, Xinbo Gao
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 元の低解像度画像から高解像度画像を再構築するための、深くてコンパクトなCNNを提案。提案モデルは、特徴抽出ブロック、積み重ね情報蒸留ブロック、再構成ブロックの3部構成。これにより、情報量が豊富かつ効率的に特徴を徐々に抽出できる。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180331FaASISR.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p CNNが超解像殿画像を扱うようになってきたが、ネットワークが増大するにつれて、計算上の複雑さとメモリ消費という問題が生じる。これらの問題を解決するためのコンパクトなCNN。
+  .item4
+    .text
+      h1 結果・リンク集
+      p PSNR、SSIM、IFCの4つのデータセットで検証し、精度向上を確認。デシジョンおよび圧縮アーチファクト低減などの他の画像修復問題にも応用可能？
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.08679.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  

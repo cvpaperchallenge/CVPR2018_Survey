@@ -1,0 +1,32 @@
++slide
+  .title Detecting and Recognizing Human-Object Interactions
+  .info
+    .authors Georgia Gkioxari, Ross Girshick, Piotr Dollár, Kaiming He
+    .conference CVPR 2018 (spotlight)
+  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+  .item1
+    .text
+      h1 概要
+      p 人物検出と同時に人物行動やその物体とのインタラクションも含めて学習を行うモデルを提案する。本論文では物体候補の中でも特にインタラクションに関係ありそうな物体に特化して認識ができるようにする。さらに、検出された<human, verb, object>のペアを用いて学習する（図の場合には<human, cut, knnife>）。さらに、その他の行動（図の場合にはstand）を同時に推定することもできる。モデルはFaster R-CNNをベースとするが、物体検出（box, class）、行動推定（action, target）、インタラクション（action）を推定して誤差を計算する。さらに、推定した人物位置に対する対象物体の方向も確率的に計算することが可能。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180322HOI.png`,alt="180322HOI")
+  .item3
+    .text
+      h1 新規性・結果
+      p 人間に特化した検出と行動推定の枠組みを提案した。V-COCO（Verbs in COCO）にて、相対的に26%精度が向上（31.8=>40.0）、HICO-DETデータセットにて27%相対的な精度向上が見られた。計算速度は135ms/imageであり、高速に計算が可能である。
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 単純な多タスク学習ではなく、人物に特化して対象物体の位置も確率的に推定しているところがGood。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1704.07333.pdf") 論文
+        li
+          a(href="https://gkioxari.github.io/InteractNet/index.html") Project
+        li
+          a(href="https://github.com/s-gupta/v-coco") Verbs in COCO DB
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.3.22 19:55:34

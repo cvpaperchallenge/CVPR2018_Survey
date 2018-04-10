@@ -1,0 +1,30 @@
++slide
+  .title LayoutNet: Reconstructing the 3D Room Layout from a Single RGB Image
+  .info
+    .authors Chuhang Zou, Alex Colburn, Qi Shan, Derek Hoiem
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 単一のパースペクティブまたはパノラマ画像から屋内3Dルームレイアウトを推定するLayoutNetの提案。最初に、消失点を分析し、水平になるように画像を整列。これにより、壁と壁の境界が垂直になり、ノイズ低減。画像からコーナー(レイアウト接合点)と境界を、エンコーダ/デコーダ構造のCNNで出力。最後に、3D Layoutパラメータを、予測したコーナーと境界に適合するように最適化する。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180401LayoutNet.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p アーキテクチャはRoomNetと似ているが、消失点に基づいて画像を整列させ、複数のレイアウト要素（コーナー、境界線、サイズ、平行移動）を予測し、 “L”形の部屋のような非直方体のマンハッタンレイアウトに対しても適応できる。
+  .item4
+    .text
+      h1 結果・リンク集
+      p 従来手法と比較して、処理速度と正確さにおいて性能の向上。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.08999.pdf") 論文
+        li
+          a(href="https://github.com/zouchuhang/LayoutNet") ソースコード
+  .slide_index #{getSlideIndex()}
+  

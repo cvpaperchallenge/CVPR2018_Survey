@@ -1,0 +1,28 @@
++slide
+  .title Zero-shot Recognition via Semantic Embeddings and Knowledge Graphs
+  .info
+    .authors Xiaolong Wang, Yufei Ye, Abhinav Gupta, The Robotics Institute, Carnegie Mellon University
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p カテゴリの単語の埋め込みと他のカテゴリとの関係(視覚データが提供される)を使用するだけで、学習例がないカテゴリの分類器を学習するゼロショット認識モデルを提案。 knowledge graph (KG) を入力とし、Graph Convolutional Network(GCN)を基に、セマンティック埋め込みとカテゴリの関係の両方を使用して分類器を予測する。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180330KG.jpg`)
+  .item3
+    .text
+      h1 手法
+      p 学習済のKGが与えられると、各ノードに対する意味的埋め込みとして入力を得る。一連のグラフ畳み込みの後、各カテゴリの視覚的分類器を予測する。トレーニング中に、カテゴリの視覚的分類器が与えられ、GCNパラメータを学習。テスト時に、これらのフィルタを使用して、見えないカテゴリの視覚的分類器を予測する。
+  .item4
+    .text
+      h1 結果・リンク集
+      p KGのノイズに対してロバストであり、最先端の精度。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.08035.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  

@@ -1,0 +1,28 @@
++slide
+  .title Multi-Level Factorisation Net for Person Re-Identification
+  .info
+    .authors Xiaobin Chang, Timothy M. Hospedales, Tao Xiang
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 人間の視覚的外観を、人の手によるアノテーションなしかつ、複数のセマンティックレベルで識別因子に分解する Multi-Level Factorisation Net(MLFN)の提案。 MLFNは、複数のブロックで構成されており、各ブロックには、複数の因子モジュールと、各入力画像の内容を解釈するための因子選択モジュールが含まれている。 
+  .item2
+    .text
+      p
+        img(src=`${figpath}180331MLFN.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p 効果的なRe-IDを目指すには、高低のセマンティックレベルでの人の差別化かつ視界不変性をモデル化することである。 近年(2018)のdeep Re-IDモデルは、セマンティックレベルの特徴表現を学習するか、アノテーション付きデータが必要となる。MLFNではこれらを改善する。
+  .item4
+    .text
+      h1 結果・リンク集
+      p 3つのRe-IDと、CIFAR-100の結果で最先端。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.09132.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  

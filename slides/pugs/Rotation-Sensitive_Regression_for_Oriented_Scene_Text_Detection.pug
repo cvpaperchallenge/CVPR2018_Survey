@@ -1,0 +1,27 @@
++slide
+  .title Rotation-Sensitive Regression for Oriented Scene Text Detection
+  .info
+    .authors Minghui Liao, et al.
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 自然画像から文字を検出する。単なる検出ではなく、文字の方向を考慮したバウンディングボックスによる検出手法であるRotation-sensitive Regression Detector (RRD)の提案。回帰ブランチによって、畳み込みフィルタを回転させて回転感知特徴を抽出。分類ブランチによって、回転感性特徴をプーリングすることによって回転不変特徴を抽出。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180329RRD.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p 文字をテーマにした研究では(1)テキストの向きを無視した分類方法と，(2)向きを考慮したバウンディングボックスによる回帰がある。従来研究では、両方のタスクの共有の特徴を使用していたが、互換性がなかったためにパフォーマンスが低下(図b)。そこで、異なる2つのネットワークから抽出した、異なる特性の特徴を分類および回帰することを提案(図d,e)。
+  .item4
+    .text
+      h1 結果・リンク集
+      p ICDAR 2015、MSRA-TD500、RCTW-17およびCOCO-Textを含む3つのシーンテキストのデータセットで最先端のパフォーマンスを達成。向きがある一般物体検出にも応用可能？
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.05265.pdf") 論文
+  .slide_index #{getSlideIndex()}

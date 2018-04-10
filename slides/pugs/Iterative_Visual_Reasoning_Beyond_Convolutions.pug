@@ -1,0 +1,29 @@
++slide
+  .title Iterative Visual Reasoning Beyond Convolutions
+  .info
+    .authors Xinlei Chen, Li-Jia Li, Li Fei-Fei, Abhinav Gupta
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p CNNのような理由を突き止める能力がない認識システムを超えた、反復的なvisual reasoningのための新しいフレームワークの提案。畳み込みベースのローカルモジュールとグラフベースのグローバルモジュールの2コアで構成。2つのモジュールのを繰返し展開し、予測結果を相互にクロスフィードして絞り込む。最後に、両方のモジュールの最高値をアテンションベースのモジュールと組み合わせてプレディクト。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180401IVRBC_1.jpg`)
+  .item3
+    .text
+      h1 新規性・結果・リンク集
+      p ただ畳み込むだけでなく、Spatial(空間的)およびSemanticの空間を探索することができる。下図のように、「人」は「車」を運転するというSpatialとSemanticの双方を兼ね備えた認識を行うことで精度向上を図る。
+      p 通常のCNNと比較して、ADEで8.4％、COCOで3.7％の精度向上。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.11189.pdf") 論文
+  .item4
+    .text
+      p
+        img(src=`${figpath}180401IVRBC_2.jpg`)
+  .slide_index #{getSlideIndex()}
+  

@@ -1,0 +1,30 @@
++slide
+  .title Egocentric Basketball Motion Planning from a Single First-Person Image
+  .info
+    .authors Gedas Bertasius, Aaron Chan, Jianbo Shi
+    .conference CVPR 2018
+  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+  .item1
+    .text
+      h1 概要
+      p 一人称視点の画像からゴールリングに到達するまでのバスケットボール選手の動線を生成する。本論文では3D位置や頭部方向も記録する。同タスクを実行するため、まずは画像空間から12Dのカメラ空間に投影を行うEgoCam CNNを学習。次に予測を行うCNN（Future CNN）を構築、さらに予測位置やゴールまでの位置が正確かどうかを検証するGoal Verifier CNNを用いることでより正確な推定を行うことができる。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180307EgoBasketball.png`,alt="180307EgoBasketball")
+  .item3
+    .text
+      h1 新規性・結果
+      p 複数のネットワークの出力（ここではEgoCamCNNとFutureCNN）を検証するVerification Networkという考え方は面白い。他のネットワークの出力を、検証用のネットワークにより正すというのはあらゆる場面で用いることができる。RNN/LSTM/GANsなどよりも高度な推定ができることが判明した。
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 結果例は動画像を参照。未来予測・３次元投影などコンポーネントがDNNにより高度にできるようになってきたからできた研究。さらに検証用のネットワークを構築することで出力自体を操作している。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.01413v1.pdf") 論文
+        li
+          a(href="https://www.youtube.com/watch?v=wRRRl4QsUQg") YouTube
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.3.7 09:04:15

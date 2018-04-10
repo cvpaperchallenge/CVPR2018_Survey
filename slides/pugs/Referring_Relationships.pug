@@ -1,0 +1,30 @@
++slide
+  .title Referring Relationships
+  .info
+    .authors Ranjay Krishna, Ines Chami, Michael Bernstein, Li Fei-Fei
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p referring relationshipsを利用して同カテゴリのエンティティ間の曖昧さを解消するタスクの提案。特徴抽出後、アテンションを生成。述語を使用することで、アテンションをシフトさせる。この述語シフトモジュールを介して、subjectとobjectの間でメッセージを反復的に渡すことで、2つのエンティティをローカライズ。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180401ReferringRelationships_1.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p 画像中のエンティティ間の関係にはそれぞれ意味があり、画像の理解に役立つ。例えば、図のサッカーの試合の画像では、複数の人写っているが、それぞれは異なる関係を持っている。一人はボールを蹴っており、もう一人はゴールを守っている。 <person-kicking-ball>に着目すると、述語の”kick”を理解することにより、画像内のどの人物が”ball”を蹴っているのかを正しく識別する。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.10362.pdf") 論文
+        li
+          a(href="https://github.com/StanfordVL/ReferringRelationships") ソースコード
+  .item4
+    .text
+      p
+        img(src=`${figpath}180401ReferringRelationships_2.jpg`)
+  .slide_index #{getSlideIndex()}
+  

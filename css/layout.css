@@ -1,0 +1,133 @@
+@import url(../lib/font/noto-sans-jp/noto-sans-jp.css);
+
+.reveal .slides section .paper-abstract {
+    display: grid;
+    grid-template-areas:
+        "slide_index slide_editor"
+        "title title"
+        "info info"
+        "item1 item2"
+        "item3 item4";
+    grid-template-rows: auto auto auto auto 1fr;
+    grid-template-columns: 50vw 50vw;
+    width: 100vw;
+    height: 100vh;
+    text-align: left;
+    margin: 0;
+    font-size: 1.6vw;
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 300;
+}
+
+.reveal .slides section .paper-abstract .title {
+    grid-area: title;
+    font-size: 2.5vw;
+    font-weight: 400;
+    padding: 0.0em 0.8em 0 0.8em;
+}
+
+.reveal .slides section .paper-abstract .info {
+    grid-area: info;
+    display: grid;
+    grid-template-areas:
+        "authors conference paper_id";
+    grid-template-rows: auto;
+    grid-template-columns: auto auto 1fr;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    font-size: 1.6vw;
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 300;
+}
+
+.reveal .slides section .paper-abstract .authors {
+    grid-area: authors;
+    padding: 0.3em 0.3em 1em 1.4em;
+}
+
+.reveal .slides section .paper-abstract .conference {
+    grid-area: conference;
+    padding: 0.3em 0.3em 1em 0em;
+}
+
+.reveal .slides section .paper-abstract .paper_id {
+    grid-area: paper_id;
+    padding: 0.3em 0em 1em 0em;
+}
+
+.reveal .slides section .paper-abstract .item1 {
+    grid-area: item1;
+    padding: 0.3em 1.4em 1em 1.4em;
+}
+
+.reveal .slides section .paper-abstract .item2 {
+    grid-area: item2;
+    padding: 0.3em 1.4em 1em 1.4em;
+}
+
+.reveal .slides section .paper-abstract .item3 {
+    grid-area: item3;
+    padding: 0.3em 1.4em 1em 1.4em;
+}
+
+.reveal .slides section .paper-abstract .item4 {
+  grid-area: item4;
+  padding: 0.3em 1.4em 1em 1.4em;
+}
+
+.reveal .slides section .paper-abstract h1 {
+    font-size: 1.8vw;
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.reveal .slides section .paper-abstract .text {
+    padding: 0.4em 0 0 0;
+    line-height: 1.5em;
+}
+
+.reveal .slides section .paper-abstract .text ul {
+    padding-left: 0em;
+}
+
+.reveal .slides section .paper-abstract .text li {
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 300;
+    padding: 0 0 0.4em 0;
+}
+
+.reveal .slides section .paper-abstract img {
+    background: rgb(0, 0, 0);
+    border: 0;
+    box-shadow: 0 0 0 0;
+    margin: auto;
+    padding: 0;
+    width: auto;
+    height: auto;
+    max-width: auto;
+    max-height: 30vh;
+}
+
+.reveal .slides section .paper-abstract .slide_index {
+    grid-area: slide_index;
+    padding: 0.5em 1.4em 0.3em 1.4em;
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 300;
+    font-size: 1.4vw;
+}
+
+.reveal .slides section .paper-abstract .slide_editor {
+    grid-area: slide_editor;
+    padding: 0.5em 1.4em 0.3em 1.4em;
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 300;
+    font-size: 1.4vw;
+    text-align: right;
+}
+
+.reveal .slides section .paper-abstract .timestamp {
+    display: none;
+}

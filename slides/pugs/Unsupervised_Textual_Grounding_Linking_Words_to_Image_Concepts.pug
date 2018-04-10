@@ -1,0 +1,28 @@
++slide
+  .title Unsupervised Textual Grounding: Linking Words to Image Concepts
+  .info
+    .authors Raymond A. Yeh, Minh N. Do, Alexander G. Schwing
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 単語を検出された画像の概念に関連付けるための、仮説検定を用いた教師なしTextual grounding手法の提案。ネットワークにはVGG-16を採用し、画像内のオブジェクト/単語の空間情報やクラス情報、およびクラス外の新しい概念を学習できる。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180401UTG.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p Textual grounding、すなわち画像内のオブジェクトと単語をリンクさせる既存の技法は、教師付きのディープラーニングとして定式化されており、大規模なデータセットを用いてバウンディングボックスを推定する。しかし、データセットの構築には時間やコストがかかるので教師なしの手法を提案。
+  .item4
+    .text
+      h1 結果・リンク集
+      p ReferIt GameとFlickr30kを用いたベンチマークでそれぞれ7.98％と6.96％以上の精度。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.11185.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  

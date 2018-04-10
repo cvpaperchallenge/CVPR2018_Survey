@@ -1,0 +1,29 @@
++slide
+  .title Alive Caricature from 2D to 3D
+  .info
+    .authors Qianyi Wu, et al.
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 2Dの似顔絵画像から3Dの似顔絵を作成するためのアルゴリズムの提案。似顔絵画像のテストデータとしてはカリカチュアを使用し、カリカチュア画像の3Dモデルとテクスチャ化された画像を生成する。データは、標準の3D顔の変形を座標系に配置(下図、 xは口の開き具合)し、金のオリジナルデータから線形結合によって白い顔を生成する。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180330AC2Dto3D_1.jpg`)
+  .item3
+    .text
+      h1 新規性・結果・リンク集
+      p カリカチュアを集めたデータセットを作って学習するのではなく、標準の3D顔のデータセットから実装でき、アプリケーションの柔軟さを推している。
+      p 3DMMやFaceWareHouseなどの従来手法と比較して、形の歪みが少なく、従来のものよりも綺麗な3D顔の出力が可能。顔以外にも、概形の予測が可能なオブジェクトなら応用できる？
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.06802.pdf") 論文
+  .item4
+    .text
+      p
+        img(src=`${figpath}180330AC2Dto3D_2.jpg`)
+  .slide_index #{getSlideIndex()}
+  

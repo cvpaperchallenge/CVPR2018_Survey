@@ -1,0 +1,29 @@
++slide
+  .title Efficient Interactive Annotation of Segmentation Datasets with Polygon-RNN++
+  .info
+    .authors David Acuna, Huan Ling, Amlan Kar, Sanja Fidler
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p Polygon-RNNのアイデアを踏襲し、ヒューマン・イン・ザ・ループを使って対話的にオブジェクトのポリゴンアノテーションの生成。また、新しいCNNエンコーダアーキテクチャの設計、強化学習によるモデルの効果的な学習、 Graph Neural Networkを使用した出力解像度の向上を行う。これらのアーキテクチャをPolygon-RNN ++と呼ぶ。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180331PolygonRNN++_1.jpg`)
+  .item3
+    .text
+      h1 新規性・結果・リンク集
+      p アノテーション作成時の負担を軽減。より正確にアノテーションを付加できるため、雑音の多いアノテーターに対しても頑健である。
+      p 高い汎化能力となり、既存のピクセルワイズメソッドよりも大幅に改善。ドメイン外のデータセットにも適応可能。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.09693.pdf") 論文
+  .item4
+    .text
+      p
+        img(src=`${figpath}180331PolygonRNN++_2.jpg`)
+  .slide_index #{getSlideIndex()}
+  

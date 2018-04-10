@@ -1,0 +1,28 @@
++slide
+  .title A Minimalist Approach to Type-Agnostic Detection of Quadrics in Point Clouds
+  .info
+    .authors Tolga Birdal, Benjamin Busam, Nassir Navab, Slobodan Ilic, Peter Sturm
+    .conference CVPR 2018
+  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+  .item1
+    .text
+      h1 概要
+      p オクルージョンが発生している場合/複雑な環境下でも簡単な形状がポイントクラウドから検出できる枠組みを提案する。手法は3D楕円形状のフィッティング、3次元空間操作、4点取得により構成。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180324Quadrics.png`,alt="180324Quadrics")
+  .item3
+    .text
+      h1 新規性・結果
+      p タイプに依存しない3次元の二次曲面（楕円球形状）検出を点群の入力から行う手法を考案した。さらに、4点探索問題を3点探索にしてRANSACベースの手法で解を求めた。モデルベースのアプローチよりはフィッティングの性能がよいが、キーポイントベースの手法よりは劣る。
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 曖昧な教示のみで3次元形状探索問題が解決できるようになる？
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.07191.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.3.24 13:04:44

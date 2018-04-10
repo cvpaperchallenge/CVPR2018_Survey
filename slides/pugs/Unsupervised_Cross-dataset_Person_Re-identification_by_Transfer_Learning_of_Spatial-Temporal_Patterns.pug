@@ -1,0 +1,28 @@
++slide
+  .title Unsupervised Cross-dataset Person Re-identification by Transfer Learning of Spatial-Temporal Patterns
+  .info
+    .authors Jianming Lv, et al.
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 歩行者の時空間パターンを用いた、教師なし学習の人物再同定アルゴリズムであるTFusionを提案。既存の人物再同定アルゴリズムのほとんどは、小サイズのラベル付きデータセットを用いた教師付き学習手法である。そのため、大規模な実世界のカメラネットワークに適応することは困難である。また、そこで、ラベルなしデータセットも用いたクロスデータセット手法によって精度向上を図る。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180330TFusion.jpg`)
+  .item3
+    .text
+      h1 手法
+      p まず、歩行者の空間的-時間的パターンを学習するために、ラベル付きデータセットを用いて学習した視覚的分類器を、ラベルなしデータセットに転送。次に、Bayesian fusion modelによって、学習された時空間パターンを視覚的特徴と組み合わせて、分類器を改善。最後に、ラベルのないデータを用いて分類器を段階的に最適化。
+  .item4
+    .text
+      h1 結果・リンク集
+      p 人物再同定のための、教師なしクロスデータセット学習手法の中では最先端。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.07293.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  

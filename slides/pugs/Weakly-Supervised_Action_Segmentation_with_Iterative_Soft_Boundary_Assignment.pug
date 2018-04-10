@@ -1,0 +1,28 @@
++slide
+  .title Weakly-Supervised Action Segmentation with Iterative Soft Boundary Assignment
+  .info
+    .authors Li Ding, Chenliang Xu
+    .conference CVPR 2018
+  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+  .item1
+    .text
+      h1 概要
+      p 時系列の行動検出/セグメンテーション（Action Segmentation）に関する問題をWeakly-Supervised（WS学習）に解いた。ここではTemporal Convolutional Feature Pyramid Network (TCFPN)とIterative Soft Boundary Assignment (ISBA)を繰り返すことで行動に関する条件学習ができてくるという仕組み。TCFPNではフレームの行動を予測し、ISBAではそれを検証、それらを繰り返して行動間の境界線を定めながらWS学習の教師としていく。さらに、WS学習を促進するためにより弱い境界として行動間の繋がりを定義することでWS学習の精度を向上させる。学習はビデオ単位の誤差を最適化することで境界についても徐々に定まる（ここがWS学習の所以）ように学習する。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180329ISBATCFN.png`,alt="180329ISBATCFN")
+  .item3
+    .text
+      h1 新規性・結果
+      p Breakfast dataset, Hollywood extended datasetにて弱教師付き学習とテストを行いState-of-the-artな精度を達成した。
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 弱い教師データを大量に集めると、そろそろ（ある程度の）教師ありデータによる精度を超えそう？もっと汎用的に学習できる枠組みが必要か。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.10699v1.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.3.29 14:27:12

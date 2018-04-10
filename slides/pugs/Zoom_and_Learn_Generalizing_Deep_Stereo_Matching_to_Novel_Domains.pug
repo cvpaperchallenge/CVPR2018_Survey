@@ -1,0 +1,28 @@
++slide
+  .title Zoom and Learn: Generalizing Deep Stereo Matching to Novel Domains
+  .info
+    .authors Jiahao Pang, et al.
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 学習済みデータと新しいドメイン(ground-truthなし)の両方を用いて、ディープステレオマッチングを行うZoom and Lean(ZOLE)の提案。これにより，他のドメインに一般化できるプレトレインモデルを作成することができる。一般化に際する不具合を抑制しながらアップサンプリングを行う、反復最適化問題を定式化する。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180330ZOLE.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p ground-truthデータが不足しているため、CNNを用いたステレオマッチングでは学習済みステレオモデルを新規ドメインに一般化することが困難とされていた。CNN学習時のイテレーションごとに最適化していくイメージ。
+  .item4
+    .text
+      h1 結果・リンク集
+      p スマートフォンで収集したデータを従来の手法に入力すると、物体のエッジがぼやけてしまうが、提案手法のZOLEではこれらを改善できる。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.06641.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  

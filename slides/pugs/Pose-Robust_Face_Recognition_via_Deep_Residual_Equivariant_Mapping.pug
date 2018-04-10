@@ -1,0 +1,30 @@
++slide
+  .title Pose-Robust Face Recognition via Deep Residual Equivariant Mapping
+  .info
+    .authors Kaidi Cao, Yu Rong, Cheng Li, Xiaoou Tang, Chen Change Loy
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 横顔の認識精度を高めるためにDeep Residual EquivAriant Mapping (DREAM)の提案。正面と側面の顔間のマッピングを行うことで特徴空間を対応付ける。これにより、横顔を正面の姿勢に変換して認識を単純化。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180313DREAM_1.jpg`)
+  .item3
+    .text
+      h1 新規性・手法・リンク集
+      p 正面と側面のトレーニング数の不均衡から、現代の顔認識モデルの多くは、正面と比べて横顔を処理するのが比較的貧弱。本手法は姿勢変動を伴う顔認識に限定されない顔認識が可能で、横顔のデータを増やさなくても精度向上。
+      p 上図より、DREAMをCNNに追加し、入力に残差を動的に追加。下図はマッピングによる姿勢変換の例。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.00839.pdf") 論文
+        li
+          a(href="http://mmlab.ie.cuhk.edu.hk/projects/DREAM") ソースコード
+  .item4
+    .text
+      p
+        img(src=`${figpath}180313DREAM_2.jpg`)
+  .slide_index #{getSlideIndex()}

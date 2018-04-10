@@ -1,0 +1,28 @@
++slide
+  .title Towards Human-Machine Cooperation:Self-supervised Sample Mining for Object Detection
+  .info
+    .authors Keze Wang, et al.
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p 物体検出の課題を考慮し、既存のActive Learning(AL)の欠点を改善することを目的とした、Self-Supervised Sample Mining(SSM)の提案。ラベルなし、もしくは一部ラベルのないデータを使って学習することができる。交差検証後のスコアによってサンプルを選別。低い場合にはユーザによってアノテーション、高い場合にはそのままラベルとして採用。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180330SSM.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p 既存のAL法では主に、単一の画像コンテクスト内でサンプル選択基準を定義し、大規模な物体検出において最適ではなく、頑強性および非実用的である。SSMによって、ユーザが必要な部分にだけ介入し、アノテーションの作業を軽減。
+  .item4
+    .text
+      h1 結果・リンク集
+      p アノテーションが少ないデータセットにおいても最先端の精度。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.09867.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  
