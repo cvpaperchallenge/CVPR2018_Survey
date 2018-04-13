@@ -1,0 +1,27 @@
++slide
+  .title Surface Networks
+  .info
+    .authors Ilya Kostrikov, Joan Bruna, Daniele Panozzo, Denis Zorin
+    .conference CVPR 2018
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p 3D triangleメッシュから有用的な三次元幾何情報を抽出するネットワークSurface Networkを提案した．従来のLaplace operatorがintrinsic三次元幾何情報しか抽出できない．しかし，様々な応用場面でextrinsic情報が必要となる．この文章で主要なcurvature方向を抽出できるDirac operator を提案し，従来のLaplace operatorより幅広い場面で応用できる．
+  .item2
+    .text
+      p
+        img(src=`${figpath}SurfaceNetwork_result.png`,alt="SurfaceNetwork_result")
+  .item3
+    .text
+      h1 新規性・結果
+      p ・定性的および定性的な結果によりspatial-temporal predictionsタスクにおいて，従来手法より良い結果を得られている．・variationalエンコーダーを用いたメッシュ合成手法を提案し，有効的に3次元メッシュを生成できる．
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1705.10819") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.13 11:16:55
