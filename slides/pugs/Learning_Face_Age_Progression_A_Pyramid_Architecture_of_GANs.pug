@@ -1,0 +1,31 @@
++slide
+  .title Learning Face Age Progression: A Pyramid Architecture of GANs
+  .info
+    .authors Hongyu Yang, Di Huang, Yunhong Wang and Anil K. Jain
+    .conference CVPR 2018
+  .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/" target="blank") ShintaroYamamoto
+
+  .item1
+    .text
+      h1 概要
+      p 入力画像中の人物の老化顔をGANによって生成する手法の提案。
+        |Discriminatorには生成した画像が合成画像であるか及び目標年代の特徴を保持しているかを判定させ、それに加え元の画像とのL2ノルム及び元の顔画像と同一人物であるかをロスに加えることで、同一人物性を保持している。
+        |その際、Discriminatorの中間層の各出力を途中で取り出すことにより（ピラミッド型ネットワーク），様々な解像度からの年齢特徴の抽出を行う。
+  .item2
+    .text
+      p
+        img(src=`${figpath}Learning_Face_Age_Progression_A_Pyramid_Architecture_of_GANs.png`,alt="Item3Image")
+  .item3
+    .text
+      h1 新規性・結果
+      p 年齢推定及び個人認証タスクによって有効性を確認した。
+        |従来手法では髪や額領域は変化できなかったが、提案手法によってこれらの要素を変化させることを可能とした。
+        |Discriminatorをピラミッド型にすることにより、従来手法に比べてより詳細な老化特徴を取り出すことに成功。
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.10352") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.16 16:14:24
