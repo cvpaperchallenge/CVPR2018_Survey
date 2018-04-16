@@ -1,0 +1,36 @@
++slide
+  .title Seeing Voices and Hearing Faces: Cross-modal biometric matching
+  .info
+    .authors A. Nagrani et al.
+    .conference CVPR 2018
+  .slide_editor Kensho Hara
+
+  .item1
+    .text
+      h1 概要
+      p ある音声と2人分の顔画像から，どちらの人物の声かを推定する課題と，
+        |ある顔画像と2人分の音声から，どちらの音声がその人物の声かを推定する課題の2つを解くという問題設定の研究．
+        |異なるモダリティ間でのマッチングという課題ということ．
+        |ある入力に対応するのがどちらの人物かという2クラス識別の問題設定として定式化．
+        |この問題を解くために，3入力を扱う3-streamのネットワーク構造を持つモデルを提案．
+        |音声もスペクトログラムの形式で画像のように扱い，顔画像，音声ともにConvolutionしていくモデル．
+        |実験では80%程度の識別率を達成し，人と同等の結果が出ている．
+        |二人分の選択肢の性別，国籍，年齢などが同じという設定にすると，60%程度の正答率になるが，こちらでは人 (57%) を上回る結果となっている．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Seeing_Voices_and_Hearing_Faces_Cross-modal_biometric_matching.png`,alt="Seeing_Voices_and_Hearing_Faces_Cross-modal_biometric_matching.png")
+  .item3
+    .text
+      h1 新規性・結果
+      ul
+        li 人物の顔画像と音声の対応付けという新しい問題設定
+        li 人間レベルの高い精度を実現
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1804.00326") 論文 (arXiv)
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.12 15:48:11
