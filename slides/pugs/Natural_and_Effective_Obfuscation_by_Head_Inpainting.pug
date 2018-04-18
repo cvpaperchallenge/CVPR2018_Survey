@@ -1,0 +1,35 @@
++slide
+  .title Natural and Effective Obfuscation by Head Inpainting
+  .info
+    .authors Qianru Sun, Liqian Ma, Seong Joon Oh, Luc Van Gool, Bernt Schiele, Mario Fritz
+    .conference CVPR 2018
+  .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/" target="blank") ShintaroYamamoto
+
+  .item1
+    .text
+      h1 概要
+      p SNSなどで共有された画像には、プライバシー保護の問題が生じる。
+        |プライバシー保護のために顔領域にぼかしや黒塗りなどの処理がされることが多いが、画像としては不自然さが残ってしまう。
+        |そこで、塗りつぶされた領域に顔を挿入することで自然な画像ではあるが別人のためプライバシーを保護できる画像を生成する。
+        |提案手法は、特徴点検出（生成）と顔の挿入の2つのステップに分かれる。
+        |特徴点検出（生成）では、オリジナルの顔画像が存在する場合は既存の特徴点検出によって特徴点を検出する。
+        |対称の画像が既に黒塗りされているなどで特徴点検出ができない場合は、GANによって特徴点を生成する。
+        |次のステップでは、黒塗りされている顔画像と特徴点を入力し、黒塗りされた領域に顔の挿入を行う。
+  .item2
+    .text
+      p
+        img(src=`${figpath}Natural_and_Effective_Obfuscation_by_Head_Inpainting.png`,alt="Item3Image")
+  .item3
+    .text
+      h1 新規性・結果
+      p 特徴点生成器は、GANによって生成することで正解値とのノルム最小化よりも高い精度で生成することを可能にした。
+        |画像に対する処理としてぼかしと黒塗りを比較したところ、ぼかしは顔の情報が一部残るため高い精度での生成が可能である一方、元の人物の情報は黒塗りよりも多く残ることが分かった。
+        |また、顔の形状にも個人性が含まれるためオリジナル画像から検出した特徴点よりもGANによって生成した特徴点を使用した方が個人性は損なわれることが分かった。
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.09001") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.18 15:45:44
