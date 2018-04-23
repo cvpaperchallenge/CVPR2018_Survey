@@ -1,0 +1,31 @@
++slide
+  .title Feature Mapping for Learning Fast and Accurate 3D Pose Inference from Synthetic Images 
+  .info
+    .authors Mahdi Rad   et al.
+    .conference CVPR 2018
+  .slide_editor Tomoyuki Suzuki
+
+  .item1
+    .text
+      h1 概要
+      p 合成データを利用した、6D pose estimationとdepth based 3D hand pose estimationの研究。
+      |埋め込み空間内で、合成データから実データへのマッピング関数を学習する。その関数の学習のためには実データに対応する(grand truthが同じ)合成データが必要であるので、教師あり実データがある程度あることが前提としてある。
+  .item2
+    .text
+      p
+        img(src=`${figpath}Mahdi.png` height=`1000`)
+  .item3
+    .text
+      h1 手法
+      p 
+      |残差構造を持つmapping netを対応するペアを用いて学習する。従来のドメイン適応手法と比較しても提案手法の精度が良く、適応の有無による性能の差も非常に大きい。
+
+  .item4
+    .text
+      h1 メモ・リンク
+      |手法としてはかなりstraight forwardな印象。実データの量を変化させた時の精度変化の結果はあったが、合成データの量を変化させた時の精度変化が気になる。
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1712.03904.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  
