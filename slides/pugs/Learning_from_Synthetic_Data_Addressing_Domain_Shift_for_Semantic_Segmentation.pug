@@ -1,0 +1,34 @@
++slide
+  .title Learning from Synthetic Data: Addressing Domain Shift for Semantic Segmentation
+  .info
+    .authors Sankaranarayanan et al.
+    .conference CVPR 2018
+  .slide_editor Tomoyuki Suzuki
+
+  .item1
+    .text
+      h1 概要
+      p GANによる画像生成の枠組みを中間的に取り入れることでSemantic segmentationにおけるドメイン適応を行う研究。
+      |従来の特徴ベクトルに対する敵対的学習によって埋め込み空間におけるdomain gapを縮める手法に対して、この研究では特徴ベクトルから画像を復元し、その画像が識別器によってどのドメインからの復元か識別できないように埋め込み関数を学習させる。
+      |合成データからのドメイン適応で最も良い精度を達成。
+  .item2
+    .text
+      p
+        img(src=`${figpath}Swami.png` height=`1000`)
+  .item3
+    .text
+      h1 手法
+      p 
+        |Source(S)は教師ありデータ、Target(T)は教師なしデータ。学習のフローは以下である: 
+        |(1)識別器(D)は入力画像に対してpixel-wiseにsource real(SR), source fake(SF), target real(TR), target fake(TF)の4値分類を学習。(2)生成器(G)は入力特徴ベクトルからDによってSからの特徴はSRに、 Sからの特徴はTRに分類されるよう学習。
+        |(+入力との担保を取るL2Loss)(3)埋め込み関数(F)はSからの入力はTRに、Tからの入力はSRに分類されるように学習。さらにSからのサンプルに対してはFからの特徴マップを入力としてsegmentation taskを解くCNNを学習。
+
+  .item4
+    .text
+      h1 メモ・リンク
+      |論文内にこの手法がうまくいく理由の裏付け的実験や考察が詳細にはなかったが、特徴量から画像再生成を行うことによる入力情報の保存とS/T間の敵対的学習による分布の混合が一つのフローで行えていることが効いているように思えた。実際特徴量に対するS/T間の敵対的学習のみの場合よりも大きく精度が向上している。
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.06969") 論文
+  .slide_index #{getSlideIndex()}
+  

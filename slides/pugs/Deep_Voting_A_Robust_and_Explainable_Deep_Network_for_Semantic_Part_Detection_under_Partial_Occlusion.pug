@@ -1,0 +1,39 @@
++slide
+  .title DeepVoting: A Robust and Explainable Deep Network for Semantic Part Detection under Partial Occlusion
+  .info
+    .authors Z. Zhang et al.
+    .conference CVPR 2018
+  .slide_editor Kensho Hara
+
+  .item1
+    .text
+      h1 概要
+      p 画像中から物体のパーツ（車のタイヤなど）を検出するための新しい手法を提案．
+        |投票ベースの手法でオクルージョンへの頑健性を持つ．
+        |Visual ConceptというMid-levelな特徴をベースにして，
+        |個々のMid-level特徴から推定されるパーツの位置推定結果を積み重ねていくことでパーツを検出する．
+        |Visual Conceptの検出とそれに基づく投票処理はConvolutionによって実装されており，
+        |End-to-Endでの学習が可能になっているところがポイント．
+        |Faster-RCNNといった物体検出アプローチよりもオクルージョンに頑健なことが実験的に確認できている．
+  .item2
+    .text
+      p
+        img(src=`${figpath}DeepVoting_A_Robust_and_Explainable_Deep_Network_for_Semantic_Part_Detection_under_Partial_Occlusion..png`,alt="DeepVoting_A_Robust_and_Explainable_Deep_Network_for_Semantic_Part_Detection_under_Partial_Occlusion..png")
+  .item3
+    .text
+      h1 新規性・結果
+      ul
+        li CNNベースのVotingによるオクルージョンに頑健なパーツ検出手法を提案
+        li Visual Conceptの検出から投票までConvolutionで実装
+        li 人工的なオクルージョン環境下での有効性を確認
+  .item4
+    .text
+      h1 コメント・リンク
+      ul
+        li 投票処理までConvolutionで表現されているのが面白い
+        li
+          a(href="https://arxiv.org/abs/1709.04577") 論文
+        li
+          a(href="http://lingxixie.com/PDFs/Zhang_CVPR18_DeepVoting_SuppMat.pdf") Supplementary Material
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.23 06:07:59
