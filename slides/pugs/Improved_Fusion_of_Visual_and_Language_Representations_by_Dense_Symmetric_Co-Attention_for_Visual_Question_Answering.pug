@@ -1,0 +1,30 @@
++slide
+  .title Improved Fusion of Visual and Language Representations by Dense Symmetric Co-Attention for Visual Question Answering
+  .info
+    .authors Nguyen Duy Kien, Takayuki Okatani
+    .conference CVPR 2018
+    .paper_id 739
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p VQAタスクに用いられるattentionメカニズム“Dense Co-attention Network”(DCN)を提案した．DCNはfully対称的で，階層的にスタックできるため，マルチステップで視覚及び言語特徴のインターアクションを可能にする．具体的には，まず言語から画像の注目マップ及び画像から言語の注目マップを生成し，そして連結によりマルチモデルの特徴を融合する（dense co-attention layer)．そして階層的にdense co-attention layerをスタックにより，さらにマルチモデル特徴を深く探る．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Co-attention_VQA.png`,alt="Co-attention_VQA")
+  .item3
+    .text
+      h1 新規性・結果
+      p ・従来のattention for VQAタスクより，有効的でデンスな視覚と言語モデルの特徴の融合メカニズムDCN（構造的にも簡潔で拡張しやすい）を提案し，将来の様々なVQAタスクに用いられる．
+        |・VQA, VQA2.0データセットで2017 VQA優勝したモデルより良い精度を達成した．
+        |・定性的な実験により，提案モデルが有効的にattentionを抽出できることを証明した
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1804.00775.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.27 11:49:21
