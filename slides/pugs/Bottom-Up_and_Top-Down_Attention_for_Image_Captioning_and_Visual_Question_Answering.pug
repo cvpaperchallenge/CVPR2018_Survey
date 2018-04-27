@@ -1,0 +1,29 @@
++slide
+  .title Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering
+  .info
+    .authors Peter Anderson, Xiaodong He, Chris Buehler,Damien Teney, Mark Johnson, Stephen Gould, Lei Zhang
+    .conference CVPR 2018
+    .paper_id 738
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p Image captioningとVQAタスクに用いられるBottom-upとtop-down attentionをコンバインするメカニズムを提案した．従来のオブジェクトレベルの領域の抽出のほか，salient 領域の抽出も行う．Faster R-CNNを利用したbottom-up的にsalient 領域を特徴ベクトルを抽出し， top-downにより特徴のウェットを決めることをベースに， Image captioningとVQAのアーキテクチャを提案し（右図），両方ともstate-of-artな性能を得られた．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Bottom_up_Top_down_VQA.png`,alt="Bottom_up_Top_down_VQA")
+  .item3
+    .text
+      h1 新規性・結果
+      p ・従来のVQAとImage captioningは主にタスクスペシフィックなtop-downタイプのattentionを用いる．この論文で，人の視覚attentionメカニズムから，タスクスペシフィックなtop-downタイプのattentionを及びsalient 領域に注目するBottom-upのattentionを用いることと主張した．
+        |・2017 VQA Challengeにおいて優勝した．VQA v2.0 test-standardにおいて70.3%の精度を達成した．また， Image captioning タスクに対しMSCOCO Karpathy testで従来の手法より良い性能を達成した．
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1707.07998.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.27 10:27:30
