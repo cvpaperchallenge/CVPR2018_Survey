@@ -1,0 +1,28 @@
++slide
+  .title Tips and Tricks for Visual Question Answering: Learning from the 2017 Challenge
+  .info
+    .authors Damien Teney, Peter Anderson, Xiaodong He, Anton Van den Hengel
+    .conference CVPR 2018
+    .paper_id 547
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p 2017 VQA Challengeに優勝したモデルのモデル詳細を紹介し，さらにいかにVQAモデルの精度を上げられるかのコツとテクニックを紹介した．モデルのコアなところは視覚と質問文の意味特徴をジョイントでエンベディングし，さらにマルチ-ラベル予測を行う．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Tip_Tricks_VQA.png`,alt="Tip_Tricks_VQA")
+  .item3
+    .text
+      h1 新規性・結果
+      p 論文により，VQAの性能上げるために，以下のテクニックがある：1.sigmoid outputsを用いて，マルチアンサーをできるようにする．2．Soft scoresを用いて，分類ではなく回帰を行う．3．Bottom-up attentionから注目領域の画像特徴を用いる．4．Gated tanhを活性化関数に用いる．5．Pre-trainedウェットで初期化する．6．ミニバッチサイズを大きく設定し，training-dataにシャッフリングを用いる
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1708.02711") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.4.26 16:58:02
