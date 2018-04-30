@@ -1,0 +1,34 @@
++slide
+  .title Learning Spatial-Temporal Regularized Correlation Filters for Visual Tracking
+  .info
+    .authors Feng Li, Cheng Tian, Wangmeng Zuo, Lei Zhang, Ming-Hsuan Yang
+    .conference CVPR 2018
+    .paper_id 1353
+  .slide_editor: Takahiro Itazuri
+
+  .item1
+    .text
+      h1 概要
+      p Spatially Regularized Discriminative Correlation Filters (SRDCF)に空間正則化を導入した一般物体追跡手法Spatial-Temporal Regularized Correlation Filters (STRCF)を提案. SRDCFは複数学習画像を利用するため, 計算量が大きくなってしまうことに着目し, 単一学習画像に対するSRDCFにonline Passive-Aggresive learningの考えに基づいて時間正則化を導入. STRCFはADMMで直接解くことができるため, DCFの高速性を保持したまま高い精度で追跡が可能となっている.
+  .item2
+    .text
+      p
+        img(src=`${figpath}STRCF.png`,alt="STRCF")
+  .item3
+    .text
+      h1 新規性・結果
+      ul
+        li 単一学習画像に対するSRDCFに時間正則化を導入することで, 複数学習画像に対するSRDCFを近似したSRTCFを定式化
+        li online Passive-Aggresive learningを拡張することで, STRCFは大きな見た目の変化に対して頑健である
+        li SRTCFはADMMを用いて, 3つの部分問題に帰着させ, Eckstein-Bertsekas条件を満たし, 大域的最適解への収束性を保証している
+        li OTB-2015, Temple-Color, VOT-2016データセットにおいてSRDCFより精度も計算速度も向上させた
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.08679.pdf") 論文
+        li
+          a(href="https://github.com/lifeng9472/STRCF") コード
+  .slide_index #{getSlideIndex()}
+
