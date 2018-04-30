@@ -8,24 +8,26 @@
   .item1
     .text
       h1 概要
-      p 単眼奥行き推定問題を、view synthesis問題とstereo matching問題に分けて考える方法を提案。
-        |view synthesis問題では入力を左画像として捉え、view synthesis networkにより右画像を生成する。
-        |Stereo matching問題では、左画像と右画像を用い、stereo matching networkにより奥行きを推定する。
+      p 従来の単眼奥行き推定法では, 推論の際に幾何的な制約を明示的に課していないことや多くのground truth labeled dataが必要といった問題があった.
+        |この研究では単眼奥行き推定問題をview synthesis問題とstereo matching問題に分けて考えることにより, 従来法の問題を解決する.
+        |view synthesis問題では, 入力を左画像として捉え, view synthesis networkにより右画像を生成する. stereo matching問題では, 左画像を右画像を用いstereo matching networkにより奥行きを推定する.
   .item2
     .text
       p
-        img(src=`${figpath}single_view_stereo_matching.png`,alt="single_view_stereo_matching")
+        img(src=`${figpath}single_view_stereo_matching.PNG`,alt="single_view_stereo_matching.PNG")
   .item3
     .text
       h1 新規性・結果
-      p 単眼奥行き推定問題を、上記２つの問題に分けて考えた。
-        |また、従来法よりもトレーニングデータの量が少なくなり、精度も向上。
+      ul
+        li 単眼奥行き推定問題をview synthesis問題とstereo matching問題に分けて考えた.
+        li 従来法の問題を解決.
+        li 従来のどの方法よりも精度が高い.
   .item4
     .text
       h1 リンク集
       ul
         li
-          a(href="https://arxiv.org/pdf/1803.02612.pdf") 論文
+          a(href="https://arxiv.org/pdf/1803.02612.pdf") 論文URL
   .slide_index #{getSlideIndex()}
-  .timestamp 2018.4.16 12:07:05
+  .timestamp 2018.4.30 18:04:11
 
