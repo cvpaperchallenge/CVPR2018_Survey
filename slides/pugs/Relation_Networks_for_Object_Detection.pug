@@ -1,0 +1,31 @@
+﻿+slide
+  .title Relation Networks for Object Detection
+  .info
+    .authors Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, Yichen Wei
+    .conference CVPR 2018
+    .paper_id 439
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p ・マルチオブジェクトのアピアランス特徴及び幾何情報間の関係を取り扱える，様々なタスク（物体検出，VQAなど）に用いられるObject Relation Moduleを提案した．
+        |・最近attentionに関する研究が発展し，著者たちがattentionモジュールがelement間の依頼性を学習できる面から，物体検出に応用できるアテンションモジュールを提案した．
+        |・提案モジュールを物体検出の2つの段階に応用できる：インスタンス認識段階で提案モジュールによりオブジェクト間の関係を習得でき，精度を上げられる；duplicate removal段階で提案モジュールにより有効的に物体領域を抽出できる．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Relation-Networks-for-Object-Detection.png`,alt="Relation-Networks-for-Object-Detection")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p ・従来の物体検出手法は物体ごとに推定を行い，物体間の関係を利用しない．提案手法はObject Relation Moduleを提案し，物体間の関係を学習することで，物体検出の精度を更に向上した．
+  .item4
+    .text
+      h1 コメント・リンク集
+      p ・提案モジュールが付加の監督信号不要，既存なネットワークに追加しやすい特徴があるため，様々なタスクでの応用が期待される
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.11575") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.1 16:37:43
