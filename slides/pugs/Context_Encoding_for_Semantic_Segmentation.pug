@@ -1,0 +1,32 @@
+﻿+slide
+  .title Context Encoding for Semantic Segmentation
+  .info
+    .authors Hang Zhang, Kristin Dana, Jianping Shi, Zhongyue Zhang, Xiaogang Wang, Ambrish Tyagi, Amit Agrawal
+    .conference CVPR 2018
+    .paper_id 893
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p ・コンテキスト情報の抽出を利用したセマンティックセグメンテーションの効率を上げられるContext Encoding Moduleを提案した．
+        |・従来の階層式シーンの高レベルから低レベル特徴の抽出を行うネットワーク(eg. PSPNet)にはシーンのコンテキスト情報の抽出がexplicitではない問題点があり，従来のグローバル特徴抽出ネットワークの知識から，シーンのコンテキスト情報を抽出することにより，セマンティックセグメンテーションの効率を上げられるモジュールを提案した．
+        |・具体的には：Encodingによりシーンのコンテキスト情報をキャプチャーし，クラス依存の特徴マップを選択的に強調表示できるContext Encoding Moduleを提案した； Semantic Encoding Loss (SE-loss)を提案した； Context Encoding Moduleを利用したセマンティックセグメンテーションネットワークEncNetを提案した
+  .item2
+    .text
+      p
+        img(src=`${figpath}Context-Encoding-for-Semantic-Segmentation.png`,alt="Context-Encoding-for-Semantic-Segmentation")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p ・ PASCAL VOC 2012において85.9% mIoUを達成した
+        |・提案ネットワークをCIFAR-10 datasetに応用し，14層だけのネットワークで100層超えのネットワークと同じレベルの精度を実現した
+  .item4
+    .text
+      h1 コメント・リンク集
+      p ・シンプルなネットワークでstate-of-the-artな精度を実現したので，将来的に広く用いられそう
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.08904.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.1 17:39:13
