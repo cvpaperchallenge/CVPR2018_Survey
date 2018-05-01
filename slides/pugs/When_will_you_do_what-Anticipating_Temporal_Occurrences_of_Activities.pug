@@ -1,0 +1,30 @@
++slide
+  .title When will you do what? - Anticipating Temporal Occurences of Activities
+  .info
+    .authors Yazan Abu Farha, Alexander Richard, Juergen Gall
+    .conference CVPR 2018
+  .slide_editor Shinnosuke Usami
+  .item1
+    .text
+      h1 概要
+      p 5分先までのアクションとそのアクションの持続時間を予測するためのモデルを2通り(RNN or CNN)提案。はじめに、両手法共にRNN-HMMより観測した動画中のアクション認識を行う。次にRNNモデルでは観測したアクションより得られた予測結果を再帰的に入力データとしたRNNを構築することで長期的な予測を可能とする。CNNモデルでは、アクションラベルとそのアクションの時間的長さをマトリクス化した入力データをCNNに与え、予測結果を出力する。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180501WhenWillYouDoWhat.png`,alt="180501WhenWillYouDoWhat")
+  .item3
+    .text
+      h1 新規性・結果
+      p 従来のアクティビティ予測手法は数秒先の予測を行う手法がほとんどだったのに対し、本論文では5分先までのアクティビティ予測がRNN/CNN両モデルにおいて可能となった。両モデルともに既存手法に対し複数のデータセットで有用な結果が出ており、予測対象が20秒以内の事象の場合、RNNモデルの方が良い結果が出た。
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1804.00892") 論文
+        li
+          a(href="https://www.youtube.com/watch?v=xMNYRcVH_oI") 動画
+        li
+          a(href="https://github.com/yabufarha/anticipating-activities") Github 
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.3.15 09:04:03
