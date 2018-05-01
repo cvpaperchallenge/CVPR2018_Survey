@@ -1,0 +1,32 @@
++slide
+  .title On the Robustness of Semantic Segmentation Models to Adversarial Attacks
+  .info
+    .authors Anurag Arnab, Ondrej Miksik and Philip H.S. Torr
+    .conference CVPR 2018
+  .slide_editor kodai nakashima
+
+  .item1
+    .text
+      h1 概要
+      p adversarial attackに対するロバスト性の評価を, semantic segmentationにおいてstate-of-the-artな性能を持つネットワークを用いて実験した.
+        |Pascal VOCとCityscapesのデータセットに対して, FGSM, Interative FGSM, FGSM II, Interative FGSM IIで攻撃したときのIoU Ratioによりロバスト性を評価した.
+  .item2
+    .text
+      p
+        img(src=`${figpath}On_the_Robustness_of_Semantic_Segmentation_Models_to_Adversarial_Attacks.PNG`,alt="On_the_Robustness_of_Semantic_Segmentation_Models_to_Adversarial_Attacks.PNG")
+  .item3
+    .text
+      h1 新規性・結果
+      ul
+        li ResNetをバックボーンに持つネットワークがロバストであることがわかった. 中でもDeeplab v2が最もロバスト.
+        li multi-scale processingやmean field CRFによりロバストになる.
+        li 画像分類の分野で一般的なロバスト性やモデルサイズについての知識がsemantic segmentationでも有用とは限らない.
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1711.09856.pdf") 論文URL
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.1 14:32:41
+
