@@ -1,0 +1,36 @@
++slide
+  .title Repulsion Loss : Detecting Pedestrian in a Crowd
+  .info
+    .authors Xinlong Wang, Tete Xiau, Yuning Jiang, Shuai Shao, Jian Sun and Chunhua Shen
+    .conference CVPR2018, arXive:1711.07752
+    .paper_id 1005
+    .slide_editor Hiroshi Fukui
+
+  .item1
+    .text
+      h1 概要
+      p 群衆に頑健な歩行者検出法を提案．
+        |Faster R-CNNで群衆を検出したとき，歩行者同士の間にBounding Boxが出現しやすい．
+        |これは，Bounding Box回帰の誤差を算出する時に誤差を最小にしようとして歩行者同士の間にBounding Boxが発生してしまう．
+        |この現象を解決するために，新たにRepulsion Lossを導入し，群衆に対しても高精度な歩行者検出を実現している．
+  .item2
+    .text
+      p
+        img(src=`${figpath}1005_overview_repLoss.png`,alt="1005_overview_repLoss.png")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p Repulsion Lossの中身は， L1 smooth lossをベースにしたL_RepGTとL_RepBoxから構成されている．
+        |L_RepGTは，targetの歩行者付近から最も近いGTとの誤差を示しており，targetと最も近いGTにBounding Boxが検出されると誤差が大きくなるように誤差が設計されている．
+        |L_RepBoxは，複数のBounding Boxが特定の箇所に集中するように誤差を設定している．
+        |L_RepBoxの目的は，NMSの割合の影響を減らすためである．
+        |歩行者検出のCaltech, CityPerson(Cityscape)でstate-of-the-artな性能を出しており，Pascal VOCにおいても有効であることを示している．
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 歩行者検出のベンチマークにおいて非常に高い性能を示しており，ResNetベースのFaster R-CNNに対してDilated Conv.を導入する等のちょっとしたテクニックも色々導入されている．
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.07752") 論文リンク
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.2 12:15:00
