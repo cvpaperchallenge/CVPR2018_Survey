@@ -1,0 +1,37 @@
++slide
+  .title Beyond Trade-off: Accelerate FCN-based Face Detector with Higher Accuracy
+  .info
+    .authors Kunpeng Li, Ziyan Wu, Kuan-Chuan Peng, Jan Ernst, Yun Fu
+    .conference CVPR2018, arXive: 1802.10171
+    .paper_id 1003
+  .slide_editor Hiroshi Fukui
+
+  .item1
+    .text
+      h1 概要
+      p 一般的な顔(物体)検出法(Faster R-CNN, FPN, SSD, YOLO等)は，Backboneな部分がFCNベースで構築されているため，各ピクセルを密に畳み込んで検出結果を出力する．
+        |しかし，顔検出では背景領域を大量に含んでおり，検出に必要な領域はごく僅かである．
+        |本論文では，顔検出を効率化するために，2つのAttentionを適応して高速化を試みており，左上図のように高い性能を維持しつつ，4倍以上の高速化を実現している．
+  .item2
+    .text
+      p
+        img(src=`${figpath}1003_overview.png`,alt="1003_overview.png")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p 本手法で適応しているAttentionは，右上図のようなspatial attentionとscale attentionである．
+        |spatial attentionは2次元上における顔の位置を示しており，scale attentionは出力されたスケールピラミッドから最適な特徴マップをAttentionで表現している．
+        |spatial attentionは2次元の位置のattentionから探索する領域を制限するために使用し，scale attentionは探索するスケールピラミッドを制限するために使用する．
+        |ネットワークは下図のようになっており，2つのAttentionにより背景と判定された領域は，マスクされた状態で後段のMask FCNに入力される．
+        |AFW, FDDB, MALFでstate-of-the-artな性能かつ，高速な検出が可能(最速で14.2ms)．
+  .item4
+    .text
+      h1 コメント・リンク集
+      p Attentionを計算コスト削減に適応した物体検出法．
+        |顔検出や車載系の物体検出等の背景領域を多く含む問題設定では非常に効果的に使えそうな手法．
+        |(COCO, VOCではあまりコストに対しては言及していない)
+      ul
+        li
+          a(href="https://arxiv.org/abs/1804.05197") 論文リンク
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.2 13:55:50
