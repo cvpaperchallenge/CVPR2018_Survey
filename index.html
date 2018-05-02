@@ -3,6 +3,11 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118576057-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-118576057-1');
 </script><body><div class="reveal"><div class="slides"><section><div class="paper-abstract"><div class="title">PPFNet: Global Context Aware Local Features for Robust 3D Point Matching</div><div class="info"><div class="authors">Haowen Deng, Tolga Birdal, Slobodan Ilic</div><div class="conference">CVPR2018</div><div class="paper_id">45</div></div><div class="slide_editor">Shuichi Akizuki</div><div class="item1"><div class="text"><h1>概要</h1><p>点群データから直接3Dの局所特徴量を抽出するネットワークを提案．N-Tuple loss(Triplet lossの拡張)によって，
 対応点間の特徴量が近く，それ以外の特徴量間の距離が遠くなるような変換を学習する．
 PPFNetの入力は局所パッチ内の点の座標，法線，Point Pair Featureをまとめたデータ．
