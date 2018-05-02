@@ -86,7 +86,12 @@ L_RepBoxの目的は，NMSの割合の影響を減らすためである．
 そして，セマンティックセグメンテーションでは，
 1)のネットワークに加えて，セマンティックセグメンテーションのラベルと出力したAttention mapとの誤差を算出させることで，Attention mapを最適化させる．
 Pascal VOCのweakly-supervisedによるセマンティックセグメンテーションのタスクで評価し，高い性能を示している．
-また，発生するAttention mapの領域に対してオリジナルのデータセットを作成して評価している．</p></div></div><div class="item4"><div class="text"><h1>コメント・リンク集</h1><ul><li><a href="https://arxiv.org/abs/1802.10171">論文リンク</a></li></ul></div></div><div class="slide_index">[#83]</div><div class="timestamp">2018.5.2 13:37:25</div></div></section></div></div><script src="lib/js/head.min.js"></script><script src="js/reveal.js"></script><script>Reveal.initialize({
+また，発生するAttention mapの領域に対してオリジナルのデータセットを作成して評価している．</p></div></div><div class="item4"><div class="text"><h1>コメント・リンク集</h1><ul><li><a href="https://arxiv.org/abs/1802.10171">論文リンク</a></li></ul></div></div><div class="slide_index">[#83]</div><div class="timestamp">2018.5.2 13:37:25</div></div></section><section><div class="paper-abstract"><div class="title">Beyond Trade-off: Accelerate FCN-based Face Detector with Higher Accuracy</div><div class="info"><div class="authors">Kunpeng Li, Ziyan Wu, Kuan-Chuan Peng, Jan Ernst, Yun Fu</div><div class="conference">CVPR2018, arXive: 1802.10171</div><div class="paper_id">1003</div></div><div class="slide_editor">Hiroshi Fukui</div><div class="item1"><div class="text"><h1>概要</h1><p>一般的な顔(物体)検出法(Faster R-CNN, FPN, SSD, YOLO等)は，Backboneな部分がFCNベースで構築されているため，各ピクセルを密に畳み込んで検出結果を出力する．しかし，顔検出では背景領域を大量に含んでおり，検出に必要な領域はごく僅かである．
+本論文では，顔検出を効率化するために，2つのAttentionを適応して高速化を試みており，左上図のように高い性能を維持しつつ，4倍以上の高速化を実現している．</p></div></div><div class="item2"><div class="text"><p><img src="slides/figs/1003_overview.png" alt="1003_overview.png"></p></div></div><div class="item3"><div class="text"><h1>新規性・結果・なぜ通ったか？</h1><p>本手法で適応しているAttentionは，右上図のようなspatial attentionとscale attentionである．spatial attentionは2次元上における顔の位置を示しており，scale attentionは出力されたスケールピラミッドから最適な特徴マップをAttentionで表現している．
+spatial attentionは2次元の位置のattentionから探索する領域を制限するために使用し，scale attentionは探索するスケールピラミッドを制限するために使用する．
+ネットワークは下図のようになっており，2つのAttentionにより背景と判定された領域は，マスクされた状態で後段のMask FCNに入力される．
+AFW, FDDB, MALFでstate-of-the-artな性能かつ，高速な検出が可能(最速で14.2ms)．</p></div></div><div class="item4"><div class="text"><h1>コメント・リンク集</h1><p>Attentionを計算コスト削減に適応した物体検出法．顔検出や車載系の物体検出等の背景領域を多く含む問題設定では非常に効果的に使えそうな手法．
+(COCO, VOCではあまりコストに対しては言及していない)</p><ul><li><a href="https://arxiv.org/abs/1804.05197">論文リンク</a></li></ul></div></div><div class="slide_index">[#84]</div><div class="timestamp">2018.5.2 13:55:50</div></div></section></div></div><script src="lib/js/head.min.js"></script><script src="js/reveal.js"></script><script>Reveal.initialize({
   history: true,
   center: false,
   width: '100%',
