@@ -3,6 +3,11 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118576057-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-118576057-1');
 </script><body><div class="reveal"><div class="slides"><section><div class="paper-abstract"><div class="title">Deep Marching Cubes: Learning Explicit Surface Representations</div><div class="info"><div class="authors">Y. Liao, S. Donné and A. Geiger</div><div class="conference">CVPR2018</div></div><div class="slide_editor">Ryota Suzuki</div><div class="item1"><div class="text"><h1>概要</h1><p>既存の学習ベースの3D面推定方法は，End-to-Endでの学習ができないが，本研究では，end-to-endでの学習を可能にした．3D面推定手法の一つのマーチングキューブは微分不可．そこで，代替の微分可能定式化を行い，これを3DNNの最終層として追加する．
 また，疎な点群で学習が行えるようにロス関数群を提案．
 サブボクセル精度での3D形状を推定可能であることを確認した．
