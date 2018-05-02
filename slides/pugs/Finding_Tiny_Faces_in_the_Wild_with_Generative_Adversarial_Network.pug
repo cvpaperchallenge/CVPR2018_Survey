@@ -1,0 +1,30 @@
++slide
+  .title Finding Tiny Faces in the Wild with Generative Adversarial Network
+  .info
+    .authors Yancheng Bai, Yongqiang Zhang, Mingli Ding, Bernard Ghanem
+    .conference CVPR 2018
+  .slide_editor Kazuki Inoue
+
+  .item1
+    .text
+      h1 概要
+      p GANを用いて画像中の顔を検出する研究。検出が難しい顔として小さくかつボケている顔が挙げられるが、これらの顔をGANによって高解像度かつはっきりとした顔にすることで検出制度を向上させる手法を提案。generatorは高解像度にするsuper resolution network(SRN)と顔の詳細な情報を復元するrefinment network(RN)を結合したネットワークである。discriminatorはVGG19であり、ロスとしてデータセットの顔/generatorによる顔、顔/顔ではないモノを同時に行うロスを導入。またよりはっきりとした顔を生成するために、generatorのロスとして物体識別のロスを導入。
+  .item2
+    .text
+      p
+        img(src=`${figpath}Finding_Tiny_Faces_in_the_Wild_with_Generative_Adversarial_Network.png`)
+  .item3
+    .text
+      h1 新規性・結果・なぜCVPRに通ったか？
+      p ・GANによって画像中の顔から高解像度かつはっきりとした顔を生成することで高精度な顔検出手法を提案
+      p ・GANの導入による精度の向上、導入したロスの有効性を確認している
+      p ・state-of-the-artの研究よりも精度が高い
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://ivul.kaust.edu.sa/Documents/Publications/2018/Finding%20Tiny%20Faces%20in%20the%20Wild%20with%20Generative%20Adversarial%20Network.pdf") 論文
+        li
+          a(href="https://ivul.kaust.edu.sa/Pages/pub-tiny-faces.aspx") project page
+  .slide_index #{getSlideIndex()}
