@@ -1,0 +1,32 @@
++slide
+  .title Learning Spatial-Aware Regressions for Visual Tracking
+  .info
+    .authors Chong Sun, Huchuan Lu, Ming-Hsuan Yang
+    .conference CVPR 2018
+    .paper_id 1676
+  .slide_editor: Takahiro Itazuri
+
+  .item1
+    .text
+      h1 概要
+      p 一般物体追跡手法の二大手法であるカーネルリッジ回帰（相関フィルタを含む）とCNNのハイブリッドな手法を提案した.カーネルリッジ回帰は全体的な情報に,CNNは局所的な情報に注目するように設計している.それぞれの導入がどの精度向上に結びついているかも検討している.
+  .item2
+    .text
+      p
+        img(src=`${figpath}LSART.png`,alt="LSART")
+  .item3
+    .text
+      h1 新規性・結果
+      ul
+        li cross-patch similarityを用いたカーネルリッジ回帰モデルを提案し,それをニューラルネットに再定式化.
+        li spatially reguralized kernelとdistance transform pool layerを用いて,出力の各チャンネルが特定の領域に反応するようなCNN提案.
+        li 提案したカーネルリッジ回帰とCNNを相補的に用いることで,OTB-2013,OTB-2015,VOT-2016データセットでstate-of-the-artな精度を達成.		
+  .item4
+    .text
+      h1 リンク集
+      ul
+        li
+          a(href="http://lanl.arxiv.org/pdf/1706.07457v1") 論文1
+        li
+          a(href="https://drive.google.com/file/d/1Lls2CK-yTkeOcOarNGapmcz4h2HQj6gf/edit") 論文2
+  .slide_index #{getSlideIndex()}

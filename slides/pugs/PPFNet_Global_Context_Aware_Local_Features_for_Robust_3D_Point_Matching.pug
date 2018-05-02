@@ -1,0 +1,37 @@
+﻿+slide
+  .title PPFNet: Global Context Aware Local Features for Robust 3D Point Matching
+  .info
+    .authors Haowen Deng, Tolga Birdal, Slobodan Ilic
+    .conference CVPR2018
+    .paper_id 45
+  .slide_editor Shuichi Akizuki
+
+  .item1
+    .text
+      h1 概要
+      p 点群データから直接3Dの局所特徴量を抽出するネットワークを提案．
+        |N-Tuple loss(Triplet lossの拡張)によって，
+        |対応点間の特徴量が近く，それ以外の特徴量間の距離が遠くなるような変換を学習する．
+        |PPFNetの入力は局所パッチ内の点の座標，法線，Point Pair Featureをまとめたデータ．
+        |ネットワークの内部ではPointNetを利用する．
+        |大域的な情報を得るために，各パッチから取得した局所特徴量を
+        |Max poolingによって大域特徴量化し，局所特徴と結合する工夫も入れている．
+  .item2
+    .text
+      p
+        img(src=`${figpath}45.png`,alt="45")
+  .item3
+    .text
+      h1 新規性・結果
+      p 局所特徴量を生成するネットワークを構築した点，
+        |N-Tuple lossによる学習法を提案した点が新しい．
+        |キーポイントマッチングのベンチマークでRecall rateが向上．
+        |オーバーラップが少ないシーンでのレジストレーションも可能になっている．
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1802.02669") Paper
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.1 15:53:31
