@@ -1,0 +1,34 @@
++slide
+  .title Visual Question Answering with Memory-Augmented Networks
+  .info
+    .authors Ilija Radosavovic, Piotr Dollár, Ross Girshick, Georgia Gkioxari, Kaiming He
+    .conference CVPR2018, arXive: 1712.04440
+    .paper_id 875
+  .slide_editor Hiroshi Fukui
+
+  .item1
+    .text
+      h1 概要
+      p 学習サンプルに少ないような質問に対しても回答ができるような手法を提案．
+        |ベースはMemory-Augmented Network (One-shot learningを導入したMemory Network)であり，記憶ブロックとAttentionの機能により，稀に発生する質問に対しても正確に回答をすることができる．
+        |VQA benchmark datasetとCOCOのVQAタスクで評価し，高い性能を示している．
+  .item2
+    .text
+      p
+        img(src=`${figpath}875_overview.png`,alt="875_overview.png")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p この手法の大まかな構造はMemory-Augmented Networkになっており，特徴抽出部分が質問文と画像特徴である．
+        |画像特徴はVGGやResNetの特徴マップを使用しており，質問文はLSTMの特徴ベクトルを使用している．
+        |この2つの特徴ベクトルは結合され，質問と画像特徴の2つのAttentionがそれぞれ与えられてAugmented memoryに格納される．
+        |そして，Augmented memoryを用いて最終的な回答が出力される．
+        |提案手法では，右下図のように，稀に存在する困難な質問に対しても正確な回答を得ることができる．
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1707.04968") 論文リンク
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.2 14:29:29
