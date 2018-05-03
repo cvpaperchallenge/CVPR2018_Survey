@@ -1,0 +1,36 @@
++slide
+  .title Deep Layer Aggregation
+  .info
+    .authors Fisher Yu, Dequan Wang, Evan Shelhamer, Trevor Darrell
+    .conference CVPR2018, arXive: 1707.06484
+    .paper_id 272
+  .slide_editor Hiroshi Fukui
+
+  .item1
+    .text
+      h1 概要
+      p Deep Neural Networkにおける，層間の結合に関して様々な検討を行った論文．
+        |従来のネットワーク(ResNet, DenseNet, FCN, U-Net等)のスキップ結合は，”浅い”結合しか適用されていなかった．
+        |この論文では，より”深い” 結合をネットワークに取り入れ，少パラメータかつ高精度なネットワークモデルを構築している．
+        |画像分類をはじめ，様々な認識タスクで実験を行い，高精度化を実現している．
+  .item2
+    .text
+      p
+        img(src=`${figpath}272_overview.png`,alt="272_overview.png")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p この論文では，右図のような4つのモデルを検討している(c~f)．
+        |(c)のようにシンプルに特定の層を集約して連鎖的に入力していくモデルから，(d~f)のように様々な層を集約して連鎖的に集約していくモデルを検討しており，上位層と下位層の層を効率的に伝播することで，認識精度を向上させている．
+        |また，(c)と(f)のモデルを組み合わせることで，より性能を向上させることも可能である．
+        |画像分類，Fine-grained Recognition，物体検出，セマンティックセグメンテーションで実験を行っており，全ての認識タスクにおいて高い性能を示している．
+  .item4
+    .text
+      h1 コメント・リンク集
+      p Deep CNNの次期モデルを検討しているような論文．
+        |結局，画像分類，検出，セグメンテーションではスキップ結合が重要であることを再確認できる．
+      ul
+        li
+          a(href="https://arxiv.org/abs/1707.06484") 論文リンク
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.2 14:05:11
