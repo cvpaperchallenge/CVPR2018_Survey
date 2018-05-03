@@ -1,0 +1,32 @@
++slide
+  .title Detail-Preserving Pooling in Deep Networks
+  .info
+    .authors Faraz Saeedan, Nicolas Weber, Michael Goesele, Stefan Roth
+    .conference CVPR 2018
+  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+  .item1
+    .text
+      h1 概要
+      p 徐々にダウンサイジングしながらも詳細な情報は保持するという問題設定を解決するDNN、特に微分可能なプーリング手法であるDetail-Preserving Pooling（DPP）を提案する。同ネットワークでは隠れ層にて徐々にダウンスケールを行う。図にはフローチャートが示されている。このように線形ダウンスケーリングを施した画像に対して、出力が情報量をできる限り失わないように学習できるプーリングを提案することで任意の畳み込みネットに対して性能向上を見込める手法とした。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180503DPP.png`,alt="180503DPP")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p データセットにより最良なプーリングの手法が異なるという欠点を解決するべくDPPを提案した。また、グラフィクスの分野にて提案されているDPID（文献31）を参考にして微分可能（学習可能）なプーリング手法を提案した。このようにして作成されたプーリングはあらゆるネットワークに対し有効にフィットし、（max/average poolingなどより）精度向上を保証すると主張した。例として単純にResNet-101のアーキテクチャのプーリングを置き換えてもCIFAR10にてエラー率が下がっている。このように学習可能であり、汎用的に使用できて高精度が期待できるプーリング手法を提案したことが採択された理由であると考える。
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 本手法が汎用的に使用できるのであれば、早い段階でDLフレームワーク（e.g. PyTorch, TensorFlow）などに実装されて使用されるかも？実装面の難しさがどの程度あるか次第か。
+      ul
+        li
+          a(href="https://arxiv.org/abs/1804.04076") 論文
+        li
+          a(href="www") Project
+        li
+          a(href="https://github.com/visinf/dpp") GitHub
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.3 23:36:27
