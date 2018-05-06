@@ -1,0 +1,32 @@
++slide
+  .title Multi-scale Location-aware Kernel Representation for Object Detection
+  .info
+    .authors Hao Wang, Qilong Wang, Mingqi Gao, Peihua Li and Wangmeng Zuo
+    .conference CVPR2018
+    .paper_id 153
+  .slide_editor Ryosuke Araki
+
+  .item1
+    .text
+      h1 概要
+      p 物体検出時に特徴量の高次の統計量（high-order statistics）を獲得するためのMulti-scale Location-aware Kernel Representation（MLKP)を提案する．MLKPはSSDで用いるような，複数解像度の特徴マップを結合したマルチスケール特徴マップを用いて効果的に計算できる．マルチスケール特徴マップをMLKPに入力すると，畳み込みと要素ごとの積算を行いr次の表現Z^rを得る．このとき，location-weight networkは各位置の寄与度を学習する．その後，各次の表現を重みつき結合し，RoI Poolingへ入力する．
+  .item2
+    .text
+      p
+        img(src=`${figpath}20180507_mlkp1.jpg`,alt="20180507_mlkp1.jpg")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p 最近の分類メソッドでよく用いられる高次統計量を物体検出器の高精度化に用いる手法である．Faster R-CNNにMLKPを統合することで，Faster R-CNNよりも精度が4.9%(mAP, VOC2007），4.7%（mAP, VOC2012），5.0%（MSCOCO）向上した．DSSDやR-FCNと比較しても同等もしくはそれ以上の性能である．
+  .item4
+    .text
+      h1 コメント・リンク集
+      p 流行りのマルチスケール手法をR-CNNに昇華した感じ．R-CNNベースの手法もまだまだ煮詰める余地は十分ある．
+      ul
+        li
+          a(href="https://arxiv.org/abs/1804.00428") arXiv
+        li
+          a(href="https://github.com/Hwang64/MLKP") コード
+          | py-faster-rcnnをベースにされている．マルチGPU版もあり
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.7 01:24:41
