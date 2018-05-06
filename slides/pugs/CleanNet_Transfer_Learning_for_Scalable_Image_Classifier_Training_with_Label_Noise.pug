@@ -1,0 +1,27 @@
++slide
+  .title CleanNet: Transfer Learning for Scalable Image Classifier Training with Label Noise
+  .info
+    .authors Kuang-Huei Lee, Xiaodong He, Lei Zhang and Linjun Yang
+    .conference CVPR 2018
+  .slide_editor Munetaka Minoguchi
+
+  .item1
+    .text
+      h1 概要
+      p ラベルノイズを使って、画像分類モデルを学習するCleanNetの提案。人間による“ラベルノイズの低減”という作業を低減する。事前知識として人の手で分類されたクラスの一部の情報だけを使い、ラベルノイズを他のクラスに移すことができる。また、CleanNetとCNNによるクラス分類ネットワークを1つのフレームワークとして統合。ラベルノイズ検出タスクと、統合した画像分類タスクの両方で、ノイジーなデータセットを使って精度検証。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180506CleanNet.jpg`)
+  .item3
+    .text
+      h1 新規性
+      p 人間がラベルのアノテーションをすると時間がかかり、学習はスケーラブルじゃない。逆に人間に頼らない手法はスケーラブルだが、有効性が低い。少し人間に頼って、あとは自動的にノイズ除去をするというハイブリットな手法。
+  .item4
+    .text
+      h1 結果・リンク集
+      p 弱教師付き学習と比較して、ノイズを41%低減。画像分類タスクにおいて、47%パフォーマンスが向上。
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.07131") 論文
+  .slide_index #{getSlideIndex()}
