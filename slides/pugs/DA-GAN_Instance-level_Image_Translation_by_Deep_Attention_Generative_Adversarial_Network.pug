@@ -1,0 +1,31 @@
++slide
+  .title DA-GAN: Instance-level Image Translation by Deep Attention Generative Adversarial Network
+  .info
+    .authors Shuang Ma, Jianlong Fu, Chang Chen, Tao Mei
+    .conference CVPR 2018
+    .paper_id 695
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p ・無監督インスタンスレベルのattentionを用いたImage Translationフレームワークを提案した．
+        |・従来の無監督Image Translationではセットレベルで実現され，物体パーツレベルの対応ができないため，従来手法より生成した物体画像が幾何や意味的な情報のリアル性が低い場合がある．それと比べ，提案フレームワークは①物体をはattentionを用いた高構造化latent空間に変換し，このlatent空間によりインスタンスレベルなImage Translationを可能にした．②さらに，source samplesとtranslated samplesをセマンティック的に対応させるconsistency lossを提案した．
+  .item2
+    .text
+      p
+        img(src=`${figpath}DA-GAN.png`,alt="DA-GAN")
+  .item3
+    .text
+      h1 新規性・結果
+      p ・初めてattentionをGANに導入したと宣言
+        |・MNIST , CUB-200-2011, SVHN , FaceScrub and AnimePlanet 1などのデータセットを用いて実験を行い，ドメンadaption，テキスト-画像合成，ポーズモーフィング，顔‐アニメーション化などのタスクにおいて，state-of-the-artな精度を達成した．
+  .item4
+    .text
+      h1 リンク集
+      p ・attentionをGANに導入し，さらに精密で構造化した画像生成ができるので，様々なアプリで応用できそう
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1802.06454.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.7 10:19:19
