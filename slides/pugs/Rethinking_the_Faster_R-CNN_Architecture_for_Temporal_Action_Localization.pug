@@ -1,0 +1,36 @@
++slide
+  .title Rethinking the Faster R-CNN Architecture for Temporal Action Localization
+  .info
+    .authors Y. Chao et al.,
+    .conference CVPR 2018
+  .slide_editor Kensho Hara
+
+  .item1
+    h1 概要
+    .text.
+      動画中の行動のラベル，開始・終了時刻を推定するTemporal Action Localizationの研究．
+      Faster R-CNNによる物体検出をベースにLocalizationをする．
+      ここで，スケールのバリエーションが非常に大きい，前後の行動などのコンテキストが重要，
+      RGBとFlowをどう統合するか，といった3点の検討が重要としてこれらに取り組んでいる．
+      提案手法であるTAL-Netのポイントとしては，
+      アンカーごとに適切なスケールの受容野を持つ異なるCNNを組み合わせて利用している点．
+      各問題に対する設計がそれぞれ精度向上に寄与している点を実験から確認し，
+      THUMOS'14でのSOTAを達成．
+
+  .item2
+    img(src=figpath+"Rethinking_the_Faster_R-CNN_Architecture_for_Temporal_Action_Localization.png",alt="Rethinking_the_Faster_R-CNN_Architecture_for_Temporal_Action_Localization.png")
+  .item3
+    h1 新規性・結果・なぜ通ったか？
+    .text
+      ul
+        li 行動の時間スケールについての検討をちゃんと行った点は新規性がある
+        li 提案手法の各要素についての実験がされていて，それぞれによる精度向上を確認できている
+  .item4
+    h1 コメント・リンク集
+    .text
+      ul
+        li: a(href="https://arxiv.org/abs/1804.07667") 論文 (arXiv)
+        li 目新しいアイデアはないように思うが，問題点に対する解法を検討してかっちりと評価している
+        li この辺りのスケールの話は大事そうなのにこれまで意外とちゃんとやられてきてなかったところ
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.7 12:44:45
