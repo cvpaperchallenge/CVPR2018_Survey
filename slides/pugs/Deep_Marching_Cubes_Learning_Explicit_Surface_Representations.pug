@@ -1,0 +1,32 @@
++slide
+  .title Deep Marching Cubes: Learning Explicit Surface Representations
+  .info
+    .authors Y. Liao, S. Donné and A. Geiger
+    .conference CVPR2018
+  .slide_editor Ryota Suzuki
+
+  .item1
+    .text
+      h1 概要
+      p 既存の学習ベースの3D面推定方法は，End-to-Endでの学習ができないが，本研究では，end-to-endでの学習を可能にした．
+        |3D面推定手法の一つのマーチングキューブは微分不可．そこで，代替の微分可能定式化を行い，これを3DNNの最終層として追加する．
+        |また，疎な点群で学習が行えるようにロス関数群を提案．
+        |サブボクセル精度での3D形状を推定可能であることを確認した．
+        |本モデルは形状エンコーダ・推論と組み合わせられる柔軟さがある．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Deep_Marching_Cubes_Learning_Explicit_Surface_Representations_Figure1.png`,alt="Figure1")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p End-to-endで行われたものはない．
+        |適用範囲が広そう．
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="http://www.cvlibs.net/publications/Liao2018CVPR.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.2 14:41:51

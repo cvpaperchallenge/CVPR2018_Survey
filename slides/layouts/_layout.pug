@@ -22,6 +22,14 @@ html(lang="ja")
     link.type = 'text/css';
     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+  script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-118576057-1")
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-118576057-1');
 
   body
     .reveal

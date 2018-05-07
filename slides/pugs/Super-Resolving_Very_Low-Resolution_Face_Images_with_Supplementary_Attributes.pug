@@ -1,0 +1,34 @@
++slide
+  .title Super-Resolving Very Low-Resolution Face Images with Supplementary Attributes
+  .info
+    .authors Xin Yu, Basura Fernando, Richard Hartley, Faith Porikli
+    .conference CVPR 2018 Poster
+  .slide_editor Kazuki Inoue
+
+  .item1
+    .text
+      h1 概要
+      p 顔画像のアトリビュートを使用することでGTとなる高解像度画像(HR)を使用せずに低解像度画像(LR)を超解像度化する研究。
+        |LRとともに顔のアトリビュートも入力として使用することで超解像化における曖昧さを解決。
+        |ネットワークの大枠はGANを採用。
+        |ジェネレータにおいてLRをauto encoderに噛ませる際にエンコードされた特徴量にアトリビュートを付け足してでコードを行う。
+        |ディスクリミネータはGTのHR画像なら1を、ジェネレータによる画像or画像にアトリビュートが含まれていないと判断した際には0を返す。
+  .item2
+    .text
+      p
+        img(src=`${figpath}20180506Super-Resolving_Very_Low-Resolution_Face_Images_with_Supplementary_Attributes.png`)
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p ・入力は16x16画像、出力は入力画像が128x128に超解像度化された画像。
+      p ・PSNR、SSIMを評価指標として既存手法と比べたところもっとも良い精度を得た。
+      p ・既存手法で入力されたLRに対して一意的なHRのみしか出力することができなかった。
+         |一方提案手法では入力するアトリビュートに伴って出力するHRの見た目を変更することが可能。
+  .item4
+    .text
+      h1 コメント・リンク集
+      p トレーニングで使用したデータセットはCelebAであり、使用したアトリビュートはCelebAに付属する40種類のうちからgender, ageなど18種類。
+      ul
+        li
+          a(href="https://basurafernando.github.io/papers/XinYuCVPR18.pdf") 論文
+  .slide_index #{getSlideIndex()}

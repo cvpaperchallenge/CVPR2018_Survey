@@ -1,0 +1,33 @@
++slide
+  .title Regularizing RNNs for Caption Generation by Reconstructing The Past with The Present
+  .info
+    .authors Xi.Cheny, L.Mazx, W.Jiangzx, J.Yaoy and W.Liuz
+    .conference CVPR2018
+    .paper_id arXiv:1803.11439
+  .slide_editor KotaYoshida
+
+  .item1
+    .text
+      h1 概要
+      p encorder/decorderモデルにhiden stateと過去のhiden stateを再構成することによって隣接するhiden stateの接続を強化するためのARNetを導入．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Regularizing_RNNs_for_Caption_Generation_by_Reconstructing_The_Past_with_The_Present.png`,alt="概要図")
+  .item3
+    .text
+      h1 従来手法問題点
+      p *従来のRNNのtrainとinferenceの間にはexposure biasと呼ばれる相違が存在する．
+        |*decorderはの入力に依存する演算子を用いて，キャプション生成する．
+  .item4
+    .text
+      h1 結果・リンク集
+      p *RNNにおけるtransition dynamicsの正則化を助け，シーケンス予測の不一致の緩和が見られた．
+        |*ソースコードキャプション，イメージキャプションの両方で精度の向上が見られた．
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1803.11439.pdf") Paper
+          |*
+          a(href="https://github.com/chenxinpeng/ARNet") github
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.2 23:09:07
