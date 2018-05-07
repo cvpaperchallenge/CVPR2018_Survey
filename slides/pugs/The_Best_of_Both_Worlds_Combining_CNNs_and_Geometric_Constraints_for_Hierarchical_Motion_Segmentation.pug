@@ -1,0 +1,31 @@
++slide
+  .title The Best of Both Worlds: Combining CNNs and Geometric Constraints for Hierarchical Motion Segmentation
+  .info
+    .authors Pia Bideau et al.
+    .conference CVPR 2018
+  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+  .item1
+    .text
+      h1 概要
+      p モーションセグメンテーションの問題を扱う。従来のモーションセグメンテーションは幾何的制約を設けることで効果的に動作をセグメントして来たが、高次なセグメントに失敗していた。一方でCNNについては従来方とは逆の特性があった。この両者の特性を活かして、両者にとって良いところどり（The Best of Both Worlds）することでモーションセグメンテーションの性能を向上させた。手法は図に示すようにオプティカルフローを用いた剛体の動き推定（Perspective Projection Constraints）、変形可能でより複雑な物体形状を推定できるようCNNによるセマンティックセグメンテーションを実行。物体のモーションモデルを形成するために、SharpMask（論文中文献35）による物体候補も導入し物体に関する知識を導入した。
+  .item2
+    .text
+      p
+        img(src=`${figpath}180503MotionSegmentation.png`,alt="180503MotionSegmentation")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p クラシカルなフローによる剛体モーション推定とCNNによる物体セグメンテーションを統合、両者の良い部分を引き出しているところが評価に値した。アブストラクト/図１が非常にわかりやすくこの２つで問題設定を把握できるところもグッド。
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="http://vis-www.cs.umass.edu/motionSegmentation/website_CVPR18/cvpr18-bideau.pdf") 論文
+        li
+          a(href="http://vis-www.cs.umass.edu/") UMASS CV Lab.
+        li
+          a(href="http://vis-www.cs.umass.edu/motionSegmentation/website_CVPR18/cvpr18-bideau-suppl.pdf") SupplementaryMaterial
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.3 01:36:43

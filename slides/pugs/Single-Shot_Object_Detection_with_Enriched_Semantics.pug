@@ -1,0 +1,34 @@
++slide
+  .title Single-Shot Object Detection with Enriched Semantics
+  .info
+    .authors Z.Zhang, S.Qiao, C.Xie, W.Shen, B.Wang and A.L.Yuille
+    .conference CVPR2018
+    .paper_id arXiv:1712.00433
+  .slide_editor KotaYoshida
+
+  .item1
+    .text
+      h1 概要
+      p Detection with Enriched Semantics (DES)というシングルショットオブジェクト検出器を提案．
+        |セマンティックセグメンテーションブランチとオブジェクト検出ブランチで構成.
+        |セマンティックセグメンテーションブランチとグローバルアクティベーションモジュールによってオブジェクト検出の特徴であるセマンティクスを向上．
+        |既存のSSDなどのシングルショット検出器よりも速度と精度が向上．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Single-Shot_Object_Detection_with_Enriched_Semantics.png`,alt="画像")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      ul
+        li セマンティックセグメンテーションブランチに高レベルのオブジェクト特徴のためのオブジェクト検出特徴チャンネルとオブジェクトクラスとの意味的関係を学習するためのグローバルアクティベーションブロックを加える．
+        li 一般的なシングルショット検出器と比較して大幅に検出精度が向上，
+        li Titan Xp GPU1台で、31.7 FPSを達成し、R-FCNやResNetベースのSSDよりも高速.
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1712.00433.pdf") Paper
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.6 01:42:36
