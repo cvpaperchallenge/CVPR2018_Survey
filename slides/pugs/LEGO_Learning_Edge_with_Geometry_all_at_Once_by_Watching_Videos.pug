@@ -1,0 +1,33 @@
++slide
+  .title LEGO: Learning Edge with Geometry all at Once by Watching Videos
+  .info
+    .authors Z. Yang et al.,
+    .conference CVPR 2018
+  .slide_editor Kensho Hara
+
+  .item1
+    h1 概要
+    .text.
+      ラベルなし動画からの3次元幾何 (Depth, Normal) の推定．
+      従来研究のものだと画素ごとの誤差で最適化していたのでボケた幾何構造推定になっていたのが問題と主張．
+      提案手法はエッジと3次元幾何を同時に推定して最適化することで，左図 (f) のような正確な幾何構造を推定可能にした．
+      ベースは従来手法同様で，カメラ姿勢を推定し，それに基づくWarping結果と元のフレームとの間の誤差をとって最適化．
+      これに，エッジ推定と3D-ASAP (as smooth as possible in 3D) Priorを導入したところがポイント．
+      3D-ASAPはある2点間の間にエッジがなければその2点は同一平面上にあるという仮定に基づく提案手法．
+  .item2
+    img(src=figpath+"LEGO_Learning_Edge_with_Geometry_all_at_Once_by_Watching_Videos.png",alt="LEGO_Learning_Edge_with_Geometry_all_at_Once_by_Watching_Videos.png")
+  .item3
+    h1 新規性・結果・なぜ通ったか？
+    .text
+      ul
+        li 3次元幾何とエッジ推定を同時にする手法の提案
+        li 3D-ASAP Priorの定式化とそれによる精度向上を実現
+        li KITTIやCityScapesでのSOTAを達成
+  .item4
+    h1 コメント・リンク集
+    .text
+      ul
+        li: a(href="https://arxiv.org/abs/1803.05648") 論文 (arXiv)
+        li: a(href="https://www.youtube.com/watch?v=40-GAgdUwI0") 結果動画 (YouTube)
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.7 11:15:05
