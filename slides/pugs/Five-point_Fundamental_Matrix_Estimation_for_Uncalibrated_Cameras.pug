@@ -1,0 +1,33 @@
++slide
+  .title Five-point Fundamental Matrix Estimation for Uncalibrated Cameras
+  .info
+    .authors D. Barath
+    .conference CVPR2018
+  .slide_editor Ryota Suzuki
+
+  .item1
+    .text
+      h1 概要
+      p 2つの未キャリブレーションカメラにおいて，
+        strong 5点のみ
+        |で基礎行列を推定する手法を提案．
+      p 回転不変な特徴点（SIFT等）を使う．3点は平面にあれば，他2点はどこでも可能．
+        |グラフカットRANSACのようなロバスト対応点推定と組み合わせれば，state-of-the-artな性能が出る．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Five-point_Fundamental_Matrix_Estimation_for_Uncalibrated_Cameras_Figure1.png`,alt="Figure1")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p 通常，7点や8点取るアルゴリズムがリーズナブルな制約で，少ない情報のみでキャリブレーションできるのはうれしい．
+        |例えば図のようにキャリブレーションボードを小さくできたりする．
+        |大変有用な研究成果．
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1803.00260") arXiv
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.8 12:37:50
