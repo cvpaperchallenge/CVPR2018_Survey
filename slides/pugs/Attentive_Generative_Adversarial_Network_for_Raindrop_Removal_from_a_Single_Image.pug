@@ -1,0 +1,43 @@
++slide
+  .title Attentive Generative Adversarial Network for Raindrop Removal from a Single Image
+  .info
+    .authors Rui Qian, Robby T. Tan, Wenhan Yang, Jiajun Su, and Jiaying Liu
+    .conference CVPR2018
+  .slide_editor Naofumi Akimoto
+
+  .item1
+    .text
+      h1 概要
+      ul
+        li 写真から雨粒を除去する手法の提案
+        li このタスクが難しいのは，
+          ol
+            li どの領域が，雨粒によって隠されているか不明なこと
+            li 雨粒に隠された背景側の情報がないこと
+        li GAN，LSTMを利用
+        li Generatorは，Attentive-Reccurent networkとContextual Autoencoderから構成
+        li はじめにAttentive-Reccurent networkでattention mapを生成
+          |　次にContextual Autoencoderで，mapと入力画像から雨粒除去後の画像を生成
+          |　attention mapは，Discriminatorの中間出力とMSE lossを取る際にも利用
+        li visual attentionという情報によって，
+          ol
+            li Generatorでは雨粒の領域と，周辺の構造にアテンションをより向けることができる
+            li Discriminatorは復元した領域をより局所的に評価を行える
+  .item2
+    .text
+      p
+        img(src=`${figpath}Attentive_Generative_Adversarial_Network_for_Raindrop_Removal_from_a_Single_Image_fig.png`,alt="Item2Image")
+  .item3
+    .text
+      h1 新規性
+      ul
+        li GeneratorとDiscriminatorの両方でvisual attentionを利用するようにしたこと
+        li 自作の1119枚の雨粒ありと無しのペア画像を用意し学習に利用
+  .item4
+    .text
+      h1 コメント・リンク集
+      ul
+        li
+          a(href="https://arxiv.org/abs/1711.10098") arxiv
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.8 21:05:34
