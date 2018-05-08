@@ -1,0 +1,34 @@
++slide
+  .title First-Person Hand Action Benchmark with RGB-D Videos and 3D Hand Pose Annotations
+  .info
+    .authors Y. Chao et al.,
+    .conference CVPR 2018
+  .slide_editor Kensho Hara
+
+  .item1
+    h1 概要
+    .text.
+      一人称視点動画 (RGB-D) データセットの提供．
+      手（21点の3D間接位置）と物体（6D姿勢）の情報に加えて，45クラスの行動ラベルが付けられている．
+      データ数は1175シーケンス，10万フレーム．
+      手の3D姿勢と行動ラベルが付いている一人称視点動画データセットはこれまでになかった．
+      実験では従来手法やLSTMによるベースライン手法を合わせて18個を比較した結果が議論されており，
+      手の姿勢情報を使う手法が高い性能を示す傾向があることが確認されている．
+
+  .item2
+    img(src=figpath+"First-Person_Hand_Action_Benchmark_with_RGB-D_Videos_and_3D_Hand_Pose_Annotations.png",alt="First-Person_Hand_Action_Benchmark_with_RGB-D_Videos_and_3D_Hand_Pose_Annotations.png")
+  .item3
+    h1 新規性・結果・なぜ通ったか？
+    .text
+      ul
+        li 手の3D姿勢を使った行動認識のためのデータセットを提供．
+        li RGB, Depth, Poseといった様々な特徴を用いる各手法が詳細に議論されている．
+        li 一番良い手法で78%程度の認識率．
+  .item4
+    h1 コメント・リンク集
+    .text
+      ul
+        li: a(href="https://arxiv.org/abs/1704.02463") 論文 (arXiv)
+        li: a(href="https://www.youtube.com/watch?v=U5gleNWjz44") 動画 (YouTube)
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.8 12:00:18
