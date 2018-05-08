@@ -1,0 +1,30 @@
++slide
+  .title Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks
+  .info
+    .authors Agrim Gupta, Justin Johnson, Li Fei-Fei, Silvio Savarese and Alexandre Alahi
+    .conference CVPR2018
+    .paper_id 234
+  .slide_editor Ryosuke Araki
+
+  .item1
+    .text
+      h1 概要
+      p 人や自律移動プラットフォームが，移動している人を避けるにはいくつかの経路が考えられる．本手法は，人間の経路予測にシーケンス予測とGANを組み合わせたツールを用いて，複数の経路予測を行う．Recurrent sequence-to-sequence modelは，複数の人の間で情報を集約するための新しいプーリング手法を用いて，観測者の行動を予測する．そして，GANを用いてもっともらしい行動をいくつか予測する．予測された経路はDiscriminatorへ入力され，Fake/Real判別をしGANを訓練していく．
+  .item2
+    .text
+      p
+        img(src=`${figpath}20180509_SocialGAN1.jpg`,alt="20180509_SocialGAN1.jpg")
+        img(src=`${figpath}20180509_SocialGAN2.jpg`,alt="20180509_SocialGAN2.jpg")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      p Generatorでは，複数の人が同時にどう動くか予測するために，Encoderの各LSTMの出力をまとめるプーリングモジュールを導入した．Discriminatorは，経路そのものがFake（人として社会的にあり得ない行動）またはReal（あり得る行動）を判断する．ETHやHOTELなどのデータセットを用いて評価実験を行った．12ステップ後のAverage Displacement Error（全ての時間での真値と予測値の誤差）は0.58（Social LSTM: 0.72），Final Displacement Error（最終目的とでの真値と予測値の誤差）1.18（Social LSTM: 1.54）となった．
+  .item4
+    .text
+      h1 コメント・リンク集
+      p GANを使う手法は多く出てきているが，これは面白い応用方法だと思った．Discriminatorをどうやって学習していくかが肝になりそう．
+      ul
+        li
+          a(href="https://arxiv.org/abs/1803.10892") arXiv
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.9 01:45:09
