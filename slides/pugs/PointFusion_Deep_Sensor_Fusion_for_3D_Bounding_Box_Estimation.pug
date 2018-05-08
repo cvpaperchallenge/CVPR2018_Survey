@@ -1,0 +1,35 @@
+﻿+slide
+  .title PointFusion: Deep Sensor Fusion for 3D Bounding Box Estimation
+  .info
+    .authors Danfei Xu, dragomir Anguelov, Ashesh Jain
+    .conference CVPR 2018
+    .paper_id 50
+  .slide_editor Yue Qiu
+
+  .item1
+    .text
+      h1 概要
+      p ・画像と点群情報を利用した3D物体検出のフレームワークPointFusionを提案した．
+        |・従来のマルチセンサーの情報を利用した3D物体検出は前処理が必要、マルチセンサーを異なるパイプラインで処理し，他のセンサーのコンテキストをうまく利用できないなどの問題点がある．PointFusionは①異なるネットワーク構造を用いて画像(CNN)と点群情報(PointNet)を直接処理し，②デンスフュージョンネットワーク構造を提案し，画像と点群の抽出情報を統合しより精密な3D物体検出を行う．
+        |・2種類のデンスフュージョンネットワークを提案した．①画像情報及びPointNetにより抽出したグローバル情報を統合し， 3Dボックスのコーナー位置を推定する．②画像情報及びPointNetにより抽出したグローバル情報、ポイントフィーチャーを統合し， 3Dボックスのオフセット及びconfidence scoresを予測する．最後の2つの結果を統合し，最終的な結果を予測する
+  .item2
+    .text
+      p
+        img(src=`${figpath}PointFusion.png`,alt="PointFusion")
+  .item3
+    .text
+      h1 新規性・結果
+      p ・点群データの前処理が必要無し．
+        |・対応できるデータの形式が広い，室外環境と室内環境両方対応できる．
+        |・多様な三次元センサーのデータを対応できる．(RGB-D, LiDar, Radar,…)
+        |・KITTI, SUN-RGBDデータセットにおいてstate-of-the-artな結果
+  .item4
+    .text
+      h1 リンク集
+      p ・室内・外環境両方対応できるので、応用場面が広そう
+        |・将来的にend-to-endに実現できたら更に良い
+      ul
+        li
+          a(href="https://arxiv.org/pdf/1711.10871.pdf") 論文
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.8 10:56:27
