@@ -1,29 +1,31 @@
-+slide
-  .title Neural Baby Talk
-  .info
-    .authors Jiasen Lu, et al.
-    .conference CVPR 2018
-  .slide_editor Takumu Ikeya
-
-  .item1
-    .text
-      h1 概要
-      p 画像内で検出した物体から文章を生成するイメージキャプショニングタスクを行うための新たなフレームワークの構築を行った．単語が格納されるスロットを文章内に生成し，生成したスロットを満たすように検出した物体を当てはめていくことでキャプションを行う．
-  .item2
-    .text
-      p
-        img(src=`${figpath}180508NBT.PNG`)
-  .item3
-    .text
-      h1 新規性・結果
-      p 検出された物体の名称が入るスロットを最初に生成し，生成したスロットを満たしていくことでキャプションを行う手法が新しい．
-      p イメージキャプショニングタスクにおいてFlickr30KとCOCOデータセットでSOTAを達成した.
-
-  .item4
-    .text
-      p
-        li
-          a(href="https://arxiv.org/pdf/1803.09845.pdf") 論文
-        li
-          a(href="https://github.com/jiasenlu/NeuralBabyTalk") github
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Neural_Baby_Talk
+  .paper-abstract
+    .title Neural Baby Talk
+    .info
+      .authors Jiasen Lu, et al.
+      .conference CVPR 2018
+    .slide_editor Takumu Ikeya
+  
+    .item1
+      .text
+        h1 概要
+        p 画像内で検出した物体から文章を生成するイメージキャプショニングタスクを行うための新たなフレームワークの構築を行った．単語が格納されるスロットを文章内に生成し，生成したスロットを満たすように検出した物体を当てはめていくことでキャプションを行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180508NBT.PNG`)
+    .item3
+      .text
+        h1 新規性・結果
+        p 検出された物体の名称が入るスロットを最初に生成し，生成したスロットを満たしていくことでキャプションを行う手法が新しい．
+        p イメージキャプショニングタスクにおいてFlickr30KとCOCOデータセットでSOTAを達成した.
+  
+    .item4
+      .text
+        p
+          li
+            a(href="https://arxiv.org/pdf/1803.09845.pdf") 論文
+          li
+            a(href="https://github.com/jiasenlu/NeuralBabyTalk") github
+    .slide_index #{getSlideIndex()}

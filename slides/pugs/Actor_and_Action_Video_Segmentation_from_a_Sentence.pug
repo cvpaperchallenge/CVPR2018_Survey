@@ -1,28 +1,30 @@
-+slide
-  .title Actor and Action Video Segmentation from a Sentence
-  .info
-    .authors Kirill Gavrilyuk, Amir Ghodrati, Zhenyang Li, Cees G.M. Snoek
-    .conference CVPR 2018 (oral)
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p センテンスの入力から、行動者と行動（Actor and Action）を同時に特定する研究である。複数の同様の物体から特定の人物など、詳細な分類が必要になる。ここではFully-Convolutional（構造の全てが畳み込みで構成される）モデルを適用してセグメンテーションベースで出力を行うモデルを提案。図は提案モデルを示す。I3Dにより動画像のエンコーディング、自然言語側はWord2Vecの特徴をさらにCNNによりエンコーディング。その後、動画像・言語特徴を統合してDeconvを繰り返しセグメントを獲得していく。
-  .item2
-    .text
-      p
-        img(src=`${figpath}1803ActorAction.png`,alt="1803ActorAction")
-  .item3
-    .text
-      h1 新規性・結果
-      p 文章（と動画像）の入力から行動者と行動の位置を特定すべくセグメンテーションを実行するという問題を提起した。また、二つの有名なデータセット（A2D/J-HMDB）を拡張して7,500を超える自然言語表現を含むデータとした。同問題に対してはSoTA。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p CVxNLPの問題はここにも進出して来た。画像キャプションに限らず、この手の統合は進められるはず。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.07485.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.24 12:47:10
+﻿+slide
+section#Actor_and_Action_Video_Segmentation_from_a_Sentence
+  .paper-abstract
+    .title Actor and Action Video Segmentation from a Sentence
+    .info
+      .authors Kirill Gavrilyuk, Amir Ghodrati, Zhenyang Li, Cees G.M. Snoek
+      .conference CVPR 2018 (oral)
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p センテンスの入力から、行動者と行動（Actor and Action）を同時に特定する研究である。複数の同様の物体から特定の人物など、詳細な分類が必要になる。ここではFully-Convolutional（構造の全てが畳み込みで構成される）モデルを適用してセグメンテーションベースで出力を行うモデルを提案。図は提案モデルを示す。I3Dにより動画像のエンコーディング、自然言語側はWord2Vecの特徴をさらにCNNによりエンコーディング。その後、動画像・言語特徴を統合してDeconvを繰り返しセグメントを獲得していく。
+    .item2
+      .text
+        p
+          img(src=`${figpath}1803ActorAction.png`,alt="1803ActorAction")
+    .item3
+      .text
+        h1 新規性・結果
+        p 文章（と動画像）の入力から行動者と行動の位置を特定すべくセグメンテーションを実行するという問題を提起した。また、二つの有名なデータセット（A2D/J-HMDB）を拡張して7,500を超える自然言語表現を含むデータとした。同問題に対してはSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p CVxNLPの問題はここにも進出して来た。画像キャプションに限らず、この手の統合は進められるはず。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.07485.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.24 12:47:10

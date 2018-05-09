@@ -1,28 +1,30 @@
-+slide
-  .title Discriminative Learning of Latent Features for Zero-Shot Recognition
-  .info
-    .authors Minghui Yan Li, et al
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p Zero-shot learning(ZSL)における、視覚的および意味的インスタンスを別々に表現し学習するLatent Discriminative Features Learning(LDF)の提案。 (1)ズームネットワークにより差別的な領域を自動的に発見することができるネットワークの提案。(2)ユーザによって定義された属性と潜在属性の両方について、拡張空間における弁別的意味表現の学習。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180330LDF.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p ZSLは、画像表現と意味表現の間の空間を学習することによって、見えない画像カテゴリを認識する。 既存の手法では、視覚と意味空間を合わせたマッピングマトリックスを学習することが中心的課題。提案手法では、差別的に学習するとうアプローチで識別精度向上を図る。
-  .item4
-    .text
-      h1 結果・リンク集
-      p 2つのコンポーネントによって、互いに支援しながら学習することで最先端の精度に。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.06731.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Discriminative_Learning_of_Latent_Features_for_Zero-Shot_Recognition
+  .paper-abstract
+    .title Discriminative Learning of Latent Features for Zero-Shot Recognition
+    .info
+      .authors Minghui Yan Li, et al
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p Zero-shot learning(ZSL)における、視覚的および意味的インスタンスを別々に表現し学習するLatent Discriminative Features Learning(LDF)の提案。 (1)ズームネットワークにより差別的な領域を自動的に発見することができるネットワークの提案。(2)ユーザによって定義された属性と潜在属性の両方について、拡張空間における弁別的意味表現の学習。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180330LDF.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p ZSLは、画像表現と意味表現の間の空間を学習することによって、見えない画像カテゴリを認識する。 既存の手法では、視覚と意味空間を合わせたマッピングマトリックスを学習することが中心的課題。提案手法では、差別的に学習するとうアプローチで識別精度向上を図る。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 2つのコンポーネントによって、互いに支援しながら学習することで最先端の精度に。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.06731.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

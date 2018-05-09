@@ -1,37 +1,39 @@
-+slide
-  .title PackNet : Adding Multiple Tasks to a Single Network by Iterative Pruning
-  .info
-    .authors Arun Mallya, Svetlana Lazebnik
-    .conference CVPR2018, arXive:1711.05769
-    .paper_id 1004
-  .slide_editor Hiroshi Fukui
-
-  .item1
-    .text
-      h1 概要
-      p 複数のデータセットを1つのネットワークで学習する場合，通常は過去に学習したデータセットは段々と精度が低下していく．
-        |これは，全てのパラメータに対して更新するため，過去に学習したデータセットの特徴を抽出できなくなっていくのが原因である．
-        |この論文で着目していることは，大規模なネットワークは特定のパラメータは学習をサボる傾向があるところであり，このサボっているパラメータを使って効率よく学習させて複数のデータセットを学習させている．
-  .item2
-    .text
-      p
-        img(src=`${figpath}1004_overview_packnet.png`,alt="1004_overview_packnet.png")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 手法自体は非常にシンプルであり，特定のパラメータをプルーリング(右上図の白領域)して再学習する．
-        |そして，プルーリングしたパラメータのプルーリングを解放してパラメータをアップデートする．
-        |特定のタスク(データセット)を学習した後は同じ要領でまたプルーリングと再学習を行う．
-        |特定のパラメータを特定のタスクに割り当てるような学習をすることで，複数タスクに対応している．
-        |結果としては，右図のようにタスクが追加されても性能がほとんど低下していない．
-  .item4
-    .text
-      h1 コメント・リンク集
-      p 単純な手法でありながら，非常に強力な手法．図2のインパクトがすごかった．様々な応用にも繋げれそう(Transfer Learning, Domain Adaptation等)
-      ul
-        li
-          a(href="https://arxiv.org/abs/1711.05769") 論文リンク
-          |*
-          a(href="https://github.com/arunmallya/packnet") コードリンク
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.2 13:23:59
+﻿+slide
+section#PackNet_Adding_Multiple_Tasks_to_a_Single_Network_by_Iterative_Pruning
+  .paper-abstract
+    .title PackNet : Adding Multiple Tasks to a Single Network by Iterative Pruning
+    .info
+      .authors Arun Mallya, Svetlana Lazebnik
+      .conference CVPR2018, arXive:1711.05769
+      .paper_id 1004
+    .slide_editor Hiroshi Fukui
+  
+    .item1
+      .text
+        h1 概要
+        p 複数のデータセットを1つのネットワークで学習する場合，通常は過去に学習したデータセットは段々と精度が低下していく．
+          |これは，全てのパラメータに対して更新するため，過去に学習したデータセットの特徴を抽出できなくなっていくのが原因である．
+          |この論文で着目していることは，大規模なネットワークは特定のパラメータは学習をサボる傾向があるところであり，このサボっているパラメータを使って効率よく学習させて複数のデータセットを学習させている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}1004_overview_packnet.png`,alt="1004_overview_packnet.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 手法自体は非常にシンプルであり，特定のパラメータをプルーリング(右上図の白領域)して再学習する．
+          |そして，プルーリングしたパラメータのプルーリングを解放してパラメータをアップデートする．
+          |特定のタスク(データセット)を学習した後は同じ要領でまたプルーリングと再学習を行う．
+          |特定のパラメータを特定のタスクに割り当てるような学習をすることで，複数タスクに対応している．
+          |結果としては，右図のようにタスクが追加されても性能がほとんど低下していない．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 単純な手法でありながら，非常に強力な手法．図2のインパクトがすごかった．様々な応用にも繋げれそう(Transfer Learning, Domain Adaptation等)
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.05769") 論文リンク
+            |*
+            a(href="https://github.com/arunmallya/packnet") コードリンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.2 13:23:59

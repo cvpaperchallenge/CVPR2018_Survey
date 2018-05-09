@@ -1,27 +1,29 @@
-+slide
-  .title Guided Labeling using Convolutional Neural Networks
-  .info
-    .authors Sebastian Stabinger, et al. 
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p ラベルの付いていないデータに対して、どの画像にラベルを付けてデータセットを構成すればよいかを判断するguided labelingの提案。ラベル付けを行う必要があるサンプルを見定めることで、データセットの量を大幅に減らすことができる。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180313GuidedLabeling.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p 大規模データセットにおいて、手動でのラベル付けは大変。選別してラベル付けを行えば、作業を最小限に抑えられる。また、ある意味良いデータを選別できるため、場合によっては精度も向上。
-  .item4
-    .text
-      p MNISTは、データセットのサイズを1/16に、CIFAR10は1/2に減らすことが可能に。また、MNISTの場合は、全部使った時よりも識別精度が向上した。普遍性を妨げる不必要なデータを取り除けたことが精度向上につながった？
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1712.02154.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Guided_Labeling_using_Convolutional_Neural_Networks
+  .paper-abstract
+    .title Guided Labeling using Convolutional Neural Networks
+    .info
+      .authors Sebastian Stabinger, et al. 
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p ラベルの付いていないデータに対して、どの画像にラベルを付けてデータセットを構成すればよいかを判断するguided labelingの提案。ラベル付けを行う必要があるサンプルを見定めることで、データセットの量を大幅に減らすことができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180313GuidedLabeling.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p 大規模データセットにおいて、手動でのラベル付けは大変。選別してラベル付けを行えば、作業を最小限に抑えられる。また、ある意味良いデータを選別できるため、場合によっては精度も向上。
+    .item4
+      .text
+        p MNISTは、データセットのサイズを1/16に、CIFAR10は1/2に減らすことが可能に。また、MNISTの場合は、全部使った時よりも識別精度が向上した。普遍性を妨げる不必要なデータを取り除けたことが精度向上につながった？
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.02154.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

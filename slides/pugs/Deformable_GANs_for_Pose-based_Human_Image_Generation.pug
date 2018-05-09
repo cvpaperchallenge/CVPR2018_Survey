@@ -1,34 +1,36 @@
-+slide
-  .title Deformable GANs for Pose-based Human Image Generation
-  .info
-    .authors Aliaksandr Siarohin, Enver Sangineto, Ste ́phane Lathuilie`re, and Nicu Sebe
-    .conference CVPR2018
-  .slide_editor Naofumi Akimoto
-
-  .item1
-    .text
-      h1 概要
-      p 与えられたポーズ情報を条件として人物画像を生成するタスクを扱う．
-        |任意ポーズへの変形タスクで発生する，（服などの）変換前のピクセルと変換後のピクセルの対応が不整列である問題に対応するために，deformable skip connectionを対案する．
-        |従来手法と比べ，条件画像の服の色・テクスチャを保存して別ポーズの画像を生成できている．
-        |人物画像の生成に限らず，キーポイントを与えることのできる不整列のオブジェクトであれば，この手法が適用できると著者らは考えている．
-  .item2
-    .text
-      p
-        img(src=`${figpath}Deformable_GANs_for_Pose-based_Human_Image_Generation_fig2.png`,alt="fig2")
-        img(src=`${figpath}Deformable_GANs_for_Pose-based_Human_Image_Generation_fig3.png`,alt="fig3")
-  .item3
-    .text
-      h1 手法
-      p U-net likeのEncoder-Decoder, GAN
-        |deformable skip connectionについて．
-        |変換前後の両方のポーズ情報が既知なので，キーポイント周辺のピクセルが変換前から変換後にどこへ移動するか知ることができる．したがって，キーポイントの座標からアフィン変換を求め，畳み込みから得た特徴マップをアフィン変換することで，服の色やテクスチャを変換前から変換後の画像に移して生成できる．
-        |Encoderの特徴量をアフィン変換し，Decoderの特徴量にskipするのがdeformable skip connectionである．
-  .item4
-    .text
-      p ##リンク集
-      ul
-        li https://arxiv.org/abs/1801.00055
-          |*https://github.com/AliaksandrSiarohin/pose-gan
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 15:39:41
+﻿+slide
+section#Deformable_GANs_for_Pose-based_Human_Image_Generation
+  .paper-abstract
+    .title Deformable GANs for Pose-based Human Image Generation
+    .info
+      .authors Aliaksandr Siarohin, Enver Sangineto, Ste ́phane Lathuilie`re, and Nicu Sebe
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+  
+    .item1
+      .text
+        h1 概要
+        p 与えられたポーズ情報を条件として人物画像を生成するタスクを扱う．
+          |任意ポーズへの変形タスクで発生する，（服などの）変換前のピクセルと変換後のピクセルの対応が不整列である問題に対応するために，deformable skip connectionを対案する．
+          |従来手法と比べ，条件画像の服の色・テクスチャを保存して別ポーズの画像を生成できている．
+          |人物画像の生成に限らず，キーポイントを与えることのできる不整列のオブジェクトであれば，この手法が適用できると著者らは考えている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deformable_GANs_for_Pose-based_Human_Image_Generation_fig2.png`,alt="fig2")
+          img(src=`${figpath}Deformable_GANs_for_Pose-based_Human_Image_Generation_fig3.png`,alt="fig3")
+    .item3
+      .text
+        h1 手法
+        p U-net likeのEncoder-Decoder, GAN
+          |deformable skip connectionについて．
+          |変換前後の両方のポーズ情報が既知なので，キーポイント周辺のピクセルが変換前から変換後にどこへ移動するか知ることができる．したがって，キーポイントの座標からアフィン変換を求め，畳み込みから得た特徴マップをアフィン変換することで，服の色やテクスチャを変換前から変換後の画像に移して生成できる．
+          |Encoderの特徴量をアフィン変換し，Decoderの特徴量にskipするのがdeformable skip connectionである．
+    .item4
+      .text
+        p ##リンク集
+        ul
+          li https://arxiv.org/abs/1801.00055
+            |*https://github.com/AliaksandrSiarohin/pose-gan
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 15:39:41

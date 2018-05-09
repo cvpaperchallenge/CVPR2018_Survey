@@ -1,37 +1,39 @@
-+slide
-  .title Defense against Adversarial Attacks Using High-Level Representation Guided Denoiser
-  .info
-    .authors Fangzhou Liao, Ming Liang, Yinpeng Dong, Tianyu Pang, Jun Zhu and Xiaolin Hu
-    .conference CVPR 2018
-  .slide_editor Kodai Nakashima
-
-  .item1
-    .text
-      h1 概要
-      p 画像分類におけるadrversarial attackの防御手法として, high-level representation guided denoiser (HGD) を提案.
-        |target model (メインの処理を担うネットワーク) への前処理段階で用いる.
-        |HGDは, マルチスケールインフォメーションを得るためU-netの構造を使い,
-        |トレーニングするための損失関数として, 元画像とノイズの乗った画像をそれぞれ入力したときの出力差を用いる.
-        |右図に提案手法の詳細を示す.
-  .item2
-    .text
-      p
-        img(src=`${figpath}defence_against_adversarial_attacks_using_high-level_representation_guided_denoiser.png`,alt="defence_against_adversarial_attacks_using_high-level_representation_guided_denoiser.png")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p pixel-levelの損失関数を課した従来のdenoiserと比べ, より良い結果が得られた.
-      p state-of-the-artな防御手法であるensemble adversarial trainingと比べ, 3つのメリットがある.
-      ol
-        li target modelがwhite-boxとblack-boxの両方に対してよりロバスト.
-        li 大規模データセットでの学習が簡単.
-        li 他のtarget modelへ使い回すことが可能.
-  .item4
-    .text
-      h1 コメント・リンク集
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1712.02976.pdf") 論文URL
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 12:24:05
-
+﻿+slide
+section#Defense_against_Adversarial_Attacks_Using_High-Level_Representation_Guided_Denoiser
+  .paper-abstract
+    .title Defense against Adversarial Attacks Using High-Level Representation Guided Denoiser
+    .info
+      .authors Fangzhou Liao, Ming Liang, Yinpeng Dong, Tianyu Pang, Jun Zhu and Xiaolin Hu
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+  
+    .item1
+      .text
+        h1 概要
+        p 画像分類におけるadrversarial attackの防御手法として, high-level representation guided denoiser (HGD) を提案.
+          |target model (メインの処理を担うネットワーク) への前処理段階で用いる.
+          |HGDは, マルチスケールインフォメーションを得るためU-netの構造を使い,
+          |トレーニングするための損失関数として, 元画像とノイズの乗った画像をそれぞれ入力したときの出力差を用いる.
+          |右図に提案手法の詳細を示す.
+    .item2
+      .text
+        p
+          img(src=`${figpath}defence_against_adversarial_attacks_using_high-level_representation_guided_denoiser.png`,alt="defence_against_adversarial_attacks_using_high-level_representation_guided_denoiser.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p pixel-levelの損失関数を課した従来のdenoiserと比べ, より良い結果が得られた.
+        p state-of-the-artな防御手法であるensemble adversarial trainingと比べ, 3つのメリットがある.
+        ol
+          li target modelがwhite-boxとblack-boxの両方に対してよりロバスト.
+          li 大規模データセットでの学習が簡単.
+          li 他のtarget modelへ使い回すことが可能.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.02976.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:24:05
+  

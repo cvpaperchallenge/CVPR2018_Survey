@@ -1,32 +1,34 @@
-+slide
-  .title Density Adaptive Point Set Registration
-  .info
-    .authors Felix Järemo Lawin, Martin Danelljan, Fahad Khan, Per-Erik Forssen, Michael Felsberg
-    .conference CVPR 2018
-    .paper_id 464
-  .slide_editor Yue Qiu
-
-  .item1
-    .text
-      h1 概要
-      p ・ 三次元センサーにより取得したPoint Set の密度の変動を対応できるPoint Set Registrationの手法を提案した．
-        |・従来の三次元センサー(例Lidar)により取得できるPoint Setの密度が均一ではない，一方，従来の確率的Point Set Registrationの手法は高密度の部分を対応させ，低密度の箇所の対応が重視されない問題点がある．提案手法はシーン構造の確率分布をモデリングすることにより，密度の変化にロバストに対応できる．
-        |・提案手法は3次元シーンの構造及びフレーム間のカメラ移動量を同時にモデリングし， EMベースなフレームワークに基づきKL divergenceを最小化によりパラメータの最適化を行う．
-  .item2
-    .text
-      p
-        img(src=`${figpath}Density-Adaptive-Point-Set-Registration.png`,alt="Density-Adaptive-Point-Set-Registration")
-  .item3
-    .text
-      h1 新規性・結果
-      p ・Lidarを用いたregistrationシステムのPoint Setの密度変化をロバストで対応できた．
-        |・ DAR-ideal、 VPS and TLS ETH datasetsなどのLidarデータセットで従来の確率的マルチビューRegistration手法より良い性能を達成した．
-  .item4
-    .text
-      h1 リンク集
-      p ・deep learningを用いていない手法
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1804.01495.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.2 10:39:57
+﻿+slide
+section#Density_Adaptive_Point_Set_Registration
+  .paper-abstract
+    .title Density Adaptive Point Set Registration
+    .info
+      .authors Felix Järemo Lawin, Martin Danelljan, Fahad Khan, Per-Erik Forssen, Michael Felsberg
+      .conference CVPR 2018
+      .paper_id 464
+    .slide_editor Yue Qiu
+  
+    .item1
+      .text
+        h1 概要
+        p ・ 三次元センサーにより取得したPoint Set の密度の変動を対応できるPoint Set Registrationの手法を提案した．
+          |・従来の三次元センサー(例Lidar)により取得できるPoint Setの密度が均一ではない，一方，従来の確率的Point Set Registrationの手法は高密度の部分を対応させ，低密度の箇所の対応が重視されない問題点がある．提案手法はシーン構造の確率分布をモデリングすることにより，密度の変化にロバストに対応できる．
+          |・提案手法は3次元シーンの構造及びフレーム間のカメラ移動量を同時にモデリングし， EMベースなフレームワークに基づきKL divergenceを最小化によりパラメータの最適化を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Density-Adaptive-Point-Set-Registration.png`,alt="Density-Adaptive-Point-Set-Registration")
+    .item3
+      .text
+        h1 新規性・結果
+        p ・Lidarを用いたregistrationシステムのPoint Setの密度変化をロバストで対応できた．
+          |・ DAR-ideal、 VPS and TLS ETH datasetsなどのLidarデータセットで従来の確率的マルチビューRegistration手法より良い性能を達成した．
+    .item4
+      .text
+        h1 リンク集
+        p ・deep learningを用いていない手法
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.01495.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.2 10:39:57

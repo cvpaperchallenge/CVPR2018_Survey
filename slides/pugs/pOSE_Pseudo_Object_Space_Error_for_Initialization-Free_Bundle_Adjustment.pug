@@ -1,31 +1,33 @@
-+slide
-  .title pOSE: Pseudo Object Space Error for Initialization-Free Bundle Adjustment
-  .info
-    .authors J. Hong and C. Zach
-    .conference CVPR2018
-  .slide_editor Ryota Suzuki
-
-  .item1
-    .text
-      h1 概要
-      p カメラ姿勢推定，3次元復元に使われるバンドル調整では，適した初期値を与える必要があるが，初期値を与える必要を無くす提案をする．
-      p アフィンバンドル調整問題においては，任意の初期化から到達可能な使いやすいminimaがあることが知られているが，その主な要因は，収束のワイドな領域を持つことで知られているVariable Projection（VarPro）法の導入によるものである．
-        |本研究ではPseudo Object Space Error（pOSE）を提案する．これは，アフィンと射影のモデルのハイブリッドで表現される複数カメラにおける目的関数である．
-        |この定式化で，VarPro法に適したバイリニア問題構造となり，真の射影復元と近い3D復元結果を得られる．
-        |実験では，ランダムな初期化から高い成功率で正しい3D復元を得られることを確認した．
-  .item2
-    .text
-      p
-        img(src=`${figpath}pOSE_Pseudo_Object_Space_Error_for_Initialization-Free_Bundle_Adjustment_Figure1.png`,alt="Figure1")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p ランダム初期値でもメトリックの正しい3D復元が行える．
-  .item4
-    .text
-      h1 コメント・リンク集
-      ul
-        li
-          a(href="https://github.com/jhh37/pose/blob/master/Documents/hong_and_zach_cvpr18.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.2 10:31:48
+﻿+slide
+section#pOSE_Pseudo_Object_Space_Error_for_Initialization-Free_Bundle_Adjustment
+  .paper-abstract
+    .title pOSE: Pseudo Object Space Error for Initialization-Free Bundle Adjustment
+    .info
+      .authors J. Hong and C. Zach
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p カメラ姿勢推定，3次元復元に使われるバンドル調整では，適した初期値を与える必要があるが，初期値を与える必要を無くす提案をする．
+        p アフィンバンドル調整問題においては，任意の初期化から到達可能な使いやすいminimaがあることが知られているが，その主な要因は，収束のワイドな領域を持つことで知られているVariable Projection（VarPro）法の導入によるものである．
+          |本研究ではPseudo Object Space Error（pOSE）を提案する．これは，アフィンと射影のモデルのハイブリッドで表現される複数カメラにおける目的関数である．
+          |この定式化で，VarPro法に適したバイリニア問題構造となり，真の射影復元と近い3D復元結果を得られる．
+          |実験では，ランダムな初期化から高い成功率で正しい3D復元を得られることを確認した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}pOSE_Pseudo_Object_Space_Error_for_Initialization-Free_Bundle_Adjustment_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ランダム初期値でもメトリックの正しい3D復元が行える．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://github.com/jhh37/pose/blob/master/Documents/hong_and_zach_cvpr18.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.2 10:31:48

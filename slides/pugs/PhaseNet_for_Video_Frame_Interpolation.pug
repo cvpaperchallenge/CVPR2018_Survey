@@ -1,27 +1,29 @@
-+slide
-  .title PhaseNet for Video Frame Interpolation
-  .info
-    .authors Simone Meyer, et al.
-    .paper_id 1804.00884
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p 様々なシーンに頑健かつ、大きな動きにも対処しながらビデオフレームの補間を行うPhaseNetの提案。中間のフレームにおける位相と階層構造を推定するnnのデコーダを搭載。これにより、既存の位相ベースの手法よりも広範囲に渡る動きに対応。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180507PhaseNet.jpg`,alt="180507PhaseNet.jpg")
-  .item3
-    .text
-      h1 新規性
-      p 既存のビデオフレーム補間アプローチは、フレーム間において密な対応付けが必要であり、照明変化や被写体ブレに頑健でない。カーネルに依存した深層学習ベースの手法でもある程度緩和することはできるが不十分。ピクセル単位の位相ベースの手法ならば上手くいくことが実装されている。位相ベースでnnを用いた手法を提案。
-  .item4
-    .text
-      h1 結果・リンク集
-      p 位相のlossとノルムを組み合わせることで、チャレンジングなシーンでも視覚的に綺麗な画像を生成できる。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1804.00884.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#PhaseNet_for_Video_Frame_Interpolation
+  .paper-abstract
+    .title PhaseNet for Video Frame Interpolation
+    .info
+      .authors Simone Meyer, et al.
+      .paper_id 1804.00884
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 様々なシーンに頑健かつ、大きな動きにも対処しながらビデオフレームの補間を行うPhaseNetの提案。中間のフレームにおける位相と階層構造を推定するnnのデコーダを搭載。これにより、既存の位相ベースの手法よりも広範囲に渡る動きに対応。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180507PhaseNet.jpg`,alt="180507PhaseNet.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 既存のビデオフレーム補間アプローチは、フレーム間において密な対応付けが必要であり、照明変化や被写体ブレに頑健でない。カーネルに依存した深層学習ベースの手法でもある程度緩和することはできるが不十分。ピクセル単位の位相ベースの手法ならば上手くいくことが実装されている。位相ベースでnnを用いた手法を提案。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 位相のlossとノルムを組み合わせることで、チャレンジングなシーンでも視覚的に綺麗な画像を生成できる。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.00884.pdf") 論文
+    .slide_index #{getSlideIndex()}

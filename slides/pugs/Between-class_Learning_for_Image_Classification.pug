@@ -1,27 +1,29 @@
-+slide
-  .title Between-class Learning for Image Classification
-  .info
-    .authors Yuji Tokozume, Yoshitaka Ushiku and Tatsuya Harada
-    .paper_id 1711.10284
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p Between-Class learning(BC learn)という画像分類タスクにおける新学習方法の提案。まず、異なるクラスの2枚の画像をランダムな比率で混合したbetween-class imageを作成。そして、画像を波形として扱うためにミキシングを行う。混合画像をモデルに入力し、学習することで混合した比率を出力する。これにより、特徴分布の形状に制約をかけることができるため、汎化性能が向上する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180506Between-class.jpg`,alt="180506Between-class.jpg")
-  .item3
-    .text
-      h1 新規性
-      p もともとは、混合できるデジタル音声のために開発された手法。CNNは“画像を波形として扱っている”という説から、本手法を提案。2つの画像を混合する意味に疑問はあるが、実際にパフォーマンスが向上している。
-  .item4
-    .text
-      h1 結果・リンク集
-      p 混合とミキシングの提案手法によって分類精度が向上。画像の混合にどんな意味があるのかを解明してほしい。
-      ul
-        li
-          a(href="https://arxiv.org/abs/1711.10284") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Between-class_Learning_for_Image_Classification
+  .paper-abstract
+    .title Between-class Learning for Image Classification
+    .info
+      .authors Yuji Tokozume, Yoshitaka Ushiku and Tatsuya Harada
+      .paper_id 1711.10284
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p Between-Class learning(BC learn)という画像分類タスクにおける新学習方法の提案。まず、異なるクラスの2枚の画像をランダムな比率で混合したbetween-class imageを作成。そして、画像を波形として扱うためにミキシングを行う。混合画像をモデルに入力し、学習することで混合した比率を出力する。これにより、特徴分布の形状に制約をかけることができるため、汎化性能が向上する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180506Between-class.jpg`,alt="180506Between-class.jpg")
+    .item3
+      .text
+        h1 新規性
+        p もともとは、混合できるデジタル音声のために開発された手法。CNNは“画像を波形として扱っている”という説から、本手法を提案。2つの画像を混合する意味に疑問はあるが、実際にパフォーマンスが向上している。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 混合とミキシングの提案手法によって分類精度が向上。画像の混合にどんな意味があるのかを解明してほしい。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.10284") 論文
+    .slide_index #{getSlideIndex()}

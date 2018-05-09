@@ -1,35 +1,37 @@
-+slide
-  .title Augmenting Crowd-Sourced 3D Reconstructions using Semantic Detections
-  .info
-    .authors T. Price, J. L. Schonberger, Z. Wei, M. Pollefeys and J.M. Frahm
-    .conference CVPR2018
-  .slide_editor Ryota Suzuki
-
-  .item1
-    .text
-      h1 概要
-      p SfMにおいて，一つの撮影にしか映らないような移動物体を考慮することで，そのシーンの絶対スケールが推定可能になるし，人混みだと見えにくい地平面の復元も成しうる．
-        |個々の撮影画像において検出された人を3次元空間に投影し，さらに物体の意味情報（本稿では背の高さの分布）から絶対スケールを推定する．
-        |また，人検出結果を用いて地平面推定も行う．
-        |ランダムなインターネット画像で手法をデモンストレーションし，量的評価を行う．
-      p 人検出はトルソモデルのフィッティングに基づく．画像における肩，腰の位置が推定でき，おおよその立ち位置も分かるということ．
-  .item2
-    .text
-      p
-        img(src=`${figpath}Augmenting_Crowd-Sourced_3D_Reconstructions_using_Semantic_Detections_Figure1.png`,alt="Figure1")
-  .item3
-    .text
-      h1 評価点
-      p 若干SIGGRAPH的な気風のある，面白い視点を提供する論文．
-        |過去の知見に基づく高品質な人検出などを用いて成し得た，正統なアプリケーションに感じる．
-        |動画のインパクトも大きいので，一度視聴を勧める．
-  .item4
-    .text
-      h1 リンク集
-      ul
-        li
-          a(href="https://demuc.de/papers/price2018augmenting.pdf") 論文
-        li
-          a(href="https://www.youtube.com/watch?v=eQWXuPv5eC0") 動画
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.4.16 17:07:53
+﻿+slide
+section#Augmenting_Crowd-Sourced_3D_Reconstructions_using_Semantic_Detections
+  .paper-abstract
+    .title Augmenting Crowd-Sourced 3D Reconstructions using Semantic Detections
+    .info
+      .authors T. Price, J. L. Schonberger, Z. Wei, M. Pollefeys and J.M. Frahm
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p SfMにおいて，一つの撮影にしか映らないような移動物体を考慮することで，そのシーンの絶対スケールが推定可能になるし，人混みだと見えにくい地平面の復元も成しうる．
+          |個々の撮影画像において検出された人を3次元空間に投影し，さらに物体の意味情報（本稿では背の高さの分布）から絶対スケールを推定する．
+          |また，人検出結果を用いて地平面推定も行う．
+          |ランダムなインターネット画像で手法をデモンストレーションし，量的評価を行う．
+        p 人検出はトルソモデルのフィッティングに基づく．画像における肩，腰の位置が推定でき，おおよその立ち位置も分かるということ．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Augmenting_Crowd-Sourced_3D_Reconstructions_using_Semantic_Detections_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 評価点
+        p 若干SIGGRAPH的な気風のある，面白い視点を提供する論文．
+          |過去の知見に基づく高品質な人検出などを用いて成し得た，正統なアプリケーションに感じる．
+          |動画のインパクトも大きいので，一度視聴を勧める．
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://demuc.de/papers/price2018augmenting.pdf") 論文
+          li
+            a(href="https://www.youtube.com/watch?v=eQWXuPv5eC0") 動画
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.4.16 17:07:53

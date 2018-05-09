@@ -1,34 +1,36 @@
-+slide
-  .title Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments
-  .info
-    .authors Peter Anderson, et al.
-    .conference CVPR 2018
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 自然言語のナビゲーションを入力として、実空間の中をロボットが動き目的地に到達できるかどうかを競うベンチマーク（Visually-grounded natural language navigation in real buildings）を提案。データセットは3Dのシミュレータによりキャプチャされ、22Kのナビゲーション、文章の平均単語数は29で構成される。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180305R2RNavi.png`,alt="180305R2RNavi")
-  .item3
-    .text
-      h1 新規性・結果
-      p (1) Matterport3Dデータセットを強化学習を行えるように拡張。(2) 同タスクが行えるようなベンチマークであるRoom-to-Room (R2R)を提案して言語と視覚情報から実空間にてナビができるようにした。(3) seq-to-seqをベースとしたニューラルネットによりベンチマークを構築。VQAをベースにしていて、ナビゲーション（VQAでいう質問文）と移動アクション（VQAでいう回答）という組み合わせで同問題を解決する。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p 自然言語の問題はキャプションや質問回答の枠を超えて実空間、さらにいうとロボットタスクに導入されつつある。この研究はビジョン側からのアプローチだが、ロボット側のアプローチが現在どこまでできているか気になる。すでに屋内環境をある程度自由に移動するロボットが実現しているとこの実現可能性が高くなる。SLAMとの組み合わせももう実行できるレベルにある？
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1711.07280.pdf") 論文
-        li
-          a(href="https://bringmeaspoon.org/") Project
-        li
-          a(href="https://github.com/peteanderson80/Matterport3DSimulator") GitHub
-        li
-          a(href="https://niessner.github.io/Matterport/") Matterport3D dataset
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.5 19:53:46
+﻿+slide
+section#Vision-and-Language_Navigation_Interpreting_visually-grounded_navigation_instructions_in_real_environments
+  .paper-abstract
+    .title Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments
+    .info
+      .authors Peter Anderson, et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 自然言語のナビゲーションを入力として、実空間の中をロボットが動き目的地に到達できるかどうかを競うベンチマーク（Visually-grounded natural language navigation in real buildings）を提案。データセットは3Dのシミュレータによりキャプチャされ、22Kのナビゲーション、文章の平均単語数は29で構成される。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180305R2RNavi.png`,alt="180305R2RNavi")
+    .item3
+      .text
+        h1 新規性・結果
+        p (1) Matterport3Dデータセットを強化学習を行えるように拡張。(2) 同タスクが行えるようなベンチマークであるRoom-to-Room (R2R)を提案して言語と視覚情報から実空間にてナビができるようにした。(3) seq-to-seqをベースとしたニューラルネットによりベンチマークを構築。VQAをベースにしていて、ナビゲーション（VQAでいう質問文）と移動アクション（VQAでいう回答）という組み合わせで同問題を解決する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 自然言語の問題はキャプションや質問回答の枠を超えて実空間、さらにいうとロボットタスクに導入されつつある。この研究はビジョン側からのアプローチだが、ロボット側のアプローチが現在どこまでできているか気になる。すでに屋内環境をある程度自由に移動するロボットが実現しているとこの実現可能性が高くなる。SLAMとの組み合わせももう実行できるレベルにある？
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.07280.pdf") 論文
+          li
+            a(href="https://bringmeaspoon.org/") Project
+          li
+            a(href="https://github.com/peteanderson80/Matterport3DSimulator") GitHub
+          li
+            a(href="https://niessner.github.io/Matterport/") Matterport3D dataset
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.5 19:53:46

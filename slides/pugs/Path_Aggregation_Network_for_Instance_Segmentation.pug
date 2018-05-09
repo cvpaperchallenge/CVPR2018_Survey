@@ -1,34 +1,36 @@
-+slide
-  .title Path Aggregation Network for Instance Segmentation
-  .info
-    .authors Shu Liu, Lu Qi, Haifang Qin, Jianping Shi, Jiaya Jia
-    .conference CVPR2018, arXive:1803.01534
-    .paper_id 912
-  .slide_editor Hiroshi Fukui
-
-  .item1
-    .text
-      h1 概要
-      p Feature Pyramid Network(FPN)ベースのMask R-CNNに，下位層の特徴マップを上位層に伝播させるPath Aggregation Networkを提案．
-        |インスタンスセグメンテーションの傾向として，上位層では物体全体に強く反応するが，下位層では物体の局所的な領域に強く反応する．
-        |そのため，Path Aggregation Networkでは，上位層と下位層の特徴マップを用いることで，インスタンスセグメンテーションの精度を向上させている．
-        |Path Aggregation Networkは，COCOのベンチマークで2位の性能を達成しており，CityscapeとMVDでも高い性能を達成している．
-  .item2
-    .text
-      p
-        img(src=`${figpath}912_overview.png`,alt="912_overview.png")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p Path Aggregation Networkの構造は右図のようなシンプルな構造になっている．
-        |(a)の部分はFPNと同様の構造となっており，FPNの特徴マップから(b)で新しい特徴マップを作成する．
-        |ここで，(a)と(b)では，緑線と赤線のように短距離と長距離のショートカットを導入する．
-        |これにより，下位層の特徴を上位層に伝播することが可能である．
-  .item4
-    .text
-      h1 コメント・リンク集
-      ul
-        li
-          a(href="https://arxiv.org/abs/1711.09020") 論文リンク
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 02:54:08
+﻿+slide
+section#Path_Aggregation_Network_for_Instance_Segmentation
+  .paper-abstract
+    .title Path Aggregation Network for Instance Segmentation
+    .info
+      .authors Shu Liu, Lu Qi, Haifang Qin, Jianping Shi, Jiaya Jia
+      .conference CVPR2018, arXive:1803.01534
+      .paper_id 912
+    .slide_editor Hiroshi Fukui
+  
+    .item1
+      .text
+        h1 概要
+        p Feature Pyramid Network(FPN)ベースのMask R-CNNに，下位層の特徴マップを上位層に伝播させるPath Aggregation Networkを提案．
+          |インスタンスセグメンテーションの傾向として，上位層では物体全体に強く反応するが，下位層では物体の局所的な領域に強く反応する．
+          |そのため，Path Aggregation Networkでは，上位層と下位層の特徴マップを用いることで，インスタンスセグメンテーションの精度を向上させている．
+          |Path Aggregation Networkは，COCOのベンチマークで2位の性能を達成しており，CityscapeとMVDでも高い性能を達成している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}912_overview.png`,alt="912_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Path Aggregation Networkの構造は右図のようなシンプルな構造になっている．
+          |(a)の部分はFPNと同様の構造となっており，FPNの特徴マップから(b)で新しい特徴マップを作成する．
+          |ここで，(a)と(b)では，緑線と赤線のように短距離と長距離のショートカットを導入する．
+          |これにより，下位層の特徴を上位層に伝播することが可能である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.09020") 論文リンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 02:54:08

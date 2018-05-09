@@ -1,28 +1,30 @@
-+slide
-  .title SketchMate: Deep Hashing for Million-Scale Human Sketch Retrieval
-  .info
-    .authors Peng Xu, et al.
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p スケッチ検索のためのディープハッシングフレームワークの提案。3.8mの大規模スケッチデータセットを構築。CNNでスケッチの特徴抽出。RNNでペンストロークの時間情報をモデル化。CNN-RNNでエンコードすることで、スケッチ性質に対応した新しいhashing lossを導入。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180408SkechMate.jpg`)
-  .item3
-    .text
-      h1 新規性・差分
-      p 従来のスケッチ認識タスクに従う代わりに、より困難な問題のスケッチハッシュ検索を行う。ネットワークをスケッチ認識のために再利用することもでき、どちらも高パフォーマンス。大規模なデータセットを利用することで、従来の文献ではあまり研究されていなかった、スケッチのユニークな特性を見出す。
-  .item4
-    .text
-      h1 リンク集
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1804.01401.pdf") 論文
-        li
-          a(href="http://sketchx.eecs.qmul.ac.uk/downloads/") ソースコード/データセット
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#SketchMate_Deep_Hashing_for_Million-Scale_Human_Sketch_Retrieval
+  .paper-abstract
+    .title SketchMate: Deep Hashing for Million-Scale Human Sketch Retrieval
+    .info
+      .authors Peng Xu, et al.
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p スケッチ検索のためのディープハッシングフレームワークの提案。3.8mの大規模スケッチデータセットを構築。CNNでスケッチの特徴抽出。RNNでペンストロークの時間情報をモデル化。CNN-RNNでエンコードすることで、スケッチ性質に対応した新しいhashing lossを導入。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180408SkechMate.jpg`)
+    .item3
+      .text
+        h1 新規性・差分
+        p 従来のスケッチ認識タスクに従う代わりに、より困難な問題のスケッチハッシュ検索を行う。ネットワークをスケッチ認識のために再利用することもでき、どちらも高パフォーマンス。大規模なデータセットを利用することで、従来の文献ではあまり研究されていなかった、スケッチのユニークな特性を見出す。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.01401.pdf") 論文
+          li
+            a(href="http://sketchx.eecs.qmul.ac.uk/downloads/") ソースコード/データセット
+    .slide_index #{getSlideIndex()}

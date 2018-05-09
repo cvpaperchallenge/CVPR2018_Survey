@@ -1,37 +1,39 @@
-+slide
-  .title Non-local Neural Networks 
-  .info
-    .authors Xiaolong Wang et al.
-    .conference CVPR 2018
-  .item1
-    h1 概要
-    .text.
-      NLPなどで効果を発揮しているself-attentionを多次元に一般化し、2D/3DCNNに導入することで新たな「non-local block」を形成し、画像や動画での実験を行った。
-      行動認識＠Kineticsでは非常に高い精度を達成。Instance segmentationやkey point detectionなどのタスクでも汎用的に効果を発揮。
-
-  .item2
-    img(src=figpath+"non_local.png")
-  .item3
-    h1 手法
-    .text.
-      位置jと位置iに依存してアテンションを出力する関数f(.)とjのみに依存する関数g(.)の積を入力位置jに関して和をとることによって位置iの出力値を決定する。
-      位置情報の保存、可変入力サイズ、などの性質を持ち、全結合、畳み込みを特殊な形として含む。またf(.)の定義の仕方によってはself-attentionと一致する。
-      f(.)は様々な形が提案されているが、種類によらず効果を発揮している。実際に使用する場合は図のような残差構造を使用している。
-
-
-  .item4
-    h1 自由記述欄
-    .text
-      h1 コメント・リンク
-      p
-      |効果のインパクトがすごい。学習曲線からもうまくいっていることが明らか。C2Dに対してspace-timeにnon-local blockを適用すると3Dconvよりも時系列方向への拡大として効果があったのが興味深い。
-      |結局残差を用いたnon-local blockを使用していたので、単純にnon-local layerのみでの性能もきになる。
-      |位置情報の保存は重要でも、局所性はあまり重要ではなかったのかと感じられる。
-      ul
-        li
-          a(href="https://arxiv.org/abs/1711.07971") 論文
-      
-  .slide_index
-    | #{getSlideIndex()}
-  .slide_editor Tomoyuki Suzuki
+﻿+slide
+section#Non-local_Neural_Networks
+  .paper-abstract
+    .title Non-local Neural Networks 
+    .info
+      .authors Xiaolong Wang et al.
+      .conference CVPR 2018
+    .item1
+      h1 概要
+      .text.
+        NLPなどで効果を発揮しているself-attentionを多次元に一般化し、2D/3DCNNに導入することで新たな「non-local block」を形成し、画像や動画での実験を行った。
+        行動認識＠Kineticsでは非常に高い精度を達成。Instance segmentationやkey point detectionなどのタスクでも汎用的に効果を発揮。
   
+    .item2
+      img(src=figpath+"non_local.png")
+    .item3
+      h1 手法
+      .text.
+        位置jと位置iに依存してアテンションを出力する関数f(.)とjのみに依存する関数g(.)の積を入力位置jに関して和をとることによって位置iの出力値を決定する。
+        位置情報の保存、可変入力サイズ、などの性質を持ち、全結合、畳み込みを特殊な形として含む。またf(.)の定義の仕方によってはself-attentionと一致する。
+        f(.)は様々な形が提案されているが、種類によらず効果を発揮している。実際に使用する場合は図のような残差構造を使用している。
+  
+  
+    .item4
+      h1 自由記述欄
+      .text
+        h1 コメント・リンク
+        p
+        |効果のインパクトがすごい。学習曲線からもうまくいっていることが明らか。C2Dに対してspace-timeにnon-local blockを適用すると3Dconvよりも時系列方向への拡大として効果があったのが興味深い。
+        |結局残差を用いたnon-local blockを使用していたので、単純にnon-local layerのみでの性能もきになる。
+        |位置情報の保存は重要でも、局所性はあまり重要ではなかったのかと感じられる。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.07971") 論文
+        
+    .slide_index
+      | #{getSlideIndex()}
+    .slide_editor Tomoyuki Suzuki
+    

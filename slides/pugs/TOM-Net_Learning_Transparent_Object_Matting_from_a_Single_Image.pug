@@ -1,31 +1,33 @@
-+slide
-  .title TOM-Net: Learning Transparent Object Matting from a Single Image
-  .info
-    .authors Guanying Chen, Kai Han, Kwan-Yee K. Wong
-    .conference CVPR 2018 (spotlight)
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 透明物体の切り抜き（Transparent Object Matting; TOM）と反射特性を推定することが可能なネットワークTOM-Netを提案する。TOM-Netにより、物体の反射特性を保存しながら他の画像にレンダリングして、同画像のテクスチャを反映させることができる。同問題を反射フローの推定問題と捉えてDNNのモデルを構築することで解決した。荒い部分は多階層のEncoder-Decorderで推定し、詳細な部分はResidualNetで調整する。この問題を解決するために、データセットを構築した。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180324TOMNet.png`,alt="180324TOMNet")
-  .item3
-    .text
-      h1 新規性・結果
-      p 178Kの画像を含むデータセットを構築した。同DBには876サンプル、14の透明物体、60種の背景を含む。透明物体の推定と反射特性のレンダリングはGitHubページを参照。
-  .item4
-    .text
-      h1 コメント・リンク集
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.04636.pdf") 論文
-        li
-          a(href="http://gychen.org/TOM-Net/") Project
-        li
-          a(href="https://github.com/guanyingc/TOM-Net_Rendering") GitHub
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.24 18:05:46
+﻿+slide
+section#TOM-Net_Learning_Transparent_Object_Matting_from_a_Single_Image
+  .paper-abstract
+    .title TOM-Net: Learning Transparent Object Matting from a Single Image
+    .info
+      .authors Guanying Chen, Kai Han, Kwan-Yee K. Wong
+      .conference CVPR 2018 (spotlight)
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 透明物体の切り抜き（Transparent Object Matting; TOM）と反射特性を推定することが可能なネットワークTOM-Netを提案する。TOM-Netにより、物体の反射特性を保存しながら他の画像にレンダリングして、同画像のテクスチャを反映させることができる。同問題を反射フローの推定問題と捉えてDNNのモデルを構築することで解決した。荒い部分は多階層のEncoder-Decorderで推定し、詳細な部分はResidualNetで調整する。この問題を解決するために、データセットを構築した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180324TOMNet.png`,alt="180324TOMNet")
+    .item3
+      .text
+        h1 新規性・結果
+        p 178Kの画像を含むデータセットを構築した。同DBには876サンプル、14の透明物体、60種の背景を含む。透明物体の推定と反射特性のレンダリングはGitHubページを参照。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.04636.pdf") 論文
+          li
+            a(href="http://gychen.org/TOM-Net/") Project
+          li
+            a(href="https://github.com/guanyingc/TOM-Net_Rendering") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.24 18:05:46

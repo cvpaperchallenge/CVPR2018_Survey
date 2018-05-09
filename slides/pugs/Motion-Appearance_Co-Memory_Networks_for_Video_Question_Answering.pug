@@ -1,28 +1,30 @@
-+slide
-  .title Motion-Appearance Co-Memory Networks for Video Question Answering
-  .info
-    .authors Jiyang Gao, Runzhou Ge, Kan Chen, Ram Nevatia
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p ビデオQAのための、 Dynamic Memory Network(DMN) のコンセプトに基づいたmotion-appearance comemory networkの提案。本研究の特徴は次の3つである。(1)アテンションを生成するために動きと外観情報の両方を手がかりとして利用する共メモリアテンションメカニズム。(2) multi-level contextual factを生成するための時間的conv-deconv network。(3)異なる質問に対して動的な時間表現を構成するdynamic fact ensemble method。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180401MACoMN.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p 本手法は、次のようなvideo QA特有の属性に基づいている。(1)豊富な情報を含む長い画像シーケンスを扱う。(2)動き情報と出現情報を相互に関連付け、アテンションキューを他の情報に応用できる。(3)答えを推論するために必要なフレーム数は質問によって異なる。
-  .item4
-    .text
-      h1 結果・リンク集
-      p TGIF-QAの4つのタスクすべてにおいて、最先端技術よりも優れている。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.10906.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Motion-Appearance_Co-Memory_Networks_for_Video_Question_Answering
+  .paper-abstract
+    .title Motion-Appearance Co-Memory Networks for Video Question Answering
+    .info
+      .authors Jiyang Gao, Runzhou Ge, Kan Chen, Ram Nevatia
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p ビデオQAのための、 Dynamic Memory Network(DMN) のコンセプトに基づいたmotion-appearance comemory networkの提案。本研究の特徴は次の3つである。(1)アテンションを生成するために動きと外観情報の両方を手がかりとして利用する共メモリアテンションメカニズム。(2) multi-level contextual factを生成するための時間的conv-deconv network。(3)異なる質問に対して動的な時間表現を構成するdynamic fact ensemble method。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180401MACoMN.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p 本手法は、次のようなvideo QA特有の属性に基づいている。(1)豊富な情報を含む長い画像シーケンスを扱う。(2)動き情報と出現情報を相互に関連付け、アテンションキューを他の情報に応用できる。(3)答えを推論するために必要なフレーム数は質問によって異なる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p TGIF-QAの4つのタスクすべてにおいて、最先端技術よりも優れている。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.10906.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

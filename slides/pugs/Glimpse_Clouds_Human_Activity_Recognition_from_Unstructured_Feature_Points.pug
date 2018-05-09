@@ -1,38 +1,40 @@
-+slide
-  .title Glimpse Clouds: Human Activity Recognition from Unstructured Feature Points
-  .info
-    .authors F. Baradel et al.,
-    .conference CVPR 2018
-  .slide_editor Kensho Hara
-
-  .item1
-    h1 概要
-    .text.
-      RNNベースの行動認識を提案．
-      学習はRGB-Dを使うが，テスト時にはRGBのみを使うという設定．
-      テスト時にRGB-Dが使えてPose情報が使えればそれを使えばいいが，
-      それが使えないときもあるからそれに変わる手法を提案するという主張．
-      Poseでの間接位置に代わって，
-      Attentionベースでフレーム中から重要な局所要素 (Glimpse) を抽出＆トラッキング．
-      Glimpseの集合に基いて行動を認識するというフレームワーク．
-      Glimpseの抽出やトラッキングはそれぞれRNNベースで行う手法になっている．
-
-  .item2
-    img(src=figpath+"Glimpse_Clouds_Human_Activity_Recognition_from_Unstructured_Feature_Points.png",alt="Glimpse_Clouds_Human_Activity_Recognition_from_Unstructured_Feature_Points.png")
-  .item3
-    h1 新規性・結果・なぜ通ったか？
-    .text
-      ul
-        li 姿勢の代わりに別の局所要素を使うフレームワークを提案
-        li Attention, External Memoryといった流行り?の要素が詰め込んである
-        li RGB-D行動認識データセットにおいてRGBのみの利用でSOTAを達成
-  .item4
-    h1 コメント・リンク集
-    .text
-      ul
-        li: a(href="https://perso.liris.cnrs.fr/christian.wolf/papers/cvpr2018.pdf") 論文（著者版）
-        li: a(href="https://arxiv.org/abs/1802.07898") 論文 (Long-ver., arXiv)
-        li: a(href="https://www.youtube.com/watch?v=7yPDYYhaYI4") 動画 (YouTube)
-        li 姿勢ベースの行動認識を姿勢を使わずにやるような話に近い印象
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 12:00:18
+﻿+slide
+section#Glimpse_Clouds_Human_Activity_Recognition_from_Unstructured_Feature_Points
+  .paper-abstract
+    .title Glimpse Clouds: Human Activity Recognition from Unstructured Feature Points
+    .info
+      .authors F. Baradel et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        RNNベースの行動認識を提案．
+        学習はRGB-Dを使うが，テスト時にはRGBのみを使うという設定．
+        テスト時にRGB-Dが使えてPose情報が使えればそれを使えばいいが，
+        それが使えないときもあるからそれに変わる手法を提案するという主張．
+        Poseでの間接位置に代わって，
+        Attentionベースでフレーム中から重要な局所要素 (Glimpse) を抽出＆トラッキング．
+        Glimpseの集合に基いて行動を認識するというフレームワーク．
+        Glimpseの抽出やトラッキングはそれぞれRNNベースで行う手法になっている．
+  
+    .item2
+      img(src=figpath+"Glimpse_Clouds_Human_Activity_Recognition_from_Unstructured_Feature_Points.png",alt="Glimpse_Clouds_Human_Activity_Recognition_from_Unstructured_Feature_Points.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 姿勢の代わりに別の局所要素を使うフレームワークを提案
+          li Attention, External Memoryといった流行り?の要素が詰め込んである
+          li RGB-D行動認識データセットにおいてRGBのみの利用でSOTAを達成
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="https://perso.liris.cnrs.fr/christian.wolf/papers/cvpr2018.pdf") 論文（著者版）
+          li: a(href="https://arxiv.org/abs/1802.07898") 論文 (Long-ver., arXiv)
+          li: a(href="https://www.youtube.com/watch?v=7yPDYYhaYI4") 動画 (YouTube)
+          li 姿勢ベースの行動認識を姿勢を使わずにやるような話に近い印象
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:00:18

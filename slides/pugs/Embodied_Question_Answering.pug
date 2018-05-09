@@ -1,32 +1,34 @@
-+slide
-  .title Embodied Question Answering
-  .info
-    .authors Abhishek Das et al.
-    .conference CVPR 2018
-  .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/" target="blank") ShintaroYamamoto
-
-  .item1
-    .text
-      h1 概要
-      p 3次元空間において、エージェントに質問の答え（例：車の色は？）を探させる研究。
-        |初期位置における視覚情報だけでは答えに行きつかないためにエージェントは移動しながら答えを探していく。
-        |エージェントの移動には、どの方向（forward, rightなど)に進むかを決定するplannerとどこまで進むかを決定するcontrolerによって行う。
-        |目的地(正解が分かる場所)にたどり着いた時点で、最後の5フレームを用いて172の選択肢から正解を出力する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}Embodied_Question_Answering.png`,alt="Item3Image")
-  .item3
-    .text
-      h1 新規性・結果
-      p LSTMを使った場合の方が目的地により近付けるという結果が得られた。
-        |強化学習なしのものは目的地により近づいている一方、ファインチューニング＋強化学習の方が正解率は高いという結果となった。
-        |また、最短経路を与えてVQAによって答えさせる場合でも精度が悪く、答えを導くにあたってどの方向から目的地に近づくかも重要であるということが分かった。
-  .item4
-    .text
-      h1 リンク集
-      ul
-        li
-          a(href="https://embodiedqa.org/") プロジェクトページ
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.4.23 12:59:26
+﻿+slide
+section#Embodied_Question_Answering
+  .paper-abstract
+    .title Embodied Question Answering
+    .info
+      .authors Abhishek Das et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/" target="blank") ShintaroYamamoto
+  
+    .item1
+      .text
+        h1 概要
+        p 3次元空間において、エージェントに質問の答え（例：車の色は？）を探させる研究。
+          |初期位置における視覚情報だけでは答えに行きつかないためにエージェントは移動しながら答えを探していく。
+          |エージェントの移動には、どの方向（forward, rightなど)に進むかを決定するplannerとどこまで進むかを決定するcontrolerによって行う。
+          |目的地(正解が分かる場所)にたどり着いた時点で、最後の5フレームを用いて172の選択肢から正解を出力する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Embodied_Question_Answering.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果
+        p LSTMを使った場合の方が目的地により近付けるという結果が得られた。
+          |強化学習なしのものは目的地により近づいている一方、ファインチューニング＋強化学習の方が正解率は高いという結果となった。
+          |また、最短経路を与えてVQAによって答えさせる場合でも精度が悪く、答えを導くにあたってどの方向から目的地に近づくかも重要であるということが分かった。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://embodiedqa.org/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.4.23 12:59:26

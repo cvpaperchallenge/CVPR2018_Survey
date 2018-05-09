@@ -1,36 +1,38 @@
-+slide
-  .title Actor and Observer: Joint Modeling of First and Third-Person Videos
-  .info
-    .authors Gunnar A. Sigurdsson, Abhinav Gupta, Cordelia Schmid, Ali Farhadi, Karteek Alahari
-    .conference CVPR 2018 (spotlight)
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 一人称（First Person View; 頭部にカメラを装着して撮影）かつ三人称（Third Person View; 環境に設置したカメラから撮影）の視点から人物行動や操作している物体を撮影したデータセットCharades-Egoを提供する。一人称/三人称視点は互いに対応付けされており、実に157の行動カテゴリ、112人の実演、4,000の動画ペア、全8,000動画を保有するデータベースの構築に成功した。手法の側面ではTripletによる弱教師付き学習（Weakly-supervised Learning）により一人称/三人称から抽出した複数の特徴量を評価する枠組みActorObserverNetを提案する。さらには、三人称から一人称視点への知識転換（Transferring Knowledge）をZero-shot行動認識の枠組みで実行する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180503CharadesEgo.png`,alt="180503CharadesEgo")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 一人称/三人称は従来独立に撮影されて、それぞれのデータベースを構築して来たが、ここでは同時解析することにより行動に関するより詳細な考察（e.g. 間接的に行動を観察した方が良い vs. 操作している物体で行動を認識する方が良い）を行えるようにした。また、弱教師付き学習により特徴学習できるActorObserverNetを提案した。CVPRに通った理由はなんといってもデータベース（とそのベンチマーキング）、弱教師付き学習によるものである。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p Hollywood in HomesのようにAMT（クラウドソーシング）にてユーザがフリーで使用を許可した動画を収集するのはアリにしている。公開してフリーにしても良い人だけの動画を効率良く集める仕組みが今後流行ってくるか？（ただ日本だと難しいかも？）データベースに対するベンチマーキングは若干少ない印象を受けるが、データベースの意義自体が優れているため査読を突破したと思われる。
-      ul
-        li
-          a(href="https://arxiv.org/abs/1804.09627") 論文
-        li
-          a(href="https://www.youtube.com/watch?v=JkBFE2pzJkw&feature=youtu.be") YouTube
-        li
-          a(href="http://www.cs.cmu.edu/~gsigurds/") 著者
-        li
-          a(href="http://allenai.org/plato/charades/") Project/Database
-        li
-          a(href="https://github.com/gsig/charades-algorithms") GitHub
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.3 02:45:18
+﻿+slide
+section#Actor_and_Observer_Joint_Modeling_of_First_and_Third-Person_Videos
+  .paper-abstract
+    .title Actor and Observer: Joint Modeling of First and Third-Person Videos
+    .info
+      .authors Gunnar A. Sigurdsson, Abhinav Gupta, Cordelia Schmid, Ali Farhadi, Karteek Alahari
+      .conference CVPR 2018 (spotlight)
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 一人称（First Person View; 頭部にカメラを装着して撮影）かつ三人称（Third Person View; 環境に設置したカメラから撮影）の視点から人物行動や操作している物体を撮影したデータセットCharades-Egoを提供する。一人称/三人称視点は互いに対応付けされており、実に157の行動カテゴリ、112人の実演、4,000の動画ペア、全8,000動画を保有するデータベースの構築に成功した。手法の側面ではTripletによる弱教師付き学習（Weakly-supervised Learning）により一人称/三人称から抽出した複数の特徴量を評価する枠組みActorObserverNetを提案する。さらには、三人称から一人称視点への知識転換（Transferring Knowledge）をZero-shot行動認識の枠組みで実行する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180503CharadesEgo.png`,alt="180503CharadesEgo")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 一人称/三人称は従来独立に撮影されて、それぞれのデータベースを構築して来たが、ここでは同時解析することにより行動に関するより詳細な考察（e.g. 間接的に行動を観察した方が良い vs. 操作している物体で行動を認識する方が良い）を行えるようにした。また、弱教師付き学習により特徴学習できるActorObserverNetを提案した。CVPRに通った理由はなんといってもデータベース（とそのベンチマーキング）、弱教師付き学習によるものである。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Hollywood in HomesのようにAMT（クラウドソーシング）にてユーザがフリーで使用を許可した動画を収集するのはアリにしている。公開してフリーにしても良い人だけの動画を効率良く集める仕組みが今後流行ってくるか？（ただ日本だと難しいかも？）データベースに対するベンチマーキングは若干少ない印象を受けるが、データベースの意義自体が優れているため査読を突破したと思われる。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.09627") 論文
+          li
+            a(href="https://www.youtube.com/watch?v=JkBFE2pzJkw&feature=youtu.be") YouTube
+          li
+            a(href="http://www.cs.cmu.edu/~gsigurds/") 著者
+          li
+            a(href="http://allenai.org/plato/charades/") Project/Database
+          li
+            a(href="https://github.com/gsig/charades-algorithms") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.3 02:45:18

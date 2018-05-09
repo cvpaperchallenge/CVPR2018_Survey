@@ -1,30 +1,32 @@
-+slide
-  .title Domain Adaptive Faster R-CNN for Object Detection in the Wild
-  .info
-    .authors Yuhua Chen, Wen Li, Christos Sakaridis, Dengxin Dai, Luc Van Gool
-    .conference CVPR 2018
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p ドメイン変換について、ゲームなどのCG映像から実際の交通シーンに対応して物体検出を行うための学習方法を提案する。本論文では(i) 画像レベルのドメイン変換、(ii) インスタンス（ある物体）に対してのドメイン変換、の二種類の方法を提案し、整合性をとるように正規化する（図のConsistency Regularization; Global/Localな特徴変換を考慮）。ここで、物体検出はFaster R-CNNをベースとしてドメイン変換の手法も二種類（H-divergence、敵対的学習）用意する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180314DomainFRCNN.png`,alt="180314DomainFRCNN")
-  .item3
-    .text
-      h1 新規性・結果
-      p CGで学習し実環境における自動運転などで使えるドメイン変換の手法を提案した。実験はCityscapes, KITTI, SIM10Kなどで行い、ロバストな物体検出を実行することができた。例えばCityscapesとKITTIの相互ドメイン変換でベースラインのFaster R-CNNが30.2 (K->C)、53.5 (C->K)のところ、Domain Adaptive Faster R-CNNでは38.5 (K->C)、64.1 (C->K)であった。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p データ収集は手動から自動の時代になって来た？データを手作業で集める時代からアルゴリズムを駆使して収集する時代へ移行。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.03243.pdf") 論文
-        li
-          a(href="http://www.vision.ee.ethz.ch/~liwenw/") 著者
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.14 08:43:53
+﻿+slide
+section#Domain_Adaptive_Faster_R-CNN_for_Object_Detection_in_the_Wild
+  .paper-abstract
+    .title Domain Adaptive Faster R-CNN for Object Detection in the Wild
+    .info
+      .authors Yuhua Chen, Wen Li, Christos Sakaridis, Dengxin Dai, Luc Van Gool
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p ドメイン変換について、ゲームなどのCG映像から実際の交通シーンに対応して物体検出を行うための学習方法を提案する。本論文では(i) 画像レベルのドメイン変換、(ii) インスタンス（ある物体）に対してのドメイン変換、の二種類の方法を提案し、整合性をとるように正規化する（図のConsistency Regularization; Global/Localな特徴変換を考慮）。ここで、物体検出はFaster R-CNNをベースとしてドメイン変換の手法も二種類（H-divergence、敵対的学習）用意する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180314DomainFRCNN.png`,alt="180314DomainFRCNN")
+    .item3
+      .text
+        h1 新規性・結果
+        p CGで学習し実環境における自動運転などで使えるドメイン変換の手法を提案した。実験はCityscapes, KITTI, SIM10Kなどで行い、ロバストな物体検出を実行することができた。例えばCityscapesとKITTIの相互ドメイン変換でベースラインのFaster R-CNNが30.2 (K->C)、53.5 (C->K)のところ、Domain Adaptive Faster R-CNNでは38.5 (K->C)、64.1 (C->K)であった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データ収集は手動から自動の時代になって来た？データを手作業で集める時代からアルゴリズムを駆使して収集する時代へ移行。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.03243.pdf") 論文
+          li
+            a(href="http://www.vision.ee.ethz.ch/~liwenw/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.14 08:43:53

@@ -1,28 +1,30 @@
-+slide
-  .title Context-aware Synthesis for Video Frame Interpolation
-  .info
-    .authors Simon Niklaus, Feng Liu
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p 入力フレームだけでなく、ピクセル単位の文脈情報を用いて、高品質の中間フレームを補間するためのコンテキスト認識手法の提案。まず、プレトレインモデルを使用して、入力フレームのピクセルごとのコンテキスト情報を抽出。オプティカルフローを使用して、双方向フローを推定し、入力フレームとそのコンテキストマップの両方をワープする。最後にコンテキストマップをsynthesis networkに入力し、補間フレームを生成。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180401CaS.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p 従来のビデオフレーム補間アルゴリズムは、オプティカルフローまたはその変動を推定し、それを用いて2つのフレーム間の中間フレームを生成する。本手法では、 2つの入力フレーム間の双方向フローを推定し、コンテキスト認識という方式をとることで精度向上を図る。
-  .item4
-    .text
-      h1 結果・リンク集
-      p 高品質のビデオフレーム補間実験において、従来を上回る性能。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.10967.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Context-aware_Synthesis_for_Video_Frame_Interpolation
+  .paper-abstract
+    .title Context-aware Synthesis for Video Frame Interpolation
+    .info
+      .authors Simon Niklaus, Feng Liu
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p 入力フレームだけでなく、ピクセル単位の文脈情報を用いて、高品質の中間フレームを補間するためのコンテキスト認識手法の提案。まず、プレトレインモデルを使用して、入力フレームのピクセルごとのコンテキスト情報を抽出。オプティカルフローを使用して、双方向フローを推定し、入力フレームとそのコンテキストマップの両方をワープする。最後にコンテキストマップをsynthesis networkに入力し、補間フレームを生成。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180401CaS.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p 従来のビデオフレーム補間アルゴリズムは、オプティカルフローまたはその変動を推定し、それを用いて2つのフレーム間の中間フレームを生成する。本手法では、 2つの入力フレーム間の双方向フローを推定し、コンテキスト認識という方式をとることで精度向上を図る。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 高品質のビデオフレーム補間実験において、従来を上回る性能。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.10967.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

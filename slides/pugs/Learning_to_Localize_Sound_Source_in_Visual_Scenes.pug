@@ -1,30 +1,32 @@
-+slide
-  .title Learning to Localize Sound Source in Visual Scenes
-  .info
-    .authors Arda Senocak, Tae-Hyun Oh, Junsik Kim, Ming-Hsuan Yang, In So Kweon
-    .conference CVPR 2018
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 画像と音声の入力から、音が画像のどこで鳴っているか（鳴りそうか？）を推定した研究。さらに、人の声なら人の領域、車の音なら車の領域にアテンションがあたるなど物体と音声の対応関係も学習することができる。学習には音源とその対応する物体の位置を対応づけたデータセット（144Kのペアが含まれるSound Source Localization Dataset）を準備した。さらに既存の物体認識と音声を対応づけて（？）Unsupervised/Semi-supervisedに学習することにも成功した。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180322LocalizeSound.png`,alt="180322LocalizeSound")
-  .item3
-    .text
-      h1 新規性・結果
-      p 教師あり、教師なし、半教師あり、いずれの枠組みでも音声ー物体の対応関係を学習することができるようにした。音源とそれに対応する物体領域の尤度がヒートマップにて高く表示されている。結果はビデオを参照されたい。教師なし学習はTriplet-lossにより構成され、ビデオと近い/遠い音声の誤差により計算。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p 非常に面白い問題設定、プラス誤差関数を柔軟に抽出可能というところが上手。精読しても良いと感じた論文。CVにおいてビデオの音声は今まで使用しないことも多かった（もしくは精度向上のために活用していた）が、これからは使用方法を見直してもよいと感じた。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.03849.pdf") 論文
-        li
-          a(href="https://www.youtube.com/watch?v=UyairkbzR_Y") YouTube
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.22 19:18:32
+﻿+slide
+section#Learning_to_Localize_Sound_Source_in_Visual_Scenes
+  .paper-abstract
+    .title Learning to Localize Sound Source in Visual Scenes
+    .info
+      .authors Arda Senocak, Tae-Hyun Oh, Junsik Kim, Ming-Hsuan Yang, In So Kweon
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 画像と音声の入力から、音が画像のどこで鳴っているか（鳴りそうか？）を推定した研究。さらに、人の声なら人の領域、車の音なら車の領域にアテンションがあたるなど物体と音声の対応関係も学習することができる。学習には音源とその対応する物体の位置を対応づけたデータセット（144Kのペアが含まれるSound Source Localization Dataset）を準備した。さらに既存の物体認識と音声を対応づけて（？）Unsupervised/Semi-supervisedに学習することにも成功した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180322LocalizeSound.png`,alt="180322LocalizeSound")
+    .item3
+      .text
+        h1 新規性・結果
+        p 教師あり、教師なし、半教師あり、いずれの枠組みでも音声ー物体の対応関係を学習することができるようにした。音源とそれに対応する物体領域の尤度がヒートマップにて高く表示されている。結果はビデオを参照されたい。教師なし学習はTriplet-lossにより構成され、ビデオと近い/遠い音声の誤差により計算。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 非常に面白い問題設定、プラス誤差関数を柔軟に抽出可能というところが上手。精読しても良いと感じた論文。CVにおいてビデオの音声は今まで使用しないことも多かった（もしくは精度向上のために活用していた）が、これからは使用方法を見直してもよいと感じた。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.03849.pdf") 論文
+          li
+            a(href="https://www.youtube.com/watch?v=UyairkbzR_Y") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.22 19:18:32

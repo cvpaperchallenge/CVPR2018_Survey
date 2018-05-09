@@ -1,30 +1,32 @@
-+slide
-  .title Deep Depth Completion of a Single RGB-D Image
-  .info
-    .authors Yinda Zhang, Thomas Funkhouser
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p RGB画像から表面の法線とオクルージョン境界を予測し、 RGB-D画像と組み合わせて、欠けている奥行き情報を補完するDeep Depth Completionの提案。また、奥行き画像と対になったRGB-D画像のデータセットであるcompletion benchmark datasetを作成し、性能を評価。これは、低コストのRGB-Dカメラでキャプチャした画像と、高コストの深度センサで同時にキャプチャした画像で構成されている。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180401DDC.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p 深度カメラは、光沢があり、明るく、透明で、遠い表面の深さを感知しないことが多い。 このような問題を解決するために、本手法ではRGB画像から得た情報と組み合わせて、 RGB-D画像の深度チャネルを完全なものにする。
-  .item4
-    .text
-      h1 結果・リンク集
-      p 深さ修復および推定において従来よりも優れた性能。
-      ul
-        li
-          a(href="https://arxiv.org/abs/1803.09326") 論文
-        li
-          a(href="http://deepcompletion.cs.princeton.edu/") Project webpage
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Deep_Depth_Completion_of_a_Single_RGB-D_Image
+  .paper-abstract
+    .title Deep Depth Completion of a Single RGB-D Image
+    .info
+      .authors Yinda Zhang, Thomas Funkhouser
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p RGB画像から表面の法線とオクルージョン境界を予測し、 RGB-D画像と組み合わせて、欠けている奥行き情報を補完するDeep Depth Completionの提案。また、奥行き画像と対になったRGB-D画像のデータセットであるcompletion benchmark datasetを作成し、性能を評価。これは、低コストのRGB-Dカメラでキャプチャした画像と、高コストの深度センサで同時にキャプチャした画像で構成されている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180401DDC.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p 深度カメラは、光沢があり、明るく、透明で、遠い表面の深さを感知しないことが多い。 このような問題を解決するために、本手法ではRGB画像から得た情報と組み合わせて、 RGB-D画像の深度チャネルを完全なものにする。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 深さ修復および推定において従来よりも優れた性能。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.09326") 論文
+          li
+            a(href="http://deepcompletion.cs.princeton.edu/") Project webpage
+    .slide_index #{getSlideIndex()}
+    

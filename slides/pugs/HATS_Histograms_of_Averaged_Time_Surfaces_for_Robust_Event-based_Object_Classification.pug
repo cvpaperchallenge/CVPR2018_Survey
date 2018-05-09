@@ -1,30 +1,32 @@
-+slide
-  .title HATS: Histograms of Averaged Time Surfaces for Robust Event-based Object Classification
-  .info
-    .authors Amos Sironi, et al.
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p イベントベースカメラにおける、識別アルゴリズムの提案。本研究では、(1)イベントベースのオブジェクト分類のための低レベル表現とアーキテクチャの欠如、(2)実世界における大きなイベントベースのデータセットの欠如、の2つの問題に取り組む。新しい機械学習アーキテクチャ、イベントベースの特徴表現(Histograms of Averaged Time Surfaces)、データセット(N-CARS)を提案。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180330NCARS.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p イベントベースのカメラは、従来のフレームベースのカメラと比較して、高時間分解能、低消費電力、高ダイナミックレンジという点で優れており、様々なシーンで応用が利く。しかし、イベントベースのオブジェクト分類アルゴリズムの精度は未だ低い。特徴表現には過去時間の情報を使用。
-  .item4
-    .text
-      h1 結果・リンク集
-      p 過去の情報を使うことで、既存のイベントベースカメラによる認識手法よりも優れた結果となった。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.07913.pdf") 論文
-        li
-          a(href="http://www.prophesee.ai/dataset-n-cars/") データセット
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#HATS_Histograms_of_Averaged_Time_Surfaces_for_Robust_Event-based_Object_Classification
+  .paper-abstract
+    .title HATS: Histograms of Averaged Time Surfaces for Robust Event-based Object Classification
+    .info
+      .authors Amos Sironi, et al.
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p イベントベースカメラにおける、識別アルゴリズムの提案。本研究では、(1)イベントベースのオブジェクト分類のための低レベル表現とアーキテクチャの欠如、(2)実世界における大きなイベントベースのデータセットの欠如、の2つの問題に取り組む。新しい機械学習アーキテクチャ、イベントベースの特徴表現(Histograms of Averaged Time Surfaces)、データセット(N-CARS)を提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180330NCARS.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p イベントベースのカメラは、従来のフレームベースのカメラと比較して、高時間分解能、低消費電力、高ダイナミックレンジという点で優れており、様々なシーンで応用が利く。しかし、イベントベースのオブジェクト分類アルゴリズムの精度は未だ低い。特徴表現には過去時間の情報を使用。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 過去の情報を使うことで、既存のイベントベースカメラによる認識手法よりも優れた結果となった。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.07913.pdf") 論文
+          li
+            a(href="http://www.prophesee.ai/dataset-n-cars/") データセット
+    .slide_index #{getSlideIndex()}
+    

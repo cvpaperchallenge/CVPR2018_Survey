@@ -1,27 +1,29 @@
-+slide
-  .title The iNaturalist Species Classification and Detection Dataset
-  .info
-    .authors Grant Van Horn, el al. 
-    .paper_id 1707.06642
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p 自然界にける、“写真に写り易さ”を考慮した画像分類・検出タスク用データセットの提案。5000種類以上の植物や動物からの85万9000の画像で構成。世界各地の多種多様な種やシチュエーションで撮影され、様々なカメラタイプで収集することで画質の変化し、クラスの均衡が大きい。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180506iNaturalist.jpg`,alt="180506iNaturalist.jpg")
-  .item3
-    .text
-      h1 新規性
-      p 従来の画像分類・検出用データセットでは、カテゴリごとに画像数が統一されている傾向にある。しかし，写真に収め易い種と、そうでない種があるため、自然界はとても不均衡。この差に着目し、現実世界の状況に近い状況で分類・検出に挑戦するデータセットを提案した。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p やはり既存の手法では精度を出すのは難しそう。このデータセットで精度を出すチャレンジングな研究をするのはアリ。
-      ul
-        li
-          a(href="https://arxiv.org/abs/1707.06642") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#The_iNaturalist_Species_Classification_and_Detection_Dataset
+  .paper-abstract
+    .title The iNaturalist Species Classification and Detection Dataset
+    .info
+      .authors Grant Van Horn, el al. 
+      .paper_id 1707.06642
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 自然界にける、“写真に写り易さ”を考慮した画像分類・検出タスク用データセットの提案。5000種類以上の植物や動物からの85万9000の画像で構成。世界各地の多種多様な種やシチュエーションで撮影され、様々なカメラタイプで収集することで画質の変化し、クラスの均衡が大きい。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180506iNaturalist.jpg`,alt="180506iNaturalist.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 従来の画像分類・検出用データセットでは、カテゴリごとに画像数が統一されている傾向にある。しかし，写真に収め易い種と、そうでない種があるため、自然界はとても不均衡。この差に着目し、現実世界の状況に近い状況で分類・検出に挑戦するデータセットを提案した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p やはり既存の手法では精度を出すのは難しそう。このデータセットで精度を出すチャレンジングな研究をするのはアリ。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1707.06642") 論文
+    .slide_index #{getSlideIndex()}

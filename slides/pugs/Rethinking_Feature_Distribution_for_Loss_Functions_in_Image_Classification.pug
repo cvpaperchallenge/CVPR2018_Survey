@@ -1,28 +1,30 @@
-+slide
-  .title Rethinking Feature Distribution for Loss Functions in Image Classification
-  .info
-    .authors Weitao Wan, Yuanyi Zhong, Tianpeng Li, Jiansheng Chen
-    .conference CVPR 2018 (spotlight)
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 本論文ではLarge-margin Gaussian Mixture (L-GM) Lossを提案して画像識別タスクに応用する。Softmax Lossとの違いは、学習セットにおけるディープ特徴の混合ガウス分布をフォローしつつ仮説を設定するところである。識別境界や尤度正則化においてL-GM Lossは非常に高いパフォーマンスを実現している。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180314LGM.png`,alt="180314LGM")
-  .item3
-    .text
-      h1 新規性・結果
-      p L-GM Lossは画像識別においてSoftmax Lossよりも精度が高いことはもちろん、特徴分布を考慮するため例えばAdversarial Examples（摂動ノイズ）などにおいても対応できる。MNIST, CIFAR, ImageNet, LFWにおける識別や摂動ノイズを加えた実験においても良好な性能を確かめた。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p Softmax Lossよりも有意に精度向上が見られている。導入が簡単なら取り入れて精度向上したい。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.02988.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.14 11:04:45
+﻿+slide
+section#Rethinking_Feature_Distribution_for_Loss_Functions_in_Image_Classification
+  .paper-abstract
+    .title Rethinking Feature Distribution for Loss Functions in Image Classification
+    .info
+      .authors Weitao Wan, Yuanyi Zhong, Tianpeng Li, Jiansheng Chen
+      .conference CVPR 2018 (spotlight)
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 本論文ではLarge-margin Gaussian Mixture (L-GM) Lossを提案して画像識別タスクに応用する。Softmax Lossとの違いは、学習セットにおけるディープ特徴の混合ガウス分布をフォローしつつ仮説を設定するところである。識別境界や尤度正則化においてL-GM Lossは非常に高いパフォーマンスを実現している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180314LGM.png`,alt="180314LGM")
+    .item3
+      .text
+        h1 新規性・結果
+        p L-GM Lossは画像識別においてSoftmax Lossよりも精度が高いことはもちろん、特徴分布を考慮するため例えばAdversarial Examples（摂動ノイズ）などにおいても対応できる。MNIST, CIFAR, ImageNet, LFWにおける識別や摂動ノイズを加えた実験においても良好な性能を確かめた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Softmax Lossよりも有意に精度向上が見られている。導入が簡単なら取り入れて精度向上したい。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.02988.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.14 11:04:45

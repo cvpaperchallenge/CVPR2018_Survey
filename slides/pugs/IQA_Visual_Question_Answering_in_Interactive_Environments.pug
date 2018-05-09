@@ -1,35 +1,37 @@
-+slide
-  .title IQA: Visual Question Answering in Interactive Environments
-  .info
-    .authors Daniel Gordon, Ali Farhadi, Aniruddha Kembhavi, Dieter Fox, Mohammad Rastegari, Joe Redmon
-    .conference Daniel Gordon, Ali Farhadi, Aniruddha Kembhavi, Dieter Fox, Mohammad Rastegari, Joe Redmon
-    .paper_id 533
-  .slide_editor Yue Qiu
-
-  .item1
-    .text
-      h1 概要
-      p ・新たな問題設定ー動的環境とインターアクトしながら視覚質問に答える(IQA)を提案した．
-        |・具体的には， IQAには4つの設定がある：環境でナビゲートする能力；環境中のオブジェクト，アクション及びアフォーダンスの理解；環境中のオブジェクトとインターアクトする能力；質問文に応じで環境での行動を計画する能力．
-        |・提案の問題設定を解決するために，階層的マルチレベルで行動計画及びコントロールするネットワークHIMN及び空間的かつセマンティックなメモリを実現できる新たなrecurrent layer形式Egocentric Spatial GRUを提案した．
-        |・更に，75000質問及びCGシーンを含んだデータセットIQUAD V1を提案した．
-  .item2
-    .text
-      p
-        img(src=`${figpath}Visual-Question-Answering-in-Interactive-Environments.png`,alt="Visual-Question-Answering-in-Interactive-Environments")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p ・従来のVQAタスクをCGシーンでの自己ナビゲーションと組み合わせた新たな問題設定を提案した．
-        |・IQUAD V1で従来の手法よりstate-of-the-artな精度
-  .item4
-    .text
-      h1 コメント・リンク集
-      p ・従来のVQAタスクに更に環境での探索および環境中オブジェクトとのインターアクトを取り入れ，従来の問題設定より一層現実に近づいている．
-        |・質問文の自動生成にも応用できそう
-        |・特に色々なタスクを取り扱えているので，技術の面では向上する空間がありそう
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1712.03316.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.1 15:29:03
+﻿+slide
+section#IQA_Visual_Question_Answering_in_Interactive_Environments
+  .paper-abstract
+    .title IQA: Visual Question Answering in Interactive Environments
+    .info
+      .authors Daniel Gordon, Ali Farhadi, Aniruddha Kembhavi, Dieter Fox, Mohammad Rastegari, Joe Redmon
+      .conference Daniel Gordon, Ali Farhadi, Aniruddha Kembhavi, Dieter Fox, Mohammad Rastegari, Joe Redmon
+      .paper_id 533
+    .slide_editor Yue Qiu
+  
+    .item1
+      .text
+        h1 概要
+        p ・新たな問題設定ー動的環境とインターアクトしながら視覚質問に答える(IQA)を提案した．
+          |・具体的には， IQAには4つの設定がある：環境でナビゲートする能力；環境中のオブジェクト，アクション及びアフォーダンスの理解；環境中のオブジェクトとインターアクトする能力；質問文に応じで環境での行動を計画する能力．
+          |・提案の問題設定を解決するために，階層的マルチレベルで行動計画及びコントロールするネットワークHIMN及び空間的かつセマンティックなメモリを実現できる新たなrecurrent layer形式Egocentric Spatial GRUを提案した．
+          |・更に，75000質問及びCGシーンを含んだデータセットIQUAD V1を提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Visual-Question-Answering-in-Interactive-Environments.png`,alt="Visual-Question-Answering-in-Interactive-Environments")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・従来のVQAタスクをCGシーンでの自己ナビゲーションと組み合わせた新たな問題設定を提案した．
+          |・IQUAD V1で従来の手法よりstate-of-the-artな精度
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ・従来のVQAタスクに更に環境での探索および環境中オブジェクトとのインターアクトを取り入れ，従来の問題設定より一層現実に近づいている．
+          |・質問文の自動生成にも応用できそう
+          |・特に色々なタスクを取り扱えているので，技術の面では向上する空間がありそう
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.03316.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.1 15:29:03

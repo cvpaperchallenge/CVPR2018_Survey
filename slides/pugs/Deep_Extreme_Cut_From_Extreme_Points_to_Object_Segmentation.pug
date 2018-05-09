@@ -1,37 +1,39 @@
-+slide
-  .title Deep Extreme Cut: From Extreme Points to Object Segmentation
-  .info
-    .authors Kevis-Kokitsi Maninis, Sergi Caelles, Jordi Pont-Tuset, Luc Van Gool
-    .conference CVPR2018, arXiv:1711.09081
-    .paper_id 88
-  .slide_editor Hiroshi Fukui
-
-  .item1
-    .text
-      h1 概要
-      p Extreme pointを用いた物体セマンティックセグメンテーション法．
-        |このExtreme pointは，セグメンテーションの上端，下端，右端，左端を使用している．
-        |4つのExtreme pointは，物体の大まかな形状の情報を取り込みながらCNNを学習することができる．
-        |Pascal VOC, COCO, DAVIS2016, DAVIS2017, Grabcutで評価し，どのベンチマークにおいても高い性能を示している．
-        |また，セマンティックセグメンテーションのアノテーションツールとして応用できることも示している．
-  .item2
-    .text
-      p
-        img(src=`${figpath}88_overview.png`,alt="88_overview.png")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 使用するネットワークは，ResNet101をBackboneにしたDeepLab-v2である．
-        |提案手法のDeep Extreme Cutでは，Extreme pointを有効的に学習するために，点にガウシガウシアンを施してヒートマップを作成し，そのヒートマップを入力画像のチャンネルに追加している．
-        |この学習方法は，様々なタスクのセグメンテーションに有効であり，セマンティックセグメンテーション，動画のセグメンテーション，インスタンスセグメンテーション，インタラクションセグメンテーションに応用することができる．
-        |また，セグメンテーションのアノテーションツールにも応用でき，従来のアノテーションコストを10分の1まで削減できていることを示している．
-  .item4
-    .text
-      h1 コメント・リンク集
-      ul
-        li
-          a(href="https://arxiv.org/abs/1711.09081") 論文リンク
-        li
-          a(href="http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr/") プロジェクト＆コードリンク
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.3 23:45:06
+﻿+slide
+section#Deep_Extreme_Cut_From_Extreme_Points_to_Object_Segmentation
+  .paper-abstract
+    .title Deep Extreme Cut: From Extreme Points to Object Segmentation
+    .info
+      .authors Kevis-Kokitsi Maninis, Sergi Caelles, Jordi Pont-Tuset, Luc Van Gool
+      .conference CVPR2018, arXiv:1711.09081
+      .paper_id 88
+    .slide_editor Hiroshi Fukui
+  
+    .item1
+      .text
+        h1 概要
+        p Extreme pointを用いた物体セマンティックセグメンテーション法．
+          |このExtreme pointは，セグメンテーションの上端，下端，右端，左端を使用している．
+          |4つのExtreme pointは，物体の大まかな形状の情報を取り込みながらCNNを学習することができる．
+          |Pascal VOC, COCO, DAVIS2016, DAVIS2017, Grabcutで評価し，どのベンチマークにおいても高い性能を示している．
+          |また，セマンティックセグメンテーションのアノテーションツールとして応用できることも示している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}88_overview.png`,alt="88_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 使用するネットワークは，ResNet101をBackboneにしたDeepLab-v2である．
+          |提案手法のDeep Extreme Cutでは，Extreme pointを有効的に学習するために，点にガウシガウシアンを施してヒートマップを作成し，そのヒートマップを入力画像のチャンネルに追加している．
+          |この学習方法は，様々なタスクのセグメンテーションに有効であり，セマンティックセグメンテーション，動画のセグメンテーション，インスタンスセグメンテーション，インタラクションセグメンテーションに応用することができる．
+          |また，セグメンテーションのアノテーションツールにも応用でき，従来のアノテーションコストを10分の1まで削減できていることを示している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.09081") 論文リンク
+          li
+            a(href="http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr/") プロジェクト＆コードリンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.3 23:45:06

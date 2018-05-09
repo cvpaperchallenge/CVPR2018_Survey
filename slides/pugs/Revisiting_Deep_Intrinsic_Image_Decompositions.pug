@@ -1,34 +1,36 @@
-+slide
-  .title Revisiting Deep Intrinsic Image Decompositions
-  .info
-    .authors Qingnan Fan, Jiaolong Yang, Gang Hua, Baoquan Chen, David Wipf
-    .conference CVPR 2018 oral
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 光の反射やシェーディングなどを再計算することで自然画像の分解と再構成（Image Decomposition）を行う問題設定である。従来型の事前情報を陽に与えるフィルタリング手法とは異なり、深層学習による提案手法では（十分なラベル付きデータが存在すれば）画像の内的な情報を効果的に捉えて画像の再構成をより自然に行うことができると主張。この問題を解決するために、２種類のカテゴリに関する問い ー（１）詳細なラベル付きデータ（２）弱教師付き学習により比較的多様なラベル付きデータを学習ー を解決することができる。これにより学習データには詳細なラベル付けを行わず弱い事前知識（Loose Prior Knowledge）のみで大量のサンプルを準備することができる。手法面において、最初は荒く光の反射（Albedo）やシェーディングを推定し、次いでエッジやテクスチャ等を推定できるようにフィルタリングを学習する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180505DeepIntrinsic.png`,alt="180505DeepIntrinsic")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 主要な画像再構成のベンチマークにおいて全てState-of-the-artの（最先端の）結果を達成した。さらに、従来まではデータセットに対してアドホックである（と思われる）が、本論文にて提供するデータや手法はよりオープンかつリアルな問題に対して汎用的に使用できる。弱い事前知識のみでリアルデータを学習できるようにしたことも新規性として挙げられる。CVPRの査読を突破できた理由として、State-of-the-artな精度を全てのデータにて達成したことや、その学習法/アーキテクチャの提案にあると考える。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p 光の反射（Albedo）や陰影（shading）を同時に推定できる技術はよりリアルな画像の生成には重要技術なのでどんどん進んで欲しい。
-      ul
-        li
-          a(href="https://arxiv.org/abs/1701.02965") 論文
-        li
-          a(href="http://www.cs.toronto.edu/~rgrosse/intrinsic/") MIT Intrinsic Images Dataset
-        li
-          a(href="http://sintel.is.tue.mpg.de/") MPI Sintel Flow Dataset
-        li
-          a(href="http://opensurfaces.cs.cornell.edu/publications/intrinsic/") Intrinsic Images in the Wild
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.5 17:36:29
+﻿+slide
+section#Revisiting_Deep_Intrinsic_Image_Decompositions
+  .paper-abstract
+    .title Revisiting Deep Intrinsic Image Decompositions
+    .info
+      .authors Qingnan Fan, Jiaolong Yang, Gang Hua, Baoquan Chen, David Wipf
+      .conference CVPR 2018 oral
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 光の反射やシェーディングなどを再計算することで自然画像の分解と再構成（Image Decomposition）を行う問題設定である。従来型の事前情報を陽に与えるフィルタリング手法とは異なり、深層学習による提案手法では（十分なラベル付きデータが存在すれば）画像の内的な情報を効果的に捉えて画像の再構成をより自然に行うことができると主張。この問題を解決するために、２種類のカテゴリに関する問い ー（１）詳細なラベル付きデータ（２）弱教師付き学習により比較的多様なラベル付きデータを学習ー を解決することができる。これにより学習データには詳細なラベル付けを行わず弱い事前知識（Loose Prior Knowledge）のみで大量のサンプルを準備することができる。手法面において、最初は荒く光の反射（Albedo）やシェーディングを推定し、次いでエッジやテクスチャ等を推定できるようにフィルタリングを学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180505DeepIntrinsic.png`,alt="180505DeepIntrinsic")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 主要な画像再構成のベンチマークにおいて全てState-of-the-artの（最先端の）結果を達成した。さらに、従来まではデータセットに対してアドホックである（と思われる）が、本論文にて提供するデータや手法はよりオープンかつリアルな問題に対して汎用的に使用できる。弱い事前知識のみでリアルデータを学習できるようにしたことも新規性として挙げられる。CVPRの査読を突破できた理由として、State-of-the-artな精度を全てのデータにて達成したことや、その学習法/アーキテクチャの提案にあると考える。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 光の反射（Albedo）や陰影（shading）を同時に推定できる技術はよりリアルな画像の生成には重要技術なのでどんどん進んで欲しい。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1701.02965") 論文
+          li
+            a(href="http://www.cs.toronto.edu/~rgrosse/intrinsic/") MIT Intrinsic Images Dataset
+          li
+            a(href="http://sintel.is.tue.mpg.de/") MPI Sintel Flow Dataset
+          li
+            a(href="http://opensurfaces.cs.cornell.edu/publications/intrinsic/") Intrinsic Images in the Wild
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.5 17:36:29

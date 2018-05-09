@@ -1,30 +1,32 @@
-+slide
-  .title COCO-Stuff: Thing and Stuff Classes in Context
-  .info
-    .authors Holger Caesar, Jasper Uijlings, Vittorio Ferrari
-    .conference CVPR 2018
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p MSCOCOデータセットに対してThing（もの）やStuff（材質）に関する追加アノテーションを行い、さらにコンテキスト情報も追加したCOCO-Stuffを提案した。このデータセットには主にシーンタイプ、そのものがどこに現れそうかという場所、物理的/材質的な属性などをアノテーションとして付与する。COCO2017をベースにして164Kに対して91カテゴリを付与し、スーパーピクセルを用いた効率的なアノテーションについてもトライした。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180329COCOStuff.png`,alt="180329COCOStuff")
-  .item3
-    .text
-      h1 新規性・結果
-      p 材質的なアノテーションは画像キャプションに対して重要であることを確認、相対的な位置関係などデータセットのリッチなアノテーションが重要であること、セマンティックセグメンテーションベースの方法により今回のアノテーションを簡易的に行えたこと、などを示した。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p さらにリッチなアノテーションは今後重要になる。この論文ではスーパーピクセルという弱い知識を用い、人間のアノテーションと組み合わせることでボトムアップ・トップダウンを効果的かつ効率的に組み合わせてアノテーションを行っている点が素晴らしい。ラストオーサのVittorio Ferrariは機械と人の協調によるアノテーションが得意（なので、既存データセットへのよりリッチなアノテーションを早いペースで提案できる）。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1612.03716v4.pdf") 論文
-        li
-          a(href="https://github.com/nightrome/cocostuff10k") GitHub
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.29 13:59:43
+﻿+slide
+section#COCO-Stuff_Thing_and_Stuff_Classes_in_Context
+  .paper-abstract
+    .title COCO-Stuff: Thing and Stuff Classes in Context
+    .info
+      .authors Holger Caesar, Jasper Uijlings, Vittorio Ferrari
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p MSCOCOデータセットに対してThing（もの）やStuff（材質）に関する追加アノテーションを行い、さらにコンテキスト情報も追加したCOCO-Stuffを提案した。このデータセットには主にシーンタイプ、そのものがどこに現れそうかという場所、物理的/材質的な属性などをアノテーションとして付与する。COCO2017をベースにして164Kに対して91カテゴリを付与し、スーパーピクセルを用いた効率的なアノテーションについてもトライした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180329COCOStuff.png`,alt="180329COCOStuff")
+    .item3
+      .text
+        h1 新規性・結果
+        p 材質的なアノテーションは画像キャプションに対して重要であることを確認、相対的な位置関係などデータセットのリッチなアノテーションが重要であること、セマンティックセグメンテーションベースの方法により今回のアノテーションを簡易的に行えたこと、などを示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p さらにリッチなアノテーションは今後重要になる。この論文ではスーパーピクセルという弱い知識を用い、人間のアノテーションと組み合わせることでボトムアップ・トップダウンを効果的かつ効率的に組み合わせてアノテーションを行っている点が素晴らしい。ラストオーサのVittorio Ferrariは機械と人の協調によるアノテーションが得意（なので、既存データセットへのよりリッチなアノテーションを早いペースで提案できる）。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1612.03716v4.pdf") 論文
+          li
+            a(href="https://github.com/nightrome/cocostuff10k") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.29 13:59:43

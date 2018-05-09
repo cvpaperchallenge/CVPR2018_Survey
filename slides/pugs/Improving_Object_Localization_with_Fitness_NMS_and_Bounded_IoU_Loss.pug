@@ -1,31 +1,33 @@
-+slide
-  .title Improving Object Localization with Fitness NMS and Bounded IoU Loss
-  .info
-    .authors Lachlan Tychsen-Smith, et al.
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p 既存のNon-Max Supressionを改良したFitness NMSの提案。Soft NMSも同時に使用するとより効果的。
-      p 勾配降下法の収束特性(滑らかさ、堅牢性など)を維持しつつ、IoUを最大化するという目標により適した損失関数であるBounded IoU Loss の提案。これをRoIクラスタリングと組み合わせることで精度が向上する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180314FitnessNMS.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p バウンディングボックスのスコアを算出する関数を拡張する。具体的には、グランドトゥルースとのIoUと、クラスの期待値を追加する。これにより、IoUの重なり推定値と、クラス確率の両方が高いバウンディングボックスを優先して学習することができる。
-  .item4
-    .text
-      h1 結果・リンク集
-      p MSCOCO、Titan X(Maxwell)使用時では、精度33.6％-79Hzまたは41.8％-5Hz。本論文ではDeNetでテストしたが、別の手法でも精度向上が望めるよう。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1711.00164.pdf") 論文
-        li
-          a(href="https://github.com/lachlants/denet") ソースコード
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Improving_Object_Localization_with_Fitness_NMS_and_Bounded_IoU_Loss
+  .paper-abstract
+    .title Improving Object Localization with Fitness NMS and Bounded IoU Loss
+    .info
+      .authors Lachlan Tychsen-Smith, et al.
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
   
+    .item1
+      .text
+        h1 概要
+        p 既存のNon-Max Supressionを改良したFitness NMSの提案。Soft NMSも同時に使用するとより効果的。
+        p 勾配降下法の収束特性(滑らかさ、堅牢性など)を維持しつつ、IoUを最大化するという目標により適した損失関数であるBounded IoU Loss の提案。これをRoIクラスタリングと組み合わせることで精度が向上する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180314FitnessNMS.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p バウンディングボックスのスコアを算出する関数を拡張する。具体的には、グランドトゥルースとのIoUと、クラスの期待値を追加する。これにより、IoUの重なり推定値と、クラス確率の両方が高いバウンディングボックスを優先して学習することができる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p MSCOCO、Titan X(Maxwell)使用時では、精度33.6％-79Hzまたは41.8％-5Hz。本論文ではDeNetでテストしたが、別の手法でも精度向上が望めるよう。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.00164.pdf") 論文
+          li
+            a(href="https://github.com/lachlants/denet") ソースコード
+    .slide_index #{getSlideIndex()}
+    

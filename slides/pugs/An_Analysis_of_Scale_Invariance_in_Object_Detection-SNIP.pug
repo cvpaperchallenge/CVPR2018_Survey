@@ -1,29 +1,31 @@
-+slide
-  .title An Analysis of Scale Invariance in Object Detection – SNIP
-  .info
-    .authors Bharat Singh, Larry S. Davis
-    .paper_id 1711.08189
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p 極端なスケール変化に頑健な物体検出手法であるSNIPの提案。物体検出において、大きな物体と小さな物体をそれぞれ検出することは困難。そこで、学習時に異なるサイズの物体における勾配を、選択して逆伝播する。物体の幅広いスペクトルに対処し、ドメインシフトを低減する。ピラミッド型のネットワークとなっており、end-to-end学習可能。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180506SNIP.jpg`,alt="180506SNIP.jpg")
-  .item3
-    .text
-      h1 新規性
-      p まず、現代の物体検出手法の欠点として、スケール変化について解析している。小さい物体を検出するために“アップサンプリング画像が必要か”などを、ImageNetを使ってパフォーマンスを評価。これらの解析に基づいてSNIPを開発。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p COCO2017 challengeにおける、最優秀学生応募作品。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1711.08189.pdf") 論文
-        li
-          a(href="http://bit.ly/2yXVg4c") コード
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#An_Analysis_of_Scale_Invariance_in_Object_Detection-SNIP
+  .paper-abstract
+    .title An Analysis of Scale Invariance in Object Detection – SNIP
+    .info
+      .authors Bharat Singh, Larry S. Davis
+      .paper_id 1711.08189
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 極端なスケール変化に頑健な物体検出手法であるSNIPの提案。物体検出において、大きな物体と小さな物体をそれぞれ検出することは困難。そこで、学習時に異なるサイズの物体における勾配を、選択して逆伝播する。物体の幅広いスペクトルに対処し、ドメインシフトを低減する。ピラミッド型のネットワークとなっており、end-to-end学習可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180506SNIP.jpg`,alt="180506SNIP.jpg")
+    .item3
+      .text
+        h1 新規性
+        p まず、現代の物体検出手法の欠点として、スケール変化について解析している。小さい物体を検出するために“アップサンプリング画像が必要か”などを、ImageNetを使ってパフォーマンスを評価。これらの解析に基づいてSNIPを開発。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p COCO2017 challengeにおける、最優秀学生応募作品。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.08189.pdf") 論文
+          li
+            a(href="http://bit.ly/2yXVg4c") コード
+    .slide_index #{getSlideIndex()}

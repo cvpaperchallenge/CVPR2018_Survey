@@ -1,37 +1,39 @@
-+slide
-  .title Adversarially Learned One-Class Classifier for Novelty Detection
-  .info
-    .authors M.Sabokrou, M.Khalooei, M.Fathy and E.Adeli
-    .conference CVPR2018
-    .paper_id arXiv:1802.09088
-  .slide_editor KotaYoshida
-
-  .item1
-    .text
-      h1 概要
-      p 1クラス分類の際のノベリティ検出のために2段階のネットワークを構築．
-        |1つのネットワークはノベリティの検出をし，もう1つでは，inlierを強化しoutlierを歪ませる．
-        |画像と動画で検証．
-  .item2
-    .text
-      p
-        img(src=`${figpath}Adversarially_Learned_One-Class_Classifier_for_Novelty_Detection.png`,alt="概要図")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      ul
-        li 1クラス分類のためのend to endネットワークを導入したもの
-        li GANを用いた手法では学習後に片方のモデルのみが使われるが，今回の手法ではテストの際に両方のモデルを掛け合わせることで効率化を図る
-  .item4
-    .text
-      h1 結果・リンク集
-      ul
-        li
-          p inlierとoutlierの分類は元のクラスのサンプルの決定よりも優れている．
-        li
-          p ノベリティクラスのサンプルが無くても学習し，動画や画像の異常を検知でき，様々なアプリケーションで高いパフォーマンスを示す．
-        li
-          p
-            a(href="https://arxiv.org/pdf/1802.09088.pdf") Paper
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.4 03:50:34
+﻿+slide
+section#Adversarially_Learned_One-Class_Classifier_for_Novelty_Detection
+  .paper-abstract
+    .title Adversarially Learned One-Class Classifier for Novelty Detection
+    .info
+      .authors M.Sabokrou, M.Khalooei, M.Fathy and E.Adeli
+      .conference CVPR2018
+      .paper_id arXiv:1802.09088
+    .slide_editor KotaYoshida
+  
+    .item1
+      .text
+        h1 概要
+        p 1クラス分類の際のノベリティ検出のために2段階のネットワークを構築．
+          |1つのネットワークはノベリティの検出をし，もう1つでは，inlierを強化しoutlierを歪ませる．
+          |画像と動画で検証．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Adversarially_Learned_One-Class_Classifier_for_Novelty_Detection.png`,alt="概要図")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 1クラス分類のためのend to endネットワークを導入したもの
+          li GANを用いた手法では学習後に片方のモデルのみが使われるが，今回の手法ではテストの際に両方のモデルを掛け合わせることで効率化を図る
+    .item4
+      .text
+        h1 結果・リンク集
+        ul
+          li
+            p inlierとoutlierの分類は元のクラスのサンプルの決定よりも優れている．
+          li
+            p ノベリティクラスのサンプルが無くても学習し，動画や画像の異常を検知でき，様々なアプリケーションで高いパフォーマンスを示す．
+          li
+            p
+              a(href="https://arxiv.org/pdf/1802.09088.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.4 03:50:34

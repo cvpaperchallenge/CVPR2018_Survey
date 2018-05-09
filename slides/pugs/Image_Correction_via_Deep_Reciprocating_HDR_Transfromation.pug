@@ -1,30 +1,32 @@
-+slide
-  .title Image Correction via Deep Reciprocating HDR Transfromation
-  .info
-    .authors Xin Yang, Ke Xu, Yibing Song, Qiang Zhang, Xiaopeng Wei, Rynson W.H.Lau
-    .conference CVPR 2018
-  .slide_editor Kazuki Inoue
-
-  .item1
-    .text
-      h1 概要
-      p 入力されたLDR画像に対する露光量の調節をend-to-endに行う研究。２つのU-Netを使用し、LDR画像からHDR画像の推定と、推定されたHDR画像からLDRドメインへの変換、という２つ学習によって実現する。LDR画像に内包されている問題として、露光量が少ない箇所ではピクセルが黒く塗りつぶされてしまい、実際のシーンにおける色の推定が難しいという問題がある。そこで、LDR画像から一度HDR画像を生成することで、塗りつぶされた領域を修復する。
-  .item2
-    .text
-      p
-        img(src=`${figpath}20180503Image_Correction_via_Deep_Reciprocating_HDR_Transfromation.png`)
-  .item3
-    .text
-      h1 新規性・結果・なぜCVPRに通ったか？
-      p ・入力LDR画像の露光量が多い部分や少ない部分に対しても適切な画像修復が可能となった。
-      p ・同様の問題を扱う最新手法と比較した結果、提案手法優位な結果となった。主な理由としてはHDR画像からLDR画像へ変換する際に画像の局所的な詳細情報を保てていることをあげている。
-      p ・定量評価として画像の質を表す数値であるPSNR、SSIM、FSIM、Q-scoeによる評価を行った。
-  .item4
-    .text
-      h1 コメント・リンク集
-      ul
-        li
-          a(href="https://arxiv.org/abs/1804.04371") 論文
-        li
-          a(href="https://ybsong00.github.io/cvpr18_imgcorrect/index") project page
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Image_Correction_via_Deep_Reciprocating_HDR_Transfromation
+  .paper-abstract
+    .title Image Correction via Deep Reciprocating HDR Transfromation
+    .info
+      .authors Xin Yang, Ke Xu, Yibing Song, Qiang Zhang, Xiaopeng Wei, Rynson W.H.Lau
+      .conference CVPR 2018
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 入力されたLDR画像に対する露光量の調節をend-to-endに行う研究。２つのU-Netを使用し、LDR画像からHDR画像の推定と、推定されたHDR画像からLDRドメインへの変換、という２つ学習によって実現する。LDR画像に内包されている問題として、露光量が少ない箇所ではピクセルが黒く塗りつぶされてしまい、実際のシーンにおける色の推定が難しいという問題がある。そこで、LDR画像から一度HDR画像を生成することで、塗りつぶされた領域を修復する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180503Image_Correction_via_Deep_Reciprocating_HDR_Transfromation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜCVPRに通ったか？
+        p ・入力LDR画像の露光量が多い部分や少ない部分に対しても適切な画像修復が可能となった。
+        p ・同様の問題を扱う最新手法と比較した結果、提案手法優位な結果となった。主な理由としてはHDR画像からLDR画像へ変換する際に画像の局所的な詳細情報を保てていることをあげている。
+        p ・定量評価として画像の質を表す数値であるPSNR、SSIM、FSIM、Q-scoeによる評価を行った。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.04371") 論文
+          li
+            a(href="https://ybsong00.github.io/cvpr18_imgcorrect/index") project page
+    .slide_index #{getSlideIndex()}

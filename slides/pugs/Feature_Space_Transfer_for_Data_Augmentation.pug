@@ -1,30 +1,32 @@
-+slide
-  .title Feature Space Transfer for Data Augmentation
-  .info
-    .authors Bo Liu, Mandar Dixit, Roland Kwitt, Nuno Vasconcelos
-    .conference CVPR 2018
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p 画像空間上ではなく、特徴空間上でデータ拡張（Data Augmentation）を行う研究である。この課題に対して著者らは特徴空間上で物体姿勢/見え方のバリエーションを多様体として考慮するFeature Transfer Network (FATTEN)を提案。従来の特徴空間上でのデータ拡張とは異なり、提案法であるFATTENはEnd-to-Endでの学習が可能であり、より効果的にデータ拡張を実行可能である。同ネットワークは姿勢やカテゴリの多タスク学習により学習を行う。図は直感的な特徴空間上での挙動を示したもので、Pose/Appearanceにおける特徴空間の動線を把握した上でデータ拡張を行うことができる。One-/Few-shot学習でも効果を発揮し、特にOne-shotでは他を大きく離して優れていることを示した。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180504FATTEN.png`,alt="180504FATTEN")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 新規性としては複数の属性（ここでは姿勢・アピアランス）を同時に考慮しながら特徴空間上でデータ拡張を行える点が新規性としてあげられ、さらに関連研究と異なるのはEnd-to-Endで学習できる点も優れている。直感的にはビューポイントの違いとそれに対応するアピアランスを拡張する形で特徴学習ができていると言える。FATTENを適用しModelNet/SUN-RGBDのデータセットにてデータ拡張を行った結果、はっきりとした精度向上を確認した。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p RotationNetとの比較や統合（RotationNet+FATTEN）が気になる。もともとこの論文で扱っている問題に対して精度が高いRotationNetに本論文のデータ拡張手法を使用するとさらに大きく精度向上するのでは？
-      ul
-        li
-          a(href="https://arxiv.org/abs/1801.04356") 論文
-        li
-          a(href="https://github.com/kanezaki/rotationnet") RotationNet
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.4 00:21:12
+﻿+slide
+section#Feature_Space_Transfer_for_Data_Augmentation
+  .paper-abstract
+    .title Feature Space Transfer for Data Augmentation
+    .info
+      .authors Bo Liu, Mandar Dixit, Roland Kwitt, Nuno Vasconcelos
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 画像空間上ではなく、特徴空間上でデータ拡張（Data Augmentation）を行う研究である。この課題に対して著者らは特徴空間上で物体姿勢/見え方のバリエーションを多様体として考慮するFeature Transfer Network (FATTEN)を提案。従来の特徴空間上でのデータ拡張とは異なり、提案法であるFATTENはEnd-to-Endでの学習が可能であり、より効果的にデータ拡張を実行可能である。同ネットワークは姿勢やカテゴリの多タスク学習により学習を行う。図は直感的な特徴空間上での挙動を示したもので、Pose/Appearanceにおける特徴空間の動線を把握した上でデータ拡張を行うことができる。One-/Few-shot学習でも効果を発揮し、特にOne-shotでは他を大きく離して優れていることを示した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180504FATTEN.png`,alt="180504FATTEN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 新規性としては複数の属性（ここでは姿勢・アピアランス）を同時に考慮しながら特徴空間上でデータ拡張を行える点が新規性としてあげられ、さらに関連研究と異なるのはEnd-to-Endで学習できる点も優れている。直感的にはビューポイントの違いとそれに対応するアピアランスを拡張する形で特徴学習ができていると言える。FATTENを適用しModelNet/SUN-RGBDのデータセットにてデータ拡張を行った結果、はっきりとした精度向上を確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p RotationNetとの比較や統合（RotationNet+FATTEN）が気になる。もともとこの論文で扱っている問題に対して精度が高いRotationNetに本論文のデータ拡張手法を使用するとさらに大きく精度向上するのでは？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.04356") 論文
+          li
+            a(href="https://github.com/kanezaki/rotationnet") RotationNet
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.4 00:21:12

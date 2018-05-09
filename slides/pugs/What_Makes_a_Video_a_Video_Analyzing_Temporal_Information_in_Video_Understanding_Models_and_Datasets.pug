@@ -1,33 +1,35 @@
-+slide
-  .title What Makes a Video a Video: Analyzing Temporal Information in Video Understanding Models and Datasets 
-  .info
-    .authors Xiaolong Wang et al.
-    .conference CVPR 2018
-  .slide_editor Tomoyuki Suzuki
-
-  .item1
-    .text
-      h1 概要
-      p 「3DCNNが実は動き特徴を捉えられていないのではないか」という考えのもと、3DCNNにおける動き特徴の影響の上界を実験的に求める。提案する工夫により、この影響のかなり低い上界を得ることができ、動き特徴を捉えているのではない(例えば実は複数フレーム入力から「重要なフレーム選択」を行っているなど)ことを示唆した。
-  .item2
-    .text
-      p
-        img(src=`${figpath}What_Makes_a_Video_a_Video_Analyzing_Temporal_Information_in_Video_Understanding_Models_and_Datasets.png`)
-  .item3
-    .text
-      h1 検証方法
-      p 
-        |通常の16frames入力で学習したC3Dにおいてtest時にsub-samplingした(動き情報を無くした)設定下でできるだけ精度を上げることで結果的に動き特徴の上界を得る。Naïveにsub-samplingを行うと入力のデータ分布の明らかな違いから動き以外の精度低下への影響をもたらすと考えられるため、 sub-samplingされたclipから元clipを生成するgeneratorを構築。学習はC3Dの中間層の値をMSEで近づける。
-        |またsampling方法によっても精度は変わるという考えから、識別confidenceが最大となるframesをsamplingする。注意として、この際動きに関しては全く考慮せずにsamplingしてきている。
-  .item4
-    .text
-      p 
-      |結果として、かなりきつい上界を求められ、論文内では3DCNNが2Dよりも精度が良いのは動き特徴ではなく、複数フレーム入力の中で最も識別しやすいフレームを選択可能になるからではと述べられている。
-      .text
-      h5 コメント・リンク
-      |フレーム選択をしているという仮説は面白いし、select frameによって精度が上昇したり、動きが大きい動画はフレーム単位での推定結果の分散が大きいなどから十分ありえそう。これが本当なら、optical flowを3dCNNに導入して大きく精度が向上することともつじつまが合いそう。
-      ul
-        li
-          a(href="http://ai.stanford.edu/~dahuang/papers/cvpr18-fb.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#What_Makes_a_Video_a_Video_Analyzing_Temporal_Information_in_Video_Understanding_Models_and_Datasets
+  .paper-abstract
+    .title What Makes a Video a Video: Analyzing Temporal Information in Video Understanding Models and Datasets 
+    .info
+      .authors Xiaolong Wang et al.
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
   
+    .item1
+      .text
+        h1 概要
+        p 「3DCNNが実は動き特徴を捉えられていないのではないか」という考えのもと、3DCNNにおける動き特徴の影響の上界を実験的に求める。提案する工夫により、この影響のかなり低い上界を得ることができ、動き特徴を捉えているのではない(例えば実は複数フレーム入力から「重要なフレーム選択」を行っているなど)ことを示唆した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}What_Makes_a_Video_a_Video_Analyzing_Temporal_Information_in_Video_Understanding_Models_and_Datasets.png`)
+    .item3
+      .text
+        h1 検証方法
+        p 
+          |通常の16frames入力で学習したC3Dにおいてtest時にsub-samplingした(動き情報を無くした)設定下でできるだけ精度を上げることで結果的に動き特徴の上界を得る。Naïveにsub-samplingを行うと入力のデータ分布の明らかな違いから動き以外の精度低下への影響をもたらすと考えられるため、 sub-samplingされたclipから元clipを生成するgeneratorを構築。学習はC3Dの中間層の値をMSEで近づける。
+          |またsampling方法によっても精度は変わるという考えから、識別confidenceが最大となるframesをsamplingする。注意として、この際動きに関しては全く考慮せずにsamplingしてきている。
+    .item4
+      .text
+        p 
+        |結果として、かなりきつい上界を求められ、論文内では3DCNNが2Dよりも精度が良いのは動き特徴ではなく、複数フレーム入力の中で最も識別しやすいフレームを選択可能になるからではと述べられている。
+        .text
+        h5 コメント・リンク
+        |フレーム選択をしているという仮説は面白いし、select frameによって精度が上昇したり、動きが大きい動画はフレーム単位での推定結果の分散が大きいなどから十分ありえそう。これが本当なら、optical flowを3dCNNに導入して大きく精度が向上することともつじつまが合いそう。
+        ul
+          li
+            a(href="http://ai.stanford.edu/~dahuang/papers/cvpr18-fb.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

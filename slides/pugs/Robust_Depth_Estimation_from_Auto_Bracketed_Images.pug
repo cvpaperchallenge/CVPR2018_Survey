@@ -1,29 +1,31 @@
-+slide
-  .title Robust Depth Estimation from Auto Bracketed Images
-  .info
-    .authors Sunghoon Im, Hae-Gon Jeon, In So Kweon
-    .conference CVPR 2018
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p HDRの画像の明るさを補正するためのブラケット撮影からの距離画像やカメラ姿勢を同時推定する手法を提案する論文。ブラケット撮影とは通常の露出撮影以外に意図的に「少し明るめの写真」と「少し暗めの写真」を同時に撮影。距離画像推定は幾何変換をResidual-flow Networkに統合したモデルにより行う。ここでは学習ベースのMulti-view stereo手法（Deep Multi-View Stereo; DMVS）を幾何推定（Structure-from-Small-Motion; SfSM）と組み合わせる。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180323BracketedImages.png`,alt="180323BracketedImages")
-  .item3
-    .text
-      h1 新規性・結果
-      p 距離画像推定において、スマートフォンやDSLRカメラなど種々のデータセットにてSoTAな精度を達成。モバイル環境でも動作するような小さなネットワークと処理速度についても同時に実現した。
-  .item4
-    .text
-      h1 リンク集
-      ul
-        li
-          a(href="https://arxiv.org/abs/1803.07702") 論文
-        li
-          a(href="https://sunghoonim.github.io/") 著者
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.3.23 19:11:04
+﻿+slide
+section#Robust_Depth_Estimation_from_Auto_Bracketed_Images
+  .paper-abstract
+    .title Robust Depth Estimation from Auto Bracketed Images
+    .info
+      .authors Sunghoon Im, Hae-Gon Jeon, In So Kweon
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p HDRの画像の明るさを補正するためのブラケット撮影からの距離画像やカメラ姿勢を同時推定する手法を提案する論文。ブラケット撮影とは通常の露出撮影以外に意図的に「少し明るめの写真」と「少し暗めの写真」を同時に撮影。距離画像推定は幾何変換をResidual-flow Networkに統合したモデルにより行う。ここでは学習ベースのMulti-view stereo手法（Deep Multi-View Stereo; DMVS）を幾何推定（Structure-from-Small-Motion; SfSM）と組み合わせる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180323BracketedImages.png`,alt="180323BracketedImages")
+    .item3
+      .text
+        h1 新規性・結果
+        p 距離画像推定において、スマートフォンやDSLRカメラなど種々のデータセットにてSoTAな精度を達成。モバイル環境でも動作するような小さなネットワークと処理速度についても同時に実現した。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.07702") 論文
+          li
+            a(href="https://sunghoonim.github.io/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.23 19:11:04

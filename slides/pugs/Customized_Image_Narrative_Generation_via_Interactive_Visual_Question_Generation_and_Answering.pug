@@ -1,35 +1,37 @@
 ﻿+slide
-  .title Customized Image Narrative Generation via Interactive Visual Question Generation and Answering
-  .info
-    .authors Andrew Shin, Yoshitaka Ushiku, Tatsuya Harada
-    .conference CVPR 2018
-    .paper_id 1224
-  .slide_editor Yue Qiu
-
-  .item1
-    .text
-      h1 概要
-      p ・新規の“Customized画像説明文生成”タスクを提案した．また，インタラクティブにユーザに自動的に画像に関する質問をし，回答文を収集できるような仕組みを提案した．
-        |・従来の画像説明文生成タスクにおいて，異なるユーザの性質や画像の注目領域などにより，多様な説明文を生成できることが検討されていない．このような性質に応じて，多様な質問文を生成できる仕組み及びユーザとインターアクションしユーザの個性的な回答文を収集しユーザの特徴を学習することにより，Customizedで画像説明文を生成できる仕組みを提案した．
-        |・提案仕組みは具体的に：①画像から self Q&A modelにより，画像中のマルチリジョンを注目し(attention構造を利用した)質問文を生成し， VQAモデルにより回答する(マルチ回答がある質問文だけを保留)；②　①により生成できた質問文をユーザに提示し，回答させる；③画像リジョン・質問文・回答文の統合した画像説明文を生成する．
-        |・画像リジョン・質問文・ユーザ特有な回答文からchoice vectorを抽出し，このベクトルを利用してほかの画像が入力された場合，ユーザの個性的な画像説明文を生成できる．
-  .item2
-    .text
-      p
-        img(src=`${figpath}Customized_Image_Narrative_Generation.png`,alt="Customized_Image_Narrative_Generation")
-  .item3
-    .text
-      h1 新規性・結果
-      p ・新規な問題設定“Customized画像説明文生成”
-        |・提案手法により，画像からより多様でユーザの個性を含んだ説明文を生成できる．
-        |・ Automatic　Image　Narrative　Generationにおいて，従来のデータセットCOCO, SIND, DenseCapなどと比べ”diversity”,”interesting”,”naturalness”,”expressivity”などの指標に対しパフォーマンスが良い
-        |・ Interactive　Image　Narrative　Generationにおいて，ヒューマンテストで良い評価を達成した．
-  .item4
-    .text
-      h1 リンク集
-      p ・ユーザの個性を学習できる仕組みは応用場面が広そう
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1805.00460.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 12:19:18
+section#Customized_Image_Narrative_Generation_via_Interactive_Visual_Question_Generation_and_Answering
+  .paper-abstract
+    .title Customized Image Narrative Generation via Interactive Visual Question Generation and Answering
+    .info
+      .authors Andrew Shin, Yoshitaka Ushiku, Tatsuya Harada
+      .conference CVPR 2018
+      .paper_id 1224
+    .slide_editor Yue Qiu
+  
+    .item1
+      .text
+        h1 概要
+        p ・新規の“Customized画像説明文生成”タスクを提案した．また，インタラクティブにユーザに自動的に画像に関する質問をし，回答文を収集できるような仕組みを提案した．
+          |・従来の画像説明文生成タスクにおいて，異なるユーザの性質や画像の注目領域などにより，多様な説明文を生成できることが検討されていない．このような性質に応じて，多様な質問文を生成できる仕組み及びユーザとインターアクションしユーザの個性的な回答文を収集しユーザの特徴を学習することにより，Customizedで画像説明文を生成できる仕組みを提案した．
+          |・提案仕組みは具体的に：①画像から self Q&A modelにより，画像中のマルチリジョンを注目し(attention構造を利用した)質問文を生成し， VQAモデルにより回答する(マルチ回答がある質問文だけを保留)；②　①により生成できた質問文をユーザに提示し，回答させる；③画像リジョン・質問文・回答文の統合した画像説明文を生成する．
+          |・画像リジョン・質問文・ユーザ特有な回答文からchoice vectorを抽出し，このベクトルを利用してほかの画像が入力された場合，ユーザの個性的な画像説明文を生成できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Customized_Image_Narrative_Generation.png`,alt="Customized_Image_Narrative_Generation")
+    .item3
+      .text
+        h1 新規性・結果
+        p ・新規な問題設定“Customized画像説明文生成”
+          |・提案手法により，画像からより多様でユーザの個性を含んだ説明文を生成できる．
+          |・ Automatic　Image　Narrative　Generationにおいて，従来のデータセットCOCO, SIND, DenseCapなどと比べ”diversity”,”interesting”,”naturalness”,”expressivity”などの指標に対しパフォーマンスが良い
+          |・ Interactive　Image　Narrative　Generationにおいて，ヒューマンテストで良い評価を達成した．
+    .item4
+      .text
+        h1 リンク集
+        p ・ユーザの個性を学習できる仕組みは応用場面が広そう
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1805.00460.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:19:18

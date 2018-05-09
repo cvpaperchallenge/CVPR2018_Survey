@@ -1,33 +1,35 @@
 ﻿+slide
-  .title VizWiz Grand Challenge: Answering Visual Questions from Blind People
-  .info
-    .authors Danna Gurari, Qing Li, Abigale Stangl, Anhong Guo, Chi Lin, Kristen Grauman, Jiebo Luo
-    .conference CVPR 2018
-    .paper_id 491
-  .slide_editor Yue Qiu
-
-  .item1
-    .text
-      h1 概要
-      p ・盲人に集められたVQAタスクのデータセットVizWiz（画像と音声質問文）を提案した．VizWizが31,000枚の盲人が携帯により撮影し，画像ごとに画像を撮影した盲人が提出した音声質問文一つ付き．質問文ごとに，10個の回答文がアノテーションされている．
-      p ・従来のVQAデータセットほぼ人工設定により作成された方が多く，また現実環境の盲人ユーザを対象に“goal oriented”なVQAデータセット未だにない．そこで，盲人がカメラにより周囲環境を撮影し，環境を理解することを目的にして，盲人ユーザにより集められた画像及び質問文のデータセットを構築した．
-      p ・ 盲人ユーザにより撮影されたのでVizWizは画像の質が良くなく，又質問文が音声情報なので，はっきり発音が取れない場合などの問題点がある．提案データセットで現状のVQAモデルで検証した結果，性能が従来のデータセットで検証した性能より劣るので， VizWizが将来的の盲人のためのVQA応用に新たな挑戦を提出した．
-  .item2
-    .text
-      p
-        img(src=`${figpath}VizWiz.png`,alt="VizWiz")
-  .item3
-    .text
-      h1 新規性・結果
-      p ・初めての盲人により撮影及び質問したVQAデータセット．
-      p ・従来のVQAデータセットと比べ，もっと画像の周りの環境に関する質問文が多い．
-      p ・従来のVQAデータセットとの質問文の詳細的な特徴比べも行っている．
-  .item4
-    .text
-      h1 リンク集
-      p ・盲人のためのVQAシステム構築に有力なデータセット．
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1802.08218.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 14:33:52
+section#VizWiz_Grand_Challenge_Answering_Visual_Questions_from_Blind_People
+  .paper-abstract
+    .title VizWiz Grand Challenge: Answering Visual Questions from Blind People
+    .info
+      .authors Danna Gurari, Qing Li, Abigale Stangl, Anhong Guo, Chi Lin, Kristen Grauman, Jiebo Luo
+      .conference CVPR 2018
+      .paper_id 491
+    .slide_editor Yue Qiu
+  
+    .item1
+      .text
+        h1 概要
+        p ・盲人に集められたVQAタスクのデータセットVizWiz（画像と音声質問文）を提案した．VizWizが31,000枚の盲人が携帯により撮影し，画像ごとに画像を撮影した盲人が提出した音声質問文一つ付き．質問文ごとに，10個の回答文がアノテーションされている．
+        p ・従来のVQAデータセットほぼ人工設定により作成された方が多く，また現実環境の盲人ユーザを対象に“goal oriented”なVQAデータセット未だにない．そこで，盲人がカメラにより周囲環境を撮影し，環境を理解することを目的にして，盲人ユーザにより集められた画像及び質問文のデータセットを構築した．
+        p ・ 盲人ユーザにより撮影されたのでVizWizは画像の質が良くなく，又質問文が音声情報なので，はっきり発音が取れない場合などの問題点がある．提案データセットで現状のVQAモデルで検証した結果，性能が従来のデータセットで検証した性能より劣るので， VizWizが将来的の盲人のためのVQA応用に新たな挑戦を提出した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}VizWiz.png`,alt="VizWiz")
+    .item3
+      .text
+        h1 新規性・結果
+        p ・初めての盲人により撮影及び質問したVQAデータセット．
+        p ・従来のVQAデータセットと比べ，もっと画像の周りの環境に関する質問文が多い．
+        p ・従来のVQAデータセットとの質問文の詳細的な特徴比べも行っている．
+    .item4
+      .text
+        h1 リンク集
+        p ・盲人のためのVQAシステム構築に有力なデータセット．
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1802.08218.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 14:33:52

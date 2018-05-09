@@ -1,31 +1,33 @@
-+slide
-  .title GAGAN: Geometry-Aware Generative Adversarial Networks
-  .info
-    .authors Jean Kossaifi, Linh Tran, Yannis Panagakis and Maja Pantic
-    .conference CVPR2018
-  .slide_editor Yuta Matsuzaki
-
-  .item1
-    .text
-      h1 概要
-      p 既存のGANでは考慮されていなかった形状や位置といった幾何学的情報をGANの生成プロセスに組み込んだGeometry-Aware Generative Adversarial Networks (GAGAN) を提案．具体的にGAGANでは，ジェネレータで統計的情報な形状モデルの確率空間から潜在関数をサンプリングする．次にジェネレータの出力値を微分可能な幾何学変換を介して標準座標系にマッピングすることで，物体の形状や位置といった情報を強制し，生成を行う．
-  .item2
-    .text
-      p
-        img(src=`${figpath}20180501_gagan.png`,alt="Item3Image")
-        img(src=`${figpath}20180501_gagan2.png`,alt="Item4Image")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      ul
-        li GAGANのような幾何学的情報を考慮した生成モデルはなく，GAGANが初
-        li 入力画像の属性の形状に合わせて，画像を生成することが可能
-  .item4
-    .text
-      h1 コメント・リンク集
-      p 今後は，(i)より大きな画像の生成，(ii)アフィン変換によって起こりうる変形を緩和するより複雑な幾何学的変換の探索およびそれによるGAGANの拡張，(iii)顔のランドマーク検出のための従来CNNアーキテクチャの拡張に取り組む予定
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1712.00684.pdf") 論文
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.1 14:41:53
+﻿+slide
+section#Geometry-Aware_Generative_Adversarial_Networks
+  .paper-abstract
+    .title GAGAN: Geometry-Aware Generative Adversarial Networks
+    .info
+      .authors Jean Kossaifi, Linh Tran, Yannis Panagakis and Maja Pantic
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+  
+    .item1
+      .text
+        h1 概要
+        p 既存のGANでは考慮されていなかった形状や位置といった幾何学的情報をGANの生成プロセスに組み込んだGeometry-Aware Generative Adversarial Networks (GAGAN) を提案．具体的にGAGANでは，ジェネレータで統計的情報な形状モデルの確率空間から潜在関数をサンプリングする．次にジェネレータの出力値を微分可能な幾何学変換を介して標準座標系にマッピングすることで，物体の形状や位置といった情報を強制し，生成を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180501_gagan.png`,alt="Item3Image")
+          img(src=`${figpath}20180501_gagan2.png`,alt="Item4Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li GAGANのような幾何学的情報を考慮した生成モデルはなく，GAGANが初
+          li 入力画像の属性の形状に合わせて，画像を生成することが可能
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 今後は，(i)より大きな画像の生成，(ii)アフィン変換によって起こりうる変形を緩和するより複雑な幾何学的変換の探索およびそれによるGAGANの拡張，(iii)顔のランドマーク検出のための従来CNNアーキテクチャの拡張に取り組む予定
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.00684.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.1 14:41:53

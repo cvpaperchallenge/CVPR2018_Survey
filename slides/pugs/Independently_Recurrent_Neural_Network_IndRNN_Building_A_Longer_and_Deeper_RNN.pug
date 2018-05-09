@@ -1,28 +1,30 @@
-+slide
-  .title Independently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN
-  .info
-    .authors Shuai Li, et al.
-    .conference CVPR 2018
-  .slide_editor Munetaka Minoguchi
-
-  .item1
-    .text
-      h1 概要
-      p 新しいRNN手法であるindependently recurrent neural network (IndRNN)の提案。一枚のレイヤ内のニューロンが独立しており、レイヤ間で接続されている。これにより、勾配消失問題や爆発問題を防ぎ、より長期的なデータを学習することができる。また、IndRNNは複数積み重ねることができるため、既存のRNNよりも深いネットワークを構築できる。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180314IndRNN.jpg`)
-  .item3
-    .text
-      h1 新規性
-      p 本手法によって下記の従来手法の問題を解決。
-      p RNNは、勾配の消失や爆発の問題、長期パターンの学習が困難である。LSTMやGRUは、上記のRNNの問題を解決すべく開発されたが、層の勾配が減衰してしまう問題がある。また、RNNは全てのニューロンが接続されているため、挙動の解釈が困難。
-  .item4
-    .text
-      h1 結果・リンク集
-      p かなり長いシーケンス(5000回以上の時間ステップ)を処理でき、かなり深いネットワーク（実験では21レイヤー）を構築できる。
-      ul
-        li
-          a(href="https://arxiv.org/pdf/1803.04831.pdf") 論文
-  .slide_index #{getSlideIndex()}
+﻿+slide
+section#Independently_Recurrent_Neural_Network_IndRNN_Building_A_Longer_and_Deeper_RNN
+  .paper-abstract
+    .title Independently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN
+    .info
+      .authors Shuai Li, et al.
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 新しいRNN手法であるindependently recurrent neural network (IndRNN)の提案。一枚のレイヤ内のニューロンが独立しており、レイヤ間で接続されている。これにより、勾配消失問題や爆発問題を防ぎ、より長期的なデータを学習することができる。また、IndRNNは複数積み重ねることができるため、既存のRNNよりも深いネットワークを構築できる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180314IndRNN.jpg`)
+    .item3
+      .text
+        h1 新規性
+        p 本手法によって下記の従来手法の問題を解決。
+        p RNNは、勾配の消失や爆発の問題、長期パターンの学習が困難である。LSTMやGRUは、上記のRNNの問題を解決すべく開発されたが、層の勾配が減衰してしまう問題がある。また、RNNは全てのニューロンが接続されているため、挙動の解釈が困難。
+    .item4
+      .text
+        h1 結果・リンク集
+        p かなり長いシーケンス(5000回以上の時間ステップ)を処理でき、かなり深いネットワーク（実験では21レイヤー）を構築できる。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.04831.pdf") 論文
+    .slide_index #{getSlideIndex()}

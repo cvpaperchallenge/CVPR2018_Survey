@@ -1,36 +1,38 @@
-+slide
-  .title High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
-  .info
-    .authors Ting-Chun Wang, Ming-Yu Liu, Jun-Yan Zhu, Andrew Tao, Jan Kautz, Bryan Catanzaro
-    .conference CVPR 2018 (oral)
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p GANの枠組みにてセマンティックラベルからの高精細画像（HD-Image）生成に関する研究。意味ラベルからリアルな画像を生成するのみならず、インタラクティブな操作で画像生成をコントロールすることも可能。Residual blocksにより構成されるエンコーダ/デコーダ構造を（入力をスケールが異なる画像として）入れ子構造にしデコーダ直前の中間層で統合して画像生成を実行する。さらに、ラベルのみならずインスタンスレベルの特徴量を用いることで写実性が向上したと主張（論文中図4では物体境界面あたりに出ているボケが綺麗になっている）。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180508HDImageGAN.png`,alt="180508HDImageGAN")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 従来法より、見た目の画像生成が明らかに良くなり、高画質の画像を対象にしても画像生成ができるようになった。従来手法（pix2pix（論文中文献21）, CRN（論文中文献5））さらに、インタラクティブな操作により生成画像を所望の結果に近づけることができる。動画像を見れば従来手法よりも鮮明になっていることは明らかであり、アーキテクチャや生成に関する知見も得ている。CVPRでoralになるための準備やプレゼンが論文中にも書かれていると感じた。やはりNVIDIAはずるいと言われるくらいの計算機環境が揃っているのではないか。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p これはもう、学習画像として使えるのでは？（すでにだれか使って精度検証しているのでは？）
-      ul
-        li
-          a(href="https://arxiv.org/abs/1711.11585") 論文
-        li
-          a(href="https://tcwang0509.github.io/pix2pixHD/") Project
-        li
-          a(href="https://github.com/NVIDIA/pix2pixHD") GitHub
-        li
-          a(href="https://github.com/arXivTimes/arXivTimes/issues/544") arXivTimes
-        li
-          a(href="https://www.youtube.com/watch?v=3AIpPlzM_qs") YouTube
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.8 12:46:17
+﻿+slide
+section#High-Resolution_Image_Synthesis_and_Semantic_Manipulation_with_Conditional_GANs
+  .paper-abstract
+    .title High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
+    .info
+      .authors Ting-Chun Wang, Ming-Yu Liu, Jun-Yan Zhu, Andrew Tao, Jan Kautz, Bryan Catanzaro
+      .conference CVPR 2018 (oral)
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p GANの枠組みにてセマンティックラベルからの高精細画像（HD-Image）生成に関する研究。意味ラベルからリアルな画像を生成するのみならず、インタラクティブな操作で画像生成をコントロールすることも可能。Residual blocksにより構成されるエンコーダ/デコーダ構造を（入力をスケールが異なる画像として）入れ子構造にしデコーダ直前の中間層で統合して画像生成を実行する。さらに、ラベルのみならずインスタンスレベルの特徴量を用いることで写実性が向上したと主張（論文中図4では物体境界面あたりに出ているボケが綺麗になっている）。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180508HDImageGAN.png`,alt="180508HDImageGAN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来法より、見た目の画像生成が明らかに良くなり、高画質の画像を対象にしても画像生成ができるようになった。従来手法（pix2pix（論文中文献21）, CRN（論文中文献5））さらに、インタラクティブな操作により生成画像を所望の結果に近づけることができる。動画像を見れば従来手法よりも鮮明になっていることは明らかであり、アーキテクチャや生成に関する知見も得ている。CVPRでoralになるための準備やプレゼンが論文中にも書かれていると感じた。やはりNVIDIAはずるいと言われるくらいの計算機環境が揃っているのではないか。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p これはもう、学習画像として使えるのでは？（すでにだれか使って精度検証しているのでは？）
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.11585") 論文
+          li
+            a(href="https://tcwang0509.github.io/pix2pixHD/") Project
+          li
+            a(href="https://github.com/NVIDIA/pix2pixHD") GitHub
+          li
+            a(href="https://github.com/arXivTimes/arXivTimes/issues/544") arXivTimes
+          li
+            a(href="https://www.youtube.com/watch?v=3AIpPlzM_qs") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:46:17

@@ -1,33 +1,35 @@
-+slide
-  .title PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume
-  .info
-    .authors Deqing Sun, Xiaodong Yang, Ming-Yu Liu, Jan Kautz
-    .conference CVPR 2018 (oral)
-  .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
-
-  .item1
-    .text
-      h1 概要
-      p コンパクトかつ効果的なオプティカルフロー推定を実現するPWC-Netを提案する。ピラミッド構造かつ学習可能な階層的処理、射影（Warping）、コストボリュームにより設計され、軽量化しながら高精度なフロー推定を実現している。図は従来法（左図）と提案法（右図）のアーキテクチャの概略を示している。従来は画像のピラミッド構造により全てのサイズを階層的にオプティカルフローの射影や最適化を行い、最後に後処理をしていたが、提案法のPWCNetではあるひとつの階層内で後処理を行い、コンテキストを考慮したネットワーク（ContextNetwork; Dilated Convによる、各階層のオプティカルフローを入力するとそれらを総合的に解釈して最良のオプティカルフローを出力する）を通り抜けることで出力する。間には{Warping, Cont Volume, Optical flow}を行う層により構成される。
-  .item2
-    .text
-      p
-        img(src=`${figpath}180507PWCNet.png`,alt="180507PWCNet")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 従来法であるFlowNet2よりも17分の1の軽量化モデルでありながら、MPI Sintel final pass/KITTI 2015 BenchmarkにてState-of-the-art、Sintel 1024x436の解像度にて35fpsで動作する。
-  .item4
-    .text
-      h1 コメント・リンク集
-      p *オプティカルフロー/距離画像の推定など、RGBの入力から異なるチャンネルを出力する課題が登場して本論文のように精度向上やコンパクト化、処理速度向上が著しい。ただし、出力したオプティカルフローや距離画像の出力自体の正当性を保証するような評価方法が必要？特に、異なるドメイン（ドイツの道路データで学習して日本の道路データでテストするなど）での適応とその性能保証は欲しいところ。
-      ul
-        li （さすがNVIDIA！？）実験量がとても多く見える。Table1~7までびっしり実験結果が埋められている。
-        li
-          a(href="http://xiaodongyang.org/publications/papers/pwc-cvpr18.pdf") 論文
-        li
-          a(href="http://research.nvidia.com/publication/2018-02_PWC-Net%3A-CNNs-for") Project
-        li
-          a(href="https://github.com/deqings/PWC-Net") GitHub
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.7 12:26:54
+﻿+slide
+section#PWC-Net_CNNs_for_Optical_Flow_Using_Pyramid_Warping_and_Cost_Volume
+  .paper-abstract
+    .title PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume
+    .info
+      .authors Deqing Sun, Xiaodong Yang, Ming-Yu Liu, Jan Kautz
+      .conference CVPR 2018 (oral)
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p コンパクトかつ効果的なオプティカルフロー推定を実現するPWC-Netを提案する。ピラミッド構造かつ学習可能な階層的処理、射影（Warping）、コストボリュームにより設計され、軽量化しながら高精度なフロー推定を実現している。図は従来法（左図）と提案法（右図）のアーキテクチャの概略を示している。従来は画像のピラミッド構造により全てのサイズを階層的にオプティカルフローの射影や最適化を行い、最後に後処理をしていたが、提案法のPWCNetではあるひとつの階層内で後処理を行い、コンテキストを考慮したネットワーク（ContextNetwork; Dilated Convによる、各階層のオプティカルフローを入力するとそれらを総合的に解釈して最良のオプティカルフローを出力する）を通り抜けることで出力する。間には{Warping, Cont Volume, Optical flow}を行う層により構成される。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180507PWCNet.png`,alt="180507PWCNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来法であるFlowNet2よりも17分の1の軽量化モデルでありながら、MPI Sintel final pass/KITTI 2015 BenchmarkにてState-of-the-art、Sintel 1024x436の解像度にて35fpsで動作する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p *オプティカルフロー/距離画像の推定など、RGBの入力から異なるチャンネルを出力する課題が登場して本論文のように精度向上やコンパクト化、処理速度向上が著しい。ただし、出力したオプティカルフローや距離画像の出力自体の正当性を保証するような評価方法が必要？特に、異なるドメイン（ドイツの道路データで学習して日本の道路データでテストするなど）での適応とその性能保証は欲しいところ。
+        ul
+          li （さすがNVIDIA！？）実験量がとても多く見える。Table1~7までびっしり実験結果が埋められている。
+          li
+            a(href="http://xiaodongyang.org/publications/papers/pwc-cvpr18.pdf") 論文
+          li
+            a(href="http://research.nvidia.com/publication/2018-02_PWC-Net%3A-CNNs-for") Project
+          li
+            a(href="https://github.com/deqings/PWC-Net") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.7 12:26:54

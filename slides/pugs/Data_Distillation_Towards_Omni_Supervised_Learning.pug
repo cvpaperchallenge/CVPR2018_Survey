@@ -1,36 +1,38 @@
-+slide
-  .title Data Distillation: Towards Omni-Supervised Learning
-  .info
-    .authors Ilija Radosavovic, Piotr Dollár, Ross Girshick, Georgia Gkioxari, Kaiming He
-    .conference CVPR2018, arXive: 1712.04440
-    .paper_id 536
-  .slide_editor Hiroshi Fukui
-
-  .item1
-    .text
-      h1 概要
-      p ラベル付きとラベルなしデータを用いることで画像認識の精度を向上させるData Distillationを提案．
-        |この手法では，self-trainingとHinton先生のKnowledge distributionをベースに提案されている．
-        |この手法は，インターネット上のラベルなしデータを大量に学習できる．
-        |この論文では，Mask R-CNNによる人のKeypoint検出と，FPNをbackboneにしたFaster R-CNNによる物体検出で高精度化を実現している．
-        |(COCOをラベル付き，Sports-1M statistic framesとCOCO2017unlabel imagesをラベルなしデータとして使用．)
-  .item2
-    .text
-      p
-        img(src=`${figpath}536_overview.png`,alt="536_overview.png")
-  .item3
-    .text
-      h1 新規性・結果・なぜ通ったか？
-      p 一般的なラベルなしデータを扱うModel Distillationとは異なり，Data Distillationは1つのteacher modelとstudent modelを用いる．
-        |構造としては，1つの画像を複数の単純な変形を加え，それぞれの認識結果を得る．
-        |そして，それぞれの認識結果を統合し，統合した認識結果をラベルとしてstudent modelを学習する．
-        |ここで，学習に使用するラベルは”soft”なラベルではなく，”hard”なラベル．COCOをベースに実験をしており，ラベルなしデータを併用することで人のKeypoint検出と物体検出で高精度化を実現している．
-  .item4
-    .text
-      h1 コメント・リンク集
-      p シンプルかつ少量データの学習にも応用できるできるので，今後これをベースにした手法が増えそう．
-      ul
-        li
-          a(href="https://arxiv.org/abs/1712.04440") 論文リンク
-  .slide_index #{getSlideIndex()}
-  .timestamp 2018.5.2 14:10:01
+﻿+slide
+section#Data_Distillation_Towards_Omni_Supervised_Learning
+  .paper-abstract
+    .title Data Distillation: Towards Omni-Supervised Learning
+    .info
+      .authors Ilija Radosavovic, Piotr Dollár, Ross Girshick, Georgia Gkioxari, Kaiming He
+      .conference CVPR2018, arXive: 1712.04440
+      .paper_id 536
+    .slide_editor Hiroshi Fukui
+  
+    .item1
+      .text
+        h1 概要
+        p ラベル付きとラベルなしデータを用いることで画像認識の精度を向上させるData Distillationを提案．
+          |この手法では，self-trainingとHinton先生のKnowledge distributionをベースに提案されている．
+          |この手法は，インターネット上のラベルなしデータを大量に学習できる．
+          |この論文では，Mask R-CNNによる人のKeypoint検出と，FPNをbackboneにしたFaster R-CNNによる物体検出で高精度化を実現している．
+          |(COCOをラベル付き，Sports-1M statistic framesとCOCO2017unlabel imagesをラベルなしデータとして使用．)
+    .item2
+      .text
+        p
+          img(src=`${figpath}536_overview.png`,alt="536_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 一般的なラベルなしデータを扱うModel Distillationとは異なり，Data Distillationは1つのteacher modelとstudent modelを用いる．
+          |構造としては，1つの画像を複数の単純な変形を加え，それぞれの認識結果を得る．
+          |そして，それぞれの認識結果を統合し，統合した認識結果をラベルとしてstudent modelを学習する．
+          |ここで，学習に使用するラベルは”soft”なラベルではなく，”hard”なラベル．COCOをベースに実験をしており，ラベルなしデータを併用することで人のKeypoint検出と物体検出で高精度化を実現している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p シンプルかつ少量データの学習にも応用できるできるので，今後これをベースにした手法が増えそう．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.04440") 論文リンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.2 14:10:01
