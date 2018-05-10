@@ -1,0 +1,38 @@
+﻿+slide
+section#iVQA_Inverse_Visual_Question_Answering
+  .paper-abstract
+    .title iVQA: Inverse Visual Question Answering
+    .info
+      .authors Feng Liu, Tao Xiang, Timothy Hospedales, Wankou Yang, Changyin Sun
+      .conference CVPR 2018
+      .paper_id 1199
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        p ・VQA問題の逆問題iVQA設定及びモデルを提案し (画像及び回答文から，質問文を生成する)，更に iVQAもVQAと同じく“視覚-言語”の理解のベンチマック問題設定になれると指摘した．
+        p ・iVQAタスクに用いられるmulti-modal dynamic inferenceなフレームワークを提案した．提案フレームワークは回答文を生成する段階で，“回答文”，“生成した部分的な質問文”によって導かれ動的に画像attentionを調整できる．
+        p ・更に，回答文の従来の自然言語的評価に， ランキングベースなiVQAタスクの回答文を評価できる指標を提案した．その指標により，などの面を評価できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}iVQA.png`,alt="iVQA")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・近年，従来のVQAの成功がデータセットバイアス及び質問文からの情報理解，画像の内容に対する理解がまだVQAにおいて深く利用されていないことが指摘された．そこで，画像と回答文から質問文を予測する問題設定iVQAを提案した， iVQAタスクにおいてはVQAと比べ，①画像内容の理解の要求が高い，②また回答文が常に短いので，質問文と比べよりスパースな情報抽出しかできないため，回答文に頼りすぎることにならない．③モデルの推定及びreasoning能力が更に必要である．
+        p ・提案フレームワークの各パーツ(dynamic attention, multi-modal inferenceなど)の有効性に関してAblation　studyを詳しく行った. 説得力がある．
+        p ・Dynamic attention mapsの可視化分析により問題文を生成する段階で，動的に関連する画像領域にattentionすることを指摘した．
+        p ・実験を通して，iVQAをVQAとヒュージョンしたら， VQAの精度を挙げられることを証明した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ・VQAの問題点を深く理解した上での新規問題設定．
+        p ・Dynamic attention mapsの可視化分析により問題文を生成する段階で，動的に関連する画像領域にattentionすることを指摘した．
+        p ・新奇な考え方・詳しい分析実験・論文の理解しやすさなどが非常に良い
+        ul
+          li
+            a(href="https://arxiv.org/abs/1710.03370") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.10 15:08:46
