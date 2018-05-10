@@ -1,0 +1,35 @@
+﻿+slide
+section#Two_can_play_this_Game_Visual_Dialog_with_Discriminative_Visual_Question_Generation_and_Visual_Question_Answering
+  .paper-abstract
+    .title Two can play this Game: Visual Dialog with Discriminative Visual Question Generation and Visual Question Answering
+    .info
+      .authors Unnat Jain, Lana Lazebnik, Alex Schwing
+      .conference CVPR 2018
+      .paper_id 705
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        p ・Visual Dialogタスクに用いられる質問の回答文と質問文を両方予測できるネットワークを提案した．
+        p ・提案フレームワークは100個の回答文(質問文)から正解を予測する(discriminative).  提案フレームワークは質問文，画像，キャプション，QA履歴，選択などの情報をsimilarity+Fusionネットにより100次元のベクトルを生成し，正解ラベルとのcross-entropy誤差を求める．
+        p ・また，従来Visual Dialogの質問文を評価する指標がない，著者達が質問文を評価できる“VisDial-Q evaluation protocol”を提案した．提案protocolは質問文を100個に固定し，予測した質問文がどれくらい通常の人により提出される可能性が高いかにより評価を行っている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}VisualDialog_DVQG_DVQA.png`,alt="VisualDialog_DVQG_DVQA")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・同じネットワークで質問文と回答文を両方予測できる．
+        p ・質問文を評価できる指標の提案．
+        p ・Discriminative VQAタスクにおいて， VisDial評価指標は従来手法(HRE, MN, HCIAE-D-NP-ATT)より良い性能を達成した．
+        p ・VQGタスクにおいて，提案した評価指標“VisDial-Q evaluation protocol”により55.17% recall@5 と 9.32 mean rankを達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.11186") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.10 04:08:59
