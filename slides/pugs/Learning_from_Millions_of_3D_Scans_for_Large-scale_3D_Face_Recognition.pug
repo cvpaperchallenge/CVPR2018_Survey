@@ -1,0 +1,35 @@
+﻿+slide
+section#Learning_from_Millions_of_3D_Scans_for_Large-scale_3D_Face_Recognition
+  .paper-abstract
+    .title Learning_from_Millions_of_3D_Scans_for_Large-scale_3D_Face_Recognition
+    .info
+      .authors Syed Zulqarnain Gilani, Ajamal Mian
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 大規模3D顔データセットを構築し、そのデータによってトレーニングされたCNNが高い3D顔認識精度を持つことを示した論文。
+          |従来の3D顔データセットはデータ数が少なく、最も多いND-2006でも888アイデンティティー・13540種類のみであったが、本論文で構築されたトレーニング用データセットはおよそ10万アイデンティティー・310万種類。
+          |このトレーニングデータを用いてCNNを学習させることで、認識精度は98.74%となりstate-of-the-artよりも優っていることを確認した。
+          |また既存の3D顔データセットをマージすることで、1853アイデンティティー・31K種類のテスト用3D顔データセットを構築した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180513Learning_from_Millions_of_3D_Scans-scale_3D_Face_Recognition.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・トレーニング用の3D顔データは1000人の3Dスキャンデータに対して、変形に要するエネルギーがもっとまた商用ソフトを使用すること300種類の顔のうち顔の形状・表情が似ている顔を合成して生成。も高くなる顔のペアを合成して生成。
+           |また商用ソフトを使用すること300種類の顔のうち顔の形状・表情が似ている顔を合成して生成。
+           |前者は別の顔を識別するため、後者は似た顔を識別する目的で用意されたデータである。
+           |生成された顔に対して水平方向、垂直方向から15度ずつ撮影することで、計100,005アイデンティティー・3,169,275種類の3D顔データを生成。
+        p ・既存の3D顔認識・2D顔認識手法に対してオープン・クローズドテスト両方における精度を比較したところ、提案モデルがもっとも良い精度となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.05942") 論文
+    .slide_index #{getSlideIndex()}
