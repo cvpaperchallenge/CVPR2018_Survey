@@ -1,0 +1,30 @@
++slide
+section#Learning_to_Act_Properly_Predicting_and_Explaining_Affordances_from_Images
+  .paper-abstract
+    .title Learning to Act Properly: Predicting and Explaining Affordances from Images
+    .info
+      .authors Ching-Yao Chuang, Jiaman Li, Antonio Torralba and Sanja Fidler
+      .conference CVPR2018
+
+    .item1
+      .text
+        h1 概要
+        p 現実の多様な場面での環境の物体に対するアフォーダンスの推定する研究。ADE20kを基にしたADE-Affordanceというデータセットの提案。このデータセットはリビングなどの屋内から、道路や動物園などの屋外まで幅広いタイプの画像とそのannotationで構成。また、画像中の物体に対してアフォーダンスの推理を行うための，画像からcontextual informationを伝えるGraph Neural Networksの提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Act_Properly.PNG`,alt="Learning_to_Act_Properly.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・ある場面の状況下での適切でない行動の理由について身体的や社会的な観点から説明
+          |・画像上のある物体に対してだけでなくその場面を全体としてとらえてアフォーダンスの推論を行っている．
+          |・物体間の依存関係をモデル化することでアフォーダンスとその説明を生成
+    .item4
+      .text
+        h1 コメント・リンク集
+        p
+          a(href="https://arxiv.org/abs/1712.07576") 論文
+          a(href="http://www.cs.utoronto.ca/~cychuang/learning2act/") Project Page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.14 19:28:40
