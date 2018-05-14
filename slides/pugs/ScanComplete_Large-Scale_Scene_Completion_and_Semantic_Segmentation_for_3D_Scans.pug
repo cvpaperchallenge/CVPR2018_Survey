@@ -3,7 +3,7 @@ section#ScanComplete_Large-Scale_Scene_Completion_and_Semantic_Segmentation_for_
   .paper-abstract
     .title ScanComplete: Large-Scale Scene Completion and Semantic Segmentation for 3D Scans
     .info
-      .authors Angela Dai, Daniel Ritchie, Martin Bokeloh, Scott Reed,  Juergen Sturm, Matthias Nießner
+      .authors Angela Dai, Daniel Ritchie, Martin Bokeloh, Scott Reed, Juergen Sturm, Matthias Nießner
       .conference CVPR 2018
       .paper_id 584
     .slide_editor Yue Qiu
@@ -11,8 +11,9 @@ section#ScanComplete_Large-Scale_Scene_Completion_and_Semantic_Segmentation_for_
     .item1
       .text
         h1 概要
-        p ・部分的なシーンの3Dデータからシーンの幾何及びボクセルごとのセマンティック情報をコンプリートする手法ScanCompleteを提案した．
-        p ・従来，シーンの3次元情報を完全に収集するのが非常に困難，シーンの３次元のデータの膨大さや形状情報のバリエーションの多さは従来のシーン補完に対して困難な問題設定である．そういったため，シーンのコンプリートでは出力の質が低いという問題点がある(contentsとして応用するレベルではない)．こういった困難を解決するため，提案手法は①trainとtestデータの入力解像度を異なる値に設定し， testの場合シーンのサイズの変化を対応できるようにする．②coarse-to-fineなfully convolution 3DCNNを用いて，グローバルなシーンの構造特徴および精密な局所的補間をできるようにする．
+        ul
+          li 部分的なシーンの3Dデータからシーンの幾何及びボクセルごとのセマンティック情報をコンプリートする手法ScanCompleteを提案した．
+          li 従来，シーンの3次元情報を完全に収集するのが非常に困難，シーンの３次元のデータの膨大さや形状情報のバリエーションの多さは従来のシーン補完に対して困難な問題設定である．そういったため，シーンのコンプリートでは出力の質が低いという問題点がある(contentsとして応用するレベルではない)．こういった困難を解決するため，提案手法は①trainとtestデータの入力解像度を異なる値に設定し， testの場合シーンのサイズの変化を対応できるようにする．②coarse-to-fineなfully convolution 3DCNNを用いて，グローバルなシーンの構造特徴および精密な局所的補間をできるようにする．
     .item2
       .text
         p
@@ -20,16 +21,15 @@ section#ScanComplete_Large-Scale_Scene_Completion_and_Semantic_Segmentation_for_
     .item3
       .text
         h1 新規性・結果・なぜ通ったか？
-        p ・異なる入力シーンのサイズを自由に対応できる（最大70×60×3m くらいまでできる）
-        p ・従来の手法：3D-EPN,SSCNetなどの従来手法と比べ，scene completion, semantic labeling両方精度がSOTA
-        p ・出力結果が3D Contentsとして応用できるレベル
+        ul
+          li 異なる入力シーンのサイズを自由に対応できる（最大70×60×3m くらいまでできる）
+          li 従来の手法：3D-EPN,SSCNetなどの従来手法と比べ，scene completion, semantic labeling両方精度がSOTA
+          li 出力結果が3D Contentsとして応用できるレベル
     .item4
       .text
         h1 コメント・リンク集
-        p ・scene completionとsemantic segmentationの完成版に向かっている？
-        p ・この分野ほぼDaiさんとsongさんが最も良い結果を出している
         ul
           li
-            a(href="https://arxiv.org/pdf/1712.10215.pdf") 論文
+            a(href="https://arxiv.org/abs/1712.10215") 論文
     .slide_index #{getSlideIndex()}
-    .timestamp 2018.5.14 12:53:43
+    .timestamp 2018.5.14 14:43:15
