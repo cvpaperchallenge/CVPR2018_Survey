@@ -1,0 +1,33 @@
++slide
+section#SketchyGAN_Towards_Diverse_and_Realistic_Sketch_to_Image_Synthesis
+  .paper-abstract
+    .title SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis
+    .info
+      .authors Wengling Chen, James Hays
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p スケッチから写真を生成する手法の提案．50のカテゴリの写真を生成することができる．スケッチに対して，自動でデータ拡張をする方法を示し，その拡張方法がタスクに有効であることを示す．さらに追加の目的関数と新しいネットワーク構造も提案．マルチスケールの入力画像を入れることで情報の流れを向上させている．結果はまだphotorealisticとは言えないが，従来手法よりリアルでinception scoreの高い結果を得た．
+    .item2
+      .text
+        p
+          img(src=`${figpath}SketchyGAN_Towards_Diverse_and_Realistic_Sketch_to_Image_Synthesis_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 手法
+        ul
+          li データ拡張の方法として，エッジ検出などのいくつかの処理を組み合わせている．
+          li ネットワーク構造はU-net構造だが，各ブロックで入力画像で条件付けを行うのが特徴．以前の層で抽出された特徴マップと比べ新しい特徴量を入力画像から選択的に抽出するための内部マスクを学習するため，Masked Residual Unitというブロックモジュールを導入した．（DCGAN, CRN, ResNetとの比較がある）
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li GeneratorにもDiscriminatorにも途中で画像やラベルの情報をinjectionする方法が増えている印象．
+          li sketchから似ている写真を検索してくるという方法がこれまでよく研究されていた．今回は，スケッチから新しく写真を生成する（質はまだ低い）
+          li
+            a(href="https://arxiv.org/abs/1801.02753") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.13 15:37:35
