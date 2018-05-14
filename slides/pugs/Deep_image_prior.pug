@@ -1,0 +1,30 @@
+﻿+slide
+section#Deep_image_prior
+  .paper-abstract
+    .title Deep Image Prior 
+    .info
+      .authors Dmitry Ulyanov et al.
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 「CNNは理論上任意の関数を近似できるが、その構造自体に汎化性能をあげるようなPriorが含まれている」という考えのもと、ランダム初期化されたCNNを用いて高いレベルの画像復元、ノイズ除去などを行った。また、CNNのPrior をさらに裏付けるものとして、自然画像を復元するより、ノイズ画像を復元する学習の方がiteration数がかかることも示された。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_image_prior.png`)
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p ノイズ画像ｚをencoder-decoderモデルに入力して、生成された画像を欠損画像にMSEで近づけるように学習するだけである。注意点として、完全に学習仕切ってしまうと欠損画像と同じものが出るだけなので、学習をある程度のiterationで止めると、復元されたような画像が得られる。また、CNNのPrior をさらに裏付けるものとして、自然画像を復元するより、ノイズ画像を復元する学習の方がiteration数がかかることも示された。
+          |着眼点や面白い実験方法に加え結果も伴っている研究
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 畳み込み処理×SGDの異常なまでの汎化性能を実験的に裏付けていると思われ非常に面白い。逆にCNNのPriorの苦手なところとして、Adversarial exampleやGANのチェッカーボード現象も関係してそう。畳み込み処理の派生(Deformable convなど)でのpriorの検証も気になる。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.10925") 論文
+    .slide_index #{getSlideIndex()}
