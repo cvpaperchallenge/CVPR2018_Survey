@@ -1,0 +1,35 @@
++slide
+section#Multi-Agent_Diverse_Generative_Adversarial_Networks
+  .paper-abstract
+    .title Multi-Agent Diverse Generative Adversarial Networks
+    .info
+      .authors Arnab Ghosh, Viveka Kulharia, et al.
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 多様で意味のあるサンプルを生成可能な，複数のGeneratorと１つのDiscriminatorから成るGAN(MAD-GAN)を提案．一つのGeneratorが一つの構成要素を担当する混合モデルとしてはたらく．いくつかの従来のGAN手法と比較実験を行い，MAD-GANは多様なモードを獲得できることを確認．さらに，理論的な分析も行っている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Multi-Agent_Diverse_Generative_Adversarial_Networks_fig.png`,alt="Image")
+          |それぞれの行が異なるGeneratorによって生成した結果．行はそのGeneratorにランダムなノイズzを入力して生成した結果．マルチビューなデータセットから異なるモードを異なるGeneratorが学習していることを確認できる．
+    .item3
+      .text
+        h1 手法
+        ul
+          li Multi-agent GAN．複数のGeneratorと１つのDiscriminatorで構成．
+          li Generator同士は，最終層以外は重みを共有している．
+          li 複数のGeneratorの生成サンプルと真のサンプルをDに入力し，Discriminatorは，FakeとRealの判別だけではなくて，そのFakeの生成サンプルを与えるGeneratorがどれであるかも予測する．これによって，複数のモードがある時，個別のモードに対してそれぞれのGeneratorを振り分けるようにDiscriminatorが学習する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li image-to-image変換,multi-view生成， face generationなど多数の実験を行っている．
+          li 展望は，MAD-GANでは複数のGeneratorを使うことになるが，いくつのGeneratorが必要なのかを推定できるようにすること．
+          li
+            a(href="https://arxiv.org/abs/1704.02906") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.13 15:50:21

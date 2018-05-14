@@ -1,0 +1,32 @@
++slide
+section#_2D3D_Pose_Estimation_and_Action_Recognition_using_Multitask_Deep_Learning
+  .paper-abstract
+    .title 2D3D Pose Estimation and Action Recognition using Multitask Deep Learning
+    .info
+      .authors Diogo C. Luvizon, David Picard, Hedi Tabia
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 相互に関連性がある2D/3D姿勢推定+人物行動認識を多タスク学習（Multi-task Learning）により最適化した論文である。それぞれで学習を行ったときよりも高い精度を実現することを明らかにし、複数のデータセットにてState-of-the-artな性能を叩き出した。2Dと3Dの姿勢推定、人物行動の特徴量が相補的に補完し合い特徴学習をより高度にしている？
+    .item2
+      .text
+        p
+          img(src=`${figpath}180514PoseActionMultiTask.png`,alt="180514PoseActionMultiTask")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 姿勢推定（しかも3D姿勢推定も含めて）や人物行動認識を単一の枠組みで解決、さらには多タスク学習により別々に学習したときよりも高い精度でふたつの問題を解決した。さらに複数のベンチマーク（姿勢推定：Human3.6M, MPII/行動認識：PennAction, NTU）にて最高精度も叩き出したことが採択の理由である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 動画シーケンスから姿勢と行動を同時出力する、ありそうでなかった研究である。先にやったもの勝ちだが、高度な最適化を実施し特に最高精度を出すのは難しい。CVPRではState-of-the-artとなるかどうかがひとつの採点基準でもある（が、全てではない）ため、実装力をつけておくに越したことはない。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.09232") 論文
+          li
+            a(href="https://www.youtube.com/watch?v=MNEZACbFA4Y") Youtube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.14 13:04:47
