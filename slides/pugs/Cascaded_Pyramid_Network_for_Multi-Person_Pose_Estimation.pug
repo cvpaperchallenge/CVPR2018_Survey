@@ -14,15 +14,15 @@ section#Cascaded_Pyramid_Network_for_Multi-Person_Pose_Estimation
           |Cascaded Pyramid Networkを提案．
           |hard keypointに対応するためのもの．2つの構造からなる．
         ul
-          li
-            p GlobalNet
-              |ピラミッド構造をしていて，遮蔽などの無いシンプルなキーポイントの検出として作用する．この時点ではhard性にはあまり対応していない．
-          li
-            p RefineNet
-              |hard keypointを考慮した層．
-              |GlobalNetのピラミッドな特徴を拾って，ResNetのBottleneckにかける．
-              |ここで，何もしないとシンプルキーポイントだけ見てしまうので，損失関数の計算時，online hard keypoints miningする．
-              |テスト時のロスを参考にオンラインでhard keypointを選択，選んだキーポイントのものだけバックプロパゲーションにまわす．
+          li GlobalNet
+            br
+            |ピラミッド構造をしていて，遮蔽などの無いシンプルなキーポイントの検出として作用する．この時点ではhard性にはあまり対応していない．
+          li RefineNet
+            br
+            |hard keypointを考慮した層．
+            |GlobalNetのピラミッドな特徴を拾って，ResNetのBottleneckにかける．
+            |ここで，何もしないとシンプルキーポイントだけ見てしまうので，損失関数の計算時，online hard keypoints miningする．
+            |テスト時のロスを参考にオンラインでhard keypointを選択，選んだキーポイントのものだけバックプロパゲーションにまわすという作業．
     .item2
       .text
         p
