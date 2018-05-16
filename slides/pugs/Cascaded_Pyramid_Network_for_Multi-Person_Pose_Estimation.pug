@@ -1,0 +1,47 @@
++slide
+section#Cascaded_Pyramid_Network_for_Multi-Person_Pose_Estimation
+  .paper-abstract
+    .title Cascaded Pyramid Network for Multi-Person Pose Estimation
+    .info
+      .authors Y. Chen, Z. Wang, Y. Peng, Z. Zhang, G. Yu and J. Sun
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 複数人ポーズ推定には，キーポイントの半／全遮蔽や，複雑な背景といった要素(hard keypoints)が問題になる．
+          |Cascaded Pyramid Networkを提案．
+          |hard keypointに対応するためのもの．2つの構造からなる．
+        ul
+          li GlobalNet
+            br
+            |ピラミッド構造をしていて，遮蔽などの無いシンプルなキーポイントの検出として作用する．この時点ではhard性にはあまり対応していない．
+          li RefineNet
+            br
+            |hard keypointを考慮した層．
+            |GlobalNetのピラミッドな特徴を拾って，ResNetのBottleneckにかける．
+            |ここで，何もしないとシンプルキーポイントだけ見てしまうので，損失関数の計算時，online hard keypoints miningする．
+            |テスト時のロスを参考にオンラインでhard keypointを選択，選んだキーポイントのものだけバックプロパゲーションにまわすという作業．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Cascaded_Pyramid_Network_for_Multi-Person_Pose_Estimation_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新規ネットワーク構造の提案
+          li MS COCO keypoint benchmarkにてSOTA
+          li 実験を結構頑張っている様子．online hard keypoint miningの有無に関する議論などある．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p online hard keypoint miningについて実装可能なレベルでは詳しく書いてなかった．コード読めということか．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.07319") arXiv
+          li
+            a(href="https://github.com/chenyilun95/tf-cpn") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.16 18:24:47
