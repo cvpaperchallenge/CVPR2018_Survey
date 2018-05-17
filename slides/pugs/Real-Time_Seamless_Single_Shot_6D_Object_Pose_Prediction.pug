@@ -1,0 +1,36 @@
++slide
+section#Real-Time_Seamless_Single_Shot_6D_Object_Pose_Prediction
+  .paper-abstract
+    .title Real-Time Seamless Single Shot 6D Object Pose Prediction
+    .info
+      .authors Bugra Tekin et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 1枚のRGB画像から物体の6次元姿勢を推定する研究. CNN を用いた単一のネットワーク (YOLO v2 ベース) で RGB 画像から物体の 3D bounding box を直接推定する. post-process 無しで高精度な姿勢推定が可能なため, 実時間（従来手法の約５倍速）で従来手法と同程度の推定精度を達成した. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Real-Time-Seamless-Single-Shot-6D-Object-Pose-Prediction.png`,alt="fukuhara-Real-Time-Seamless-Single-Shot-6D-Object-Pose-Prediction.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ネットワークはRGB画像1枚の入力に対して, 各物体の制御点（3D bounding box 8点 と centroid 1点）の位置, カテゴリー, 推定の確信度を出力する.
+          li 推定された物体の9つの制御点の位置に対して PnP 問題を解くことで6次元姿勢を推定する.
+          li 物体の bounding box の情報から学習を行うので物体の詳細な3次元モデルが必要無い. また, テクスチャーが殆ど無い物体に対しても適用が可能.
+          li 物体が複数あった場合でも PnP 以外の部分の計算量は増えないので, 物体数に関わらず計算時間はほぼ一定.(従来手法の SSD-6D は線型に増加.)
+          li LINEMOD や OCCLUSION データセットを用いた評価実験では従来手法 (BB8 や SSD-6D) と同等かそれ以上の精度を 50fps (SSD-6Dの約５倍) で達成.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.08848" target="blank") [論文] Real-Time Seamless Single Shot 6D Object Pose Prediction
+          li
+            a(href="https://btekin.github.io/" target="blank") [著者HP] Bugra Tekin
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 12:19:55
