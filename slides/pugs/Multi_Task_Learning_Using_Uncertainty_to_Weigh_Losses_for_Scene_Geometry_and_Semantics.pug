@@ -1,0 +1,34 @@
++slide
+section#Multi_Task_Learning_Using_Uncertainty_to_Weigh_Losses_for_Scene_Geometry_and_Semantics
+  .paper-abstract
+    .title Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics 
+    .info
+      .authors Alex Kendall et al., 
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+      h1 概要
+      p 学習時のタスクごとの重みによって精度がかなり変化する。そこでNNのマルチタスクモデルにおいて各出力を分布表現にし、
+        |その同時確率を最尤推定するように学習することで結果的にタスクごとの不確実性を考慮した重み付けを損失関数に課す。
+        |実験ではSemantic Segmentation, Instance Segmentation, Depth estimationのマルチタスク学習を行い、
+        |等しい重みや手動での重み設計時よりも良い結果となった。
+    .item2
+      img(src=figpath+"Multi_Task_Learning_Using_Uncertainty_to_Weigh_Losses_for_Scene_Geometry_and_Semantics.png",alt="Multi_Task_Learning_Using_Uncertainty_to_Weigh_Losses_for_Scene_Geometry_and_Semantics.png")
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p モデルから各タスクに対して不確実性を表す値を同時に出力させる。
+          |回帰タスクの場合はこれが分散を表し、最終的には回帰出力値を平均とするガウス分布として表現する。
+          |識別タスクについては不確実性が分布の温度パラメータとして扱われる。これらの同時確率を最尤推定すると、通常の損失に対してタスクごとに適応的に重み付けされた損失を最適化していることになる。
+          |理論的にも妥当で、精度向上は大きくチューニングの手間が省けるという点でかなり便利である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 簡単な実装でハイパーパラメータが減るという点でかなり有用に感じた。様々なマルチタスクで行った訳ではないのでこの手法の汎用性がきになる。
+          |結局、識別の場合は通常でも不確実性は考慮しているので、本質的に新しいのは回帰の場合である。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1705.07115") 論文
+    .slide_index #{getSlideIndex()}
