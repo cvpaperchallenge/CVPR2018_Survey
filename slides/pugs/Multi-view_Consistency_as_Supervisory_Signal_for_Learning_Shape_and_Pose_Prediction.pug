@@ -1,0 +1,37 @@
++slide
+section#Multi-view_Consistency_as_Supervisory_Signal_for_Learning_Shape_and_Pose_Prediction
+  .paper-abstract
+    .title Multi-view Consistency as Supervisory Signal for Learning Shape and Pose Prediction
+    .info
+      .authors Shubham Tulsiani et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p １枚のRGB画像から物体の形状とカメラ姿勢の両方を推定する研究. 異なる視点から見たときの一貫性(具体的には物体の輪郭または深度情報の一貫性)を教師情報として用いるため, 従来手法と異なり学習時に物体の３次元形状と姿勢のいずれについても直接の教師データも必要としない.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Multi-view-Consistency-as-Supervisory-Signal-for-Learning-Shape-and-Pose-Prediction.png`,alt="fukuhara-Multi-view-Consistency-as-Supervisory-Signal-for-Learning-Shape-and-Pose-Prediction.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 物体の形状とカメラ姿勢の両方を推定するタスクに置いて, 直接の教師データを用いずに学習する方法を提案した.
+          li 学習時の入力は同一の物体を異なる位置から撮影したRGB画像２枚と２枚目の画像の物体の Mask または Depth 画像.
+          li １枚目の画像から３次元形状, ２枚目の画像からカメラ姿勢をそれぞれ推定し, 推定された形状を推定された姿勢から見た時に, 与えられたマスク画像と同じ結果が得られるように学習を行う.
+          li ShapeNet データセットを用いた評価実験では, 直接の教師あり学習を行った手法とほぼ同等の結果であった.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.03910" target="blank") [論文] Multi-view Consistency as Supervisory Signal for Learning Shape and Pose Prediction
+          li
+            a(href="https://shubhtuls.github.io/mvcSnP/" target="blank") [Project Page]
+          li
+            a(href="https://github.com/shubhtuls/mvcSnP" target="blank") [Code]
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.12 13:05:55
