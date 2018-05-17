@@ -1,0 +1,40 @@
+﻿+slide
+section#Partially_Shared_Multi-Task_Convolutional_Neural_Network_with_Local_Constraint_for_Face_Attribute_Learning
+  .paper-abstract
+    .title Partially Shared Multi-Task Convolutional Neural Network with Local Constraint for Face Attribute Learning
+    .info
+      .authors Jiajiong Cao, Yingming Li, Zhongfei Zhang
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔のアトリビュート推定に有効なネットワークであるPS-MCNN/-LCを提案。
+          |従来手法のMCNNでは、類似度の高いアトリビュートの識別率を高めるために、
+          |類似度の高いアトリビュートのごとにグループを形成し、MCNNの高い層では各グループごとにCNNを形成して学習を行なっていた。
+          |そのため低い層で得られていた特徴量が消失するという問題が起きていた。
+          |これを解決するために、MCNNに対して各レベルで得られた特徴量を教諭するShared Netを導入したPS-MCNNを提案。
+          |また同一人物において推定されたアトリビュート同士のロスをとるPS-MCNN-LCも提案した。
+          |ネットワークの構築に関する議論も行なっている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Partially_Shared_Multi-Task_Convolutional_Neural_Network_with_Local_Constraint_for_Face_Attribute_Learning.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 同一人物において推定されたアトリビュート同士のロスをとることで、
+             |アトリビュートの空間を限定することが可能となるという考えのもとPS-MCNN-LCを提案している。
+          li state-of-the-artに比べて、CelebAデータセットではPS-MCNN-LCが40種全てのアトリビュートにおいて最も高い精度を達成、
+             |LFWAデータセットではPS-MCNN/-LCを合わせて37種において最も高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 精度が上がったことはもちろんだが、
+             |既存研究であるMCNNのリミテーションを正確に見抜いてネット枠を改善している点が採択につながったと考えられる。
+          li
+            a(href="http://person.zju.edu.cn/attachments/2018-04/01-1524825782-717898.pdf") 論文
+    .slide_index #{getSlideIndex()}
