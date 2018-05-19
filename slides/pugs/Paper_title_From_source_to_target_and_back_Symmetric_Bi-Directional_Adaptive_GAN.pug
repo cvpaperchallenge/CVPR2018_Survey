@@ -1,0 +1,36 @@
++slide
+section#Paper_title_From_source_to_target_and_back_Symmetric_Bi-Directional_Adaptive_GAN
+  .paper-abstract
+    .title Paper title From source to target and back: Symmetric Bi-Directional Adaptive GAN
+    .info
+      .authors Paolo Russo, Fabio M. Carlucci, Tatiana Tommasi and Barbara Caputo
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p SBADA-GANの提案．（Symmetric Bi-Directional ADAptive Generative Adver- sarial Network）
+          br
+          |unsupervised cross domain classificationにフォーカス．
+          |ラベルが与えられるSourceのサンプルを利用して，最終的にはTargetの分類問題を解く．SourceのサンプルをTargetのドメインに(Image-to-Imageの)マッピングをし，同時に逆方向も行う．分類器の学習に利用するのは，Sourceサンプル，TargetをSource風にしたもの，SourceをTarget風にしてさらにSource風に戻した３種類を使う．それぞれにラベルもしくは擬似ラベルを付与して学習する．テスト時はTargetサンプルのクラスを予測したいので，Target用の分類器と，TargetサンプルをSource風にしてから入力するSource用の分類器の２つを使用する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Paper_title_From_source_to_target_and_back_Symmetric_Bi-Directional_Adaptive_GAN_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 手法
+        ul
+          li セルフラベリングの使用．Source用の分類器に制約を課す.
+          li class consistency lossの導入．Generatorとともに利用することで両方向のドメイン変換がお互いに影響し合うようになる．安定性と質向上の効果．最終的な目標である分類問題を解くことに有効．
+          li 例えばSource側のDiscriminatorは，RealサンプルとしてSource画像を使い，FakeサンプルとしてTarget画像をSource画像風にGeneratorでドメイン変換した画像を使う．
+          li （問題設定的に）Source側の分類器にはクラスラベルによる学習ができる．
+          li SourceとTargetの双方向のサンプル生成のための二つadversarial lossと，二つのclassification lossを同時に最小化する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1705.08824") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.19 13:39:49
