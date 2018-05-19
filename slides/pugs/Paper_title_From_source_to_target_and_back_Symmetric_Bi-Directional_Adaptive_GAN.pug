@@ -9,7 +9,7 @@ section#Paper_title_From_source_to_target_and_back_Symmetric_Bi-Directional_Adap
     .item1
       .text
         h1 概要
-        p SBADA-GANの提案．（Symmetric Bi-Directional ADAptive Generative Adver- sarial Network）
+        p SBADA-GANの提案．（Symmetric Bi-Directional ADAptive Generative Adversarial Network）
           br
           |unsupervised cross domain classificationにフォーカス．
           |ラベルが与えられるSourceのサンプルを利用して，最終的にはTargetの分類問題を解く．SourceのサンプルをTargetのドメインに(Image-to-Imageの)マッピングをし，同時に逆方向も行う．分類器の学習に利用するのは，Sourceサンプル，TargetをSource風にしたもの，SourceをTarget風にしてさらにSource風に戻した３種類を使う．それぞれにラベルもしくは擬似ラベルを付与して学習する．テスト時はTargetサンプルのクラスを予測したいので，Target用の分類器と，TargetサンプルをSource風にしてから入力するSource用の分類器の２つを使用する．
@@ -33,4 +33,4 @@ section#Paper_title_From_source_to_target_and_back_Symmetric_Bi-Directional_Adap
           li
             a(href="https://arxiv.org/abs/1705.08824") arXiv
     .slide_index #{getSlideIndex()}
-    .timestamp 2018.5.19 13:39:49
+    .timestamp 2018.5.19 13:43:21
