@@ -1,0 +1,32 @@
++slide
+section#End-to-end_learning_of_keypoint_detector_and_descriptor_for_pose_invariant_3D_matching
+  .paper-abstract
+    .title End-to-end learning of keypoint detector and descriptor for pose invariant 3D matching
+    .info
+      .authors Georgios Georgakis, Srikrishna Karanam,Ziyan Wu,Jan Ernst,Jana Kosecka
+      .conference CVPR 2018
+      .paper_id 227
+    .slide_editor Goshi Sasaki
+
+    .item1
+      .text
+        h1 概要
+        p End-to-Endで3次元空間における特徴点の抽出とマッチングを行う手法を提案した。
+          |2つの距離画像を入力とし、VGG-16 を利用したFaster R-CNNを基本構造としている。
+          |２つの距離画像からそれぞれVGG−16を利用して特徴マップを作成し、RPNにより領域候補を推定して、ROIプーリング層、全結合層を経て特徴量ベクトルを作り出す。最終的にcontrastive lossを利用して得られた特徴量間の対応関係を求めた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}keypoint_detector.png`,alt="architecture")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 初めてEnd-to-Endで3次元マッチングを行えるようにした。
+          |ノイズ環境下においてキーポイントマッチングで従来手法のHarris3D +FPFHなどよりも10％以上高い精度を出した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1802.07869.pdf") 論文
+    .slide_index #{getSlideIndex()}
