@@ -1,0 +1,43 @@
++slide
+section#AttnGAN_Fine-Grained_Text_to_Image_Generation_with_Attentional_Generative_Adversarial_Networks
+  .paper-abstract
+    .title AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks
+    .info
+      .authors Tao Xu, Pengchuan Zhang, Qiuyuan Huang, Han Zhang, Zhe Gan, Xiaolei Huang, Xiaodong He
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p アテンションドリブン，複数ステージでのRefineによって，テキストから詳細な画像を生成するGANを提案．CUBデータセットとCOCOデータセットでinception scoreがstate of the artを超えた．生成画像の特定の位置をワードレベルで条件付けしていることを示した．
+        p 貢献：
+          br
+          |・Attentional Generative Adversarial NetworkとDeep Attentional Multimodal Similarity Model(DAMSM)の提案．
+          br
+          |・実験でstate-of-the-art GAN modelsを超えたことを示す．
+          br
+          |・ワードレベルで自動的に生成画像の一部をアテンションするのは初である．
+    .item2
+      .text
+        p
+          img(src=`${figpath}AttnGAN_Fine-Grained_Text_to_Image_Generation_with_Attentional_Generative_Adversarial_Networks_fig.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 手法
+        p ・Attentional Generative Networkはセンテンスの特徴から始めて段階的に画像を高精細にしていくネットワークで，途中にアテンションレイヤーからのワード特徴を入力して条件付けする．
+          br
+          |・各解像度に対してそれぞれDiscriminatorがある．
+          br
+          |・最終的な解像度になったあと，Image Encoderにて局所的な画像特徴量とし，ワード特徴量とDAMSMにて比較することで，生成画像の細部がどれくらい単語に忠実であるか評価する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ・StackGANの著者も共著にいる．
+          br
+          |・アテンションにより生成箇所を局所に向けることで，COCOのような複雑なシーンでも対応できるようになっている．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.10485") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.19 13:50:16

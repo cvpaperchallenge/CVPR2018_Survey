@@ -1,0 +1,30 @@
++slide
+section#Practical_Block-wise_Neural_Network_Architecture_Generation
+  .paper-abstract
+    .title Practical Block-wise Neural Network Architecture Generation
+    .info
+      .authors Zhao Zhong, Junjie Yan, Wei Wu, Jing Shao, Cheng-Lin Liu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p ブロック単位でのアーキテクチャ生成手法であるBlockQNNを提案。Q学習（Q-Learning）を参考にして高精度なニューラルネットを探索的（ここではEpsilon-Greedy Exploration Strategyと呼称）に生成する。基本的には生成したブロックを積み上げることによりアーキテクチャを生成するが、早期棄却の枠組みも設けることで探索を効率化している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180517BlockQNN.png`,alt="180517BlockQNN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ブロック単位でニューラルネットのアーキテクチャを探索するBlockQNNを提案した。同枠組みはHand-craftedなアーキテクチャに近い精度を出しており（CIFAR-10のtop-1エラー率で3.54）、探索空間を削減（32GPUを3日間使用するのみ！）、さらに生成した構造はCIFARのみならずImageNetでも同様に高精度を出すことを明らかにした。ネットワーク構造の探索問題においてブロックに着目し、性能を向上させると同時に同様の枠組みを複数のデータセットにて成功させる枠組みを提案したことが、CVPRに採択された基準である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ここから数年で、practicalなGPU数（8GPUや4GPUなど）、1日以内の探索で解決するようになると予想される（し、してくれないと一般の研究者/企業が参入できない）。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1708.05552") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 13:12:12
