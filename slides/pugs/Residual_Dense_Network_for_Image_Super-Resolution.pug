@@ -1,0 +1,32 @@
++slide
+section#Residual_Dense_Network_for_Image_Super-Resolution
+  .paper-abstract
+    .title Residual Dense Network for Image Super-Resolution
+    .info
+      .authors Yulun Zhang, Yapeng Tian, Yu Kong, Bineng Zhong, Yun Fu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 低解像画像から高解像画像（SR; super-resolution image）を復元するための研究で、DenseNet（論文中の参考文献7）を参考にしたResidual Dense Networks (RDN)を提案して同課題にとりくんだ。異なる劣化特徴をとらえたモデルであること、連続的メモリ構造（Contiguous Memory Mechanism）やコネクションを効果的にするResidual Dense Blockを提案したこと、Global Feature Fusionにより各階層から総合的な特徴表現、を行い高解像画像を復元した。DenseNetで提案されているDense Blockと比較すると、提案のResidual Dense Blockは入力チャネルからもスキップコネクションが導入されているため、よりSRの問題設定に沿ったモデルになったと言える。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180517ResidualDenseNetwork.png`,alt="180517ResidualDenseNetwork")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 高解像画像を復元するための改善として、DenseNetを改良したRDNを提案した。Dense Blockを置き換え、より問題に特化したResidual Dense Blockを適用。実験で使用した全てのデータセット（Set5, Set14, B100, Urban100, Manga109）の全てのスケール（x2, x3, x4）にて従来手法よりも良好なAverage PSNR/SSIMを記録した。結果画像はGitHubのページなどを参照されたい。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 課題の肝をつかんで、従来提案されている効果的な手法を改善できるセンスを磨きたい。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.08797") 論文
+          li
+            a(href="https://github.com/yulunzhang/RDN") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 12:47:07
