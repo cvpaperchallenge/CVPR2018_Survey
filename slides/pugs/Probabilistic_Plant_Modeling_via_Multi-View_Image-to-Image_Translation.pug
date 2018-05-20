@@ -1,0 +1,32 @@
++slide
+section#Probabilistic_Plant_Modeling_via_Multi-View_Image-to-Image_Translation
+  .paper-abstract
+    .title Probabilistic Plant Modeling via Multi-View Image-to-Image Translation
+    .info
+      .authors Takahiro Isokane, Fumio Okura, Ayaka Ide, Yasuyuki Matsushita, Yasushi Yagi
+      .conference CVPR 2018
+      .paper_id 368
+    .slide_editor Goshi Sasaki
+
+    .item1
+      .text
+        h1 概要
+        p 葉に隠れていても３次元の枝構造を多視点画像から推測できるようにした。
+          |多視点からの植物画像を入力として枝構造の２次元確率マップをdropoutを取り入れたPix2Pixで推測して、それらから３次元の確率構造を作成した。最後にpartical floｗシュミレーションによって明確な３次元の枝構造を生成した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Probabilistic_Plant_Modeling.png`,alt="architecture")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 葉や他の枝によって隠れてしまっていても枝構造を生成できるようにした。
+          |ベイジアンPix2Pixを利用することで植物の３次元構造をより正確に表せるようにした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.09404.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.20 20:53:44
