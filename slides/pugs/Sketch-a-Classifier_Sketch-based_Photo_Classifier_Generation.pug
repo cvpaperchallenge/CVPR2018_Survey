@@ -1,0 +1,40 @@
++slide
+section#Sketch-a-Classifier_Sketch-based_Photo_Classifier_Generation
+  .paper-abstract
+    .title Sketch-a-Classifier: Sketch-based Photo Classifier Generation
+    .info
+      .authors C. Hu, D. Li, Y. Song, T. and T.M. Hospedales
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 手書き画像から，書いたものの判別をする画像分類器を出力するメタ学習の提案．学習していない手書きカテゴリでも，そのカテゴリの画像分類器が出力される．
+          |3つの枠組みが作れる．
+          |(1)スケッチ画像カテゴリ分類モデルを入力
+          |(2)スケッチ画像を入力
+          |(3)コースなリアル画像分類モデル＋スケッチ画像を入力
+        p 枠組みとしては，
+          a(href="https://www.robots.ox.ac.uk/~vgg/rg/papers/eccv2016_learntolearn.pdf") Model Regression Network
+          |による．論文では，SVMパラメータの学習を行っている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Sketch-a-Classifier_Sketch-based_Photo_Classifier_Generation_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 多様性がある．作ったモデルの性質がよく把握されている
+          li 知識転用の新しい形が見える
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.01837") arXiv
+          li
+            a(href="https://chenhsuanlin.bitbucket.io/spatial-transformer-GAN/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.10 13:49:15

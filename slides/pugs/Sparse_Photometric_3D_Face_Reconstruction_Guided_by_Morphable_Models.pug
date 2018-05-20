@@ -1,0 +1,36 @@
+﻿+slide
+section#Sparse_Photometric_3D_Face_Reconstruction_Guided_by_Morphable_Models
+  .paper-abstract
+    .title Sparse Photometric 3D Face Reconstruction Guided by Morphable Models
+    .info
+      .authors Xuan Cao, Zhang Chen, Anpei Chen, Xin Chen, Cen Wang, jingyi Yu
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 異なる位置の点光源１個によって照らされた５枚の正面顔画像から高品質な３次元顔形状を最適化によって復元する研究。
+          |被写体の正面に5つのLED点光源が配置されいている照明環境で撮影を行う。
+          |入力画像に対して3D morphable modelを適用することで簡易的な3次元顔形状を生成し、法線マップ組み合わせることで点光源の位置をピクセル単位で推定する。
+          |またセマンティックセグメンテーションを行うことで体毛が生えいてる領域とそうでない領域に分割し、体毛が生えている領域にはフィルタ処理を行うことでノイズを除去する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Sparse_Photometric_3D_Face_Reconstruction_Guided_by_Morphable_Models.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 顔画像からいきなり光源位置を推定するのではなく、一度morphalbe モデルに生成することで推定精度が大きく向上。
+          li 3Dスキャンなどの大掛かりな装置を必要としない。
+          li 顔の小じわ、毛穴、まつ毛なども再現するほど高品質な3次元顔形状を復元。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 推定された光源位置自体の精度結果を見てみたかった。
+          li 配置する点光源の位置については特に言及がなかったが、配置による影響の比較結果がみてみたかった。
+          li
+            a(href="https://arxiv.org/abs/1711.10870") 論文
+    .slide_index #{getSlideIndex()}

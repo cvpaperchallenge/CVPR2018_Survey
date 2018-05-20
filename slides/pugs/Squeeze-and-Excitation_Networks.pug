@@ -1,0 +1,42 @@
+﻿+slide
+section#Squeeze-and-Excitation_Networks
+  .paper-abstract
+    .title Squeeze-and-Excitation Networks
+    .info
+      .authors Jie Hu, Li Shen, Gang Sun
+      .conference CVPR2018, arXive:1709.01507
+      .paper_id 891
+    .slide_editor Hiroshi Fukui
+  
+    .item1
+      .text
+        h1 概要
+        p Residualモジュール, Inceptionモジュールに対してAttention機構を導入したネットワーク．
+          |Squeeze-and-Excitation Networks(SENet)では，生成される特徴マップのチャンネルに対してAttentionを導入している．
+          |SENetは，ImageNetでstate-of-the-artな性能を達成している．(現在1位)
+          |また，Place Datasetでも高い性能を達成している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}891_overview.png`,alt="891_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SENetには，右図のように2つのモジュールが提案されている．
+          |SE Inception moduleは，VGGやAlexNet等の順伝播ネットワークで使われるSEモジュール．
+          |SE Residual moduleは，ResNet系のネットワークに使われるSEモジュールである．
+          |基本的には，Global Average Poolingを施した後に，全結合層を何層か通してチャンネル毎のAttentionを生成する．
+          |この構造は，ResNet等の様々なネットワークモデルにも適応できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Attention機構を導入した物体認識法．
+          |最近，物体認識にもAttentionが流行し始めているので，その先駆けな手法になりそう．
+          |学習モデルもGitHub上で公開．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1709.01507") 論文リンク
+          li
+            a(href="https://github.com/hujie-frank/SENet") コードリンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.6 23:46:46

@@ -1,0 +1,33 @@
++slide
+section#Geometry_Guided_Convolutional_Neural_Networks_for_Self_Supervised_Video_Representation_Learning
+  .paper-abstract
+    .title Geometry Guided Convolutional Neural Networks for Self-Supervised Video Representation Learning 
+    .info
+      .authors Chuang Gan et al., 
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 合成画像のペア間のフローと教師ラベルのない実画像のペア間のデプスを推定することによってシーン認識、
+          |行動認識のための表現学習を行う研究。フロー推定を行ったのち、デプス推定にfine-tuningし、さらに目的となるタスクにfine-tuningする。
+          |直感的には、低レベルな特徴が獲得されそうだが、行動認識などの高次な問題設定でも効果を発揮した。
+          
+    .item2
+      img(src=figpath+"Geometry_Guided_Convolutional_Neural_Networks_for_Self_Supervised_Video_Representation_Learning.png",alt="Geometry_Guided_Convolutional_Neural_Networks_for_Self_Supervised_Video_Representation_Learning.png")
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p 多段にfine-tuningするため、初期の問題設定によって獲得した特徴が失われてしまう可能性があるので、２段目のfine-tuning時にはfine-tuning前の出力結果への蒸留を同時に行う。
+          |ImageNetのpretrainingとも行動認識において補間的な関係がある。表現学習自体での使用データが少ないのに関わらず高い精度向上が実験的に示されたことが大きなcontributionだと考えられる。        
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 特徴のforgetを防ぐ手法は、複数のタスクで学習済みモデルを作成する際に、その順番が重要となるような状況で有用だと思われる。
+          |既存手法との比較においては今回は+αのデータを利用している点はフェアではないと感じた。
+          |また、目的のタスクへのfine-tuningの際のフレームペアの選び方などの詳細な設定が記されていなかった。主に精度評価のみで、高次なタスクでうまくいく考察が少なく、疑問もあった。
+        ul
+          li
+            a(href="http://cseweb.ucsd.edu/~haosu/papers/cvpr18_geometry_predictive_learning.pdf") 論文
+    .slide_index #{getSlideIndex()}

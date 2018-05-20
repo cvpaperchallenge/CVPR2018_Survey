@@ -1,0 +1,30 @@
++slide
+section#Gesture_Recognition_Focus_on_the_Hands
+  .paper-abstract
+    .title Gesture Recognition: Focus on the Hands
+    .info
+      .authors Pradyumna Narayana, J. Ross Beveridge, Bruce A. Draper
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 手部領域に着目してチャネルを追加することにより、ジェスチャ認識自体の精度を高めていくという取り組み。従来型のマルチチャネル（rgb, depth, flow）のネットワークでは限定的な領域を評価して特徴評価を行なっていたが、提案のFOANetでは注目領域（global, right hand, left hand）に対して分割されたチャネルの特徴を用いて特徴評価を行い識別を実施する。図に示すアーキテクチャがFOANetである。FOANetでは12のチャネルを別々に処理・統合し、統合を行うネットワークを通り抜けて識別を実施する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180517FOANet.png`,alt="180517FOANet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 手部領域に着目し、よりよい特徴量として追加できないか検討した、とういアイディア自体が面白い。また、ChaLearn IsoGD datasetの精度を従来の67.71%から82.07まで引き上げたのと、同じようにNVIDIA datasetに対しても83.8%から91.28%に引き上げた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p あまりメジャーに使用されているDBではないが、重要課題を見つけてアプローチする研究は今後さらに必要になってくる？一番最初に問題を解いた人ではないが、二番目に研究をして実利用まで一気に近づけられる人も重宝される。
+        ul
+          li
+            a(href="http://www.cs.colostate.edu/~draper/papers/narayana_cvpr18.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 11:20:46
