@@ -1,0 +1,36 @@
++slide
+section#ROAD_Reality_Oriented_Adaptation_for_Semantic_Segmentation_of_Urban_Scenes
+  .paper-abstract
+    .title ROAD: Reality Oriented Adaptation for Semantic Segmentation of Urban Scenes
+    .info
+      .authors Yuhua Chen, Wen Li, Luc Van Gool
+      .conference CVPR2018
+    .slide_editor Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p synthetic-to-realな変換を行う際に、1)モデルがsyntheticにoverfitするstyleの側面と、2)syntheticとrealの分布の違いの側面から発生する2つの問題があることに著者らは着目している。解決するために、前者はtarget guided distillation、後者はspatial-aware adaptationという手法を提案し、それを組み合わせた Reality Oriented ADaptation Network(ROAD-Net)を考案。GTAV/SYNTHIA - Cityscapesの適合タスクで評価し、sotaのsemantic segmentationモデルの汎化性能を向上したことを確認。
+    .item2
+      .text
+        p
+          img(src=`${figpath}ROAD_Reality_Oriented_Adaptation_for_Semantic_Segmentation_of_Urban_Scenes.PNG`,alt="ROAD_Reality_Oriented_Adaptation_for_Semantic_Segmentation_of_Urban_Scenes.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Semantic SegmentationへのDomain Adaptationの適用が新しい。
+          li 結果もまたNonAdaptなPSPNetからmIoUが約11.6%向上している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://cvpaperchallenge.github.io/CVPR2018_Survey/#/Learning_to_Adapt_Structured_Output_Space_for_Semantic_Segmentation") Learning to Adapt Structured Output Space for Semantic Segmentation
+            |と目的と対象が似通っている。どちらもクラス分類で得られる特徴(ImageNetで学習されたpretrain model)がsegmentationでは有効ではないという主張であり、これをもとにそれぞれmulti-scaleな手法と、distillationによる手法と異なるアプローチをとっているのが興味深い。
+          li spatial-aware adaptationはPatchGANと似通っており同様の性質を持つ？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.11556") arxiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.20 19:20:29
