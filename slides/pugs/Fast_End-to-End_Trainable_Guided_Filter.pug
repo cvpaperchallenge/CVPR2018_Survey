@@ -1,0 +1,48 @@
++slide
+section#Fast_End-to-End_Trainable_Guided_Filter
+  .paper-abstract
+    .title Fast End-to-End Trainable Guided Filter
+    .info
+      .authors H. Wu, S. Zheng, J. Zhang, K. Huang
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 低解像度＋高解像ガイダンスマップを与えると，高解像度画像を効率的（省計算時間，省メモリ）に出力できる
+          |Guided Filtering Layerなるものを提案．
+        p
+          a(href="http://kaiminghe.com/eccv10/") GuidedFilter
+          |は，
+          |空間的に変化する線形変換行列のグループとして表現でき，
+          |CNNに統合可能．つまり，end-to-endで最適化可能な
+          |深層ガイデッドフィルタネットワークを構成できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fast_End-to-End_Trainable_Guided_Filter_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Chen_Fast_Image_Processing_ICCV_2017_paper.pdf") Context Aggregation
+            |Network
+            |にGuided Filtering Layerを載せたものを、5つの先進的な画像処理タスクで試したところ，
+            strong 10～100倍高速
+            |であり，
+            strong SoTA性能
+            |も出た．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p かなり省コストになっている．
+          |DNN導入可能にするように（エレガントに）定式化し，コストダウンしつつ深層学習できるようにする手法がいくつか見られている．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.05619") arXiv
+          li
+            a(href="https://github.com/wuhuikai/DeepGuidedFilter") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 20:01:20
