@@ -1,0 +1,43 @@
+﻿+slide
+section#Extreme_3D_Face_Reconstruction_Looking_Past_Occlusions
+  .paper-abstract
+    .title Extreme 3D Face Reconstruction: Looking Past Occlusions
+    .info
+      .authors Anh Tuấn Trần, Tal Hassner, Iacopo Masi, Eran Paz, Yuval Nirkin, Gérard Medioni
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要s
+        p 入力顔画像からバンプマップや視点を推定することで、入力画像からは見えていない側面や、
+          |強いオクルージョンがある顔画像からも精度の高い三次元形状を取得する手法を提案。
+          |入力画像から帯域的な情報として三次元の大まかな形と、
+          |局所的な情報としてしわなどのディティールを表現するバンプマップを別々のDNNモデルを使って取得する。
+          |続いてオクルージョンがある場合には、バンプマップが不自然な起伏を持つため深層学習による修正を行う。
+          |最後に顔の対称性を利用して、入力画像からは見えていない側面などをルールベースで復元する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Extreme_3D_Face_Reconstruction_Looking_Past_Occlusions.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 入力画像から3Dモデル全体を一気に復元するのではなく、帯域的な特徴と局所的な情報を分けて取り扱うことで精度の高い三次元復元を可能にした。
+          li 結果の評価は復元された三次元形状による個人認証の精度で行っている。画像にオクルージョンがない場合にはstate-of-the-artよりも高い精度を達成。オクルージョンがある場合でも、
+             |オクルージョンがない場合よりと比べて2%ほどしか劣らなかった。(state-of-the-artはそもそもオクルージョンを考慮できない。)
+          li 復元された三次元形状は、既存手法がオクルージョンを考慮することができなかったりシワなどの復元ができていないのに対して、
+             |提案手法ではオクルージョンがある場合でもシワなどの詳細な情報を復元できている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        li 帯域的な顔形状の復元やバンプマップの修正などを既存手法に頼っているものの、
+           |復元された三次元形状は既存手法に比べて圧倒的なクオリティを持つ。
+           |しかし形状自体のGTとの比較がなかったのが残念。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.05083") 論文
+          li 
+            a(href="https://github.com/anhttran/extreme_3d_faces") GitHub
+    .slide_index #{getSlideIndex()}
