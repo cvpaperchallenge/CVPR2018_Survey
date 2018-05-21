@@ -1,0 +1,46 @@
++slide
+section#Connecting_Pixels_to_Privacy_and_Utility_Automatic_Redaction_of_Private_Information_in_Images
+  .paper-abstract
+    .title Connecting Pixels to Privacy and Utility: Automatic Redaction of Private Information in Images
+    .info
+      .authors Tribhuvanesh Orekondy, Mario Fritz, Bernt Schiele
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p プライバシー保護のために画像に含まれる個人的な情報を自動的に改変する手法の提案．プライバシーを守りつつ画像の有用性を保つためのトレードオフが問題となる．有用性を保つためには改変する領域サイズが最小限である必要があり，これをセグメンテーションの問題として取り組む．
+        p Contribution:
+        ul
+          li データセットの公開．様々な種類のプライバシーのラベルが，ピクセルレベルとインスタンスレベルで与えられている自然画像の初のデータセット．
+          li モデルの提案．多様な個人情報を自動的に改変するモデルを提案する．正解のアノテーションに対して83％の正解率を達成した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Connecting_Pixels_to_Privacy_and_Utility_Automatic_Redaction_of_Private_Information_in_Images_fig.png`,alt="Image")
+          br
+          |指紋，日時，人，顔，ナンバープレートを黒く塗りつぶせている．
+          br
+          |他にも，住所やメールアドレスのようなテキスト情報や顔や車椅子などの視覚情報，あるいはテキストと視覚情報を合わせたものなど，多様な個人情報に対応するデータセットとモデルを提案．
+    .item3
+      .text
+        h1 手法
+        p どのような対象(Textual, Visual, Multimodal)を扱うかで使用するモデルは異なる．
+          br
+          |Textualな対象では，Sequence Labelingを使用する．
+          br
+          |VisualとMultimodalな対象では，Fully convolutional instance-aware semantic segmentationを使用する．
+          br
+          |Nearest Neighborなどのベースライン手法と比較を行なっている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 画像全体を黒く塗ればプライバシーは保護されるが，画像の価値がなくなるので，トレードオフが存在する．
+          br
+          |データセットを作った貢献がメイン．プライバシー保護のためのアノテーションを行ったことで，それなりの正解率で個人情報の改変を行えるようになった．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.01066") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 11:17:12
