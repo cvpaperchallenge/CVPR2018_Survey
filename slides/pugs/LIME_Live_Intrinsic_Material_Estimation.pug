@@ -1,0 +1,40 @@
++slide
+section#LIME_Live_Intrinsic_Material_Estimation
+  .paper-abstract
+    .title LIME: Live Intrinsic Material Estimation
+    .info
+      .authors A. Meka, M. Maximov, M. Zollhöfer, A. Chatterjee, H.P. Seidel, C. Richardt and Ch. Theobalt
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 単RGB画像で，リアルタイムに材質反射特性を推定する手法を提案し，デモシステムを作った．
+        p 構造は，主に複数のU-Netからなり，それぞれ前景セグメンテーション，スペキュラー推定，鏡面反射推定を行う．ロス関数も定義．
+        p さらに，形状情報も使えるのなら，低・高周波光源情報の推定も可能．連続撮影時の光源情報の連続性を考慮した時系列統合の枠組みも提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}LIME_Live_Intrinsic_Material_Estimation.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 実用的なシチュエーション（リアルタイム，複雑な光源下，連続撮影）で利用可能であることを示している．
+          li 定性，定量評価を行い，性能の良さを示している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p デモビデオを作り慣れているように見えるあたり，CG勢と思われる．
+          |デモも結構評価されているだろうか．
+          |アプリケーション枠で評価されるように書いているかもしれない．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.05619") arXiv
+          li
+            a(href="https://www.youtube.com/watch?v=5ntLiAYsMm4") Youtube
+          li
+            a(href="http://gvv.mpi-inf.mpg.de/projects/LIME/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 21:08:44
