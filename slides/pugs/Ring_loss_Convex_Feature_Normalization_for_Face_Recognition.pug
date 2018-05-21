@@ -1,0 +1,36 @@
+﻿+slide
+section#Ring_loss_Convex_Feature_Normalization_for_Face_Recognition
+  .paper-abstract
+    .title Ring loss: Convex Feature Normalization for Face Recognition
+    .info
+      .authors Yutong Zheng, Dipan K. Pal and Marios Savvides
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p DNNによって得られた特徴量を超球面上に配置するように正規化を行うロス関数であるRing lossを提案。
+          |特に教師あり識別問題においてはDNNによる特徴量を正規化することでより精度の高いモデルを構築することができる、
+          |というアイディアもとにRing lossを提案。
+          |SoftMaxといった基本的なロス関数と組み合わせることでより高い精度を達成。
+          |実験には様々な識別タスクを行うことができる顔データセットを用いることで、精度の向上を確認した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Ring_loss_Convex_Feature_Normalization_for_Face_Recognition.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li SoftMaxとSphereFaceにRing lossを組み合わせることでLFW, IJB-A Janus, Janus CS3, CFP, 
+             |MegaFaceデータセットにおけるface verification, identificationにおいて他のロス関数と同等あるいはそれ以上の精度を達成。
+          li 極端に低解像度の画像におけるface matchingにおいてベースラインの手法を凌駕した。
+          li 実験ではResNet64を使用。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.00130") 論文
+    .slide_index #{getSlideIndex()}
