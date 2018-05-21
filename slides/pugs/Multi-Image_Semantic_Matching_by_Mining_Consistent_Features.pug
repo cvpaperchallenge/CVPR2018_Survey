@@ -1,0 +1,30 @@
++slide
+section#Multi-Image_Semantic_Matching_by_Mining_Consistent_Features
+  .paper-abstract
+    .title Multi-Image Semantic Matching by Mining Consistent Features
+    .info
+      .authors Qianqian Wang, Xiaowei Zhou and Kostas Daniilidis
+      .conference CVPR2018
+    .slide_editor Kazuho Kito
+
+    .item1
+      .text
+        h1 概要
+        p ノイズを考慮しつつ、数千もの画像セット全てにおいて一致する(信頼できる)特徴を見出すことで、画像間の対応を図るマッチング手法。マッチングはセマンティック性を考慮することができる（目と目、耳先と耳先など）これにより、一貫性がある画像セット内で信頼できる特徴の関係を確立。何千もの画像を処理する場合にスケーラブルな手法。つまりは数に頑健。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Multi-Image_Semantic_Matching_by_Mining_Consistent_Features.PNG`,alt="Multi-Image_Semantic_Matching_by_Mining_Consistent_Features.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法では、全てのペアで対応する関係を最適化していたが、本手法では、特徴の選択とラベリングに着目し、信頼度の高い特徴のみを用いた疎なセットのみで識別、マッチングする。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 図は中の左が出力結果であり、目は青、耳は黄色、鼻は赤など各特長の意味を理解し、マッチングを成功させている。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.07641.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 11:27:27
