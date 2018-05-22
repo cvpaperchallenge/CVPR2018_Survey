@@ -1,0 +1,33 @@
+﻿+slide
+section#Lions_and_Tigers_and_Bears_Capturing_Non-Rigid_3D_Articulated_Shape_from_Images
+  .paper-abstract
+    .title Lions and Tigers and Bears: Capturing Non-Rigid, 3D, Articulated Shape from Images
+    .info
+      .authors Silvia Zuffi, Angjoo Kanazawa and Michael J. Black
+      .conference CVPR 2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 3Dスキャンは人間をキャプチャするために設計されており，自然環境での使用や野生動物のスキャンおよびモデリングには不向きという問題がある．この問題を解決する方法として，画像から3Dの形状を取得する方法を提案した．SMALモデルを画像内の動物にフィット，形状が一致するようにモデルの形状を変形(SMALR)，さらに複数の画像においても整合性がとれるよう姿勢を変形させ、詳細な形状を復元する．本手法は，従来の手法に比べ大幅に3D形状を詳細に抽出することを可能にするだけでなく，正確なテクスチャマップを抽出し，絶滅した動物といった新しい種についてもモデル化できることを可能にした．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180501_lion.png`,alt="Item3Image")
+          img(src=`${figpath}20180501_lion2.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 3Dスキャンが困難な動物のモデルを構築する方法を提案
+          li SMALモデルを基として形状を変形させることで，より詳細な3D復元が可能
+          li 上記手法により，一貫したテクスチャマップの抽出が可能
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://files.is.tue.mpg.de/black/papers/zuffiCVPR2018.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.22 15:06:58
