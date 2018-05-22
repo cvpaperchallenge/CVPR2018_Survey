@@ -1,0 +1,40 @@
+﻿+slide
+section#Nonlinear_3D_Face_Morphable_Model
+  .paper-abstract
+    .title Nonlinear 3D Face Morphable Model
+    .info
+      .authors Luan Tran, Xiaoming Liu
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 3Dスキャンデータを使用せずにin-the-wildな顔画像のみを用いてencoder-decoderによって3D Morphable Model(3DMM)を生成する手法を提案。
+          |生成された3DMMを nolinear 3DMMと呼んでいる。
+          |従来のlinear 3DMMは学習のために3Dスキャンデータが必要であり、かつPCAによって次元削減を行うため表現力に乏しいという問題点があった。
+          |提案手法ではencoderによってプロジェクション、シェイプ、テクスチャのパラメタを取得し、decoderによってシェイプ、テクスチャを推定する。
+          |また初期の学習では既存手法によって得られる3DMMのプロジェクションパラメタ、
+          |シェイプパラメタとUV空間から得られるテクスチャを擬似的なGTとすることで弱教師学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Nonlinear_3D_Face_Morphable_Model.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 3Dスキャンデータを使用せずに、in-the-wildな顔画像のみを学習させることで、入力画像から3D Morphalbe Modelを生成する。
+          li linear 3DMMと比較して、3次元形状、テクスチャの精度が高い。また見た目もGTにより近い。
+          li 顔のアラインメントにおいてstate-of-the-artよりも高い精度を達成。
+          li 3次元形状における精度はstate-of-the-artと同等であった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        li 弱教師学習がどれほど影響を持つかが気になった。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.03786") 論文
+          li
+            a(href="http://cvlab.cse.msu.edu/project-nonlinear-3dmm.html") Project page
+    .slide_index #{getSlideIndex()}
