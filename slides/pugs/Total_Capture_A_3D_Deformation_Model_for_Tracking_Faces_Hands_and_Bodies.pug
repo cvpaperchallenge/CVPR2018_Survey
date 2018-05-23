@@ -1,0 +1,46 @@
+﻿+slide
+section#Total_Capture_A_3D_Deformation_Model_for_Tracking_Faces_Hands_and_Bodies
+  .paper-abstract
+    .title Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies
+    .info
+      .authors Hanbyul Joo, Tomas Simon, Yaser Sheikh
+      .conference CVPR 2018 Oral
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 表情、体全体の動き、手のジェスチャといった様々なスケールの動きをマーカー無しでキャプチャするdeformation modelである
+          |”Frankenstein”と”Adam"を提案。
+          |3Dキャプチャシステムに置いて、画像の解像度と3Dキャプチャシステムの視野はトレードオフであるため、
+          |体の局所的な動きと全体的な動きを同時に捉えことは難しかった。提案手法では顔、両手、両足、
+          |手の指における3Dキーポイントと3D Point Cloudを用いて表情などの
+          |局所的モーションと体全体のモーションをキャプチャすることができるFrankensteinを構築。
+          |また70人のトラッキングデータを用いてFrankensteinモデルを最適化することで、
+          |髪と服を表現することが可能なAdamモデルを提案。結果は既存手法とのトラッキングの精度によって比較している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Total_Capture_A_3D_Deformation_Model_for_Tracking_Faces_Hands_and_Bodies.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 表情や手のジェスチャといった局所的なモーションと、体全体の動きを同時にトラッキングすることが可能なdefromation modelを提案。
+             |620台のVGAカメラと31台のHDカメラが必要とする。
+          li state-of-the-artである
+             a(href="http://files.is.tue.mpg.de/black/papers/SMPL2015.pdf") SMPL
+             |では顔の表情を表現することは不可能だが、提案手法では可能になっている。
+          li SMPLとトラッキングにおけるGTとのオーバーラップを計算した結果、
+             |SMPLが84.79%であるのに対し提案手法は87.74%となり、提案手法の方が高い精度を達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.01615") 論文
+          li
+            a(href="http://www.cs.cmu.edu/~hanbyulj/totalcapture/") Project Page
+          li
+            a(href="https://www.youtube.com/watch?v=5QzdXQSf-oY") Video
+    .slide_index #{getSlideIndex()}
