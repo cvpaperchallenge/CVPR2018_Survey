@@ -1,0 +1,44 @@
+﻿+slide
+section#Unsupervised_Correlation_Analysis
+  .paper-abstract
+    .title Unsupervised Correlation Analysis
+    .info
+      .authors Yedid Hoshen, Lior Wolf
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 2つのドメインを結合する手法であるCanonical Correlation Analysis(CCA、正準相関分析)を教師なし学習に対して行う
+          |Unsupervised Correlation Analysis(UCA)を提案。
+          |既存のCCAは教師あり学習かつ2つのドメインが何らかの対応関係を持っていることを前提としていたが、
+          |UCAは教師なし学習かつ2つのドメインに対応関係がない場合を想定している。
+          |教師あり学習とは異なり、トレーニング時に2つのドメインにおける相関係数を計算することができないため、入力する2つのドメインと、
+          |ネットワークによって射影された潜在変数空間の3つのドメイン間の射影、逆射影がうまくいくように様々なロスをとることで学習を行う。
+          |ロスに対するablationも行なっている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Unsupervised_Correlation_Analysis.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 教師なしかつ2つのドメインに対応関係がない状況におけるCCAの拡張であるUCAを提案。
+          li 評価尺度として潜在変数空間における相関係数、AUCを用いて以下の5つの状況で実験を行なった。1.MNISTの画像とそのミラー画像、
+             |2.MNISTの上半分の画像と下半分の画像、3.鳥の画像とそのキャプション、4.花の画像とそのキャプション、5.Flickerの画像とそれに付随する5つの文章。
+             |関節位置のエラーを測定したところ上記のstate-of-the-artの手法と同等、あるいは上回る精度を達成。
+          li 教師なし学習の結果をGANと比較しており、全ての実験においてGANよりも高い精度を達成。
+          li 教師あり学習をUCAで行なった結果も乗せられており、実験3、４、5において通常のCCAよりも高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 現状のネットワークを見ると、それぞれのドメインにおける直交性と、
+             |それぞれのドメインの射影先が同じ空間になるように様々なロスをとっているだけなので、
+             |もう少しアップデートすることができるかもしれない。
+          li CCAの特徴であるL_Orthだけを除いた場合に、どれほどの影響が出るのかが気になった。
+          li
+            a(href="https://arxiv.org/abs/1804.00347") 論文
+    .slide_index #{getSlideIndex()}
