@@ -1,0 +1,40 @@
+﻿+slide
+section#PU-Net_Point_Cloud_Upsampling_Network
+  .paper-abstract
+    .title PU-Net: Point Cloud Upsampling Network
+    .info
+      .authors Lequan Yu, XIANZHI LI, Chi-Wing Fu, Daniel  Cohen-Or, Pheng-Ann Heng
+      .conference CVPR 2018
+      .paper_id 355
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li data-drivenなポイントクラウドアップサンプリング手法の提案．スパースなポイントクラウドから，もっとデンスでユニフォームなポイントクラウドを取得できる．
+          li 従来の2D画像super-resolutionタスクと比べ，3D Upsamplingでは処理対象が空間オーダーとレギュラー構造がないポイントクラウドで，物体の本当のサーフェス(ポイントクラウドのリアル物体)に近づき，点の密度も均等であることがタスクの目標となる．こういったことから，提案手法はポイントクラウドからマルチレベルの特徴を抽出し，更にマルチブランチで特徴を拡張することにより，ポイントクラウドの局所及びグローバルな情報を取得できる．
+          li 提案ネットワークPU-Netは入力のポイントクラウド(N points)に対し①ポイントクラウドに対し異なるスケールのパッチを抽出し，②パッチからPointNet++を用いたマルチレベルの特徴抽出を行う．③feature expansion構造により特徴を拡張し，④全結合層を用いて出力のポイントクラウド(N＊ｒ points)を生成する．また，物体のサーフェスまでの距離及びポイントクラウドの過密程度を基準に，ジョイントロスを設計した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}PU_Net.png`,alt="PU_Net")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新たな評価指標：“物体のサーフェスまでの距離偏差”及び“ポイントクラウド分布のユニフォーム性”を評価できる指標を提案し，この2つの指標においてSHREC2015データセットに対し従来研究より優れた精度と指摘した．
+          li Pointnet++を用いてローカル及びグローバル情報抽出を行うので，ポイントクラウドの幾何的無オーダーを対応できる
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 提案手法を更に発展し物体モデルの補完およびアップサンプリング同時にできることを期待される
+          li
+            p Pointnet++を基本構造として使っていることがすごそう
+          li
+            p
+              a(href="https://arxiv.org/abs/1801.06761") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.24 17:36:47
