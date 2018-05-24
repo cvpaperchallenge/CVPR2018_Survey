@@ -1,0 +1,48 @@
++slide
+section#Learning_to_Understand_Image_Blur
+  .paper-abstract
+    .title Learning to Understand Image Blur
+    .info
+      .authors Shanghang Zhang, Xiaohui Shen, Zhe Lin, Radom ́ır Meˇch, Joa ̃o P. Costeira, Jose ́ M. F. Moura
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p ボケ(blur)が望ましいのか否かと，そのボケが写真のクオリティーにどのような影響を与えているのかを，自動的に理解するアルゴリズムは少ない．この論文では，blur mapの推定とこのボケの望ましさの分類を同時に行うフレームワークを提案する．
+        p 貢献：
+        ul
+          li ボケを検出することと，画像の質という点でボケを理解することを同時に行うのは，おそらく初めての研究．ABC-FuseNetというネットワークを提案．
+          li １万枚のデータセット（SmartBlur）の公開．ピクセルごとにボケがかかっているか３段階でラベルづけ．さらに，画像ごとにボケの望ましさ(desirability)をラベルづけ．
+          li SmartBlurと他の公開データセットで実験を行い．blur mapの推定とボケの望ましさの分類がSoTAを超えた．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Understand_Image_Blur_fig.png`,alt="Item3Image")
+          br
+          |ボケ具合をピクセルごとに３段階で示し，ボケの望ましさも出力する．
+    .item3
+      .text
+        h1 手法
+        p ABC-FuseNetでは，低レベルのボケの推定と高レベルの画像内で重要コンテンツの理解の二つを行う．
+          br
+          |A: attention map，FCNである．
+          br
+          |B: blur map，Dilated Convolutionとpyramid pooling, Boundary Refinement用の層を使ってblurの推定を行う．
+          br
+          |C: content feature map，ResNet-50を使ってコンテンツの特徴を抽出．
+          br
+          |ボケの推定はBによって行い，ボケの望ましさの分類はA, B, Cから得られた特徴を用いて行う．ネットワーク全体をEnd-to-endで学習することができる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ボケを軽減するための研究は多いが，ボケが全て邪魔とは言えない．ボケを効果的に利用することで，写真の印象が良くなることもある．いいボケなのか，悪いボケなのかの判断も必要だというモチベーションがある．
+        p コード，データセットは以下に公開予定
+        ul
+          li
+            a(href="https://github.com/Lotuslisa/Understand_Image_Blur") GitHub
+          li
+            a(href="http://users.eecs.northwestern.edu/~xsh835/assets/cvpr2018_smartblur.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 10:50:21

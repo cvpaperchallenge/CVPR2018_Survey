@@ -1,0 +1,32 @@
++slide
+section#PAD_Net_Multi-Tasks_Guided_Prediction_and_Distillation_Network_for_Simultaneous_Depth_Estimation_and_Scene_Parsing
+  .paper-abstract
+    .title PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing
+    .info
+      .authors Dan Xu et al.,
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+      h1 概要
+      p CNNに対して中間的に法線方向推定と輪郭推定も加えることで最終的にdepth推定とscene parsingの精度を向上させる。
+        |法線方向と輪郭についてはdepthとscene parsingのラベルから計算可能であるので追加にアノテーションする必要はない。
+        |NYUD-v2とCityscapesにおいてSoTA。  
+    .item2
+      img(src=figpath+"PAD_Net_Multi-Tasks_Guided_Prediction_and_Distillation_Network_for_Simultaneous_Depth_Estimation_and_Scene_Parsing.png",alt="PAD_Net_Multi-Tasks_Guided_Prediction_and_Distillation_Network_for_Simultaneous_Depth_Estimation_and_Scene_Parsing.png")
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p 中間的に推定した結果を元に最終的な目的タスクを出力するが、その中間出力として3つのパターンを考えた(タスクをに分けずconcat, タスクごとにconcat, attention機構を取り入れたconcat)。 
+          |attention機構を取り入れたconcatが最も良い結果となった。シンプルな手法だが、実験結果が良いので評価されたと考えられる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 「distillation」という言葉を用いているが、生徒モデルと教師モデルがあるようなdistillation手法は使われておらず、
+          |単に複数の中間タスクからのMulti-modalな情報の統合に対してその言葉が使用されている。
+          |単に通常のマルチタスク推定に中間タスクを導入したのみでかなりシンプルな印象。
+        ul
+          li
+            a(href="https://scirate.com/arxiv/1805.04409") 論文
+    .slide_index #{getSlideIndex()}

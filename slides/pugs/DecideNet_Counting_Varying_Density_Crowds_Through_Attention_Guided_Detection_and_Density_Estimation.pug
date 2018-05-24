@@ -1,0 +1,34 @@
++slide
+section#DecideNet_Counting_Varying_Density_Crowds_Through_Attention_Guided_Detection_and_Density_Estimation
+  .paper-abstract
+    .title DecideNet: Counting Varying Density Crowds Through Attention Guided Detection and Density Estimation
+    .info
+      .authors Jiang Liu, Chenqiang Gao, Deyu Meng, Alexander G. Hauptmann
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 混雑時の人数カウントにおける問題点を解決するため、End-to-Endで学習可能なDecideNet（DEteCtIon and Density Estimation Network）を提案する。混雑時の人数カウントでは、従来（１）人物検出では認識ミスによる過不足によりカウントを誤ってしまう、（２）回帰ベースの手法では人物が存在しない領域が蓄積されると実際のカウントよりも多く集計されてしまう、という問題が存在した。DecideNetでは検出ベース/回帰ベースを別々に行い、それらの結果を総合してカウントを行うという点で従来法を解決していると言える。実験では本論文で提案のDecideNetが混雑時の人数カウントにおいてもっとも優れた精度を達成したと主張。検出/回帰の手法としてはFaster R-CNN/RegNetを適用している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180516DecideNet.png`,alt="180516DecideNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3つのベンチマーク（Mall, ShanghaiTech PartB, WorldExpo10 dataset）においてState-of-the-artな精度を達成すると同時に、混雑時の人数カウントの問題と異なるアプローチを同時実行して相補的なアプローチDecideNetを提案したことが採択された大きな理由である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 異なる複数のアプローチを統合して最高精度を達成するためには、その分野における積み重ねと実装力が必要である。論文の書き方と合わせて鍛えていくことで毎回難関国際会議に突破できる力がつくと思われる。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.06679.pdf") 論文
+          li
+            a(href="www") Project
+          li
+            a(href="www") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.16 11:59:31
