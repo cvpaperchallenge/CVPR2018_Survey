@@ -1,0 +1,39 @@
++slide
+section#MoCoGAN_Decomposing_Motion_and_Content_for_Video_Generation
+  .paper-abstract
+    .title MoCoGAN: Decomposing Motion and Content for Video Generation
+    .info
+      .authors Sergey Tulyakov, Ming-Yu Liu, Xiaodong Yang, Jan Kautz
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 教師不要でコンテンツとモーションという要素に分解し，ビデオを生成するGANを提案．コンテンツを固定しモーションのみ変化させることや，逆も可能．広範囲の実験を行い，量と質ともにSoTAであることを確認．人の服装とモーションの分離や，顔のアイデンティティーと表情の分離が可能であることを示している．
+        p Contribution:
+          |・ノイズからビデオを生成する，条件なしでのビデオ生成GANの提案．
+          |・従来手法では不可能である，コンテンツとモーションのコントロールが可能なこと
+          |・従来のSoTA手法との比較
+    .item2
+      .text
+        p
+          img(src=`${figpath}MoCoGAN_Decomposing_Motion_and_Content_for_Video_Generation_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 手法
+        ul
+          li GAN．
+          li ランダムベクトルのシーケンスをビデオフレームのシーケンスにマッピングするGenerator．ランダムベクトルの一部はコンテンツ，もう一部はモーションを指定するもの．
+          li コンテンツの部分空間はガウス分布でモデル化．モーションの部分空間はRNNでモデル化．
+          li Generatorは一つのフレーム分をベクトルからフレームにマップする働きだけなので，モーションを決めるのは連続するベクトルを生成するRNN部分となる．
+          li 1枚のフレームを入力とするDiscriminatorと連続した数フレームを入力とするDiscriminatorを使うGAN構造を新たに提案．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li ビデオはコンテンツとモーションに分けられるという前提（prior）からスタート
+          li
+            a(href="https://arxiv.org/abs/1707.04993") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.19 13:08:06
