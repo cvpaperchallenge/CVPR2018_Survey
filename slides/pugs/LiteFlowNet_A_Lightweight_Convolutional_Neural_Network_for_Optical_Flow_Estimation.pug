@@ -1,0 +1,41 @@
++slide
+section#LiteFlowNet_A_Lightweight_Convolutional_Neural_Network_for_Optical_Flow_Estimation
+  .paper-abstract
+    .title LiteFlowNet: A Lightweight Convolutional Neural Network for Optical Flow Estimation
+    .info
+      .authors T. Hui et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        FlowNet2よりも，性能が良く，モデルサイズが小さく，高速に動作するOptical Flow推定手法を提案．
+        FlowNet2（Feature Warping, Correlation）は性能が良いけどモデルサイズが大きい，
+        SPyNet（ピラミッド構造を採用）はモデルが小さいけど性能はあまり良くない，
+        ということで，提案手法は両者の良いところを合わせることをしている．
+        2フレームを入力として，各フレームをCNNに入れてピラミッド構造の特徴表現を得る．
+        一番解像度の低いところから順にFlow推定を繰り返していって洗練化していく．
+        各Flow推定では軽量な2つのモデルをカスケードさせたりして2フレーム間の大きな移動にも対応しながら，
+        軽量かつ高速な推定を実現．
+  
+    .item2
+      img(src=figpath+"LiteFlowNet_A_Lightweight_Convolutional_Neural_Network_for_Optical_Flow_Estimation.png",alt="LiteFlowNet_A_Lightweight_Convolutional_Neural_Network_for_Optical_Flow_Estimation.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 軽量な2つのネットワークをカスケードさせて使うCascaded flow inferenceの提案
+          li CNNベースのFlow推定にFlow Regularizationを導入
+          li 高性能，省メモリ，高速な推定を実現
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="https://arxiv.org/abs/1805.07036") 論文 (arXiv)
+          li: a(href="http://mmlab.ie.cuhk.edu.hk/projects/LiteFlowNet/") プロジェクトページ
+          li: a(href="https://github.com/twhui/LiteFlowNet") コード (GitHub)
+          li カスケード構造が複雑でなぜこれが良いのか少し納得しにくい
+          li 実験は各コンポーネントのON/OFFで性能比較がわかりやすい
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:00:18

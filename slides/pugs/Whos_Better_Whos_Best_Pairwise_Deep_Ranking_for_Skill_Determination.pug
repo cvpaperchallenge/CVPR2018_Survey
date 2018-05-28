@@ -1,0 +1,38 @@
++slide
+section#Whos_Better_Whos_Best_Pairwise_Deep_Ranking_for_Skill_Determination
+  .paper-abstract
+    .title Who's Better? Who's Best? Pairwise Deep Ranking for Skill Determination
+    .info
+      .authors Hazel Doughty, Dima Damen and Walterio Mayol-Cuevas
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 2つの動画から、手術や絵を描くなどの技能がどちらが上かを予測する手法の提案。
+          |入力動画をTemporal Segment Networks(リンク参照)によりいくつかのセグメントに分割し，技能評価に用いるフレームを3枚選択する。
+          |技能評価の学習は、2つの動画のどちらが技能が上か、2つの動画の技能が同じであるとき同じであると判定できるかの2つの尺度をロスとして行う。
+          |技能を表すスコアは、Two Stream CNN(リンク参照)によって空間と時間それぞれについてスコアを取得する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Whos_Better_Whos_Best_Pairwise_Deep_Ranking_for_Skill_Determination.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 手術、ピザ生地をこねる、絵を描く、箸を使うの4つの技能を撮影したデータセットにより実験を行った。
+          |そのうち絵を描く、箸を使うは新たにデータセットを構築した。
+          |全てのタスクで70%以上の精度を達成し、箸を使う以外のタスクではベースラインと比べ精度が向上した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1703.09913") 論文
+          li
+            a(href="https://arxiv.org/abs/1406.2199") Two Stream CNN
+          li
+            a(href="https://arxiv.org/abs/1608.00859") Temporal Segment Networks
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.22 17:48:35

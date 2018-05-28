@@ -1,0 +1,40 @@
++slide
+section#Neural_3D_Mesh_Renderer
+  .paper-abstract
+    .title Neural 3D Mesh Renderer
+    .info
+      .authors Hiroharu Kato, Yoshitaka Ushiku, and Tatsuya Harada
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p ニューラルネットワークに組み込むことができる3Dメッシュのレンダラーである Neural Renderer を提案。レンダリングの『逆伝播』と呼ばれる処理をニューラルネットワークに適した形に定義し直した．そしてこのレンダラーを
+          br
+          |・一枚の画像からの3Dメッシュの再構成（ボクセルベースの再構成との比較あり）
+          br
+          |・画像から3Dへのスタイル転移と3D版ディープドリーム
+          br
+          |に応用できることを示した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Neural_3D_Mesh_Renderer_fig.png`,alt="Image")
+          br
+          |2D-to-3Dスタイルトランスファーの例
+    .item3
+      .text
+        h1 方法
+        p 従来のままでレンダリングの操作が処理の途中にあると逆伝播が行えない状態であるので，レンダリングのための勾配を定義することでニューラルネットワークの中にレンダリング操作を加えても学習を行えるようにした．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://hiroharu-kato.com/projects/neural_renderer.html") プロジェクトサイト
+          li
+            a(href="https://github.com/hiroharu-kato/neural_renderer") GitHub
+          li ３Dの形式には様々ある（ポイントクラウド，ボクセル，メッシュなど）が，3Dメッシュは効率的で表現能力が高く直感的な形式だそう．
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 10:28:19

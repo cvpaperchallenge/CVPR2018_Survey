@@ -1,0 +1,37 @@
++slide
+section#Cross-View_Image_Synthesis_using_Conditional_GANs
+  .paper-abstract
+    .title Cross-View Image Synthesis using Conditional GANs
+    .info
+      .authors Krishna Regmi and Ali Borji
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 対応する航空写真とストリートビュー写真間の変換を行うcGANを提案．pix2pixによる変換に比べて，オブジェクトの正しいセマンティックスを捉え維持する変換が可能となっている．提案したcGANモデルは２つあり，X-Fork とX-Seq と呼んでいる．出力が変換画像とセグメンテーションマップであることが特徴．Inception Scoreの比較実験をすると，航空写真からストリートビュー方向の変換ではがX-Forkが優れ，逆方向の変換ではX-Seqの生成結果が優れていることがわかった．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Cross-View_Image_Synthesis_using_Conditional_GANs_fig.png`,alt="Image")
+          br
+          |256x256の解像度で生成可能．gがストリートビューで，aが航空写真に当たる．
+    .item3
+      .text
+        h1 手法
+        ul
+          li X-Forkは１つのGeneratorと１つのDiscriminatorから成るシンプルな構成のcGAN．出力は変換後の画像とセグメンテーションマップの２つであることが特徴．
+          li X-Seqは２つのGeneratorと２つのDiscriminatorから成るcGAN．１つ目のGeneratorで変換後の画像を生成．それを元に２つ目のGeneratorでセグメンテーションマップを生成する．
+            br
+            |セグメンテーションマップのGround-Truthには，学習済みのRefineNetを用いた生成結果を使用している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 航空写真とストリートビューという劇的に見た目が変わる場合の変換において，どのようなことが問題点となるのか５つ挙げられていたので気になる場合は元論文を参照してください．
+          li コードやデータは公開予定
+          li
+            a(href="https://arxiv.org/abs/1803.03396") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.23 20:24:52
