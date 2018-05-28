@@ -1,0 +1,40 @@
++slide
+section#Bonnet_An_Open-Source_Training_and_Deployment_Framework_for_Semantic_Segmentation_in_Robotics_using_CNNs
+  .paper-abstract
+    .title Bonnet: An Open-Source Training and Deployment Framework for Semantic Segmentation in Robotics using CNNs
+    .info
+      .authors A. Miliot and C. Stachniss
+      .conference CVPR2018
+      .paper_id 177
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p 現在，ロボットの制御に不可欠な周辺環境を認識するシステムとしてCNNs(Convolution Neural Networks)が重要視されている．
+          |しかし，CNNsの利用はCV系の専門ではない人々にとってとても扱いづらいというギャップが存在した．
+          |そこで，CV分野とロボット工学とのギャップを埋めることを目標として，CNNsを利用したSemantic Segmantationを扱えるオープンソースのフレームワーク, Bonnetを提供した．
+          |PythonでTensorflowを利用し，データセットからピクセル単位のSemanticクラスを推測するトレーニングを行う．
+          |そして既存のC++アプリケーション，またはROS(Robot Operating System)が使用できるロボットで，訓練モデルから推測することができるC++インターフェースを用いて実際のロボットプラットフォームに展開する．本手法の評価はCityscapes，Synthia，Crop-Weedの3種類のデータセットでの正解率や実行時間を評価している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180177_Bonnet.png`,alt="Item3Image")
+          img(src=`${figpath}180177_frameworks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p CVにおける新規性は少ないが，ロボット工学において最先端のセマンティックセグメンテーションなどを容易に扱うことを可能とした．
+          |これにより，ロボット工学だけでなく他分野でのCNNsの利用が容易となり，より新たな考えを生み出すことができるだけでなく，CVでの様々な手法が利用される可能性が高まると考えられる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.08960") arXiv
+          li
+            a(href="http://www.ipb.uni-bonn.de/2018/03/2018-03-code-available-bonnet-tensorflow-convolutional-semantic-segmentation-pipeline-by-andres-milioto-and-cyrill-stachniss/") Project Page
+          li
+            a(href="https://www.youtube.com/watch?v=lBCT5eMiDqA") Bonnet: Prediction of Cityscapes(Youtube)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.26 15:36:41
