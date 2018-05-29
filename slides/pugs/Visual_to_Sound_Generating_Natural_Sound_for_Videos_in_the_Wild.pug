@@ -1,0 +1,40 @@
+﻿+slide
+section#Visual_to_Sound_Generating_Natural_Sound_for_Videos_in_the_Wild
+  .paper-abstract
+    .title Visual to Sound: Generating Natural Sound for Videos in the Wild
+    .info
+      .authors Yipin Zhou, Zhaowen Wang, Chen Fang, Trung Bui, Tamara Berg
+      .conference CVPR 2018
+      .paper_id 435
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li ビデオからリアルな音声を生成する(waveformな)手法及びビデオ―音声データセットを提案した．
+          li 人がビジョンとサウンド間の関連性をある程度把握できる．そこで，in-the-wildビデオから音声(waveform型)を自動生成するタスクを提案し，また，このタスクのためのデータセットVEGASを提案した．VEGASはAudioSetデータセットをAMTよりクリーンし，10カテゴリのビデオ及び対応した音声28109ペアから構成される．データセットのビデオの総時間が55時間となる．
+          li 提案タスクに対応したフレームワークはビデオエンコーダー及び音声ジェネレータから構成される．音声ジェネレータは階層的RNNを用いた．ビデオエンコーダーに対し:①frame-to-frame②sequence-to-sequence③flow-basedの３種類の設計を用いた．3種類モデルの生成結果に対し定量評価及びヒューマンテストを用いて評価し，flow-based構造が最も良い性能とヒューマン評価を達成した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}VisualToSound_InTheWild.png`,alt="VisualToSound_InTheWild")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のビデオから音声を生成する手法はビデオに対し拘束条件を加えている．提案手法は初めてのin-the-wildビデオから音声を生成する手法．
+          li ビデオから音声を自動生成する手法の応用場面が広い．(VRシステムでの没入感の増強，音声編集作業の自動化，視覚障害の人に視覚体験を聴覚体験として提供)
+          li ヒューマンテスト (ビデオがリアルかフェクか)に対し，ビデオエンコーダーをflow-basedな構造を用いた場合，平均73.36%の生成音声がリアル音声と評価された．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ・視覚情報の抽出機に更にコンテンツと物体relationなどを重視したネットワークを用いたら更なる良い結果が得られそう
+          |・逆設定として，音声情報からビデオの予測も面白そう
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.01393") 論文
+          li
+            a(href="https://github.com/arXivTimes/arXivTimes/issues/562") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.25 17:15:56

@@ -1,0 +1,40 @@
+﻿+slide
+section#Transferable_Joint_Attribute-Identity_Deep_Learning_for_Unsupervised_Person_Re-Identification
+  .paper-abstract
+    .title Transferable Joint Attribute-Identity Deep Learning for Unsupervised Person Re-Identification
+    .info
+      .authors Jingya Wang, Xiatian  Zhu, Shaogang Gong, Wei Li 
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ラベルなしデータセットにおいてperson re-identification(re-id)を教師なしで行うために、
+          |ラベルありデータセットからdomain adaptationを行うTransferable Joint Attribute-Identity 
+          |Deep Learning(TJ-AIDL)を提案。person re-idとは、街中の監視カメラのような異なる視点、
+          |重複のない領域を撮影された映像内の同一人物を探すことである。
+          |TJ-AIDLにはアイデンティティーを推定するIdentity branch、アトリビュートを推定するAttribute branch、
+          |アトリビュートからアイデンティティーを推定するモジュールであるIdentity Inferred Attirbute(IIA)からなる。
+          |domain adaptationの際には、Attribute branch、IIAの更新のみを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Transferable_Joint_Attribute-Identity_Deep_Learning_for_Unsupervised_Person_Re-Identification.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li domain adaptationを用いて教師なしでperson re-idを行うために、
+             |画像のアトリビュートからアイデンティティーを推定するTJ-AIDLを提案。
+          li personn re-idのベンチマークである4つのデータセットを使用しており、
+             |Rank-1mAPにおいてre-idを教師なしで行うstate-of-the-artよりも高い精度を達成。
+          li TJ-AIDLにおいてアトリビュート/アイデンティティーのみ学習した際の結果、
+             |adaptation有り/無しの結果についても議論しており、提案したTJ-AIDLが最も高い精度となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.09786") 論文
+    .slide_index #{getSlideIndex()}
