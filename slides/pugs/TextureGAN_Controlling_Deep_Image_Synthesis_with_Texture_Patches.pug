@@ -1,36 +1,37 @@
-﻿+slide
-section#TextureGAN_Controlling_Deep_Image_Synthesis_with_Texture_Patches
-  .paper-abstract
-    .title TextureGAN: Controlling Deep Image Synthesis with Texture Patches
-    .info
-      .authors W.Xian,  P.Sangkloy, V. Agrawal, A.Raj, J.Lu, C.Fang, F.Yu and J.Hays
-      .conference CVPR2018
-      .paper_id arXiv:1706.02823
-    .slide_editor KotaYoshida
-  
-    .item1
-      .text
-        h1 概要
-        p ユーザが色，スケッチ，テクスチャから深層画像合成を行うTextureGANを提案．
-          |既存手法では，カラーやスケッチによる制御を行っているが今回の手法ではユーザがテクスチャパチをスケッチ上に配置することによってテクスチャによる制御を実現．
-    .item2
-      .text
-        p
-          img(src=`${figpath}TextureGAN_Controlling_Deep_Image_Synthesis_with_Texture_Patches.png`,alt="画像")
-    .item3
-      .text
-        h1 新規性・結果・なぜ通ったか？
-        ul
-          li 深層画像合成における細かいテクスチャ制御の妥当性を初めて実証
-          li ユーザが特定のテクスチャをスケッチの境界に「ドラック＆ドロップ」するテクスチャインタフェースの提案.
-          li 生成ネットワークで既存のオブジェクトに見られないテキスチャであった場合でも扱うようにする局所テクスチャロスを定義．
-    .item4
-      .text
-        h1 結果・リンク集
-        ul
-          li TextureGANをローカルテクスチャで制約することにより，テクスチャとスケッチベースの画像合成の効果を実証．
-          li 別のテクスチャデータベースから抽出されたテクスチャから生成されたスケッチを用いて実験を行い、提案アルゴリズムがユーザコントロールに忠実な妥当な画像を生成されることを確認．
-          li
++slide
+  .title TextureGAN: Controlling Deep Image Synthesis with Texture Patches
+  .info
+    .authors W.Xian,  P.Sangkloy, V. Agrawal, A.Raj, J.Lu, C.Fang, F.Yu and J.Hays
+    .conference CVPR2018
+    .paper_id arXiv:1706.02823
+  .slide_editor KotaYoshida
+
+  .item1
+    .text
+      h1 概要
+      p ユーザが色，スケッチ，テクスチャから深層画像合成を行うTextureGANを提案．
+        |既存手法では，カラーやスケッチによる制御を行っているが今回の手法ではユーザがテクスチャパチをスケッチ上に配置することによってテクスチャによる制御を実現．
+  .item2
+    .text
+      p
+        img(src=`${figpath}TextureGAN_Controlling_Deep_Image_Synthesis_with_Texture_Patches.png`,alt="画像")
+  .item3
+    .text
+      h1 新規性・結果・なぜ通ったか？
+      ul
+        li 深層画像合成における細かいテクスチャ制御の妥当性を初めて実証
+        li ユーザが特定のテクスチャをスケッチの境界に「ドラック＆ドロップ」するテクスチャインタフェースの提案.
+        li 生成ネットワークで既存のオブジェクトに見られないテキスチャであった場合でも扱うようにする局所テクスチャロスを定義．
+  .item4
+    .text
+      h1 結果・リンク集
+      ul
+        li
+          p TextureGANをローカルテクスチャで制約することにより，テクスチャとスケッチベースの画像合成の効果を実証．
+        li
+          p 別のテクスチャデータベースから抽出されたテクスチャから生成されたスケッチを用いて実験を行い、提案アルゴリズムがユーザコントロールに忠実な妥当な画像を生成されることを確認．
+        li
+          p
             a(href="https://arxiv.org/pdf/1706.02823.pdf") Paper
-    .slide_index #{getSlideIndex()}
-    .timestamp 2018.5.5 01:54:38
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.5 01:54:38

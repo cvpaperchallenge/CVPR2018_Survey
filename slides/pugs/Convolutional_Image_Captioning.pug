@@ -1,36 +1,32 @@
-﻿+slide
-section#Convolutional_Image_Captioning
-  .paper-abstract
-    .title Convolutional Image Captioning
-    .info
-      .authors J.Aneja, A.Deshpande and A.Schwing
-      .conference CVPR2018
-      .paper_id arXiv:1711.09151v1
-    .slide_editor KotaYoshida
-  
-    .item1
-      .text
-        h1 概要
-        p 近年，条件付き画像生成や機械翻訳において畳み込みニューラルネットの功績は大きい，これを画像キャプションに応用してみた．
-          |ベースラインであるLSTMモデルと同等の精度を示し，パラメータ数ごとの学習時間の短縮をすることができた．
-    .item2
-      .text
-        p
-          img(src=`${figpath}Convolutional_Image_Captioning.png`,alt="概要図")
-    .item3
-      .text
-        h1 従来手法の問題提起
-        ul
-          li RNNは学習プロセスが逐次的
-          li LSTM，RNNは画像の分類精度が低い
-    .item4
-      .text
-        h1 結果・リンク集
-        ul
-          li RNNとCNNのアプローチを分析し，CNNを用いたアプローチは出力確率分布のエントロピーの増大，単語予測精度の向上，消失勾配の影響の低下を示すことができた．
-          li 
-            a(href="https://arxiv.org/pdf/1711.09151.pdf") 論文
-          li 
-            a(href="https://github.com/aditya12agd5/convcap") github
-    .slide_index #{getSlideIndex()}
-    .timestamp 2018.5.1 18:06:38
++slide
+  .title Convolutional Image Captioning
+  .info
+    .authors J.Aneja, A.Deshpande and A.Schwing
+    .conference CVPR2018
+    .paper_id arXiv:1711.09151v1
+  .slide_editor KotaYoshida
+
+  .item1
+    .text
+      h1 概要
+      p 近年，条件付き画像生成や機械翻訳において畳み込みニューラルネットの功績は大きい，これを画像キャプションに応用してみた．
+        |ベースラインであるLSTMモデルと同等の精度を示し，パラメータ数ごとの学習時間の短縮をすることができた．
+  .item2
+    .text
+      p
+        img(src=`${figpath}Convolutional_Image_Captioning.png`,alt="概要図")
+  .item3
+    .text
+      h1 従来手法の問題提起
+      p *RNNは学習プロセスが逐次的
+        |*LSTM，RNNは画像の分類精度が低い
+  .item4
+    .text
+      h1 結果・リンク集
+      p *RNNとCNNのアプローチを分析し，CNNを用いたアプローチは出力確率分布のエントロピーの増大，単語予測精度の向上，消失勾配の影響の低下を示すことができた．
+        |*
+        a(href="https://arxiv.org/pdf/1711.09151.pdf") 論文
+        |*
+        a(href="https://github.com/aditya12agd5/convcap") github
+  .slide_index #{getSlideIndex()}
+  .timestamp 2018.5.1 18:06:38
