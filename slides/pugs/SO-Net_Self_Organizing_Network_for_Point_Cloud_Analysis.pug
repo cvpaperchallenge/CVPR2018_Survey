@@ -1,0 +1,37 @@
++slide
+section#SO-Net_Self_Organizing_Network_for_Point_Cloud_Analysis
+  .paper-abstract
+    .title SO-Net: Self-Organizing Network for Point Cloud Analysis
+    .info
+      .authors Jiaxin Li et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 順序構造に対して不変な３次元 Point Cloud のための deep learning アーキテクチャー SO-Net を提案. Self-Organizing Map (SOM) を作ることで点群の空間分布をモデル化し, SOMのノードを用いて階層的な特徴量の抽出を行う. Point Cloud のクラス分類やセグメンテーションなどのタスクを用いた評価実験では, 先行研究と同等以上の結果をより短い学習時間で達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-SO-Net-Self-Organizing-Network-for-Point-Cloud-Analysis.png`,alt="fukuhara-fukuhara-SO-Net-Self-Organizing-Network-for-Point-Cloud-Analysis.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li SOM を用いることで Point Cloud を複数の Point Cloud の部分集合に分割し, 各部分集合ごとの特徴量を抽出した後, 全体の特徴量を階層的に抽出する.
+          li 初期ノードの位置を固定し, 学習を batch 単位で行うことで, SOM の学習が順序構造に対して不変となるようにしている.
+          li 様々なタスクの事前学習として用いるための Point Cloud の autoencoder を提案. 
+          li ネットワークの構造が単純かつ並列計算可能なため, 先行研究よりも短時間で学習をすることが可能.
+          li point cloud reconstruction, classification, object part segmentation, shape retrieval などの複数のタスクを用いて評価実験を行った.
+          li 評価実験の結果では Point-Net++ や Kd-Net などとの先行研究と同等以上の結果を半分以下の学習時間で達成した.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.04249" target="blank") [論文] SO-Net: Self-Organizing Network for Point Cloud Analysis
+          li
+            a(href="https://github.com/lijx10/SO-Net" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 12:19:55
