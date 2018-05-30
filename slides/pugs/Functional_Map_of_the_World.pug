@@ -1,0 +1,51 @@
+﻿+slide
+section#Functional_Map_of_the_World
+  .paper-abstract
+    .title Functional Map of the World
+    .info
+      .authors Gordon Christie, Neil Fendley, James Wilson, Ryan Mukherjee
+      .conference CVPR 2018
+      .paper_id 795
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 建物や土地などの機能的目的を予測するタスクに用いられる大規模な衛星画像データセットfMoWの提案(bounding box, 時系列，カテゴリ，メタ情報などのアノテーションがあり)
+          li データセットの具体的な統計情報は①200以上の国の１,047,691 枚画像②63カテゴリ③一枚の画像1つ以上のバウンディングボクス定義④時系列画像が大量に含む．
+          li このデータセットに対応した新たなタスクを設定した：連続な時系列画像によりバウンディングボクス内の物体を認識する．提案データセットfMoWを用いて5つのネットワーク構造:LSTM-M,CNN-I,CNN-IM,LSTM-I,LSTM-IM(I:画像M:メタ特徴)に対し比較実験を行た．平均F1スコアにおいてLSTM-IMが最も高い精度を示したので，時系列情報及びメタ情報をジョイントでreasoningするアプローチの有効性を証明した
+    .item2
+      .text
+        p
+          img(src=`${figpath}FunctionalMapOfTheWorld.png`,alt="FunctionalMapOfTheWorld")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 公開されている最も大規模な衛星画像データセット．
+          li 異なる国・撮影時間・撮影年代などで撮影された画像から構成され，提案データセットを統計比較などにも用いられる．
+          li 従来の衛星画像データセットは主にbrief momentsの情報だけをキャプチャーし，メタ情報(ロケーション，時間，太陽角度など)がアノテーションされていない．提案データセットはメタ情報をアノテーションし，様々な応用を可能にした．(例：パーキングエリアの時系列駐車量の統計・影と時間情報によりオブジェクトの高さ推定など)
+          li 検出と識別タスクの間に位置付ける新たな問題設定“時系列画像のバウンディングボックス内の物体識別”をして，更に実験を通してメタ情報と時系列情報をジョイントで処理することの重要性を示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 地理情報に関する分析の研究に用いられるデータセット
+          li
+            p 国のバリエーションが豊かなデータセットなので，国ごと上空シーン特徴の比較などにも用いられる
+          li
+            p
+              a(href="https://arxiv.org/abs/1711.07846") 論文
+          li
+            p
+              a(href="https://github.com/fMoW") コード
+          li
+            p
+              a(href="https://github.com/fMoW/dataset") データセット
+          li
+            p
+              a(href="https://www.iarpa.gov/index.php/working-with-iarpa/prize-challenges/1015-functional-map-of-the-world-fmow") fMoW Challenge
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.25 17:05:45

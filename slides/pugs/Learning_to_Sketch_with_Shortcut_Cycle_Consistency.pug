@@ -1,0 +1,36 @@
++slide
+section#Learning_to_Sketch_with_Shortcut_Cycle_Consistency
+  .paper-abstract
+    .title Learning to Sketch with Shortcut Cycle Consistency
+    .info
+      .authors Jifei Song, Kaiyue Pang, Yi-Zhe Song, Tao Xiang, Timothy M. Hospedales
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像からスケッチのストロークを取得する手法の提案。
+          |人間が画像からスケッチをすると、同じ画像に対しても様々なバリエーションが生じてしまう。
+          |そこで、教師有学習と教師無学習を組み合わせることによって画像からスケッチの取得を実現する。
+          |教師有学習は、画像からスケッチもしくはスケッチから画像という変換を学習する。
+          |教師無学習は、オートエンコーダのように画像もしくはスケッチを符号化し、元に戻すという処理を学習する。
+          |その際、CycleGANのようにドメイン変換を繰り返すのではなく、符号化したものをそのまま復号化する(Shortcut Cycle)。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Sketch_with_Shortcut_Cycle_Consistency.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Pix2pixやCycleGANなどの手法と比較を行い、いずれの手法と比較してもスケッチとして抽象化されつつもセマンティックな特徴を捉えていることを確認した。
+          |また、数値評価としてスケッチの認識及び検索タスクを行って評価した。
+          |どちらのタスクにおいても、従来手法と比較して高い精度でスケッチへの変換ができていることを示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.00247") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.29 14:10:18
