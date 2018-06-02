@@ -1,0 +1,34 @@
+﻿+slide
+section#R-FCN-3000_at_30fps_Decoupling_Detection_and_Classification
+  .paper-abstract
+    .title R-FCN-3000 at 30fps: Decoupling Detection and Classification
+    .info
+      .authors Bharat Singh, Hengduo Li, Abhishek Sharma and Larry S. Davis
+      .conference CVPR2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p オブジェクト性検出と分類を分離した物体検出器であるR-FCN-3000を提案した．
+          |RoIのための検出スコアを得るために，オブジェクト性検出と分類スコアをかける．
+          |R-FCNで提案されたposition-sensitive filterはfine-grained classificationには必要ないというのが基本アイディア．
+          |また本論文では，R-FCN-3000はオブジェクト数が増えると性能が向上することが示されている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}R-FCN-3000_1.PNG`,alt="R-FCN-3000_1.PNG")
+          img(src=`${figpath}R-FCN-3000_2.PNG`,alt="R-FCN-3000_2.PNG")
+          img(src=`${figpath}R-FCN-3000_3.PNG`,alt="R-FCN-3000_3.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ImageNet detection datasetで一秒あたり30枚の画像を処理したところ，mAPが34.9%であった（YOLO9000は18%）．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.01802.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.2 21:48:26
