@@ -1,0 +1,37 @@
++slide
+section#Smart_Sparse_Contours_to_Represent_and_Edit_Images
+  .paper-abstract
+    .title Smart, Sparse Contours to Represent and Edit Images
+    .info
+      .authors T.Dekel, C.Gan, D.Krishnan, C.Liu and W.T.Freeman
+      .conference CVPR2018
+      .paper_id arXiv:1712.08232
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 元画像の輪郭情報から画像を再構成する手法を提案.
+          |GANをベースとして，入力情報が与えられない領域のテクスチャと細部を合成する.実験では，顔認証システムや人間を対象にして元画像と再構成された画像と区別されないという結果となった．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Smart_Sparse_Contours_to_Represent_and_Edit_Images.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Pix2pixなどの既存の手法よりも大幅に向上している．
+          li 2つのネットワークで構成されており，1つ目のネットワークでは，画像全体の構造，色を再構成，2つ目のネットワークでは画像のテクスチャと細部の表現をしている．
+          li 直感的な操作が可能で，顔のパーツを移動させたり，追加させることもできる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 入力情報がない輪郭と輪郭の間の画像部分の再構成にも力を入れてる
+          li
+            p
+              a(href="https://arxiv.org/abs/1712.08232") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.3 19:36:19
