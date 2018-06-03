@@ -1,0 +1,32 @@
++slide
+section#Learning_to_Detect_Features_in_Texture_Images
+  .paper-abstract
+    .title Learning to Detect Features in Texture Images
+    .info
+      .authors Linguang Zhang, Szymon Rusinkiewicz
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p テクスチャに対して有効かつスケーラブル、さらに学習可能な局所特徴量を提案する。さらに提案手法は既存のランキングロスやFully-Convolutional Networks (FCN; 全層畳み込みネットワーク)と統合可能である。著者らは、新規の学習誤差関数であるPeakednessという指標を畳み込みマップに対して導入した。画像はテスト画像に対して提案手法を施した結果であり、Repeatableな特徴量（画像の中に再帰的に登場するテクスチャ特徴）が検出されている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180527LearningToDetectFeatures.png`,alt="180527LearningToDetectFeatures")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p （i）FCN構造によりフルサイズの再帰的なテクスチャパターンを評価することに成功した、（ii）Peakednessという指標を導入し、これを最大化することでテクスチャを評価するための畳み込みマップを洗練化することに成功、という点がもっとも重要な新規性である。実験ではcarpet/asphalt/wood/tile/granite/concrete/coarseといったテクスチャパターンに対して有効であることを示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 複雑かつ特徴が比較的取りづらいテクスチャの解析は今後さらに重要性を増すと考えられる（道路面のひび割れ調査など）。ここに教師なし学習（Self-Supervision含む）が導入されていくことになると思う。
+        ul
+          li
+            a(href="http://gfx.cs.princeton.edu/pubs/Zhang_2018_LTD/keypoint-cvpr.pdf") 論文
+          li
+            a(href="http://gfx.cs.princeton.edu/pubs/Zhang_2018_LTD/index.php") Project
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.27 23:19:17
