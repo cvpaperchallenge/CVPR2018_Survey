@@ -1,0 +1,34 @@
++slide
+section#Inferring_Shared_Attention_in_Social_Scene_Videos
+  .paper-abstract
+    .title Inferring Shared Attention in Social Scene Videos
+    .info
+      .authors Lifeng Fan, Yixin Chen, Ping Wei, Wenguan Wang, Song-Chun Zhu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 複数人いる人物が同時に同領域に注意を向けることをCo-attention/Shared-attentionといい、本論文では三人称視点の入力からこの推定に取り組む。ここに対してConvLSTM（Convolutional Long-Short Term Memory）を用いたモデルを適用、さらにはVideoCoAttと呼ばれるTV番組をメインとしたビデオからデータ収集を行なった。モデルは視線推定（YOLOv2による顔検出も含む）、領域推定（Region Proposal Map）、空間推定（Convolution）と時系列最適化（LSTM）から構成される。データは380ビデオ/492,000フレームから構成される。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180604SharedAttention.png`,alt="180604SharedAttention")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 新しい問題である、三人称視点からの共注視を設定し、データとモデルを公開したことが採択された理由である。また、実験により従来法を抑えて、提案法が71.4%の精度かつ誤差がもっとも小さい手法であることを明らかにした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 共注視、面白い！（が、ビデオを見てみると曖昧な部分もありもうすこしアノテーションなどに改善の余地がある？）
+        ul
+          li
+            a(href="http://www.stat.ucla.edu/~lifengfan/SharedAttention_CVPR18/shared_attention_camera_ready.pdf") 論文
+          li
+            a(href="https://www.youtube.com/watch?v=4uA5buFgi38") YouTube
+          li
+            a(href="http://www.stat.ucla.edu/~lifengfan/shared_attention") Project
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 09:07:48
