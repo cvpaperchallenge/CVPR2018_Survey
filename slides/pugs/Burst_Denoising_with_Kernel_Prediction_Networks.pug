@@ -11,40 +11,28 @@ section#Burst_Denoising_with_Kernel_Prediction_Networks
       .text
         h1 概要
         p 携帯含む最近のカメラは連写機能が付いているので，手ブレのあるようなハンドヘルドカメラの連写で撮ったノイズ入り画像をデノイズしようという話．
-          strong 連続撮影におけるカメラモーションに頑健なデノイズCNN
+          strong 連続撮影における手ブレに頑健なデノイズCNN
           |を提案する．
-        p We present a technique for jointly denoising bursts of images taken from a handheld camera.
-        p In particular, we propose a convolutional neural network architecture
-          |for predicting spatially varying kernels that can both align and denoise frames,
-          |a synthetic data generation approach based on a realistic noise formation model,
-          |and an optimization guided by an annealed loss function to avoid undesirable local minima.
-        p Our model matches or outperforms the state-of-the-art across a wide range of noise levels on both real and synthetic data.
+        p 写実的ノイズ定式化に基づく，インターネットから拾ってきた加工済み画像からカメラで撮ったような写実的画像を生成する合成データ生成手法で学習データを作成．
+          |学習中に空間的に変化するカーネルを使い，位置調整とデノイズを実現．
+          |不慮の局所解落ち回避のための，焼きなましロス関数をガイドとした最適化．
     .item2
       .text
         p
-          img(src=`${figpath}item3image.png`,alt="Item3Image")
+          img(src=`${figpath}Burst_Denoising_with_Kernel_Prediction_Networks.png`,alt="Figure1")
     .item3
       .text
         h1 新規性・結果・なぜ通ったか？
-        p 結果は
-          a(href="http://link.com/innerlink/") innerlink
-          |にない．
+        p 流行に乗った手法（合成データによる学習，適応的パラメータ調整）を使って実現．
+          |問題設定も地に足がついている感じがする．
     .item4
       .text
         h1 コメント・リンク集
+        p Google Researchのインターンでやった模様．
         ul
           li
-            a(href="http://link.com/link1/") link1
+            a(href="https://arxiv.org/abs/1712.02327") arXiv
           li
-            a(href="http://link.com/link2/") link2
-          li
-            a(href="http://link.com/link3/") link3
-        ol
-          li
-            a(href="http://link.com/link3/") link3
-          li
-            a(href="http://link.com/link3/") link3
-          li
-            a(href="http://link.com/link3/") link3
+            a(href="http://people.eecs.berkeley.edu/~bmild/kpn/") プロジェクトページ
     .slide_index #{getSlideIndex()}
-    .timestamp 2018.6.4 09:55:40
+    .timestamp 2018.6.4 10:40:17
