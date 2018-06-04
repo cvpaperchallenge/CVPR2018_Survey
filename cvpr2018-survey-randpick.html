@@ -338,7 +338,7 @@ function readit_onClick(){
 			if(response.status===201){
 				var number = response.data.number;
 				var url = response.data.html_url;
-				$("#status").html('<a href="'+url+'" target="blank">Issue #'+number+'</a> で宣言しました. 読了後，コミットコメントの4行目に次を記入してIssueを閉じてください: close #'+number);
+				$("#status").html('<a href="'+url+'" target="blank">Issue #'+number+'</a> で宣言しました. 読了後，プルリクエストのタイトルに次を記入してIssueを閉じてください: Close #'+number);
 			}
 			else{
 				$("#status").text("Error on create an issue.");
