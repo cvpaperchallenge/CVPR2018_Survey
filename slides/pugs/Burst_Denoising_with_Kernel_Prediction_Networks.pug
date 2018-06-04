@@ -1,0 +1,50 @@
++slide
+section#Burst_Denoising_with_Kernel_Prediction_Networks
+  .paper-abstract
+    .title Burst Denoising with Kernel Prediction Networks
+    .info
+      .authors B. Mildenhall, J.T. Barron, J. Chen, D. Sharlet, R. Ng, R. Carroll
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 携帯含む最近のカメラは連写機能が付いているので，手ブレのあるようなハンドヘルドカメラの連写で撮ったノイズ入り画像をデノイズしようという話．
+          strong 連続撮影におけるカメラモーションに頑健なデノイズCNN
+          |を提案する．
+        p We present a technique for jointly denoising bursts of images taken from a handheld camera.
+        p In particular, we propose a convolutional neural network architecture
+          |for predicting spatially varying kernels that can both align and denoise frames,
+          |a synthetic data generation approach based on a realistic noise formation model,
+          |and an optimization guided by an annealed loss function to avoid undesirable local minima.
+        p Our model matches or outperforms the state-of-the-art across a wide range of noise levels on both real and synthetic data.
+    .item2
+      .text
+        p
+          img(src=`${figpath}item3image.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 結果は
+          a(href="http://link.com/innerlink/") innerlink
+          |にない．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://link.com/link1/") link1
+          li
+            a(href="http://link.com/link2/") link2
+          li
+            a(href="http://link.com/link3/") link3
+        ol
+          li
+            a(href="http://link.com/link3/") link3
+          li
+            a(href="http://link.com/link3/") link3
+          li
+            a(href="http://link.com/link3/") link3
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 09:55:40
