@@ -1,0 +1,41 @@
++slide
+section#Importance_Weighted_Adversarial_Nets_for_Partial_Domain_Adaptation
+  .paper-abstract
+    .title Importance Weighted Adversarial Nets for Partial Domain Adaptation
+    .info
+      .authors Jing Zhang, Zewei Ding, Wang Ding, Wanqing Li, Philip Ogunbona
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ターゲットドメインがソースドメインが所持するクラスの一部しか持たずかつラベルがない場合である
+          |partial domain adaptationをadversarial netベースで行う手法を提案。
+          |adversarila netの手前いにドメインを識別するclassifierを用意し、
+          |このclassifierが精度良く判別可能なソースサンプルはターゲットドメインには含まれていないクラスに所属している可能性が高いので重みを小さくし、
+          |逆にconfidenceが低いソースサンプルはターゲットにも存在するクラスに所属している可能性が高いので重みを大きくする。
+          |この重みとソースサンプルを掛け合わせたものとターゲットサンプルをadversarial netで学習させる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Importance_Weighted_Adversarial_Nets_for_Partial_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 4つのドメインを持つOffice+Caltech-10において、ソースは各ドメインで10のラベル、ターゲットは各ドメインで5つのラベルを使用。
+             |同様の設定でOffice-31データセット、Caltech256→Office10データセットで実験を行った。
+          li partial domain adaptationのstate-of-the-artである
+             a(href="https://arxiv.org/abs/1707.07901") SAN
+             |と比較して8つの実験のうち4つの設定でより高い精度を達成。
+          li 
+             a(href="https://arxiv.org/abs/1707.07901") SAN
+             |ではソースのクラスの数だけclassifierを必要とするが、提案手法で必要なclassifierは2つのみ。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.09210") 論文
+    .slide_index #{getSlideIndex()}
