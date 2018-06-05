@@ -1,0 +1,29 @@
+﻿+slide
+section#Dynamic_Zoom-in_Network_for_Fast_Object_Detection_in_Large_Images
+  .paper-abstract
+    .title PhaseNet for Video Frame Interpolation
+    .info
+      .authors Mingfei Gao, et al.
+      .paper_id 1711.05187
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 高解像度画像に出現する様々なサイズの物体を、精度の維持と処理コストの低減を実現しながら検出するフレームワークの提案。最初はダウンサンプリングされた粗い画像から、次に高解像度の細かい画像から検出する。強化学習を用いた2つのネットワークで構成。R-net：低解像度の画像を入力し、その検出結果を用いて高解像度領域を解析する。これにより、どの順番にズームインすべき判断できる。Q-net：ズームの履歴を使用し、拡大領域を順次選択。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180604Dynamic_Zoom-in.jpg`,alt="180604Dynamic_Zoom-in.jpg")
+    .item3
+      .text
+        h1 新規性
+        p しっかり検出する範囲を絞ることで処理量を低減、効率化を図ることができる。基本的な検出の構造はいじっていない。処理する画素数を約70％、処理時間を50％以上短縮し、なおかつ高い検出性能を維持できる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p YOLOやSSDなどの物体検出手法の精度向上にも使える。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.05187.pdf") 論文
+    .slide_index #{getSlideIndex()}
