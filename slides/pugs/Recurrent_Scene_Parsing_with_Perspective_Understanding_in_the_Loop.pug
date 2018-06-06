@@ -1,0 +1,36 @@
++slide
+section#Recurrent_Scene_Parsing_with_Perspective_Understanding_in_the_Loop
+  .paper-abstract
+    .title Recurrent Scene Parsing with Perspective Understanding in the Loop
+    .info
+      .authors Shu Kong, Charless Fowlkes
+      .conference CVPR2018
+    .slide_editor Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p 固定解像度で処理する画像認識システムでは、遠近感を持つシーンの画像において物体が任意のスケールを持つことが問題となる。(距離によって物体のスケールが変わる。カメラから遠いほど物体は小さく、近いほど大きい。)
+          |これ解決するために、物体のスケール(Depthに反比例)によってPoolingサイズを可変にするdepth-aware pooling moduleを提案。遠くの物体の細部は保持され、近くの物体は大きな受容野を持つことができる。
+          |Depth画像は与えられるか直接RGB画像から推定され、Depth情報と意味的予測を利用するRecurrent Refinement Moduleにより、Semantic Segmentationを反復的に精錬する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Recurrent_Scene_Parsing_with_Perspective_Understanding_in_the_Loop.PNG`,alt="Recurrent_Scene_Parsing_with_Perspective_Understanding_in_the_Loop.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 受容野のサイズを変化させるためにDepth情報を利用しこれを自然にCNNに組み込んだこと(geometricな情報を利用する先行研究はあり)。またこのDepth予測をSemantic Segmentationと互いに補い合う用にRecurrent Refinement Moduleを組み込んだこと。NYU-depth-v2の単眼深度推定においてstate-of-the-artな性能とSemantic Segmentationの性能改善を確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Recurrent refinement moduleのLoopにより物体の事前情報を捉えることができるが、Loopによる精度変化が小さい。Curriculum Learningと組み合わせるとおもしろそう。ResNetから得られる特徴はすでにスケールを考慮した特徴が抽出できているようにも思え、depth-aware pooling moduleが活かされているかというと疑問。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1705.07238") 論文
+          li
+            a(href="https://www.ics.uci.edu/~skong2/recurrentDepthSeg") Project Page
+          li
+            a(href="https://github.com/aimerykong/Recurrent-Scene-Parsing-with-Perspective-Understanding-in-the-loop") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.6 19:36:41
