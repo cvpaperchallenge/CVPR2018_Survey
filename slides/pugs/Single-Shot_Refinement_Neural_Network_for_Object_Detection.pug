@@ -1,0 +1,34 @@
+﻿+slide
+section#Single-Shot_Refinement_Neural_Network_for_Object_Detection
+  .paper-abstract
+    .title Single-Shot Refinement Neural Network for Object Detection
+    .info
+      .authors Shifeng Zhang, Longyin Wen, Xiao Bian, Zhen Lei, and Stan Z. Li
+      .conference CVPR2018
+      .paper_id 545
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p SSDをベースにした2つのモジュールから構成されるSingle-shotベースの物体検出アルゴリズム「RefineDet」を提案．Anchor Refine Module (ARM) とObject Detection Module (ODM) と呼ばれるモジュールと，2つを繋いで特徴マップを転送するTransfer Connection Block (TCB) からなる．ARMは物体が存在しない領域を示すNegative Anchor(※)の削減や，Anchorの粗い調整を行う．ODMはTCBを通じて特徴マップを受け取って座標の回帰およびクラス推定を行う．
+        p ※物体候補領域を示すBounding-boxをAnchorと呼ぶ．SSDでDefault boxと呼ばれているものと同じ．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180606_RefineDet1.jpg`,alt="20180606_RefineDet1.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SSDで細かい物体をより精度よく検出するために，一度畳み込んだ特徴マップをDeconvしたりUp samplignしたりする手法がいくつかあるが，この手法はTCBで特徴マップを転送するときに1つ前 (=出力側) の特徴マップをDeconvして足している．Single-shotでありながら2つの役割分割されたモジュールがうまく連携している．推論速度は入力320x320で24.8ms (40.3FPS)，512x512で41.5ms (24.1FPS) @TITAN Xと非常に高速である．精度もDSSDより高性能 (VOC2007: 83.8mAP, MSCOCO: 41.8AP)である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Single-Shotベースの物体検出は前層の特徴マップを持ってくる系が流行り？精度も良い．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.06897") arXiv
+          li
+            a(href="https://github.com/sfzhang15/RefineDet") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.6 01:36:45

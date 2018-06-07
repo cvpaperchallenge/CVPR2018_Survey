@@ -1,0 +1,44 @@
++slide
+section#Real-Time_Monocular_Depth_Estimation_Using_Synthetic_Data_With_Domain_Adaptation_via_Image_Style_Transfer
+  .paper-abstract
+    .title Real-Time Monocular Depth Estimation Using Synthetic Data With Domain Adaptation via Image Style Transfer
+    .info
+      .authors Amir Atapour-Abarghouei, Toby P. Breckon
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 合成画像とそのデプス画像、そして実世界画像を用いてunsupervised domain adaptaionを行うことで、
+          |実世界画像に対するデプス画像を生成する手法を提案。
+          |実世界画像に対するデプスのアノテーションは困難であり、かつ枚数も多くない。
+          |一方合成画像に対するデプスのアノテーションは完璧だが、
+          |実世界画像に対する推定を行うときにドメインシフトが起きてしまう。
+          |提案手法ではUnetによって合成画像からデプスを推定し、Cycle GANによって実世界画像を合成画像に変換することでデプスを推定する手法を提案。
+          |GPUを用いることで44FPSで実行することが可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Real-Time_Monocular_Depth_Estimation_Using_Synthetic_Data_With_Domain_Adaptation_via_Image_Style_Transfer.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ラベルなし実世界画像とラベルあり合成画像に対してCycle GANによるスタイルトランスファーにより
+             |domain adaptaionを行うことで、実世界画像のデプスを推定する手法を提案。
+          li 合成画像、KITTIデータセットでトレーニングを行い、
+             |KITTIデータセットの推定精度をstate-of-the-artと比較した結果、最も高い精度を達成。
+          li Cycle GANによるスタイルトランスファーでは急激な照明変化や影を物体として認識してしまうといったリミテーションが存在する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Cycle GANによってdomain adaptationを行う割合ベーシックな手法だが、その推定精度がstate-of-the-artに優っている。
+          li
+            a(href="http://breckon.eu/toby/publications/papers/abarghouei18monocular.pdf") 論文
+          li
+            a(href="http://dro.dur.ac.uk/24333/") Project page
+          li
+            a(href="https://vimeo.com/260393753") Vimeo
+    .slide_index #{getSlideIndex()}

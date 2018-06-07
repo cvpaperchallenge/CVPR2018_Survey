@@ -1,0 +1,30 @@
++slide
+section#Lose_The_Views_Limited_Angle_CT_Reconstruction_via_Implicit_Sinogram_Completion
+  .paper-abstract
+    .title Lose The Views: Limited Angle CT Reconstruction via Implicit Sinogram Completion
+    .info
+      .authors Rushil Anirudh, Hyojin Kim, Jayaraman J. Thiagarajan, K. Aditya Mohan, Kyle Champley, Timo Bremer
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 手荷物検査や医療用として用いられるComputed Tomography (CT)画像の復元を、限られた角度のSinogramの入力から行う技術（CTNet）を提案する。CTNetは1D/2D畳み込みで構成され、SinogramからFull-viewのCT画像を復元することができる。図はCTNetの学習とテストを示したものである。学習時にはGAN-likeな手法により構成され、入力から1DCNNにより特徴量を生成、GeneratorがCT画像を復元、DiscriminatorがReal/Fakeを判断することでGeneratorを鍛える。テスト時にはさらにFBP (Filtered Back Projection)/WLS (Weighted Least Squares)なども用いて最終的な結果を得る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180527CTNet.png`,alt="180527CTNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 角度が限定されたx線画像から、360度のCT画像を生成するというチャレンジングな試みを行ったことが評価された。同課題に対してGAN-likeな手法を提案し、手法的な新規性も打ち出せたことが採択された基準であると考える。PSNRやセグメンテーションベースの方法で評価を行い、従来法よりも優れた手法であることを示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p CT画像を復元できてしまうのがすごい！
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.10388") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.28 00:07:00

@@ -1,0 +1,46 @@
++slide
+section#Neural_Kinematic_Networks_for_Unsupervised_Motion_Retargetting
+  .paper-abstract
+    .title Neural Kinematic Networks for Unsupervised Motion Retargetting
+    .info
+      .authors Ruben Villegas, Jimei Yang, Duygu Ceylan, Honglak Lee
+      .conference CVPR 2018 Oral
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 異なるキャラクタに対するモーションのリターゲティングをRNN、Cycle consisteny lossを用いることで教師なしで学習する手法を提案。
+          |RNNのencoder-decoderを用いて入力された関節位置、局所座標の原点の4次元モーションから、
+          |各関節のクォータニオンと局所座標の4次元モーションを出力しそれをForwad Kinematicsによってターゲットキャラクターに転写する。
+          |これを教師なしで行うためにCycle consistency loss、GAN lossを導入する。
+          |これによって同じモーションを持った異なるキャラクタのデータが無い場合にも、モーションのリターゲティングを行うことが可能となる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Neural_Kinematic_Networks_for_Unsupervised_Motion_Retargetting.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li RNNのencoder-decoder、Cycle consistency lossを用いることで同じモーションを持った異なるキャラクタのデータが無い場合にも、
+             |モーションのリターゲティングが可能な手法を提案。
+          li モーションのリターゲティングはオンラインで実行可能。
+          li 
+             a(href="https://www.mixamo.com/#/") Mixamo animation data
+             |を用いて、トレーニングは同じモーションを持たない７体のキャラクタの計1646のモーションを使用し、テストには６体のキャラクタを使用した。
+          li RNN、RNNからrecurrent connectionを削除したMLP、
+             |入力モーションを単純にコピーした結果、ablation testを行い推定された関節位置のMSEを比較した結果、提案手法が最も高い精度を達成した。
+          li 特に入力モーションを単純にコピーした場合にはターゲットキャラクタの足が空中に浮いてしまったが、提案手法ではこれを防ぐことに成功している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li クォータニオンの出力で止めているのは、クォータニオンがスケルトンに不変であることと、
+             |ボーンの回転角を制限するロス関数twist lossを取るためだと考えられる。
+          li 異なるキャラクタで同じモーションのGTがあるようなので、教師あり学習との比較を見てみたかった。
+             |一方でことモーションに関しては数値的には悪くても見た目では良し悪しがつかないということもあるので、これを考慮したのかもしれない。
+          li Most of this work was done during Ruben’ internship at Adobe.
+          li
+            a(href="https://arxiv.org/abs/1804.05653") 論文
+    .slide_index #{getSlideIndex()}

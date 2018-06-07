@@ -1,0 +1,32 @@
++slide
+section#Recognize_Actions_by_Disentangling_Components_of_Dynamics
+  .paper-abstract
+    .title Recognize Actions by Disentangling Components of Dynamics
+    .info
+      .authors Yue Zhao, Yuanjun Xiong, Dahua Lin
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 人物行動認識のための表現に対して、モーションとアピアランスの共起表現（Disentangling Components of Dynamics）を提案する。従来の人物行動認識に限らず動画認識ではRGBを入力とするアピアランス、オプティカルフローを画像に投影したフロー画像が用いられていたが、本論文ではそれらの共起表現を新たに提案した。フロー画像とは異なり、特に「アピアランスの変化」をカラー付きで表現できる。さらに、3Dプーリングを提案し、上記３つのチャンネルからの特徴を蓄積する手法についても考案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180606DisentanglingAction.png`,alt="180606DisentanglingAction")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 人物行動認識の文脈において、新規の特徴表現方法であるDisentangling Components of Dynamicsを提案した。同手法はフローとは異なり、RGB値の変化を効果的に捉える方法である。さらに、3Dプーリングも提案し、RGB/Flowも合わせた3チャンネルの特徴を適切にプーリングすることができる。フルモデルを用い、さらにKineticsにて事前学習を行った実験では、95.9%@UCF101を達成、従来の行動認識の大部分よりも高い精度を実現。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Kinetics Datasetの事前学習特徴が（やはり）強い。ImageNetでは91.8%だったものがImageNet+Kineticsで95.9%。転じて、やはりアルゴリズムなどよりもデータを用意するのがもっとも効果的。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Recognize_Actions_by_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://zhaoyue-zephyrus.github.io/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.6 09:16:56
