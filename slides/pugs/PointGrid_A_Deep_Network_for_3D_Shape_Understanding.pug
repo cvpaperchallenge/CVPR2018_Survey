@@ -1,0 +1,37 @@
+﻿+slide
+section#PointGrid_A_Deep_Network_for_3D_Shape_Understanding
+  .paper-abstract
+    .title PointGrid: A Deep Network for 3D Shape Understanding
+    .info
+      .authors Truc Le, Ye Duan
+      .conference CVPR 2018
+      .paper_id 1246
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 3D CNNに用いられる新たな3次元データの表示方法(volumetric grid及びpoints表示をコンバインした表示方法)及び3DCNNネットワークPointGridを提案した．提案の3次元データ表示方法は畳み込みができるregular構造でありながら，ポイントクラウドのローカル幾何情報を抽出できる．
+          li 提案PointGridの処理ポロセスは：①ポイントクラウドを-1,1の区間のユニットボクスに正規化する②cellでユニットボックスを分割し，cellごとのポイント数をKまたは0にダウンサンプリング（増強の場合もある），cell内のKポイントのx,y,zを3チャンネルの特徴として取り扱う．③前述した処理後の表示を3D encoderまたは3D U-Netにより物体識別、パーツセマンティックセグメンテーションに適用する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}PointGrid.png`,alt="PointGrid")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来の3次元表示方法の①occupacy gridやdistance fieldなどはレギュラー構造であるが，3次元形状の近似方法の特徴により低レベルの3次元局所情報しか表示できない，高レベルの特徴を表示するには高解像度が必要だが，CNNに用いたら処理・メモリ―コストが極めて高くなる．②PointNetがポイントクラウドを直接CNN処理を行えるが，max poolingだけでグローバル特徴の抽出を行っているので，局所的な情報抽出が弱い．以上の問題点から， CNN処理を行えるグリッドとポイント表示をコンバインした構造を提案し，occupacy gridより低解像度で豊かな情報を表示でき， PointNetより局所的情報の抽出が強いPointGridを提案した．
+          li 低解像度で有効的に3次元情報を表示できる．例：16，16，16解像度で良い性能を得られる（従来は64，64，64のボリューメトリックグリッド）
+          li Modelnet-50, shape-netで物体識別及びパーツセグメンテーションの2つのタスクで従来の手法と相当レベルの精度を得られた（ボリューメトリックグリッド方法で最もメモリー消耗が少ない）．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li PointNetの考え方を従来のボリューメトリック方法の解像度削減に利用し，16，16，16解像度でも良い性能を得られるのが魅力的
+          li 提案のPointGridが構造的簡潔でほかのネットワークにも前処理の一部として用いられそう
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Le_PointGrid_A_Deep_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.7 13:10:24
