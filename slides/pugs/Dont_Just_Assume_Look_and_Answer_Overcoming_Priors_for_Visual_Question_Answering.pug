@@ -1,0 +1,35 @@
+﻿+slide
+section#Dont_Just_Assume_Look_and_Answer_Overcoming_Priors_for_Visual_Question_Answering
+  .paper-abstract
+    .title Don't Just Assume; Look and Answer: Overcoming Priors for Visual Question Answering
+    .info
+      .authors Xiaojun Xu, Xinyun Chen, Chang Liu, Anna Rohrbach, Trevor Darrel and Dawn Song
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p VQAの学習は学習データの答えの分布に依存してしまう。
+          |そこで、答えの分布が異なる学習データを用いて学習した場合でもGrounded Visual Question Answering(GVQA)を提案した。
+          |GVQAでは質問に答える上で、(1)必要な情報を認識する（例：物体の色を聞かれている場合対象となる物体を認識する)(2)必要な答えを推測する(例：物体の色を聞かれている場合色を答える)の2つが重要であると仮定する。
+          |そこで、画像から質問に答えるために必要な情報を抽出する部分と答えを推定する部分の2つに分けたモデルを構築した。
+          |その際、質問から質問のタイプ(yes/noで答えられるか)を推定することで、質問の答えを異なるネットワークによって出力させる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Dont_Just_Assume_Look_and_Answer_Overcoming_Priors_for_Visual_Question_Answering.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 質問の答えの分布を学習データとテストデータで異なる分布にしたVQA-CPデータセットを提案した。
+          |同データセットを用いて従来手法及びGVQAの精度を調べたところ、従来のデータセットと比べた際の従来手法の精度低下及びGVQAの方が高い精度を記録したことを示した。
+          |また、GVQAによって答えの根拠を説明することが可能となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.00377") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 02:20:01

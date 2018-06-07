@@ -1,0 +1,29 @@
+﻿+slide
+section#MegDet_A_Large_Mini-Batch_Object_Detector
+  .paper-abstract
+    .title MegDet:A Large Mini-Batch Object Detector
+    .info
+      .authors Chao Peng, et al.
+      .paper_id 1711.07240
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 16~256のような大きなバッチサイズでも学習することができる、物体検出手法MegDetの提案。ミニバッチ数を上げられることから、GPUを効率的に使用することができ、学習速度を向上。複数のGPUからうまくバッチ正規化を行う、Cross-GPU Batch Normalizationを提案。これにより、33時間の学習を4時間に短縮、かつ高精度にうまいこと学習できる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180606MegDet.jpg`,alt="20180606MegDet.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 2018年現在の著名な物体検出アルゴリズム(Faster R-CNNやMask R-CNNなど)は、全体のフレームワークやロスの設計に力を入れている。本研究では、手薄と思われるバッチサイズに着目し，新しいアプローチで精度向上を図っている。
+    .item4
+      .text
+        h1 リンク集
+        p GPUの性能(メモリ数)の向上に伴って、この研究は生きてくる可能性がある。学習速度を上げながらCOCO2017一位はすごい。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.07240.pdf") 論文
+    .slide_index #{getSlideIndex()}
