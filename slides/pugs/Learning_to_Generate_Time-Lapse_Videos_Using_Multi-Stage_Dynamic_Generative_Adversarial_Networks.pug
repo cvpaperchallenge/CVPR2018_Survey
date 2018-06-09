@@ -1,0 +1,35 @@
++slide
+section#Learning_to_Generate_Time-Lapse_Videos_Using_Multi-Stage_Dynamic_Generative_Adversarial_Networks
+  .paper-abstract
+    .title Learning to Generate Time-Lapse Videos Using Multi-Stage Dynamic Generative Adversarial Networks
+    .info
+      .authors Wei Xiong, Wenhan Luo, Lin Ma, Wei Liu, Jiebo Luo
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 高解像(128x128)のリアルタイムなタイムラプス動画の生成をするGANを提案．最初のフレームを与えると，近未来のフレームを生成する．新規性としては，
+        ul
+          li タイムラプスデータセットを作成
+          li タイムラプス向きの近未来予測ネットワークを提案（Multi-stage Dynamic Generative Adversarial Network (MD-GAN) ）
+          li モーションのモデリングにGram matrixを導入し，実世界ビデオのモーションを模倣するためのadversarial ranking lossを提案
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Generate_Time-Lapse_Videos_Using_Multi-Stage_Dynamic_Generative_Adversarial_Networks_fig.png`,alt="fig")
+    .item3
+      .text
+        h1 手法
+        p corse-to-fineの２ステージアプローチのGAN．ステージを分けた狙いとしては，１ステージ目でコンテンツの生成を行い，２ステージ目でモーションのモデリングを行うこと．１ステージ目のU-net風のネットワークでは3D convolutions と deconvolutions を含んでいる．
+        p ２ステージ目のDiscriminatorとして，モーションパターンをモデル化するためにGram matrix使って，adversarial ranking lossを算出する．1ステージの出力ビデオ，2ステージ目の出力ビデオ，真のビデオからランキングをとる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1709.07592") arXiv
+        p タイムラプス用のGANが初めて提案されたことが評価されたのかなという印象．定量的な評価はメインがPreference Opinion Scoreで, 他はMSE, PSNR and SSIM．
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.13 12:45:36

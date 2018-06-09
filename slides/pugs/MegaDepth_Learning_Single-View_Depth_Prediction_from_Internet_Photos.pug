@@ -1,0 +1,34 @@
++slide
+section#MegaDepth_Learning_Single-View_Depth_Prediction_from_Internet_Photos
+  .paper-abstract
+    .title MegaDepth: Learning Single-View Depth Prediction from Internet Photos
+    .info
+      .authors Z.Li and N.Snavely
+      .conference CVPR2018
+      .paper_id arXiv:1804.00607
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 画像における深度予測はCV分野において基本的なタスクである．既存の手法は学習データによる制約が伴う．今回提案する手法では，インターネットの画像をデータセットとするMVSの手法を改良し，既存の3D reconstructionとsemantic ラベルを組みわせて大規模な深度予測モデルであるMegaDepthを提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}MegaDepth_Learning_Single-View_Depth_Prediction_from_Internet_Photos.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li セマンティックセグメンテーションを用いた順序による深度関係を自動で拡張
+          li MegaDepthが強力なモデルであることを示すために膨大なインターネット画像を使い検証
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 深度予測にsemantic ラベルを取り入れることで精度が向上．
+          li semanticラベルを用いており，複雑背景における物体検出にも応用可能かも！！
+          li
+            a(href="https://arxiv.org/pdf/1803.01599.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.18 02:33:22

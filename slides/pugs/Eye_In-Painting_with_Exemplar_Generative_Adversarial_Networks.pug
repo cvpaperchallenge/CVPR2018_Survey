@@ -1,0 +1,29 @@
++slide
+section#Eye_In-Painting_with_Exemplar_Generative_Adversarial_Networks
+  .paper-abstract
+    .title Eye In-Painting with Exemplar Generative Adversarial Networks
+    .info
+      .authors Brian Dolhansky, Cristian Canton Ferrer
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要，新規性
+        p eye-Inpaintingを行う手法．顔のようなそれぞれ固有の特徴を持つ画像においてのInpaintingで，従来のDNNによる手法は新しい顔を生成するなどidentityを保たなかった．exemplar informationを利用するconditional GAN（ExGANs）を提案．参照画像やperceptual codeというidentifying information（exemplar information）をGANの複数の箇所で利用することで，perceptualに優れ，identityを反映した結果を生成することができた．identifying informationをGANの複数の箇所で利用することが新しい．さらに，将来の比較のためにEye-Inpaintingのタスクの新しいベンチマークとデータセットを用意した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Eye_In-Painting_with_Exemplar_Generative_Adversarial_Networks_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 手法概要
+        p cGANの一種．参照画像のIdentityを符号化するネットワークと，Generator，Discriminatorから成る．identifying informationを生成に利用するだけでなく，DiscriminatorやPerceptual lossの算出にも利用している．参照画像をベースにした場合と符号をベースにした場合にアプローチを分けている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.03999") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.13 16:12:11

@@ -1,0 +1,44 @@
+﻿+slide
+section#A_Variational_U-Net_for_Conditional_Appearance_and_Shape_Generation
+  .paper-abstract
+    .title A Variational U-Net for Conditional Appearance and Shape Generation
+    .info
+      .authors Patrick Esser, Ekaterina Sutter, Björn Ommer
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 画像を構成する成分はshape(ジオメトリ、ポーズなど)とappearanceであるという考えのもと、
+          |VAEによってappearanceを推定し、
+          |U-Netにshapeを学習させることで入力画像のappearanceとshapeの
+          |片方を保ったままもう一方を変更することが可能なVariational U-Netを提案。
+          |通常のVAEではshape、appearanceの分布を分離することが不可能なため、
+          |VAEに画像とshapeを入力することでappearanceの特徴量を抽出し、U-Netによってshape情報を保つように学習を行う。
+          |shapeとして体のポーズや線画が入力される。トレーニングデータには同一物体に対する様々なバリエーションの画像は必要としない。
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Variational_U-Net_for_Conditional_Appearance_and_Shape_Generation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li VAEでappearanceを、
+             |U-Netでshapeを学習させることで画像に内在する2つの事前分布を別々に学習することができるVarational U-Netを提案。
+          li コンディションによって画像を編集するpix2pixとポーズをコンディションとして人物画像を編集するPG2と比較を行った。
+             |COCO、DeepFashion、Market-1501データセットにおいてSSIMやIS、
+             |関節位置のエラーを測定したところ上記のstate-of-the-artの手法と同等、あるいは上回る精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li VAEとU-Netのいいとこ取りをすることで、2つの変数を扱うことが可能になった。
+          li
+            a(href="https://arxiv.org/abs/1804.04694") 論文
+          li
+            a(href="https://compvis.github.io/vunet/") Project page
+          li
+            a(href="https://github.com/CompVis/vunet") GitHub
+    .slide_index #{getSlideIndex()}

@@ -1,0 +1,41 @@
++slide
+section#Towards_Pose_Invariant_Face_Recognition_in_the_Wild
+  .paper-abstract
+    .title Towards Pose Invariant Face Recognition in the Wild
+    .info
+      .authors Jian Zhao, Yu Cheng, Yan Xu, Lin Xiong, Jianshu Li, Fang Zhao
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 様々な照明環境、表情をした横向き顔画像を入力として、
+          |正面顔画像を生成することで高い個人認証率を達成するGANベースのPose Invariant Model(PIM)というネットワークを提案。
+          |学習で使用できるトレーニングデータが少ないため、効率的かつ過学習を防ぐために以下のようにPIMを構築。
+          li 顔全体を生成するgeneratorと両目・鼻・口の4つのパーツを生成するgeneratorを用意。
+          li 4つのパーツが検出された画像と取得できない画像(横顔画像など)を異なるドメインの画像とみなして、
+             |cross-domain adversarial trainingを行うことで、両目・鼻・口を復元。
+          li 上記のGANを２セット用意し、discriminator同士でlearning to learnを行うことで効率的な学習を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Towards_Pose_Invariant_Face_Recognition_in_the_Wild.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 2つのGANをもつTP-GANやDR-GANは最適化が困難で合ったが、これに対してlearning-to-learnを導入することでこの問題を解決。
+          li MultiPIE、CFPデータセットにおいて様々な角度の顔画像に対する個人識別においてほぼ全てのケースにおいてstate-of-the-artよりも優れた精度を達成。
+             |(唯一Multi-PIEで顔向きが±30°の場合にTP-GANに劣った。)
+          li 横向き顔画像から生成される正面顔画像において、既存手法ではテクスチャが崩れていたり完全に正面を向いていない場合があったが、
+             |提案手法では見た目が良い正面顔画像を生成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li データセットが少ないという根本的な問題に対して、cross-domain adversarial training、
+             |learing to learnを行うことで解決しているが、これがデータベースが欠乏している他の問題設定でも解決できるのかを試してみたい。
+          li
+            a(href="https://arxiv.org/abs/1803.00130") 論文
+    .slide_index #{getSlideIndex()}

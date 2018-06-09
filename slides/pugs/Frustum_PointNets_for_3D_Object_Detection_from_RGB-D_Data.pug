@@ -1,0 +1,29 @@
+﻿+slide
+section#Frustum_PointNets_for_3D_Object_Detection_from_RGB-D_Data
+  .paper-abstract
+    .title Frustum PointNets for 3D Object Detection from RGB-D Data
+    .info
+      .authors Charles R. Qi, et al.
+      .paper_id 1711.08488
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 屋内および屋外シーンにおける3D物体検出手法のfrustum PointNetsの提案。まず、RGBデータからCNNで2Dの物体候補領域を推定する。次に、点群の深度情報を用いて、各物体領域の視錐台(viewing frustum)を推定する。最後に、frustum PointNetsによって3Dバウンディングボックスを推定。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180604_PointNets.jpg`,alt="20180604_PointNets.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 従来の手法では、画像や3Dボクセルに処理を加えて、3Dデータの自然なパターンや不変性を曖昧にしている。本手法では、RGB-Dスキャンによって生の点群データを直接操作する。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 2Dと3Dで別々のネットワークを使うことで、小さな物体やオクルージョン、まばらな点群についても正確に推定することができる。リアルタイムも実現。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.08488.pdf") 論文
+    .slide_index #{getSlideIndex()}

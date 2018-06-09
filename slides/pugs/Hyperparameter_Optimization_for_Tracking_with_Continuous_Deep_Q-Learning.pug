@@ -1,0 +1,35 @@
++slide
+section#Hyperparameter_Optimization_for_Tracking_with_Continuous_Deep_Q-Learning
+  .paper-abstract
+    .title Hyperparameter Optimization for Tracking with Continuous Deep Q-Learning
+    .info
+      .authors Xingping Dong et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Object Tracking 手法において用いられる複数の Hyperparameter を強化学習によって各シークエンス毎に最適化する手法を提案. Hyperparameter の選択を Action, Tracking の精度の良さを Reward として, Normalized Advantage Functions (NAF) を用いた強化学習を行なっている. また, Heuristic を導入することで, 学習の遅さの問題を緩和した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Hyperparameter-Optimization-for-Tracking-with-Continuous-Deep-Q-Learning.png`,alt="fukuhara-Hyperparameter-Optimization-for-Tracking-with-Continuous-Deep-Q-Learning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Object Tracking における Hyperparameter の最適化問題を強化学習の問題として定式化した.
+          li 上記の問題を既存の強化学習手法である NAF　(連続な行動が取れるように拡張された Q 学習の手法) を用いて解いた.
+          li 強化学習を適用した際に, 状態空間の次元の多さなどに由来する学習速度の遅さを huristic を導入することで緩和した.
+          li OTB-2013 や VOT-2015 などのデータセットを用いて既存研究(Siam-py等)と比較. 同程度の速度で, 正確性とロバスト性の両方に置いて既存手法を上回った. 
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://www.porikli.com/mysite/pdfs/porikli%202018%20-%20Hyperparameter%20optimization%20for%20tracking%20with%20continuous%20deep%20Q-learning.pdf" target="blank") [論文] Hyperparameter Optimization for Tracking with Continuous Deep Q-Learning
+          li
+            a(href="https://arxiv.org/abs/1603.00748" target="blank") [関連論文: NAF] Continuous Deep Q-Learning with Model-based Acceleration
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.12 13:05:55

@@ -1,0 +1,34 @@
++slide
+section#Real-world_Anomaly_Detection_in_Surveillance_Videos
+  .paper-abstract
+    .title Real-world Anomaly Detection in Surveillance Videos
+    .info
+      .authors Waqas Sultani, Chen Chen, Mubarak Shah
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 監視カメラの文脈において異常検出を実行する研究である。ここで、異常検出においてビデオに対して時間のアノテーションを付与するのは非常にコストのかかる作業であるが、ここに対して弱教師付き学習の一種であるMultiple Instance Learning (MIL)を適用して正常/異常ラベルが付いたビデオから異常検出を行うモデルDeep Anomaly Ranking Modelを提案する。さらに、13種類の異常シーン（e.g. road accident, robbery）を収集したデータセットを提供することで同問題の解決を実践した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180604AnomalyDetection.png`,alt="180604AnomalyDetection")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 弱教師付き学習であるMILをベースとして異常検出を行なった、おそらく初めての例であり、その精度は従来法による精度を上回りState-of-the-artとなった（AUCにて75.41を達成）。また、1900の動画に対して13種類の異常を収集したデータセットを構築し、公開した。同データセットは合計で128時間にも及ぶ。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 異常の動画データセットを公開したことが評価できるポイント。現在ではYouTube検索とダウンロードである程度のデータセットは構築できそう？（ここらへんを効率化する研究自体があってもよい）
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.04264") 論文
+          li
+            a(href="http://crcv.ucf.edu/cchen/") Project
+          li
+            a(href="http://crcv.ucf.edu/projects/real-world/") DB
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 20:22:54

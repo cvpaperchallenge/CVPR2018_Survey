@@ -1,4 +1,4 @@
-﻿+slide
++slide
 section#Super-Resolving_Very_Low-Resolution_Face_Images_with_Supplementary_Attributes
   .paper-abstract
     .title Super-Resolving Very Low-Resolution Face Images with Supplementary Attributes
@@ -22,15 +22,16 @@ section#Super-Resolving_Very_Low-Resolution_Face_Images_with_Supplementary_Attri
     .item3
       .text
         h1 新規性・結果・なぜ通ったか？
-        p ・入力は16x16画像、出力は入力画像が128x128に超解像度化された画像。
-        p ・PSNR、SSIMを評価指標として既存手法と比べたところもっとも良い精度を得た。
-        p ・既存手法で入力されたLRに対して一意的なHRのみしか出力することができなかった。
-           |一方提案手法では入力するアトリビュートに伴って出力するHRの見た目を変更することが可能。
+        ul
+          li 入力は16x16画像、出力は入力画像が128x128に超解像度化された画像。
+          li PSNR、SSIMを評価指標として既存手法と比べたところもっとも良い精度を得た。
+          li 既存手法で入力されたLRに対して一意的なHRのみしか出力することができなかった。
+             |一方提案手法では入力するアトリビュートに伴って出力するHRの見た目を変更することが可能。
     .item4
       .text
         h1 コメント・リンク集
-        p トレーニングで使用したデータセットはCelebAであり、使用したアトリビュートはCelebAに付属する40種類のうちからgender, ageなど18種類。
         ul
+          li トレーニングで使用したデータセットはCelebAであり、使用したアトリビュートはCelebAに付属する40種類のうちからgender, ageなど18種類。
           li
             a(href="https://basurafernando.github.io/papers/XinYuCVPR18.pdf") 論文
     .slide_index #{getSlideIndex()}

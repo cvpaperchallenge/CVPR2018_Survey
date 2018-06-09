@@ -1,0 +1,32 @@
++slide
+section#Generative_Non-Rigid_Shape_Completion_with_Graph_Convolutional_Autoencoders
+  .paper-abstract
+    .title Generative Non-Rigid Shape Completion with Graph Convolutional Autoencoders
+    .info
+      .authors Or Litany, Alex Bronstein, Michael Bronstein, Ameesh Makadia
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 非剛体的な変形を伴う３Dオブジェクトの形状補完．部分的な形状補完のための学習ベースの手法としてgraph-convolutionを含むVAEを提案した．推論時には，既知の部分的な入力データに合う形状を生成できる変数を潜在空間で探すように最適化する．結果として人体と顔の合成データ，リアルなスキャンデータに対する補完が可能であることを示した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Generative_Non-Rigid_Shape_Completion_with_Graph_Convolutional_Autoencoders_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 従来手法よりも優れている点
+        ul
+          li 訓練中に部分的な形状を見る必要なしに，任意スタイルで一部として切り出されたデータを扱えること
+          li 人間以外にも，任意の種類の３Dデータに適用できる手法であること
+          li 形状補完はデータに適合する解が複数ある問題であり，複数のもっともらしい解を生成し，この問題に対応できること
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.00268") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.13 16:22:39

@@ -1,0 +1,36 @@
++slide
+section#DeblurGAN_Blind_Motion_Deblurring_Using_Conditional_Adversarial_Networks
+  .paper-abstract
+    .title DeblurGAN: Blind Motion Deblurring Using Conditional Adversarial Networks
+    .info
+      .authors Orest Kupyn, Volodymyr Budzan, Mykola Mykhailych, Dmytro Mishkin, Jiˇri Matas
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p motion deblurringのためのGAN(DeblurGAN)を提案．structural similarity measureとアピアランスでSoTA．ブラーを除去した画像で物体検出の精度を出すことで，ブラー除去モデルの質を評価するという方法を提案．提案手法は，質だけでなく実行速度も優れており，従来手法の５倍の速さがある．モーションブラーのかかった画像を合成するための方法を紹介し，そのデータセットもコード，モデルとともに公開．
+    .item2
+      .text
+        p
+          img(src=`${figpath}DeblurGAN_Blind_Motion_Deblurring_Using_Conditional_Adversarial_Networks_fig.png`,alt="Image")
+          br
+          |ブレを除去してからYOLOで検出すると精度が良くなることを示している．これをDeblurモデルの指標にすることができると主張．
+    .item3
+      .text
+        h1 手法
+        ul
+          li loss：WGANによるAdversarial lossとPerceptual loss
+          li 構造：畳み込み，instance normalization層，ReLU関数から成るResBlockの繰り返しがメインで，出力するときに入力画像を加算するglobal skip connectionを持つ．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 最近のGAN手法やテクニックを詰め込んで，新しく作ったデータセットを利用したらSoTAがでたという感じ．テクニカルな貢献はあまりなさそう．
+        ul
+          li
+            a(href="https://github.com/KupynOrest/DeblurGAN") GitHub
+          li
+            a(href="https://arxiv.org/abs/1711.07064") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 11:05:29

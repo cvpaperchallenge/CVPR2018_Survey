@@ -1,0 +1,34 @@
+﻿+slide
+section#Good_View_Hunting_Learning_Photo_Composition_from_Dense_View_Pairs
+  .paper-abstract
+    .title Good View Hunting: Learning Photo Composition from Dense View Pairs
+    .info
+      .authors Zijun Wei, Jianming Zhang, Xiaohui Shen, Zhe Lin, Radomir Mech, Minh Hoai, Dimitris Samaras
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像の構図の良し悪しを評価するComparative Photo Compositionデータセットを構築。
+          |10800枚の画像から24の構図の画像を作成し、クラウドソーシングによって2つの構図のどちらがいいかをアノテーションした。
+          |また、入力画像をどのようにクロッピングすると良い構図になるかを提示するシステムを構築した。
+          |その際、IOUを評価尺度にすると構図的に評価が低いものも高いスコアになるため、画像を評価するネットワークから得られるスコアを指標とした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Good_View_Hunting_Learning_Photo_Composition_from_Dense_View_Pairs.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のデータセットでは画像に対してスコアがついていたのに対して、構図の異なる2枚の画像どちらがいいかを100万ペアアノテーションを行った。
+          |構図推薦システムは、ユーザースタディの結果従来手法よりも良いと感じる人が多いことを確認した。
+          |また、計算速度も従来手法と比べはるかに向上した(75FPS+)．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://www.zijunwei.org/VPN_CVPR2018.html") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.28 00:50:47

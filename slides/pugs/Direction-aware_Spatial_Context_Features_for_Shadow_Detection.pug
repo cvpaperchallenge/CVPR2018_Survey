@@ -1,0 +1,33 @@
++slide
+section#Direction-aware_Spatial_Context_Features_for_Shadow_Detection
+  .paper-abstract
+    .title Direction-aware Spatial Context Features for Shadow Detection
+    .info
+      .authors X.Hu, L.Zhu, C.W.Fu, J.Qin, and P.A.Heng
+      .conference CVPR2018
+      .paper_id arXiv:1712.04142
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 影の周りには様々な背景があり，セマンティクスを理解しなければならないため，影の検出は基本的のようで困難である．それに対して，方向認識の方法で画像のコンテキストを解析することで影検出手法を提案する．空間のRNN内のコンテキスト特徴が密集している箇所にアテンションを導入することで方向認識の手法を定式化する．97％の検出精度と38％のバランスエラー率の低減を実現．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Direction-aware_Spatial_Context_Features_for_Shadow_Detection.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 空間的なRNNに対してアテンション機構を設計しdirection-aware spatial context (DSC)モジュールを構築することで方向認識の方法で空間的なコンテキストを学習．
+          li 重み付き交差エントロピー損失が影と影でない領域における検出精度のバランスが取れるように設計．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 影の検出だけでなく，顕著性検出およびセマンティックセグメンテーションなどの他のアプリケーションで使用する事もできそう．
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.04142.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.15 02:31:23

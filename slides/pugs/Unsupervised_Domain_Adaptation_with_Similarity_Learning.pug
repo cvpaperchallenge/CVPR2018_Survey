@@ -1,0 +1,38 @@
++slide
+section#Unsupervised_Domain_Adaptation_with_Similarity_Learning
+  .paper-abstract
+    .title Unsupervised Domain Adaptation with Similarity Learning
+    .info
+      .authors Pedro Pinheiro
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ソースドメイン(S)の各カテゴリの重心ベクトルと、S・ターゲットドメイン(T)から得られたadversarial featuresの行列積を
+          |用いることでdomain adaptation(DA)を行う手法を提案。
+          |従来のDAではSとTのそれぞれから得られる特徴量をGANによってdomai-confusionを行い、
+          |Sで学習したラベル識別器をTに適用するという手法だった。提案手法ではadversarial-confusionに加えて、
+          |Sの各カテゴリにおける重心ベクトルとgeneratorから得られる特徴量の類似度を高くするように学習しDAを行う手法を提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Unsupervised_Domain_Adaptation_with_Similarity_Learning.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li domain-confusionに加えてラベルごとの重心ベクトルとgeneratorから得られる特徴量の類似度を
+             |高くするように学習しDAを行う手法を提案。
+          li MNIST・USPS・MISNT-M、Officde-31, VisDAデータセットで検証。
+             |11のdomain adaptationにおいて、9つの設定においてstate-of-the-artよりも高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li この論文に限らずDAを提案する論文ではdomain-confusionを可視化しており、
+             |数値評価だけではなく、ドメインの分布の可視化画像を載せることも重要だと思われる。
+          li
+            a(href="https://arxiv.org/abs/1711.08995") 論文
+    .slide_index #{getSlideIndex()}
