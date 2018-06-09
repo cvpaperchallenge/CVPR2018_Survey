@@ -1,0 +1,30 @@
++slide
+section#Multistage_Adversarial_Losses_for_Pose-Based_Human_Image_Synthesis
+  .paper-abstract
+    .title Multistage Adversarial Losses for Pose-Based Human Image Synthesis
+    .info
+      .authors Chenyang Si, Wei Wang, Liang Wang, Tieniu Tan
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 人物の姿勢を事前情報として、ある視点の人物画像の入力からビューポイントを変更した人物画像を合成する手法を提案する。右図では3ステージのフレームワークについて示しており、最初のステージでは角度情報を挿入した姿勢変換、次のステージでは角度変化した人物にアピアランスを挿入、最後に背景を自然に挿入するステージ、という感じで変換が進んで行く。どう枠組みを実行するため、特にステージ２ではAdversarial Lossが、ステージ３ではForeground/Global Adversarial Lossを適用して誤差を計算する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609PoseHumanSynthesis.png`,alt="180609PoseHumanSynthesis")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 評価は生成した画像のPSNR（シグナル・ノイズ比）、正解値との誤差SSIMを計算して、提案手法がもっとも優れた数値を出していることを明らかにした（SSIM: 0.72, PSNR: 20.62）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データセットの環境が固定だからできる？背景モデルの空間が非常に小さいので変換した際にもテクスチャが崩れずに生成できる？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Si_Multistage_Adversarial_Losses_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 13:47:06
