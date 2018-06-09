@@ -1,0 +1,34 @@
++slide
+section#Multi-View_Harmonized_Bilinear_Network_for_3D_Object_Recognition
+  .paper-abstract
+    .title Multi-View Harmonized Bilinear Network for 3D Object Recognition
+    .info
+      .authors Tan Yu, Jingjing Meng, Junsong Yuan
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 3次元物体認識を実行するMulti-view Harmonized Bilinear Network (MHBN)を提案する。異なるビューの特徴量を学習するために基本的にはパッチベースでマッチングを行う。Polynomial Kernel/Bilinear Poolingの関係性を記述するために、畳み込みによる3次元物体表現とBilinear Poolingを実行する。MHBNの枠組みはEnd-to-Endでの学習が可能である。構造は右図のように示され、畳み込みにより特徴マップ（3次元物体表現）を生成、最後にBilinear Poolingを通り抜けて識別を実行。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609MultiviewHarmonized.png`,alt="180609MultiviewHarmonized")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3次元物体認識の場面においてSoTA。ModelNet40, ModelNet10ではそれぞれ94.7 (Instance)/93.1 (Class), 95.0 (Instance)/95.0 (Class)である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 3次元物体認識ではホントの意味での大規模DBはないのだろうか？ModelNetにしてもShapeNetにしてもCADをベースにしている？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_Multi-View_Harmonized_Bilinear_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://cse.buffalo.edu/~jsyuan/") 著者
+          li
+            a(href="http://vis-www.cs.umass.edu/mvcnn/") MVCNN
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 22:40:37
