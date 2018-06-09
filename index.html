@@ -8,7 +8,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-118576057-1');
-</script><body><div class="reveal"><div class="slides"><section id="Collaborative_and_Adversarial_Network_for_Unsupervised_domain_adaptation"><div class="paper-abstract"><div class="title">Title title</div><div class="info"><div class="authors">Author</div><div class="conference">CVPR 2018 Poster</div></div><div class="slide_editor">Kazuki Inoue</div><div class="item1"><div class="text"><h1>概要</h1><p>CNNの浅い層ではドメイン固有の特徴量を、深い層ではドメインに不変な特徴量を取得することでdomain adaptationを行うCollaborative and Adversarial Network(CAN)を提案。
+</script><body><div class="reveal"><div class="slides"><section id="Collaborative_and_Adversarial_Network_for_Unsupervised_domain_adaptation"><div class="paper-abstract"><div class="title">Collaborative and Adversarial Network for Unsupervised domain adaptation</div><div class="info"><div class="authors">Weichen Zhang, Wanli Ouyang, Wen Li, Dong Xu</div><div class="conference">CVPR 2018 Poster</div></div><div class="slide_editor">Kazuki Inoue</div><div class="item1"><div class="text"><h1>概要</h1><p>CNNの浅い層ではドメイン固有の特徴量を、深い層ではドメインに不変な特徴量を取得することでdomain adaptationを行うCollaborative and Adversarial Network(CAN)を提案。
 従来の<a href="http://jmlr.org/papers/volume17/15-239/15-239.pdf">Domain Adversarial Training of Neural Network(DANN)</a>ではドメインに不変な特徴量を学習することができるものの、ターゲットドメイン固有の特徴量を得ることが難しいという問題があった。
 提案手法では、CNNの浅い層では低次の特徴量を、深い層では高次の特徴量を取得することができることに着目し、
 CNNのそれぞれのブロックに対するdomain discriminatorに対して、浅いブロックではソースドメインとターゲットドメインを識別可能となるように、
