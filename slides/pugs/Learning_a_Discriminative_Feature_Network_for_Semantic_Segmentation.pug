@@ -1,0 +1,31 @@
++slide
+section#Learning_a_Discriminative_Feature_Network_for_Semantic_Segmentation
+  .paper-abstract
+    .title Learning a Discriminative Feature Network for Semantic Segmentation
+    .info
+      .authors Changqian Yu, Jingbo Wang, Chao Peng, Changxin Gao, Gang Yu, Nong Sang
+      .conference CVPR2018
+    .slide_editor Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p Semantic Segmentationにおけるintra-class inconsistencyとinter-class indistinctionの問題を、Discriminative Feature Network(DFN)によって対処。
+          |intra-class inconsistencyは図の牛の一部を馬と誤認識するような現象。inter-class indistinctionは、図のコンピュータのように外見が似ている対象の区別することが難しい現象。前者の問題をmulti-scaleかつglobal contextな情報を抽出するChannel Attention Block(CAB)を持つSmooth Networkにより、後者の問題をbottom-upなBorder Networkにより緩和する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_a_Discriminative_Feature_Network_for_Semantic_Segmentation.PNG`,alt="Learning_a_Discriminative_Feature_Network_for_Semantic_Segmentation.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Semantic Segmentationをpixel単位のラベル付けだけではなく、物体の1つのカテゴリに対して一貫したセマンティックラベル付けをするタスクとして考えた。それゆえのBorder Networkと考える。上記の2つの問題は、必要な情報が異なるゆえ、対処の仕方をCABとU-Net構造に似たSmooth NetworkとBottom-upなBorder Networkとうまく分解している。PASCAL VOC 2012でmean IoU 86.2%、Cityscapesで80.3%を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 実験で各モジュールの効果を検証していたが何が効いているのかよくわからない。直感的にはBorder NetworkとSmooth Networkの分離は良いアイデアと感じたが、この分離による効果は1%未満。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.09337") arxiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.11 07:32:22
