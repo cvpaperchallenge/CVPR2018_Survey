@@ -1,0 +1,33 @@
++slide
+section#Adversarial_Complementary_Learning_for_Weakly_Supervised_Object_Localization
+  .paper-abstract
+    .title Adversarial Complementary Learning for Weakly Supervised Object Localization
+    .info
+      .authors Xiaolin Zhang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 弱教師ありの Object Localization の研究. 2つの Classifier を並列に配置し, 片方の classifier で注目された領域を他方の入力から取り除いておくことで, それぞれが異なる領域に反応するような構造となっている. 評価実験では ILSVRC dataset の localization　のタスクで 45.15% (new state-of-the-art) の誤差率を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Adversarial-Complementary-Learning-for-Weakly-Supervised-Object-Localization.png`,alt="fukuhara-Adversarial-Complementary-Learning-for-Weakly-Supervised-Object-Localization.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 全結合層の最後に畳み込み層を1つ追加することで, CAM [Zhou＋16] と同等の object localization maps を事後処理無しで得られることを数式で示した
+          li 画像から畳み込み層によって抽出した特徴量を, 並列に配置した　classifier に入力する
+          li 片方の classifier から出力された object localization map で注目されていた領域を消去したものを, 他方の入力とすることで両方の classifier を異なる領域に反応させる
+          li ILSVRC dataset 等を用いて行った評価実験では Localization と Classification の両タスクにおいて, state-of-the-art [Zhou+16, Singh+17] と同等か優位な結果を達成した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.06962" target="blank") [論文] Adversarial Complementary Learning for Weakly Supervised Object Localization
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 00:32:55

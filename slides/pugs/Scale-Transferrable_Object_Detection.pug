@@ -1,0 +1,28 @@
+﻿+slide
+section#Scale-Transferrable_Object_Detection
+  .paper-abstract
+    .title Scale-Transferrable Object Detection
+    .info
+      .authors Peng Zhou, et al.
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p マルチスケールに対応した物体検出器であるScale-Transferrable Object Detection(STDN)の提案。STDNは DenseNet-169をベースとし、複数の物体スケールに対応するためのsuper-resolution layersを搭載。このsuper-resolution layersによってアップサンプリングすることで高解像度のfeature mapを得られるので小さな物体に対応し、大きな物体にはpooling層で対応する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180690STDN.jpg`,alt="20180690STDN.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 従来の物体検出手法では、様々なサイズのfeature mapを組み合わせるなどして、スケールに対応していたが、やはり小さな物体は苦手。本手法では、super-resolution layersという新たな手法によって改善を図る。
+    .item4
+      .text
+        h1 結果・リンク集
+        p PASCAL VOCやMS COCOなどで精度向上を示している。個人的には、物体検出が苦手とする小さな物体に着目したデータセットなどを用意したうえで精度を比較してみたい。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1376.pdf") 論文
+    .slide_index #{getSlideIndex()}
