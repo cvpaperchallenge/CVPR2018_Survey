@@ -1,0 +1,41 @@
++slide
+section#Fully_Convolutional_Adaptation_Networks_for_Semantic_Segmentation
+  .paper-abstract
+    .title Fully Convolutional Adaptation Networks for Semantic Segmentation
+    .info
+      .authors Yiheng Zhang, Zhaofan Qiu, Ting Yao, Dong Liu, Tao Mei
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p スタイル特徴量を用いて画像の見た目を変換するネットワークとドメイン間で不変な特徴量を得るネットワークを用いて、
+          |domain adaptationを行うことで教師無しでセマンティックセグメンテーションを行うFully Convolutional 
+          |Adaptation Networks (FCAN)を提案。画像の見た目を変換するAppearance Adaptation Networks (AAN)では
+          |ホワイトノイズから画像を生成し、ソースドメインの特徴量マップ、ターゲットドメインのもつ
+          a(href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf") スタイル特徴量
+          |が小さくなるように学習を行うことで、画像をもう一方のドメインの見た目になるように変換する。
+          |ドメイン間で不変な特徴量を得るRepresentation Adaptation Networks (RAN)ではsemantic classificationと、
+          |それぞれのドメインにから得られた特徴量マップに対するadversarial lossと、
+          |ASPPによって得られた特徴量マップに対してピクセルごとにadversarial lossを適用。
+          |ドメインとして実画像とゲーム画像で検証している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fully_Convolutional_Adaptation_Networks_for_Semantic_Segmentation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li style transferと同様の考え方でドメイン間の画像変換を行いsemantic classification、特徴量マップ、dilated convolutional layerから得られた特徴量マップに対する各ピクセルに対して
+             |adversarial lossをとることで教師無しでセマンティックセグメンテーションを行う。
+          li GTA5とcity spaceを用いて、セマンティックセグメンテーションの精度をstate-of-the-artと比較した結果、
+             |19クラスのうち17クラスで最も高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1761.pdf") 論文
+    .slide_index #{getSlideIndex()}
