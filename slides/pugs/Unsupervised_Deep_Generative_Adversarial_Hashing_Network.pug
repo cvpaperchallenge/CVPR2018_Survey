@@ -1,0 +1,40 @@
++slide
+section#Unsupervised_Deep_Generative_Adversarial_Hashing_Network
+  .paper-abstract
+    .title Unsupervised Deep Generative Adversarial Hashing Network
+    .info
+      .authors Kamran Ghasedi Dizaji, Feng Zheng, Najmeh Sadoughi, Yanhua Yang, Cheng Deng, Heng Huang
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 教師無しで画像をバイナリに符号化するハッシュ関数であるHashGANを提案。
+          |ハッシュ関数が満たすべき条件は画像が変換されて同じハッシュ値を返すこと、異なる画像には異なるハッシュ値を与えることである。
+          |既存の教師無しハッシュ関数は過学習のために精度がよくなかった。提案手法であるHashGANはgenerator、discriminator、
+          |encoderからなる。学習はGAN loss、encoderによって生成されるハッシュ値のエントロピーが小さくなるように、
+          |出現するハッシュ値が同じになるように、画像の変換によるハッシュ値が不変となるように、画像ごとのハッシュ値が固有となるように、
+          |合成画像をエンコードした際のハッシュ値のL2ロス、実画像と合成画像を入力とした際のdiscriminatorの最後の層に対して
+          |feature matchingを行う。またdiscriminatorはデータ固有の情報を識別し、encoderはデータ固有の情報を抽出しようとするため、
+          |両者の目的が一致しているのでパラメタを共有して学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Unsupervised_Deep_Generative_Adversarial_Hashing_Network.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li GAN、discriminatorとパラメタを共有しているencoder、ハッシュ関数が満たすべきロス関数を導入したHashGANを提案。
+          li image retrieval、image clusteringで手法の優位性を検討。image retrievalでは既存のunsupervised hash functionとの比較を行い、
+             |最も高い精度を達成。image clusteringではstate-of-the-artと同等の精度を達成。
+          li ablation testにより、特にadversarial loss, feture matching, L2ロス、画像変換によるハッシュの不変性の考慮の影響が大きいことがわかった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 教師無し学習でもタスク特化の手法であり、ハッシュ関数の性質をよく考察した上でモデルを設計している。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0909.pdf") 論文
+    .slide_index #{getSlideIndex()}
