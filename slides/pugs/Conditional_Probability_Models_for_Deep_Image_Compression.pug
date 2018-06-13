@@ -1,0 +1,32 @@
++slide
+section#Conditional_Probability_Models_for_Deep_Image_Compression
+  .paper-abstract
+    .title Conditional Probability Models for Deep Image Compression
+    .info
+      .authors Fabian Mentzer, Eirikur Agustsson, Michael Tschannen, Radu Timofte, Luc Van Gool
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 画像復元の問題は復元エラー（distortion）とエントロピー（rate）とのトレードオフであるが、本論文ではこのトレードオフをできる限り解消し、画像圧縮を行うAutoEncoderを提案する。著者らはコンテキストモデルから直接的に潜在表現のエントロピーを復元するモデルを考案して同問題に取り組んだ。AutoEncoderには条件付き確率モデルを学習した3D-CNNを適用。実験ではSSIMを用いて従来の畳み込みによるAutoEncoderモデルよりも良好な精度を実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180614DeepImageCompression.png`,alt="180614DeepImageCompression")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3D-CNNにより条件付き学率モデルを学習したAutoEncoderモデルを考案したことが新規性であり、JPEG(2000)などよりも良い圧縮法であることを示し、Rippel&Bourdevらのモデルと同等レベルの精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 画像圧縮、超解像の違いがいまいちよくわからなくなってきた。評価方法の違い？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Mentzer_Conditional_Probability_Models_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://relational.github.io/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.14 08:55:34
