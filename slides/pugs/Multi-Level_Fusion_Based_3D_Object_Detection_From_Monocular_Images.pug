@@ -1,0 +1,34 @@
++slide
+section#Multi-Level_Fusion_Based_3D_Object_Detection_From_Monocular_Images
+  .paper-abstract
+    .title Multi-Level Fusion Based 3D Object Detection From Monocular Images
+    .info
+      .authors Bin Xu et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 一枚のRGB画像から３次元物体認識を行う研究. region-based な２次元の物体検出器を３次元に拡張する一般的なフレームワークを提案し, end-to-end のネットワークで２次元と３次元の物体位置と物体のクラスを同時に推定することが可能. KITTI dataset を用いた評価実験では state-of-the-art の結果を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Multi-Level-Fusion-Based-3D-Object-Detection-From-Monocular-Images.png`,alt="fukuhara-Multi-Level-Fusion-Based-3D-Object-Detection-From-Monocular-Images.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li end-to-end のネットワークで単一のRGB画像から物体のクラスと２次元, ３次元の物体位置, ３次元の物体の方向などを同時に推定
+          li RGB画像に MonoDepth を用いて推定した Depth 画像を連結したものを CNN に入力し, Faster-RCNN と同様の方法で Region Proposal を生成
+          li また, Depth 画像から Point Cloud (XYZ Map)を推定
+          li 上記の２つを連結したものを全結合層に通して, 物体位置と物体のクラスの推定を行う
+          li KITTI dataset を用いた評価実験では　Mono3D, 3DOP, Deep3DBox などと比較して優位な結果を達成した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2380.pdf" target="blank") [論文] Multi-Level Fusion Based 3D Object Detection From Monocular Images
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.15 1:01:55
