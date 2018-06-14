@@ -1,0 +1,36 @@
++slide
+section#GraphBit_Bitwise_Interaction_Mining_via_Deep_Reinforcement_Learning
+  .paper-abstract
+    .title GraphBit: Bitwise Interaction Mining via Deep Reinforcement Learning
+    .info
+      .authors Yueqi Duan et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Deep binary descriptor においてバイナリを生成する際に0と1の境界に位置する曖昧なビット (ambiguous bit) の問題に取り組んだ研究. 強化学習によって学習したビット間の implicit な関係性を付加することで曖昧性を緩和する GraphBit を提案. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-GraphBit-Bitwise-Interaction-Mining-via-Deep-Reinforcement-Learning.png`,alt="fukuhara-GraphBit-Bitwise-Interaction-Mining-via-Deep-Reinforcement-Learning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Binary descriptor における曖昧なビット (ambiguous bit) の問題を緩和するためにビット間の関係性を付加した GraphBit を提案
+          li CNNからの出力された正規化された特徴量（binary descriptor）に対して Grpah 構造を付加する
+          li ビット間の相互関係をマイニングする過程をマルコフ過程として定式化し, 強化学習（Policy Gradient）で学習
+          li State は現在の Graph の構造
+          li Atction は GraphBit に新しいエッジを１つ追加するか, 既存のエッジを１つ削除
+          li Reward は t ステップと t+1 ステップにおけるロス関数の減少度合いから計算
+          li CIFAR-10, Brown, HPatches dataset を用いた評価実験では mean average precision (mAP) の評価尺度でそれぞれ平均 9.64%, 8.84%, 3.22% の精度の向上を達成した 
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Duan_GraphBit_Bitwise_Interaction_CVPR_2018_paper.pdf" target="blank") [論文] GraphBit: Bitwise Interaction Mining via Deep Reinforcement Learning
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.13 2:43:55
