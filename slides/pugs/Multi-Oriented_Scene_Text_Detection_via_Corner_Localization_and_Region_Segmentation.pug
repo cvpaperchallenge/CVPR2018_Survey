@@ -1,0 +1,34 @@
++slide
+section#Multi-Oriented_Scene_Text_Detection_via_Corner_Localization_and_Region_Segmentation
+  .paper-abstract
+    .title Multi-Oriented Scene Text Detection via Corner Localization and Region Segmentation
+    .info
+      .authors Pengyuan Lyu, Cong Yao, Wenhao Wu, Shuicheng Yan and Xiang Bai
+      .conference CVPR2018
+      .paper_id 982
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p コーナー検出とセグメンテーションを用いた高速かつ高精度なテキスト検出手法．テキスト検出時，ボックスのコーナー点を局所化し，テキスト領域を相対位置でセグメンテーションする．画像を入力すると，DSSDベースのNWで特徴抽出をし，コーナー点検出とコーナー位置に基づくセグメンテーションを出力する．コーナー点はサンプリングおよびグループ化され複数の候補ボックスとなる．セグメンテーション結果とあわせてスコア付けしてNMSする．長いテキストを自然に検出でき，複雑な後処理をする必要もない．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180617_Multi-Oriented_Scene_Text_Detection1.jpg`,alt="20180617_Multi-Oriented_Scene_Text_Detection1.jpg")
+          img(src=`${figpath}20180617_Multi-Oriented_Scene_Text_Detection2.jpg`,alt="20180617_Multi-Oriented_Scene_Text_Detection2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Deepベースのテキスト検出は，テキストを物体の一種として扱いb-boxの回帰を行うか，テキスト部分を直接抽出する手法である．前者はアスペクト比によっては検出できず，後者は複雑な後処理を必要とする．本手法はその2つを組み合わせて，両者の欠点を補う．SynthText，ICDAR2015，2013，MSRA-TD500，MLTおよびCOCO-Textのデータセットで評価して，ほとんどがSOTAを達成した．とくに，ICDAR2015では84.3%（F-measure），MSRA-TD500では81.5%を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 非常にシンプルながらも高精度なテキスト検出． DSSDのデコーダ部分の特徴マップからセグメンテーションを行う最近よくある手法をテキスト検出に応用している．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1688.pdf") 論文
+          li
+            a(href="https://arxiv.org/abs/1802.08948") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.17 23:16:27
