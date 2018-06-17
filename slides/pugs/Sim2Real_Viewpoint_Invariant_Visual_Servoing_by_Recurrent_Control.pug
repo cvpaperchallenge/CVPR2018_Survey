@@ -1,0 +1,36 @@
++slide
+section#Sim2Real_Viewpoint_Invariant_Visual_Servoing_by_Recurrent_Control
+  .paper-abstract
+    .title Sim2Real Viewpoint Invariant Visual Servoing by Recurrent Control
+    .info
+      .authors Fereshteh Sadeghi et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p ロボットアームを用いたビジュアルサーボについての研究. DNN を用いた視点に依存しないビジュアルサーボの能力を学習する Recurrent Convolutional Neural Network Controller を提案. 様々な視点, 光源環境, 物体の種類や位置に置けるタスクをシミュレーション上で学習することで, 未知の視点において自動でキャリブレーションを行うことが可能. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Sim2Real-Viewpoint-Invariant-Visual-Servoing-by-Recurrent-Control.png`,alt="fukuhara-Sim2Real-Viewpoint-Invariant-Visual-Servoing-by-Recurrent-Control.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li コントローラーは目的物体のクエリ画像, 現在の観測画像, 1つ前の行動, 現在の内部状態から次の行動と内部状態を決定する
+          li LSTM を用いてネットワークが過去の行動の結果を参照できるようにすることで Jacobian (action と motion との関係) についての事前知識無しでの学習を可能とした
+          li ロス関数にはとった行動によって目的物体との距離がどのように変化したかと, 長期的な行動の価値を学習するための Q-関数 (行動状態価値関数) を用いる
+          li 少数のアノテーション付きシークエンスがあれば, シミュレーション上で学習結果を実際のロボットへ転移することが可能（追加で学習が必要なのは画像特徴の部分のみのため）
+          li 実際のロボットに学習結果を転移して行った評価実験では, 物体へロボットアームを到達させるタスクにおいて, 単一物体の場合は 94.4%, 二つの場合は 70.8% を達成した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.05472" target="blank") [論文] Sim2Real Viewpoint Invariant Visual Servoing by Recurrent Control
+          li
+            a(href="https://www.youtube.com/watch?v=oLgM2Bnb7fo" target="blank") [動画] YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 4:18:55
