@@ -1,0 +1,33 @@
+﻿+slide
+section#Visual_Question_Reasoning_on_General_Dependency_Tree
+  .paper-abstract
+    .title Visual Question Reasoning on General Dependency Tree
+    .info
+      .authors Qingxing Cao, Xiaodan Liang, Bailing Li, Guanbin Li, Liang Lin
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p VQAの答えだけでなく判断根拠も出力する手法を提案。
+          |質問をtree構造に分解し、各nodeに関する情報(例：plane)が画像中のどこに存在するかを示すattention mapを求める。
+          |既に得られているattentionマップ及びhidden stateを更新していくことで、質問の答えとたどり着いていく。
+          |最終的な質問の答えはhidden stateを用いて求める。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Visual_Question_Reasoning_on_General_Dependency_Tree.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 質問への回答の精度は従来手法と比べて大きく向上されているわけではない。
+          |従来の判断根拠を求める研究はルールを人間が設計するもしくはground truthが必要であるのに対してこれらを必要とせずに回答根拠を得ることに成功。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00105") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.29 19:59:57

@@ -1,0 +1,35 @@
++slide
+section#Deep_Progressive_Reinforcement_Learning_for_Skeleton-based_Action_Recognition
+  .paper-abstract
+    .title Deep Progressive Reinforcement Learning for Skeleton-based Action Recognition
+    .info
+      .authors Yansong Tan et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Skeleton-based action recognition の研究. 強化学習によって与えられた動画から最適な keyframe の組を選択する frame distillation network (FDNet) と graph-based convolution によって keyframe の skeleton 情報から行動認識を行う Graph-based CNN (GCNN) を提案. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Deep-Progressive-Reinforcement-Learning-for-Skeleton-based-Action-Recognition.png`,alt="fukuhara-Deep-Progressive-Reinforcement-Learning-for-Skeleton-based-Action-Recognition.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 与えられた動画のシークエンスから最適な keyframe の組を選択する過程をマルコフ過程として定式化し, 強化学習 (policy gradient) を適用した
+          li State として Skeleton 動画全体と現在選択されてる keyframe の組の情報を使用
+          li Action は各 keyframe を1フレーム前後にずらすか, そのままかの３つ
+          li Reward は学習済みの GCNN を用いて計算
+          li また, keyframe から行動認識を行う際は gggraph-based convolution を用いることによって人間の関節の依存関係を考慮している
+          li NTU, SYSU, UT dataset を用いて評価実験では state-of-the-art とほぼ同等か, 優位な結果を示した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1736.pdf" target="blank") [論文] Deep Progressive Reinforcement Learning for Skeleton-based Action Recognition
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.12 13:53:55

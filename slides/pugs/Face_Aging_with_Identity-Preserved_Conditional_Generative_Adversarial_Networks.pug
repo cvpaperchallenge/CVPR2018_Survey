@@ -1,0 +1,34 @@
++slide
+section#Face_Aging_with_Identity-Preserved_Conditional_Generative_Adversarial_Networks
+  .paper-abstract
+    .title Face Aging with Identity-Preserved Conditional Generative Adversarial Networks
+    .info
+      .authors Zongwei Wang, Xu Tang, Weixin Luo and Shenghua Gao
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 人間の年齢変化顔を合成するIdentity-Preserved Conditional Generative Adversarial Networks (IPCGANs)を提案。
+          |合成画像が満たすべき特徴を、(1)目的の年齢に近づいている(2)変化前の人物と同一人物か(3)リアルな画像かの3つとした。
+          |(1)(2)については、Generatorによって生成した画像を年齢推定及び同一人物性を評価するネットワークによって評価する。
+          |(3)はDiscriminatorにリアルかどうかを判定させることで最適化を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Face_Aging_with_Identity-Preserved_Conditional_Generative_Adversarial_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ユーザースタディにより、Image Quality, Age Classification, Face Verificationの3つの観点を評価し、DNNベースの手法と比較してFace VerificationとImage Qualityの2つの観点で高い評価を得た。
+          |VGG-faceによりinception scoreを求め、比較対象の手法より高いスコアを得た。
+          |また、計算時間についても劇的に良化した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Face_Aging_With_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.15 18:52:34

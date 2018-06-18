@@ -1,0 +1,39 @@
++slide
+section#Unsupervised_Training_for_3D_Morphable_Model_Regression
+  .paper-abstract
+    .title Unsupervised Training for 3D Morphable Model Regression
+    .info
+      .authors Kyle Genova, Forrester Cole, Aaron Maschinot, Aaron Sarna, Daniel Vlasic, William T. Freeman
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p それぞれ単独の実画像データセットと3D Morphable Model(3DMM)データセットを使用し、画像から3DMMを生成する手法を提案。
+          |トレーニングには実画像データセットVGG-Face、3DMMデータセットBasel Face 3DMMを使用。
+          |IDが保たれることを念頭にネットワークを構築。Batch Distribution Lossでは、
+          |Basel Face 3DMMのパラメタ分布が平均０、標準偏差1のガウス分布であるため、
+          |実画像によって生成される3DMMのシェイプ、テクスチャパラメタがどちらも平均0、標準偏差1となるようにロスをとる。
+          |Loopback Lossは画像/生成された3DMMのdecoderによる特徴量の差分を取り、よりリアルな3DMMかつ、
+          |より現実的な3DMMパラメタを得ることを目的としている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Unsupervised_Training_for_3D_Morphable_Model_Regression.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像、3DMMの対応がないデータセットを用いて、教師なしで画像から3DMMを生成する手法を提案。
+          li Batch Distribution Loss、Loopback Loss、Multi-view Identity Lossを学習することで教師なしであることを緩和している。
+          li MICC Florence 3D Faceデータセットで検証し、Mean error、
+             |Faceクラスタリング、Earth mover’s distanceによる実画像と生成3DMMの顔類似度のそれぞれにおいてSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Basel Face 3DMMのパラメタ分布が平均０、標準偏差1のガウス分布という仮定はどこから来ている？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1349.pdf") 論文
+    .slide_index #{getSlideIndex()}

@@ -1,0 +1,28 @@
+﻿+slide
+section#LiDAR-Video_Driving_Dataset_Learning_Driving_Policies_Effectively
+  .paper-abstract
+    .title LiDAR-Video Driving Dataset: Learning Driving Policies Effectively
+    .info
+      .authors Yiping Chen, et al. 
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p LiDERで取得したポイントクラウド、車載カメラ映像、および一般ドライバーの運転動作からなるLiDAR-Videoデータセットの提案。運転動作は、ハンドルの傾きと自動車の走行速度情報によるもの。また、これらのデータを使い、自律走行における運転手段を決定するためのPolicy Learningを提案。 これは、DNN+LSTMで構成されるアーキテクチャである。3種類のデータの対応時間を登録することでどのように運転するかをベンチマークする。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180690LiDERVIDIO.jpg`,alt="20180690LiDERVIDIO.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 自律走行において、これまではカメラとレーザースキャナー、運転動作を組み合わせたデータやアプローチがなかった。本論文ではデータベースを構築したうえで、自律走行に対するアプローチを提案している。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 単一のデータよりも3つのデータを組み合わせることで精度が向上していることを示唆。また、DNN単体よりも長いtermで処理できるDNN+LSTMの方が精度向上につながることも示唆。
+        ul
+          li
+            a(href="https://drive.google.com/file/d/1d9OlwHOAz0EgoiMTFsNWaievOArKO5EC/view") 論文
+    .slide_index #{getSlideIndex()}

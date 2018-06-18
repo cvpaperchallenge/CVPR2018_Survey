@@ -1,0 +1,34 @@
++slide
+section#A_Papier-Mch_Approach_to_Learning_3D_Surface_Generation
+  .paper-abstract
+    .title A Papier-Mâché Approach to Learning 3D Surface Generation
+    .info
+      .authors Thibault Groueix, Matthew Fisher, Vladimir G. Kim, Bryan C. Russell, Mathieu Aubry
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 2次元画像、もしくは3次元点群からメッシュや分解構造を生成し、テクスチャありのメッシュや3次元プリント物体を出力する。この枠組みはAtlasNetと呼ばれ、同タスクのPrecision向上と一般化の面で性能改善を行い、3次元形状を集めたデータベースであるShapeNet上で形状をAuto-Encoding、単眼画像からの形状復元を行った。その他、AtlasNetを用いてモーフィング、パラメトライゼーション、超解像、形状マッチング、共セグメンテーションを実施した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180610AtlasNet.png`,alt="180610AtlasNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3D表面形状生成器であるAtlasNetを構築したことが最も大きな新規性である。形状に関するパラメータを学習可能にした。さらに、AtlasNetをGitHub上で公開して使用できる形式にしている。復元したメッシュ形状も、提案手法がもっともノイズが少なく、良好な復元結果となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 数年前は型崩れの多い3次元形状を出力するGeneratorであったが、徐々によくなりつつある。この研究もまだ過程にしか過ぎない？
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1802.05384.pdf") 論文
+          li
+            a(href="http://imagine.enpc.fr/~groueixt/atlasnet/") Project
+          li
+            a(href="https://github.com/ThibaultGROUEIX/AtlasNet") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.10 16:03:52

@@ -1,0 +1,29 @@
+﻿+slide
+section#Iterative_Learning_with_Open-set_Noisy_Labels
+  .paper-abstract
+    .title Iterative Learning with Open-set Noisy Labels
+    .info
+      .authors Yisen Wang, et al.
+      .paper_id 1804.00092
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p ノイズのあるラベルを含んだデータセットを使い、CNN学習を高精度に行うための新しい反復学習フレームワークの提案。反復的なノイズラベル検出、特徴学習、および再重み付けの3段階のフレームワークでノイズの多いラベルを検出しつつ、識別器を反復的に学習。再重みづけでは、クリーンなラベルの学習を重視し、ノイズの場合には低減させる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180690NoisyLabels.jpg`,alt="20180690NoisyLabels.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 綺麗なラベルアノテーション付き大規模データセットによる学習は非常に重要だが、人の手間がかなりかかる他、ヒューマンエラーを含む可能性が否めない。本研究では、あえてノイジーなデータセットに挑戦することで、これらの問題を解決する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データセットの収集コストや信頼性の問題に伴って、自ら良いデータを選択して学習する需要が高まっている印象。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.00092.pdf") 論文
+    .slide_index #{getSlideIndex()}

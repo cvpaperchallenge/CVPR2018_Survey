@@ -1,0 +1,30 @@
++slide
+section#SGAN_An_Alternative_Training_of_Generative_Adversarial_Networks
+  .paper-abstract
+    .title SGAN: An Alternative Training of Generative Adversarial Networks
+    .info
+      .authors Tatjana Chavdarova, Idiap and EPFL; Francois Fleuret, Idiap Research Institute
+      .conference CVPR2018
+      .paper_id 1712.02330
+    .slide_editor KenichiroWani
+
+    .item1
+      .text
+        h1 概要
+        p General Advesarial Networks(GAN)は現在，コンピュータビジョン分野で広く使われている手法である．しかしながら，複雑な学習をするには時間がかかり，人の手が必要となる．そこでSGANというトレーニングプロセスを検討する．SGANではいくつかの敵対的でローカルなネットワークの組み合わせを独立させて学習させることでグローバルな一対のネットワークの組み合わせを学習することができる．SGANの学習はローカルディスクリミネータとジェネレータによってグローバルディスクリミネータとジェネレータが学習される．
+    .item2
+      .text
+        p
+          img(src=`${figpath}SGAN_An_Alternative_Training_of_Generative_Adversarial_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p adversarial pairs (G1,D1),...,(GN,DN)を学習し， G0はD1,...,DNによって学習， D0はG1,...,GNによって学習させることでグローバルな一対のネットワークを学習する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.02330") arxiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.30 21:15:54

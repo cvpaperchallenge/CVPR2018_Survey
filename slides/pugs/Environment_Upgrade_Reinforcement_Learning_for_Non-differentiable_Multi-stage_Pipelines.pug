@@ -1,0 +1,38 @@
++slide
+section#EnvironmentUpgrade_Reinforcement_Learning_for_Non-differentiable_Multi-stage_Pipelines
+  .paper-abstract
+    .title Environment Upgrade Reinforcement Learning for Non-differentiable Multi-stage Pipelines
+    .info
+      .authors Shuqin Xie et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 微分不可能な multi-stage pipline において joint optimization を可能にする environment upgrade reinforcement learning (EU-RL) を提案. ２段階の Instance segmentation と pose estimation のタスクで評価実験を行い, どちらも優位な結果を示した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Environment-Upgrade-Reinforcement-Learning-for-Non-differentiable-Multi-stage-Pipelines.png`,alt="fukuhara-Environment-Upgrade-Reinforcement-Learning-for-Non-differentiable-Multi-stage-Pipelines.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 微分不可能な multi-stage pipline の学習において問題であった上流への feedback が出来ないという点と end-to-end な最適化が出来ない点に取り組んだ研究
+          li 強化学習の agent が下流の出力を受けて上流の出力に変更を与える, environment upgrade reinforcement learning (EU-RL) を提案
+          li 強化学習の手法として actor-critic を Temporal Difference　(TD) learning で学習
+          li State として１段階目（例えば物体認識）からの出力と２段階目からの出力（例えば semantic segmentation）を使用
+          li Action として１段階目からの出力結果を変更する操作の集合を使用（物体認識ならBounding Boxの位置の変更やスケールなど）
+          li Reward は２段目の出力の精度の向上度合いによって計算
+          li Instance segmentation と pose estimation のタスクで評価実験を行い, どちらも優位な結果を示した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/1643.html" target="blank") [論文] Environment Upgrade Reinforcement Learning for Non-differentiable Multi-stage Pipelines
+
+          li 強化学習の応用先としても, アイデアとしても面白い. 今回の論文では２段階の pipeline についてのみ議論が行われていたが, 今後は３段以上の pipeline でも同様の議論が行われていく？
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.11 23:32:55

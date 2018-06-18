@@ -1,0 +1,28 @@
+﻿+slide
+section#Progressive_Attention_Guided_Recurrent_Network_for_Salient_Object_Detection
+  .paper-abstract
+    .title Progressive Attention Guided Recurrent Network for Salient Object Detection
+    .info
+      .authors Xiaoning Zhang, et al.
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p マルチレベルのコンテクスト情報を選択的に統合する、顕著性のためのProgressive Attention Guided Recurrent Networkの提案。Attention Moduleを複数組み込み、その出力をステップ形式で統合していく。高レベルのfeatureを使って、低レベルのfeatureをガイドするイメージ。また、ネットワーク全体を最適化するためのmulti-path recurrent feedbackを提案。これにより、上部の畳み込み層からのセマンティック情報を、浅い層に転送することができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180609PAGRN.jpg`,alt="20180609PAGRN.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 顕著性推定のための学習方法の提案。 従来のFCNベースの方法では、情報を区別せずに多レベルの畳み込み特徴を直接適用してしまうため、精度が上がらないと指摘。複数の層、複数のAttention Module出力を使い、コンテキスト情報を統合するので強力な特徴を抽出できる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 6種類のデータベースで精度評価。従来手法と比較して、ほぼ全てで最良の結果。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1235.pdf") 論文
+    .slide_index #{getSlideIndex()}
