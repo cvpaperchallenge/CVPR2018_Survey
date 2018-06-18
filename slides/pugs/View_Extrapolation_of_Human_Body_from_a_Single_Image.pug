@@ -1,0 +1,30 @@
++slide
+section#View_Extrapolation_of_Human_Body_from_a_Single_Image
+  .paper-abstract
+    .title View Extrapolation of Human Body from a Single Image
+    .info
+      .authors Hao Zhu, Hao Su, Peng Wang, Xun Cao, Ruigang Yang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p ある視点の人物画像からターゲットとなる視点（Novel View）の人物画像を復元するタスクを提案。従来法であるVSAP（参考文献40）では正確な視点変化に関するフローを推定することができなかったが、提案法ではまず距離画像を推定してからフロー推定することで精度を劇的に改善した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618ViewExtrapolationHumanBody.png`,alt="180618ViewExtrapolationHumanBody")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 距離画像の復元（予め形状を復元することに相当）することにより、ビューポイント変化に関するフローの推定精度を劇的に向上させ、さらにバックフローも組み合わせることでターゲット視点の人物画像復元を改善。距離画像の復元からオプティカルフローの推定を行うこのような枠組みをShape-from-Appearanceという？3次元的な情報があることで姿勢に関するバリエーションがあったとしてもロバストなビューポイント変化の人物画像推定が可能。合成データによる人物画像データセットも作成、2,000の姿勢に対して22のアピアランス変化を含む。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 以前は経由する情報をいかに少なくしてダイレクトに復元を行うか、が重要であったが、DNN時代になってから効果的な情報復元（この場合は距離画像による形状復元）を経由することにより推定精度が向上。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_View_Extrapolation_of_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 22:01:34
