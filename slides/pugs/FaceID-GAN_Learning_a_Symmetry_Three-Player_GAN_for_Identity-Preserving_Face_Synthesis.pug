@@ -1,0 +1,40 @@
++slide
+section#FaceID-GAN_Learning_a_Symmetry_Three-Player_GAN_for_Identity-Preserving_Face_Synthesis
+  .paper-abstract
+    .title FaceID-GAN: Learning a Symmetry Three-Player GAN for Identity-Preserving Face Synthesis
+    .info
+      .authors Yujun Shen, Ping Luo, Junjie Yan, Xiaogang Wang, Xiaoou Tang
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p IDを保った任意の顔向き画像をGANで生成するために、実画像ドメインと合成画像ドメインのそれぞれのIDを識別するclassifierを導入したFaceID-GANを提案。
+          |従来のGANではgeneratorとdiscriminatorが競い合うだけでclassifierは補助的な機能を果たしていたが、
+          |提案手法におけるclassifierは実画像に対しては実画像ドメインのID番号を、
+          |合成画像に対しては合成画像ドメインのID番号を識別させる、というようにデータセットに含まれるN個のラベルに対して、
+          |2Nのラベル識別を行う。
+          |他にも実画像のIDを表す特徴量と合成画像のIDを表す特徴量のコサイン類似度をロス関数として使用することで、
+          |異なるドメインに属する特徴量の類似度を高める。generatorには顔の形状特徴量、顔向き特徴量、ランダムノイズを入力とする。
+    .item2
+      .text
+        p
+          img(src=`${figpath}FaceID-GAN_Learning_a_Symmetry_Three-Player_GAN_for_Identity-Preserving_Face_Synthesis.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 実画像、合成画像のそれぞれのドメインにおいてID識別を行うclassifierをGANに導入することで、
+             |generator VS. discriminator & classifier の構図を持つFaceID-GANを提案。
+          li CASIA-WebFace494414枚(10575人のID)の画像でトレーニングを行い、LFW, IJB-A, CelebA, CFPで検証した。
+          li state-of-the-artと横顔を入力とした正面顔画像生成、水平方向の視点移動、face verificationの精度を比較した結果、最も高い精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_FaceID-GAN_Learning_a_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://www.youtube.com/watch?v=EDahz2ppTYY") Demo
+    .slide_index #{getSlideIndex()}

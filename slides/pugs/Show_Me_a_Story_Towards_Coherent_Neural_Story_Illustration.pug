@@ -1,0 +1,37 @@
++slide
+section#Show_Me_a_Story_Towards_Coherent_Neural_Story_Illustration
+  .paper-abstract
+    .title Show Me a Story: Towards Coherent Neural Story Illustration
+    .info
+      .authors Hareesh Ravi, Lezi Wang, Carlos M. Muniz, Leonid Sigal, Dimitris N. Metaxas, Mubbasir Kapadia
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 複数の文で構成されたテキストの内容を表す画像シークエンスを検索する手法を提案。
+          |文章から抽出される特徴と画像から抽出された特徴を対応付けることにより、各文に対して1枚の画像を選択する。
+          |その際、文章特徴はGRUによって前後の文章との関係を含めて抽出する。
+          |また、heやitなどの代名詞が何を指しているかを明らかにするために、テキスト全体としての一貫性を測るcoherence vectorを導入した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Show_Me_a_Story_Towards_Coherent_Neural_Story_Illustration.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ベースラインとなる手法では、文単位で画像の検索を行っているために画像シークエンスとしての一貫性が損なわれてしまう。
+          |そこで、GRU及びcoherence vectorによって前後の文で登場した単語などを考慮することが可能となり、テキスト全体を表す画像シークエンスの検索が可能となった。
+          |ユーザースタディにより、ベースライン、coherence vector無し、coherence vector有りの比較を行い、coherence vector有りが最も好まれる結果を得た。
+          |また、画像シークエンスがテキストに合っているかは主観的な評価であるため、saliencyベースの新たな評価指標を提案した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://www.cs.ubc.ca/~lsigal/Publications/cvpr2018ravi.pdf") 論文URL
+          li
+            a(href="https://arxiv.org/abs/1511.06361") ベースライン
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.29 12:03:27

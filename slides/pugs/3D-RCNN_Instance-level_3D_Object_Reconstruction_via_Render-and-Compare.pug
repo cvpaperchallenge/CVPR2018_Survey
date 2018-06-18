@@ -1,0 +1,39 @@
+﻿+slide
+section#_3D-RCNN_Instance-level_3D_Object_Reconstruction_via_Render-and-Compare
+  .paper-abstract
+    .title 3D-RCNN: Instance-level 3D Object Reconstruction via Render-and-Compare
+    .info
+      .authors Abhijit Kundu, Yin Li, James Rehg
+      .conference CVPR 2018
+      .paper_id 436
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li RGB画像からインスタンスレベルの物体full3次元形状及び姿勢を行う”inverse graphics”なend-to-endなネットワーク構造の提案． 物体のカテゴリ検出の結果が与えられたことを仮定し，画像中の物体2次元観測から物体の3次元パラメータの推定を行う．
+          li 提案手法の主な貢献としては①3次元表示：物体の3次元形状がクラス内で共通性が高いことから，大量なCADモデルから低次元なclass-specificな形状priorsを学習する．②2D-3Dマッピングを効率的行える新たなshape,poseの表示を提案した．(例:egocentricではなくallocentric視点を用いるなど)③提案手法を2D監督信号で学習可能にする予測した3次元形状を2次元にレンダリングし2次元のgtと比較することをベースとしたRender-Compareロス関数を提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}3D-RCNN-3D-Object-Reconstruction.png`,alt="3D-RCNN-3D-Object-Reconstruction")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のシーン理解は主にシーンに対しセマンティックセグメンテーションや物体検出などを行う．3次元空間のreasoningなどのタスクにおいては3次元のrepresentationが必要となる．また，従来の画像から3次元情報復元に関する研究は主に簡単なシーンから一つの物体に対し推定を行う．提案手法はより複雑なシーンの2次元画像から全部の物体インスタンスに対し3次元情報を推定できるため，自動運転の車・人の3次元情報推定などの様々な複雑なタスクに用いられる．
+          li ジョイント物体検出と姿勢推定、バウンディングボクス領域内の物体三次元姿勢推定の2つのタスクにおいて，Pascal 3D+,KITTIデータセットでstate-of-the-artな精度を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 今後”analysis by synthesis”,”inverse graphics”などの概念の引用が増やしそう
+          li
+            p かなり様々なところで工夫をしている．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Kundu_3D-RCNN_Instance-Level_3D_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.7 16:52:32

@@ -1,0 +1,37 @@
++slide
+section#Residual_Parameter_Transfer_for_Deep_Domain_Adaptation
+  .paper-abstract
+    .title Residual Parameter Transfer for Deep Domain Adaptation
+    .info
+      .authors Artem Rozantsev, Mathieu Salzmann, Pascal Fua
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ソースドメインを学習したネットワークのパラメタを残差ブロックで変換することでターゲットドメインへ
+          |domain adaptaionを行う手法を提案。
+          |既存手法ではドメインに普遍な特徴量を学習していたためにネットワークのパラメタが多すぎてしまう。
+          |提案手法は学習時には残差ブロックとソースドメインを学習するネットワークのファインチューニングを行い、
+          |ソースドメインに対するラベルの識別と2つのドメインに対してadversarial domain adaptationを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Residual_Parameter_Transfer_for_Deep_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ドメインに普遍な特徴量を学習するのではなく、
+             |ソースドメインを学習したネットワークの重みをソースドメイン用に変換することでパラメタ数を抑えかつ精度の高い
+             |domain adaptationを実現。
+          li state-of-the-artと比べて、SVHN・MNIST、UAV-200データセット、Officeデータセットにおいてもっとも高い精度を達成。
+          li ソースドメインを学習するネットワークがResNetのような深いネットワークの場合にも有効であることを主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.07714") 論文
+    .slide_index #{getSlideIndex()}

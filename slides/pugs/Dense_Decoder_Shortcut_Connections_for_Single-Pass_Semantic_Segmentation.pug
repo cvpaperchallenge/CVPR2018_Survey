@@ -1,0 +1,36 @@
++slide
+section#Dense_Decoder_Shortcut_Connections_for_Single-Pass_Semantic_Segmentation
+  .paper-abstract
+    .title Dense Decoder Shortcut Connections for Single-Pass Semantic Segmentation
+    .info
+      .authors Piotr Bilinski, Victor Prisacariu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p ResNeXtを用いたEncoder-Decoder（エンコーダ-デコーダ）構造、かつシングルパスのセマンティックセグメンテーション手法を提案する。エンコーダとデコーダは折り返したような構造になっており、エンコーダの特徴は図のように対称となる/同じサイズのデコーダ位置に統合される（enc1-dec1が対応）。今回は特にデコーダ側に改善があり、(1)コンテキスト情報を抽出、(2)セマンティック情報を生成、(3)異なる解像度の出力を適宜統合という新規性がある。これを実現するため、DenseNetを参考にしたDense Decoder Shortcut Connectionsを提案し、デコーダにおいてコンテキスト特徴を全て後段に渡すようにした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180606DenseDecoderShortcut.png`,alt="180606DenseDecoderShortcut")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p デコーダにおいてDenseNetを参考にしたDense Decoder Shortcut Connectionsを提案、コンテキスト情報を後段に渡して精度を向上させた。ResNeXtの構造適用と合わせて各データセットにてState-of-the-artな精度を達成。NYUD datasetにて48.1（mean IoU）、CamVid datasetにて70.9（mean IoU）となった。PascalVOC2012においても81.2であった（SoTAはPSPNetの82.6）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p セマンティックセグメンテーションの覇権争いが激化。ここら辺まで精度が向上すると確率的にSoTAになったりならなかったりする（回す回数が多いと一回くらい精度が高いモデルが学習される）？逆に、学習しやすい（誰が、どんなパラメータで回しても同じくらいの精度が出る）アーキテクチャというのが提案されてもよいかも。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Bilinski_Dense_Decoder_Shortcut_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/facebookresearch/ResNeXt") ResNeXt(facebookresearch)
+          li
+            a(href="https://github.com/liuzhuang13/DenseNet") DenseNet
+          li
+            a(href="https://github.com/hszhao/PSPNet") PSPNet
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.6 09:38:43

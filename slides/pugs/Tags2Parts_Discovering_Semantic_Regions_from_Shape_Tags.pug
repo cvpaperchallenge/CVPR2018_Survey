@@ -1,0 +1,35 @@
++slide
+section#Tags2Parts_Discovering_Semantic_Regions_from_Shape_Tags
+  .paper-abstract
+    .title Tags2Parts: Discovering Semantic Regions from Shape Tags
+    .info
+      .authors Sanjeev Muralikrishnan, Vladimir G. Kim, Siddhartha Chaudhuri
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 指定された形状のタグに強く関係する領域を検出する手法の提案．明示的に領域ごとのラベリングはなく，さらにあらかじめセグメンテーションされていない状況で，形状のタグを与えた時に領域を発見するという問題設定．難しい点は，オブジェクトのタグという弱い教師情報からポイントごとのラベルを細かく出力する必要があること．このために分類とセグメンテーションを同時に行うネットワークを使う．形状ごとのタグからポイントごとの予測を得るためのネットワーク構造（WU-net）を提案したことがメインの貢献．
+        p 学習が完了すれば，タグが不明な形状に対しても手法を適用することができる．また，元々Weakly-supervised用に提案しているが，strongly-supervised用としても利用できる手法となった．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Tags2Parts_Discovering_Semantic_Regions_from_Shape_Tags_fig.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 手法
+        p U-net風のWU-netを提案．U-netから修正した点は，
+          br
+          |・浅いU型の構造を3回くりかし，skip-connectionで密に繋がっている．深いU型1回の場合との結果の違いを図示している.
+          br
+          |・セグメンテーションの用の隠れ層にタグ分類用の層を追加．(元々のは，strongly-supervised セグメンテーション用に設計されているので．)
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ３D形状としてはボクセル表現を使用．64×64×64 cubical gridを入力する．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1708.06673") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 10:40:57

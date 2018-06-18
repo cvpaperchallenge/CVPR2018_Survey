@@ -1,0 +1,37 @@
++slide
+section#Re-weighted_Adversarial_Adaptation_Network_for_Unsupervised_Domain_Adaptation
+  .paper-abstract
+    .title Re-weighted Adversarial Adaptation Network for Unsupervised Domain Adaptation
+    .info
+      .authors Qingchao Chen, Yang Liu, Zhaowen Wang, Ian Wassell, Kevin Chetty
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p Unsupervised Domain Adaptationを行うため、ドメイン間の特徴量分布を一致させるoptimal transportベースのEM distanceを導入し、
+          |ターゲットドメイン(T)のラベル分布をソースドメイン(S)のラベル分布に対してラベルごとに重み付けした分布で表現する手法を提案。
+          |domain discriminatorをOTベースのEM distanceをロス関数とすることでドメイン間の特徴量分布を近づける。
+          |一方でベイズの定理より、ドメイン間のラベルの事前分布と特徴量の事後分布は比例関係にありラベルは低次元かつ離散的であるので
+          |ドメイン間で類似度が高いと仮定し、Tにおけるラベルの事前分布をSのラベルの事前分布の重みを変更したもので表す。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Re-weighted_Adversarial_Adaptation_Network_for_Unsupervised_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ドメイン間で特徴量分布をOTベースのEM distanceの学習で、Tのラベル分布をSのラベル分布の重みを変更したもので表現することで、
+             |それぞれのdomain shiftを解消する手法を提案。
+          li 手書き文字データセットMNIST、USPS、SVHN、MINST-Mデータセット、19のラベルを持つ実画像、デプス画像のドメインを持つNYU-Dデータセットで検証。
+             |state-of-the-artと比較した結果、多くの状況で最も高い精度を達成。
+          li Sのラベル分布の重みの変更による有効性、ラベルごとの特徴量が分離できているかどうかも議論している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1224.pdf") 論文
+    .slide_index #{getSlideIndex()}

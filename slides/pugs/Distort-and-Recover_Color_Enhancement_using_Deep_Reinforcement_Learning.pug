@@ -1,0 +1,35 @@
++slide
+section#Distort-and-Recover_Color_Enhancement_using_Deep_Reinforcement_Learning
+  .paper-abstract
+    .title Distort-and-Recover: Color Enhancement using Deep Reinforcement Learning
+    .info
+      .authors Jongchan Park et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 強化学習(DQN)を用いて automatic color enhancement を行う研究. 編集後の画像のみを利用して学習を行う方法（distort-and-recover scheme）を提案し, この学習方法の場合は従来の教師あり学習の手法よりも, 強化学習を用いる方が適していることを検証した. また, 評価実験では先行研究と同等か優位な結果を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Distort-and-Recover-Color-Enhancement-using-Deep-Reinforcement-Learning.png`,alt="fukuhara-Distort-and-Recover-Color-Enhancement-using-Deep-Reinforcement-Learning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li color enhancement の工程をマルコフ過程としてモデル化し, 強化学習(DQN)を用いて解いた.
+          li 従来手法のように編集前後の画像の組では無く, 編集後の画像のみを利用して学習を行う方法（distort-and-recover scheme）を提案.
+          li action は様々な色調整の操作, reward は教師画像に特徴量がどれだけ近づいたかによって計算.
+          li MIT-Adobe FiveK dataset を用いた評価実験やユーザースタディーでは先行研究と同等か優位な結果を達成した.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.04450" target="blank") [論文] Distort-and-Recover: Color Enhancement using Deep Reinforcement Learning
+          li
+            a(href="https://sites.google.com/view/distort-and-recover/" target="blank") [Project Page] Distort-and-Recover: Color Enhancement using Deep Reinforcement Learning
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.29 16:50:55

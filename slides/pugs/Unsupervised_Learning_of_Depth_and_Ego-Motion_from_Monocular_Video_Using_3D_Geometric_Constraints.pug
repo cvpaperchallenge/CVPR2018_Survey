@@ -1,0 +1,33 @@
++slide
+section#Unsupervised_Learning_of_Depth_and_Ego-Motion_from_Monocular_Video_Using_3D_Geometric_Constraints
+  .paper-abstract
+    .title Unsupervised Learning of Depth and Ego-Motion from Monocular Video Using 3D Geometric Constraints
+    .info
+      .authors Reza Mahjourian et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 教師なし学習で単眼の動画から Depth と Ego-Motion の推定を行う研究. 連続するフレーム間における 3D Geometry の一貫性を教師信号の代わりに利用して学習を行う. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuahra-Unsupervised-Learning-of-Depth-and-Ego-Motion-from-Monocular-Video-Using-3D-Geometric-Constraints.png`,alt="fukuahra-Unsupervised-Learning-of-Depth-and-Ego-Motion-from-Monocular-Video-Using-3D-Geometric-Constraints.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 連続するフレーム間における 3D Geometry の一貫性を用いることで, 教師なし学習で単眼の動画から Depth と Ego-Motion の推定を行うことを可能とした
+          li 連続するフレームから推定された Point Cloud に対して Iterative Closest Point (ICP) を計算し, その Residual と Transform の大きさを 3D Loss として課す
+          li 3D Loss に加えて推定された Depth の滑らかさと, 推定結果を用いて復元した画像の誤差 (2種類) も Loss として課す
+          li KITTI dataset と mobile phone カメラで撮影した動画を用いて行った評価実験では　Trajectory と Depth の両方において先行研究よりも優位な結果を達成した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.05522" target="blank") [論文] Unsupervised Learning of Depth and Ego-Motion from Monocular Video Using 3D Geometric Constraints
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.28 18:59:55

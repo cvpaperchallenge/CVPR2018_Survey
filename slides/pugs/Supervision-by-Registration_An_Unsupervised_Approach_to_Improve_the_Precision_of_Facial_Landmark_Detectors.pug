@@ -1,0 +1,39 @@
++slide
+section#Supervision-by-Registration_An_Unsupervised_Approach_to_Improve_the_Precision_of_Facial_Landmark_Detectors
+  .paper-abstract
+    .title Supervision-by-Registration: An Unsupervised Approach to Improve the Precision of Facial Landmark Detectors
+    .info
+      .authors Xuanyi Dong, Shoou-I Yu, Xinshuo Weng, Shih-En Wei, Yi Yang, Yaser Sheikh,
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ランドマークのGT有り顔画像とラベルなし顔動画を用いて、現在フレームに対して直接推定されたランドマークと、
+           |トラッキングによって前フレームから推定されたランドマークの位置の誤差を学習することで顔画像に対してランドマークを推定する手法を提案。
+           |人間によるランドマークのアノテーションは正確でないため、この誤差が学習や推定精度に影響を与えてしまう。
+           |これに対して本論文ではランドマークの推定器に最適化によって計算されるオプティカルフローを教師情報として与える
+           |Supervision by Registration(SBR)を提案。ランドマーク位置を推定するCNNに対して、
+           |Lukas-Kanade法によるトラッキング結果とランドマークの推定位置が同じになるように学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Supervision-by-Registration_An_Unsupervised_Approach_to_Improve_the_Precision_of_Facial_Landmark_Detectors.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 人間のアノテーションよりも、より正確であるオプティカルフローを教師情報として使用することで顔画像に対するランドマークの推定手法を提案。
+          li 300-W、AFLWにおいてランドマーク推定手法であるCPMのアルゴリズムをSBRで学習させると、SBRを使用しない場合よりも精度が向上。
+          li 動画に対するランドマーク推定はstate-of-the-artに及ばなかった。ターゲットとなる人物を
+             |データセットに含んでおくPersonalized Adaptation Modeling(PAM)を行うことで、state-of-the-artと同等の精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 画像のランドマークを推定するために動画から得られるオプティカルフローを使用する、
+             |という発想の飛躍が面白い！最適化による正確な教師情報とCNNによる合わせ技。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0191.pdf") 論文
+    .slide_index #{getSlideIndex()}

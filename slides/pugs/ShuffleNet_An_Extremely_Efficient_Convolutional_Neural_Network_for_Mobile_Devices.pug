@@ -1,0 +1,34 @@
++slide
+section#ShuffleNet_An_Extremely_Efficient_Convolutional_Neural_Network_for_Mobile_Devices
+  .paper-abstract
+    .title ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices
+    .info
+      .authors Xiangyu Zhang et al.
+      .conference CVPR2018
+      .paper_id 1707.01083
+    .slide_editor Takumu Ikeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li モバイルデバイス向けに特別に設計した非常に計算効率の良いCNNアーキテクチャである“ShufflNet”を開発した．このアーキテクチャではpointwise group convolutionとchannel shuffleという2つの新しい演算を使用し，精度を落とすことなく，計算コストを大幅に削減した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Shuffle_Net_An_Extremely_Efficient_Convolutional_Neural_Network_for_Mobile_Device.png`,alt="Shuffle_Net_An_Extremely_Efficient_Convolutional_Neural_Network_for_Mobile_Device.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ImageNetによる分類とMS COCOによる物体検出のタスクではほかのアーキテクチャよりも高い性能を示した．
+          li 40MFLOPの計算資源の制約のもと,ImageNet分類タスクで他のモバイルデバイス向けアーキテクチャよりもtop-1 エラーが7.8%低い結果が得られた．
+          li 既存のアーキテクチャよりも高精度で計算効率が非常に良い“ShufflNet”というアーキテクチャを提案した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1707.01083.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 21:27:54

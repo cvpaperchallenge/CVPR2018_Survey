@@ -1,0 +1,31 @@
++slide
+section#Deep_Reinforcement_Learning_of_Region_Proposal_Networks_for_Object_Detection
+  .paper-abstract
+    .title Deep Reinforcement Learning of Region Proposal Networks for Object Detection
+    .info
+      .authors Aleksis Pirinen and Cristian Sminchisescu
+      .conference CVPR2018
+      .paper_id 872
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p Region proposal network（RPN）と深層強化学習（DRL）を組み合わせたdrl-RPNを提案する．通常のRPNがRoIを貪欲に選択するのに対し，DRLで学習されたsequential attention mechanismを用いて選択することで，最終検出タスクに最適化される．また，時間経過とともにクラス固有の特徴を蓄積し，分類スコアに良い影響を与えて検出精度が高めることを示す．また，学習をいつ停止するか自動的に判断する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180611_drlRPN.jpg`,alt="20180611_drlRPN.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p RPNにDRLを導入して，attentionに即したRoIを選択できるようにした．VOC2007を用いた評価では，通常のRPNがmAP74.2%なのに対し，drl-RPNは76.4%を達成した．MSCOCOでも各指標・各セットで数%の精度向上が見られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p またまた高精度なRoIを検出するタイプの手法．ついにRLまで使うことになった．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Pirinen_Deep_Reinforcement_Learning_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.11 23:18:20
