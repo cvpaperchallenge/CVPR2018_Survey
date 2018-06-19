@@ -1,0 +1,35 @@
++slide
+section#Gibson_Env_Real-World_Perception_for_Embodied_Agents
+  .paper-abstract
+    .title Gibson Env: Real-World Perception for Embodied Agents
+    .info
+      .authors Fei Xia, Amir R. Zamir, Zhiyang He, Alexander Sax, Jitendra Malik and Silvio Savarese
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p ロボットなどのエージェントに知覚を身につけさせるためのGibsonという仮想環境を提案した。
+          |Gibsonは572の建物、1447のフロアから構築されている。
+          |RGB-Dデータから、任意のカメラ位置でレンダリングする場合欠損が生じてしまう。
+          |そこで、複数のカメラ位置でレンダリングした画像を組み合わせた上で、Neural Netにより欠損箇所を保管する。
+          |得られた画像はリアルではないため、レンダリング画像とリアル画像間のドメイン変換手法Gogglesを提案した。
+          |また、物理エンジンを組み込むことにより、実世界で起こる衝突などの判定を可能にした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Gibson_Env_Real-World_Perception_for_Embodied_Agents.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 目的地へ向かう、階段を上るといったエージェントのタスクに加え、depth推定、シーン認識によって有効性を検証した。
+          |実世界で撮影した画像によるテストでは、他のデータセットと比べ1番精度が良かった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://gibsonenv.stanford.edu/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 14:37:08
