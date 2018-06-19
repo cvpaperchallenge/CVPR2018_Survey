@@ -1,0 +1,30 @@
++slide
+section#The_Lovasz-Softmax_loss_A_tractable_surrogate_for_the_optimization_of_the_intersection-over-union_measure_in_neural_networks
+  .paper-abstract
+    .title The Lovasz-Softmax loss: A tractable surrogate for the optimization of the intersection-over-union measure in neural networks
+    .info
+      .authors Maxim Berman, Amal Rannen Triki, Matthew B. Blaschko
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p セマンティックセグメンテーションにおいて、ピクセルごとの最適化ではなく領域（Intersection-over-Union）ごとの最適化を行うことで小領域を含む領域ベースのセグメンテーションを改良する。この問題に対して、サブモデュラ凸最適化手法Lovasz（参考文献26をベースとした）を用いることで誤差計算を行う。このLovasz-Softmax Lossは従来のCross-Entropy Lossよりも領域評価jに対して頑健であることを示した（右図）。位置付け的にはLovasz Hinge Lossのマルチカテゴリに対する一般化である。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618Lovasz-SoftmaxLoss.png`,alt="180618Lovasz-SoftmaxLoss")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p セマンティックセグメンテーションにおいて特に小領域であったとしても適切に評価して誤差を計算できるLovasz-Softmax Lossを提案した。PascalVOCやCityscapesにおいてCross-Entropy Lossを用いた誤差計算よりも良好な性能を示すことが明らかとなった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p IoUで最適化するとは？また、Jaccard indexとは何のことだろう？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Berman_The_LovaSz-Softmax_Loss_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 20:06:18
