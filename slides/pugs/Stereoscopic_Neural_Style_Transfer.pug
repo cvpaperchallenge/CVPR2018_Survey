@@ -1,0 +1,29 @@
+﻿+slide
+section#Stereoscopic_Neural_Style_Transfer
+  .paper-abstract
+    .title Stereoscopic Neural Style Transfer
+    .info
+      .authors Dongdong Chen, et al.
+      .paper_id 1802.10591
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 3D映画やAR / VRの需要に先駆けた、Stereoscopic Neural Style Transferの提案。スタイルトランスファーによって、左右視点での整合性を保持するために、style loss functionにdisparity lossを追加し、左右視点での視差制約を設けている。また、リアルタイム性を考慮したソリューションの開発に取り組み、stylization sub-networkとdisparity sub-networkの2つを共同してトレーニングできるモデルを提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180617LLVSS.jpg`,alt="20180617LLVSS.jpg")
+    .item3
+      .text
+        h1 新規性
+        p ステレオカメラを使ったスタイルトランスファー手法。通常、図(a)のような左右視点の画像とスタイル画像を入力すると1行目のように，左視点(b)と右視点(c)のように左右の視点で差が生じる(d)。このような不一致性は、(e)のアナグリフ画像のようになり、視聴者へ左右視点での三次元的視覚疲労が生じさせる。提案手法ではこのような不一致性を抑制し、2行目のように整合性のとれたスタイルトランスファーを可能にする。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 提案手法によって、時間的および視差の整合性を考慮しており、3D映像を拡張できる。定量的および定性的評価によって、従来手法よりも高精度であることを示唆。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1802.10591.pdf") 論文
+    .slide_index #{getSlideIndex()}

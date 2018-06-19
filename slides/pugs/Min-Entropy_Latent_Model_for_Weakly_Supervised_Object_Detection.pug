@@ -1,0 +1,28 @@
+﻿+slide
+section#Min-Entropy_Latent_Model_for_Weakly_Supervised_Object_Detection
+  .paper-abstract
+    .title Min-Entropy Latent Model for Weakly Supervised Object Detection
+    .info
+      .authors Fang Wan, Pengxu Wei, Jianbin Jiao, Zhenjun Han and Qixiang Ye
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 弱教師付き学習で物体検出を行うmin-entropy latent model (MELM)の提案。MELMは、object discoveryとobject localizationの2つのサブモデルで構成され、end-to-endで学習可能。 object discoveryで、 global min-entropyと画像分類lossを最適化。local min-entropyとソフトマックスを最適化。グローバルとローカルそれぞれで物体を検出し、エントロピーを最小化し、グローバルからローカルへ物体確率を伝播。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180617LLVSS.jpg`,alt="20180617LLVSS.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 弱教師付き学習による物体検出は、物体位置と検出を同時に学習するのが困難。弱教師と学習目標間に不一致が生じると物体位置にランダム性が生じ、検出器をうまく学習できない。min-entropyによって、学習中の物体位置のランダム性を計測し、物体位置を学習することができ、検出器のあいまいさを回避できる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 回帰的に学習することによって、弱教師であっても精度向上。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wan_Min-Entropy_Latent_Model_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
