@@ -1,0 +1,35 @@
++slide
+section#Avatar-Net_Multi-scale_Zero-shot_Style_Transfer_by_Feature_Decoration
+  .paper-abstract
+    .title Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration
+    .info
+      .authors Lu Sheng, Ziyi Lin, Jing Shao and Xiaogang Wang1
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 既存手法のZero-shot style transferでは画像生成と効率のトレードオフによって，高品質な画像の生成とリアルタイムでの画像生成(style transfer)が困難．本稿ではこの問題を解決し，効率的かつ効果的な画像生成が可能なAvatar-Netを提案．提案手法では，高品質なstyle transferを可能にし，有効性および効率についても実証．さらに複数のスタイルの統合や動画のデザインを用いたアプリケーションも実装．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Avatar-Net1.png`,alt="1")
+          img(src=`${figpath}Avatar-Net2.png`,alt="2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p
+          img(src=`${figpath}Avatar-Net3.png`,alt="3")
+        ul
+          li 任意のスタイル画像から意味的に抽出されたスタイル特徴によってコンテンツ特徴を構成するスタイルデコレータを提案
+          li スタイルデコレータにより，全体の特徴分布を一致させるだけでなく，装飾された特徴のスタイルパターンも保持
+          li スタイルデコレータをマルチスケールで抽象化したスタイルを融合させるimage reconstruction networkに組み込むことで，Avatar-Netは1つのフィードフォワードパスでスタイル画像のマルチスケールのスタイルのレンダリングが可能
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sheng_Avatar-Net_Multi-Scale_Zero-Shot_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 16:39:58
