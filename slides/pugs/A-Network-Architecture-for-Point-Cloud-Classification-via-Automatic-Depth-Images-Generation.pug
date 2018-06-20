@@ -1,0 +1,36 @@
++slide
+section#A_Network_Architecture_for_Point_Cloud_Classification_via_Automatic_Depth_Images_Generation
+  .paper-abstract
+    .title A Network Architecture for Point Cloud Classification via Automatic Depth Images Generation
+    .info
+      .authors RiccardoRoveri et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Point Cloud データのクラス分類についての研究. 順序不定の 3D Point Cloud データを 2D Depth 画像に変換し, ResNet でクラス分類を行う. 評価実験では PointNet より優位な結果となった.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-A-Network-Architecture-for-Point-Cloud-Classification-via-Automatic-Depth-Images-Generation.png`,alt="fukuhara-A-Network-Architecture-for-Point-Cloud-Classification-via-Automatic-Depth-Images-Generation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Network は３つのモジュールで構成されており, joint training が可能
+          li １つ目のモジュールは PointNet を用いて PointCloud から有用な view direction を推定する
+          li ２つ目のモジュールは Gausiaan Interporation （Roveri＋18 の拡張版）によって推定された view direction からの Depth 画像を生成する
+          li ３つ目のモジュールは ResNet50 を用いて Depth 画像から Image Based Classification を行う
+          li ModelNet40 benchmark を用いて行った shape のクラス分類の評価実験では instance-based accuracy と class average accuracy の両方で PointNet よりも優位な結果となった
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3120.pdf" target="blank") [論文] A Network Architecture for Point Cloud Classification via Automatic Depth Images Generation
+
+          li 3D の問題を既によく研究されている 2D 画像のクラス分類へと帰着させることで, 既存の強力な手法を用いる戦略
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.13 5:54:55

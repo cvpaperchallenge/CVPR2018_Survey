@@ -1,0 +1,36 @@
++slide
+section#A_Closer_Look_at_Spatiotemporal_Convolutions_for_Action_Recognition
+  .paper-abstract
+    .title A Closer Look at Spatiotemporal Convolutions for Action Recognition
+    .info
+      .authors Du Tran et al.
+      .conference CVPR2018
+      .paper_id 1711.11248
+    .slide_editor Takumu Ikeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 動画解析のための時空間畳み込みの各手法が行動解析に及ぼす影響を調査した．
+          li Residual learningのフレームワークでは3D CNNsが2D CNNsよりも精度において優れていることを実験的に示した．
+          li 3D Convolution filterを空間と時間へ分割することで精度が向上することを示した．
+          li 新たな時空間畳み込みブロックの構造として”R(2+1)D”を提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Closer_Look_at_Spatiotemporal_Convolutions_for_Action_Recognition.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新規の畳み込みブロックとして時空間の畳み込みブロックを時間と空間に分割する"R(2+1)D"を提案した．
+          li "R(2+1)D"はSports-1M，Kinetics,UCF101,HMDB51のデータセットでSOTAを達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.11248.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.11 19:39:34

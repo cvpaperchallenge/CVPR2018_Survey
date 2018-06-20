@@ -1,0 +1,39 @@
++slide
+section#SeedNet_Automatic_Seed_Generation_with_Deep_Reinforcement_Learning_for_Robust_Interactive_Segmentation
+  .paper-abstract
+    .title SeedNet: Automatic Seed Generation with Deep Reinforcement Learning for Robust Interactive Segmentation
+    .info
+      .authors Gwangmo Song et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p インタラクティブセグメンテーションに強化学習を適用した研究. 入力画像と初期 seed から自動で新しい seed を順次生成する SeedNet を提案. 評価実験では state-of-the-art の結果を達成すると共に, 教師あり手法と比較しても優位な結果を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-SeedNet-Automatic-Seed-Generation-with-Deep-Reinforcement-Learning-for-Robust-Interactive-Segmentation.png`,alt="fukuhara-SeedNet-Automatic-Seed-Generation-with-Deep-Reinforcement-Learning-for-Robust-Interactive-Segmentation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Interactive Segmentation のタスクをマルコフ過程として定式化し, 強化学習（Deep Q-Learning）を用いて学習を行った
+          li State には入力画像の画素情報と seed の位置とラベル,　mask 画像を用いる (seed の位置を state に陽に加えることによって, 生成される mask が seed 位置の変化についてロバストになるらしい)
+          li Action は state の情報から新しい seed の位置とラベルの決定（自由度を削減するために 20x20 のグリッド上から位置を選択, seed の数が10点になった段階で終了）
+          li Reward は生成された Mask と Ground Truth の Mask の IoU（exp 型を提案）に加えて, SeedNet によって追加された新 seed のラベルと位置が適切かの２点を考慮して決定
+          li MSRA10K dataset を用いた評価実験では state-of-the-art の結果に加えて, 初期の seed 位置についてロバストであることが確認された
+          li また, 教師あり学習を用いた手法 [Long+15], [Xu+16] と比較しても優位性が確認された
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Song_SeedNet_Automatic_Seed_CVPR_2018_paper.pdf" target="blank") [論文] SeedNet: Automatic Seed Generation with Deep Reinforcement Learning for Robust Interactive Segmentation
+          li 強化学習を新タスクに適用してみました系列の論文
+          li 他の同系列の論文に見られる傾向と同じく, MDPによる定式化と Reward の計算方法を主な貢献としている
+          li 特に本論文は, 教師ありでは学習するのが難しい問題を上手く見つけている（seed の打ち方は user によって千差万別なのでトレーニングデータを作るのが難しい）
+
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.10 21:50:55

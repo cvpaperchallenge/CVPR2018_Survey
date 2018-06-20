@@ -1,0 +1,28 @@
+﻿+slide
+section#Improving_Occlusion_and_Hard_Negative_Handling_for_Single-Stage_Pedestrian_Detectors
+  .paper-abstract
+    .title Improving Occlusion and Hard Negative Handling for Single-Stage Pedestrian Detectors
+    .info
+      .authors Junhyug Noh, et al.
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 歩行者検出におけるオクルージョンやハードネガティブを改善するための提案。本提案手法は、シングルステージ物体検出手法に適応可能。オクルージョン処理のために、ベースモデルの出力テンソルを更新してパートスコアを推定し、オクルージョン認識スコアを算出する。ハードネガティブの混同を軽減するために、 average grid classifiersをpost-refinement classifiersとして導入。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180690IOHN.jpg`,alt="20180690IOHN.jpg")
+    .item3
+      .text
+        h1 新規性
+        p SqueezeDetやYOLOv2、SSD、DSSDを含むシングルステージ物体検出手法に適応でき、オクルージョンやハードネガティブを改善する。本論文では歩行者検出におけるオクルージョンにフォーカスを当てているが、一般物体検出にも適応できる可能性がある。
+    .item4
+      .text
+        h1 結果・リンク集
+        p CaltechPedestrianとCityPersonsデータセットで評価。4つのモデルのパフォーマンス向上を確認。重度のオクルージョン設定において、最良のパフォーマンス。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0620.pdf") 論文
+    .slide_index #{getSlideIndex()}

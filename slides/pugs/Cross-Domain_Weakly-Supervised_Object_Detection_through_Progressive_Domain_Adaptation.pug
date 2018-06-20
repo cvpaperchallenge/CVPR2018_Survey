@@ -1,0 +1,44 @@
++slide
+section#Cross-Domain_Weakly-Supervised_Object_Detection_through_Progressive_Domain_Adaptation
+  .paper-abstract
+    .title Cross-Domain Weakly-Supervised Object Detection through Progressive Domain Adaptation
+    .info
+      .authors Naoto Inoue, Ryosuke  Furuta, Toshihiko Yamasaki, Kiyoharu Aizawa
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p インスタンスレベルのアノテーションを持つソースドメイン(S)とイメージレベルのアノテーションを持つターゲットドメイン(T)を用いて
+          |domain adaptationを行い、Tに対する物体検出を行う手法を提案。Sを用いて物体検出器のプリトレーニングを行い、
+          |Cycle GANによってSをTに変換した画像を用いて物体検出器のfine-tuningを行う。
+          |続いてSとそのイメージレベルのアノテーションを用いて半教師学習を行いSに対する物体検出を行う。
+          |半教師学習を行う際にインスタンスレベルのアノテーションが施されたデータセットが必要なため、
+          |クリップアート、水彩画、漫画のデータセットの構築も行っている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Cross-Domain_Weakly-Supervised_Object_Detection_through_Progressive_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Cycle GANによる検出器のfine-tuning、半教師学習による物体検出というステップをへてイメージレベルのアノテーションを
+             |持つ実画像ではないドメイン(クリップアートなど)に対する物体検出手法を提案。
+          li Clipart1k, Watercolor2k, Comic2kという、それぞれクリップアート1000枚、水彩画2000枚、
+             |漫画2000枚の画像に対してインスタンスレベルのアノテーションを施したデータセットを構築。
+          li 自ら構築した三種のデータセットにおいて教師なし学習、半教師学習、SSD300、YOLOv2と比較した結果、最も高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 検証しているラベル数が最大でも20と少ないことが気になった。
+             |これはターゲットドメインの構築が難しかったからであり、データさえあればラベルを増やすことができるのだろうか？
+          li
+            a(href="https://arxiv.org/abs/1803.11365") 論文
+          li
+            a(href="https://naoto0804.github.io/cross_domain_detection/") Project page
+          li
+            a(href="https://github.com/naoto0804/cross-domain-detection") GitHub       
+    .slide_index #{getSlideIndex()}

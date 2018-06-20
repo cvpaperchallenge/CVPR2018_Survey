@@ -1,0 +1,35 @@
++slide
+section#Zero-Shot_Super-Resolution_using_Deep_Internal_Learning
+  .paper-abstract
+    .title “Zero-Shot” Super-Resolution using Deep Internal Learning
+    .info
+      .authors Assaf Shocher, Nadav Cohen, Michal Irani
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p 実際の古い写真,ノイズの多い画像,生物学的データ,取得プロセスが不明または非理想的な画像のSuper-Resolution(SR)を実行を行うことができるZero-Shot SR(ZSSR)を提案．
+          |過去の画像例や事前訓練に依存することなく,Low-Resolution(LR)とその縮小版から複雑な画像特有のHR-LR関係を推論するCNNを訓練を行うことにより,
+          |実際のLRの画像において,State-of-the-artなCNNベースのSRおよび教師なしSRよりも優れている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Zero-Shot171206087.png`,alt="Zero-Shot171206087")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SR-CNNは大規模な外部データベースの画像を事前に訓練しているのに対し,ZSSRは小さな画像から粗い解像度のテストデータを訓練．
+        p ZSSRは同じ教師なしのSelfExSRにと比べ全てのDataSetにおいて優れている．
+          |教師あり学習でも通常のLRはあまり変わらない精度を出しており,未知LR画像で確認をするとかなり優れた精度を出している．
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.06087") 論文
+          li
+            a(href="http://www.wisdom.weizmann.ac.il/~vision/zssr/") Zero-Shot Super-Resolution
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 11:43:55

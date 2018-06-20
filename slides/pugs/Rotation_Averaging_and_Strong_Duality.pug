@@ -1,0 +1,35 @@
++slide
+section#Rotation_Averaging_and_Strong_Duality
+  .paper-abstract
+    .title Rotation Averaging and Strong Duality
+    .info
+      .authors Anders Eriksson, Carl Olsson, Fredrik Kahl, Tat-Jun Chin
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では非凸問題の一種であるRotation Averagingに対してLagrangian Dualityを用いる。3次元再構成問題において、その画像群が「どこで、どのカメラ角度で、いつ撮影されたか？」に依存して再構成されるモデルが局所最適解に陥るという問題がRotation Averagingである（
+          a(href="http://www.cs.cornell.edu/~bindel//blurbs/rotavg.html") Rotation averaging
+          |）。図のようにカメラの移動軌跡やそのカメラアングルが変化した状態だと3次元再構成の局所解は大きく異なる（3次元再構成が表面のみ捉えていることに依存する）。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180607RotationAveraging.png`,alt="180607RotationAveraging")
+          img(src=`${figpath}180607RotationAveraging2.png`,alt="180607RotationAveraging2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Structure-from-Motion (SfM)の重要タスクであるRotation Averagingの問題解決についてLagrangian Dualityを用いた全体最適化（局所最適解をできる限りの場面で脱することができた）を行ったことがもっとも大きな新規性である。シンプル/スケーラブルなアルゴリズムであり、大規模空間に対するSfMにも応用可能である。結果は下の図の通りであり、局所最適解を脱してより詳細な形状復元を行うことに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ディープラーニングを使っていない側の問題！SfMの未解決問題？であるRotation Averagingを高いレベルで改善している。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Eriksson_Rotation_Averaging_and_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://www.cs.cornell.edu/~bindel//blurbs/rotavg.html") Rotation Averaging
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.7 08:11:11

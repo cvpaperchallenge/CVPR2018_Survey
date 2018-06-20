@@ -1,0 +1,41 @@
++slide
+section#Missing_Slice_Recovery_for_Tensors_Using_a_Low-rank_Model_in_Embedded_Space
+  .paper-abstract
+    .title Missing Slice Recovery for Tensors Using a Low-rank Model in Embedded Space
+    .info
+      .authors T. Yokota, B. Erem, S. Guler, S.K. Warfield and H. Hontani
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p テンソルがスライス方向に欠けてしまった場合の復元についての論文．
+          |このケースでは，よく行われる核ノルム利用やその他正則化手法ではムリ．
+          |遅れ／シフトに不変な構造を捉えることが重要になることから，
+          |「高次元空間への低ランクモデルの埋め込み」を行うことで解決する．
+          |時系列の遅延埋め込みを，テンソルにおける「複数方向遅延埋め込み変換」
+          |を行い，不完全なテンソルを高次不完全ハンケルテンソルへと変換する．
+          |その後，この高次テンソルをタッカー展開の枠組みで低ランク化することで
+          |復元が行われる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}item3image.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 伝統的に行われてきた行列・テンソル解析系の論文．
+          |情報学部出身の読者になるべく分かりやすいように丁寧に書いているように見受けられる．
+          |画像で言えば，伝送エラーなどで行の一部分や下半分が吹き飛んでしまった時などに使える復元手法．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p きちんと読み手への導入は行われているものの，読み下すには，テンソル分解程度の数学の知識が必要．
+          |ついでに，カオスのような時系列システムも知っているとわかりやすい（図中の説明での事例がそれ）．
+          |まとめ人にとっては数学の復習になったので，ぜひ論文を読んでみていただきたい．
+        ul
+          li
+            a(href="http://link.com/link1/") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 11:01:34
