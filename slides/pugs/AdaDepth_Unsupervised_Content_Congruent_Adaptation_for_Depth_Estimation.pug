@@ -1,0 +1,33 @@
++slide
+section#AdaDepth_Unsupervised_Content_Congruent_Adaptation_for_Depth_Estimation
+  .paper-abstract
+    .title AdaDepth: Unsupervised Content Congruent Adaptation for Depth Estimation
+    .info
+      .authors J.Nath, K.Phani, K.Uppala, A.Pahuja and R.V.Babu
+      .conference CVPR2018
+      .paper_id arXiv:1803.01599
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 教師あり深層学習による手法は単眼カメラ画像における深さ推定に対して良い結果を出している．しかし．grand truthを得るためにはノイズに影響され，コストもかかる．合成データセットを用いた場合の深度推定では固有のドメインにしか対応していなく，自然なシーンに対して対応するのが難しいと言われる．この問題に対応するため，Adversalな学習と対応したターゲットの明確な一貫性をかすこと事によりAdaDepthを提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}AdaDepth_Unsupervised_Content_Congruent_Adaptation_for_Depth_Estimation.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 高次元の構造化エンコーダ表現に作用する，教師なしの敵対的適応設定AdaDepthを提案．
+          li 新規の特徴を再構成する正則化フレームワークを使用して適応表現にコンテンツ一貫性を課すことでモード崩壊の問題に取り組んだ．
+          li 最小限の教師データでの自然シーンの深度推定タスクにおいてSoTAを達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.01599") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.20 15:52:52

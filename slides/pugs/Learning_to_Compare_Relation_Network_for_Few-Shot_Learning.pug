@@ -1,0 +1,38 @@
++slide
+section#Learning_to_Compare_Relation_Network_for_Few-Shot_Learning
+  .paper-abstract
+    .title Learning to Compare: Relation Network for Few-Shot Learning
+    .info
+      .authors F. Sung, Y. Yang, L. Zhang, T. Xiang, P.H.S. Torr, T.M. Hospedales
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p メタ学習を用いたFew-shot learningの新しい枠組み，Relation Networkの提案．
+          |一度学習されれば，ネットワークのアップデートの必要なしに新しいクラスの画像分類ができるようになる．
+        p 1エピソードにおける少数の画像の比較によって距離メトリックを学習するメタラーニングを行う．
+          |少数の新クラスの代表画像群とクエリ画像の関連性スコアの比較により，追加学習なしに新クラス画像分類が行える．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Compare_Relation_Network_for_Few-Shot_Learning_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 再学習しなくても，データさえ用意しておけば未知のクラスも分類可能な画像分類器ができる．
+          li Zero-shot learningにも拡張可能．
+          li シンプルで，高速に動作し，拡張性も高い．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p テスト時も少数のデータを用意しておけば，という考え方はイマドキ感がある．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.06025") arXiv
+          li
+            a(href="https://github.com/lzrobots/LearningToCompare_ZSL") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.18 10:30:48

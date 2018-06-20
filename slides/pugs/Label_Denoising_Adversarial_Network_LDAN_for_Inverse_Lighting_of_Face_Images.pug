@@ -1,0 +1,44 @@
+﻿+slide
+section#Label_Denoising_Adversarial_Network_LDAN_for_Inverse_Lighting_of_Face_Images
+  .paper-abstract
+    .title Label Denoising Adversarial Network (LDAN) for Inverse Lighting of Face Images
+    .info
+      .authors Hao Zhou, Jin Sun, Yaser Yacoob, David W. Jacobs
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 3Dモデルから実画像へのドメイン変換をGANによって行うことで、
+          |単一顔画像から照明パラメタを推定するLabel Denoising Adversarial Network(LDAN)を提案。
+          |人の顔画像に対して照明パラメタ(論文で使用されているのは37次元の球面調和関数)がアノテーションされたデータセットがないため、
+          |3Dモデルを使用してFeature Netと呼ばれるネットワークで中間特徴量を取得し、
+          |中間特徴量からLightning Netを用いて照明パラメタの推定を学習。
+          |続いて人の顔画像に対して、既存手法を用いてノイズが乗った照明パラメタを取得し、
+          |人の顔画像に対してもFeature Netを新しく学習し、
+          |3D モデルから得られた中間特徴量と共にGANに入力することでドメインの変換を行うことでノイズが除去された照明パラメタを取得。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Label_Denoising_Adversarial_Network_LDAN_for_Inverse_Lighting_of_Face_Images.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 単一画像からの照明パラメタの推定という問題に対して、初めて学習ベースの手法を提案。
+          li 結果の比較は19の照明環境が用意されているMultiPieデータセットで行い、推定されたパラメータに対する識別を行うことで精度を評価。
+             |state-of-the-artに比べて識別精度およびユークリッド距離・Q値におけるAUCで最も高い精度を達成。
+          li 同問題を扱う既存手法が最適化ベースということもあり、既存手法と比べて10万倍のスピードで実行可能。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li GANを使って異なるドメインの特徴量を同じ空間にマップする考え方は既に
+             a(href="https://arxiv.org/abs/1702.05464") Adversarial Discriminative Domain Adaptation
+             |によって提案されているが、異なる点としては[Eric et al.]はGANのロスしか使っていないが、この方法では写像がうまく行かず、
+             |A→A', B→Bと学習して欲しいところをやA→B', B→A'といった写像を学習してしまう。
+             |これを解消するために、lightning netで得られたパラメータに対するL2ロスを取ることでこれを解消。
+          li
+            a(href="https://arxiv.org/abs/1802.06713") 論文
+    .slide_index #{getSlideIndex()}

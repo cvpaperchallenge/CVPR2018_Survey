@@ -1,0 +1,35 @@
++slide
+section#Demo2Vec_Reasoning_Object_Affordances_from_Online_Videos
+  .paper-abstract
+    .title Demo2Vec: Reasoning Object Affordances from Online Videos
+    .info
+      .authors Kuan Fang, Te-Lin Wu, Daniel Yang, Silvio Savarese and Joseph J. Lim
+      .conference CVPR2018
+      .paper_id 1387
+    .slide_editor KazuhoKito
+
+    .item1
+      .text
+        h1 概要
+        p 商品などのデモンストレーションの映像の特徴を通してその商品などのアフォーダンスを推論する研究．映像から埋め込みベクトルを抜き出すことで，ヒートマップと行動のラベルとして特定のもののアフォーダンスを予測するDemo2Vecモデルを提案．また，YouTubeの製品レビュー動画を集め，ラベリングすることでOnline Product Review detaset for Affordande(OPRA)を構築．
+    .item2
+      .text
+        p 
+        img(src=`${figpath}Demo2Vec_Reasoning_Object_Affordances_from_Online_Videos.PNG`,alt="Demo2Vec_Reasoning_Object_Affordances_from_Online_Videos.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p アフォーダンスのヒートマップと行動のラベルの予測に関し，RNNの基準よりよいパフォーマンスを達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        p YouTubeで公開されている動画では，Demo2Vecを用いてある物体のデモ動画からSawyer robotのEnd Effectorを予測したヒートマップの地点に移動するように制御させている様子を見ることができる．
+        ul
+          li
+            a(href="http://ai.stanford.edu/~kuanfang/pdf/demo2vec2018cvpr") 論文
+          li
+            a(href="https://sites.google.com/view/demo2vec/") ProjectPage
+          li
+            a(href="https://www.youtube.com/watch?v=UT1QohPIioU") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.20 22:42:02

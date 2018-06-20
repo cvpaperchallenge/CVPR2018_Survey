@@ -1,0 +1,32 @@
++slide
+section#Convolutional_Sequence_to_Sequence_Model_for_Human_Dynamics
+  .paper-abstract
+    .title Convolutional Sequence to Sequence Model for Human Dynamics
+    .info
+      .authors Chen Li, Zhen Zhang, Wee Sun Lee, Gim Hee Lee
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 時空間的な特徴を捉えて、長期のモーション予測を行う研究である（ここではいかに最初の限られた情報量のみでシーケンスを推定できるかどうかについて検証を行なっている）。この課題に対し、Convolutional Long-term Encoderを用いてより長期的な隠れ変数をデコーダにより推定する。このエンコーダ-デコーダ構造にて短期〜より長期的な変数の予測を可能にする。本手法では主にRNNベースのSequence-to-SequenceなモデルにConvolutionalな要素を加えたことが技術的発展であると主張。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180517ConvSeq2Seq.png`,alt="180517ConvSeq2Seq")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p より長期の（といっても数秒間のシーケンス？）人物モーション予測（ここでは人物姿勢位置を予測）を実現したことが課題設定として大きい。手法としてはConvolutional Long-term Encoderやその抽象化された特徴をデコーダにより長期隠れ変数を推定。Human3.6MやCMU Motion Capture datasetにて高い精度を実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Short-termからLong-term（Short-term: 〜3秒、Long-term: 5秒〜; 明確な定義はなされていないが。。）の行動/姿勢の予測はまだまだ未解決だし、何を予測するかに関しての定義づけ自体の整備も曖昧なままである。まだまだ参入の余地が残されているように見える。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.00655") 論文
+          li
+            a(href="https://github.com/chaneyddtt/Convolutional-Sequence-to-Sequence-Model-for-Human-Dynamics") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 01:05:51

@@ -1,0 +1,42 @@
++slide
+section#InverseFaceNet_Deep_Monocular_Inverse_Face_Rendering
+  .paper-abstract
+    .title InverseFaceNet: Deep Monocular Inverse Face Rendering
+    .info
+      .authors Hyeongwoo Kim, Michael Zollhöfer, Ayush Tewari, Justus Thies, Christian Richardt, Christian Theobalt
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 実世界の3D顔モデルを使用せず合成された3DモデルのみでCNNをトレーニングすることで、
+          |実世界の顔画像から顔向き、形、表情、リフレクタンス、イルミネーションの3D復元を行う手法を提案。
+          |CNNをトレーニング際の問題点として、実世界の3D顔モデルに対するアノテーションが足りないという問題があった。
+          |これに対して、実世界の顔画像から推定されるパラメタと合成顔から推定されるパラメタに対してself-supervised bootstrappingを行うことで、
+          |トレーニングに使用する合成顔3Dモデルのパラメタの分布を実世界のパラメタの分布に近づくようにトレーニングデータを逐次的に更新を行うことで、
+          |CNNの学習を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}InverseFaceNet_Deep_Monocular_Inverse_Face_Rendering.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li self-supervised bootstrappingを使用することで、実世界のパラメータを再現するように合成顔のデータセットを再構築することで、
+             |データセットがないという問題に取り組んだ。
+          li 既存の学習ベースの手法に比べて、ジオメトリーにおいて最も高い精度を達成。
+          li 最適化ベースの手法に比べると、パーツのディティールやシワの再現の精度が悪い。
+          li リミテーションとして、データセットにない顔向きや髪によるオクルージョンを考量することができない。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 異なるドメインを使ったトレーニングの方法として、GANを使ってcross domainの分布を近づける方法が提案されているなど、
+             |トレーニングデータ不足を解決する方法が提案されてきている。
+          li
+            a(href="https://arxiv.org/abs/1703.10956") 論文
+          li
+            a(href="https://web.stanford.edu/~zollhoef/papers/arXiv17_Inverse/supple.pdf") Supplementary
+    .slide_index #{getSlideIndex()}

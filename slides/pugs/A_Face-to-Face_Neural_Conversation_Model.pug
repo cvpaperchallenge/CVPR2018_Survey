@@ -1,0 +1,38 @@
+﻿+slide
+section#A_Face-to-Face_Neural_Conversation_Model
+  .paper-abstract
+    .title A Face-to-Face Neural Conversation Model
+    .info
+      .authors Hang Chu, Daiqing Li, Sanja Fidler
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 入力された会話文に対して、その返答と適切な顔のジェスチャーを生成する手法。
+          |映画データセットを元にトレーニングデータセットを構築。
+          |RNNに対してディスクリミネータの出力を報酬とした強化学習を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Face-to-Face_Neural_Conversation_Model.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 入力は会話文のみ、あるいは動画。動画が入力の場合には同じテキストでも発話者の表情によって出力される返答文が変化する。
+          li 出力が会話文だけの場合よりも、同時に顔のジェスチャを生成した方が生成された会話文がよりGTの会話文に近くなったことを主張。
+          li データセットは250種類の映画データセットMovieQAにおいて単一人物が写っているシーンにおいて顔向、ジェスチャカテゴリ、タイムスタンプを取得することで構築した。
+          li 生成された返答文の妥当性を評価するためにamazon mechanical turkを実施。GANを導入したことで返答文の多様性、妥当性がstate-of-the-artの手法に勝った。
+          li このモデルで学習したボットとリアルタイムで会話することも可能。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li デモを見るとまだ返答文自体には違和感があるが、顔のジェスチャがつくことで会話している気分になる。ボットのモデルが謎のおじさん。
+          li
+            a(href="http://chuhang.github.io/files/publications/CVPR_18_2.pdf") 論文
+          li
+            a(href="http://www.cs.toronto.edu/face2face") Project page
+    .slide_index #{getSlideIndex()}

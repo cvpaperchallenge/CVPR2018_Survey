@@ -1,0 +1,45 @@
++slide
+section#Face_Detector_Adaptation_without_Negative_Transfer_or_Catastrophic_Forgetting
+  .paper-abstract
+    .title Face Detector Adaptation without Negative Transfer or Catastrophic Forgetting
+    .info
+      .authors Muhammad Abdullah Jamal, Haoxiang Li, Boqing Gong
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔検出におけるターゲットドメインからソースドメインへのadaptationを、
+          |negative transferとcatastrophic forgettingの両方を引き起こさずに行う手法を提案。
+          |negative transferとはadaptation後のソースドメインにおける検出精度がadaptation前のソースドメインにおける検出精度に劣ることを指し、
+          |catastorophic forgettingとはadaption後におけるソースドメインの検出精度が著しく下がることを指す。
+          |提案手法では、ソースドメインとターゲットドメインの違いを、ロス関数とDNNの重みの差分で表現し、
+          |この差分がなくなるように学習を行う手法を提案。
+          |またターゲットドメインにface or notのラベルがないという状況も考えて教師あり学習だけでなく教師なし学習、
+          |半教師あり学習の結果についても議論を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Face_Detector_Adaptation_without_Negative_Transfer_or_Catastrophic_Forgetting.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ソースドメインとターゲットドメインの違いを、DNNのロス関数・重みの差分で表現することでadaptationを行った。
+          li 実験は、CascadeCNN+AFLW(25000 faces), Faster-R CNN+WIDER FACE dataset(393,703 faces, highly labeled)の2つのモデルでソースドメインの学習を行い、
+             |ターゲットドメインははFDDB(5171 labeled faces)、COFWで行った。
+          li 検出結果はターゲットドメインのみを学習した検出器、ソースドメインからターゲットドメインへfine tuningされた検出器、
+             |domain adaptaionを行うstate-of-the-artと比較を行った。提案手法はターゲットドメインにおける検出においてもっとも高い精度を達成。
+             |またソースドメインにおける検出においてもターゲットドメインのみを学習した識別器と同等の精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li adaptationというより、もはやトレーニングデータセットの事後拡張となっており、
+             |後でトレーニングデータを追加したくなった時に有用なのではないだろうか。
+          li
+            a(href="http://boqinggong.info/papers/cvpr18-deep-face.pdf") 論文
+          li
+            a(href="http://boqinggong.info/papers/cvpr18-deep-face-supp.pdf") Supplementary
+    .slide_index #{getSlideIndex()}

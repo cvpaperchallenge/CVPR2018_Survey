@@ -1,0 +1,33 @@
++slide
+section#Learning_to_Adapt_Structured_Output_Space_for_Semantic_Segmentation
+  .paper-abstract
+    .title Learning to Adapt Structured Output Space for Semantic Segmentation
+    .info
+      .authors Yi-Hsuan Tsai, Wei-Chih Hung, Samuel Schulter, Kihyuk Sohn, Ming-Hsuan Yang, Manmohan Chandraker
+      .conference CVPR2018
+    .slide_editor Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p Semantic Segmentationに関するDomain Adaptationの研究。Semantic Segmentationをsource domainとtarget domain間の空間的な類似性を持つ構造的な出力として考え、出力空間(prediction map)でのDomain Adaptationを行う敵対的学習手法を提案。低次特徴は利用せず、高次特徴のみを複数のDiscriminatorにより異なる空間解像度ごとに適応させる(Multi-level Adversarial Learning)。実験ではsynthetic-to-realとcross-cityでの比較を行っている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Adapt_Structured_Output_Space_for_Semantic_Segmentation.png`,alt="Learning_to_Adapt_Structured_Output_Space_for_Semantic_Segmentation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 画像分類タスクを中心に発展していたDomain Adaptationを画素単位の構造予測が必要なSemantic Segmentationに適用した点。
+        p Semantic Segmentationに限らず構造予測をするタスクへも容易に拡張ができる。
+        p 画像分類と比較して、アノテーションの労力がかかるため実用性・将来性がある。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.10349") arxiv
+          li
+            a(href="https://github.com/wasidennis/AdaptSegNet") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 20:28:45

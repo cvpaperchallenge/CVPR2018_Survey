@@ -1,0 +1,38 @@
+﻿+slide
+section#Im2Pano3D_Extrapolating_360_Structure_and_Semantics_Beyond_the_Field_of_View
+  .paper-abstract
+    .title Im2Pano3D: Extrapolating 360 Structure and Semantics Beyond the Field of View
+    .info
+      .authors Shuran Song, Andy Zeng, Angel Chang, Manolis Savva, Silvio Savarese, Thomas Funkhouser
+      .conference CVPR 2018
+      .paper_id 466
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        p ・部分的に観測されたシーン(RGB-D)から，full sceneの構造及びセマンティックラベルを推定する新規な問題設定”semantic-structure view extrapolation”及びフレームワークを提案した．
+        p ・従来のview extrapolationは画像のboundryの色情報しか行わず，シーンのセマンティック構造に対してextrapolationを行う研究がない．そこで，この論文で，著者達がsemantic-structure view extrapolationを提案し，50%以下のシーンの観測データから構造及びセマンティックをextrapolation予測する．
+        p ・提案フレームワークは：①一枚のマルチチャンネルpanorama画像でシーンの情報(RGB，構造，セマンティック)を表示する；②3次元構造をデプスのような詳細な三次元情報を用いずに，3次元平面方程式で表示する．③マルチロス関数(ピクセルレベル，グローバルコンテキスト)を用いる．
+        p ・提案フレームワークの考え方は入力と出力を一枚のマルチチャンネルpanorama画像として表示し，encoder-decoderにより，欠損した入力からfullなpanorama画像を出力する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Im2Pano3D.png`,alt="Im2Pano3D")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・CG データセットSUNCG及びリアルシーンデータセットMatterport3Dを用いて従来手法よりシーンの構造及びセマンティックの予測が優位．
+        p ・一枚のマルチチャンネルpanorama画像でシーンの情報を表示し，シーンの情報を固定なサイズにできるので，2次元畳み込みを用いられる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ・マルチチャンネルpanorama画像でシーンの情報を保存するところが賢い
+        p ・提案フレームワークは構造的に理解しやすい，実装してみたい
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.04569") 論文
+          li
+            a(href="http://im2pano3d.cs.princeton.edu/") ポロジェクト
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.11 17:40:13
