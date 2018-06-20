@@ -1,0 +1,37 @@
++slide
+section#Empirical_study_of_the_topology_and_geometry_of_deep_networks
+  .paper-abstract
+    .title Empirical study of the topology and geometry of deep networks
+    .info
+      .authors Alhussein Fawzi et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p DNN 画像クラス分類器の入力空間における位相的・幾何学的性質を実験的に分析した研究. DNN が学習している各クラスの領域は接続されたものであり, その境界は少数の大きな曲率をもつ方向と, 平坦な大多数の方向があることが確認された. また, 大きな曲率をもつ方向はデータ間で共有されており, これらの方向とネットワークの摂動に対する感度に関係性があることを確認した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Empirical-study-of-the-topology-and-geometry-of-deep-networks.png`,alt="fukuhara-Empirical-study-of-the-topology-and-geometry-of-deep-networks.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 理論のみを用いた解析は困難なため, 実験を行って性質の分析を行った
+          li DNN が学習している同じクラスの領域は接続されたものであり, その領域はほぼ凸集合になっている（凸集合に近いが実際には違う）
+          li クラスの境界の主曲率は多数の方向で０であったが, 大きな値をもつ方向が少数存在
+          li 主曲率の値は非対称で大きな負の値を持つ方向が多い (この結果はネットワークの構造やデータセットなどを変えても共通して確認された)
+          li 主曲率の大きな値をもつ方向はデータ間で共有されていることを確認
+          li 主曲率の大きな値をもつ方向は, ネットワークが誤認識をしやすい摂動の方向となっていることを確認（adversarial perturbation との関連が確認された）
+          li クラスの境界の主曲率の値の非対称を用いて, 元画像と adversarial perturbation を加えられた画像を識別する方法を提案 (GoogLeNet や CaffeNet を用いて行った実験では90％以上の精度を達成)
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Fawzi_Empirical_Study_of_CVPR_2018_paper.pdf" target="blank") [論文] Empirical study of the topology and geometry of deep networks
+          li 本研究で確認された入力空間における位相的性質と同様の性質が, weight の空間でも報告 [Freeman+ 16] されており, ２つの空間の関連性を調べることは今後の課題とされている.
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 6:30:55
