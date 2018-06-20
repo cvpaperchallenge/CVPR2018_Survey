@@ -1,0 +1,37 @@
++slide
+section#Facelet-Bank_for_Fast_Portrait_Manipulation
+  .paper-abstract
+    .title Facelet-Bank for Fast Portrait Manipulation
+    .info
+      .authors Ying-Cong Chen, Huaijia Lin, Michelle Shu, Ruiyu Li, Xin Tao, Xiaoyong Shen, Yangang Ye and Jiaya Jia
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 顔のattributeを編集するEnd-to-Endのネットワークを提案した。
+          |ドメイン間の変換を考えるのではなく、Encoderにより得られた特徴のドメイン間の差分を考えることにより特徴の付与を実現する。
+          |ドメイン毎の特徴は、全ての学習データの平均ではなく入力画像の最近傍K枚の平均を考える。
+          |Encoderにより入力画像から得られた特徴から、Facelet Bankというネットワークによりドメイン間の差分を求める。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Facelet-Bank_for_Fast_Portrait_Manipulation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法と比較して、artifactが少なく高解像度の画像を出力することが可能になった。
+          |女性に髭を付与するなど学習データには存在しないようなものの場合、従来法では男女の違いが付与されて髭以外の変化が加わってしまう。
+          |しかし、編集に重要な領域(髭→口周り)のみに変化を施すため従来手法よりも自然な変化が実現可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 比較的関連研究が多そうな研究だったが比較対象が2つと少なめ
+        ul
+          li
+            a(href="https://github.com/yingcong/Facelet_Bank/") コード
+          li
+            a(href="https://arxiv.org/abs/1803.05576") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 22:09:57
