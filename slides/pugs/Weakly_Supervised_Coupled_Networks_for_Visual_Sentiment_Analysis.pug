@@ -1,0 +1,36 @@
++slide
+section#Weakly_Supervised_Coupled_Networks_for_Visual_Sentiment_Analysis
+  .paper-abstract
+    .title Weakly Supervised Coupled Networks for Visual Sentiment Analysis
+    .info
+      .authors J. Yang, D. She, Y. Lai, P.L. Rosin, M. Yang
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p 画像で感情分析を行う研究．
+          |従来法は全体的な画像特徴からセンチメント表現を学習していたが，
+          |本研究では局所特徴もとらえるようにした．
+        p 弱教師付き二つ組CNNによる．
+          |(1)感情に特定的にソフトマップを検出するFCNN．
+          |画像レベルのラベルだけ必要にしたので，画素レベルアノテーションのようなアノテーション負荷が低くて済む．
+          |(2)ロバストなクラス分類のために，深層特徴を使い，感情マップを2つ組することによって，全体・局所情報の両方を活用．
+          |そして，これら2つを統合してEnd-to-Endで最適化できるようにする．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Weakly_Supervised_Coupled_Networks_for_Visual_Sentiment_Analysis.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p より詳細に画像を見るように設計した．
+          |その結果，6つのベンチマークで評価を行い，SOTA性能を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2108.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 16:46:09
