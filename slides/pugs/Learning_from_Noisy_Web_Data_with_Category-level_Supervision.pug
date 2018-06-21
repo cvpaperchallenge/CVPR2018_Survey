@@ -1,0 +1,34 @@
++slide
+section#Learning_from_Noisy_Web_Data_with_Category-level_Supervision
+  .paper-abstract
+    .title Learning from Noisy Web Data with Category-level Supervision
+    .info
+      .authors L.Niu, Q.Tang, A.Veeraraghavan, and A.Sabharwal
+      .conference CVPR 2018
+      .paper_id 996
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p 日に日に触れるウェブデータから学習することはポピュラーになりつつあるが，従来の学習とウェブデータを使用した学習では，ラベルが時々間違っているなどの大きなギャップが存在する．
+          |これを解決する従来手法では，さらに情報を追加してウェブデータから学習する傾向があったが，この論文では，より活発なカテゴリレベルの監視をすることによりラベルノイズを減らすWSCI(Webly Supervised
+          |learning with Category-level Information)を提案．
+          |分類を行うネットワークをVAE（Variational AutoEncoder）の隠れ層に接続し，分類ネットワークとVAEがカテゴリレベルのHybrid Semantic Informationを共有する．
+          |提案手法の有効性はAwA2, CUB, SUNの3つデータセットで評価している．
+    .item2
+      .text
+        p !(0180922_WCSI.png)
+    .item3
+      .text
+        h1 新規性・結果
+        p いずれのデータセットにおいても，提案手法は従来手法に比べ2～5%ほど精度が向上しており，AwA2のデータセットにおいては90%を超える評価を出している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 人間がわざわざデータを集めるのではなく，機械が自動的にデータセットを作ることで今までの負担を大きく減らすことができると考えられる．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.03857") arxiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 13:50:52
