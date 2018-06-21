@@ -1,0 +1,36 @@
++slide
+section#What_have_we_learned_from_deep_representations_for_action_recognition
+  .paper-abstract
+    .title What have we learned from deep representations for action recognition?
+    .info
+      .authors Christoph Feichtenhofer et al.
+      .conference CVPR2018
+      .paper_id 1801.01415
+    .slide_editor Takumu Ikeya
+
+    .item1
+      .text
+        h1 概要!
+        ul
+          li 動画中の行動を認識するためにtwo stream modelが学習したものを視覚化することで時空間表現がどのように働いているか調査した研究．
+          li 単純に形状特徴と動作特徴を分割するよりも，cross-stream fusionは正しい時空間特徴を学習することが可能．
+          li ネットワークはクラス特有の局所表現だけでなく，様々なクラスに対応できる汎用表現を学習することが可能．
+          li ネットワークの階層全体を通して，特徴はより抽象的になり，ある動作の区別にとって重要でないデータに対する不変性が増加．
+          li 視覚化は、学習された表現を確認するだけでなく，学習データの独自性を明らかにし，systemの失敗例の説目に利用可能.
+    .item2
+      .text
+        p
+          img(src=`${figpath}What_have_we_learned_from_deep_representations_for_action_recognition.PNG`,alt="What_have_we_learned_from_deep_representations_for_action_recognition.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ランダムに初期化されたノイズ画像とノイズ動画の入力から開始するモデルの時空間の入力を直接最適化する.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1801.01415.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 21:04:41

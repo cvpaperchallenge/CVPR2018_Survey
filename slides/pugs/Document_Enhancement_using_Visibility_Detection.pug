@@ -1,0 +1,37 @@
++slide
+section#Document_Enhancement_using_Visibility_Detection
+  .paper-abstract
+    .title Document Enhancement using Visibility Detection
+    .info
+      .authors N. Kligler, S. Katz and A. Tal
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 文書から二値化，陰影除去をするのに使えるDocument Enhancementの話．
+          |文書平面を三次元化し，文書面から凸凹を除去するという形で可視領域（Visibility）の検出をし，
+          |それをベースに鮮鋭化するというやり方．
+          |本手法を前処理として，二値化手法や陰影除去を適用するとSOTA性能を上回る．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Document_Enhancement_using_Visibility_Detection.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 基本方針としては，識別性を高める高次元空間への変換のやり方を考えました，という非ディープなパタレコにおけるノリ．
+        p 論文の質としては他論文と比較して若干劣るように感じられるが，
+          |「平面だけど三次元点群にするとうまくいくとは，驚きだ！」と言っていて，それがウケたのだろうか．
+          |おそらく当初の発想も文書の凸凹を消すという発想だったと思われる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 肝心の3次元空間への射影の具体的な実装（(x, y)→(θ，φ)の部分）が読み取れませんでした．
+          |どなたか再現できたらご教授頂けますと幸いです．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2447.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 09:52:48
