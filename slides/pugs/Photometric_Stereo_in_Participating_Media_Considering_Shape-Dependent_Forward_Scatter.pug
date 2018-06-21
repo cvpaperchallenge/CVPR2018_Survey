@@ -1,0 +1,36 @@
++slide
+section#Photometric_Stereo_in_Participating_Media_Considering_Shape-Dependent_Forward_Scatter
+  .paper-abstract
+    .title Photometric Stereo in Participating Media Considering Shape-Dependent Forward Scatter
+    .info
+      .authors Y. Fujimura, M. Iiyama, A. Hashimoto, M. Minoh
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 濁った水や霧の中で撮影したような，散乱光により劣化したような画像に対して
+          |適用可能な3D復元手法の提案．
+        p 形状依存の前方散乱（forward scatter）を扱うモデルを考え，
+          |ルックアップテーブル使用で解析的に求める，
+          |それを空間的変化カーネルとして表現する．
+          |また，前方散乱の除去を可能にする，大規模密行列を疎行列に近似する手法を提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Photometric_Stereo_in_Participating_Media_Considering_Shape-Dependent_Forward_Scatter.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 厳密に形状依存の表面-カメラ間前方散乱をモデル化し，
+          |その解析的解法を提案したものは初めて．
+        p 実，合成データに対して改善的性能を示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2871.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 13:38:56
