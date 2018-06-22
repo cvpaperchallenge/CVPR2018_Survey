@@ -1,0 +1,30 @@
++slide
+section#Learning_Attentions_Residual_Attentional_Siamese_Network_for_High_Performance_Online_Visual_Tracking
+  .paper-abstract
+    .title Learning Attentions: Residual Attentional Siamese Network for High Performance Online Visual Tracking
+    .info
+      .authors Qiang Wang, Zhu Teng, Junliang Xing, Jin Gao, Weiming Hu, Steve Maybank
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 物体追跡のためのオフライン学習ベースの手法は精度とスピードにおいて高いポテンシャルがあるが、追跡対象に適応させることは困難である。一方で、オンライン学習ベースの手法は計算コストとオーバーフィッティングが問題になっている。本論文では、Siamese NetworkにおけるCross CorrelationをAttentionで重み付けしたRASNet（Residual Attentional Siamese Network）を提案し、リアルタイムを超える速度（83fps）とSOTAを実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}RASNet.png`,alt="RASNet")
+    .item3
+      .text
+        h1 新規性・結果
+        p Siamese NetworkにAttention Mechanismを導入した。Attention MechanismにはResidual AttentionとGeneral Attentionを含むDual Attentionと、Channel Attentionを導入した。Resiual Attentionは追跡対象に特化させるようにオンライン学習をし、Channel Attentionはチャンネルごとの特徴量の質を示している。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://www.dcs.bbk.ac.uk/~sjmaybank/CVPR18RASTrackCameraV3.3.pdf") 論文
+            a(href="https://github.com/foolwood/RASNet") GitHub
+    .slide_index #{getSlideIndex()}
+    
