@@ -1,0 +1,34 @@
++slide
+section#Separating_Style_and_Content_for_Generalized_Style_Transfer
+  .paper-abstract
+    .title Separating Style and Content for Generalized Style Transfer
+    .info
+      .authors Yexun Zhang, Ya Zhang, Wenbin Cai
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p StyleとContent、それぞれを抽出するEncoderにより得られた特徴を結合することによりStyle Transferを実現するEMDモデルを提案。
+          |学習の際、Style Encoderの学習にはStyleが一緒だがContentが違う画像を、Content Encoderの学習にはContentが一緒だがStyleが異なる画像のセットを用いて学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Separating_Style_and_Content_for_Generalized_Style_Transfer.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Styleとして漢字のフォント、Contentとして漢字の種類を考え検証を行った。
+          |Style及びContentのセットは、枚数が多いほど精度がよくなるが増えていくと飽和して変わらなくなる。
+          |ベースラインと比べるときれいな文字が生成されている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Style Transferの一般化と書いてある割に、漢字という一部の地域でしか用いられていない文字でしか実験がされておらず他の対象に適用可能であるかが不明。（ロスの設計も漢字を前提とした重み付けがされている）
+          |そもそも学習画像のセットにStyleとContentが一緒であるという仮定が必要であり、これらが明らかであるという理由で漢字で実験したとあるように、漢字以外でやる場合StyleとContentとは何かを考えなければならない。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.06454") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.25 14:11:55

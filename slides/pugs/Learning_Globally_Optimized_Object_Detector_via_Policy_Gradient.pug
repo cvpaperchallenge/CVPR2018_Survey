@@ -1,0 +1,49 @@
++slide
+section#Learning_Globally_Optimized_Object_Detector_via_Policy_Gradient
+  .paper-abstract
+    .title Learning Globally Optimized Object Detector via Policy Gradient
+    .info
+      .authors Yongming Rao et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 強化学習（Policy Gradient）を応用して大域最適化された物体検出器の学習を行う end-to-end なフレームワークの提案. 既存の物体検出器の学習に RoI 間の相互関係が用いられていないことに着目し, 検出された物体の mAP の総和を最大にする様な学習を行うために強化学習を用いている. 提案手法はネットワークの構造には依存しないので既存の多くの手法に適用が可能. 評価実験では, COCO-style mPA で Faster R-CNN を 2.0%, Faster R-CNN with Feature Pyramid Networks を 1.8% 向上させた.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Learning-Globally-Optimized-Object-Detector-via-Policy-Gradient.png`,alt="fukuhara-Learning-Globally-Optimized-Object-Detector-via-Policy-Gradient.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 強化学習を応用して大域最適化された物体検出器の学習を行う end-to-end なフレームワークの提案（厳密には強化学習では無い）
+          li 検出された物体の mAP の総和を最大にする様に学習するため, 大域最適化が可能 (既存手法は multi-task loss で個々を独立して学習）
+          li 提案手法はネットワークの構造には依存しないので既存の手法に適用が可能（汎用性）. 計算のオーバーヘッドも無い(高速). 通常の Cross-Entropy Gradient に簡単な修正を加えるだけで適用可能（単純）
+          li 強化学習の reward は mAP の総和を使用, action は Bounding Box の選択
+          li action が膨大になってしまうのを防ぐため, 物体のカテゴリーは既存の手法で適当に選択されていると仮定（学習済みのモデルに追加で学習）, それでも action が膨大なので, 強化学習の各イテレーションでサンプリングをして行動を決定
+          li 評価実験では, COCO minival set において COCO-style mPA で評価して, Faster R-CNN を 2.0%, Faster R-CNN with Feature Pyramid Networks を 1.8% 向上
+          //-li 強化学習（Policy Gradient）を用いて大域最適化された物体検出器の学習を行う end-to-end なフレームワークの提案
+          //-li Faster R-CNN では使われていない RoI 間の関係が物体検出の精度を向上させるかもと考えた（既存手法は multi-task loss で個々を独立して学習）
+          //-li 大域情報を用いて複数の Bounding Box に教示をし, 直接mAPを向上させる
+          //-li REINFORCEに影響を受け, 通常のクロスエントロピーGradientに簡単な修正を加えた（というか上手い具合にその様にした）
+          //-li Faster R-CNN のような object detector をagentとみなし, 画像を環境とみなし, mAPをRewardにした
+          //-li action が膨大になってしまうのを防ぐため, カテゴリーは既に既存の手法で適当に選択されていると仮定
+          //-li それでもアクションが膨大なので, 各イテレーションでサンプリングをして行動を決定
+          //-li 現在のstateのmAPによってクロスエントロピーGradientを動的に修正
+          //-li 計算のオーバーヘッドも無い
+          //-li 構造には依存しないので既存の手法（off-the-shelf）に適用が可能
+          //-li COCO-style mPA でFaster R-CNNを倒してを2.0%向上
+          //-li COCO object detection で Faster R-CNN with Feature Pyramid Networks を倒してmAPを1.8％向上
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2657.pdf" target="blank") [論文] Learning Globally Optimized Object Detector via Policy Gradient
+          li 強化学習の手法をCVのタスクに応用した例. 既存手法に提案手法を上乗せすることで精度を向上させているところが上手い.（強化学習の際の action の数が多くなり過ぎてしまう問題も, 事前学習済みの検出器に追加で学習を行うことで回避している.）
+          li Policy Gradient の式を上手く Cross-Entropy Loss の特殊な場合となる様に変形することで"単純"で効果的な手法となっている.
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 20:33:55
