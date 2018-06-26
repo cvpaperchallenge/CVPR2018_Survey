@@ -1,0 +1,36 @@
+﻿+slide
+section#_3D_Object_Detection_with_Latent_Support_Surfaces
+  .paper-abstract
+    .title 3D Object Detection with Latent Support Surfaces
+    .info
+      .authors Zhile Ren, Erik Sudderth
+      .conference CVPR 2018
+      .paper_id 121
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 点群密度，3次元法線方向ヒストグラム，COG特徴などの3つの特徴に基づいた3次元検出手法の提案．
+          li RGB-D画像にoriented cuboidsをアラインして，更にcanonical座標フレームに変換する．ボクセルごとに点群密度特徴，3次元法線方向ヒストグラム及びCOG特徴(Latent Support Surfaces特徴)を抽出し，SVMにより識別及びバウンディングボクスの検出を行う．提案するCOG特徴は5
+            em 5
+            |5ボクセルでボクセルごとに主要法線方向の表示をベースとしたdescriptor．
+    .item2
+      .text
+        p
+          img(src=`${figpath}3D-detection-latentsupportsurfaces.png`,alt="3D-detection-latentsupportsurfaces")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来の3次元検出手法は局所的形状及び表現から物体カテゴリを決定し，異なる視覚スタイル・スケールの物体を検出するロバスト性が低い．提案手法は異なるスケールの物体検出を行える．特に小さい物体の検出が従来より強い．
+          li SUN RGB-D DatasetにおいてSOTAな精度を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://www.ics.uci.edu/~sudderth/papers/cvpr18support.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.26 13:46:17
