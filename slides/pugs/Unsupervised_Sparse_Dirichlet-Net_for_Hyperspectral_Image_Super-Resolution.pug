@@ -1,0 +1,36 @@
++slide
+section#Unsupervised_Sparse_Dirichlet-Net_for_Hyperspectral_Image_Super-Resolution
+  .paper-abstract
+    .title Unsupervised Sparse Dirichlet-Net for Hyperspectral Image Super-Resolution
+    .info
+      .authors Ying Qu, Hairong Qi, Chiman Kwan
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 高解像度かつ短いスペクトルバンド幅で撮影された画像であるhyper resolution hyperspectral image(HR HSI)を、HR HSIの正解データなしで、
+          |広いスペクトルバンド幅で撮影された高解像度画像(HR MSI)と、短いスペクトルバンド幅で撮影された低解像度画像(LR HSI)を用いて生成する手法を提案。
+          |高解像度かつ短いスペクトルバンド幅で写真を撮影することはハードウェア的に困難であり、データセットの構築も難しい。
+          |提案手法ではHR MSIとLR HSIをトレーニングデータとして2つのencoder-decoderを用いる。
+          |HR MSIとLR HSIにはそれぞれ独立のエンコーダーが適用されるが、LR HSIから得られるスペクトル情報を共有するため、
+          |デコーダーは共有する。またスペクトル係数の総和は1という物理的な制約を実現するために潜在変数がディリクレ分布に従うようにする。
+          |また推定されたスペクトルに対し得てスペクトル空間上の角度の差が小さくなるように学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Unsupervised_Sparse_Dirichlet-Net_for_Hyperspectral_Image_Super-Resolution.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CAVE、Harvardデータセットにて検証を行い、state-of-the-artとRMSE、SAM(スペクトル空間のベクトル類似性)比較して最も高い精度を達成。
+          li 教師無し学習が行えた理由として、古くから取り扱われている問題設定であったため、問題の性質をよく知っていたことがあげられる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.05042") 論文
+    .slide_index #{getSlideIndex()}
