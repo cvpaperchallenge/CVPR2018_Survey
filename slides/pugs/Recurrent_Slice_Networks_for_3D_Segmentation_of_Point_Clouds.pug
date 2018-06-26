@@ -1,0 +1,40 @@
+﻿+slide
+section#Recurrent_Slice_Networks_for_3D_Segmentation_of_Point_Clouds
+  .paper-abstract
+    .title Recurrent Slice Networks for 3D Segmentation of Point Clouds
+    .info
+      .authors Qiangui Huang, Weiyue Wang, Ulrich Neumann
+      .conference CVPR 2018
+      .paper_id 341
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 有効的にポイントクラウドの局所的構造をモデリングできるポイントクラウドを直接処理する3D セグメンテーションフレームワークRSNetを提案した．
+          li RSNetは主に3つの部分から構成され:①slice pooling layerが入力ポイントクラウドをslicesスにグループし， sliceごとにポイントの特徴をaggregateすることによりグローバル特徴を抽出する②RNNsにより特徴を抽出する③slide unpooling layerにより抽出特徴をポイントに戻す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}RecurrentSliceNetworks.png`,alt="RecurrentSliceNetworks")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li S3DIS, ScanNet, ShapeNetの3つのデータセットにおいて最も高いセグメンテーション精度を達成した．
+          li RSNetは従来の3DCNNと比べ精度が高いほか，時間とメモリー消耗がより少ない．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p RNN構造をポイントクラウドの情報抽出に用いるのが良い精度を達成した原因だと思う
+          li
+            p
+              a(href="https://arxiv.org/pdf/1802.04402.pdf") 論文
+          li
+            p
+              a(href="https://github.com/qianguih/RSNet") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.26 13:51:24
