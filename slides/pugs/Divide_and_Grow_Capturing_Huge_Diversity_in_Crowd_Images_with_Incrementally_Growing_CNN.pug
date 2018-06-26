@@ -1,0 +1,40 @@
++slide
+section#Divide_and_Grow_Capturing_Huge_Diversity_in_Crowd_Images_with_Incrementally_Growing_CNN
+  .paper-abstract
+    .title Divide and Grow: Capturing Huge Diversity in Crowd Images with Incrementally Growing CNN
+    .info
+      .authors Deepak Babu Sam, Neeraj N Sajjan, R. Venkatesh Babu, Mukundhan Srinivasan
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p 訓練データの複雑さに基づいてモデル容量を反復的に拡張するIG-CNNの提案。
+          |CNNは個人の検出だけでなく群衆の特徴を学び群衆密度マップを生成することができる。
+          |しかし、多くのデータセットは群衆が一様ではないため疎の画像を高密度と予測してしまう。
+          |提案したIG-CNNは、データセット全体で訓練されたベースのCNN密度回帰分析から始まり、
+          |訓練データに応じて階層的なCNNツリーを作成していくことで細かく分類していくことである。
+          |提案手法は群衆データセットで高いカウント精度を達成している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Divide_and_Grow_Capturing_Huge_Diversity_in_Crowd_Images_with_Incrementally_Growing_CNN_1.png`,alt="Divide_and_Grow_Capturing_Huge_Diversity_in_Crowd_Images_with_Incrementally_Growing_CNN_1")
+          img(src=`${figpath}Divide_and_Grow_Capturing_Huge_Diversity_in_Crowd_Images_with_Incrementally_Growing_CNN_2.png`,alt="Divide_and_Grow_Capturing_Huge_Diversity_in_Crowd_Images_with_Incrementally_Growing_CNN_2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CNNを階層的に成長させるモデルであるが、手動で指定された基準なしに作成することができる
+          li 階層を作った後はIG-CNNを廃棄させ、CNNツリーのリーフノードのネットワークだけで選択が可能になる
+          li UCF-CC_50とWorldExpo'10のデータセットにおいて高い精度を誇る
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 群衆のデータセットは通常高密度のデータばかりに目を向けがちだが、
+          |疎なデータに目を向けているのが良いと思った。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2726.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.26 11:39:43
