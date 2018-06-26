@@ -1,0 +1,30 @@
++slide
+section#Separating_Self-Expression_and_Visual_Content_in_Hashtag_Supervision
+  .paper-abstract
+    .title Separating Self-Expression and Visual Content in Hashtag Supervision
+    .info
+      .authors A. Veit, M. Nickel, S. Belongie, L. Maaten
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p Facebookでの研究．
+          |ユーザのこれまでのハッシュタグから，一意に同定できない意味の単語のハッシュタグでもユーザが意図した画像検索ができるようにした．
+          |画像のDeCAFを取り，ユーザの履歴特徴，ハッシュタグ特徴を埋め込んだ３次テンソルを構成，多クラスロジスティック関数などで評価する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Separating_Self-Expression_and_Visual_Content_in_Hashtag_Supervision.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p MLPによる手法よりこちらの方が良い性能を示した．Top1で43.7%，Top10で72.12%のAccuracy．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0252.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 10:37:18

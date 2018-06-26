@@ -1,0 +1,34 @@
++slide
+section#Feature_Selective_Networks_for_Object_Detection
+  .paper-abstract
+    .title Feature Selective Networks for Object Detection
+    .info
+      .authors Yao Zhai, Jingjing Fu, Yan Lu, Houqiang Li
+      .conference CVPR2018
+      .paper_id 538
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 物体検出時に用いるRegion-of-Interest（RoI）を，sub-regionとアスペクト比の差を用いて再構成するFeature selective netsを提案．画像全体に対してsub-regionのattention bank（すべてのattention mapを記憶するbank）とアスペクト比のattention bankを生成する．Attention mapはbankから選択的にpoolされ，RoIの改善に使用される．処理の手順は(1)CNNから得られた特徴マップをRPNに入力しRoIを得て，(2)特徴マップのチャンネル数を削減してRoIプーリングを行い，圧縮されたRoI特徴を得る．(3)削減される前のRoIをregion-wise attention生成モジュールに入力する．特徴マップを用いてアスペクト比attention bankとsub-region attention bankを得る．(4)各bankにselective RoIプーリングを行う．そして，(2)と(4)で得られたRoI特徴と各attention mapを結合して検出サブネットワークに入力する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180610_FeatureSelectiveNets1.jpg`,alt="20180610_FeatureSelectiveNets1.jpg")
+          img(src=`${figpath}20180610_FeatureSelectiveNets2.jpg`,alt="20180610_FeatureSelectiveNets2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p RoIをattentinを用いて補正する．VGGだけではなくGoogLeNetやResNetにも適用可能である．VOC2007を用いた評価では，mAP: 82.9%, 76.8%, 74.3% （Res101, GoogLe, VGG-16）を達成し，Faster R-CNNの78.8%, 74.8%, 73.2%（上記と同順）よりも高精度である．さらに，検出サブネットワークをシンプルにしているため，Faster R-CNNよりも高速な検出が可能である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Attentionを用いた物体検出が増えてきている．Mask R-CNNみたいにRoIに注目する手法も多い？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2123.pdf") 論文
+          li
+            a(href="https://arxiv.org/abs/1711.08879") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.10 23:42:54

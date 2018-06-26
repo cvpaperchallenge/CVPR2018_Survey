@@ -1,0 +1,32 @@
++slide
+section#SplineCNN_Fast_Geometric_Deep_Learning_with_Continuous_B-Spline_Kernels
+  .paper-abstract
+    .title SplineCNN: Fast Geometric Deep Learning with Continuous B-Spline Kernels
+    .info
+      .authors Matthias Fey, Jan Eric Lenssen, Frank Weichert, Heinrich M¨uller
+      .conference CVPR2018
+    .slide_editor KazukiTsubura
+
+    .item1
+      .text
+        h1 概要
+        p グラフなどの不規則な構造をした幾何学的入力のためのディープニューラルネットワークの変形であるスプラインベースの畳み込みニューラルネットワーク(SplineCNN)．スペクトル領域内でフィルタリングするのではなく，純粋に空間領域で特徴集計をする．SplineCNNを使用することで，手作業による特徴記述子の代わりに入力として幾何学的構造を使用することで，深いアーキテクチャの完全なend-to-endの学習が可能になる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fast_Geometric_Deep_Learning_with_Continuous_B-Spline_Kernels1.png`,alt="Fast_Geometric_Deep_Learning_with_Continuous_B-Spline_Kernels1")
+    .item3
+      .text
+        h1 新規性・差分
+        p グラフやmeshesのような不規則な構造をした様々な点で利用でき，空間上における入力の幾何学的関係を発見する．手作業による特徴記述子を使用せずにend-to-endの学習が可能になり，また，最先端の幾何学的な学習と同等である．
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.08920.pdf") 論文
+          li
+            a(href="https://github.com/rusty1s/pytorch_geometric") Github
+    .item4
+      .text
+        p
+          img(src=`${figpath}Fast_Geometric_Deep_Learning_with_Continuous_B-Spline_Kernels2.png`,alt="Fast_Geometric_Deep_Learning_with_Continuous_B-Spline_Kernels2")
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 18:45:52

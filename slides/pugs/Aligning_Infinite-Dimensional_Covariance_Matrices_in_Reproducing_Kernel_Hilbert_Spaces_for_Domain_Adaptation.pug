@@ -1,0 +1,39 @@
++slide
+section#Aligning_Infinite-Dimensional_Covariance_Matrices_in_Reproducing_Kernel_Hilbert_Spaces_for_Domain_Adaptation
+  .paper-abstract
+    .title Aligning Infinite-Dimensional Covariance Matrices in Reproducing Kernel Hilbert Spaces for Domain Adaptation
+    .info
+      .authors Zhen Zhang, Mianzhi Wang, Yan Huang, Arye Nehorai
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ソースドメイン(SD)とターゲットドメイン(TD)のそれぞれのreproducing kernel Hilbert space(RKHS)に
+          |おける共分散を最適化することでdomain adaptation(DA)を行う手法。
+          |既存のカーネルベースのDAはSDとTDのRKHS上の統計的分布の類似度に大きく依存することに着目。
+          |共分散を最適化する方法としてkernel whitening-coloring map(KWC)とkernel optimal 
+          |transport map(KOT)があり、これをRKHS上で計算で可能なように式変形を行うことでDAを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Aligning_Infinite-Dimensional_Covariance_Matrices_in_Reproducing_Kernel_Hilbert_Spaces_for_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li SDとTDのRKHS上の共分散を最適化することでDAを行う。
+          li 複数のDAのベンチマークデータセットにおいてKWC、KOTのいずれかがSoTAを達成。
+          li SoTAと比較して実行時間が短く、KWCは4分の１、KOTは10分の1程度。
+          li Out-of-Sampleによる推定においてもSoTAを達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 248パターンのDAを検証しており、本論文に載っていたのは34パターン
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3383.pdf") 論文
+          li 
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3383-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}

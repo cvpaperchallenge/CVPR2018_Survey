@@ -1,0 +1,29 @@
+﻿+slide
+section#Revisiting_knowledge_transfer_for_training_object_class_detectors
+  .paper-abstract
+    .title Revisiting knowledge transfer for training object class detectors
+    .info
+      .authors Jasper Uijlings, Stefan Popov, Vittorio Ferrari
+      .paper_id 1708.06128
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p ソースクラスのBBoxアノテーションを使って、弱教師付きのトレーニング画像からターゲットの物体検出器を学習する知識転移手法の提案。まず、ソーストレインセットでproposal generatorをトレーニングし、それをターゲットトレインセットに適用。次に、画像のクラスラベル(Bboxなし)を使用し、知識転移でMultiple Instance Learning(MIL)を実行。 MILによって、物体検出器をトレーニングするために使用する、ターゲットクラス用のBBoxを生成。最後に、ターゲットの物体検出器をターゲットテストセットに適用。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180609MKT.jpg`,alt="20180609MKT.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 物体候補とクラスを段階的に知識伝達していくフレームワーク。これにより、固有のクラスやジェネリックなクラスに渡る、広い知識伝達を可能にすることができる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 段階的な知識伝達によって、良質な物体候補を出力できる。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1708.06128.pdf") 論文
+    .slide_index #{getSlideIndex()}

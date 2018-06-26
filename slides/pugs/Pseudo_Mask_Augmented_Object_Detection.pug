@@ -1,0 +1,34 @@
++slide
+section#Pseudo_Mask_Augmented_Object_Detection
+  .paper-abstract
+    .title Pseudo Mask Augmented Object Detection
+    .info
+      .authors Xiangyun Zhao, Shuang Liang, Yichen Wei
+      .conference CVPR2018
+      .paper_id 530
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p Bounding boxでの物体検出でグラフカットを用いて擬似的なマスク（セグメンテーション）のrefinementを行う．インスタンスセグメンテーションの学習を行うことで擬似的な物体マスクを推定できるようにネットワークパラメータを最適化する．フレームワークは検出ネットワークと擬似的なマスクのrefinementを行うグラフカットベースのモジュールからなる．RoIを入力として，ベースネットワークの特徴マップからインスタンスセグメンテーションを行い，それをグラフカットモジュールに入力して擬似的なマスクを得る．インスタンスセグメンテーションの結果はbounding boxの修正にも用いられる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180610_PseudoMaskAug1.jpg`,alt="20180610_PseudoMaskAug1.jpg")
+          img(src=`${figpath}20180610_PseudoMaskAug2.jpg`,alt="20180610_PseudoMaskAug2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 流行りの物体検出＋セグメンテーションの手法．マスクを単に特徴マップから得て終わりではなく，グラフカットでrefineする部分は新しいところ．グラフカットを数iter行うことで，よりきれいなマスクを得ることができる．VOC2007/2012を用いた物体検出の精度はmAP74.4%（VGG-16）で，Faster R-CNN（70.4%）やHyperNet（71.4）よりも良い．VOC2012SDSを用いたセグメンテーションの精度は58.5/67.6(マスクレベルスコア/物体検出スコア)%であり，iterを繰り返すことで精度が向上することが確認されている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p セグメンテーションタスクの精度向上のためグラフカットでマスクのrefineを繰り返し行うのは面白いと思った．Iter0とiter3でマスクの結果を比較するとかなりきれいになっている．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://arxiv.org/abs/1803.05858") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.10 21:35:27

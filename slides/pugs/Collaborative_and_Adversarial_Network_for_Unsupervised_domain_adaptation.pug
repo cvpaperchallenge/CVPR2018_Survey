@@ -1,0 +1,45 @@
++slide
+section#Collaborative_and_Adversarial_Network_for_Unsupervised_domain_adaptation
+  .paper-abstract
+    .title Collaborative and Adversarial Network for Unsupervised domain adaptation
+    .info
+      .authors Weichen Zhang, Wanli Ouyang, Wen Li, Dong Xu
+      .conference CVPR 2018 Spotlight
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p CNNの浅い層ではドメイン固有の特徴量を、深い層ではドメインに不変な特徴量を取得することでdomain adaptationを行う
+          |Collaborative and Adversarial Network(CAN)を提案。
+          |従来の
+          a(href="http://jmlr.org/papers/volume17/15-239/15-239.pdf") Domain Adversarial Training of Neural Network(DANN)
+          |ではドメインに不変な特徴量を学習することができるものの、ターゲットドメイン固有の特徴量を得ることが難しいという問題があった。
+          |提案手法では、CNNの浅い層では低次の特徴量を、深い層では高次の特徴量を取得することができることに着目し、
+          |CNNのそれぞれのブロックに対するdomain discriminatorに対して、浅いブロックではソースドメインとターゲットドメインを識別可能となるように、
+          |深いそうでは識別が不可能となるように学習を行う。ソースドメインに対してはクラスの識別も行う。
+          |またテストデータに対してpseudo labelingを行うIncremental CAN(iCAN)も提案。
+          |ターゲットドメインのサンプルのうち、高いconfidenceでソースドメインであると判定され、
+          |かついずれかのラベルに対するconfidenceが高いものに対してpseudo labelingを行うことで、データセットを拡張しdomain shiftを解消する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Collaborative_and_Adversarial_Network_for_Unsupervised_domain_adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CNNの浅いブロックで得られる特徴量に対してはドメイン識別が可能なように、
+            |深いブロックで得られる特徴量に対してはドメイン識別が不可能なように学習を行うCANを提案。
+            |またターゲットドメインに対してpseudo labeingを行うiCANも提案。
+          li 実験で使用したのはpretrained RenNet50であり、10層目、22層目、40層目、49層目のそれぞれに対して
+             |domain discriminatorを適用。41~49層からなるブロックからドメインに不変な特徴量を得るように学習を行った。
+          li Office31、ImageCLEF-DAを用いたクラス識別においてstate-of-the-artと比較した結果、最も高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li シンプルな発想だが面白い手法！似たアイディアで画像の生成もできないだろうか？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Collaborative_and_Adversarial_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}

@@ -1,0 +1,30 @@
++slide
+section#Cross-Modal_Deep_Variational_Hand_Pose_Estimation
+  .paper-abstract
+    .title Cross-Modal Deep Variational Hand Pose Estimation
+    .info
+      .authors Adrian Spurr, Jie Song, Seonwook Park, Otmar Hilliges
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 2次元画像と3次元手部モデルを同様の空間で扱うことができるCross-modal latent spaceを提案して、手部姿勢推定を実行する。別々にクラスタリングするのではなく、同一の空間で扱う（2DRGB-3D空間関係なく、同じ姿勢は同じような空間位置に投影される）方がマッチングの際にも便利。この特徴空間を学習するためにVariational Auto-Encoder（VAE）の枠組みで、Cross-modalのKL-divergenceを学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609CrossModalLatentSpace.png`,alt="180609CrossModalLatentSpace")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 2D-3Dの共通空間を学習することで、2D画像からダイレクトに手部の3D関節点推定に成功した。距離画像との単一空間も学習可能とした。同一空間上で扱えるようにして、かつ従来法よりも精度向上が見られたため、CVPRに採択された。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 異なるモダリティを同一の枠組みで行ってしまう（2d-3dを同じ空間で）学習は他にもありそう？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Spurr_Cross-Modal_Deep_Variational_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 13:24:52

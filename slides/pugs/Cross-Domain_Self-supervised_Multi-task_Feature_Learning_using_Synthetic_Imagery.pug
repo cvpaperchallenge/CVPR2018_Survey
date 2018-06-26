@@ -1,0 +1,47 @@
++slide
+section#Cross-Domain_Self-supervised_Multi-task_Feature_Learning_using_Synthetic_Imagery
+  .paper-abstract
+    .title Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery
+    .info
+      .authors Zhongzheng Ren and Yong Jae Lee
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 人手によるアノテーションを使用しない本当の意味での自己教師学習を行うために、合成画像の法線マップ、デプス、
+          |物体輪郭と実画像とのadversarial trainingを行う手法を提案。実画像に対して汎用的な特徴量が取得できたことを主張している。
+          |輪郭線はキャニーフィルタによるエッジだが、これによって人がつける曖昧なアノテーションを緩和することができる。
+          |デプスを推定することで高次元のセマンティックな情報やオブジェクトの相対的な位置を得ることが可能。
+          |既存研究により法線マップとデプスのそれぞれの推定が良い影響を与えることがわかっているため、法線マップの推定も行う。
+          |GANの学習において、ディスクリミネータの更新は実画像、合成画像に対するGANのロス、ジェネレータの更新は合成画像に対するGANロス、
+          |3つのタスクの推定におけるロスを使用している。ドメインに不変な特徴料を得るために実画像を用いたジェネレータの学習も行ったが、
+          |精度が良くなかった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Cross-Domain_Self-supervised_Multi-task_Feature_Learning_using_Synthetic_Imagery.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 人手によるアノテーションを使用せずに自己教師学習を行うために合成画像の法線マップ、デプス、オブジェクトの輪郭を推定するネットワークを構築し、
+             |さらに実画像に対して汎用的な特徴量を得るために実画像とのadversarial trainingを行う。
+          li PASCAL VOCを用いた最近傍によるリトリーバルを行った。トレーニングデータにはバスや車などの区別しづらい画像が含まれているにも関わらず、
+             |車を入力した際には車のりトリーバルに成功。
+          li conv1ですでにガボールフィルタのような特徴量を取得できていることを確認。
+             |これはImageNetをただ学習させるだけでは得ることができないことを確認している。
+          li Pascal VOCを用いたクラシフィケーション、ディテクションにおいてSoTAと同等の精度を達成。
+          li クラシフィケーションとディテクションに対して3つのタスクのうちどれが効果的なのか、どの層の特徴量が効果的なのか、
+             |domain adaptaionを行う際にどの層の特徴量が効果的なのかを検証。
+          li NYUDデータセットを用いた法線推定において、既存の自己教師学習と比べてSoTAを達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0408.pdf") 論文
+          li
+            a(href="https://jason718.github.io/project/cvpr18/main.html") Project page
+    .slide_index #{getSlideIndex()}

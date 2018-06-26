@@ -1,0 +1,32 @@
++slide
+section#Disentangled_Person_Image_Generation
+  .paper-abstract
+    .title Disentangled Person Image Generation
+    .info
+      .authors Liqian Ma, Qianru Sun, Stamatios Georgoulis, Luc Van Gool, Bernt Schiele, Mario Fritz
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p アピアランス/ビューポイント/背景など、分解された（Disentangled）人物画像の生成を行うための研究である。この目的のため、2ステージの生成手法を考案した（右図を参照）。1ステージ目はリアルの埋め込み特徴（Embedding Features）を獲得する学習を行い、前景/背景や姿勢などを表現。次に2ステージ目は敵対的学習により生成的特徴学習を行いガウシアンノイズから中間表現にマッピング、特徴変換を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609DisentangledPersonImageGeneration.png`,alt="180609DisentangledPersonImageGeneration")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 姿勢ベースの人物画像を生成し、人物再同定（Person Re-Identification; ReID）の学習に適用。人物画像生成自体も誤差が少なく、ReIDのためのにおいても良好な精度を実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 学習画像がコントロールできるということで注目される技術。ある程度の知見を学習しておけば、そのうちリアル画像のデータがいらない時代になる？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ma_Disentangled_Person_Image_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/charliememory/Disentangled-Person-Image-Generation") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 21:59:40
