@@ -1,0 +1,30 @@
++slide
+section#End-to-End_Dense_Video_Captioning_with_Masked_Transformer
+  .paper-abstract
+    .title End-to-End Dense Video Captioning with Masked Transformer
+    .info
+      .authors Luowei Zhou, Yingbo Zhou, Jason J. Corso, Richard Socher, Caiming Xiong
+      .conference CVPR 2018
+    .slide_editor: Kazushige Okayasu
+    .item1
+      .text
+        h1 概要
+        p 動画内のいつ行動が行われたかのTemporal Action Proposals(TAP)とどのような行動が行われたかのキャプションを行うタスクにおいて，self-attentionを用いて既存手法を改善する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}End-to-End_Dense_Video_Captioning_with_Masked_Transformer_1.png`,alt="End-to-End_Dense_Video_Captioning_with_Masked_Transformer_1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ActivityNet CaptionsとYouCookIIでキャプションの評価を行い，METEORスコアが10.12と6.58であった．
+        p SoTAではないが，時間的なイベントの検出とイベントのキャプショニングをEnd-to-Endに行う手法であること．また，このようなタスクで初めてのRNN-basedでは無い手法を提案したこというところが新規性．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0037.pdf") 論文
+          li
+            a(href="https://arxiv.org/abs/1804.00819") arxiv
+    .slide_index #{getSlideIndex()}

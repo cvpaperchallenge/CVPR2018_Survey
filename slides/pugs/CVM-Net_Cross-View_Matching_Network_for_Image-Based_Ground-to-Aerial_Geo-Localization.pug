@@ -1,0 +1,35 @@
++slide
+section#CVM-Net_Cross-View_Matching_Network_for_Image-Based_Ground-to-Aerial_Geo-Localization
+  .paper-abstract
+    .title CVM-Net: Cross-View Matching Network for Image-Based Ground-to-Aerial Geo-Localization
+    .info
+      .authors Sixing Hu et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p  Ground-to-Aerial Geolocalization の研究. CNNを用いて局所特徴量を抽出した後, NetVLAD によって局所特徴量から大域特徴量を生成してマッチングを行う. また, 新しい Loss を提案し学習時間を短縮した. CVUSA dataset 等を用いて行った評価実験では既存手法に大差で優位な結果を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-CVM-Net-Cross-View-Matching-Network-for-Image-Based-Ground-to-Aerial-Geo-Localization.png`,alt="fukuhara-CVM-Net-Cross-View-Matching-Network-for-Image-Based-Ground-to-Aerial-Geo-Localization.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 地上で撮影された写真から, 衛星写真上のどの位置で撮影されたかを推定する（Ground-to-Aerial Geolocalization）
+          li 両方の写真からCNNを用いて局所特徴量を抽出した後, NetVLAD によって局所特徴量から大域特徴量を生成, 後述の weighted soft margin ranking loss を用いて学習を行う
+          li 新しく提案した weighted soft margin ranking loss は従来の soft-margin triplet loss よりも学習の収束の速度を早めると共に, ネットワークの精度を向上させた
+          li CVUSA dataset と Vo and Hays dataset を用いて行った評価実験では既存手法に大差で優位な結果を示した（評価基準は上位 1% の recall）. 特にパノラマ写真を入力とした場合は90%以上の精度を達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hu_CVM-Net_Cross-View_Matching_CVPR_2018_paper.pdf" target="blank") [論文] CVM-Net: Cross-View Matching Network for Image-Based Ground-to-Aerial Geo-Localization
+          li
+            a(href="https://github.com/david-husx/crossview_localisation" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 6:22:55
