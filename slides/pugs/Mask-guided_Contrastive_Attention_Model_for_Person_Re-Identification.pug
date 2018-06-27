@@ -1,0 +1,30 @@
++slide
+section#Mask-guided_Contrastive_Attention_Model_for_Person_Re-Identification
+  .paper-abstract
+    .title Mask-guided Contrastive Attention Model for Person Re-Identification
+    .info
+      .authors Chunfeng Song, Yan Huang, Wanli Ouyang, Liang Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 人物再同定のための特徴表現学習のためにTriplet学習を行う。オリジナルの全体画像（Anchor Image）、マスクされた人物領域（Positive Image）と背景領域（Negative Image）を用いて学習する。ここで、Triplet学習ではAnchor/Positiveをできる限り近く、Anchor/Negativeをできる限り遠くの特徴空間に置くことでよりよく対象となる物体を見ることができ、良好な特徴量を生成することができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623MaskguidedContrastiveAttention.png`,alt="180623MaskguidedContrastiveAttention")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 前景/背景を別々に学習し、背景ではなくできる限り前景に対してアテンションを置いて識別することで、人物再同定において良好な精度での識別を確認した。前景抽出のマスク画像に関するアノテーション（Mars/Market-1501/CUHK03）も公開することで、人物再同定の分野に貢献する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p マスクを全部作成した、ということで膨大な労力がかかっている研究。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Song_Mask-Guided_Contrastive_Attention_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 17:04:57
