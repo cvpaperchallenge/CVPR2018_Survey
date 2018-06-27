@@ -1,0 +1,30 @@
++slide
+section#HashGAN_Deep_Learning_to_Hash_with_Pair_Conditional_Wasserstein_GAN
+  .paper-abstract
+    .title HashGAN: Deep Learning to Hash with Pair Conditional Wasserstein GAN
+    .info
+      .authors Yue Cao, Bin Liu, Mingsheng Long, Jianmin Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Wasserstein GAN (WGAN)の枠組みでハッシング技術を行うHashGANを実装する。主となるアイディアはハッシングのためのデータ拡張を行うためにGANの枠組みを導入。通常は画像生成のみに用いられる仕組み自体を、データバリエーションの拡張のために用いて識別器を強くする。さらに、画像ペアの類似度を計測しながら画像生成を行う枠組みであるPair Conditional WGAN（PC-WGAN）を提案した。図はPC-WGANのアーキテクチャを示し、主に２つの構造から構成される。ひとつは画像生成部Gと識別部Dであり、ランダムノイズuと類似特徴vの連結から画像を生成してリアルな画像を生成。もうひとつはベイジアン学習によりコンパクトなバイナリハッシュを生成するハッシュエンコーダFである。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623HashGAN.png`,alt="180623HashGAN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p GANの枠組みにより高品質なバイナリコードを生成。生成器Gと識別器DのみならずハッシュエンコーダFを同時に学習する枠組みを考案。NUS-WIDE/CIFAR-10/MS-COCOにおいてSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 戦いの中で強くなるGAN、ですね。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_HashGAN_Deep_Learning_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 21:20:15
