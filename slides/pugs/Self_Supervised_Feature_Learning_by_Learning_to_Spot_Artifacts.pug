@@ -1,0 +1,30 @@
++slide
+section#Self_Supervised_Feature_Learning_by_Learning_to_Spot_Artifacts
+  .paper-abstract
+    .title Self-Supervised Feature Learning by Learning to Spot Artifacts
+    .info
+      .authors Simon Jenni et al.
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 画像情報の欠損を検出することによる表現獲得手法。encoder-decoder modelの特徴マップ上の領域をランダムに欠損させて、decodeされた画像が欠損されたものがどうかを識別する。
+
+    .item2
+      img(src=figpath+"Self_Supervised_Feature_Learning_by_Learning_to_Spot_Artifacts.png",alt="Self_Supervised_Feature_Learning_by_Learning_to_Spot_Artifacts.png")
+    .item3
+      .text
+        h1 詳細・なぜ通ったか？
+        p 学習はdecoder内の補完レイヤーと識別器間で敵対的に行う。識別器は欠損された部分を示すマスクも出力する。encoder-decoderモデルをreal/fake問わず最初にかませる理由としては、CNNに入力することによるartifactによって識別器が判断しないようにするため、 また高次な特徴マップ上での欠損を行うことで高次な情報が欠損した画像の生成を行うためである。SoTAに近い精度が出ていることが評価されたと考えられる。
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 生成された画像を見る限り高次な情報が欠損しているかどうかがよく分からない。また、pretrainを終了するタイミングを含め全体的に学習が難しそうであると感じた。
+
+        ul
+          li
+            a(href="https://arxiv.org/abs/1806.05024") 論文
+    .slide_index #{getSlideIndex()}
