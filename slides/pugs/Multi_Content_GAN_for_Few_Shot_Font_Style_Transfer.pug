@@ -5,7 +5,7 @@ section#Multi_Content_GAN_for_Few_Shot_Font_Style_Transfer
     .info
       .authors Samaneh Azadi et al.
       .conference CVPR 2018
-    .slide_editor Tomoyuki Suzuki
+    .slide_editor: a(href="https://twitter.com/tomoyukun") Tomoyuki Suzuki
   
     .item1
       .text
@@ -17,7 +17,7 @@ section#Multi_Content_GAN_for_Few_Shot_Font_Style_Transfer
     .item3
       .text
         h1 詳細・なぜ通ったか？
-        p Glyph Netではチャネル方向に配列されたアルファベットを入力する。ないアルファベットは０埋めし、敵対的損失を用いて26×H×Wのグレースケールアルファベットを生成する。 Glyph Netはデータベースのあらゆるフォントサンプルに対して同一のモデルを学習する。 Ornamentation Netは上記のグレースケール画像に対し正解サンプルに近づくよう敵対的損失をMSEによって学習。ここで、正解はfewな種類しかないためそれらにのみ損失を計算。 Ornamentation Netはフォントごとに逐一異なるモデルを学習する。問題設定の面白さ、実際の完成度の高さが評価されたと考えられる。
+        p Glyph Netではチャネル方向に配列されたアルファベットを入力する。ないアルファベットは０埋めし、敵対的損失を用いて26×H×Wのグレースケールアルファベットを生成する。 Glyph Netはデータベースのあらゆるフォントサンプルに対して同一のモデルを学習する。 Ornamentation Netは上記のグレースケール画像に対し正解サンプルに近づくよう敵対的損失とMSEによって学習。ここで、正解はfewな種類しかないためそれらにのみ損失を計算。 Ornamentation Netはフォントごとに逐一異なるモデルを学習する。問題設定の面白さ、実際の完成度の高さが評価されたと考えられる。
 
     .item4
       .text
