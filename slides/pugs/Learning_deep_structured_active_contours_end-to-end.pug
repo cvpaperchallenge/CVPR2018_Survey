@@ -1,0 +1,43 @@
++slide
+section#Learning_deep_structured_active_contours_end-to-end
+  .paper-abstract
+    .title Learning deep structured active contours end-to-end
+    .info
+      .authors Diego Marcos, Benjamin Kellenberger, Lisa Zhang, Min Bai, Renjie Liao, Raquel Urtasun
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p この論文は,隣接する建物の境界線を幾何学的特性を利用して正確に描画するDeep Structured Active Contours (DSAC)の提案である．
+          |DSACは制約条件であるActive Contour Models(ACM)と従来のポリゴンモデルを使用している．
+          |今回はCNNを用いてインスタンスごとのACMのパラメータを学習し,
+          |構造化された出力モデルに全てのコンポーネントを組み込む方法を示し,DSACをend-to-endで学習可能にした．
+          |この論文は3つの困難なデータセット"building","instance","segmentation"をDSACで評価し,
+          |state-of-the-artと比較して優れた結果を残している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_deep_structured_active_contours_end-to-end.png`,alt="Learning_deep_structured_active_contours_end-to-end")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CNNベースの方法に高度な幾何情報を利用可能にすることを目指している．
+            ul
+              li 明示的に多角形の出力を生成するCNNの作品はあまり行われていない
+          li CNNによる構造化学習はインスタンスレベルのセグメンテーションを扱う作業で認識されない．
+            ul
+              li 本手法は相互依存性をACMで調整することを学ぶため,損失をCNNで学習できる．
+          li IoUとエリア推定において従来のDSACより高い精度
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.06329") 論文
+          li
+            a(href="https://github.com/dmarcosg/DSAC") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 17:47:24

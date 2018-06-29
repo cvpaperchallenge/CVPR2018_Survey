@@ -1,0 +1,42 @@
++slide
+section#Pose-Guided_Photorealistic_Face_Rotation
+  .paper-abstract
+    .title Pose-Guided Photorealistic Face Rotation
+    .info
+      .authors Yibo Hu, Xiang Wu, Bing Yu, Ran He, Zhenan Sun
+      .conference CVPR 2018 Spotlight
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 入力顔画像に対して任意の画像を生成するネットワークを提案。顔向きのコンディションとしてランドマークのヒートマップを与え、
+          |U-Netによって画像を生成し、2つのdiscriminatorを用いることで画像を生成。
+          |1つ目のdiscriminatorは入力画像をコンディションとして生成画像or正解画像を識別し、
+          |2つ目のdiscriminatorはランドマークのヒートマップをコンディションとして生成画像or正解画像を識別する。
+          |また人物IDを保存するためにLight CNNによる特徴量によるロスをとる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Pose-Guided_Photorealistic_Face_Rotation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ランドマークのヒートマップ、2つのdiscriminator、IDを保存するロスを用いて入力顔画像を任意の向きに回転させた画像を生成。
+          li 337IDそれぞれに対して20の照明環境と15種類の顔向きをもつMulti-PIEで検証。
+          li トレーニングには使用していないLFWで画像を生成したところ、既存手法による画像よりも見た目の良い画像が得られた。
+          li face verification、face recognitionにおいてSoTAを達成。
+          li ablation studyの結果、IDのロスがface recognitionに最も影響が高いことを確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 既存手法のように顔向きの角度を使うのではなくヒートマップを与えることでU-netの学習がしやすい、という上手い方法。
+          li IDのロスに使用する特徴量が最後のFC層に加えてプーリング層からも取得されており
+             |IDについてはMS-Celeb-1Mでプリトレインした後Multi-PIEへとファインチューニングしているなど、かなり微調整を感じる論文。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1097.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1097-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}

@@ -1,0 +1,48 @@
++slide
+section#Trapping_Light_for_Time_of_Flight
+  .paper-abstract
+    .title Trapping Light for Time of Flight
+    .info
+      .authors R. Xu, M. Gupta, S.K. Nayar
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 一回のスキャンだけで，かなり複雑な形状の物体を全周囲計測し，復元する3D復元システムの提案．
+        p Light trapと名付けた，Time-of-Flight(ToF)式3Dスキャナの光を反射しまくる鏡部屋を使うのがキーアイデア．
+          |Trapの形状を入射光が複数回trapの中で跳ね返るように選択することで，
+          |対象物体に対し，あらゆる位置・あらゆる方向から複数回数光が注ぐことになる．
+          |ToFセンサはそれぞれの光の移動距離を入手でき，Trapの形状は既知（予め計測しておく）なので，
+          |全ての完全なパスが再現可能である．
+          |そのためのアルゴリズムを提案する．
+        p 通常すごく遮蔽する，球格子をかなり複雑な形状物体の例としたときに，
+          |シミュレーションによって99.9%の表面に光を当てられることを示す．
+          |また，ハードウェアプロトタイプを実装し，
+          |様々な物体の大きさ，反射特性の物体に対し試してみた．
+    .item2
+      .text
+        p(style="text-align:center")
+          img(src=`${figpath}Trapping_Light_for_Time_of_Flight_Figure1.png`,alt="Figure1",style="width:50%")
+          br
+          img(src=`${figpath}Trapping_Light_for_Time_of_Flight_Figure2.png`,alt="Figure2")
+          br
+          img(src=`${figpath}Trapping_Light_for_Time_of_Flight_Figure3.png`,alt="Figure3")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p この手のシステムは反射屈折式(Catadioptric)で通っているようだが，問題となるのは一貫性，ラベリング問題（どの受容光が発射光だったのか）を解決しなければならないという困難さがある．
+        p このシステムでは，ToF（パスの長さが分かる）を使っているので，ラベリング問題を解く必要がない．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li カオス感（パイ捏ね変換）．カオスは複雑さと単純さを仲立ちできる点が面白いので，問題を簡単にするのに使えるという好例の一つに感じる．DNNも複雑ネットワークという点では同様である．
+          li 物体形状の周期性などの条件がたまたま合ってしまうと，全然見えなくなる可能性はないだろうか．
+          li システムとして工夫している点が複数あり，制約もあるので，各々論文を確認いただきたい．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3054.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.26 11:26:50

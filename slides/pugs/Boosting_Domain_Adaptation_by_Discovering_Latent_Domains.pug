@@ -1,0 +1,37 @@
++slide
+section#Boosting_Domain_Adaptation_by_Discovering_Latent_Domains
+  .paper-abstract
+    .title Boosting Domain Adaptation by Discovering Latent Domains
+    .info
+      .authors Massimiliano Mancini , Lorenzo Porzi, Samuel Rota Bulò, Barbara Caputo, Elisa Ricci
+      .conference CVPR 2018 Spotlight
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p domain adaptaion(DA)に対して、ソースデータは潜在的に複数のドメインで構成されていると仮定し、
+          |ソースサンプルがどのドメインに所属しているかを精度よく識別するためにMulti-domain DA layer(mDA-layer)を導入することで、
+          |ターゲットのラベルの識別精度を向上させる手法を提案。
+          |実験ではmulti-soure domain adaptationを行うことでその有効性を検証している。
+          |ソースデータないのドメインを識別するCNNの特徴量を用いることで、ターゲットドメインのラベル識別の精度が向上している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Boosting_Domain_Adaptation_by_Discovering_Latent_Domains.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li mDA layerによってマルチソースドメイン内のドメインを識別する学習を行うことで、
+             |ターゲットドメインのラベル識別に有効な特徴量を獲得。
+          li MNIST・MISNT-m・USPS、Office-31、Office-Caltech、PACSデータセットで提案手法の有効性を検証。
+             |state-of-the-artのmulti-source domain adaptation(DA)よりも高い精度を達成。
+          li ソースサンプルにドメインのラベルが全くない場合とラベルがない場合でも、精度は1%ほどしか変わらない。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.01386") 論文
+    .slide_index #{getSlideIndex()}

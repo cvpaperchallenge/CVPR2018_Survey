@@ -1,0 +1,32 @@
++slide
+section#Multimodal_Visual_Concept_Learning_with_Weakly_Supervised_Techniques
+  .paper-abstract
+    .title Multimodal Visual Concept Learning with Weakly Supervised Techniques
+    .info
+      .authors Giorgos Bouritsas, Petros Koutras, Athanasia Zlatintsi and Petros Maragos
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 従来の動画認識に関する研究は、映像情報のみを用いているものが多く字幕のようなテキストや音などの情報は利用されていない。
+          |動画認識のタスクに、映像情報に加えテキスト情報を利用するための手法を提案した。
+          |考慮すべきこととして、映像とテキストの情報が時系列的にどのように対応しているか、同じラベルに対してテキストでは複数の表現方法が存在している、という2つの点が挙げられる。
+          |そこで、時系列的な対応付けを行うFuzzy Sets MIL(FSMIL)とテキストがどのラベルに対応しているかを推定するProbabilistic Labels MIL(PLMIL)の2つの学習方法を提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Multimodal_Visual_Concept_Learning_with_Weakly_Supervised_Techniques.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 動画認識タスクとして、顔認識及びアクション認識の2つによりテストを行いベースラインと比べ精度が向上したことを確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Bouritsas_Multimodal_Visual_Concept_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 13:04:08

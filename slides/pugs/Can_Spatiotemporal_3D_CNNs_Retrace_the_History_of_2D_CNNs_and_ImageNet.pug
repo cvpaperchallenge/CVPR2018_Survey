@@ -1,0 +1,33 @@
+﻿+slide
+section#Can_Spatiotemporal_3D_CNNs_Retrace_the_History_of_2D_CNNs_and_ImageNet
+  .paper-abstract
+    .title Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?
+    .info
+      .authors Kensho Hara, Hirokatsu Kataoka, Yutaka Satoh
+      .conference CVPR 2018
+      .paper_id arXiv:1711.09577
+    .slide_editor Tenga Wakamiya
+
+    .item1
+      .text
+        h1 概要
+        p 動画データセット上の比較的浅いものから非常に深いものまでの様々な3DCNNの構造を調べた．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Can_Spatiotemporal_3D_CNNs_Retrace_the_History_of_2D_CNNs_and_ImageNet.png`,alt="Can_Spatiotemporal_3D_CNNs_Retrace_the_History_of_2D_CNNs_and_ImageNet.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ResNet-18の学習は，UCF-101，HMDB-51，およびActivityNetの過学習していて，Kineticsは過学習しなかった．
+          li Kineticsのデータセットは，深い層の3DCNNで学習するために十分なデータがあり，ImageNetの2D ResNetsと同様に，最大152のResNets層の学習を可能にし，ResNeXt-101は，Kineticsのテストセットで平均78.4％の精度がある．
+          li UCF-101およびHMDB-51上の複雑な2DアーキテクチャよりもKineticsの事前学習されたシンプルな3Dアーキテクチャが優れていて，UCF-101およびHMDB-51でそれぞれ94.5％および70.2％を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.09577") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.29 15:59:46

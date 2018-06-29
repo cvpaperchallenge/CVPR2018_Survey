@@ -1,0 +1,35 @@
++slide
+section#Optimizing_Video_Object_Detection_via_a_Scale-Time_Lattice
+  .paper-abstract
+    .title Optimizing Video Object Detection via a Scale-Time Lattice
+    .info
+      .authors Kai Chen et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 動画中の物体検出において精度とコストの柔軟な trade-off が可能となる Scale-Time Lattice を提案. Propagation and Refinement Unit を用いて時間とスケールについての upsampling を階層的に行う. ImageNet VID dataset を用いた評価実験では先行研究と同等の精度の結果を Realtime で得られた.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Optimizing-Video-Object-Detection-via-a-Scale-Time-Lattice.png`,alt="fukuhara-Optimizing-Video-Object-Detection-via-a-Scale-Time-Lattice.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Propagation and Refinement Unit は入力された 2つのフレームの中間の時間のフレームでの推定結果を Motion History Image [Bobick+ 2001] を用いて推定し, その結果をもとにより大きなスケールでの推定を行う.
+          li Propagation と Refinement を２段階行ったあとは, 残りの全フレームに対して線形補間を行う.
+          li 1段階目の入力となる Keyframe は, まず粗く一様にサンプリングした後, Keyframe 間の Propagation　の容易さ（物体の大きさが小さく, 動きが早いほど難しい）を評価し閾値を超えたら新しい中割りの Keyframe を動的に追加する.
+          li ImageNet VID dataset を用いた評価実験の結果は 20fps のとき 79.6mAP, 62fps のとき 79.0 fps と先行研究([Feichtenhofer+ 17]が 5fps で 79.8mAP)と同等の高い推定精度を維持したまま Realtime での動作も可能であることが確認された.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.05472" target="blank") [論文] Optimizing Video Object Detection via a Scale-Time Lattice
+          li
+            a(href="http://mmlab.ie.cuhk.edu.hk/projects/ST-Lattice/" target="blank") [Project page] Optimizing Video Object Detection via a Scale-Time Lattice
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.3 14:41:55

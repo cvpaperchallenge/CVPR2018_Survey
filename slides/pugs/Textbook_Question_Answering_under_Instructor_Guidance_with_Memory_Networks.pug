@@ -1,0 +1,35 @@
++slide
+section#Textbook_Question_Answering_under_Instructor_Guidance_with_Memory_Networks
+  .paper-abstract
+    .title Textbook Question Answering under Instructor Guidance with Memory Networks
+    .info
+      .authors Juzheng Li, Hang Su, Jun Zhu, Siyu Wang and Bo Zhang
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 教科書(テキストデータ＋画像)に含まれている情報に関する質問に答える、Textbook Question Answering(TQA)に関する研究。
+          |質問の答えはテキストの局所的な部分に含まれていることが多く、テキストの要約によって答えを得ることが難しい場合が多い。
+          |本研究では、テキストや画像から得られる因果関係や構造を表したContradiction Entity-Relationship Graph(CERG)を構築し、矛盾を探すための手がかり(Guidance)とすることで局所的な情報を使用して質問に答えることを可能とする。
+          |CERGの構築には画像特徴とテキスト特徴を使用し、質問の答えには画像特徴とテキスト特徴に加えCERGから得られたGuidanceを用いることで出力を得る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Textbook_Question_Answering_under_Instructor_Guidance_with_Memory_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Contextが多く要約することが難しい場合、得られる情報をグラフにして記憶することが効率的であるということを示した。
+          |ベースラインやランダムに選択する場合と比べて、あらゆる質問のタイプ(truth or falseやmultiple choise)において正解率が向上していることを確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 一応画像情報を使用しているが、全体的にはNLP色が強いと感じた。
+          |手法としての完成度は非常に高く、評価は問題自体が新しいこともあり数値評価（従来法との比較、モデル設計の評価）及びqualitativeな比較であった。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Textbook_Question_Answering_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 00:14:07

@@ -1,0 +1,42 @@
++slide
+section#Generating_Synthetic_X-ray_Images_of_a_Person_from_the_Surface_Geometry
+  .paper-abstract
+    .title Generating Synthetic X-ray Images of a Person from the Surface Geometry
+    .info
+      .authors Brian Teixeira, Vivek Singh, Terrence Chen, Kai Ma, Birgi Tamersoy, Yifan Wu, Elena Balashova and Dorin Comaniciu
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 人間の三次元輪郭形状から，見えない体の内側を解析してしまおうという話．
+          |本論文では，X線画像を生成する．
+          |さらに，X線画像はパラメタライズしておくことで，体のキーポイントの調節によるマニピュレーションも可能．
+        p 構造的には，2つのネットワークからなる．
+          |(1)部分画像といくつかのパラメータから，画像全体を生成するように学習，
+          |(2)全体画像が得られるような(1)のパラメータの推定．
+          |これら2つのネットワークを，一貫性が出てくるように反復的に学習させる．
+        p 生成した画像を使ってみて，画像補間に使ってみた．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Generating_Synthetic_X-ray_Images_of_a_Person_from_the_Surface_Geometry.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 体表面を計測しておくなどして，体表面形状のデータがあれば，X線画像をある程度任意に生成できる．
+          |逆に，体表面形状をいじることでそれに対応したX線画像も作れる．
+          |学習データとして活用することができる可能性がある．
+        p 構造はGAN風だが，いい感じに変形している感じがウケているかもしれない．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p この時点での一番の貢献は，それっぽいX線画像が自動生成できる事だろう．
+          a(href="http://smpl.is.tue.mpg.de/") SMPL
+          |と組み合わせていろいろやることを想定しているだろうか．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0500.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.12 10:10:47
