@@ -1,0 +1,29 @@
++slide
+section#Context-aware_Deep_Feature_Compression_for_High-speed_Visual_Tracking
+  .paper-abstract
+    .title Context-aware Deep Feature Compression for High-speed Visual Tracking
+    .info
+      .authors Jongwon Choi, Hyung Jin Chang, Tobias Fischer, Sangdoo Yun, Kyuewang Lee, Jiyeoup Jeong, Yiannis Demiris, Jin Young Choi
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p コンテキストを考慮したCorrelation Filterによる物体追跡手法を提案した。カテゴリごとに事前学習したオートエンコーダーのエキスパートを複数用意し、その中からコンテキストネットワークが1つ選択する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}TRACA.png`,alt="TRACA")
+    .item3
+      .text
+        h1 新規性・結果
+        p リアルタイム性が重要である物体追跡タスクでは、リアルタイムにDNNを学習することは困難である。本論文では事前に各物体のカテゴリ別に学習したオートエンコーダーを用意し、その中から1つを選択することで、ある程度既に特定の物体に特化したネットワークを使用できるため、再学習の必要性を軽減することができる。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.10537.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

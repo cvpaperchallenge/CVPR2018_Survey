@@ -1,0 +1,30 @@
++slide
+section#Deep_Cauchy_Hashing_for_Hamming_Space_Retrieval
+  .paper-abstract
+    .title Deep Cauchy Hashing for Hamming Space Retrieval
+    .info
+      .authors Yue Cao, Mingsheng Long, Bin Liu, Jianmin Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 効率的かつ効果的なDeep Hash ModelであるDeep Cauchy Hashing（DCH）を提案する。主たるアイディアはCauchy分布によるPairwise Cross-Entropy Lossを提案することであり、類似する画像に対してHamming距離により誤差の重み付けを行う。図はDCHの構造を示しており、畳み込みにより表現を学習、全結合を通り抜けFully-Connected Hash Layer（FCH）によりK-bitのハッシュコードを生成、Cauchy Cross-Entropyにより類似度により誤差を計算して誤差を伝播させる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623DeepCauchyHashing.png`,alt="180623DeepCauchyHashing")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 画像検索において３種のデータ（NUS-WIDE/CIFAR-10/MS-COCO）に対してSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Deep Hashingの研究、データセットをより大きくしてハード面での実装も含めて評価する枠組みが必要？Hashingなので、FCC100Mのように1億枚くらいの画像検索をやってほしい（し、日本でも取り組んでいる人はいる）。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cao_Deep_Cauchy_Hashing_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 17:49:41

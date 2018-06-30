@@ -1,0 +1,30 @@
++slide
+section#An_Efficient_and_Provable_Approach_for_Mixture_Proportion_Estimation_Using_Linear_Independence_Assumption
+  .paper-abstract
+    .title An Efficient and Provable Approach for Mixture Proportion Estimation Using Linear Independence Assumption
+    .info
+      .authors Xiyu Yu, Tongliang Liu, Mingming Gong, Kayhan Batmanghelich, Dacheng Tao
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 混合分布内のラベルなしデータと少量のラベルありデータから正しく分布の重み（Weights of components）を推定し、画像分類を行う問題を提供。この問題自体をMixture Proportion Estimation（MPE）という。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618LinearIndependenceAssumption.png`,alt="180618LinearIndependenceAssumption")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p データに多数のノイズを含んでいても、少量のラベル付きデータから混合分布の割合を把握して正しく画像分類を行うことができるアルゴリズムを提案。Web画像に見られるラベルノイズが発生している学習/Semi-supervised学習、合成データ/実世界データの両者においてState-of-the-artな精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ラベルノイズに関する新規の問題MPEを提供した。一見すると既存の問題と思われるようなものでもまだまだ重要で提案されていない問題は残っている？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_An_Efficient_and_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 22:55:08

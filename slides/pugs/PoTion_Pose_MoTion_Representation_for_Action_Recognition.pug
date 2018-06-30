@@ -1,0 +1,38 @@
++slide
+section#PoTion_Pose_MoTion_Representation_for_Action_Recognition
+  .paper-abstract
+    .title PoTion: Pose MoTion Representation for Action Recognition
+    .info
+      .authors V. Choutas et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        行動認識のためのPoseベース特徴表現の提案．
+        まず姿勢推定手法を適用して各Jointのヒートマップを計算．
+        各時刻のヒートマップを時間情報を色で表現してTemporal Aggregationすることで，
+        各動画でJointごとに1枚のヒートマップ表現を得る．
+        これをチャンネルにスタッキングしたのがPoTionという提案特徴表現．
+        PoTionをCNNに入力して識別するのが提案手法．
+        従来手法と組み合わせることで相補的に働き精度の向上が可能．
+  
+    .item2
+      img(src=figpath+"PoTion_Pose_MoTion_Representation_for_Action_Recognition.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Pose情報を利用した新しい特徴表現を提案
+          li 時間情報を含めて画像1枚に落とせるので入力時間長に依存せずCNNで扱いやすい
+          li 元々のSOTAのI3Dと組み合わせて更に高い精度を達成
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Choutas_PoTion_Pose_MoTion_CVPR_2018_paper.pdf") 論文
+          li 姿勢推定がかなり良くできるようになってきた時代の手法という感じ
+          li 色を使って時間情報をAggregationしてるのが面白い
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.29 18:10:57

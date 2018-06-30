@@ -1,0 +1,40 @@
++slide
+section#A_Low_Power_High_Throughput_Fully_Event-Based_Stereo_System
+  .paper-abstract
+    .title A Low Power, High Throughput, Fully Event-Based Stereo System
+    .info
+      .authors A. Andreopoulos, H.J. Kashyap, T.K. Nayak, A. Amir and M.D. Flickner
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p 著者らIBMが開発した100万個のノードが伝達しあうニューラルネットワークを模倣したプロセッサ「
+          a(href="https://en.wikipedia.org/wiki/TrueNorth") TrueNorth
+          |」を使った，
+          |新しいカメラ「Dynamic Vision Sensor」を使ってステレオしてみた論文．
+        p Dynamic Vision Sensorは，通常カメラのフレーム撮影方式ではなく，
+          |イベントベースに，各画素が非同期で撮影するという新たな撮影方式のセンサである．
+          |これにTrueNorthを組み合わせれば，完全にグラフベースで，配列などのあらゆるデータ構造無しに
+          |フォン・ノイマン型計算モデルの計算が可能である．
+        p これにより，2000fpsの視差マップ生成を達成．
+          |通常のカメラではとらえられない急激な変化をとらえることが可能．
+          |しかも200倍省エネ．
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Low_Power_High_Throughput_Fully_Event-Based_Stereo_System.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 上記参照．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 新製品の宣伝的論文っぽい．
+          |確かに面白いカメラシステムなので，今後これを軸に新たな枠組みが発生するかもしれない？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3791.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 16:19:51

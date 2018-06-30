@@ -1,0 +1,46 @@
++slide
+section#Audio_to_Body_Dynamics
+  .paper-abstract
+    .title Audio to Body Dynamics
+    .info
+      .authors E. Shlizerman, L. Dery, H. Schoen and I. Kemelmacher-Shlizerman
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p
+          strong 「音から手の動きは生成可能か？」
+          |バイオリンやピアノ演奏の音声を入力すると，アバターが演奏しているかのようにアニメーションするようなスケルトンの推定を行う手法を提案．
+          |結論：できる．
+        p 実際ちゃんとやるにはいくつかアドホックな工夫が必要なようで，詳細はおのおの論文を確認してもらいたい．
+          |学習時に使うスケルトンデータはYouTubeのリサイタル動画からOpenPoseやMaskRCNNを駆使して生成する．
+          |入力音声から
+          a(href="http://grail.cs.washington.edu/projects/AudioToObama/siggraph17_obama.pdf") この手法
+          |で
+          |13次元ベクトルに変換し，さらにその時間差分や音量エネルギーを足した28次元ベクトルにする．
+          |これから上半身のスケルトンの時系列を生成するLSTMを作り，
+          |スケルトンにアバターを着せてアニメーションを作成する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Audio_to_Body_Dynamics.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p アプリケーション枠らしく，見た目の良さがあり，また実装上の困難と解決について
+          |ちゃんと書いているのが評価されたものと思われる．
+          |アプリケーションとして利用するに当たって，どれだけうまくいけるのかが窺い知れる資料として
+          |貴重に思われる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 1ページ目が既に他の論文と一線を画そうとしている．
+          |Fun to readという点で参考になるので，一度読んでみることを勧める．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0298.pdf") 論文
+          li
+            a(href="https://arviolin.github.io/AudioBodyDynamics/") 動画など
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 11:28:41

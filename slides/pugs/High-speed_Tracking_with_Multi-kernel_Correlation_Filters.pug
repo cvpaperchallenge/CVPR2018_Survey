@@ -1,0 +1,29 @@
++slide
+section#High-speed_Tracking_with_Multi-kernel_Correlation_Filters
+  .paper-abstract
+    .title High-Speed Tracking With Multi-Kernel Correlation Filters
+    .info
+      .authors Ming Tang, Bin Yu, Fan Zhang, Jinqiao Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 物体追跡タスクにおいて、Multi-Kernel Correlation Filter (MKCF)はKernelized Correlation Filter (KCF)のカーネルを複数にすることで識別性能を向上させているが、計算量がボトルネックとなっていた。そこで目的関数の上界を目的関数として再設定し、上から押さえるように最適化問題を解くことで、MKCFより高速（150fps）かつ高識別性能な物体追跡手法 (MKCFup)を提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}MKCFup.png`,alt="MKCFup")
+    .item3
+      .text
+        h1 新規性・結果
+        p MKCFupは従来のMKCFの最適化問題における目的関数の上界を最適化する。上界を最適化する問題に再定式化することで高速かつ高精度な追跡を実現しており、DNNを使っていない数少ない論文の1つ。Correlation FilterがDNNベースの物体追跡に利用されているように、今後DNNベースの物体追跡手法が使用する可能性がある。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tang_High-Speed_Tracking_With_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    

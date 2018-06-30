@@ -1,0 +1,44 @@
++slide
+section#Conditional_Image-to-Image_Translation
+  .paper-abstract
+    .title Conditional Image-to-Image Translation
+    .info
+      .authors Jianxin Lin, Yingce Xia, Tao Qin, Zhibo Chen and Tie-Yan Liu
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p image-to-image translationタスクで用いられるモデルは、ターゲットドメインの翻訳結果をコントールする機構がなく、出力結果が多様性に乏しい。
+          |この研究では、1. conditional image-to-image translationをいう問題を新たに設定し、2. この問題を解くためにconditional dual-GAN (cd-GAN) を提案する。
+          |1では、複数の画像を組み合わせたtarget domainが入力されたsorce domainを変換する問題を扱う。複数の画像をどのようにして組み合わせるかで多様性に富んだ変換結果が得られる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}1805.00251_img1.png`,alt="1805.00251_img1.png")
+          img(src=`${figpath}1805.00251_img2.png`,alt="1805.00251_img2.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 入力は64x64とする。eA, eBは3つの畳み込み層で構成されており、各畳込み層の活性化関数にLReLUを用いる。デコレーターネットワークであるgAとgBは4つのデコンボリューション層から構成されており、はじめの3層はReLUで活性化し、4層目にはtanhで活性化する。ディスクリミネーターであるdAとdBは4つの畳み込み層と2層の全結合層から構成されており各層の活性化関数にLReLUを用いる、最後の層（2つ目の全結合層）のみsigmoidで活性化する。オプティマイザーはAdamを用い、学習率は0.0002とする。以上の設定で実験した結果を右図に示す。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://link.com/link1/") link1
+          li
+            a(href="http://link.com/link2/") link2
+          li
+            a(href="http://link.com/link3/") link3
+        ol
+          li
+            a(href="http://link.com/link3/") link3
+          li
+            a(href="http://link.com/link3/") link3
+          li
+            a(href="http://link.com/link3/") link3
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 14:34:27
+

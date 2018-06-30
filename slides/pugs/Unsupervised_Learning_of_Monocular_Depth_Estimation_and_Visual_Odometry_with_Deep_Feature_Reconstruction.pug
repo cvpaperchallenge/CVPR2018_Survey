@@ -1,0 +1,40 @@
+﻿+slide
+section#Unsupervised_Learning_of_Monocular_Depth_Estimation_and_Visual_Odometry_with_Deep_Feature_Reconstruction
+  .paper-abstract
+    .title Unsupervised Learning of Monocular Depth Estimation and Visual Odometry with Deep Feature Reconstruction
+    .info
+      .authors Huangying Zhan, Ravi Garg, Chamara Weerasekera, Kejie Li, Harsh Agarwal, Ian Reid
+      .conference CVPR 2018
+      .paper_id 60
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li デプス推定及びビジュアルodometryを同時に行える無監督学習フレームワークの提案．
+          li デプス推定及びodometry推定の結果をそれぞれ互いにwarpingし比較することをベースとしたimageリコンストラクション及びfeatureリコンストラクションロスを提案し，従来の従来のphotometricベースなロス関数と比べ良い精度を得られた．またデプス推定及びodometry推定をwarping，比較することにより，自己監督を得て，監督データなしで学習を行える
+    .item2
+      .text
+        p
+          img(src=`${figpath}unsupervised-depthvo.png`,alt="unsupervised-depthvo")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li デプス推定及びvisual odometryを同時に行う方が良い精度を得られると宣言した．
+          li KITTIデータセットにおいて，デプス推定及びvisual odometryがトップ１の精度を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 2017年及び2018年のCVPRでの左右視，自己監督などを用いたデプス推定の手法が多い
+          li
+            p
+              a(href="https://arxiv.org/pdf/1803.03893.pdf") 論文
+          li
+            p
+              a(href="https://github.com/Huangying-Zhan/Depth-VO-Feat") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.26 13:23:06
