@@ -1,0 +1,34 @@
++slide
+section#MAttNet_Modular_Attention_Network_for_Referring_Expression_Comprehension
+  .paper-abstract
+    .title MAttNet: Modular Attention Network for Referring Expression Comprehension
+    .info
+      .authors Licheng Yu, Zhe Lin, Xiaohui Shen, Jimei Yang, Xin Lu, Mohit Bansal, Tamara L. Berg
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 言語の入力から画像中の領域を指定するネットワークModular Attention Network (MAttNet)を提案する。本論文では２種類のアテンション（言語ベースのアテンションと視覚ベースのアテンション）を導入した。言語ベースのアテンションではどこに着目して良いかを学習、視覚ベースのアテンションではサブジェクトとその関係性を記述することができる。それぞれのスコアは統合され、最終的には文章を入力すると対応する領域がbboxの形式で出力される。右図はMAttNetの枠組みを示す。文章の入力から言語ベースのアテンションによりワードが厳選され、画像中から探索される。画像ではSubject-/Location-/Relationship-Moduleが働き、最後は統合して総合的に判断、画像中の物体相互関係を考慮した検出が可能になった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623MAttNet.png`,alt="180623MAttNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来の枠組みと比較して、提案手法は（bboxレベルでもpixelレベルでも）高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Language and Visionの一例。最近はやっている。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_MAttNet_Modular_Attention_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="vision2.cs.unc.edu/refer/comprehension") デモ
+          li
+            a(href="https://github.com/lichengunc/MAttNet") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 21:37:17
