@@ -1,0 +1,38 @@
++slide
+section#Deep_Learning_of_Graph_Matching
+  .paper-abstract
+    .title Deep Learning of Graph Matching
+    .info
+      .authors A. Zanfir, C. Sminchisescu
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p グラフマッチングをDeepで扱えるようにしたという，大変汎用的な論文．
+        p グラフマッチングにおける全パラメータのEnd-to-End学習を可能にした．
+          |これは深層特徴抽出階層により表現される．
+        p モデルの異なる行列計算レイヤの定式化が肝である模様．
+          |勾配の一貫性ある効率的な伝播を行えるようにする，
+          |マッチング問題を解くにあたっての組み合わせ最適化レイヤと，特徴抽出階層を通じた，
+          |ロス関数からの完全なパイプラインを提案している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Learning_of_Graph_Matching.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p グラフマッチングは，ノードとその間をつなぐエッジで構成されるグラフ（ノードの幾何学的位置は無意味）の等価性を検索するタスクで，コンピュータビジョンや機械学習のあらゆる方面で適用されるものである．
+          |これが深層学習で解けるようになれば，それは当然大きな進歩である．
+          |グラフマッチングを扱おうとする人の第一リファレンスになりえる論文と思われる．
+        p キーポイント検出において試してみたところ，やはりSoTA性能．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1830.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 10:27:30
