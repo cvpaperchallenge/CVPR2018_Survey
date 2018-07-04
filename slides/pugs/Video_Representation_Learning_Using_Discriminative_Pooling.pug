@@ -1,0 +1,30 @@
++slide
+section#Video_Representation_Learning_Using_Discriminative_Pooling
+  .paper-abstract
+    .title Video Representation Learning Using Discriminative Pooling
+    .info
+      .authors Jue Wang, Anoop Cherian, Fatih Porikli, Stephen Gould
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 行動認識における特徴は独立ではなく、動画を通して共通する部分が多い。これら共通特徴を捉えるためのプーリング（Pooling）手法を確立すると共に特徴表現を学習する。戦略としてはMultiple Instance Learning（MIL）により未知だが識別性に優れた非線形の識別境界（Hyperplane）を求めるようにPooling自体をDNNの中で学習する。右図は従来法のDynamicImages（参考文献2; 図中(iii)）と提案手法であるSVM Pooling（図中(iv)）の比較である。SVM Poolingは動画像全体の動きを捉える特徴量が抽出しやすくなり、精度向上に寄与した。識別決定境界を学習、動画レベルの識別を最適化することから、SVM Poolingと呼ぶ。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623DiscriminativePooling.png`,alt="180623DiscriminativePooling")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ３種類の公開データセット（HMDB51/Charades/NTU-RGBD）にてSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Pooling/Conv自体のパラメータを固定ではなく、学習可能にしてしまう、というアイディアは多くなってきた。構造自体を学習するNAS（Neural Architecture Search）なんかにも使うことでさらなる精度向上ができないか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Video_Representation_Learning_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 16:05:37
