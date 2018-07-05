@@ -1,0 +1,35 @@
++slide
+section#Left-Right_Comparative_Recurrent_Model_for_Stereo_Matching
+  .paper-abstract
+    .title Left-Right Comparative Recurrent Model for Stereo Matching
+    .info
+      .authors Z. Jie, P. Wang, Y. Ling, B. Zhao, Y. Weio, J. Feng and W. Liu
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 左右一貫性チェックという，ステレオにおける視差情報を改善する手法がある．
+          |従来は，左右でのチェックはそれぞれ独立かつHand-Craftedであった．
+          |本稿では，これを結合的に行えるようなリカレントモデルを提案する．
+        p 両眼の視差結果から，オンラインにミスマッチ領域を判別していく．
+          |ここで，ソフトアテンション機構を導入する．
+          |学習したエラーマップを使い，次時間の処理において，信用できない領域に選択的に焦点を当てるという方法．
+          |これにより，視差結果を反復的に改善していく．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Left-Right_Comparative_Recurrent_Model_for_Stereo_Matching.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3つのベンチマークでSoTA性能を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0483.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.5 11:32:39
