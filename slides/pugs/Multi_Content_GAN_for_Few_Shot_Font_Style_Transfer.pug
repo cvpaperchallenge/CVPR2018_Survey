@@ -1,0 +1,29 @@
++slide
+section#Multi_Content_GAN_for_Few_Shot_Font_Style_Transfer
+  .paper-abstract
+    .title Multi-Content GAN for Few-Shot Font Style Transfer
+    .info
+      .authors Samaneh Azadi et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="https://twitter.com/tomoyukun") Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 26のアルファベットのうちfewな種類しかデータがない状況で、そのフォントで書かれた他種類のアルファベットを生成する研究。アルファベットの形状をグレースケールで生成するGlyph Netとそれらにカラーで装飾を行うOrnamentation Netの二つからなる。単純にpix2pixのようにsingle-shotな構造で生成するよりも形状生成と装飾を多段に行う方がはるかに実際に近いアルファベットが生成できた。
+
+    .item2
+      img(src=figpath+"Multi_Content_GAN_for_Few_Shot_Font_Style_Transfer.png",alt="Multi_Content_GAN_for_Few_Shot_Font_Style_Transfer.png")
+    .item3
+      .text
+        h1 詳細・なぜ通ったか？
+        p Glyph Netではチャネル方向に配列されたアルファベットを入力する。ないアルファベットは０埋めし、敵対的損失を用いて26×H×Wのグレースケールアルファベットを生成する。 Glyph Netはデータベースのあらゆるフォントサンプルに対して同一のモデルを学習する。 Ornamentation Netは上記のグレースケール画像に対し正解サンプルに近づくよう敵対的損失とMSEによって学習。ここで、正解はfewな種類しかないためそれらにのみ損失を計算。 Ornamentation Netはフォントごとに逐一異なるモデルを学習する。問題設定の面白さ、実際の完成度の高さが評価されたと考えられる。
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 画像生成において今回の「形状」と「色（装飾）」のように相関が薄いと考えられるものに関しては多段に生成を行った方が良い結果が得られるのだろうと考えられた。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.00516") 論文
+    .slide_index #{getSlideIndex()}
