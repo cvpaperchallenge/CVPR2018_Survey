@@ -1,0 +1,35 @@
++slide
+section#Polarimetric_Dense_Monocular_SLAM
+  .paper-abstract
+    .title Polarimetric Dense Monocular SLAM
+    .info
+      .authors L. Yang, F. Tan, A. Li, Z. Cui, Y. Furukawa and P. Tan
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 通常のカメラとは違い，偏光カメラ画像からは，鏡面反射してしまっているようなところでも，物体表面の法線角度が窺い知れたりするので，組み合わせることで良いDense SLAMができるようになると思われる．
+          |ところが，偏光情報からの法線角度推定は，特に境界付近でエラーが載りやすい．従来手法では事前にセグメンテーションマスクを生成しており，オフラインアルゴリズムであった．
+        p 本研究では，
+          |・方位ベースデプス伝播・2視点デプス一貫性チェック・デプス最適化の
+          |反復処理を完全自動化し，
+          |注意深くGPU実装できるように設計，
+          |SLAMに組み込んだところでリアルタイムに動くようにした．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Polarimetric_Dense_Monocular_SLAM.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 通常カメラ＋偏光カメラでのSLAMは初．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2612.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.6 10:12:41
