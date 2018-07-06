@@ -1,0 +1,33 @@
++slide
+section#ID_Self-calibrating_Polarising_Radiometric_Calibration
+  .paper-abstract
+    .title Self-calibrating Polarising Radiometric Calibration
+    .info
+      .authors D.T. Guangwei, B. Shi, Y. Zheng, S. Yeung
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 偏光放射特性のセルフキャリブレーション手法の提案．
+          |これまでには，カメラ応答だけ求めるものはあったが，
+          |本研究では，未知のカメラ応答及び未知の偏光角を同時に復元する．
+        p 応答が線形とした場合，偏光フィルタを回転すれば偏光強度の変化は正弦波になるはずではる．
+          |この事実を使って，統合的に最適化を定式化する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Self-calibrating_Polarising_Radiometric_Calibration`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p カメラ応答を偏光情報を使って，放射特性と偏光特性の両方を統合的に最適化するというやり方で，自己キャリブレーションを実現したものは初．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3446.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.6 11:16:24
