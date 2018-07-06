@@ -1,0 +1,43 @@
+﻿+slide
+section#ID_Anatomical_Priors_in_Convolutional_Networks_for_Unsupervised_Biomedical_Segmentation
+  .paper-abstract
+    .title Anatomical Priors in Convolutional Networks for Unsupervised Biomedical Segmentation
+    .info
+      .authors Adrian V. Dalca, John Guttag, Mert R. Sabuncu
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p MRIのスキャンデータに対するセグメンテーションを、MRIのソース画像とセグメント画像のペアを使用せずに行う手法を提案。
+          |はじめにセグメント画像のみを用いてVAEを学習。 
+          |次に教師無しでセグメンテーションを行うためにdecoderの重みを固定してソース画像に対するセグメンテーションの推定を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Anatomical_Priors_in_Convolutional_Networks_for_Unsupervised_Biomedical_Segmentation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 医療用画像に対する教師無しのセグメンテーション手法を初めて提案。
+          li T1w scanデータセットのうち、5000枚のセグメンテーション画像を使用してauto-encoderをプリトレーニング。
+             |残りの9000枚のスキャンデータを用いて教師無し学習。
+          li T1wデータセットよりも解像度が低く、スライス間隔も広いT2-FLAIR scanデータセットでもテストを実行。
+             |ただしアノテーションが存在しないのでセグメンテーションの見た目で良し悪しを判断。
+          li 評価尺度はGTとの領域の重なりを評価するDice。Dice、セグメンテーションの結果の見た目として良好な結果が得られていると主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Diceを使って定量的に評価しているため、境界線の引き方などの細かい部分のセグメンテーション結果を詳細に評価していないが、
+             |実用上は問題無いのだろうか？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Dalca_Anatomical_Priors_in_CVPR_2018_paper.pdf") 論文
+          li 
+            a(href=" http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/4335-supp.pdf") Supplementary material
+          li
+            a(href=" https://github.com/adalca/neuron") GitHub
+    .slide_index #{getSlideIndex()}
+

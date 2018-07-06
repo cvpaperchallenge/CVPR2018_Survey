@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_End-to-End_Learning_of_Motion_Representation_for_Video_Understanding
+  .paper-abstract
+    .title End-to-End Learning of Motion Representation for Video Understanding
+    .info
+      .authors Lijie Fan, Wenbing Huang, Chuang Gan, Stefano Ermon, Boqing Gong, Junzhou Huang
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 深層学習の成功に反して映像解析では未だに手作りのオプティカルフローが使用されている。通常のオプティカルフローは、それを利用したCNNと独立してしまっている点と時間的・空間的計算コストが非常に大きい点が問題である。本論文では、オプティカルフローに代わる特徴をEnd-to-Endに学習可能なネットワーク（TVNet）を提案した。End-to-Endに学習可能になることで、特定のタスクに特化した動き特徴量を学習できる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}TVNet.png`,alt="TVNet")
+    .item3
+      .text
+        h1 新規性・結果
+        p オプティカルフロー抽出手法の1つであるTV-L1をDNNにカスタマイズさせた。End-to-Endのネットワークにすることで、フロー抽出後のタスクから得られた誤差を伝搬することができるため、特定のタスクに特化した動き情報の抽出が可能となっている。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.00413.pdf") 論文
+            a(href="https://github.com/LijieFan/tvnet") GitHub
+    .slide_index #{getSlideIndex()}
+    
+

@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Fast_Monte-Carlo_Localization_on_Aerial_Vehicles_using_Approximate_Continuous_Belief_Representations
+  .paper-abstract
+    .title Fast Monte-Carlo Localization on Aerial Vehicles using Approximate Continuous Belief Representations
+    .info
+      .authors A. Dhawale, K.S, Shankar, N. Michael
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p ドローンのようなサイズ，重さ，力が制約されたプラットフォームでも，
+          |3D自己位置同定を高速に行えるフレームワークを提案．
+          |点群データの混合ガウス分布（GMM）表現による圧縮をキーアイデアとしている．
+        p デプスセンサのデータと，オンボード姿勢参照システムからピッチとロールを得る．
+          |データをGMMで表現した尤度を使って，複数仮説パーティクルフィルタにより定位．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fast_Monte-Carlo_Localization_on_Aerial_Vehicles_using_Approximate_Continuous_Belief_Representations.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p CVPRでは，高速性・省メモリに関するトピックに興味があるかもしれない．
+          |SLAM系はICRAでは大変多く議論されている話題だが，逆にCVPRだとアプリケーション枠で
+          |通る可能性があるかもしれない．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4001.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 11:13:48
+

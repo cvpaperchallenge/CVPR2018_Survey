@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Leveraging_Unlabeled_Data_for_Crowd_Counting_by_Learning_to_Rank
+  .paper-abstract
+    .title Leveraging Unlabeled Data for Crowd Counting by Learning to Rank
+    .info
+      .authors Xialei Liu, Joost van de Weijer, Andrew D. Bagdanov
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p 群衆の画像データにおいて、ネットワークの訓練を改善するためのself-supervisedタスクを提案。
+          |タスクは集計情報とランキング情報の両方を組み合わせたマルチタスクフレームワークであり、群衆カウントのためにend-to-endで訓練できる。
+          |群衆画像をだんだん小さくするように切り取って人数をランク付けおり、提案されたself-supervisedタスクはラベル付けのされていない群衆画像のCNNに大きく貢献した。
+          |提案手法は群衆計測の困難なデータセットShanghaiTechとUCF CC 50においてstate-of-the-artを得ている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Leveraging_Unlabeled_Data_for_Crowd_Counting_by_Learning_to_Rank.png`,alt="Leveraging_Unlabeled_Data_for_Crowd_Counting_by_Learning_to_Rank")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 困難とされている2つのデータセットでstate-of-the-artを得たこと
+          li 大人数のデータはその人数のデータより少ない数で観察というルールに基づいて計測を行っているため、大規模なトレーニングデータセットの欠如に対処することができている
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.03095") 論文
+          li
+            a(href="https://github.com/xialeiliu/CrowdCountingCVPR18") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 15:36:28
+

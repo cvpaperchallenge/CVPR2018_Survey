@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Through-Wall_Human_Pose_Estimation_Using_Radio_ Signals
+  .paper-abstract
+    .title Through-Wall Human Pose Estimation Using Radio Signals
+    .info
+      .authors Mingmin Zha,et al
+      .conference CVPR2018
+    .slide_editor Masaki Miyamoto
+
+    .item1
+      .text
+        h1 概要
+        p この研究では，壁や閉塞空間を通した正確な人間の姿勢推定を説明している．これはWiFiの電波が，壁を通り抜け人体に反射する現象を利用している．このとき，人間は無線信号に対してアノテーションを行うことができないため，最先端のビジョンモデルを用いる．具体的には，訓練中に同期された無線信号と視覚情報を用いてビジュアルストリームから姿勢情報を抽出し、それを使用して訓練プロセスを誘導する．いったん訓練されると，このシステムは姿勢推定のために無線信号のみを使用する．人が視認できる状態でテストすると、信号ベースのシステムは、それを訓練するために使用された視覚情報ベースのシステムとほぼ同じ精度であることがわかる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Through-Wall_pose.PNG`,alt="Through-Wall_pose.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p コンピュータビジョンにおいてはキーポイントから姿勢を推定する際にこれまでのカメラなどのセンサから情報を得るのではなく，高周波信号を用いている．モデリング面においては教師 - 学生ネットワークを用いている．そのため，このネットワークは具体的な信頼できるキーポイントのマップに関するより豊かな知識を伝達する．ワイヤレス面においては，時間の異なる時点で検出された複数の身体部分を費えることによって、壁の後ろの姿勢の不鮮明な説明を作成するRF-Captureと呼ばれるシステムとなっている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+        li
+          a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2406.pdf") 論文
+        li
+          a(href="https://www.youtube.com/watch?v=HgDdaMy8KNE") デモ動画
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 16:41:59
+

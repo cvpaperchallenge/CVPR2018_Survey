@@ -1,0 +1,28 @@
+﻿+slide
+section#ID_Modulated_Convolutional_Networks
+  .paper-abstract
+    .title Modulated Convolutional Networks
+    .info
+      .authors Xiaodi wang , Baochang Zhang
+    .slide_editor Kazuki Tsubura
+
+    .item1
+      .text
+        h1 概要
+        p ・CNNは画像処理の様々なタスクをこなすうえでとても有効だが，ネットワークのストレージにかなりのコストを要求するため，展開が制限される．2値化フィルタを用いたCNNの移植性向上のための新しい変調畳み込みネットワーク(MCNs)を提案する．MCNでは，end-to-endフレームワークにおけるフィルタ損失，中心損失，ソフトマックス損失を考慮した新しい損失関数であるM-フィルタを提案する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Modulated_Convolutional_Networks.png`,alt="Modulated_Convolutional_Networks.png")
+    .item3
+      .text
+        h1 新規性・差分
+        p ・非二項フィルタを復元するために，M-フィルタを導入しネットワークモデルを計算するための新しいアーキテクチャを導出する．MCNは完全精度モデルとは対照的に，畳み込みフィルタの必要な記憶スペースのサイズを32倍に縮小することができ，最先端の2値化モデルよりもはるかに優れた性能を達成した．また，MCNは完全精度のResentsおよびWideResentsと同等のパフォーマンスを達成した．
+    .item4
+      .text
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Modulated_Convolutional_Networks_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 19:49:11
+

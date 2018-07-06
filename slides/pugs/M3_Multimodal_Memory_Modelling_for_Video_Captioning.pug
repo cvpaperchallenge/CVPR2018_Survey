@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_M3_Multimodal_Memory_Modelling_for_Video_Captioning
+  .paper-abstract
+    .title M3: Multimodal Memory Modelling for Video Captioning
+    .info
+      .authors J. Wang, W. Wang, Y. Huang, L. Wang, T. Tan
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p ビデオキャプショニングの話題．
+          |Long-Termのマルチモーダルな依存性のモデリングと
+          |文脈的ミスアラインメントがあるのに対し，
+          |(1)メモリモデリングするのは Long-Term系列的問題に対して 潜在的な利点がある （なにそれ），
+          |(2)視覚的アテンションにおいてワーキングメモリは主要素，
+          |という二点の事実を考慮した，
+          |Multimodal Memory Modelling（M3）を提案．
+          |LSTMの外部に視覚-テキスト間共有メモリを持ち，Long-Termな視覚-テキスト間依存性をモデル化する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}M3_Multimodal_Memory_Modelling_for_Video_Captioning.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p MSVD，MSR-VTTで評価し，BLEU，METEORにおいてSOTA性能．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p HMMのように見える．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0442.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 15:30:05
+

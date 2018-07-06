@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_DiverseNet_When_One_Right_Answer_is_not_Enough
+  .paper-abstract
+    .title DiverseNet: When One Right Answer is not Enough
+    .info
+      .authors Michael Firman et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 教師あり学習において, test 時に同じ入力から異なる結果を出力可能にする Loss と学習方法 (DiverseNet) を提案. 提案手法はあらゆる教師あり学習の手法に対して適用が可能であり, 提案された Loss は GAN などで報告されている mode-collapse を起こしにくい. 複数のタスクに対して評価実験を行い有効性を確認した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-DiverseNet-When-One-Right-Answer-is-not-Enough.png`,alt="fukuhara-DiverseNet-When-One-Right-Answer-is-not-Enough.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 学習の画像と一緒に制御変数（整数）を入力する, 制御変数を変更することで test 時に同じ画像から異なる結果を得られる
+          li 複数の正解ラベルについて Loss の和をとると mode-collapse を起こしやすいため, 提案された Loss では各ラベルについてそれぞれ Loss を計算し, 最小の値を取ったものを Loss として使用 　
+          li 提案手法はあらゆる教師あり学習の手法に対して適用が可能. また, 正解ラベルが１つしか無いタスクにおいても, 最もらしい結果を複数生成可能
+          li 評価実験では提案手法を 2D image completion, 3D volume estimation, flow prediction などの複数のタスクにおける手法に適用し, 特に小さなネットワークのモデルに対して良い結果となった
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.05472" target="blank") [論文] Optimizing Video Object Detection via a Scale-Time Lattice
+          li
+            a(href="http://mmlab.ie.cuhk.edu.hk/projects/ST-Lattice/" target="blank") [Project page] Optimizing Video Object Detection via a Scale-Time Lattice
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 12:19:55
+

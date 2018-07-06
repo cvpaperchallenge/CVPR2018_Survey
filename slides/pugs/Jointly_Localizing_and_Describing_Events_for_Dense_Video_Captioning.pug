@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Jointly_Localizing_and_Describing_Events_for_Dense_Video_Captioning
+  .paper-abstract
+    .title Jointly Localizing and Describing Events for Dense Video Captioning
+    .info
+      .authors Y. Li, T. Yao, Y. Pan, H. Chao and T. Mei
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p Dense Video Captioningの話．
+          |イベントの発生時間のプロポーザルと，それぞれのイベントにおける文章生成の両者を結合的にEnd-to-Endで学習する，
+          |Descriptiveness Regressionを提案．
+          |シングルショット検出に組み込む．これは文章生成を経由したプロポーザル時間ごとの説明的複雑性を推論する．
+          |これが時間定位の調節につながるらしい．
+          |キャプショニングと検出の結合・汎用最適化をするところが他手法と異なるらしい．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Jointly_Localizing_and_Describing_Events_for_Dense_Video_Captioning.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 動画データセットActivityNetにおいてSoTAを達成．
+          |著者らはMETEORで12.96%出たのがすごいと言っている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Dense Video Captioning: イベントの時間的定位と説明文を付けるタスク．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3807.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 11:51:21
+

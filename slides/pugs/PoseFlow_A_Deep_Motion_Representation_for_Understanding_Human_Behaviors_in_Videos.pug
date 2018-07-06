@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_PoseFlow_A_Deep_Motion_Representation_for_Understanding_Human_Behaviors_in_Videos
+  .paper-abstract
+    .title PoseFlow: A Deep Motion Representation for Understanding Human Behaviors in Videos
+    .info
+      .authors Dingwen Zhang, et al.
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 動画から人間の行動を理解するためのPoseFlowの提案。PoseFlowはオプティカルフローに代わる新しい動き表現であり、背景の動きによるノイズやオクルージョンに頑健。人間の骨格位置とマッチングの2つの問題を同時に解決するようなネットワークであるPoseFlow Net(PFN)を提案し、学習する。これにより、人体の部分のみに動きベクトルが付与された出力を得ることができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180619PoseFlow.jpg`,alt="20180619PoseFlow.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 従来手法では、オプティカルフローを使ってモーションキューを探索している場合が多いが、背景の動きなども取ってしまうので“ノイズが多い動きの表現”であり、姿勢推定や行動認識のタスクにおいて支障をきたす。実験では、従来手法と比較して、姿勢推定や行動認識タスクにおいて高精度となっている。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 図のように、オプティカルフローでは背景の動きも取ってしまい、ぼんやりとした出力になっているが、PoseFlowでは人間の骨格の動きのような情報を取得することができる。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_PoseFlow_A_Deep_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+

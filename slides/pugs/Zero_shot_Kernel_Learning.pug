@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Zero_shot_Kernel_Learning
+  .paper-abstract
+    .title Zero shot Kernel Learning
+    .info
+      .authors Hongguang Zhang and Piotr Koniusz
+      .conference CVPR2018
+    .slide_editor TengaWakamiya
+    .item1
+      .text
+        h1 概要
+        p ゼロショット学習のオープンな問題に取り組む上で，カーネルを利用したゼロショット学習の手法を提案する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}zeroshot_1.png`,alt="zeroshot_1.png")
+          img(src=`${figpath}zeroshot_2.png`,alt="zeroshot_2.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 提案する手法は，回転とスケーリングが組み込まれているため，制約のないモデルでは，より自由度が高いために過学習を防止することができる．
+          |1枚目の画像はゼロショットカーネルの配置．
+          |2枚目の画像は一般化ゼロショット学習プロトコルと新たに提案されたデータ集合についての評価．
+          |（tr）はtrain + testクラス，（ts）はテストクラスの平均トップ1精度，(H)はハーモナイズされたスコア，(Better than SOA）は提案手法が他の最先端の方法（表の上部）よりも優れているデータセットの数を示す．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.01279") link1
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 19:56:59
+

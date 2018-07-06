@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Learning_to_Estimate_3D_Human_Pose_and_Shape_from_a_Single_Color_Image
+  .paper-abstract
+    .title Learning to Estimate 3D Human Pose and Shape from a Single Color Image
+    .info
+      .authors Georgios Pavlakos, Luyang Zhu, Xiaowei Zhou and Kostas Daniilidis
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 1枚のRGB画像から人間の全身の3次元モデルを推定するEnd-to-Endのネットワークを提案した。
+          |DNNを用いた3次元モデルの推定は、膨大なアノテーションが必要となり現実的ではない。
+          |そこで、画像からの2次元特徴の抽出と2次元特徴から3次元モデルの推定の2段階に分けることによりDNNベースの手法を実現する。
+          |始めに、Human2DというRGB画像から2次元の特徴点及び人物のシルエットを推定する。
+          |2次元特徴点及びシルエットから3次元モデルの推定には、
+          a(href="https://dl.acm.org/citation.cfm?id=2818013") SMPL
+          |という統計モデルを用いて作成した学習データにより学習を行う。
+          |加えて、得られた三次元モデルから2次元特徴点とシルエットを取得し、画像から得られた情報と一致するかをロスに加える。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Estimate_3D_Human_Pose_and_Shape_from_a_Single_Color_Image.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 推定した3次元モデルの誤差を評価したところ、提案手法が最もground truthに近づいたことを確認した。
+          |1枚の画像に対して50msという従来研究と比べ大幅に高速化することができた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データ作成の問題をCGを駆使して解決しており、同様のアイデアを活用できないだろうか？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.04092") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 16:05:18
+

@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_CarFusion_Combining_Point_Tracking_and_Part_Detection_for_Dynamic_3D_Reconstruction_of_Vehicles
+  .paper-abstract
+    .title CarFusion: Combining Point Tracking and Part Detection for Dynamic 3D Reconstruction of Vehicles
+    .info
+      .authors N Dinesh Reddy, Minh Vo and Srinivasa G. Narasimhan
+      .conference CVPR2018
+      .paper_id 221
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p カメラキャリブレーションされていない複数の視点から車の3次元データをパーツ単位で再構成しトラッキングも行うパイプライン「CarFusion」を提案．強いオクルージョンがある場合でも移動車両の検出，localize，再構成を行うことができる．構造化された点（検出された車両のパーツ）と構造化されていない特徴点（Harrisのコーナー検出）を融合して車の正確な再構成と検出を行う．複数視点からの車の再構成にはCar centric RANSAC（cRANSAC）を提案している．通常のRANSACと比較して，左右対称を前提として車の形状を考慮したマッチングを行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180703_CarFusion1.jpg`,alt="20180703_CarFusion1.jpg")
+          img(src=`${figpath}20180703_CarFusion2.jpg`,alt="20180703_CarFusion2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p キャリブレーションされていない非同期のカメラからダイナミックに剛体を再構成するという，3D Vision分野で重要だが困難な研究を行った．In the wildでの高精度な検出としても新規性がある．cRANSACのみ用いた場合とCarFusion全体パイプラインを用いた場合で，トラッキングの誤差を4倍削減することができた．再構成時のキーポイント検出も従来手法より優れている．さらに，車の半分程度が隠れてしまう強いオクルージョンがある場合でも3D構成を検出することができた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 車に特化した手法だが，いくつかの剛体に対しては似たアルゴリズムを用いることができそう．検証実験も詳細で一見の価値はある．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0890.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 22:58:23
+

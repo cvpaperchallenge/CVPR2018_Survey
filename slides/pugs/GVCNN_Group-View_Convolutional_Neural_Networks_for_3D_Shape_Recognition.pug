@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_GVCNN_Group-View_Convolutional_Neural_Networks_for_3D_Shape_Recognition
+  .paper-abstract
+    .title GVCNN: Group-View Convolutional Neural Networks for 3D Shape Recognition
+    .info
+      .authors Yifan Feng, Zizhao Zhang, Xibin Zhao, Rongrong Ji, Yue Gao
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 3次元形状認識のためにGroup-View Convolutional Neural Netowrk (GVCNN)を提案し、形状に関するビュー不変な内的かつ階層的な相関関係を記述する。識別性が高くなるようGroupingModuleによりビューポイントのグルーピングを行い、途中の層でViewPoolingやGroupFusionを行い、3次元形状認識を行う。右図はGVCNNのアーキテクチャである。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180703GVCNN.png`,alt="180703GVCNN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ビューポイントに不変な認識を実施可能なEnd-to-Endな学習フレームワークであるGVCNNを提案した。MVCNNとの比較により有効性を示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ビューポイントに不変は学習可能。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Feng_GVCNN_Group-View_Convolutional_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 00:56:48
+

@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Objects_as_context_for_detecting_their_semantic_parts
+  .paper-abstract
+    .title Objects as context for detecting their semantic parts
+    .info
+      .authors Abel Gonzalez-Garcia, Davide Modolo and Vittorio Ferrari
+      .conference CVPR2018
+    .slide_editor Kazuho Kito
+
+    .item1
+      .text
+        h1 概要
+        p 物体の情報に効果的な影響があるセマンティックパーツの検出アプローチを提案。どのパーツを予想するべきかという指標として、オブジェクトの見た目とクラスを用い、その見た目を基に物体の中でのそのパーツに期待される相対的な位置をモデル化。OffsetNetという新しいネットワークモジュールで所定の物体の中の一部の場所を効果的に予測することを達成。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Objects_as_context_for_detecting_their_semantic_parts_1.PNG`,alt="Objects_as_context_for_detecting_their_semantic_parts_1.PNG")
+          img(src=`${figpath}Objects_as_context_for_detecting_their_semantic_parts_2.PNG`,alt="Objects_as_context_for_detecting_their_semantic_parts_2.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p the PASCAL-Part datasetにおいて+5mAPの改善。
+          |PASCAL-PartとCUB200-2011において他のパーツ検出手法より優れた成果を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0952.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 01:42:55
+

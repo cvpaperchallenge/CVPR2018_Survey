@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_CSGNet_Neural_Shape_Parser_for_Constructive_Solid_Geometry
+  .paper-abstract
+    .title CSGNet: Neural Shape Parser for Constructive Solid Geometry
+    .info
+      .authors Gopal Sharma et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Shape Parsing の研究. ２次元画像, ３次元ボクセルから同じ形状を生成するプログラムを推定する. 学習のための2次元や３次元のLogoやCADモデルなどを含む synthetic dataset を作成・公開した. また, 教師データが無い場合でも強化学習を用いた学習が可能.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-CSGNet_Neural_Shape_Parser_for_Constructive_Solid_Geometry.png`,alt="fukuhara-CSGNet_Neural_Shape_Parser_for_Constructive_Solid_Geometry.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 入力された形状からCNNで特徴量を抽出し, RNN（GRUs） によって形状を生成する一連のプログラムを生成
+          li Ground Truth が無い場合は強化学習(Policy Gradient)で学習可能（評価実験では教師ありと強化学習を組み合わせたものが一番高精度）
+          li 2次元や３次元の形状とそれを生成するプログラムのデータセット(2D and 3D synthetic dataset)を作成・公開
+          li 評価実験では, 2次元と３次元のいずれの場合も Nearest Neighbor を用いた手法よりも高精度を達成
+          li また, Primitive detection のタスクにおいては Faster R-CNN よりも高い Mean Average Precision を達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://people.cs.umass.edu/~kalo/papers/CSGNet/CSGNet.pdf" target="blank") [論文] CSGNet: Neural Shape Parser for Constructive Solid Geometry
+          li
+            a(href="https://github.com/hippogriff/CSGNet" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 19:37:55
+

@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Blazingly_Fast_Video_Object_Segmentation_with_Pixel-Wise_Metric_Learning
+  .paper-abstract
+    .title Blazingly Fast Video Object Segmentation with Pixel-Wise Metric Learning
+    .info
+      .authors Yuhua Chen, Jordi Pont-Tuset, Alberto Montes, Luc Van Gool
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p ユーザインタラクティブに動画セマンティックセグメンテーションのための距離学習（Metric Learning）を行い、特徴空間を最適化する。入力画像から任意のモデルに対してセグメンテーションを実施、ユーザが良いと判断したセグメント領域を正解値として特徴空間を設定、一方でテスト（バリデーション?）画像を参照して動画セマンティックセグメンテーションを実行して学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623PixelWiseMetricLearning.png`,alt="180623PixelWiseMetricLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ユーザインタラクティブというところが良い。セグメンテーションに対するアノテーションはコストがかかる（かかりすぎる）が、これをコンピュータによる推論と、ユーザのクリックのみにして特徴空間を学習していく方がコストが最小化される。精度も出るのでCVPRにアクセプトされている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p セマンティックセグメンテーションに対するアノテーションは一枚あたり$10~12であると言われる。アノテーションコストを下げる方向に研究は進んでいて、特に動画セマンティックセグメンテーションは低コスト/弱教師学習/ドメイン変換等により進められると考えられる。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Blazingly_Fast_Video_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 17:26:13
+

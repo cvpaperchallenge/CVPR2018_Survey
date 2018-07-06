@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Density-aware_Single_Image_De-raining_using_a_Multi-stream_Dense_Network
+  .paper-abstract
+    .title Density-aware Single Image De-raining using a Multi-stream Dense Network
+    .info
+      .authors He Zhang and Vishal M. Patel
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p DID-MDN (density-aware multi-stream densely connected convolutional neural network-based algorithm) と呼ばれる、画像内の雨量密度推定と雨除去を行うアルゴリズムを提案。雨のストロークをより良く特徴づけるため、multi-stream densely connected de-raining networkでは異なるスケールの特徴量を効率的に活用する。また、雨密度ラベル付き画像を含むデータセットを新たに作成した。このデータセットを学習に使うことにより、state-of-the-artな手法を超えることができた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}1802.07412_fig1.png`,alt="1802.07412_fig1.png")
+          img(src=`${figpath}1802.07412_fig2.png`,alt="1802.07412_fig2.png")
+          img(src=`${figpath}1802.07412_fig3.png`,alt="1802.07412_fig3.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p PSNRとSSIMにより雨除去の性能を評価した。
+          |比較に使用した手法、および、結果は右図の通り。
+          |右図におけるTest1とTest2は、使用したテストセットが異なることを表している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1802.07412.pdf") 論文URL
+          li
+            a(href="https://github.com/hezhangsprinter") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 17:32:13
+
+

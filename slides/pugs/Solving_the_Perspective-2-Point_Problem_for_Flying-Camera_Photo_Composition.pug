@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Solving_the_Perspective-2-Point_Problem_for_Flying-Camera_Photo_Composition
+  .paper-abstract
+    .title Solving the Perspective-2-Point Problem for Flying-Camera Photo Composition
+    .info
+      .authors Ziquan Lan, David Hsu and Gim Hee Lee
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p ドローンのような飛行体にユーザーが指定した２つの被写体を含んだ画像を撮影させる手法の提案。
+          |ユーザーは希望の２つの被写体を指定し、それぞれどのように配置したいかを指定する。
+          |ここでは、n=2の場合のPnP問題を考えることでドローンの撮影位置を決定する。
+          |カメラの姿勢を求める６自由度の問題として考えるが、P2P問題は解が一意に定まらないので移動距離が最小となる撮影位置を解とする。
+          |ワールド座標系とカメラ座標系間の直接の変換を考えるのではなく、２つの被写体がx軸上に配置される座標系を考えることで、計算を簡略化する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Solving_the_Perspective-2-Point_Problem_for_Flying-Camera_Photo_Composition.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 仮想環境によって実験を実施し、被写体の位置情報にノイズが含まれている場合でも頑健なことを確認した。
+          |実環境における実験は、SLAMにより得られた自己位置を使用して行ったが、推定誤差があるような場合においても高い精度で撮影位置を求めることに成功した。
+          |撮影位置の最適化は、１つの物体を先に最適化した後にもう一方の物体の位置を調整するという実験結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 幾何学的な計算が中心である論文であり、数少ない機械学習が全く登場しない論文である。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Lan_Solving_the_Perspective-2-Point_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.2 01:32:33
+

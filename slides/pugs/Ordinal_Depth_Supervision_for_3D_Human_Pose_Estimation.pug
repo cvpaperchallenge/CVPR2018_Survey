@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Ordinal_Depth_Supervision_for_3D_Human_Pose_Estimation
+  .paper-abstract
+    .title Ordinal Depth Supervision for 3D Human Pose Estimation
+    .info
+      .authors Georgios Pavlakos, Xiaowei Zhou, Kostas Daniilidis
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p 3D ground truthの存在しないデータに対し人間の関節の奥行きデータの監視信号を使用することを提案。
+          |人体関節の奥行きを用いて3Dの姿勢推定をConvNetsで学習すると正確な関節座標で学習結果を得ることができる。
+          |通常の深さ注釈をもつ2Dポーズデータセット(LSPとMPII)はConvNetsの学習に容易に組み込むことができるため、
+          |ポーズデータセットを拡張させることにより3Dの姿勢に対する序数の深さ正確なものにし、
+          |標準のベンチマークでstate-of-the-artを達成した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Ordinal_Depth_Supervision_for_3D_Human_Pose_Estimation.png`,alt="Ordinal_Depth_Supervision_for_3D_Human_Pose_Estimation")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 3D ground truthを必要としない
+          li 2Dポーズデータセットを使うことで、スタジオ以外の条件での3Dポーズ推定でも高い精度を得ることができる
+          li Human3.6Mのデータセットではこれまで誤差が47.7だったのに対し41.8を達成しており、HumanEva-Iデータセットにおいてはこれまで誤差が24.6だったのに対し18.3と大幅に更新をしている
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://www.seas.upenn.edu/~pavlakos/projects/ordinal/") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 18:00:49
+

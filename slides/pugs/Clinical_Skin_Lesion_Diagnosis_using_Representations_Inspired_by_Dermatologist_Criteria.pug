@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Clinical_Skin_Lesion_Diagnosis_using_Representations_Inspired_by_Dermatologist_Criteria
+  .paper-abstract
+    .title Clinical Skin Lesion Diagnosis using Representations Inspired by Dermatologist Criteria
+    .info
+      .authors Jufeng Yang, Xiaoxiao Sun, Jie Liang, Paul L. Rosin
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 肌疾患（Sin Disease）の診断を医師が行いながら、同時にデータ/モデルをIterativeに蓄積・構築する枠組みを考案。従来はComputer Aided Diagnosis（CAD）が肌疾患を判断するために役立ってきたが、2次元画像による判断は（ほぼ）行われていなかった。本論文ではデータの蓄積を行うと同時に、医師の判断材料をベースにした表現方法を学習することで、診断するモデルを構築する。診断の特徴としては、テクスチャの分布（複数箇所に渡り対称性が見られる領域が存在するかどうか）や色の表現（ここでは参考文献39,40のColorNameを適用）、形状を用いる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623ClinicalSkinLesionDiagnosis.png`,alt="180623ClinicalSkinLesionDiagnosis")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 医師による診察の目を実装したこと、データを繰り返し実装する枠組みを構築できたことが分野（特に医用画像処理）に貢献した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p この枠組みはうまいと思う。さらにお医者さんと連携してデータ収集/アルゴリズム強化の枠組みが整えば、より病気を判断するための手助けをする技術が発達する。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_Clinical_Skin_Lesion_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 21:00:26
+

@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Crafting_a_Toolchain_for_Image_Restoration_by_Deep_Reinforcement_Learning
+  .paper-abstract
+    .title Crafting a Toolchain for Image Restoration by Deep Reinforcement Learning
+    .info
+      .authors Ke Yu et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 強化学習（Deep Q-learning）を用いた画像復元の研究. 単一の大きなネットワークを用いる手法とは対照的に, 特定の distortion に対する復元に特化した小さなネットワークを複数集めて toolbox とし, agent が各ステップにおいて最適な tool を選択することで段階的な復元を行う. 評価実験では従来の大きな単一のCNNを用いた手法と同程度の精度を20%程度の計算量で実現した. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Crafting-a-Toolchain-for-Image-Restoration-by-Deep-Reinforcement-Learning.png`,alt="fukuhara-Crafting-a-Toolchain-for-Image-Restoration-by-Deep-Reinforcement-Learning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 強化学習を用いて段階的に画像復元を行うフレームワークを提案
+          li agent は action として, 各ステップにおいて特定の distortion に対する復元に特化した小さなネットワークを複数集めた toolbox の中から最適なものを選択
+          li 段階的な復元を行うと中間のステップにおいて生じる複雑な atifact を扱うため agent と tool の joint training アルゴリズムを提案 
+          li DIV2K dataset を用いて行った評価実験では, PSNR 尺度において単一の大きなCNNを用いた場合と同程度の精度を約20％計算量で実現
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.03312" target="blank") [論文] Crafting a Toolchain for Image Restoration by Deep Reinforcement Learning
+          li
+            a(href="https://github.com/yuke93/RL-Restore" target="blank") [Code] GitHub
+          li どのネットワークを使うべきかという高次の意思決定を強化学習で学習するという方針が面白い. (Hierarchical Reinforcement Learning と類似の考え方)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 8:58:55
+

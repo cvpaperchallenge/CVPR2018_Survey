@@ -1,0 +1,29 @@
+﻿+slide
+section#ID_Correlation_Tracking_via_Joint_Discrimination_and_Reliability_Learning
+  .paper-abstract
+    .title Correlation Tracking via Joint Discrimination and Realiability Learning
+    .info
+      .authors Chong Sun, Dong Wang, Huchuan Lu, Ming-Hsuan Yang
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p Correlation Filterベースの物体追跡手法は識別性と信頼性を学習するべきであるが、従来手法は識別性に着目したものが多く、Bounding Box内の予期されない顕著な領域に影響を受ける可能性がある。本論文では信頼性の高い領域に特に着目して物体追跡を行う手法（DRT）を提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}DRT.png`,alt="DRT")
+    .item3
+      .text
+        h1 新規性・結果
+        p 提案手法は識別性を保持するbase filterと信頼性を保持するreliability termのアダマール積を取ることで、より信頼性の高い領域に着目する。目的関数には学習サンプルの分類誤差に関する項と、局所応答に一貫性を持たせる制約項、L2ノルム正則化項からなる。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sun_Correlation_Tracking_via_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+

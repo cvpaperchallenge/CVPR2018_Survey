@@ -1,0 +1,44 @@
+﻿+slide
+section#ID_Geometry-Aware_Learning_of_Maps_for_Camera_Localization
+  .paper-abstract
+    .title Geometry-Aware Learning of Maps for Camera Localization
+    .info
+      .authors S.Brahmbhatt, J.Gu, K.Kim, J.Hays and J.Kautz
+      .conference CVPR 2018
+      .paper_id 340
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p DNNを使用したデータ駆動型による学習を可能するカメラ位置推定手法, MapNetを提案．
+          |MapNetではイメージ間の絶対的な位置姿勢と相対的な位置姿勢のロスを最小限に抑えることができる．
+          |さらに画像だけでなく，Visual odometry(VO)やGPSなどのユビキタスセンサ，Inertial Measurement Unit(IMU)などをカメラ位置推定に加え，
+          |ラベルなしのビデオを利用した，自己教師あり学習によるMapNet+の提案もした．
+          |Pose Graph Optimization(PGO)によって入力データをrefineしてAccurancyの改善を行う．
+          |データセットには小規模な位置推定のトレーニングに7-Senes，大規模なものにはOxford RobotCarsを用いている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180340_mapnet_1.png`,alt="Item3Image")
+          img(src=`${figpath}180340_MapNet_2.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p MapNet+は自己教師あり学習とマルチセンサによってパフォーマンスを向上させており，
+          |特に大規模な位置推定ではStereo VOやPoseNetなどの従来手法と比較し精度が劇的に向上している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.03342") arXiv
+          li
+            a(href="http://research.nvidia.com/publication/2018-06_Geometry-Aware-Learning-of") Project Page
+          li
+            a(href="https://www.youtube.com/watch?v=X6mF_IbOb4A") Youtube
+          li
+            a(href="https://github.com/NVlabs/geomapnet") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.11 14:01:28
+

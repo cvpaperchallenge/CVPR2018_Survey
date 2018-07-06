@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_GeoNet_Unsupervised_Learning_of_Dense_Depth_Optical_Flow_and_Camera_Pose
+  .paper-abstract
+    .title GeoNet: Unsupervised Learning of Dense Depth, Optical Flow and Camera Pose
+    .info
+      .authors Author
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 単視点動画に映っている物体を静的物体と動的物体に分離することで教師なしでデプス、オプティカルフロー、
+          |カメラ向きを推定する手法を提案。フレームワークは二段階で構成されており、
+          |まずはじめにデプスとカメラ向きをそれぞれ独立に推定することで道路や街路樹などの静的物体のモーション情報を得る。
+          |続いて静的物体との差分情報を使用することで歩行者などの動的物体のモーション情報を得る。教師無しの推定を行うため、
+          |参照フレームから推定されたモーション情報の逆変換をターゲットフレームに適用し参照フレームを推定することで
+          |consistency lossをとることで精度が向上。
+    .item2
+      .text
+        p
+          img(src=`${figpath}GeoNet_Unsupervised_Learning_of_Dense_Depth_Optical_Flow_and_Camera_Pose.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li consistency lossによってオクルージョンに対する精度の向上も確認。
+          li 同じネットワークを持つ既存研究に対して、ロス関数の優位性を確認
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yin_GeoNet_Unsupervised_Learning_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/yzcjtr/GeoNet") GitHub
+    .slide_index #{getSlideIndex()}
+

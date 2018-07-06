@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_GroupCap_Group-based_Image_Captioning_with_Structured_Relevance_and_Diversity_Constraints
+  .paper-abstract
+    .title GroupCap: Group-based Image Captioning with Structured Relevance and Diversity Constraints
+    .info
+      .authors Fuhai Chen, et al.
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 画像グループ内での関連性や相関関係などを考慮し、キャプションを出力するGroupCapの提案。まず、個々の画像でvisual tree parser(VP-Tree)を構成し、文字ベースで意味の相関を構築。次にツリーの関係から、画像間での関連性と多様性をモデル化。この制約関係をもとにLSTMでキャプション生成。これらをトリプレットロスとしてend-to-endで学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180622GroupCap.jpg`,alt="20180622GroupCap.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 従来のイメージキャプショニングでは、単一画像に対して説明文を生成している場合がほとんど。これらはオフラインで学習し、画像間での視覚的構造関係を無視して推定している。本手法のグループベースの手法によって、グループ画像内での構造的関連性や多様性を協調して学習することでキャプションの正確性を向上させる。
+    .item4
+      .text
+        h1 結果・リンク集
+        p MSCOCOをもとに作成した2グループキャプションデータセットを使用して評価し、優れていることを示唆。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_GroupCap_Group-Based_Image_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+

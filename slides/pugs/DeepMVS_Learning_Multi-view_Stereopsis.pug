@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_DeepMVS_Learning_Multi-view_Stereopsis
+  .paper-abstract
+    .title DeepMVS: Learning Multi-view Stereopsis
+    .info
+      .authors Po-Han Huang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Learning-based Multi-View Stereo の研究. 任意の枚数の画像から, 視差 Map の推定を行う（推定結果は入力の順番に依存しない）. また, ネットワークの学習のため, 新しい synthetic datasets (MVS-SYNTH dataset) を作成・公開した. ETH3D を用いた評価実験では DeMoN を上回り, COLMAP と同等の結果を達成した. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-DeepMVS-Learning-Multi-view-Stereopsis.png`,alt="fukuhara-DeepMVS-Learning-Multi-view-Stereopsis.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 複数枚の画像（1枚の参照画像と複数枚の近傍画像）を入力とする, Learning-based Multi-View Stereo（MVS）の手法を提案
+          li 入力画像に対して通常の SfM(COLMAP) を用いてポーズの推定を行った後, D段階の離散的な視差の大きさ毎に近傍画像を参照画像に Warp した画像群 (plane-sweep volume) を生成
+          li 参照画像と各 plane-sweep volume に対して Patch matching を行って抽出された特徴量を encoder-decoder 型のネットワークで統合した特徴量を用いて視差 Map を推定
+          li ネットワークを上手く学習させるためには real と synthetic の両方のデータセットが重要であるとし, 新しい synthetic datasets (MVS-SYNTH dataset) を作成・公開した
+          li ETH3D を用いた評価実験で COLMAP[Schonberger+16] と DeMoN[Ummenhofer+17] と比較した結果, ETH3D で最も精度の高い COLMAPと同等の Photometric error と Geometric error を達成
+          li 特に複雑で復元が難しいような環境に対しては, COLMAP がノイズの多い復元結果となる一方で, 提案手法は妥当な推定をする傾向が確認された
+          li Limitation は植物の多い領域で視差 Map の推定に失敗やすいという点や, plane-sweep volumes の計算に時間がかかる点
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00650" target="blank") [論文] DeepMVS: Learning Multi-view Stereopsis
+          li
+            a(href="https://phuang17.github.io/DeepMVS/index.html" target="blank") [Project page] DeepMVS: Learning Multi-view Stereopsis
+          li
+            a(href="https://github.com/phuang17/DeepMVS" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 5:55:55
+

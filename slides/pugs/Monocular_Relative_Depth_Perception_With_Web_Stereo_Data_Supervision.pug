@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Monocular_Relative_Depth_Perception_With_Web_Stereo_Data_Supervision
+  .paper-abstract
+    .title Monocular Relative Depth Perception With Web Stereo Data Supervision
+    .info
+      .authors Ke Xian, Chunhua Shen, Zhiguo Cao, Hao Lu, Yang Xiao, Ruibo Li, Zhenbo Luo
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Web画像により相対的なステレオ視に関するデータセットを作成した。RankingLossを改善した誤差関数によりデータセット内のステレオ視を学習、ペアリングが困難なものについての対応付けを行なった。作成したデータセットに対してState-of-the-artであるのみならず、他のピクセルベースの密な推定（距離推定、セマンティックセグメンテーション）についても有効性を示した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180703RelativeDepthPerception.png`,alt="180703RelativeDepthPerception")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Web画像により密なステレオ視を推定する枠組みを考案、Relative Depth from Web（ReDWeb）の概念を提唱。RankingLossの改善版によりペアリングが困難な対応付についても行った。DIW/NYUDv2データセットにて評価、State-of-the-artな性能を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Web x StereoVisionという掛け合わせがよい。さらに、アノテーションの枠組みも参考になる。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Xian_Monocular_Relative_Depth_CVPR_2018_paper.html") 論文
+          li
+            a(href="https://blogs.adelaide.edu.au/machine-learning/2018/02/19/monocular-relative-depth-perception-with-web-stereo-data-supervision/") Project
+          li
+            a(href="https://sites.google.com/site/kexianshomepage/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 01:52:59
+

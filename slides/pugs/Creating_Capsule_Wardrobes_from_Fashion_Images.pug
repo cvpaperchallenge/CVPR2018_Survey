@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Creating_Capsule_Wardrobes_from_Fashion_Images
+  .paper-abstract
+    .title Creating Capsule Wardrobes from Fashion Images
+    .info
+      .authors Wei-Lin Hsiao and Kristen Grauman
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Capsule Wardrobesという、良い組み合わせが多数存在するファッションアイテムのセットを自動で作る手法を提案。
+          |ファッションアイテムのセットに対して、それで実現可能なファッションの親和性と多様性を最大化することによりセットを決定する。
+          |注目レイヤー以外を固定して最適化することを繰り返すことでファッションアイテムの選択を行う。
+          |ファッションの親和性を決定するために、トピックモデルをベースとした教師なし学習による全身画像からのファッションの評価方法を構築した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Creating_Capsule_Wardrobes_from_Fashion_Images.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ファッションサイトに掲載されているCapsule Wardobesと作成したものに含まれるファッションアイテムの類似度を測った結果、ベースラインと比べ提案手法により選ばれたものの方が類似度が高いという結果が得られた。
+          |提案手法である繰り返しの最適化と貪欲法による最適化結果をユーザースタディで比べたところ、提案手法のほうが好ましいと答えた人が59％いた。
+          |また、個人の好みに応じたCapsule Wardrobesの作成が可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.01873") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 21:07:56
+

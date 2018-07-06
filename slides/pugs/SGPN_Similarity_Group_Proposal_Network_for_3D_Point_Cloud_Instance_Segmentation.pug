@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_SGPN_Similarity_Group_Proposal_Network_for_3D_Point_Cloud_Instance_Segmentation
+  .paper-abstract
+    .title SGPN: Similarity Group Proposal Network for 3D Point Cloud Instance Segmentation
+    .info
+      .authors Weiyue Wang, Ronald Yu, Qiangui Huang, Ulrich Neumann
+      .conference CVPR 2018
+      .paper_id 335
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li ポイントクラウドを対象としたインスタンスセグメンテーションネットワークSGPNを提案した．
+          li SGPNが入力されたポイントクラウドに対してまずpointnet++などを用いて特徴抽出を行い，抽出特徴に対し類似性を評価することによってグルーピングを行う．グルーピングと同時にセマンティックを予測する．グループの結果をインスタンスセグメンテーションに用いる
+    .item2
+      .text
+        p
+          img(src=`${figpath}SGPN.png`,alt="SGPN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 初めてのポイントクラウドに対しインスタンスセグメンテーションを行うネットワークの提案と指摘した．
+          li SGPNがflexibleに2D CNN特徴を導入でき，これによって更なる良い性能を得られる．
+          li 3次元Shape及び実三次元シーンのセグメンテーション用データセットShapeNetとStanford Indoor Semantic Dataset及びNYUV2においてSoTAなインスタンスセグメンテーション結果を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p ネットワークの説明が簡潔で，結果も良いのでつかってみたい
+          li
+            p
+              a(href="https://arxiv.org/pdf/1711.08588.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.26 13:56:20
+
