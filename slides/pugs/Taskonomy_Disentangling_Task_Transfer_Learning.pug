@@ -1,0 +1,51 @@
+﻿+slide
+section#Taskonomy_Disentangling_Task_Transfer_Learning
+  .paper-abstract
+    .title Taskonomy: Disentangling Task Transfer Learning
+    .info
+      .authors Alexander Sax, William Shen, Amir Zamir, Jitendra Malik, Silvio Savarese, Leonidas J. Guibas
+      .conference CVPR 2018
+      .paper_id 452
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li CVPR2018のベストペーパー．視覚タスクの関連性に基づき高効率的に遷移学習を行えるtaskonomyの提案．
+          li 問題設定：CVの究極的目標の1つとしては全世界の視覚問題を解く．現状では，視覚タスクはほぼ各々にネットワーク，データセットを定義，学習を行っていた．しかし，作者達が視覚タスクの間に関連性が高いと指摘し，究極的視覚タスクを解ける目標に向かう一歩としては①視覚タスクの間の関連性を導く．②そういった関連性に基づき目標タスクに対しより遷移学習を行うことで，少ないデータで高効率的に学習をする．
+          li 概要：taskonomyを求めるのは主に2つのパーツから構成される．①タスクの関連性を量化し，その量化の結果はaffinity matrix.②目標タスクに対し，affinity matrixに基づき最適化を行い，効率的に遷移学習を行えるルートdirected graph(このグラフはtaskonomy)を求める.
+          li ①タスク関連性を表すaffinity matrixを求めるプロセス：目標タスクグループをT，0から学習できる開始タスクグループをSと定義．ステップ１：Sタスクに対し，全部0から学習を行う．(全部encoder-decoderの構造)ステップ２：遷移学習を行う．「タスク間1次関連」s∈S, t∈T, tに対しsのencoderを使い，decoderを学習．（全部のs,tペアに対この学習を行う）「タスク間n次関連(n<=5)」1次関連の効果により，tに対し，効果上位n個のsのencoderのrepresentationを同時に用いてdecoderを学習．ステップ３：ステップ2の全部の遷移学習の最終ロスをベースにaffinity matrixを生成する. それぞれのタスクのロスは異なるロス関数を用いているため，線形的に遷移学習の効果を表せないために，Ordinal Normalizationをベースとした手法を用いてロスを関連度に表示した(この方法はAnalytic Hierachy Processを参考した)．最終的に求めたAffinity matrixの(i,j)の意味はあるタスクに対しタスクiから遷移学習の効果がどれくらいの確率でjタスクから遷移学習の効果より良い．
+          li ② affinity matrixを用いた効率的遷移学習：ある目標タスクｔに対し，最適遷移学習ルートを求めるプロセスは「affinity matrixに対し，subgraph selection問題であり，そのsubgraphのスタートはsで，終点は目標タスクｔ」．具体的には条件１あらかじめ定義した開始タスクｓの数を超えない；２タスクｓに対し，遷移学習の回数上限は1回;３遷移学習の開始及び目標タスクはsubgraphに含める．の3つの拘束条件の元Binary Interger Programmingを用いて最適化を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}taskonomy.png`,alt="taskonomy")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 視覚タスクは各々でデータセット，方法を構築することから，視覚タスク間の関係を追究し，その関係を利用ことで，資源を有効的に利用できる．
+          li 3000＋ネットワークをトレーニング
+          li ～50,000GPU時間
+          li 120ｋ画像0から学習，16k画像遷移学習
+          li 400万枚画像，それぞれ26種類のタスクのアノテーション付き
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 今のそれぞれのタスクで解決しようとする研究より一歩先に立っている
+          li
+            p 実行力とコストが想像できないくらい
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0744.pdf") 論文
+          li
+            p
+              a(href="http://taskonomy.stanford.edu/") プロジェクト
+          li
+            p
+              a(href="https://github.com/StanfordVL/taskonomy/tree/master/taskbank") task bank
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.6 10:37:53
