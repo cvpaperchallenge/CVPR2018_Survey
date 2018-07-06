@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_FlipDial_A_Generative_Model_for_Two-Way_Visual_Dialogue
+  .paper-abstract
+    .title FlipDial: A Generative Model for Two-Way Visual Dialogue
+    .info
+      .authors Daniela Massiceti, Siddharth Narayanaswamy, Puneet Kumar Dokania, Phil Torr
+      .conference CVPR 2018
+      .paper_id 740
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 画像及びキャプションからConditional VAEをベースとした視覚会話(継続的な質問・回答を両方とも生成)を生成できるモデルFLIPDIALを提案した．
+          li 従来の継続的な応答するタスクを1VDと継続的に応答及び質問両方行うタスクを2VDと定義し，構造的に変更を加え提案FLIPDIALが1VD，２VD 両方対応できる．
+          li FLIPDIALの基本的な考えはCNNによりfull 会話をエンコードし，conditional VAEを用いて会話を生成する． 2VDタスクは画像・キャプション・会話履歴からlatent variableを通して答えをfull dialogueをモデリングし，予測したfull dialogueとgt dialogueのlatent空間においての類似性及び画像との関連性を元にロス関数を定義した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}FlipDial.png`,alt="FlipDial")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案FLIPDIALが1VDタスクにおいてVisDialデータセットに対し従来のVisual Dialog手法より良い精度を達成し，新規な２VDタスクのbaselineを建てて，新たな評価指標なども提案した．
+          li 提案FLIPDIALが一つの質問に対し，多様な答えを生成できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p CNNによりfull 会話をエンコードする考えが大胆的
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3275.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.5 11:59:41
+
