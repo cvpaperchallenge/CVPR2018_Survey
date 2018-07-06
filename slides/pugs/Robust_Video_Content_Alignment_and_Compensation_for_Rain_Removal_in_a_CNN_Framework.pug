@@ -1,0 +1,37 @@
++slide
+section#ID_Robust_Video_Content_Alignment_and_Compensation_for_Rain_Removal_in_a_CNN_Framework
+  .paper-abstract
+    .title Robust Video Content Alignment and Compensation for Rain Removal in a CNN Framework
+    .info
+      .authors J. Chen, C. Tan, J. Hou, L. Chau and H. Li
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 動画像において，土砂降り的なはっきり見えている雨を除去する．
+          |高速に動くカメラの動きにも頑健．
+        p スーパーピクセルセグメンテーションをし，デプスを含むユニットに分解．
+          |シーンコンテンツの位置合わせをスーパーピクセルレベルで実行する．
+          |雨の線の場所や遮蔽された背景コンテンツに関する情報を抽出し，
+          |雨除去の中間出力を得る．
+          |さらに，そこで使った情報を更にCNNの入力特徴として使い，
+          |高周波成分の復元に使う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Self-calibrating_Polarising_Radiometric_Calibration.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 土砂降り雨を合成した車載カメラ画像データに適用し，PSNRが改善，見た目もよくなった．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 合成データでしか評価してないのが気になる．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3970.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.6 12:10:22
