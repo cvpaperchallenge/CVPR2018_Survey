@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Super-FAN_Integrated_facial_landmark_localization_and_super-resolution_of_real-world_low_resolution_faces_in_arbitrary_poses_with_GANs
+  .paper-abstract
+    .title Super-FAN: Integrated facial landmark localization and super-resolution of real-world low resolution faces in arbitrary poses with GANs
+    .info
+      .authors Adrian Bulat, Georgios Tzimiropoulos
+      .conference CVPR2018 SPOTLIGHT
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 任意の向きの低解像度顔画像に対して超解像度化する研究。生成された超解像度画像に対してランドマーク推定を同時に行うことで画像の精度が良くなることを主張。顔画像の高解像度化の際にランドマークを特定することは有用であることはすでに示されていたが、低解像度かつ任意の顔向きの際にはランドマークを使用して高解像度化することが難しかった。提案手法ではGANによって低解像度顔画像から超解像度化された顔画像を生成し、生成された顔画像に対してランドマークのヒートマップを推定を推定することでネットワークの学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180503Super-FAN.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜCVPRに通ったか？
+        ul
+          li 解像度はそれぞれ入力画像が16x16、出力画像が64x64
+          li 生成された顔画像の評価指標としてPSNR、SSIMを、ランドマーク推定の評価指標としてAUCを使用し、 顔向きが30・60・90度の顔画像に対してどちらも既存研究より良い顔画像を生成することが可能となった。
+          li トレーニングの際に複数のロス関数を提案しているが、各ロス関数ごとの結果に関しても議論を行っている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.02765") 論文
+    .slide_index #{getSlideIndex()}
+
+

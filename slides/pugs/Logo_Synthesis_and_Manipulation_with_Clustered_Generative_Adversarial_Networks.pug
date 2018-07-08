@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Logo_Synthesis_and_Manipulation_with_Clustered_Generative_Adversarial_Networks
+  .paper-abstract
+    .title Logo Synthesis and Manipulation with Clustered Generative Adversarial Networks
+    .info
+      .authors Alexander Sage, Eirikur Agustsson, Radu Timofte, Luc Van Gool
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 特徴ベクトルのクラスタリングでGANの入力ベクトルを作成する学習方法で，ロゴの生成と操作が可能とした．ロゴのデータは高マルチモーダルのデータであり，従来のSoTAではmode collapseを起こしてしまうが，提案する学習方法では多様なロゴを生成する．iWGANをCIFER-10で学習するとき，提案する学習方法によって，Inception scoreでSoTA達成．
+          |Contribution:
+        ul
+          li 600k以上のロゴを収集してデータセットを構築
+          li マルチモーダルなロゴデータでのGANの学習方法
+          li 潜在空間の探索によって，インタラクティブなロゴ生成
+    .item2
+      .text
+        p
+          img(src=`${figpath}Logo_Synthesis_and_Manipulation_with_Clustered_Generative_Adversarial_Networks_fig.png`,alt="Image")
+        p 上段はデータセットから．下段が生成結果．
+    .item3
+      .text
+        h1 手法
+        p Clustered GAN Trainingと読んでいる．GANのネットワークは，DCGANとimproved Wasserstein GAN with gradi- ent penalty (iWGAN)を利用．オートエンコーダーの中間特徴ベクトルもしくは，Resnetの特徴ベクトルをクラスタリングして，Generatorの入力ベクトルとする．このクラスタリングでセマンティックに意味のあるクラスタを形成し，GANの学習を向上させることが可能．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://data.vision.ee.ethz.ch/sagea/lld/") データセット
+          li ロゴ・ジェネレーター・インターフェースも用意されている．スライダーを動かして，生成結果を操作できる
+          li
+            a(href="https://arxiv.org/abs/1712.04407") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.13 16:03:23
+
+

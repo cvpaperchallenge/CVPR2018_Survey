@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Attention_Clusters_Purely_Attention_Based_Local_Feature_Integration_for_Video_Classification
+  .paper-abstract
+    .title Attention Clusters: Purely Attention Based Local Feature Integration for Video Classification
+    .info
+      .authors Kiang Long et al.
+      .conference CVPR2018
+      .paper_id 1711.09550
+    .slide_editor TakumuIkeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 動画のクラス分類タスクにおいて時系列の情報，特に長期間のパターンは必要な情報ではないことを示し，純粋にattentionに基づいた局所特徴の統合フレームワークを提案をした研究である．
+          li 提案したフレームワークを用いて動画分類タスクを実行することで評価した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Attension_Clusters.PNG`,alt="Attension_Clusters.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案したフレームワークはKineticsデータセットにおいてtop-1で79.4%,top-5で94.0%の精度を達成した．
+          li 提案したフレームワークではシフト操作を伴うMultimodal Attention Clustersを導入することでフレームの類似性が高い動画に対しても良好な結果が得られる
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.09550.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 22:56:48
+
+

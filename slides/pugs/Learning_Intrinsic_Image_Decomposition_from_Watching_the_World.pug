@@ -1,0 +1,48 @@
+﻿+slide
+section#ID_Learning_Intrinsic_Image_Decomposition_from_Watching_the_World
+  .paper-abstract
+    .title Learning Intrinsic Image Decomposition from Watching the World
+    .info
+      .authors A. Uthors, B. Uthors and C. Uthors
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p Intrinsic Image Decompositionのために，時間経過とともに照明が変化するビデオを使ったCNNの学習方法を提案．正解の Intrinsic Imageが不要な点が強みである．学習が完了したモデルは単一画像に対して適用できるよう汎化しており，いくつかのベンチマークに対して良い結果となった．
+          br
+          |Contribution：
+          br
+          |・データセット（BigTime）の公開．室内，室外両方での照明変化のあるビデオと画像シーケンスのデータセット．
+          br
+          |・このGround Truthを含まないデータを使った手法の提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Intrinsic_Image_Decomposition_from_Watching_the_World_fig.png`,alt="Image")
+          br
+          |学習時：ラベル無しで，視点が固定され照明が変化するビデオを学習に利用する．
+          br
+          |テスト時：単一画像からintrinsic image decompositionを行う．
+    .item3
+      .text
+        h1 手法
+        p 最適化ベースのIntrinsic Decomposition手法と，機械学習手法の間に位置する手法と言える．
+          br
+          |・U-netに似た構造のCNN．
+          br
+          |・Lossの工夫：画像ペア全てを考慮するall-pairs weighted least squares lossとシーケンス全体のピクセル全てを考慮するdense, spatio-temporal smoothness loss．最適化ベースのlossをフィードフォワードネットワークのlossとして利用する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Intrinsic image decompositionとは，入力された1枚の画像をreflectance画像とshading画像の積に分解する問題のこと．
+          br
+          |intrinsic imagesのGround Truthを大規模に揃えることは困難．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00582") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 11:26:41
+
+

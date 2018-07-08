@@ -1,0 +1,45 @@
+﻿+slide
+section#ID_Pixels_voxels_and_views_A_study_of_shape_representations_for_single_view_3D_object_shape_prediction
+  .paper-abstract
+    .title Pixels, voxels, and views: A study of shape representations for single view 3D object shape prediction
+    .info
+      .authors Daeyun Shin, Charless Fowlkes, Derek Hoiem
+      .conference CVPR 2018
+      .paper_id 384
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 1枚の画像から3次元形状を推定するタスクにおいて，異なる形状representation及びcoordinate framesを用いた場合，精度がどのように変化するのかの徹底的比較実験に関する研究．
+          li 従来形状推定タスクにおいて異なる設計の比較分析の研究がないので，著者達が異なる設計を比較できるフレームワーク及び具体的な実験を行った．
+          li 比較実験は具体的に，a.RGB画像b.デプス画像からの形状推定タスクにおいて，“①マルチサーフェス画像VS volumetricデータ表示②viewer-centered VS object-centeredな座標”などの設定に対し，定量的及び定性的な比較実験を行った．
+          li 提案の比較用フレームワークはencoder-decoderベースなネットワークを用いて，decoderに変更を加えることで， マルチサーフェス画像及び volumetricデータの2種類を生成できるようにした．また，coordinate frameをスイッチすることにより，viewer/object centeredを変更できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Study_Of_Shape_Representations.png`,alt="A_Study_Of_Shape_Representations")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 3次元形状推定タスクにおいて，異なる設定の比較実験を行った．
+          li 形状representationの設定において，Multi-surfaceの方がvoxel と比べunseenクラスにおいてより良い性能を達成した． Multi-surfaceの方が高い解像度をエンコーディングできるのが理由な可能性があると指摘した．
+          li coordinate framesの設定において，意外なことに従来広く採用されているobject-centeredはviewer-centeredと比べunseenクラスにおいて精度が劣っていて， object-centeredの方がカテゴリ認識に対応が強いのが原因となることを指摘した．
+          li 以上の結論を元に，object centeredなsurface-basedな1枚の画像から3次元形状推定の手法3D-R2N2を提案し，PASCAL 3D+データセットにおいてmean IoU0.414を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 比較をしていない設計(Oct-tree based representationなど)もあるので，そういった構造に対して比較実験を行うのも面白い．
+          li
+            p 3次元あたりの徹底的比較を行って，何らかの結論を出すような研究がまだ少ないので，研究テーマを沢山作れるかも？
+          li
+            p
+              a(href="https://arxiv.org/abs/1804.06032") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.24 18:20:50
+
+

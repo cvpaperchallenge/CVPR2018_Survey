@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_UV-GAN_Adversarial_Facial_UV_Map_Completion_for_Pose-invariant_Face_Recognition
+  .paper-abstract
+    .title UV-GAN: Adversarial Facial UV Map Completion for Pose-invariant Face Recognition
+    .info
+      .authors Jiankang Deng, Shiyang Cheng, Niannan Xue, Yuxiang Zhou, Stefanos Zafeiriou
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p in-the-wildな入力顔画像から得られるUVマップの補完をU-Netで行う手法を提案。
+          |入力画像に対して3D Morphalbe Modelを適用し不完全なUVマップを取得し、U-Netで補完を行うように学習を行う。
+          |discriminatorにはUVマップ全体と顔領域の判定をさせる。
+          |またUVマップの個人性が失われないように、アイデンティティーに関するロスを取る。
+          |1892人のUVマップをもつWildUVデータセットの構築も行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}UV-GAN_Adversarial_Facial_UV_Map_Completion_for_Pose-invariant_Face_Recognition.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li in-the-wildな顔画像に対してもリアルかつ精度の高いUVマップの補完を達成。入力されるUVマップが50%欠けていても補完可能。
+          li 入力画像からUVマップと3D shapeを取得するため、入力画像を任意の顔向きに編集可能。
+          li 横向き顔画像から生成されたUVマップはPSNR, SSIMにおいて既存手法を上回る精度を達成。
+          li frontal-profile face verificationにおいてstate-of-the-artを上回る94.05%を達成。
+          li 1892のアイデンティティーのUVマップをもつ大規模UVマップデータセットであるWildUVデータセットを公開（予定）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.04695") 論文
+    .slide_index #{getSlideIndex()}
+
+

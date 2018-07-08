@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Visual_Feature_Attribution_using_Wasserstein_Gans
+  .paper-abstract
+    .title Visual Feature Attribution using Wasserstein Gans
+    .info
+      .authors Christian F. Baumgartner, Lisa M. Koch, Kerem Can Tezcan and Jia Xi Ang
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像中のどの箇所がクラス分類に寄与するかを可視化する手法を提案。
+          |多くの手法は、クラス分類のタスクを学習することで重要な特徴を調べている。
+          |しかし、識別への寄与が強い特徴が存在する場合ネットワークは強い特徴のみに注目してしまい、他の特徴は無視されてしまう。
+          |医療画像からの病気の診断では、病気のステージを見極める、複数の要因が絡む病気を発見するなど無視されてしまう特徴を探すことは極めて重要である。
+          |本研究では、Wasserstein GANを用いてある病気を発見する上で重要な領域を示したマップMを生成する。
+          |病気のラベルがついた入力画像xに対して、x+Mが病気でないと判定されるMを生成するGeneratorを学習する。
+          |その際、患者の個人性による画像の違いを考慮するためにL1正則化項をロスに加える。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Visual_Feature_Attribution_using_Wasserstein_Gans.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 合成画像と実際の医療画像の2種類により評価した。
+          |従来の特徴を可視化する手法は、病気の際に見られる特徴のうち一部しか取れない、エッジなどの高周波情報が取れないという結果に対して、提案手法はこれら2つを改善した。
+          |Normalized Cross Correlation(NCC)による数値評価では、ベースラインと比べ提案手法が最も良い数値を記録した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://github.com/orobix/Visual-Feature-Attribution-Using-Wasserstein-GANs-Pytorch") コード
+          li
+            a(href="https://arxiv.org/abs/1711.08998") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 17:18:25
+
+

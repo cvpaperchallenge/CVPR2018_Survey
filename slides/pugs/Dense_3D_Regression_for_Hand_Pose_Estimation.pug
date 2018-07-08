@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Dense_3D_Regression_for_Hand_Pose_Estimation
+  .paper-abstract
+    .title Dense 3D Regression for Hand Pose Estimation
+    .info
+      .authors Chengde Wan, Thomas Probst, Luc Van Gool, Angela Yao
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 単眼距離画像から簡易的かつ効果的に3次元手部姿勢推定を実施する技術について提案する。従来の3D手部姿勢回帰の手法と比較して、本論文ではピクセルごとの（pixel-wise）解析を可能とする。手法としては2D/3Dの関節点を返却するカスケード型の多タスクネットワーク（multi-task network cascades）を提案し、End-to-Endでの学習を行う。その後MeanShiftによりピクセルごとの姿勢位置を推定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180515DenseHandReg.png`,alt="180515DenseHandReg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のほとんどの手法では関節レベルの手部姿勢推定であったのに対して、本論文で提供する技術はピクセルベースの3D手部姿勢推定であることが新規性である。ピクセルごとの回帰はノンパラメトリックな手法を構築した。MSRA/NYU hand datasetにてすべての従来手法よりも高い精度で手部姿勢推定を実行した。また、ICVL hand datasetでは（頭打ちになっていると思われる）論文5には及ばなかったが、接近した精度を叩き出すことに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p HandTrackingも激戦であるが、本論文ではピクセルベースの回帰とState-of-the-art（最高精度）という強みを活かして論文を通している。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.08996") 論文
+          li
+            a(href="https://github.com/melonwan/denseReg") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.15 11:20:15
+
+

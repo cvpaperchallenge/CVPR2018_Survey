@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Maximum_Classifier_Discrepancy_for_Unsupervised_Domain_Adaptation
+  .paper-abstract
+    .title Maximum Classifier Discrepancy for Unsupervised Domain Adaptation
+    .info
+      .authors Kuniaki Saito et al.
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 目的のタスクに特化した２つの分離境界を利用したドメイン適応手法。従来の埋め込み空間においてドメイン間の分布を単に近づける方法に対して、あるタスクと解くための分離境界を考慮して適応を行う。この枠組みでの適応はtargetでの損失の上界を下げる埋め込み空間への写像を求める作業と類似している。さまざまなドメイン適応のベンチマークにおいてSoTA。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Maximum_Classifier_Discrepancy_for_Unsupervised_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p Source(S)で学習を行った二つの識別境界を作成する。その識別器がTarget(T)で異なる判断を行ったサンプル(discrepancy)はSの分布とは乖離している領域であると考えられる。
+          |以下のような敵対的な適応を行う。(1) TにおけるDiscrepancyが増加するよう識別境界を学習。(2) Discrepancyが減少するように埋め込み空間を学習。(3)Sでの識別は常にうまくいくよう学習。
+          |識別境界を考慮した適応という新規性、理論的な背景、論文の明快さ、精度としての結果が揃っている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p アイデアの面白さと同時に論文が非常にわかりやすかった。
+          |識別境界はあくまで埋め込み関数を適化するために得たものなので、この枠組みで得られる最終的なもの以外(得られた埋め込み空間上で新たに学習したもの)でもうまくいくのではないかと感じた。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.02560") 論文
+    .slide_index #{getSlideIndex()}
+
+

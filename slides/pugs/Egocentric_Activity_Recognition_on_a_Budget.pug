@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Egocentric_Activity_Recognition_on_a_Budget
+  .paper-abstract
+    .title Egocentric Activity Recognition on a Budget
+    .info
+      .authors Rafael Possas et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p ウェアラブルデバイスのような使用可能な電力が限られる状況において, 電力消費と精度を強化学習を用いてバランスするフレームワークを提案. 複数のセンサー情報を用いた行動認識のタスクにおいて, 高精度・高電力消費な predictor と低精度・低電力消費な predictor を強化学習の結果に基づいて適宜切り替えることで少ない消費電力で先行研究と同等の精度を達成した. また, 一人称視点動画行動認識のための新しいデータセットを作成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Egocentric-Activity-Recognition-on-a-Budget.png`,alt="fukuhara-Egocentric-Activity-Recognition-on-a-Budget.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ウェアラブルカメラの情報を用いた高精度・高コストな predictor とモーションセンサーの情報を用いた低精度・低コストな predictor のどちらを使用して推定を行うべきかを A3C の agent が判断する.
+          li どちらのセンサーの情報を用いても正しい推定結果となるような状況では低精度・低コストな predictor を使用した場合に大きな報酬が得られるように agent の学習を行う.
+          li 提案手法では報酬についてのパラメータ１つを調整する事で精度と消費電力の簡単なトレードオフが可能.
+          li 一人称視点動画行動認識のための新しいデータセット（DataEgo）を作成.
+          li Multimodal egocentric dataset を用いた評価実験では従来手法(Song+16)とほぼ同等の精度を少ない消費電力で達成.
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://web.it.usyd.edu.au/~framos/Publications_files/egocentric-activity-recognition%20%282%29.pdf" target="blank") [論文] Egocentric Activity Recognition on a Budget
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.19 13:40:55
+
+

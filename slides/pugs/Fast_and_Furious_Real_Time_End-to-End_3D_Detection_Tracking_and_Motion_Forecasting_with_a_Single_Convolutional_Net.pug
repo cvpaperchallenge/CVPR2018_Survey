@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Fast_and_Furious_Real_Time_End-to-End_3D_Detection_Tracking_and_Motion_Forecasting_with_a_Single_Convolutional_Net
+  .paper-abstract
+    .title Fast and Furious: Real Time End-to-End 3D Detection, Tracking and Motion Forecasting with a Single Convolutional Net
+    .info
+      .authors Wenjie Luo, Bin Yang, Raquel Urtasun
+      .conference CVPR2018
+      .paper_id 437
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 3Dセンサで得られた点群から3D物体検出や追跡を行う新しいDNN「Fast and Furious（FaF）」を提案．検出と追跡，さらに短期の経路予測を同時に推論でき，Sparse dataやオクルージョンに頑健な検出ができる．3D点群と時間の4Dテンソルを入力として，空間と時間に対して3D畳み込みを行う．4DテンソルはEarly FusionまたはLate Fusion（図中ではLater）で時間情報を結合している．これらは精度と効率のトレードオフ関係にある．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180610_FaF1.jpg`,alt="20180610_FaF1.jpg")
+          img(src=`${figpath}20180610_FaF2.jpg`,alt="20180610_FaF2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 物体検出から追跡，さらに経路予測までend-to-endで行えるモデル．全体の検出時間はわずか30ms以下である．約55万フレームからなるLiDARのデータセットを作成し，車両に3D bboxとトラッキング用IDをラベリングして学習および評価に用いる．物体検出の結果はSSDのIoU 77.92mAPを上回る83.10mAPである（Late Fusionを用いることで1.4mAP向上している）．追跡もHungarianと同等以上の性能で，経路予測もL2距離0.33メートル未満で10フレーム予測可能である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p タイトルが某カーアクション映画みたいでカッコいい．内容も名前負けしておらずよく作り込まれておりOralで採択されている．インパクトのあるタイトルは大切．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3013.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.10 03:15:09
+
+

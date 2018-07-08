@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Scale-recurrent_Network_for_Deep_Image_Deblurring
+  .paper-abstract
+    .title Scale-recurrent Network for Deep Image Deblurring
+    .info
+      .authors X. Tao, H. Gao, Y. Wang, X. Shen, J. Wang, J. Jia
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p coarse-to-filneに単画像デブラーリングする，Scale-recurrent Network (SRN-DeblurNet)を提案．
+        p 構造的には，
+          |(1)入出力がピラミッド画像，
+          |(2)中間はUnet，
+          |(3)最終層の出力を第1層に注入（Recurrent）し，ピラミッド画像の枚数分実行．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Scale-recurrent_Network_for_Deep_Image_Deblurring_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li シンプルでパラメータ数が少ない．
+          li SoTAを超える性能．例もすごいきれいになっているように見える．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 見た目明らかにきれいになっていると，やはり評価したくなる．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.01770") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.18 11:02:11
+
+

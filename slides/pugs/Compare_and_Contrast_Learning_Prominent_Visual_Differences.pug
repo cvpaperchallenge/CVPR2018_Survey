@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Compare_and_Contrast_Learning_Prominent_Visual_Differences
+  .paper-abstract
+    .title Compare and Contrast: Learning Prominent Visual Differences
+    .info
+      .authors S.Chen and K.Grauman
+      .conference CVPR2018
+      .paper_id arXiv:1804.00112
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 2つの画像間で最も顕著な違いは表せられるがその他の細かい違いは示されないことが多い．それに対して，より多くの違いによって画像を比較できるようなモデルの構築をした．また，そのモデルを使って，UT-Zap50K shoesと
+          |the LFW10のデータセットを用いて評価したところSoTAであった．構築したモデルを画像記述と画像検索に導入し，拡張を図った．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Compare_and_Contrast_Learning_Prominent_Visual_Differences.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像中から目立つ部分をアノーテーションで収集し，ランク付けすることでモデルの構築．
+          li UT-Zap50K shoes（靴）とthe LFW10（顔）のデータセットを用いて評価．
+          li 画像記述と画像検索のタスクに応用し，拡張を図る
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 画像説明文に応用できればキャプショニングの幅を広げられそう．
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.00112.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 16:18:51
+
+

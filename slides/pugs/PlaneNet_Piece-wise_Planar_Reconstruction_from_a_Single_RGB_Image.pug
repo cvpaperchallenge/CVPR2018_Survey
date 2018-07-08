@@ -1,0 +1,50 @@
+﻿+slide
+section#ID_PlaneNet_Piece-wise_Planar_Reconstruction_from_a_Single_RGB_Image
+  .paper-abstract
+    .title PlaneNet: Piece-wise Planar Reconstruction from a Single RGB Image
+    .info
+      .authors Chen Liu, Jimei Yang, Duygu Ceylan, Ersin Yumer, Yasutaka Furukawa
+      .conference CVPR 2018
+      .paper_id 336
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 1枚のRGB画像から“piece-wise planar depthmap”を推定するend-to-endなネットワークを提案した．提案手法を用いてRGB画像から平面パラメータ及び平面セグメンテーションマスク及びデプスマップを同時に推定できる．
+          li 画像からpiece-wiseな平面を検出するタスクはARの応用に一つ重要なタスクとなっている．しかし従来，デプス推定とpiece-wiseな平面検出を同時に行う研究がない．著者達が新たにこのタスク及びタスクに対応できるネットワークを定義した．
+          li 提案フレームワークは:①DRNs(Dilated Residual Networks)を用いて入力画像から特徴抽出を行う②平面パラメータ推定・non-planarデプスマップ推定・セグメンテーションマスク推定の3つの推定ネットワークを用いる③推定した3つの結果から“piece-wise planar depthmap”を生成する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}PlaneNet_PieceWise_PlaneEstimation.png`,alt="PlaneNet_PieceWise_PlaneEstimation")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新規な問題定義．実験で提案手法が部屋のレイアウト推定・ARアプリ(テクスチャー編集・バーチャルルーラーなど)に応用できることを指摘した．
+          li 51,000枚ほどの学習データを作成した．(これが大変そう)
+          li plane segmentationタスクにおいてNYUデータセットでの精度が従来の三つの手法より優れている(比較している手法は2009年，2009年，2012年の手法だけど。。)
+          li デプスマップ推定タスクにおいてNYUv2データセットにおいて前述した３つの手法より精度良い
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p ARアプリに応用できるところから考えると単純なデプス推定より実用性が高い
+          li
+            p 平面検出も同時に行うので，部屋レイアウト推定に良い精度を達成したのが理解できる．しかし，疑問としては提案手法が平面検出＋デプス推定だけで部屋の幾何構造実際は学習していないので，デプス推定＋平面パーツ検出の従来研究と比べると新規性と技術的の難しさがどこなのかちょっとわからない
+          li
+            p
+              a(href="https://www.cse.wustl.edu/~chenliu/planenet/paper.pdf") 論文
+          li
+            p
+              a(href="https://github.com/art-programmer/PlaneNet") コード
+          li
+            p
+              a(href="http://www.cse.wustl.edu/~chenliu/planenet.html") プロジェクト
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.24 18:13:54
+
+

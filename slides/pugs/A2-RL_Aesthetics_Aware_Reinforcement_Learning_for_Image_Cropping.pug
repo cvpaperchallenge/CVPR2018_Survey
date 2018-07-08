@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_A2-RL_Aesthetics_Aware_Reinforcement_Learning_for_Image_Cropping
+  .paper-abstract
+    .title A2-RL: Aesthetics Aware Reinforcement Learning for Image Cropping
+    .info
+      .authors Debang Li et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 強化学習 (A3C) を用いて Image cropping を行う手法を提案. 従来の sliding winodow に基づく手法のように膨大な数の cropping 候補を評価する必要がないため, 先行研究よりも短時間で結果の計算が可能. また, 評価実験では精度についても先行研究よりも優位な結果を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-A2-RL-Aesthetics-Aware-Reinforcement-Learning-for-Image-Cropping.png`,alt="fukuhara-A2-RL-Aesthetics-Aware-Reinforcement-Learning-for-Image-Cropping.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Image cropping を sequential decision-making process として定式化した. (14種類の cropping を action として, Markov 過程としてモデル化.)
+          li 上記の問題を A3C を用いた強化学習を用いて解いた. 
+          li 報酬については学習済みの View Finding Network (Chen＋2017）を使用.
+          li 各ステップで候補となる cropping の種類の数が少ないため, 先行研究と比較して非常に短い計算時間で結果を出力することが可能となった.
+          li Flickr Cropping Dataset, CUHK Image Cropping Dataset, Human Cropping Dataset を用いて行った評価実験ではいずれも先行研究よりも優位な結果を達成した.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1709.04595.pdf" target="blank") [論文] A2-RL: Aesthetics Aware Reinforcement Learning for Image Cropping
+          li
+            a(href="https://github.com/wuhuikai/TF-A2RL" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.22 18:27:55
+
+

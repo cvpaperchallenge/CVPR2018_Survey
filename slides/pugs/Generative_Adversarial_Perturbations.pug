@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Generative_Adversarial_Perturbations
+  .paper-abstract
+    .title Generative Adversarial Perturbations
+    .info
+      .authors Omid Poursaeed, Isay Katsman, Bicheng Gao, Serge Belongie
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 敵対的サンプル（Adversarial Examples）を生成的に作りだすモデルを考案し、自然画像に対して摂動ノイズを与えて学習済みモデルを効果的にだます手法（GAP; Generative Adversarial Perturbations）を提案する。提案のGAPは画像に依存する/しない摂動ノイズ、いずれも生成することが可能であり、画像識別やセマンティックセグメンテーションに対して有効。また、ImageNet/Cityscapesを用いたより高解像な画像においても効果的に識別器をだますことに成功した。さらに、従来の同様の枠組みよりもより速く推論を行うことができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618GenerativeAdversarialPertubations.png`,alt="180618GenerativeAdversarialPertubations")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p より汎用的かつ画像依存性のあり/なしに関わらない摂動ノイズを、画像識別/セマンティックセグメンテーションに対して行うことができる。それでいてUniversal Perturbationsの枠組みを生成モデルにより実装、より効果的にだますことに成功。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p この論文は引用されそう？だが、ホントの意味で騙せているのかは不明である。（Adversarial Examplesの論文は、会議の前に攻略法がarXivに載せられるなどまだまだ研究が必要である）
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Poursaeed_Generative_Adversarial_Perturbations_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 20:24:14
+
+

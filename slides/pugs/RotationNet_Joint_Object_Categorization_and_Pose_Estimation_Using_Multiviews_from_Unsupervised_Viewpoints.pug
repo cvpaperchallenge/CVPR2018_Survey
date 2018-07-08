@@ -1,0 +1,44 @@
+﻿+slide
+section#ID_RotationNet_Joint_Object_Categorization_and_Pose_Estimation_Using_Multiviews_from_Unsupervised_Viewpoints
+  .paper-abstract
+    .title RotationNet: Joint Object Categorization and Pose Estimation Using Multiviews from Unsupervised Viewpoints
+    .info
+      .authors Asako Kanezaki, Yasuyuki Matsushita, Yoshifumi Nishida
+      .conference CVPR 2018
+      .paper_id 628
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 物体のマルチ視点の画像からジョイントで3D姿勢推定及び物体認識を行う手法RotationNetの提案．
+          li 3D MFPにより作成されたマルチ視点画像データセットMIROを提案した．(12classes, 10 instances/class,160viewpoints)
+          li 物体を観測する視点及び物体のカテゴリをジョイントで推定した方がより良い精度を達成できると指摘し，更にトレーニングする際に物体を観測する視点をlatent variablesとして取り扱い，視点unalignedな学習データセットからunsupervisedで物体の姿勢推定を学習する．
+          li また，視点-specificな特徴をクラス内だけではなく，異なるクラス間の姿勢アライメントを行う．
+          li RotationNetのネットワーク構造はマルチ視点の画像から画像ごとにそ全部の視点の確率(その画像がその視点であるか)及び物体カテゴリを予測し，全部の画像から予測した結果から正解ラベルのクラスの確率＊視点の確率の統合を最大化するように学習する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}RotationNet.png`,alt="RotationNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 物体認識においてはSHREC’17のnormalデータに対し優勝した．また，ModelNet-10,ModelNet-40に対し従来のマルチ視点・ポイントクラウド・ボクセルベースな様々な手法より良い精度を達成．
+          li 物体姿勢推定において，無監督な方法で従来の監督方法レベルな結果が得られた．
+          li 実環境で，良い姿勢な画像をと撮影できるとは限らない．RotationNetで物体の姿勢及び認識を行う際，画像枚数（＞＝１）で動作でき，観測が更新したら予測結果を更新する．そのため，RotationNetはAR応用などの実環境の応用に適応する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li クラス間のViewpoint-specificな特徴を学習することが面白い．可視化手法を加えて学習済みモデルに対しどういうようにアライメントしているのかを知りたい．また，問題定義を詳細的に考える必要がありそう
+          li 疑問点としては予測したそれぞれの視点の結果の統合は平均をとる？
+          li
+            a(href="https://arxiv.org/abs/1603.06208") 論文
+          li
+            a(href="https://github.com/kanezaki/rotationnet") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.25 17:21:58
+
+

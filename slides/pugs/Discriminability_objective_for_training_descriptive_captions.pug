@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Discriminability_objective_for_training_descriptive_captions
+  .paper-abstract
+    .title Discriminability objective for training descriptive captions
+    .info
+      .authors R.Luo, B.Price, Scott Cohen and G.Shakhnarovich
+      .conference CVPR2018
+      .paper_id arXiv:1803.04376
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 現在のキャプショニング方法は，2つの異なる画像であるにも関わらず，同じキャプションを生成してしまうなどの弁別性にかけている．それに対して，学習の際に画像とキャプションの一致度を直接関連付けるLossを組み込むことによって他のキャプションよりも弁別性のあるキャプションを生成している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Discriminability_objective_for_training_descriptive_captions.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 機械翻訳の評価指標であるBLEU，METEOR，ROUGE，CIDErやSPICEにおいても既存のキャプショニング手法よりも高いスコアを示している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p これにより，同じような画像に対するバリエーションが増え，
+          |ユニークなイメージキャプショニングの幅が広がった!!
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.04376.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.14 19:39:23
+
+

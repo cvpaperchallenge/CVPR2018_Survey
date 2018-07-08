@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Deep_Unsupervised_Saliency_Detection_A_Multiple_Noisy_Labeling_Perspective
+  .paper-abstract
+    .title Deep Unsupervised Saliency Detection: A Multiple Noisy Labeling Perspective
+    .info
+      .authors J.Zhang, T.Zhang, Y.Daiy, M.Harandi, and R.Hartley
+      .conference CVPR2018
+      .paper_id arXiv:1803.10910
+    .slide_editor KotaYoshdia
+
+    .item1
+      .text
+        h1 概要
+        p 深層学習を用いた教師あり学習による顕著性の検出方法は教師データに依存する．そこで，“汎化能力を改善しつつ教師データなしで顕著性マップを学習することは可能か？”という問いに対して，弱いものやのノイズのある教師なし顕著性検出手法によって生成される多数のノイズラベルを学習することによって教師なしで顕著性の検出を行った．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Unsupervised_Saliency_Detection_A_Multiple_Noisy_Labeling_Perspective.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来の教師なし顕著性検出に新たな顕著性を推定し，複数のノイズの多い顕著性検出方法から顕著性マップを学習する．
+          li 我々の深層学を用いた顕著性検出モデルは，人間のアノテーションなしでEnd to Endで学習できとても簡潔である．
+    .item4
+      .text
+        h1 結果・リンク集
+        ul
+          li 評価実験をしたところ従来の教師なしの顕著性検出方法を大きく上回り，深層学習を用いた顕著性の精度と同等のものとなった．
+          li
+            a(href="https://arxiv.org/pdf/1803.10910") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.23 20:28:11
+
+

@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Photographic_Text-to-Image_Synthesis_with_a_Hierarchically-nested_Adversarial_Network
+  .paper-abstract
+    .title Photographic Text-to-Image Synthesis with a Hierarchically-nested Adversarial Network
+    .info
+      .authors Zizhao Zhang, Yuanpu Xie, Lin Yang
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 階層的入れ子構造の識別器を使用し，テキストから高解像画像を生成するGANを提案．end-to-endの学習で高解像画像の統計量を直接モデルリングすることが可能な手法．これは，step-by-stepで高解像画像を生成するStackGANとは異なる点である．複数のスケールの中間層に対して階層的入れ子構造の識別器を使用することで中間サイズレベルでの表現に制約を加え，生成器が真の学習データの分布を獲得しやすくする．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Photographic_Text-to-Image_Synthesis_with_a_Hierarchically-nested_Adversarial_Network_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 手法
+        p 新しい構造と，lossの工夫でtext-to-imageのタスクで高解像画像の生成を可能とした．
+          br
+          |・hierarchical-nested Discriminatorを使用．
+          br
+          |・lossには，pair lossとlocal adversarial lossを使用する．pair lossでは入力テキストと生成画像が一致しているかを評価．local adversarial lossでは生成画像の細部の質を評価する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.09178") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 11:22:05
+
+

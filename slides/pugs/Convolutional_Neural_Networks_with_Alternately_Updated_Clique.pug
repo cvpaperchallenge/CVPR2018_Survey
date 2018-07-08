@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Convolutional_Neural_Networks_with_Alternately_Updated_Clique
+  .paper-abstract
+    .title Convolutional Neural Networks with Alternately Updated Clique 
+    .info
+      .authors Yibo Yang et al., 
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 従来のCNNの構造では基本的に決められた方向へのみのforwardを行うのに対して、すべてのレイヤー間で結合を持つClique blockで構成されるClique Netの提案。
+          |CIFAR-10でSoTA、その他ImangeNetやSVHNでも少ないパラメータでSoTAに匹敵する精度を記録。
+    .item2
+      img(src=figpath+"Convolutional_Neural_Networks_with_Alternately_Updated_Clique.png",alt="Convolutional_Neural_Networks_with_Alternately_Updated_Clique.png")
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p Clique blockでは以下のような処理が行われる。
+        ul
+          li 畳み込み層によってすべての層を共通の特徴マップで初期化。
+          li ある層に対して、他のすべての層から畳み込み結合した値で更新。これを各層に対して順次行い、すべての層で更新したら1つのStageが終了。
+          li 上記を決められたStage数行う。畳み込み結合の重みはStage間で共有する。
+        p DenseNetの拡張に近い構造のため妥当性があり、実際に精度が出ている点が強い。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.10419") 論文
+    .slide_index #{getSlideIndex()}
+
+

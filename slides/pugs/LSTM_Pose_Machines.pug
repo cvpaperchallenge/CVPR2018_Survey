@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_LSTM_Pose_Machines
+  .paper-abstract
+    .title LSTM Pose Machines
+    .info
+      .authors Yue Luo, Jimmy Ren, Zhouxia Wang, Wenxiu Sun, Jinshan Pan, Jianbo Liu, Jiahao Pang, Liang Lin
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Convolutional Pose Machine (CPM)のCNN部分を再帰的ネットであるLSTM (Long-short term memory)により置き換えた人物姿勢推定手法。時系列的に連続するフレーム（e.g. t, t+1, t+2）の入力に対して処理を実行し姿勢を推定する。CPMとは基本となるアーキテクチャの考え方（multi-stage algorithm）は同様であるが、それぞれのステージ間でパラメータを共有している点で異なる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180516LSTMPoseMachine.png`,alt="180516LSTMPoseMachine")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p CPMと同じmulti-stageの姿勢推定学習を、LSTMの構造にて実現したことが技術的なポイントである。さらに、CPMとは異なりステージ間でパラメータを共有することで精度向上が見られたと説明。Penn Action datasetやJHMDB datasetにて最高精度を叩き出した。JHMDBにて93.6@PCK(=0.2)、Penn Actionにて97.7@PCK(=0.2)を記録。さらに、各フレーム時のメモリチャンネルの挙動も可視化し、どのような際に成功するか/失敗するかを明らかにした。複雑姿勢（複雑背景？）の際にはエッジに着目していて、姿勢推定が成功する際にはピンポイントで関節位置を回帰する傾向にある。処理速度の面においても本論文の技術では25.6msで動作した（CPMは48.4ms）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p アーキテクチャ自体上手くいったモデルを異なるアプローチ（この場合はConvolutionalなモデルをRecurrentに変更）で実行して、どういった改善ができるかを試しているところが面白い。LSTMの場合にはステージ間でパラメータを共有するところがポイントであった。その上で精度を向上している点が実行力に優れていると言える。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.06316") 論文
+          li
+            a(href="http://www.jimmyren.com/") 著者
+          li
+            a(href="https://github.com/lawy623/LSTM_Pose_Machines") GitHub
+          li
+            a(href="https://www.youtube.com/watch?v=-sP3LWl6Ul0") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.16 17:25:49
+
+

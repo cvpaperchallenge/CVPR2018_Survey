@@ -1,0 +1,387 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CVPR2018 reading encouraging tool</title>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://apis.google.com/js/api.js"></script>
+
+<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
+  
+<script>
+<!--
+gapi.load('client:auth2', ()=> {
+  gapi.client.init({
+    clientId: '868265901210-lt0lmb4k8580u5la4raq6gk27ht7agqn.apps.googleusercontent.com',
+	//clientId: '104833731383104351698',
+    scope: 'https://www.googleapis.com/auth/spreadsheets',
+    discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4']
+  })
+});
+var spreadsheetId = '1yGhU--TGAMoVmCDUnFN7_BJW0BTcBbJPkDK9suclPiU';
+var spreadsheetId_log = '1ywU6LHB2rpDQv0FQZYa_be2_-kw5VAiNGDxPSM7pSL4';
+
+var firbaseConfig = {
+    apiKey: "AIzaSyBzmlyoW8Noqgp9Wk7iivfuyj5kuhMhHbw",
+    authDomain: "cvpr2018-survey-204411.firebaseapp.com",
+    databaseURL: "https://cvpr2018-survey-204411.firebaseio.com",
+    projectId: "cvpr2018-survey-204411",
+    storageBucket: "cvpr2018-survey-204411.appspot.com",
+    messagingSenderId: "868265901210",
+	//clientId: "RANDOM_STRING.apps.googleusercontent.com"
+};
+firebase.initializeApp(firbaseConfig);
+var fireDatabase = null; //= firebase.database();
+
+//ゲットしたトークンをgoogleApiに読み込ませる方法が分からなかったので，firebase apiの認証ではなくgoogle apiの認証を使うことに
+var googleProvider = new firebase.auth.GoogleAuthProvider();
+//googleProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+googleProvider.addScope('https://www.googleapis.com/auth/spreadsheets');
+var googleToken = null;
+
+//別窓開ける形式の認証にしたかったので，firebase apiで認証→トークンをgithub apiに読み込ませる
+var githubProvider = new firebase.auth.GithubAuthProvider();
+githubProvider.addScope('public_repo,read:user');
+githubProvider.setCustomParameters({
+	'allow_signup': 'false'
+});
+var githubToken = null;
+var githubApi = null;
+var issueApi = null;
+
+//internal database storage
+var tab=[];
+var eidlist=[];
+var cid=-1;
+var sheetId=-1;
+var sheetId_log=0;
+var throughlist=[];
+
+
+function signin_google_onClick(){
+	$("#status").text('');
+	$("#reload").attr('disabled', true);
+	
+	//google apiの認証を使う場合
+	//アプリ登録していないと，安全でないページとか出てきていやらしい
+//    const auth = gapi.auth2.getAuthInstance();
+//    auth.signIn().then(function(user){
+//		return reload_onClick();
+//	}, function(error){ 
+//		$("#status").text('Google Sign in failed.');
+//		console.log(error);
+//		return Promise.reject(error);
+//	}).then(function(response){
+//		$("#reload").attr('disabled', false);
+//		$("#status").text('Google Sign in succeeded.');
+//	}).catch(function(error){
+//		$('#status').text('Google Sign in failure. See console log for detail.');
+//		console.log(error);
+//	});
+//	
+	
+	//firebaseの認証を使う場合
+	firebase.auth().signInWithPopup(googleProvider).then(function(result) {
+		// This gives you a Google Access Token. You can use it to access the Google API.
+		googleToken = result.credential.accessToken;
+		// The signed-in user info.
+		var user = result.user;
+		// ...
+		gapi.client.setToken({access_token : googleToken});
+		return reload_onClick();
+	}, function(error){ 
+		$("#status").text('Google Sign in failed.');
+		console.log(error);
+		return Promise.reject(error);
+	}).then(function(response){
+		$("#reload").attr('disabled', false);
+		$("#status").text('Google Sign in succeeded.');
+	}).catch(function(error){
+		$('#status').text('Google Sign in failure. See console log for detail.');
+		console.log(error);
+	});
+}
+
+function signin_github_onClick(){
+	$("#status").text('');
+	$("#readit").attr('disabled', true);
+	firebase.auth().signInWithPopup(githubProvider).then(function(result) {
+		// This gives you a GitHub Access Token. You can use it to access the GitHub API.
+		githubToken = result.credential.accessToken;
+		// The signed-in user info.
+		//var username = result.user.displayName;
+		//if(!username) username = result.user.uid;
+		// ...
+		
+		githubApi = new GitHub({
+			token: githubToken,
+		});
+		issueApi = githubApi.getIssues("cvpaperchallenge", "CVPR2018_Survey");
+		//var username = githubApi.getUser().__user;
+		githubApi.getUser().getProfile().then(function(response){
+			var username = response.request.response.name;
+			if($("#who").val()==="") $("#who").val(username);
+		});
+		
+		//fireDatabase = firebase.database();
+		
+		$("#status").text('Github sign in succeeded.');
+		if(cid!=-1) $("#readit").attr('disabled', false);
+	}).catch(function(error) {
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		// The email of the user's account used.
+		var email = error.email;
+		// The firebase.auth.AuthCredential type that was used.
+		var credential = error.credential;
+		// ...
+		githubToken=null;
+		$("#status").text('Github sign in failed.');
+		console.log(error);
+	});
+}
+
+function pickup_onClick(){
+	$("#status").text('');
+	
+	var innerfunc=function(){
+		//type	title	authors	読んだ人	arxiv	otherurl
+		var i=-1;
+		do{i=Math.floor(Math.random()*eidlist.length);}while(i===cid);
+		$('#type').text(tab[eidlist[i]][9]);
+		$('#session').text(tab[eidlist[i]][10]);
+		$('#title').text(tab[eidlist[i]][1]);
+		$('#authors').text(tab[eidlist[i]][2]);
+		if(tab[eidlist[i]].length>=5 && tab[eidlist[i]][4].length>0)
+			$('#arXiv').html('<a href="'+tab[eidlist[i]][4]+'" target="_blank">'+tab[eidlist[i]][4]+'</a>');
+		else $('#arXiv').text('');
+		if(tab[eidlist[i]].length>=7 && tab[eidlist[i]][7].length>0)
+			$('#CVF').html('<a href="'+tab[eidlist[i]][7]+'" target="_blank">'+tab[eidlist[i]][7]+'</a>');
+		else $('#CVF').text('');
+		var t=tab[eidlist[i]][1];
+		var tt=t.replace(/[^a-zA-Z0-9]/g,' ').replace(/(^ | $)/g,'').replace(/  +/g,' ').replace(/ /g,'+');
+		$('#search').html(
+			'<a href="https://www.google.co.jp/search?q='+tt+'" target="_blank">Google</a>'+
+			' <a href="https://scholar.google.co.jp/scholar?hl=ja&q='+tt+'" target="_blank">GoogleScolar</a>'+
+			' <a href="https://www.google.co.jp/search?q='+tt+'+site%3Ahttps%3A%2F%2Farxiv.org%2F" target="_blank">arXiv on Google</a>'
+		);
+		cid=i;
+		//eidlist.splice(i,1);
+		
+		throughlist.push(tab[eidlist[i]][1]);
+		
+		if(githubApi!=null) $("#readit").attr('disabled', false);
+	};
+	
+	if(tab.length==0){
+		reload_onClick().then(function(response){
+			innerfunc();
+		},function(error){
+		});
+	}
+	else{
+		innerfunc();
+	}
+
+}
+
+function reload_onClick(){
+	$("#status").text('');
+	$("#pickup").attr('disabled', true);
+	
+	var innerproc=null;
+	
+	//logのシートのidを検索する？
+	//弄らなければ0番なハズ
+	
+	//未ロードならmainシートのidを名前で検索
+	if(sheetId==-1){
+		innerproc = gapi.client.sheets.spreadsheets.get({
+			spreadsheetId : spreadsheetId,
+			fields : 'sheets.properties.sheetId,sheets.properties.title'
+		}).then(function(response){
+			for(var i=0;i<response.result.sheets.length;++i){
+				if(response.result.sheets[i].properties.title==='main')
+					sheetId = response.result.sheets[i].properties.sheetId;
+			}
+			return Promise.resolve();
+		});
+	}
+	else innerproc = Promise.resolve();
+	
+	return innerproc.then(function(response){
+		return gapi.client.sheets.spreadsheets.values.get({
+			spreadsheetId: spreadsheetId,
+			range: 'main!C:M' // rangeの指定
+		}).then(function(response){
+			tab=response.result.values.slice(1); //ヘッダ削除
+			var n=tab.length;
+			//type	title	authors	読んだ人	arxiv	otherurl	otherurl2	cvf	comment	type	session_title
+			eidlist=[];
+			for(i=0;i<n;++i){
+				if(tab[i][3]===''){
+					eidlist.push(i);
+				}
+			}
+			//console.log('complete loading');
+			$("#pickup").attr('disabled', false);
+			$("#status").text('Reload succeeded.');
+			
+			return Promise.resolve(response);
+		});
+	});
+}
+
+function readit_onClick(){
+	if($("#who").val()===""){
+		$("#status").text('Write your name.');
+		return;
+	}
+	
+	$("#status").text('');
+	var peidlist=[];
+	$.extend(peidlist, eidlist); //clone array
+	var pid = cid;
+	reload_onClick().then(function(response){
+		//データベースリロード>
+		//Readinglistに書き込み
+		
+		//コンフリクト確認
+		var nid;
+		for(nid=0;peidlist[pid]!=eidlist[nid] && nid<eidlist.length;++nid);
+		if(nid==eidlist.length){
+			return Promise.reject({message: 'Reader conflicted.'});
+		}
+		cid = nid;
+		
+		//リクエスト集作る
+		var requests = [];
+		//読む人書く
+		var n=eidlist[cid]+1;
+		requests.push({
+			updateCells : {
+				start : {sheetId: sheetId, rowIndex: n, columnIndex: 5},
+				rows: [
+					{values: [
+						{userEnteredValue: {stringValue: $('#who').val()}}
+					]}
+				],
+				fields: 'userEnteredValue'
+			}
+		});
+		//1行色塗る
+		requests.push({
+			repeatCell : {
+				range: {sheetId: sheetId, startRowIndex: n, endRowIndex: n+1},
+				cell: {userEnteredFormat: {backgroundColor: {red: 244.0/255.0, green: 199.0/255.0, blue: 195.0/255.0}}},
+				fields: 'userEnteredFormat.backgroundColor'
+			}
+		});
+		//まとめて実行
+		return gapi.client.sheets.spreadsheets.batchUpdate({
+			spreadsheetId: spreadsheetId,
+			resource: { requests: requests }
+		});
+	}).then(function(response){
+		console.log(response);
+		//データベースリロード>
+		//Readinglistに書き込み>
+		//スルー記録のアップロード
+		
+		var cols = [$('#who').val(), ""+throughlist.length, "ok"];
+		cols = cols.concat(throughlist);
+		//末尾に追加 append使えばいいか
+		return gapi.client.sheets.spreadsheets.values.append({
+			spreadsheetId : spreadsheetId_log,
+			range : 'log!A1',
+			valueInputOption: 'USER_ENTERED',
+			insertDataOption: 'OVERWRITE',
+			includeValuesInResponse: false,
+			values : [cols]
+		});
+	}).then(function(response){
+		//データベースリロード>
+		//Readinglistに書き込み>
+		//スルー記録のアップロード>
+		//スルー記録初期化，未読リスト更新
+		
+		//スルー記録初期化
+		throughlist=[];
+		//未読リスト更新
+		//報告したので未読リストから抜く
+		eidlist.splice(cid,1);
+		cid=-1;
+		$('#readit').attr('disabled',true);
+		$("#status").text('Reporting succeeded.');
+		console.log(response);
+		return Promise.resolve(response);
+	}).then(function(response){
+		//データベースリロード>
+		//Readinglistに書き込み>
+		//スルー記録のアップロード>
+		//スルー記録初期化，未読リスト更新>
+		//Issueに報告
+		
+		var title = tab[peidlist[pid]][1];
+		
+		issueApi.createIssue({
+			title : title,
+			body : "を読みます！",
+			labels : ["readit"]
+		}).then(function(response){
+			if(response.status===201){
+				var number = response.data.number;
+				var url = response.data.html_url;
+				$("#status").html('<a href="'+url+'" target="blank">Issue #'+number+'</a> で宣言しました. 読了後，プルリクエストのタイトルに次を記入してIssueを閉じてください: Close #'+number);
+			}
+			else{
+				$("#status").text("Error on create an issue.");
+				console.log(response.statusText);
+			}
+		},function(error){
+			$("#status").text("Error on create an issue.");
+			console.log(error);
+		});
+	},function(error){
+		$("#status").text('Reporting failed.');
+		console.log(error);
+	}).catch(function(error){
+		$('#status').text('Error occured. See console log for detail.');
+		console.log(error);
+	});
+}
+
+//-->
+</script>
+</head>
+<body>
+<p>
+<span>
+<button id="signin_google" onClick="signin_google_onClick();">Google Sign in</button>
+<button id="signin_github" onClick="signin_github_onClick();">Github Sign in</button>
+<button id="reload" onClick="reload_onClick();" disabled>Reload</button>
+<button id="pickup" onClick="pickup_onClick();" disabled>Feeling lucky!</button>
+<button id="readit" onClick="readit_onClick();" disabled>今読む</button>
+名前：<input id="who" type="text" size="10" value="" />
+</span>
+<br />
+<span id="status"></span>
+</p>
+<table>
+<tr><th>type</th><td id="type"></td></tr>
+<tr><th>session</th><td id="session"></td></tr>
+<tr><th>title</th><td id="title"></td></tr>
+<tr><th>authors</th><td id="authors"></td></tr>
+<tr><th>arXiv</th><td id="arXiv"></td></tr>
+<tr><th>CVF</th><td id="CVF"></td></tr>
+<tr><th>search</th><td id="search"></td></tr>
+</table>
+</body>
+</html>

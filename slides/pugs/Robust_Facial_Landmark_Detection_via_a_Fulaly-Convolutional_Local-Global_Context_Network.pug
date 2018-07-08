@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Robust_Facial_Landmark_Detection_via_a_Fulaly-Convolutional_Local-Global_Context_Network
+  .paper-abstract
+    .title Robust Facial Landmark Detection via a Fully-Convolutional Local-Global Context Network
+    .info
+      .authors D. Merget, M. Rock and R. Gerhard
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p FCNの中にKernel convolutionを暗黙的に入れ込み，大域的特徴情報を残すというアイデアを提案．
+          |Conv層で局所特徴を取り，KernelConvでそれをブラーにかけ，DilatedConv層で大局的特徴をリファインするという構造．
+        p 特に解像度に独立・きっちりROIがとれない・要複数検出対応・要遮蔽対応な顔ランドマーク検出タスクに有効．
+          |KernelConvによって勾配平滑化と過学習抑制が働き収束しやすくなる．
+          |アウトライア弾きのために，事前処理ステップにおいて，ネットワーク出力をシンプルなPCAベース2D形状モデルにフィットしておく．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Robust_Facial_Landmark_Detection_via_a_Fulaly-Convolutional_Local-Global_Context_Network_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来は階層構造やプーリング，統計モデルへのフィッティングで対応していたところを，FCNに直に大域的特徴を入れ込むようにした．
+          li 構造単純化により，学習パラメータが少なくなる．
+          li 顔ランドマーク検出に適用してみて，いくつかのSOTAな手法より良い性能を出した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://www.mmk.ei.tum.de/fileadmin/w00bqn/www/Verschiedenes/cvpr2018.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.15 13:31:33
+
+

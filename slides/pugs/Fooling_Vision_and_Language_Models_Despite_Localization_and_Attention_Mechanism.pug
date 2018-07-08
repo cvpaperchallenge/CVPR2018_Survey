@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Fooling_Vision_and_Language_Models_Despite_Localization_and_Attention_Mechanism
+  .paper-abstract
+    .title Fooling Vision and Language Models Despite Localization and Attention Mechanism
+    .info
+      .authors Xiaojun Xu, Xinyun Chen, Chang Liu, Anna Rohrbach, Trevor Darrel and Dawn Song
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Adversarial attackが、VisionとLanguageの融合問題のようにより複雑な問題に対しても有効であるかを調査した。
+          |対象とするタスクは、画像キャプショニング及びVQAとして画像のAdversarial exampleによる出力の変化を調べた。
+          |また、これらの手法におけるlocalizationがAdversarial Attackに影響されるかを確認した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fooling_Vision_and_Language_Models_Despite_Localization_and_Attention_Mechanism.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Dense Captionについては、97％の確率で騙すことに成功した。
+          |同じ画像の同じ領域に対しても目標とするキャプションが異なると異なるキャプションを出力させることが可能なことを確認した。
+          |VQAについてもごく一部を除いて騙すことができることを確認した。
+          |Attention Mapを確認すると、Adversarial exampleを入力した場合異なる領域に注目していることが明らかになった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1709.08693") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 00:26:41
+
+

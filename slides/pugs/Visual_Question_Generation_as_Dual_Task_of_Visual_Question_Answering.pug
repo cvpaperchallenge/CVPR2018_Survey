@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Visual_Question_Generation_as_Dual_Task_of_Visual_Question_Answering
+  .paper-abstract
+    .title Visual Question Generation as Dual Task of Visual Question Answering
+    .info
+      .authors Yikang Li, Nan Duan, Bolei Zhou, Xiao Chu, Wanli Ouyang and Xiaogang Wang
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像に関する質問に答えるVisual Question Answering(VQA)と与えられた答えになる質問を作るVisual Question Generation(VQG)を同時に扱うInvertible Question Answering Network(iQAN)を提案した。
+          |質問が与えられている場合は答えを、答えが与えられている場合は質問を推定することで学習をする。
+          |その際、2つのタスクを独立した問題ではなく逆問題であると考え、質問と答え及びそれぞれを表現する特徴量間の変換に使用する重みを共有する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Visual_Question_Generation_as_Dual_Task_of_Visual_Question_Answering.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p VQAに関しては、従来手法と比べて精度を向上することが可能となった。
+          |また、VQGによって生成した質問と答えのペアをVQAの学習に使用すると精度が向上することが分かり、VQGによってデータ数を増やすことが可能であると結論付けた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://cvboy.com/publication/cvpr2018_iqan/") 著者ホームページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.5 00:51:56
+
+

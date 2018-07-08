@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Tangent_Convolutions_for_Dense_Prediction_in_3D
+  .paper-abstract
+    .title Tangent Convolutions for Dense Prediction in 3D
+    .info
+      .authors Maxim Tatarchenko et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p ３次元データを扱う新しい convolutional の方法 "Tangent Convolution" を提案. 全ての点の近傍点を仮想的な接平面上に射影し, 接平面上で畳み込みを行う. 接平面は法線ベクトルが計算できれば構成する事ができるため, 複数のデータ形式に対して同様に適用が可能. また, 事前計算を行う事によって大規模なデータベースに対しても効率的に計算を行う事が可能となった.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuahra-Tangent-Convolutions-for-Dense-Prediction-in-3D.png`,alt="fukuahra-Tangent-Convolutions-for-Dense-Prediction-in-3D.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 入力データの形式は法線ベクトルを近似的に求められるもの (point clouds, meshes, dpolygon soup) であればなんでも良い.
+          li 事前計算を行う事によって大規模なデータ（数百万オーダーの点群）も効率的に扱う事ができる.
+          li 提案手法の有効性を示すために Tangent Convolution を用いたネットワークを Semantic 3D Scene Segmentation のタスクに置いて既存手法 (PointNet, ScanNet, OctNet) と比較し, 複数の評価尺度に置いて最も良い精度となった.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://vladlen.info/papers/tangent-convolutions.pdf") [論文]
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.12 11:33:55
+
+

@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_MiCT_Mixed_3D2D_Convolutional_Tube_for_Human_Action_Recognition
+  .paper-abstract
+    .title MiCT: Mixed 3D/2D Convolutional Tube for Human Action Recognition
+    .info
+      .authors Yizhou Zhou, Xiaoyan Sun, Zheng-Jun Zha and Wenjun Zeng
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 2D CNNと3D CNNの畳み込みモジュールを統合した行動認識のためのネットワークMixed Convolutional Tube(MiCT)を提案．3つの有名なベンチマークデータセット(UCF101，Sport1M，HMDB-51)においてMiCT-Netが元の3D CNNのみの手法より著しく優れていることを確認．UCF101とHMDB51での行動認識でSOTAの手法と比較し、MiCT-Netは最高の性能を発揮．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180609_MiCTNet1.png`,alt="1")
+          img(src=`${figpath}20180609_MiCTNet2.png`,alt="2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 2D CNNにおける手法を十分にリスペクトし，3D Convと融合した新規のネットワークを構築
+          li MiCT-Netによって時空間融合の各ラウンドにおける学習の複雑さを軽減しつつ、より深くより有益な特徴マップを生成可能
+          li UCF101とHMDB51においてSOTA
+            img(src=`${figpath}20180609_MiCTNet3.png`,alt="3")
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://www.microsoft.com/en-us/research/uploads/prod/2018/05/Zhou_MiCT_Mixed_3D2D_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 15:14:28
+
+

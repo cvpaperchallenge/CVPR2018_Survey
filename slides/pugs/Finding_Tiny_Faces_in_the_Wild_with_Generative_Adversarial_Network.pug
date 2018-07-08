@@ -1,5 +1,5 @@
 ﻿+slide
-section#Finding_Tiny_Faces_in_the_Wild_with_Generative_Adversarial_Network
+section#ID_Finding_Tiny_Faces_in_the_Wild_with_Generative_Adversarial_Network
   .paper-abstract
     .title Finding Tiny Faces in the Wild with Generative Adversarial Network
     .info
@@ -11,7 +11,7 @@ section#Finding_Tiny_Faces_in_the_Wild_with_Generative_Adversarial_Network
       .text
         h1 概要
         p GANを用いて画像中の顔を検出する研究。
-          |検出が難しい顔として小さくかつボケている顔が挙げられるが、これらの顔をGANによって高解像度かつはっきりとした顔にすることで検出制度を向上させる手法を提案。
+          |検出が難しい顔として小さくかつボケている顔が挙げられるが、これらの顔をGANによって高解像度かつはっきりとした顔にすることで検出精度を向上させる手法を提案。
           |generatorは高解像度にするsuper resolution network(SRN)と顔の詳細な情報を復元するrefinment network(RN)を結合したネットワークである。
           |discriminatorはVGG19であり、ロスとしてデータセットの顔/generatorによる顔、顔/顔ではないモノを同時に行うロスを導入。
           |またよりはっきりとした顔を生成するために、generatorのロスとして物体識別のロスを導入。
@@ -22,16 +22,20 @@ section#Finding_Tiny_Faces_in_the_Wild_with_Generative_Adversarial_Network
     .item3
       .text
         h1 新規性・結果・なぜCVPRに通ったか？
-        p ・GANによって画像中の顔から高解像度かつはっきりとした顔を生成することで高精度な顔検出手法を提案
-        p ・GANの導入による精度の向上、導入したロスの有効性を確認している
-        p ・state-of-the-artの研究よりも精度が高い
+        ul
+          li GANによって画像中の顔から高解像度かつはっきりとした顔を生成することで高精度な顔検出手法を提案。
+          li GANの導入による精度の向上、導入したロスの有効性を確認している。
+          li state-of-the-artと比較して、最も高い検出精度を達成
     .item4
       .text
         h1 コメント・リンク集
-        p テスト時も学習時と同様に画像全体ではなくROIを与えているため、実行時間はそれなりにかかりそう。
         ul
+          li 検出精度が非常に高く、データセットではアノテーションし忘れている顔すらも検出してしまい、これによって精度が悪いように見えてしまうと主張している。
+          li テスト時も学習時と同様に画像全体ではなくROIを与えているため、実行時間はそれなりにかかりそう。
           li
             a(href="https://ivul.kaust.edu.sa/Documents/Publications/2018/Finding%20Tiny%20Faces%20in%20the%20Wild%20with%20Generative%20Adversarial%20Network.pdf") 論文
           li
-            a(href="https://ivul.kaust.edu.sa/Pages/pub-tiny-faces.aspx") project page
+            a(href="https://ivul.kaust.edu.sa/Pages/pub-tiny-faces.aspx") Project page
     .slide_index #{getSlideIndex()}
+
+

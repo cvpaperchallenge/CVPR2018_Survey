@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Learning_Pose_Specific_Representations_by_Predicting_Different_Views
+  .paper-abstract
+    .title Learning Pose Specific Representations by Predicting Different Views
+    .info
+      .authors Georg Poier, David Schinagl, Horst Bischof
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 異なるビューポイントの距離画像入力から、低次元の潜在表現を利用して手部領域追跡の学習を実行する研究である。ビューポイント推定の誤差をフィードバックして、教師なしでも手部の姿勢推定に必要な潜在表現を獲得する。これにより、必要なのは対象となるビューポイントではなく、第二のビューポイントのみであり、ラベルあり/ラベルなしの場合においても効果的に学習することができる（Semi-supervised Learningの枠組みで学習可能）。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609PoseSpecificRepresentation.png`,alt="180609PoseSpecificRepresentation")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p あるビューポイントの距離画像が手に入れば、異なるビューポイントに関する手部領域の姿勢推定が可能になるSemi-supervised Learningを提案。異なるビューポイントの低次元潜在表現を学習し、3Dの関節位置を推定することができる。NYU-CS dataset/MV-hands datasetにてState-of-the-artな精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 中間表現（本論文の場合には低次元潜在空間）を学習して、異なるドメイン間の学習に応用したい。このような問題は意外と簡単にできるのだろうか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Poier_Learning_Pose_Specific_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 19:19:49
+
+

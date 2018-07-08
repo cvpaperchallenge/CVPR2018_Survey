@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Video_Captioning_via_Hierarchical_Reinforcement_Learning
+  .paper-abstract
+    .title Video Captioning via Hierarchical Reinforcement Learning
+    .info
+      .authors Xin Wang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Video captioning のための階層型強化学習フレームワークを提案. Caption を複数のセグメントに分割し, High-level の Manager Module が各セグメントのコンテキストをデザインし, Low-level の Worker Modeule が単語を生成することで順次セグメントを作成する. 提案手法は MSR-VTT データセット を用いた評価実験で既存手法よりも複数の評価尺度で良い結果となった. また, video captioning のための新しい大規模データセットを公開. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Video-Captioning-via-Hierarchical Reinforcement-Learning.png`,alt="fukuhara-Video-Captioning-via-Hierarchical Reinforcement-Learning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Video captioning の問題を強化学習の問題として定式化し直し, 効率的に学習をすることができる階層型強化学習手法を提案した.
+          li High-level の Manager Module が目標を達成するために必要なゴールを設定し, Low-level の Worker Modeule がゴールを達成するための基本行動を行う. また, Internal Critic がゴールが達成されたかどうかの評価を行う.
+          li Action recognition や segmentation で主に用いられている Charades データセットをもとにvideo captioning のための新しい大規模データセットを作成. 既存の MSR-VTT データセットよりも詳細で長い caption が与えられている.
+          li MSR-VTT データセットを用いた評価実験では, 既存手法（Mean-Pooling, Soft-Attention, S2VT等）と比較して複数の評価尺度で最も良い結果を得た.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.11135" target="blank") [論文] Video Captioning via Hierarchical Reinforcement Learning
+          li
+            a(href="http://www.cs.ucsb.edu/~xwang/#" target="blank") [著者HP] Xin Wang
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 12:11:55
+
+

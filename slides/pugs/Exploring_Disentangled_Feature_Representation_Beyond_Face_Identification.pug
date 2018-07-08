@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Exploring_Disentangled_Feature_Representation_Beyond_Face_Identification
+  .paper-abstract
+    .title Exploring Disentangled Feature Representation Beyond Face Identification
+    .info
+      .authors Yu Liu, Fangyin Wei, Jing Shao, Lu Sheng, Junjie Yan, Xiaogang Wang
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔に関するタスクに汎用的な特徴量を得ることができるDistilling and Dispelling Autoencoder(D2AE)を提案。
+          |Encoderによって顔から個人性を表現する特徴量(性別など)と個人性を排除した特徴量(表情など)を抽出する。
+          |取得された特徴量により、個人識別、アトリビュートの識別、顔のアトリビュート編集、顔の生成を行うことができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Exploring_Disentangled_Feature_Representation_Beyond_Face_Identification.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Encoderによって顔から個人性を表現する特徴量と個人性を排除した特徴量を抽出することで、これらの特徴量により様々な顔のタスクを行うことが可能となった。
+          li LFWデータセットにおける個人識別でaccuracyが約99.0%、TPRが約98.0%であり、既存手法と同等の精度を達成。
+          li LFWA、CelebAデータセットにおける顔のアトリビュート認識は83.16%となり、アトリビュートを学習していないにも関わらず、アトリビュートを学習した既存手法と同等の精度を達成した。
+          li 顔のアトリビュートの編集、アトリビュートを保ったアイデンティティーの転写といった編集が可能。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li このネットワークを用いて他の物質の個人性を抽出して何が出てくるのか興味がある。
+             |例えば顔の代わりに魚を学習させて、鯛ごとの個人性、マグロごとの個人性を抜き出してみるなど。
+          li
+            a(href="https://arxiv.org/abs/1804.03487") 論文
+    .slide_index #{getSlideIndex()}
+
+

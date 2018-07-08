@@ -1,0 +1,47 @@
+﻿+slide
+section#ID_Adversarial_Feature_Augmentation_for_Unsupervised_Domain_Adaptation
+  .paper-abstract
+    .title Adversarial Feature Augmentation for Unsupervised Domain Adaptation
+    .info
+      .authors Riccardo Volpi, Pietro Morerio, Silvio Savarese, Vittorio Murino
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 特徴量空間におけるデータオーギュメンテーションとソースドメインとターゲットドメインに不変な特徴量を取得することで
+          |unsupervised data adaptationを行う手法を提案。
+          |右図にあるようにstep1で、ソースドメインとノイズをデコードして生成されたベクトルをGANにかけ、
+          |特徴量空間においてソースドメインに対するオーギュメンテーションを行う。
+          |続いてstep2において、ソースドメインとターゲットドメインを同一のエンコーダーに入力することでドメインに不変な特徴量を取得する。
+          |ベースラインである
+          a(href="https://arxiv.org/abs/1702.05464") Adversarial discriminative domain adaptation
+          |ではドメインごとにエンコーダーを使用していたが、提案手法ではエンコーダーは一つ。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Adversarial_Feature_Augmentation_for_Unsupervised_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li GANを用いてソースドメインの特徴量空間でデータオーギュメンテーションを行い、
+             |かつソースドメインとターゲットドメインに不変な特徴量を推定することで、unsupervised data adaptationを行った。
+          li ベースラインである
+             a(href="https://arxiv.org/abs/1702.05464") Adversarial discriminative domain adaptation
+             |に対して上記の2つの拡張の有効性を議論している。
+          li state-of-the-artと比較して、数字の識別、物体の識別において既存手法と同等かそれ以上の精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Limitationにも書かれているようにsourceとtargetのラベが同じになる保証はなく、
+             |最終的な精度はsourceのエンコーダーがどれほどうまく学習できているかに強く依存する。
+          li
+            a(href="https://arxiv.org/abs/1711.08561") 論文
+          li 
+            a(href="https://github.com/ricvolpi/adversarial-feature-augmentation") GitHub
+    .slide_index #{getSlideIndex()}
+
+

@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_AVA_A_Video_Dataset_of_Spatio-temporally_Localized_Atomic_Visual_Actions
+  .paper-abstract
+    .title AVA: A Video Dataset of Spatio-temporally Localized Atomic Visual Actions
+    .info
+      .authors C. Gu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        大規模な新規動画データセットを構築．
+        従来の動画データセットが複合的な行動ラベルを扱うのに対して，
+        このデータセットではStand, Sit, WatchのようなAtomicな行動ラベル (80 classes) を扱う．
+        このようなラベルが1秒間隔で動画中のすべての人にアノテーションされており，
+        しかもBounding Boxまで付いているというのがこのデータセットの強み．
+        80種類ものAtomicな行動ラベルが大規模にしかも密に付いているデータセットは初．
+        加えて，Two-stream I3D & Faster R-CNNというような手法を提案．
+        従来のSpatio-temporal Action Localization用のデータセットではSOTAを達成したものの，
+        このデータセットは15.6% mAPと問題の難しさも主張している．
+  
+    .item2
+      img(src=figpath+"AVA_A_Video_Dataset_of_Spatio-temporally_Localized_Atomic_Visual_Actions.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Bounding Boxまでアノテーションされている初の大規模動画データセットを構築
+          li 動画中の一部ではなく密にAtomicな行動のラベルがアノテーションされている
+          li Spatio-temporal Localizationをするためのベンチマークとなる新規手法も提案
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="https://arxiv.org/abs/1705.08421") 論文 (arXiv)
+          li: a(href="https://research.google.com/ava/") データセット
+          li: a(href="http://activity-net.org/challenges/2018/tasks/guest_ava.html") ActivityNet Challenge 2018 Task B
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.1 14:53:37
+
+

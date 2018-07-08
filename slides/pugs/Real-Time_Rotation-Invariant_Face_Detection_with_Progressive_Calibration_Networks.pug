@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Real-Time_Rotation-Invariant_Face_Detection_with_Progressive_Calibration_Networks
+  .paper-abstract
+    .title Real-Time Rotation-Invariant Face Detection with Progressive Calibration Networks
+    .info
+      .authors FXuepeng Shi, Shiguang Shan, Meina Kan, Shuzhe Wu, Xilin Chen
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p リアルタイムで顔の回転に頑健な顔検出を行うProgressive Calibration Network(PCN)を提案。
+          |PCNは3つのステージで構成されており、それぞれのステージでは検出された領域を0° or 180°回転させる、
+          |0° or 90° or -90°回転させる、頭が上にくるように顔を回転させる、という処理をそれぞれ行う。
+          |また各ステージ共通で検出された領域が顔であるか顔でないかという識別を行う。第1,2ステージで粗く回転を行うことで第3ステージにおける回転量と、
+          |各ステージにおける顔識別の学習が容易になったことで、高精度かつリアルタイムに顔検出を行うことが可能となった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Real-Time_Rotation-Invariant_Face_Detection_with_Progressive_Calibration_Networks.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来手法であるデータオーギュメンテーション、角度の値域を分割してそれぞれの検出器を学習させる方法、
+             |角度の回転角を推定する流手法では、どれもネットワークが大きくなりすぎるためにリアルタイムでの実行が難しかった。
+          li 解像度が40x40以上の顔を検出。
+          li state-of-the-artの手法と比べて同等の精度を達成し、
+             |かつGPUを使用した際の実行スピードは4.2倍となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 
+            a(href="https://github.com/Jack-CV/PCN") GitHub with Demos
+          li
+            a(href="https://arxiv.org/abs/1804.06039") 論文
+    .slide_index #{getSlideIndex()}
+
+

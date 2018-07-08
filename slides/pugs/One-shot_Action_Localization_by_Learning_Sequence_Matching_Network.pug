@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_One-shot_Action_Localization_by_Learning_Sequence_Matching_Network
+  .paper-abstract
+    .title One-shot Action Localization by Learning Sequence Matching Network
+    .info
+      .authors H. Yang et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        ある長い動画中から指定した対象動画と同じActionを探してくるOne-shot Action Localizationの研究．
+        Matching Networkという手法がベースになっていて，それを動画のAction Localizationに応用．
+        基本的には動画をEncoding (Video Encoder) して，
+        類似度を計算 (Similarity Network) して，ラベリング (Labeling Network)．
+        長い方の動画はSliding Windowで分割 (Proposals) して，Proposalsと指定動画の間で類似度を計算．
+        Encoderは動画でよくやられるTwo-stream CNNとLSTMを利用．
+        学習はMeta Learningの形式で定式化され，End-to-Endで学習可能．
+  
+    .item2
+      img(src=figpath+"One-shot_Action_Localization_by_Learning_Sequence_Matching_Network.png",alt="One-shot_Action_Localization_by_Learning_Sequence_Matching_Network.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Deep時代になってからほとんどやられていなかったOne-shot Action Localization (Action search)
+          li ProposalsのEncoding，類似度計算，ラベリングと3つすべてが微分可能でEnd-to-Endで学習可能
+          li 普通のTemporal Action LocalizationのSOTA手法よりもOne-shotの設定では高い性能を実現
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://www.porikli.com/mysite/pdfs/porikli%202018%20-%20One-shot%20action%20localization%20by%20learning%20sequence%20matching%20network.pdf") 論文（著者ページ）
+          li やっている事自体は至って普通のアプローチに感じる
+          li End-to-End, Meta Learningと今風の形で実現できているのが評価されているのかな
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:00:18
+
+

@@ -1,0 +1,45 @@
+﻿+slide
+section#ID_Disentangling_Structure_and_Aesthetics_for_Style-aware_Image_Completion
+  .paper-abstract
+    .title Disentangling Structure and Aesthetics for Style-aware Image Completion
+    .info
+      .authors Andrew Gilbert, John Collomosse, Hailin Jin, and Brian Price
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p ノンパラメトリックのInapinting手法を提案．
+          br
+          |視覚的な構造とスタイルをdeep embeddingすることで，パッチの検索と選択の際に視覚的なスタイルを考慮することが可能で，さらに，パッチのコンテンツを補完画像のスタイルに合わせるためのneural stylizationが可能となる．この手法は，patch-basedの手法とgenerativeベースの手法の架け橋的な補完手法である．
+          br
+          |技術的貢献：
+          br
+          |・style-aware optimization
+          br
+          |・adaptive stylization
+    .item2
+      .text
+        p
+          img(src=`${figpath}Disentangling_Structure_and_Aesthetics_for_Style-aware_Image_Completion_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 手法
+        p 以下の手順で画像補完を行う．
+          br
+          |１．スタイルを考慮して穴に埋める候補を検索する
+          br
+          |２．補完画像と構造とスタイルが合うパッチをMRFで複数集め，選択する
+          br
+          |３．選択されたパッチを補完画像のスタイルに変換する
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://personal.ee.surrey.ac.uk/Personal/J.Collomosse/pubs/Gilbert-CVPR-2018.pdf") 論文pdf
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 11:09:50
+
+

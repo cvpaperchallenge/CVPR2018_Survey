@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Mobile_Video_Object_Detection_with_Temporally-Aware_Feature_Maps
+  .paper-abstract
+    .title Mobile Video Object Detection with Temporally-Aware Feature Maps
+    .info
+      .authors Mason Liu and Menglong Zhu
+      .conference CVPR2018
+      .paper_id 698
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p モバイルや組み込み機器上で低消費電力かつリアルタイムに動作する物体検出のオンラインモデル．Single-Shotベースの物体検出モデルとLSTMを組み合わせたモデルである．また，通常のLSTMよりも計算コストを大幅に削減できるBottleneck-LSTMを提案する．Bottleneck-LSTMは，NチャンネルのBottleneck特徴マップ（Bt）を計算してすべてのゲートの入力をBtに置き換える．これによるゲート内の計算が減る．LSTM自体をDeepな構成にしても標準LSTMより効率的な計算が可能である．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180606_Bottleneck-LSTM1.jpg`,alt="20180606_Bottleneck-LSTM1.jpg")
+          img(src=`${figpath}20180606_Bottleneck-LSTM2.jpg`,alt="20180606_Bottleneck-LSTM2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のVideo object detectionはフレームごとの検出に依存しているため，時間的情報を利用することができなかったが，本研究では検出器の速度を犠牲にせず時間的な情報を組み込んだ．ImageNet VID データセットでmobilenet-SSDよりも高精度（54.4mAP）に検出可能でありながら，モバイルCPU（Qualcomm Snapdragon 835, Xperia XZ Premiumなどに搭載）で15FPSの速さで検出できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Googleでのインターン成果とのこと．リアルタイム検出は時系列情報があれば精度がよくなるが，それを入れることで速度の低下が起きてしまうのでこの2点のトレードオフになっている？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.06368") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.6 12:06:05
+
+

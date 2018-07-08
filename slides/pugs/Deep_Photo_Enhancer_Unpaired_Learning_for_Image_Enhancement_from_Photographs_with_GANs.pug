@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Deep_Photo_Enhancer_Unpaired_Learning_for_Image_Enhancement_from_Photographs_with_GANs
+  .paper-abstract
+    .title Deep Photo Enhancer: Unpaired Learning for Image Enhancement from Photographs with GANs
+    .info
+      .authors Yu-Sheng Chen, Yu-Ching Wang, Man-Hsin Kao, Yung-Yu Chuang
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 学習ベースで画像のエンハンスメントを行う手法の提案．入力として「良い」写真のセットを使う．このセットに含まれる特色を持つように変換することが「エンハンスメント」に繋がると定義する．
+          |エンハンスメント問題をimage-to-imageの問題として扱い，提案手法は「良い」写真のセットの中で共通の特色を発見することを狙っている．普通の写真のドメインを「良い」写真のドメインに変換すれば良いとし，（CycleGANのような）２方向GANを以下の３つの工夫とともに利用する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Photo_Enhancer_Unpaired_Learning_for_Image_Enhancement_from_Photographs_with_GANs_fig.png`,alt="Image")
+    .item3
+      .text
+        h1 Contribution
+        ul
+          li global featureを使ったU-netの利用．これがシーンの状況，照明条件，対象のタイプの情報を捉える．
+          li WGANのためのadaptive weighting schemeを提案．収束を早める．
+          li individual batch normalization layersの利用．Generatorは入力データの分布により適応するようになる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Flickerのレタッチされた写真を利用するなどしている．
+          li Adobeがプロ写真家一人一人のレタッチ方法を再現するという機能を実装するのも近いかもしれない．
+          li ハイダイナミックレンジの写真にしたらエンハンスされていると思っている節がある．
+          li
+            a(href="https://www.csie.ntu.edu.tw/~cyy/publications/papers/Chen2018DPE.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.19 13:33:54
+
+

@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Improved_Lossy_Image_Compression_With_Priming_and_Spatially_Adaptive_Bit_Rates_for_Recurrent_Networks
+  .paper-abstract
+    .title Improved Lossy Image Compression With Priming and Spatially Adaptive Bit Rates for Recurrent Networks
+    .info
+      .authors Nick Johnston, Damien Vincent, David Minnen, Michele Covell, Saurabh Singh, Troy Chinen, Sung Jin Hwang, Joel Shor, George Toderici
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Recurrent/Convolutional Neural Networks（RNN/CNN）を用いた非可逆画像圧縮の手法を提案し、BPG(4:2:0), WebP, JPEG2000, JPEGよりも性能のよいものを提案した。3つの改善、(1)ニューラルネットにより空間的分散を効果的に捉えて情報量の劣化を防ぐ、(2)エントロピーコーディングの上に空間適応的ビット配置アルゴリズムを適用して効率的な画像圧縮とする、(3)SSIMによりピクセルごとの損失を計算して最適化することで圧縮数値を改善する、を加えて圧縮方法を提案。KodakやTecnickのカメラを用いてコーデックの評価を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180614SpatiallyAdaptiveBitRates.png`,alt="180614SpatiallyAdaptiveBitRates")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来の圧縮方法であるBPG(4:2:0), WebP, JPEG2000, JPEGなどよりも効率の良い圧縮方法を提案した。また、手法的にもCNN/RNNを応用し、さらに後処理として画質を改善するSpatially Adaptive Bit Rate (SABR)を提案したことが評価された。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p （数十年前からある問題という意味で）過去の問題と現在の手法が合わさって新規性を出している論文。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Johnston_Improved_Lossy_Image_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.14 08:27:59
+
+

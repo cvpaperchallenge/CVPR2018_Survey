@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_AMNet_Memorability_Estimation_with_Attention
+  .paper-abstract
+    .title AMNet: Memorability Estimation with Attention
+    .info
+      .authors Jiri Fajtl, Vasileios Argyriou, Dorothy Monekosso, Paolo Remagnino
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 画像中の記憶に残りやすい領域（Memorability）を可視化するネットワークであるAMNet（Attention and Memorability Network?）の提案。ResNet50による特徴表現、LSTMにより実装されたAttention構造の仕組みによりMemorabilityスコアを算出する。アノテーションは従来研究であるLaMem（下記リンク参照）に使用したデータセットであるSUN Memorability（同じく下記参照）を用いて学習を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180603AMNet.png`,alt="180603AMNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来法よりも精度が良かった（より人間の記憶の構造に近かった？）ことを示した。これはアテンション構造を用いていることが、より人間の記憶の仕組みにおいて再現性が良かったことを示しているといえる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 記憶の仕組みも人間の直感が必要な高次機能の再現である。このように高次なラベリングが今後は増えてくると思うし、人間のタスクをカバーする意味でも重要になるか？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.03115") 論文
+          li
+            a(href="https://github.com/ok1zjf/AMNet") GitHub
+          li
+            a(href="http://memorability.csail.mit.edu/download.html") LaMem
+          li
+            a(href="http://web.mit.edu/phillipi/Public/WhatMakesAnImageMemorable/") SUN Memorability
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.3 23:48:57
+
+

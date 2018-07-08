@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Camera_Style_Adaptation_for_Person_Re-identification
+  .paper-abstract
+    .title Camera Style Adaptation for Person Re-identification
+    .info
+      .authors Zhun Zhong, Liang Zheng, Zhedong Zheng, Shaozi Li, Yi Yang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Person Re-ID（人物再同定）は異なるカメラ間で同一人物を対応づける問題設定であり、画像の質や形式が異なるため非常に困難である。本論文ではカメラ間のスタイル変換を行うことでカメラに依存せず安定して認識できる特徴抽出（camera-invariant descriptor subspace）を行い、人物再同定の問題を高度に解決することを目的とする。この問題に対してCycleGANを適用することでカメラ間の特徴変換を捉えた上で、データ拡張を行う。存在するノイズへの対策として有効と思われる正則化:Label Smooth Regularization (LSR)を適用する。LSRを使用する場合では学習データに対するオーバーフィッティングが見られず、有効な手法であることが判明した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180515CamStyleTransferREID.png`,alt="180515CamStyleTransferREID")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p CycleGANによるカメラ間のスタイル変換を実現してデータ拡張、LSRによりノイズへの対応を行いオーバーフィッティングを回避していることが新規性である。また、人物再同定においてその高い精度（Market-1501のrank-1にて89.49%、DukeMTMC-reIDのrank-1にて78.32%）を実現している。さらに、LSRを用いることでベースラインからの精度向上が見られる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p CycleGANが学習データを増やすという意味でも取り上げられている。例えば東大井上氏の論文もCycleGANを用いてデータ拡張を行い、スタイルの異なる画像に変換することでデータアノテーションの労力を削減している。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.10295") 論文
+          li
+            a(href="https://github.com/zhunzhong07/CamStyle") Project
+          li
+            a(href="http://zhunzhong.site/") 著者
+          li
+            a(href="https://github.com/junyanz/CycleGAN") CycleGAN
+          li
+            a(href="https://naoto0804.github.io/cross_domain_detection/") 東大井上氏論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.15 11:50:25
+
+

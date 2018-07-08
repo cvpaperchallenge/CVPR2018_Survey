@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_PoseTrack_A_Benchmark_for_Human_Pose_Estimation_and_Tracking
+  .paper-abstract
+    .title PoseTrack: A Benchmark for Human Pose Estimation and Tracking
+    .info
+      .authors Mykhaylo Andriluka, Umar Iqbal, Eldar Insafutdinov, Leonid Pishchulin, Anton Milan, Juergen Gall, Bernt Schiele
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 動画シーケンスにおいて2D姿勢推定のベンチマークを提供する。本論文で提案するベンチマークでは特に、人物の重なりを含む混雑シーン、密なアノテーションを提供する。さらに右の画像で示すようにドメイン依存していない多様な（diverse）シーンを捉えつつ姿勢アノテーション数でも有数、1画像に対する複数人物/ビデオに対するラベルづけにも対応している。トータルでは23,000画像に対して153,615人の姿勢アノテーションを行なった。チャレンジとしては単一フレームに対する姿勢推定（single-frame pose estimation）、ビデオに対する姿勢推定（pose estimation in videos）、姿勢トラッキング（pose tracking）を提供し、評価用サーバも提供する。同DBに対するベンチマーキングではOpenPoseにも導入されているPAFを改良したML-LAB（引用52）がトップ（70.3@mAP）、Mask R-CNNをベースにしたProTracker（引用11）は64.1@mAPであった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180515PoseTrackBenchmark.png`,alt="180515PoseTrackBenchmark")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 大規模かつ静止画ではなく動画に対する人物姿勢データセットを構築し、さらには評価サーバを提供、さらに最先端手法に関するベンチマーキングを行なっていることが新規性およびCVPRに通った理由であると考える。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データセットの比較図に多様なドメインから収集（diverse）と書かれているが、これらをすべて統合すると相当な量のデータになるのでは？（だれかやってそう）もしくはドメインを合わせれば学習の効果がありそう。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1710.10000") 論文
+          li
+            a(href="www.posetrack.net") Project
+          li
+            a(href="https://scholar.google.com/citations?hl=ja&user=6rl-XhwAAAAJ&view_op=list_works&sortby=pubdate") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.15 12:16:20
+
+

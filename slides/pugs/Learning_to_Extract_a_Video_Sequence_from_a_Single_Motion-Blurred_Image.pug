@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Learning_to_Extract_a_Video_Sequence_from_a_Single_Motion-Blurred_Image
+  .paper-abstract
+    .title Learning to Extract a Video Sequence from a Single Motion-Blurred Image
+    .info
+      .authors Meiguang Jin, Givi Meishvili, Paolo Favaro
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p １枚のブラー画像から時系列フレームを推定して動画像を生成するアプローチを提案。モーションブラーは通常、カメラなどセンサによる露光により発生するが、その分解は非常に困難な問題として扱われていた。本論文では平均化を除去してフレームを時系列方向に並べ、次にDeconvolutionを復元して同問題に取り組む（この問題は通常、Blind Deconvolutionと言われる）。提案法では、深層学習の手法としてこの両者を実現する構造を構築。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180527SingleMotionBlurredImage.png`,alt="180527SingleMotionBlurredImage")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Blind Deconvolutionの課題を取り扱っているが、さらにここでは単一のブラー画像から動画像を生成するアルゴリズムや深層学習アーキテクチャを提案した。特に、ブラー画像から時系列画像を順次復元するための誤差関数を提案したことが最も大きな新規性である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p もともとあった問題に少し味付けして、新しい問題を作り出すセンスが欲しい。。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.04065.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.27 23:44:14
+
+

@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_Hand_PointNet_3D_Hand_Pose_Estimation_using_Point_Sets
+  .paper-abstract
+    .title Hand PointNet: 3D Hand Pose Estimation using Point Sets
+    .info
+      .authors Liuhao Ge, et al.
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 正規化されたポイントクラウドを入力として、複雑な手構造を捕捉し、手の姿勢の低次元表現を正確に回帰させることができるHand PointNetの提案。Oriented Bboxでポイントクラウドを正規化し、ネットワーク入力をよりロバストにする。その後、階層的なPointNetに入力し特徴抽出。PointNetを細分化することにより、指先に対する推定精度を向上させる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180610HandPointNet.jpg`,alt="20180610HandPointNet.jpg")
+    .item3
+      .text
+        h1 新規性
+        p CNNを用いた従来の奥行き画像における3次元手姿勢推定手法とは異なり、本研究では三次元点群に着目している。データは、奥行き画像をポイントクラウドデータに変換してから使用している。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 3つのハンドポーズデータセットにて実験し、リアルタイム性に優れていることを示唆。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ge_Hand_PointNet_3D_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

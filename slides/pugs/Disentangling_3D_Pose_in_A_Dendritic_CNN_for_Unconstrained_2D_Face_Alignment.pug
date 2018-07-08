@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Disentangling_3D_Pose_in_A_Dendritic_CNN_for_Unconstrained_2D_Face_Alignment
+  .paper-abstract
+    .title Disentangling 3D Pose in A Dendritic CNN for Unconstrained 2D Face Alignment
+    .info
+      .authors Amit Kumar, Rama Chellappa
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔向きをコンディションとして与え木構造で表された顔のランドマークを学習させることで、
+          |顔のランドマーク推定を行うPose Conditioned Dendritic CNN(PCD-CNN)を提案。
+          |顔のコンディションはPoseNetにより出力された値を使用する。
+          |顔のランドマークを木構造として与えることで、ランドマークの位置関係を利用してCNNを学習させた。
+          |また提案ネットワークはPCD-CNNと通常のCNNの二段階になっており、
+          |後段のCNNをファインチューニングすることでランドマークのポイント数が違うデータセットや顔向き推定などの他のタスクにも適用可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Disentangling_3D_Pose_in_A_Dendritic_CNN_for_Unconstrained_2D_Face_Alignment.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ネットワークをPCD-CNNとCNNの二段階で構成することで、
+             |異なるランドマークのポイント数や顔向き推定といった他のタスクにも適用可能。
+          li 顔向きをコンディションとして与えることで推定精度が向上。また、20FPSで実行が可能。　
+          li AFLW, AFWデータセットにおいてランドマークの推定精度がstate-of-the-artよりも高い推定精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.06713") 論文
+    .slide_index #{getSlideIndex()}
+
+

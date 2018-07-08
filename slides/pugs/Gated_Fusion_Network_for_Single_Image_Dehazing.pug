@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Gated_Fusion_Network_for_Single_Image_Dehazing
+  .paper-abstract
+    .title Gated Fusion Network for Single Image Dehazing
+    .info
+      .authors Wenqi Ren Lin Ma, Jiawei Zhang, Jinshan Pan, Xiaochun Cao, Wei Liu, Ming-Hsuan Yang
+      .conference CVPR2018
+      .paper_id 404
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p 霧がかかった画像(hazy input)から更に３つの入力，White balanced input，Contrast enhanced input，Gamma corrected inputを計算して導出し，これらの異なる入力間の外観差に基づきピクセル単位のConfidence Mapを計算する．これらを学習することで鮮明な画像を生成するMulti-scale Gated Fusion Network(GFN)を開発した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180404GFN_result.png`,alt="Item3Image")
+          img(src=`${figpath}180404GFN_network.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法と比較し，実装や再現が容易であり，また出力結果もPSNR，SSIMともに従来手法より高い評価となっている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00213") arXiv
+          li
+            a(href="https://sites.google.com/site/renwenqi888/research/dehazing/gfn") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.14 12:31:27
+
+

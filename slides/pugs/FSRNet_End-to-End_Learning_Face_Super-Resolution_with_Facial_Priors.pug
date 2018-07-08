@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_FSRNet_End-to-End_Learning_Face_Super-Resolution_with_Facial_Priors
+  .paper-abstract
+    .title FSRNet: End-to-End Learning Face Super-Resolution with Facial Priors
+    .info
+      .authors Yu Chen, Ying Tai, Xiaoming Liu, Chunhua Shen, Jian Yang
+      .conference CVPR 2018 Spotlight
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔の超解像度化を学習させる際にランドマーク、パーツの位置推定を同時に行うネットワーク(FSR Net)を提案した研究。
+          |同ネットワークをベースにFSR GANも提案。
+          |また生成された高解像度画像に対する評価尺度として生成画像とGTにおけるランドマークのNRMSE、顔パーツに対するセマンティックセグメンテーション画像(parsing)に対するPSNR、SSIM、MSEを提案。
+          |GANベースの手法では高精細な画像が生成されるがPSNR、SSIMが低くなり、MSEをロスとしたネットワークではPSNR、SSIMは高いがボケた画像になってしまう、というジレンマから上記の評価尺度を導入。
+    .item2
+      .text
+        p
+          img(src=`${figpath}FSRNet_End-to-End_Learning_Face_Super-Resolution_with_Facial_Priors.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 入力画像は16x16の様々な顔むきの画像、出力は128x128に超解像度化された画像。
+          li state-of-the-artの手法よりもSSIM、PSNRが高く、また新たな評価尺度として提案したランドマーク、face parsingの位置推定も既存手法よりも高い精度となった。
+          li 新たに提案した評価指標自体の妥当性は、FSR GANとFSR Netを比べた際に、FSR Netの方がボケた画像を生成したにも関わらずSSIM、PSNRが高く、一方でFSR GANの方がランドマーク、face parsingの推定精度が高かったことを根拠に主張している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 比較画像において既存手法の画像があまりにもボケているため、既存手法のコントリビューションを確かめるという意味でも調査が必要と感じた。
+          li
+            a(href="https://arxiv.org/abs/1711.10703") 論文
+          li
+            a(href="https://github.com/tyshiwo/FSRNet") GitHub
+    .slide_index #{getSlideIndex()}
+
+

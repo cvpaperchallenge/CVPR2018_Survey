@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Image-Image_Domain_Adaptation_with_Preserved_Self-Similarity_and_Domain_Dissimilarity_for_Person_Re-identification
+  .paper-abstract
+    .title Image-Image Domain Adaptation with Preserved Self-Similarity and Domain-Dissimilarity for Person Re-identification
+    .info
+      .authors Weijian Deng, Univ. of Chinese Academy; Liang Zheng, Qixiang Ye, Guoliang Kang, Yi Yang, Jianbin Jiao
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 人物認証(person re-ID)の精度が落ちないようにソースドメインの人物画像をターゲットドメインの画像に変換する
+          |Similarity Preserving GAN(SPGAN)を提案。ドメイン間の変換をCycleGANで行う。
+          |またそれぞれのperson re-IDのデータセットには基本的に同じ人物は写っていないということを利用して、
+          |ソースドメインとターゲットドメインで異なるデータセットを使用し、
+          |ターゲットドメインへと変換された画像はIDが保たれ、かつターゲットドメインのどの人物のIDとも一致しないように学習を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Image-Image_Domain_Adaptation_with_Preserved_Self-Similarity_and_Domain_Dissimilarity_for_Person_Re-identification.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li person re-IDデータセットの特徴を生かしドメイン変換された画像はターゲットドメインの人物画像とは一致せず、
+             |かつ元々のIDを生かすように学習を行い、ドメイン間で人物画像の変換を行うSPGANを提案。
+          li Market-1501、Duke-MTMC-reIDデータセットで検証を行い、
+             |一方のデータセットの人物画像をもう一方のドメイン画像に変換した際に正しくre-IDができるのかを検証した。
+          li ベースラインであるCycleGANや教師なし学習のstate-of-the-artと比較して最も高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li person re-IDのタスクの中でもソースドメインの人物がターゲットドメインに存在する場合にも発見する、というタスクを解いている。
+          li ソースドメインとターゲットドメインに含まれるIDが全く違う、ということを逆手にとった手法。
+          li
+            a(href="https://arxiv.org/abs/1711.07027") 論文
+    .slide_index #{getSlideIndex()}
+
+

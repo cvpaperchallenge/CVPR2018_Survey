@@ -1,0 +1,46 @@
+﻿+slide
+section#ID_Edit_Probability_for_Scene_Text_Recognition
+  .paper-abstract
+    .title Edit Probability for Scene Text Recognition
+    .info
+      .authors F. Bai, Z. Cheng, Y. Niu, S. Pu and S. Zhou
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p OCRのstate-of-the-artな手法として，encoder-decoderで文字カテゴリごとのAttentionを取ってから
+          |テキスト認識をするvisual attentionベーステキスト認識があるが，
+          |ある文字がよく見えなかったり1文字でも複数ピークが出てしまったりする問題はある．
+          |GTとの差を取るとして，エンコード後の文字列で比較する
+          a(href="https://ja.wikipedia.org/wiki/%E3%83%AC%E3%83%BC%E3%83%99%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%E8%B7%9D%E9%9B%A2") 編集距離
+          |を取ることが考えらえるが，
+          |本稿ではVAで出る尤度分布で比較する，編集確率（Edit Probablity）を提案する．
+          |これにより，字抜けや余分な字を拾ってしまうような誤認識に強い文字認識を実現可能．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Edit_Probability_for_Scene_Text_Recognition_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Attentionベーステキスト認識においてstate-of-the-artな性能．
+          li まさに正統進化といえる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 正統進化を，他のラボが，1年未満に行ってしまっているあたり，CV分野の流れの早さがうかがえる．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.03384") arXiv
+          li
+            a(href="https://arxiv.org/abs/1706.01487") Visual attention models for scene text recognition
+            |（
+            strong ICDAR2017
+            |）
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.10 18:29:27
+
+

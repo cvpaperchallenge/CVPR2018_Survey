@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Guide_Me_Interacting_with_Deep_Networks
+  .paper-abstract
+    .title Guide Me: Interacting with Deep Networks
+    .info
+      .authors Christian Rupprecht, Iro Laina, Nassir Navab, Gregory D. Hager and Federico Tombari
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p CNNにより学習したタスクの出力結果に対して、人間がヒント(例：画像中に空は見えない)を与えていくことで精度向上を図る研究。
+          |CNNモデルをheadとtailの2つのパートに分割し、headから得られた特徴マップをヒントによって修正していくことで精度の向上を実現する。
+          |その際、ネットワークの重みを更新するのではなく修正に用いるパラメータを言語情報から推測することで行う。
+          |ネットワークの予測結果とground truthの差分を取り、正しく予測できていない物体の種類や位置を推定することで学習に用いる文章は自動で生成する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Guide_Me_Interacting_with_Deep_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p セマンティックセグメンテーションにより実験を実施したところ、クラス間違い、物体の一部が欠けている、物体の一部のみが見えるといったケースにおいて精度が向上することを確認した。
+          |ヒントを繰り返し与えていくことはノイズとなってしまうためあまり精度が向上しなかった。
+          |従来のディープラーニングは一度学習をしてしまうと得られる出力が固定されてしまうのに対して、人間が介入することで結果を変えるという新しい応用方法を提案している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.11544") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.21 16:15:43
+
+

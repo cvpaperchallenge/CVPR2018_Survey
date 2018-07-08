@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Disentangling_Features_in_3D_Face_Shapes_for_Joint_Face_Reconstruction_and_Recognition
+  .paper-abstract
+    .title Disentangling Features in 3D Face Shapes for Joint Face Reconstruction and Recognition
+    .info
+      .authors Feng Liu, Ronghang Zhu, Dan Zeng, Qijun Zhao, Xiaoming Liu
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔画像からshapeの三次元復元を行う際に、画像から個人性(顔の形など)を反映した3Dモデルと、
+          |個人性以外(表情など)を反映した3Dモデルをencoderで別々に生成しdecoderで三次元復元を行う手法を提案。
+          |生成された顔のshapeは三次元復元におけるstate-of-the-artよりも高い精度を達成し、
+          |また生成されたshapeによる顔認証においても多くの既存手法より高い精度を達成した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Disentangling_Features_in_3D_Face_Shapes_for_Joint_Face_Reconstruction_and_Recognition.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来の三次元復元の手法では顔のディティールは再現するものの、アラインメントなどの個人性の再現が完全ではなかった。
+             |提案手法では個人性を反映したモデルとそうでないモデルを分離して学習させることで、この問題を解決した。
+          li 様々なデータセットにおいて、生成された顔の3D shapeはstate-of-the-artに比べて最も低いaccuracyを達成。
+          li 生成された3D shapeにおけるランドマークなどのaccuracyにおいてももっとも低い値を獲得。
+          li 生成された3D shapeによる個人認証においても、多くの既存手法よリも高い精度となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li disentangleのファクターとして個人性を選んだのはあくまで人間であって、
+             |今後の発展ではもっと優秀なファクターを深層学習が導き出してくれるかもしれない。
+          li
+            a(href="https://arxiv.org/abs/1803.11366") 論文
+    .slide_index #{getSlideIndex()}
+
+

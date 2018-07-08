@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_SeGAN_Segmenting_and_Generating_the_Invisible
+  .paper-abstract
+    .title SeGAN: Segmenting and Generating the Invisible
+    .info
+      .authors Kiana Ehsani, Roozbeh Mottaghi and Ali Farhadi
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p オクルードされている物体の全体像を推定するため、SeGANを提案。SeGANは物体の見えていない領域のセグメントを生成することができる。また、occluderとoccludeeの関係も推定することができる。さらにSeNetはcategory-agnosticでありカテゴリー情報を必要としない。
+          |データセットにはDYCEを使用。
+    .item2
+      .text
+        p
+          img(src=`${figpath}1703.10239_img2.png`,alt="1703.10239_img2.png")
+          img(src=`${figpath}1703.10239_img3.png`,alt="1703.10239_img3.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 右図に示すように、他のセグメントベースラインと比べ、SeGANが見える領域、見えない領域、それらの組み合わせの全てにおいて最も良い結果を出した。
+          |ここで、SUは見える領域のセグメント、SIは見えない領域のセグメント、SFは全体像のセグメントを表している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1703.10239.pdf") 論文URL
+          li
+            a(href="https://github.com/ehsanik/SeGAN") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 15:42:10
+
+
+

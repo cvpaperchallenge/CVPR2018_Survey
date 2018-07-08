@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_CosFace_Large_Margin_Cosine_Loss_for_Deep_Face_Recogntion
+  .paper-abstract
+    .title CosFace: Large Margin Cosine Loss for Deep Face Recognition
+    .info
+      .authors Syed Zulqarnain Gilani, Ajamal Mian
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔認識のための新たなロス関数としてソフトマックス関数をベースとしたLarge Margin Cosine Loss(LMCL)を提案した研究。
+          |LMCLはソフトマックス関数の指数部分を重みベクトルWと特徴量ベクトルxの内積においてWとxのノルムを1とし、定数mを引いた関数。
+          |認識タスクでは異なるクラスタ間の距離を遠く、同じクラスタ間の距離を近くする、という基本的な考えがある。
+          |LMCLはこの考えを元に上記のようにL2正則化を施すことで、Wとxのノルムに左右されることなくWとxの角度空間においてクラスタの分離を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}CosFace_Large_Margin_Cosine_Loss_for_Deep_Face_Recogntion.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ソフトマックス関数において重みベクトルの大きさ、入力特徴量のノルムを除外することで、cosの影響を最大限に大きくしWとxの角度空間におけるマージンの最大化を提案。
+          li face identification(この人はAさんであるか？)、face verification(この人は女性であるか？)の多くのタスクにおいて,
+             |ソフトマックス関数由来のロス関数、state-of-the-artの手法よりも良い精度となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 汎用的な認識タスクに使用できそうだが、顔認識に限定したのはデータセットや既存研究との比較のため？
+          li
+            a(href="https://arxiv.org/abs/1801.09414") 論文
+    .slide_index #{getSlideIndex()}
+
+

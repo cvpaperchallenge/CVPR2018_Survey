@@ -1,0 +1,48 @@
+﻿+slide
+section#ID_Duplex_Generative_Adversarial_Network_for_Unsupervised_Domain_Adaptation
+  .paper-abstract
+    .title Duplex Generative Adversarial Network for Unsupervised Domain Adaptation
+    .info
+      .authors Lanqing Hu, Meina Kan, Shiguang Shan, Xilin Chen
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 同一カテゴリのdomain間におけるadaptation, transferをラベル識別と2つのdiscriminatorを用いるネットワークDupGANを提案。
+          |target domainにはラベルがない状況である教師なし学習を対象としている。
+          |DupGANはencoderでそれぞれのドメインの潜在変数をエンコードし、generatorでデコードを行い、
+          |2つのdiscriminatorでそれぞれのドメインに対してfake/realとラベルの認識を行う。
+          |結果はdomain transferされた数字画像のラベル認識・生成結果、物体認識の精度において比較を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Duplex_Generative_Adversarial_Network_for_Unsupervised_Domain_Adaptation.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ラベル認識と2つのdiscriminatorによってdomain adaptaion/transferをおこなうDupGANを提案。
+          li 既存手法である
+             a(href="http://jmlr.org/papers/volume17/15-239/15-239.pdf") DANN
+             |、
+             a(href="https://arxiv.org/abs/1702.05464") ADDA
+             |はadversarial lossを使用してtarget→source のマッピングを行うが、
+             |これらの手法ではマッピングされたtarget domainの分布が歪んでいないことは保証できない。
+             |一方DupGANではラベルの認識を行わせることでカテゴリ構造を保つことができる。また提案手法では画像の生成も可能である。
+          li state-of-the-artと比較して、数字画像データセットであるMNIST、USPS、SVHN、
+             |SVHN-extraそれぞれのデータセット間におけるdomain transferに対するラベル認識の結果、
+             |最も高い精度を達成。またdomain transferによる画像も生成することが可能。
+          li 31種類のラベル、3つのドメインを持つOffice-31データセットにおける物体認識結果がstate-of-the-artよりも高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li クラシフィケーション生成された画像ではなくはエンコードされた潜在変数に対して行われている。
+          li 画像の生成力はそこまで高くなく、実際Office31に対する画像生成は難しかったと主張している。
+          li
+            a(href="http://vipl.ict.ac.cn/uploadfile/upload/2018041610083083.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

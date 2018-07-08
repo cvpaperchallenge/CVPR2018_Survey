@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_Imagine_it_for_me_Generative_Adversarial_Approach_for_Zero-Shot_Learning_from_Noisy_Texts
+  .paper-abstract
+    .title Imagine it for me: Generative Adversarial Approach for Zero-Shot Learning from Noisy Texts
+    .info
+      .authors Yizhe Zhu, Mohamed Elhoseiny, Bingchen Liu, and Ahmed Elgammal
+      .conference CVPR2018
+    .slide_editor: a(href="https://twitter.com/akmtn_twi") Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p Wikipediaのようにノイズの多いテキストからzero-shot learningを行うためのGAN用いる方法を提案．GANを使ってテキストが表現するオブジェクトのビジュアル的な特徴を生成する．オブジェクトのクラスごとに特徴を近い位置にembeddingできれば良い．これができれば後は教師あり手法で分類を行えることになる.
+          br
+          |コントリビューション：
+        ul
+          li zero-shot learningにおいてUnseenであるクラスのテキスト記述からvisual featureを生成することで，zero-shot learningを従来の分類問題にしてしまう．generative adversarial approach for ZSL (GAZSL) ．
+          li ノイズを抑制するためのFC層と埋め込み後のクラス識別性を高めるvisual pivot regularizationの提案．
+          li zero-shot recognition, generalized zero-shot learning, and zero-shot retrievalという複数のタスクでstate-of-the-art手法を超えた．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Imagine_it_for_me_Generative_Adversarial_Approach_for_Zero-Shot_Learning_from_Noisy_Texts_fig.png`,alt="Image")
+        p 左上段がFakeデータを作るストリーム．左下段がRealデータを作るストリーム．
+    .item3
+      .text
+        h1 手法
+        p Unseenクラスについてのノイズを含むテキスト記述を入力とし，このクラスのvisual featureを生成するGANを提案．テキストから生成されるvisual featureをFakeデータとし，真の画像から得られるvisual featureをRealデータとしてGANを学習．
+        ul
+          li テキストのembedding後，FC層で次元圧縮をし，ノイズの影響を軽減．
+          li 生成された特徴のクラス間の識別性を保存するために, visual pivot regularizationを利用．Generatorの更新に利用．
+          li Realデータとして真の画像からvisual feature得る際にはVGGを利用．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.01381") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.19 13:28:25
+
+

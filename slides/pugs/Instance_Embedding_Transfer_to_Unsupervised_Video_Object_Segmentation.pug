@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Instance_Embedding_Transfer_to_Unsupervised_Video_Object_Segmentation
+  .paper-abstract
+    .title Instance Embedding Transfer to Unsupervised Video Object Segmentation
+    .info
+      .authors Siyang Li, Bryan Seybold, Alexey Vorobyov, Alireza Fathi, Qin Huang, C.-C. Jay Kuo
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 物体インスタンス特有の特徴（同じ物体領域に属しているか？）を捉えることでビデオに対する教師なしの物体セグメンテーションを実施する。ここでは静止画で捉えた特徴を、ビデオに表れる物体候補/オプティカルフローと組み合わせて物体のインスタンスセグメンテーションを実施。本論文ではさらに、ビデオに対するfine-tuningなしに高精度なセグメンテーション手法を構築したと主張している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180605InstanceEmbeddingTransfer.png`,alt="180605InstanceEmbeddingTransfer")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 静止画の学習パラメータを動画に適用していく、その際に物体候補/オプティカルフローと統合していくことで動画的な表現を教師なしで獲得していく。DAVIS datasetを用いた評価で78.5%、FBMS datasetにて71.9%（いずれもmean Intersection-over-Union (mIoU)の評価にて）を達成し、それぞれのデータセットでState-of-the-art。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p "Without finetuning"というのもアピールになるということを勉強した（ただしそれでstate-of-the-artである必要がある？）。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.00908") 論文
+          li
+            a(href="https://github.com/philferriere/tfvos") GitHub(Semi-Supervised Object Segmentation)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.5 08:58:32
+
+

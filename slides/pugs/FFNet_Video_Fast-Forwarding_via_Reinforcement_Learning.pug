@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_FFNet_Video_Fast-Forwarding_via_Reinforcement_Learning
+  .paper-abstract
+    .title FFNet: Video Fast-Forwarding via Reinforcement Learning
+    .info
+      .authors Shuyue Lan et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Video Fast-forwarding のタスクを MDP(Markov Decision Process) として定式化し, 強化学習を用いて解く方法を提案. 評価実験では精度と効率の両方に置いて先行研究よりも優れた結果を示した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-FFNet-Video-Fast-Forwarding-via-Reinforcement-Learning.png`,alt="fukuhara-FFNet-Video-Fast-Forwarding-via-Reinforcement-Learning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Video Fast-forwarding を MDP (Markov Decision Process) として定式化した.
+          li 現在の Frame の特徴量を状態, スキップする Frame 数を行動として, Q-learningで強化学習を行う. 
+          li 報酬はスキップした Frame の中に重要なものがどの程度含まれていたかに基づいて計算される.
+          li Tour20 や TVSum dataset を用いた先行研究との比較実験では, 主観評価と定量的評価の両方に置いて最も良い結果となった.(6-20%程度、重要なframeを含んでいる割合が増加)
+          li 先行研究と比較して80%近く処理するフレーム数を削減し, 効率化することに成功した.
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://vcg.engr.ucr.edu/publications/Shuyue_CVPR.pdf" target="blank") [論文] FFNet: Video Fast-Forwarding via Reinforcement Learning
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 17:25:55
+
+

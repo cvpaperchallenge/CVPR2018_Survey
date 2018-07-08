@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Learning_Rich_Features_for_Image_Manipulation_Detection
+  .paper-abstract
+    .title Learning Rich Features for Image Manipulation Detection
+    .info
+      .authors P. Zhou, X. Han, V.I. Morariu and L.S. Davis
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 画像修正検出．修正箇所をちゃんと注目すべきで，リッチな特徴の学習が必要．
+          |修正後画像から修正領域を検出するtwo-stream Faster R-CNNを提案．
+          |RGB stream：コントラスト差，不自然境界とかを捉える．Noise stream：ノイズの非一貫性を捉える．
+          a(href="https://ieeexplore.ieee.org/document/6197267/") Steganalysis Rich Model
+          |でとれたノイズ特徴に基づく．
+          |そして，両者のバイリニアプーリングで共起性を捉える．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Rich_Features_for_Image_Manipulation_Detection.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 修正箇所のノイズ感の差を見るアイデアは昔にあったが，それを導入したという温故知新．
+          li 実験によりリサイズや圧縮に対するロバスト性におけるSOTAを確認．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.04953") arXiv
+          li
+            a(href="http://www.cosy.sbg.ac.at/~uhl/mmsec/LukFriSPIE06_v9.pdf") 過去のノイズ感の差を使った画像加工領域検出の例
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 15:16:28
+
+

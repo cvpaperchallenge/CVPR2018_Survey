@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_ST-GAN_Spatial_Transformer_Generative_Adversarial_Networks_for_Image_Compositing
+  .paper-abstract
+    .title ST-GAN: Spatial Transformer Generative Adversarial Networks for Image Compositing
+    .info
+      .authors C. Lin, E. Yumer, O. Wang, E. Shechtman and S. Lucey
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 画像合成の際に，背景に対して位置やサイズ感などが正しくなるように幾何的変換を求め，修正を加えてくれるGANを提案．
+          |たとえば，家具が適切な場所に置かれたり，メガネが適切に掛けられたりする．
+        p 構造的には複数のSpatial Transformer Networkをジェネレータとして組み込んでいることが特徴．
+          |複数のSTNにおける，反復
+          a(href="https://en.wikipedia.org/wiki/Image_warping") 画像ワーピング
+          |（画像変形方法の一つ）と逐次学習を導入している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}ST-GAN_Spatial_Transformer_Generative_Adversarial_Networks_for_Image_Compositing_Figure1.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像変換が得られるので，間接的に高解像度画像に適用可能
+          li ナイーブな単ジェネレータよりも高性能．
+          li 大きな差には弱い．奇抜なデザインのものや，大きな移動
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.01837") arXiv
+          li
+            a(href="https://chenhsuanlin.bitbucket.io/spatial-transformer-GAN/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.10 12:27:25
+
+

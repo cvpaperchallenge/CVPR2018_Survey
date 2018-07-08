@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_Dynamic_Feature_Learning_for_Partial_Face_Recognition
+  .paper-abstract
+    .title Dynamic Feature Learning for Partial Face Recognition
+    .info
+      .authors Lingxiao He, Haiqing Li, Qi Zhang, Zhenan Sun
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p マスクなどから見えている顔領域のみを検出するPartial face recognition(PFR)をFCNで高速かつ高精度に行う手法を提案。
+          |トレーニング時には顔全体と顔が見えているパッチのそれぞれに対してパラメタを共有したFCNをで特徴量マップを適用し、
+          |パッチ領域から得られる特徴量マップと同サイズのマップを顔全体からえられた特徴量マップからスライディングウィンドウによって複数個切り出し、
+          |パッチから得られた特徴量マップとの比較を行う。
+          |この比較のことをDynamic Feature Matching(DFM)と読んでいる。
+          |DFMを行う際の工夫として、パッチから得られた特徴量マップを顔全体から得られた特徴量ウィンドウの線形和で表す際の重み、
+          |パッチから得られた特徴量マップと特に類似している特徴量ウィンドウに対する重みの学習を行っている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Dynamic_Feature_Learning_for_Partial_Face_Recognition.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li PFMを行う際に顔全体から得られた特徴量マップを切り出した複数の特徴量ウィンドウと顔パッチ部分から得られた、
+             |特徴量ウィンドウと同サイズの特徴量マップを比較するDFMを行う手法を提案。
+          li 既存手法であるMR-CNNの20倍の速度で実行可能。
+          li CASIA-WebFace 1万枚を用いて学習。LFWなどのデータセットでテストを行う。face recognition, verificationにおいてSoTA。
+          li 切り取るサイズや、パラメタに対する考察も行っている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li FCNを用いることで任意のサイズの入力を扱えることに着目したことが根幹となるアイディア。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/He_Dynamic_Feature_Learning_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

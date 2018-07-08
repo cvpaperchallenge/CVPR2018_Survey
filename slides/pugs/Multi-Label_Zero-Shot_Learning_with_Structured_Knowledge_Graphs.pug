@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Multi-Label_Zero-Shot_Learning_with_Structured_Knowledge_Graphs
+  .paper-abstract
+    .title Multi-Label Zero-Shot Learning with Structured Knowledge Graphs
+    .info
+      .authors Chung-Wei Lee, Wei Fang, Chih-Kuan Yeh, Yu-Chiang Frank Wang
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p この論文は,各々の入力インスタンスに対して,複数の見えないクラスラベルを予測できる
+          |multi-label learning及びmulti-label zero-shot learning(ML-ZSL)の新しい深層学習の提案した研究．
+          |提案手法は複数のラベル間で人間が関心を持つsemantic knowledgeをグラフの中に組み込むことにより,
+          |情報伝播メカニズムを学習し見えているクラスと見えないクラスの間の相互依存関係をモデル化することに適用できる．
+          |本手法はstate-of-the-artと比較して,同等または改善されたパフォーマンスとして達成をすることができる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}171106526.png`,alt="171106526")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・見た目だけでなく,経験を通して学んだ知識を使って物体を認識
+          |・WordNetから観察された知識グラフをend-to-endの学習フレームワークに組み込み,意味空間に電番されるラベル表現と情報を学習
+          |・NUS-81およびMS-COCOの結果をWSABIE,WARP,Fast0Tag,Logisticsと比べたところ精度について一番高い結果を残した．
+          |・ML-ZSLについてもFast0Tagと比べて高い精度を残している．
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.06526") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.22 14:28:22
+
+

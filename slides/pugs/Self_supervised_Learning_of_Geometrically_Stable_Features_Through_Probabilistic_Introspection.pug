@@ -1,5 +1,5 @@
 ﻿+slide
-section#Self_supervised_Learning_of_Geometrically_Stable_Features_Through_Probabilistic_Introspection
+section#ID_Self_supervised_Learning_of_Geometrically_Stable_Features_Through_Probabilistic_Introspection
   .paper-abstract
     .title Self-supervised Learning of Geometrically Stable Features Through Probabilistic Introspection
     .info
@@ -18,17 +18,15 @@ section#Self_supervised_Learning_of_Geometrically_Stable_Features_Through_Probab
     .item3
       .text
         h1 手法・新規性
-        p 
-          |ペアとなる画像を同じNNに入力し、各pixel ペアの類似度と、不確実性を表す値を算出。不確実性を考慮した損失関数を定義することで、結果的にNNはマッチング可能かつ対応するpixelに関しては高い類似度と低い不確実性を、マッチングが困難なものに関しては高い不確実性を算出するように学習される。
-          |
-          |
-  
+        p ペアとなる画像を同じNNに入力し、各pixel ペアの類似度と、不確実性を表す値を算出。不確実性を考慮した損失関数を定義することで、結果的にNNはマッチング可能かつ対応するpixelに関しては高い類似度と低い不確実性を、マッチングが困難なものに関しては高い不確実性を算出するように学習される。
     .item4
       .text
         h1 メモ・リンク
-        |定義された距離尺度において対象に直接近づける枠組みが多い通常の類似度学習と異なり、連続値である類似度を確率変数とすることで、不確実性を考慮するのは興味深い。しかし、定式化としては論文内のものよりも、不確実性利用してモデルが類似度の分布を算出しているという定式化にした方がわかりやすいのではないかと思った。
+        p 定義された距離尺度において対象に直接近づける枠組みが多い通常の類似度学習と異なり、連続値である類似度を確率変数とすることで、不確実性を考慮するのは興味深い。しかし、定式化としては論文内のものよりも、不確実性利用してモデルが類似度の分布を算出しているという定式化にした方がわかりやすいのではないかと思った。
         ul
           li
             a(href="https://arxiv.org/abs/1804.01552") 論文
     .slide_index #{getSlideIndex()}
     
+
+

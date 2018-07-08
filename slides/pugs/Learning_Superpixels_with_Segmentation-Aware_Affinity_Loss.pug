@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Learning_Superpixels_with_Segmentation-Aware_Affinity_Loss
+  .paper-abstract
+    .title Learning Superpixels with Segmentation-Aware Affinity Loss
+    .info
+      .authors Wei-Chih Tu, Ming-Yu Liu, Varun Jampani, Deqing Sun, Shao-Yi Chien, Ming-Hsuan Yang, Jan Kautz
+      .conference CVPR2018
+    .slide_editor Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p superpixel segmentationのためにピクセルの類似性(pixel affinities)を学習するdeep learningベースの手法を提案。pixel affinitiesが同一物体に属する2つの隣接画素の尤度を測る。これまで、groundtruthがないこと、superpixelsのインデックスが交換可能であること、superpixelsの手法は微分不可であることからdeep learningベースのsuperpixelアルゴリズムは試みられていなかった。論文では、segmentation誤差から類似性を学習するsegmentation-aware loss(SEAL)と、pixel affinitiesを出力するPixel Affinity Net(PAN)を提案し、superpixelsとdeep learningを統合する。既存の手法より物体境界を保持したままsuperpixelsを計算することが可能になった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Superpixels_with_Segmentation_Aware_Affinity_Loss.PNG`,alt="Learning_Superpixels_with_Segmentation_Aware_Affinity_Loss.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p superpixels + deep learningが新しい。実験では単純なpretrained modelによる特徴量や、edge検出によるsuperpixelsとの統合はうまくいかないことを示している。手法に関しては、superpixelsを直接出力するのではなく、pixel affinitiesを計算、graph-basedのアルゴリズム(ERS)を経由し出力、そしてSEALを計算する。これにより、pixel affinitiesを出力するPANへ誤差を逆伝播することができる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p より効果的に細部の情報をsuperpixelsとして保持することができるため、semantic segmentationの改善や計算量の削減につながるだろう。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tu_Learning_Superpixels_With_CVPR_2018_paper.pdf") paper
+          li
+            a(href="https://sites.google.com/site/wctu1009/cvpr18_superpixel") proj_page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.12 12:14:08
+
+

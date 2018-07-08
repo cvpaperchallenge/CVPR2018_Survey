@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_CartoonGAN_Generative_Adversarial_Networks_for_Photo_Cartoonization
+  .paper-abstract
+    .title CartoonGAN: Generative Adversarial Networks for Photo Cartoonization
+    .info
+      .authors Yang Chen, Yu-Kun Lai and Yong-Jin Liu
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 実世界の風景画(写真)を漫画スタイルの画像へ変換する手法の提案．漫画スタイル変換のためのGAN，CartoonGANを提案．ペアの画像を使用しない学習方法を採用し，そのための新規の損失関数を提案．実験では，写真のエッジや滑らかな陰影を保持したまま，アーティストのスタイルを表現することが可能であることを確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}CartoonGAN1.png`,alt="1")
+          img(src=`${figpath}CartoonGAN2.png`,alt="2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 画風変換には以下のような問題が存在，これにより既存の損失関数においては表現が困難
+        ul
+          li 漫画のスタイルは高レベルの単純化と抽象化で独特な特徴を表現
+          li 漫画は鮮明なエッジ，滑らかな色合い，比較的シンプルなテクスチャを保有
+            |この問題に対処するために以下のような損失関数を提案
+          li semantic content loss：写真と漫画間のスタイル変換に対応するために，VGGNetの特徴マップを疎な正則化によって定式化
+          li edge-promoting adversarial loss：鮮明なエッジを維持
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_CartoonGAN_Generative_Adversarial_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 13:57:31
+
+

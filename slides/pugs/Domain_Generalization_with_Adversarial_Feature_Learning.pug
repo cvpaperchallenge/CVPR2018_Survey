@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_Domain_Generalization_with_Adversarial_Feature_Learning
+  .paper-abstract
+    .title Domain Generalization with Adversarial Feature Learning
+    .info
+      .authors Haoliang Li, Sinno Jilain Pan, Shiqi Wang, Alex Kot
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p Adversarial Autoencoder(AAE)に対してMaximum Mean Discrepancy(MMD)を導入することで
+          |トレーニングデータを過学習することなくdomain generalizationを行う手法を提案。
+          |domain generalizationとは、複数ドメインのラベル付きデータセットを学習し、
+          |テスト時にはデータセットに含まれていないドメインのデータセットにおける識別や生成タスクを行うことを指す。
+          |複数のソースドメインで不変な特徴量を取得する
+          a(href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Ghifary_Domain_Generalization_for_ICCV_2015_paper.pdf") multi-task learning
+          |に対して、提案手法ではMMDベースでドメイン間の差分をとることと、
+          |AAEによって特徴量空間に対して事前分布が押し込むことでソースドメインに対する過学習が防ぐ。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Domain_Generalization_with_Adversarial_Feature_Learning.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li AAEに対してMMDを組み込むことで、ソースドメインを過学習することなくdomain generalizationを行う。
+          li domain generalizationのstate-of-the-artと識別タスクにおいて比較。
+          li MNISTを15度刻みで回転させた場合の認識精度、VLCSデータセットにおける物体認識、
+             |IXMASにおける行動認識においてstate-of-the-artよりも高い精度を達成。
+          li AAEにおける事前分布の違いによる精度も議論しており、ラプラシアン分布が最も精度が良かったと主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://www.researchgate.net/publication/324691022_Domain_Generalization_with_Adversarial_Feature_Learning") 論文
+    .slide_index #{getSlideIndex()}
+
+

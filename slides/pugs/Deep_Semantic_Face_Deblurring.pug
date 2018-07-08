@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Deep_Semantic_Face_Deblurring
+  .paper-abstract
+    .title Deep Semantic Face Deblurring
+    .info
+      .authors Ziyi Shen, Wei-Sheng Lai, Tingfa Xu, Jan Kautz, Ming-Hsuan Yang
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔に対してセマンティックセグメンテーション(face sparsing)を利用することで、
+          |モーションブラーが加えられた正面顔画像に対するCNNベースのデブラーリング手法を提案。
+          |face sparsingによって顔のパーツの位置関係や形といった情報を利用することができると主張。
+          |また学習の際には様々なカーネルサイズによるブラー画像を同時に与えるのではなく、
+          |小さなカーネルサイズのブラー画像から順々に学習させるincremental trainingことでデブラーリング精度を向上させた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Semantic_Face_Deblurring.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ブラー画像はランダムな3D cameraの軌道によって与えられ、カーネルサイズは13x13~27x27までを学習させた。
+          li ロスとしてデブラーリング画像のL1 loss, face parsing画像のL1 loss, adversarial loss, CNNの特徴量マップのL2 ロスを使用。
+          li tate-of-the-artに比べてデブラーリング画像とソース画像のPSNR、SSIM、顔の検出率、個人認証の精度においてもっとも良い精度を達成し、
+             |それぞれ約5%, 5%, 28%, 4%向上した。
+          li state-of-the-artに比べて実行スピードが約44%向上した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 学習データを少しずつ変化させて、順々に最適化を行うincremental trainingは、
+             |学習データをパラメトリックに変化可能な他の問題に対しても有用なトレーニング方法だと思われる。
+          li
+            a(href="https://arxiv.org/abs/1803.03345") 論文
+    .slide_index #{getSlideIndex()}
+
+

@@ -100,7 +100,7 @@
 }
 
 .reveal .slides section .paper-abstract img {
-    background: rgb(0, 0, 0);
+    /* background: rgb(0, 0, 0); */
     border: 0;
     box-shadow: 0 0 0 0;
     margin: auto;

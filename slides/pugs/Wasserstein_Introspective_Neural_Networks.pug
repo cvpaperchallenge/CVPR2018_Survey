@@ -1,0 +1,43 @@
+﻿+slide
+section#ID_Wasserstein_Introspective_Neural_Networks
+  .paper-abstract
+    .title Nonlinear 3D Face Morphable Model
+    .info
+      .authors Luan Tran, Xiaoming Liu
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p generatorとdiscriminatorを一つのモデルで表現するIntrospective Neural Network(INN)に対してwasserstein distanceを導入することで、
+          |INNと同等の生成能力・識別能力を保ちつつclassifierにおけるCNNの数を20分の1にしたWasserstein INN(WINN)を提案。
+          |生成された画像の比較はDCGAN、INN for generative(INNg)、INNgのclassifierにおけるCNNを一つにしたINNg-singleと行った。
+          |またadversarial exampleに対して頑健な識別精度を達成した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Wasserstein_Introspective_Neural_Networks.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li INNにwasserstein distanceを導入することで、
+             |生成・識別においてINNと同等以上の性能を持ちながら識別器におけるCNNの数が20分の1であるIWNNを提案。
+          li テクスチャの生成やCelebA・SVHNを学習することで生成された画像はDCGANと比べてはっきりとしており質が高い。
+          li CIFAR-10の学習によって生成された画像におけるInception scoreはDCGANの方が良い結果となった。
+          li CNN、ReosNet、ICNと比較して、adversarial exampleに対する誤識別率が低く、 
+             |adversarial examples に惑わされずに識別を行うことが可能。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.08875") 論文
+          li
+            a(href="https://github.com/kjunelee/WINN") GitHub
+          li
+            a(href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Lazarow_Introspective_Neural_Networks_ICCV_2017_paper.pdf") Introspective Neural Networks for Generative Modeling
+    .slide_index #{getSlideIndex()}
+
+

@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Seeing_Small_Faces_from_Robus_Anchors_Perspective
+  .paper-abstract
+    .title Seeing Small Faces from Robust Anchor’s Perspective
+    .info
+      .authors Chenchen Zhu, Ran Tao, Khoa Luu, Marios Savvides
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p アンカーベースで画像中の小さな顔に対する検出精度を向上させる手法を提案。
+          |アンカーベースの手法では画像中に等間隔で並べられた点(アンカー)を中心とした矩形によって物体を検出する。
+          |アンカーによる検出精度を評価する数値としてExpected Max Overlapping(EMO) scoreを提案し、
+          |EMOを深層学習に学習させることで、小さな顔(16X16)に対する検出精度を向上した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Seeing_Small_Faces_from_Robus_Anchors_Perspective.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のアンカーベースの手法ではIoUを学習させていたため、解像度が16x16などの小物体に対する学習が困難であったが、
+             |EOM scoreを学習させることで小物体の検出精度が大きく向上。
+          li 従来のアンカーベースの手法よりも検出精度が向上、特に小さな顔に対する検出精度が大きく向上したが、実行時におけるスピードは従来手法と同程度。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.09058") 論文
+    .slide_index #{getSlideIndex()}
+
+

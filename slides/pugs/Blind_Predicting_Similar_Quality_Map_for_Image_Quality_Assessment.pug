@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Blind_Predicting_Similar_Quality_Map_for_Image_Quality_Assessment
+  .paper-abstract
+    .title Blind Predicting Similar Quality Map for Image Quality Assessment
+    .info
+      .authors Da Pan, Ping Shi, Ming Hou, Zefeng Ying, Sizhe Fu and Yuan Zhang
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像の品質を評価するためのBlind Predicting Similar Quality Map for IQA(BPSQM)を提案した。
+          |CNNを用いた画像の品質評価手法は数多く提案されているが、その大半はブラックボックスとなっている。
+          |本研究は、ピクセル単位の画像の損失度合いを示すquality mapを始めに推定することで、画像圧縮などに伴いどのように画像の品質が低下してるかの可視化を可能とした。
+          |また、qualityマップから画像の損失度合いを表すスコアの算出を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Blind_Predicting_Similar_Quality_Map_for_Image_Quality_Assessment.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のquality mapを求める手法は、損失前の画像(reference)が必要なものが大半であり、reference不要なCNNベースの手法はパッチ単位で推定するのみであった。
+          |それに対して本研究は、referenceなしでピクセル単位のquality mapを推定することを可能とした。
+          |損失度合いの推定に関しても、referenceなしの手法と比べて精度の向上を実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.08493") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.3 21:52:18
+
+

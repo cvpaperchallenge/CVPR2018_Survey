@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Low-Shot_Learning_from_Imaginary_Data
+  .paper-abstract
+    .title Low-Shot Learning from Imaginary Data
+    .info
+      .authors Yu-Xiong Wang, et al.
+      .paper_id 1801.05401
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 人間の想像力に着目することで、メタ学習におけるLow-Shot Learningを可能にするアーキテクチャの提案。コンピュータビジョンに幻覚(想像)を抱かせることで、少ないデータから新しい視覚的概念を学習させる。アプローチとしては、メタ学習を取り入れており、 meta-learnertとhallucinator(幻覚者)を組み合わせて共同で最適化。hallucinatorは、通常のトレインセットとノイズベクトルから幻覚トレーニングセットを出力する。通常のトレーニングセットに加えて、幻覚トレーニングセットを学習することで精度向上を図る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180609imagin.jpg`,alt="20180609imagin.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 人間は新しい視覚的情報を素早く学習できる。これは、「物体がさまざまな視点から見たときにどのように見えるかを想像できるから」と仮定。そのうえで、人間の想像力をモデルとし、システムに組み込むことでLow-Shot Learningを可能にしている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p AIに幻覚を見せられる時が来た模様。さまざまなメタ学習手法に組み込むことができ、精度を向上させられるらしい。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1801.05401.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+
