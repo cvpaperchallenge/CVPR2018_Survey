@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Recognizing_Human_Actions_as_the_Evolution_of_Pose_Estimation_Maps
+  .paper-abstract
+    .title Recognizing Human Actions as the Evolution of Pose Estimation Maps
+    .info
+      .authors Mengyuan Liu, Junsong Yuan
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 動画に対する姿勢+ヒートマップからの行動認識を解く問題である。通常、動画中の姿勢推定は不安定なものであるが、動画内での平均化や連続する姿勢、ヒートマップから補完的に改善して行動を認識する枠組みを提案。ヒートマップのスパース性を考慮、Spatial Rank Poolingを実装してEvolutionImageを作成しヒートマップや姿勢の変動に対応できるようにした。この枠組みはNTU RGBD/UTD-MHAD/PennActionに対して有効であることを示した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623EvolutionPoseMap.png`,alt="180623EvolutionPoseMap")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 不安定な姿勢変動に対応するためにSpatial Rank Poolingを実装した。位置づけ的にはDynamicImage/VideoDarwinがTwo-Stream ConvNetsに対する改善なのに対して本論文は姿勢に対してこれらの枠組みを試行。この枠組みを用いてNTU RGBD/UTD-MHAD/PennActionに対してSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 直感的に言うと、テスト動画に対する中間特徴（中間値）みたいのを作成して、外れ値を防ぐことで精度向上？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liu_Recognizing_Human_Actions_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 16:25:14
+
+

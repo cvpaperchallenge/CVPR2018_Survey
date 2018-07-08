@@ -1,0 +1,32 @@
++slide
+section#ID_DenseASPP_for_Semantic_Segmentation_in_Street_Scenes
+  .paper-abstract
+    .title DenseASPP for Semantic Segmentation in Street Scenes
+    .info
+      .authors Maoke Yang, Kun Yu, Chi Zhang, Zhiwei Li, Kuiyuan Yang
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p 自動走行のシーンで現れる物体はスケールの変動が大きく、multi-scaleな情報を適切にEncodeする必要がある。multi-scaleなsemantic情報を抽出するために、複数rateのAtrous ConvolutionによるAtrous Spatial Pyramid Pooling(ASPP)が提案されているが、このような自動走行のシーンではまだ十分ではない。そこで、よりスケールの変動に対応するために、Densely connected Atrous Spatial Pyramid Pooling(DenseASPP)を提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}DenseASPP_for_Semantic_Segmentation_in_Street_Scenes.PNG`,alt="DenseASPP_for_Semantic_Segmentation_in_Street_Scenes.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ASPPのように、Dilation rateを上げると画素のsampling間隔が広がる。これは大きいストライドのconvolutionのようなもので、大きなrateのatrous convolutionは受容野を広げるが、その分情報の欠落が起こる(低密度化)。この問題を解決すべくStackしかつ密な結合をしたDenseASPPにより高密度化し、異なるdilation rateのlayerの多様なアンサンブルを可能とすることで、ASPPよりも多くのスケールを持つ特徴マップを効果的に得ることができる。これが新しい。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Dense結合 + Pyramid特徴の単純な構造に思えるが、ASPPでのAtrous Convolutionの隙間に着目し、これを効果的に高密度化していることがおもしろい。semantic segmentationにおいて大小様々なスケールの変動への対応策は、最終段へ伝播できるパスが存在するかが重要？これって結局multi-scaleなpyramid特徴？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Yang_DenseASPP_for_Semantic_CVPR_2018_paper.html") paper
+          li
+            a(href="https://github.com/DeepMotionAIResearch/DenseASPP") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 05:52:39

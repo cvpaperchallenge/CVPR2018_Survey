@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Deep_Diffeomorphic_Transformer_Networks
+  .paper-abstract
+    .title Deep Diffeomorphic Transformer Networks
+    .info
+      .authors Nicki Skafte Detlefsen, Oren Freifeld, Søren Hauberg
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 顔認識において、本人認識率が向上するようにアフィン変換や形状変化（Diffeomorphic）を行うように変換を実装するネットワークDeep Diffeomorphic Transformer Networksを提案。直感的にはズームインだが、さらに形状変化を行うことが効果的であると判断してネットワークを構築した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618DiffeemorphicTransferNetworks.png`,alt="180618DiffeemorphicTransferNetworks")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 顔認識においてアフィン変換によるズームインのみならず、認証率が向上するような形状変化方法であるDiffeomorphic Transferを提案した。同処理はCNN内に実装され、Deep Diffeomorphic Transformer Networksと呼ばれ、LFW/CelebA等でState-of-the-artであった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ネットワークに対して内的ではなく外的に変形させて精度向上するのは意外である。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Detlefsen_Deep_Diffeomorphic_Transformer_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 19:47:55
+
+

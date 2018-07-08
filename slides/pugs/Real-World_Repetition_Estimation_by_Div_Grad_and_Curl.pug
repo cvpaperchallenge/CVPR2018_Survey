@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Real-World_Repetition_Estimation_by_Div_Grad_and_Curl
+  .paper-abstract
+    .title Real-World Repetition Estimation by Div, Grad and Curl
+    .info
+      .authors Tom F. H. Runia, Cees G. M. Snoek andArnold W. M. Smeulders
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 動画中に存在する繰り返しの動作を推定する問題について考慮．既存の研究(フーリエベース)では静的および定常周期性という仮定のもとでは良好な精度であるが，現実的なシーンにおいては測定が困難．そこでウェーブレット変換を適用し，非静的かつ非定常な動画においても適切に処理できる手法を提案．また，非静的かつ非定常な動画で構成されるQUVA Repetition datasetを提案．動画内の繰り返し動作のカウント実験では深層学習による手法に比べ，良好な精度を実現．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Real-World_Repetition_Estimation1.png`,alt="1")
+          img(src=`${figpath}Real-World_Repetition_Estimation2.png`,alt="2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 流動場とその微分から，3つの基本的な運動タイプと3次元内の固有周期性の3つの運動周期性を導出
+          li 3次元の周期性の2次元的な知覚は2つの極端な視点を考慮しており，18の基本的なケースを考慮
+          li 様々な繰り返し動作の出現に対応するために，セグメント化された前景の動きに対する時間変化量Ftおよびその差異∇Ft，∇・Ftおよび∇×Ftを測定
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Runia_Real-World_Repetition_Estimation_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 15:04:59
+
+

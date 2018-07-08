@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Emotional_Attention_A_Study_of_Image_Sentiment_and_Visual_Attention
+  .paper-abstract
+    .title Emotional Attention: A Study of Image Sentiment and Visual Attention
+    .info
+      .authors Shaojing Fan, Zhiqi Shen, Ming Jiang, Bryan L. Koenig, Juan Xu, Mohan S. Kankanhalli and Qi Zhao
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像に潜んでいる感情と注目を集める領域の関連を調査した。
+          |アイトラッキングのデータと、画像中に写っている感情に関連する物体(笑顔など)をアノテーションしたEMOtional attention dataset(EMOd)を構築した。
+          |また、画像中の注目領域を抽出するDNNモデルであるCASNetを提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Emotional_Attention_A_Study_of_Image_Sentiment_and_Visual_Attention.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p EMOdを用いて分析した結果、感情に関連する物体の方が人々の視線を集めることが判明した。
+          |その中でも、人間が関連する（笑顔など）場合がより視線を集めることが分かった。
+          |従来のSaliencyを求める手法よりもCASNetの方が多くの指標で高いスコアを獲得した。
+          |また、感情に関連する物体の方がより注目を集めるという結果を出力したことからEMOdの分析結果を反映していることを確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://nus-sesame.top/emotionalattention/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.5 12:28:58
+
+

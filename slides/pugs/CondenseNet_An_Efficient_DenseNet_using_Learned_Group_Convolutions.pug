@@ -1,0 +1,38 @@
++slide
+section#ID_CondenseNet_An_Efficient_DenseNet_using_Learned_Group_Convolutions
+  .paper-abstract
+    .title CondenseNet: An Efficient DenseNet using Learned Group Convolutions
+    .info
+      .authors Gao Huang, Shichen Liu, Laurens van der Maaten, Kilian Q. Weinberger
+      .conference CVPR2018, arXive:1711.09224
+      .paper_id 350
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p DenseNetをベースにコンパクトなネットワークを構築するCondenseNetを提案．
+          |このCondenseNetは，学習中は更新回数が増えるに連れて畳み込む特徴マップを減らしていく．
+          |そして，推論時は疎になった畳み込み層の特徴マップを入れ替え，Group Convolutionする．
+          |これにより，畳み込みに対する処理時間を大幅に削減する事が可能であり，推定時の計算コストを大幅に削減する事ができる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}350_overview.png`,alt="350_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p コンパクトなネットワークを構築するために，学習では畳み込みをスパースにする処理を導入し，推論時には特定の特徴マップを畳み込むようにGroup Convolutionを導入している．
+          |このような畳み込みの最適化方法は提案されていないため，新規性として高い．
+          |また，DenseNetの構造も改良しており，複数種類のプーリングを使用する等の改良も導入している．
+          |同会議で提案されているShuffleNetよりコンパクトにする事ができる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.09224") 論文リンク
+          li
+            a(href="https://github.com/ShichenLiu/CondenseNet") コードリンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 02:23:06

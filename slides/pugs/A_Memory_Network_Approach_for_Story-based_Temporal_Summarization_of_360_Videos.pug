@@ -1,0 +1,38 @@
++slide
+section#ID_A_Memory_Network_Approach_for_Story-based_Temporal_Summarization_of_360_Videos
+  .paper-abstract
+    .title A Memory Network Approach for Story-based Temporal Summarization of 360◦ Videos
+    .info
+      .authors Sangho Lee, Jinyoung Sung, Youngjae Yu, Gunhee Kim
+      .conference CVPR2018, arXive:1805.02838
+      .paper_id 170
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p 360°カメラの動画を用いたビデオ要約を，Memory NetworkをベースとしたPast-Future Memory Networkにより実現した研究．
+          |はじめに，入力の360°の動画から81個の領域(normal field of view)を，RankNetベースの手法を用いて切り出す．
+          |候補領域は，MemoryNetのMemoryへと記憶される．
+          |PFMNでは，これらの候補領域を過去と将来という形でMemoryに記憶しており，時刻tで最もスコアが高い記憶が過去のMemoryに残される．
+          |印象の強い候補領域を残しつつMemoryをアップデートしていくことで，高性能なビデオ要約が可能となる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}170_overview.png`,alt="170_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p この手法では，対象を360°カメラの動画としており，広大な情報量から効率的に印象的なシーンをMemory Networkを活用することで，高性能な成果を出している．
+          |Memory Networkをこのような問題設定に応用した事例はこの手法が初めてであり，この点が高い新規性となっている．
+          |また，このタスクを評価する指標として，新たなデータセット360◦ video summarization datasetを提案している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.02838") 論文リンク
+          li
+            a(href="http://vision.snu.ac.kr/projects/pfmn/") オフィシャルページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 02:14:01

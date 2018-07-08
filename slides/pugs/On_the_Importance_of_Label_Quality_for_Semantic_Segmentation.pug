@@ -1,0 +1,29 @@
++slide
+section#ID_On_the_Importance_of_Label_Quality_for_Semantic_Segmentation
+  .paper-abstract
+    .title On the Importance of Label Quality for Semantic Segmentation
+    .info
+      .authors Aleksandar Zlateski, Ronnachai Jaroensri, Prafull Sharma, Frédo Durand
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p この論文ではcityscapeライクなcoarseラベルでの性能を人工データを使って、Semantic Segmentationでのラベルの品質とCNNの性能との関係を調査した研究。これにより、人間の労力を最小化しつつ、coarseラベルを作るべき時間を提案することができる。ラベル品質とあるが、domain adaptation等の手法によるラベル生成の品質検証というわけではなく、人間の労力は前提で、その上でのcoarseラベルの品質と性能を検証している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}On_the_Importance_of_Label_Quality_for_Semantic_Segmentation.PNG`,alt="On_the_Importance_of_Label_Quality_for_Semantic_Segmentation.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 結果から、CNNの性能は人間のアノテーションコストに依存することがわかった。これつまり、大きなcoarseアノテーションデータセットは、小さなfineアノテーションデータセットの性能と同等で、coarseラベルでpretrainし、少ないfineアノテーションデータセットでfine-tuneした場合、大きなfineデータセットで学習した性能に匹敵またはそれ以上の性能を得ることができる可能性があることを示している。また様々なネットワーク構造や都市の様々なオブジェクトに対しても有効であることを証明。
+    .item4
+      .text
+        p ここではcoarseラベルを対象としていたが、ミスラベルの場合は？、汎化との関係は？、stuffクラスは？と異なる対象でさらなる検証がほしいと思わせる研究。これらについて検証した研究がもうすでにあったりする？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Zlateski_On_the_Importance_CVPR_2018_paper.html") paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 05:43:49

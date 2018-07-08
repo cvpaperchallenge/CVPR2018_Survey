@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Human_Semantic_Parsing_for_Person_Re-Identification
+  .paper-abstract
+    .title Human Semantic Parsing for Person Re-Identification
+    .info
+      .authors Mahdi M. Kalayeh, Emrah Basaran, Muhittin Gökmen, Mustafa E. Kamasak, Mubarak Shah
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 人物に関して、主に姿勢に関するパーツベースのセマンティック情報を導入することにより人物再同定（Person Re-identification）の精度を向上させる。提案のSPReIDはInception-v3やResNet-152をベースアーキテクチャにしていて、各種データセットに対して向上が見られた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180703PersonSemanticReID.png`,alt="180703PersonSemanticReID")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 各種データセットにて次の通り向上した。セマンティック情報を人物再同定に使うのは有効であることが判明した。Market-1501 (参考文献48) by ∼17% in mAP、∼6% in rank-1, CUHK03 (参考文献24) by ∼4% in rank-1、DukeMTMC-reID (参考文献50) by∼24% in mAP ∼10% in rank-1。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p セマンティック情報を使えば想像通りよくなるが、実際にデータセットに対してアノテーションしてCVPRに通す根性がすごい！見習おう。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Kalayeh_Human_Semantic_Parsing_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 10:29:10
+
+

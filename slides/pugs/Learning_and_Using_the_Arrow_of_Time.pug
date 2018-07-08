@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Learning_and_Using_the_Arrow_of_Time
+  .paper-abstract
+    .title Learning and Using the Arrow of Time
+    .info
+      .authors Donglai Wei et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p DNN を用いて動画中の時間の流れている方向（Arrow of Time）を学習する研究. 人工的な信号を含むキューは Arrow of Time の学習に悪影響を及ぼすことを示し, それらの影響を取り除いた大規模 dataset を作成した. 評価実験では映画中の逆再生部分を検出するというタスクにおいて人間とほぼ同程度の精度を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Learning-and-Using-the-Arrow-of-Time.png`,alt="fukuhara-Learning-and-Using-the-Arrow-of-Time.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Arrow of Time を学習する DNN アーキテクチャとして Temporal Class-Activation Map Network (T-CAM) を提案
+          li T-CAM は数フレーム分の optical flow を入力から Arrow of Time を推測
+          li 人工的な信号である camera Motion や black framing を含むキューは Arrow of Time の推定を容易にし, ネットワークの学習に悪影響を与えてしまうことを実験により示した
+          li 上記の人工的な信号を取り除いた Arrow of Time を学習するための大規模データセット, Flickr-AoT と Kinetics-AoT を作成
+          li 提案手法を用いて行った映画の逆再生部分を検出する実験では, 人間（80%）とほぼ同等（76%）の結果を達成
+          li また, Arrow of Time が flow-based の行動認識において self-supervised pre-training に有用であることを示した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://people.csail.mit.edu/donglai/paper/aot18.pdf" target="blank") [論文] Learning and Using the Arrow of Time
+          li
+            a(href="https://www.youtube.com/watch?v=1zfZhXkOzCw" target="blank") [動画] YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.17 12:19:55
+
+

@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_Human-centric_Indoor_Scene_Synthesis_Using_Stochastic_Grammar
+  .paper-abstract
+    .title Human-centric Indoor Scene Synthesis Using Stochastic Grammar
+    .info
+      .authors S. Qi, Y. Zhu, S. Huang, C. Jiang, S. Zhu
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p 3D部屋レイアウトとその2D画像との合成の話題．
+        p Spatial And-Or Graph (S-AOG) ※ で屋内シーンを表現する．
+          |終端ノードは物体エンティティ（部屋とか家具とかその他）．
+        p 終端ノードに対し，
+          |マルコフランダム場（MRF）を用い，
+          |人間の文脈で関係性をエンコードする．
+          |屋内シーンデータセットから分布を学習し，
+          |モンテカルロマルコフ連鎖（MCMC）を使って新しいレイアウトをサンプルする．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Human-centric_Indoor_Scene_Synthesis_Using_Stochastic_Grammar.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3つの視点で有効性を確認．
+        ul
+          li SOTAな部屋アレンジ手法と比較しての，視覚的リアルさ
+          li GTに対する，アフォーダンスマップの精度
+          li 合成部屋の機能性，自然っぽさを人間の被験者で評価
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ※S-AOGは確率的文法モデルの一つ．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0116.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 11:41:06
+
+

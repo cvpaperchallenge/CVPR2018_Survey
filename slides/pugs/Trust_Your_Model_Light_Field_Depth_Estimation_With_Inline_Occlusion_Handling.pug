@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Trust_Your_Model_Light_Field_Depth_Estimation_With_Inline_Occlusion_Handling
+  .paper-abstract
+    .title Trust Your Model: Light Field Depth Estimation With Inline Occlusion Handling
+    .info
+      .authors Hendrik Schilling, Maximilian Diebold, Carsten Rother, Bernd Jähne
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p LightFieldカメラからの距離画像推定の問題を提案。オクルージョンに伴う物体境界の精度や質向上に対して操作を行なったことが貢献である。従来法とは異なり、PatchMatchをベースラインとして距離画像とオクルージョン領域を同時推定を直接的に行う。同時推定を行うことで、データを全て同時に学習に用いることができ、さらに前処理のステップが不要になる。結果的には、オクルージョン領域の推定を行い物体境界をケアしただけでなく滑らかな表面再構成に成功した。公開されているLightFieldデータセットにて評価した結果、12のうち9の指標においてState-of-the-artな数値を出した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618TrustYourModel.png`,alt="180618TrustYourModel")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ライトフィールドカメラを用いた距離画像推定においてオクルージョン対策を講じた。距離画像とオクルージョン領域を同時推定する手法では既存のライトフィールドカメラにおける評価指標においてState-of-the-art。さらに、平面推定においても高度な推定を実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 同時推定のうまい手法を考案、副次的に平面が滑らかになるというのも面白い！
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Schilling_Trust_Your_Model_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 23:54:56
+
+

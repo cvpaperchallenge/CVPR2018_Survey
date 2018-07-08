@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Efficient_Optimization_for_Rank-based_Loss_Functions
+  .paper-abstract
+    .title Efficient Optimization for Rank-based Loss Functions
+    .info
+      .authors P. Mohapatra, M. Rolínek, C.V. Jawahar, V. Kolmogorov and M.P. Kumar
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 情報検索システムにおける精度は，平均精度（AP）や正規化減価累積利得（NDCG）のような複雑なランクベースロス関数で測られるが，このような関数の微分不可能性・分解不可能性は単純勾配最適化においては許されない．
+          |これの回避方法として，一般的には，構造化ヒンジロス上界の最適化をロス関数にする方法や，直接ロス最小化のような漸近的手法が使われる．
+          |それでも，loss-augmented inferenceの高い計算複雑性は残る．
+        p 本稿では，それを緩和する，新たなクイックソート・フレーバーな分割統治を導入したアルゴリズムを提案する．
+          |分解不可能ロス関数に適用可能である．
+        p 我々のアルゴリズムにも適用できるロス関数の特徴づけも提供する．
+          |これはAP，NDCGの両方を含む．
+          |更に，我々の手法の計算複雑性の上では，漸近的に比較ベースアルゴリズムでは改善できないことを証明する．
+        p あらゆるCVのタスクでの学習モデルでのAP，NDCGの構造化ヒンジロス上界の最適化の文脈において，我々の手法の効果をデモンストレーションする．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Efficient_Optimization_for_Rank-based_Loss_Functions.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p クイックソート的にランクを並べ替え・選択して，というのは面白いやり方に感じる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 専門用語がわからないと読み下すのが難しいかもしれない．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3595.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 11:34:08
+
+
