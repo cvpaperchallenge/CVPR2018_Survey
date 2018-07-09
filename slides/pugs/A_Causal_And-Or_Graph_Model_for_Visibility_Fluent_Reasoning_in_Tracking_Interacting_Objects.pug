@@ -1,0 +1,30 @@
++slide
+section#ID_A_Causal_And-Or_Graph_Model_for_Visibility_Fluent_Reasoning_in_Tracking_Interacting_Objects
+  .paper-abstract
+    .title A Causal And-Or Graph Model for Visibility Fluent Reasoning in Tracking Interacting Objects
+    .info
+      .authors Yuanlu Xu, Lei Qin, Xiaobai Liu, Jianwen Xie, Song-Chun Zhu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 与えられた人物トラッキングやアピアランス情報から人物/物体間のインタラクション認識（ここではVisibility Fluent Reasoningと呼ばれている）を行う。ここで、通常人物や物体のトラッキングは欠損を含むことが多く、途切れ途切れになっている状態からでも認識ができるようにCausal And-Or Graph（C-AOG）を適用して対応関係を学ぶようにする。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180709VisibilityFluentReasoning.png`,alt="180709VisibilityFluentReasoning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p C-AOGを用いて時間軸に伴うイベントの変化を理解することに成功、物体トラッキングと変化の理由づけを同時に行なっている。オクルージョン時の対応（トラッキングが一部できなくなっている）が行われたデータセットも公開し、より複雑かつ情報の欠損を含む環境においてもFluent Reasoningができるようにした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 「ビジョンの認識精度は完璧ではない」という前提でより上位のタスクを完結するデータは今後さらに重要！査読に対する理解（完璧でないなら減点するといったことをなくす）も広がってほしい。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Xu_A_Causal_And-Or_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 11:33:11
