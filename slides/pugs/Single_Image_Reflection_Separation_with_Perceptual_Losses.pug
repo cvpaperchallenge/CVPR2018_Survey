@@ -1,0 +1,29 @@
++slide
+section#ID_Single_Image_Reflection_Separation_with_Perceptual_Losses
+  .paper-abstract
+    .title Single Image Reflection Separation with Perceptual Losses
+    .info
+      .authors Xuaner Zhang, Ren Ng, Qifeng Chen
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 本論文では、DNNで単一画像から反射成分と透過成分を分離するタスクを解いている。入力画像Iを反射成分Rと透過成分Tに分離する問題は本来ill-posedな問題であり、従来は様々な前提知識を利用してこの問題を解いていた。近年ではDNNが利用され始めているが、最新の手法であるCEILNetでは低レベルなセマンティクスのみを考慮しているため、十分な精度が出ていなかった。そこで提案手法は高レベルなセマンティクスを考慮することで非常に高品質な分離が可能となった。DNNを学習するにあたって、データセットを構築し、またSoTAの精度を実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Single_Image_Reflection_Separation_with_Perceptual_Losses.png`,alt="image")
+    .item3
+      .text
+        h1 手法・新規性
+        p 提案手法におけるネットワークの損失はFeature Loss、Adversarial Loss、Exclusion Lossの３つからなる。Feature Lossは提案ネットワークによって分離した画像と正解画像を深い部分における特徴量の差であり、Adversarial LossはCGANを適用しておいリアルな分離を実現するように学習し、Exclusion Lossは基本的に透過部と反射部は１つのエッジを共有しないという観察を元に勾配空間で透過部と反射部をよりはっきりと分けるように学習する。これらの損失を組み合わせたEnd-to-Endのネットワークを用いることでSoTAを実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Single_Image_Reflection_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 13:58:38
