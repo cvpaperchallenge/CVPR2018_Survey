@@ -1,0 +1,39 @@
++slide
+section#ID_Boundary_Flow_A_Siamese_Network_That_Predicts_Boundary_Motion_Without_Training_on_Motion
+  .paper-abstract
+    .title Boundary Flow: A Siamese Network That Predicts Boundary Motion Without Training on Motion
+    .info
+      .authors P. Lei et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        物体の境界の推定と隣接フレーム間での境界のモーションの推定を同時に行うBoundary Flow Estimationという問題の提案．
+        これができるとMid-levelの表現として色々なタスクに利用できたりして嬉しい．
+        提案手法は，tフレームとt+1フレームの2入力を受け取るSiamese Net型の構造で，Encoder-Decoderにより両フレームのBoundaryを推定する．
+        Boundaryのマッチングのために，Excitation Attentionのスコアでマッチングスコアが計算される．
+        Siameseの2つのパスのモデルは同じ構造で重みは共有されているので，Boundaryのアノテーション付いている静止画データがあれば学習可能．
+        Boundary Detection, Boundary Flow Estimation, Dense Optical Flow Estimationの3タスクで良い性能を達成．
+  
+    .item2
+      img(src=figpath+"Boundary_Flow_A_Siamese_Network_That_Predicts_Boundary_Motion_Without_Training_on_Motion.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Boundary Flow Estimationという新しい問題設定を提案
+          li Fully Convolutional Siamese Networkという構造の提案手法
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Lei_Boundary_Flow_A_CVPR_2018_paper.html") 論文
+          li Excitation Attentionがよくわかってないからか，マッチングの話がよくわからず...
+          li そこがわかってないからか，なぜBoundaryのマッチングの学習データがなくてもうまくいくのかよくわからず...
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 15:45:23
+
+
