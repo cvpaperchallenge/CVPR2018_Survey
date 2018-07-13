@@ -1,0 +1,36 @@
++slide
+section#ID_NeuralNetwork-Viterbi_A_Framework_for_Weakly_Supervised_Video_Learning
+  .paper-abstract
+    .title NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning
+    .info
+      .authors A. Richard, H. Kuehne, A. Iqbal and J. Gall
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 弱教師付き動画学習に，ビタビ復号を組み込んでみた話．
+          |タスクはアクションセグメンテーション．
+          |用意するのは動画とそのアクションラベルだけ．
+        p 動画がネットワークに入力され，その出力された確率分布に対しビタビ復号を実行する．すると，フレームラベルがビタビ復号で生成される．
+          |そして，勾配計算時にフレームワイズのクロスエントロピー計算を行い，逆伝播する．
+        p 明示的なコンテキスト・長さのモデリングが，これがビデオセグメンテーション・ラベリングタスクの改善に大きく作用することも示す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}NeuralNetwork-Viterbi_A_Framework_for_Weakly_Supervised_Video_Learning.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p アクションセグメンテーションでSoTA．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 勉強していないと知らなそうなアルゴリズムの導入．
+          |だいぶ込み入った話をしに行かないと論文が通らなくなってきた？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1203.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.10 11:10:38

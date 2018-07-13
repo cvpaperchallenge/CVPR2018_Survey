@@ -1,0 +1,29 @@
++slide
+section#Learning_Compression_Algorithms_for_Neural_Net_Pruning
+  .paper-abstract
+    .title “Learning-Compression” Algorithms for Neural Net Pruning
+    .info
+      .authors Miguel et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="https://twitter.com/tomoyukun") Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p Pruningを最適化問題として定式化し、交互最適化によって解くLC algorithmの提案。定式化としては0をとらないパラメータ数に対して制約を設けて解くConstrain formとそれを罰則項として損失関数に組み込むPenalty formの二つを提案。メジャーなPruning手法であるパラメータのmagnitudeの小さいものをナイーブにzeroingしていくものよりも、良い結果となった。提案する2つのformに関してはConstrain formの方が良かった。
+
+    .item2
+      img(src=figpath+"Learning_Compression_Algorithms_for_Neural_Net_Pruning.png",alt="Learning_Compression_Algorithms_for_Neural_Net_Pruning.png")
+    .item3
+      .text
+        h1 詳細
+        p 補助パラメータのPruningを行うCompression(C) Stepと本パラメータを補助パラメータに近づけつつ本タスク（識別・回帰など）を学習するLearning Stepからなる。C Stepでは（制約 or 罰則項として） Lp正則をかけながら本パラメータとのMSEを最小化するような補助パラメータを探索する。L Stepでは損失関数における補助パラメータとのMSE項の係数を学習の進行に応じて大きくすることで（μ→∞）、最終的な解がスパースなものに近づく。また、Constrain formでは超パラメータ一つでNN全体において最適化できる。手法の新規性・妥当性が大きく評価されたと考えられる。
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        p magnitudeベースのものは「 magnitude が小さいものは推定への寄与率が低い」という仮定のみでPruningしていくが、この手法ではその仮定をベースにしつつ(C step)、本タスクの性能を担保しながらPruningしていく(L step)点で理にかなっているように思え、面白い。計算効率をモチベーションにされることが多いPruning研究だが、枝刈りの割合によってはLasso回帰のように汎化性能が向上するような地点がないかもきになる。
+        ul
+          li
+            a(href="http://faculty.ucmerced.edu/mcarreira-perpinan/papers/cvpr18.pdf") 論文
+    .slide_index #{getSlideIndex()}
