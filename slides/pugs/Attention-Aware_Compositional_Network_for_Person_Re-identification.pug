@@ -1,0 +1,35 @@
++slide
+section#ID_Attention-Aware_Compositional_Network_for_Person_Re-identification
+  .paper-abstract
+    .title Attention-Aware Compositional Network for Person Re-identification
+    .info
+      .authors Jing Xu, Rui Zhao, Feng Zhu, Huaming Wang and Wanli Ouyang
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Person Re-identificationにattentionを利用したAttention-Aware Compositional Network(AACN)を提案した。
+          |体の部位のocculusionや背景の影響を軽減するために、体のどの部分に注目すればいいかを考慮することで精度の向上を計る。
+          |AACNは、Attentionを得るPose-guided Part Attention(PPA)と特徴を得るAttention-aware Feature Composition(AFC)の2つにより構築される。
+          |PPAは、入力画像からnon-rigid part(腕など)、rigid part(頭など)、key pointの3つの観点からattentionを推定する。
+          |AFCは、PPAにより得られたattentionを考慮した対象人物の特徴量を抽出する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Attention-Aware_Compositional_Network_for_Person_Re-identification.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来の姿勢情報を用いた手法は注目領域に背景などを含んでしまったのに対し、より詳細なattentionを得ることを可能とした。
+          |これにより、従来手法と比べあらゆるPerson Re-identificationのデータセットにおいて精度の向上を確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p この論文に限らずattentionを用いる論文をよく見る気がする
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.03344") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 00:47:05
