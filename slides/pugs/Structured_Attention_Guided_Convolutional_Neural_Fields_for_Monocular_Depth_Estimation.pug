@@ -1,0 +1,36 @@
++slide
+section#ID_Structured_Attention_Guided_Convolutional_Neural_Fields_for_Monocular_Depth_Estimation
+  .paper-abstract
+    .title Structured Attention Guided Convolutional Neural Fields for Monocular Depth Estimation
+    .info
+      .authors D. Xu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        単眼カメラからのデプス推定のための新しい手法を提案．
+        CNNにCRFを導入して，途中の層から得られるマルチスケール情報の統合を最適化できるようにしたのが提案手法のポイント．
+        マルチスケールの統合のためにはアテンション機構を導入して，それをうまく実現している．
+        実行速度も速く精度も高いという結果が出ている．
+  
+    .item2
+      img(src=figpath+"Structured_Attention_Guided_Convolutional_Neural_Fields_for_Monocular_Depth_Estimation.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 単眼デプス推定で高い性能を達成 (NYU Depth V2でSOTA超え，KITTIでSOTA並み)
+          li 単眼デプス推定 & CRFによるマルチスケール統合 & アテンション の合わせ技
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Xu_Structured_Attention_Guided_CVPR_2018_paper.html") 論文
+          li うまいこと流行りの要素を混ぜ合わせました，という感じがしてしまった
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 14:20:43
+
+

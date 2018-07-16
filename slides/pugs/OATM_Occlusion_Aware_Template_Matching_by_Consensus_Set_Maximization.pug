@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_OATM_Occlusion_Aware_Template_Matching_by_Consensus_Set_Maximization
+  .paper-abstract
+    .title OATM: Occlusion Aware Template Matching by Consensus Set Maximization
+    .info
+      .authors S. Korman, M. Milam and S. Soatto
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 本稿の手法により，60%のピクセルがノイズに侵されている（occluded）テンプレートでもマッチングできる．
+          |しかも結果の証明が可能．
+        p N高次元ベクトルの最近傍探索を
+          |sqrt(N)次元ベクトルにおける2つのセットの間の最近傍探索
+          |の変換を行う．
+          |これで探索効率が二乗でよくなる．
+        p また，コンセンサスセット最大化（cf. RANSAC）による，ハッシング手法も提案．
+          |これにより，遮蔽を扱うことができる．
+        p これらのスキームは，高い確率で最適解を得るのに求められるイタレーション数を考慮する，ランダム化仮説＆テストアルゴリズムとみなすことができる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}OATM_Occlusion_Aware_Template_Matching_by_Consensus_Set_Maximization.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SoTAなロバスト性・高速性・精度を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p やはりエレガントさを求める勢力が台頭してきているように感じる．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3289.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.2 18:18:37
+
+

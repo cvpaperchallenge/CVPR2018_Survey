@@ -1,0 +1,29 @@
++slide
+section#ID_Dual_Skipping_Networks
+  .paper-abstract
+    .title Dual Skipping Networks
+    .info
+      .authors Changmao Cheng, Yanwei Fu, Yu-Gang Jiang, Wei Liu, Wenlian Lu, Jianfeng Feng, Xiangyang Xue
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 右脳と左脳で視覚情報を処理している解像度が異なるという人間の脳の仕組みを模倣したネットワークDual Skipping Networksを提案した。このネットワークは２つのサブネットワークで構成されており、それぞれ同様の構造を持つが、左右でスキップ可能な層のパラメータが異なっており、その結果、左右非対称なネットワークがそれぞれglobalな推論とlocalな推論をするようになっている。画像分類の問題において、既存のデータセットに加えて、小さな文字で他の文字を構成するsb-MNISTデータセットで実験を行い、可視化によってそれぞれがglobalな情報とlocalな情報を保持していることを確認し、また非常に良い精度を出した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Dual_Skipping_Networks.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p Dual Skipping Networksのネットワーク構造は、右脳と左脳に対応する２つのサブネットワークとそれらが共有するCNNから構成される。共有されているCNNは脳におけるV1領域に対応しており、２つのサブネットワークはそれぞれ右脳と左脳に対応し、globalな推論とlocalな推論をするようになっている。各サブネットワークはSkip-Dense BlockとTransition Layerを交互に重ねた構造になっており、Skip-Dense Blockにおけるスキップ率の違いが２つのサブネットワークの差になっている。Skip-Dense BlockはDense LayerとGating Networkで構成され、Gating Networkがスキップをするか否かを司っている。またglobalな推論をするネットワークからlocalな推論を行うネットワークへの情報を伝達するGuideにより、coarse-to-fineな推論が可能になった。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Cheng_Dual_Skipping_Networks_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.15 20:05:24

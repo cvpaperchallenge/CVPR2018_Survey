@@ -1,0 +1,40 @@
++slide
+section#ID_Triplet-Center_Loss_for_Multi-View_3D_Object_Retrieval
+  .paper-abstract
+    .title Triplet-Center Loss for Multi-View 3D Object Retrieval
+    .info
+      .authors Xinwei He, Yang Zhou, Zhichao Zhou, Song Bai and Xiang Bai
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 多視点画像から3次元物体検索手法を提案。
+          |クラスの重心に近づくように最適化する
+          a(href="https://ydwen.github.io/papers/WenECCV16.pdf") center loss
+          |と、同一クラス同士の距離を小さくし他クラスとの距離を大きくする
+          a(href="https://arxiv.org/abs/1503.03832") triplet loss
+          |を組み合わせたcenter-triplet lossを導入した。
+          |triplet-center lossにより、正解クラスの重心との距離を最小化しつつ、他クラスの重心との距離は最大化する。
+          |triplet,centerそれぞれ単独よりtriplet-center＋softmaxが一番いい。
+          |他の手法よりも3d shape、sketchどちらにおいても精度がいい。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Triplet-Center_Loss_for_Multi-View_3D_Object_Retrieval.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p triplet loss、center loss単独で最適化するよりcenter-triplet loss及びsoftmax lossを組み合わせたものがAUC及びmAPが最も良くなることを確認した。
+          |従来手法と比べ、generic 3D shape retrieval及びsketch-based 3D shape retrievalの2種類いずれのタスクにおいて、F1、mAP、NDCGの三つの指標が最も良いという結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Future workとして書かれているが、手法自体は他のタスクにも試せそう。
+          |3D Object Retrievalに特化して構築された手法でないにも関わらず他のタスクが紹介されていないのは他のタスクがうまくいっていないということだろうか？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.06189") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.15 02:33:13
