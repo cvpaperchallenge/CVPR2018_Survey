@@ -1,0 +1,30 @@
++slide
+section#ID_Adversarial_Data_Programming_Using_GANs_to_Relax_the_Bottleneck_of_Curated_Labeled_Data
+  .paper-abstract
+    .title Adversarial Data Programming: Using GANs to Relax the Bottleneck of Curated Labeled Data
+    .info
+      .authors Arghya Pal, Vineeth N. Balasubramanian
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 弱いラベルを付与する関数から、出来る限り厳選したラベルを教師として与えるAdversarial Data Programming（ADP）を提案してデータを生成しながら識別器を学習する。マルチタスク学習と同様に、ドメイン変換についても効果的に行えるGANの学習とした。生成Gに相当するタスクではデータラベルの分布を生成して、識別Dに相当する部分では相対的精度の向上、ラベリングの依存性を考慮しながらラベルづけの正当性を確認する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180717AdversarialDataProgramming.png`,alt="180717AdversarialDataProgramming")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のDPは最尤推定により条件付きモデルP(y|x)を推定する問題であったが、本論文で提案するADPは同時確率モデルP(x,y)を推定する問題（データとラベルのペアを評価すること）に相当し、GANにより最適化する。MNIST, Fashion MNIST, CIFAR10, SVHN datasetにて実験を行い、多くの比較手法を抑えてstate-of-the-artなモデルであることを確認。マルチタスク学習やドメイン変換にも有効である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データラベルを作り出すGANである。少量にラベルづけすればどんな場面でも高精度に識別可能である、ということを示したい。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Pal_Adversarial_Data_Programming_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 09:55:11
