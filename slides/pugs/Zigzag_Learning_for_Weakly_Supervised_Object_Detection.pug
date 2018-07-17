@@ -1,0 +1,32 @@
++slide
+section#ID_Zigzag_Learning_for_Weakly_Supervised_Object_Detection
+  .paper-abstract
+    .title Zigzag Learning for Weakly Supervised Object Detection
+    .info
+      .authors Xiaopeng Zhang, Jiashi Feng, Hongkai Xiong and Qi Tian
+      .conference CVPR2018
+      .paper_id 551
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 物体検出の弱教師あり学習において，overfittingを防ぐためにretrain・relocalizeを繰り返すジグザグ学習を提案．特定の対象物を参照して学習画像の難しさを自動で測定する指標「mean Energy Accumulated Scores（mEAS，下図）」を導入し，これに基づいて検出ネットワークを学習する．また，学習中に特徴マップのマスキングを行い，細部に集中するだけでなく，ランダムにoccludeされたpositive-instanceを導入することでoverfittingを防ぎ，汎化性能を高める．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180714_ZigZag1.jpg`,alt="20180714_ZigZag1.jpg")
+          img(src=`${figpath}20180714_ZigZag2.jpg`,alt="20180714_ZigZag2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 対象物体がわかりやすいかわかりにくいかの単純な戦略を用いて検出モデルを学習し，信頼性の高いインスタンスを検出することができる．弱教師あり学習の物体検出手法でSOTAを達成．VOCデータセットを用いた評価により，ほとんどの物体が他の手法よりも良い性能を達成し，総合のmAPは3～6%程度向上した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 背景がmEASにもたらす影響が気になる．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0397.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.14 21:10:38

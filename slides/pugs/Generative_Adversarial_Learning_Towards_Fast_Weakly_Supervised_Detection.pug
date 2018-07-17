@@ -1,0 +1,32 @@
++slide
+section#ID_Generative_Adversarial_Learning_Towards_Fast_Weakly_Supervised_Detection
+  .paper-abstract
+    .title Generative Adversarial Learning Towards Fast Weakly Supervised Detection
+    .info
+      .authors Yunhan Shen, Rongrong Ji, Shengchuan Zhang, Wangmeng Zuo and Yan Wang
+      .conference CVPR2018
+      .paper_id 706
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p オンラインの弱教師あり物体検出（WSD）に敵対的生成学習を用いて高速な検出を行う．Generator（G）は画像からb-boxを生成し，surrogator（F）はannotation情報からb-box分布を推定する．GおよびFからの検出結果はdiscriminator（D）に入力される．Dはb-boxおよび分布が真（Fからの出力）であるか偽（Gからの出力）であるか区別する．各モジュールを学習して，推論時は学習されたGのみを用いる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180716_GALfWSD1.jpg`,alt="20180716_GALfWSD1.jpg")
+          img(src=`${figpath}20180716_GALfWSD2.jpg`,alt="20180716_GALfWSD2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 作者らの知る限りでは，弱教師あり学習でYOLOやSSDのような1ステージ物体検出を用いる最初の手法である．VOCを用いて実験を行い，ほとんどのクラスでSOTAと同等またはそれ以上の性能を達成し，平均では47.5mAP，66.1CorLocを達成した．検出速度は入力画像サイズが300のとき8.48ms，512のとき19.93msとかなり高速（1080Ti, i7-6900K）．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 学習時のみFを用いて推論時はGを用いることで高速化しているのは面白い．コードはすぐに公開されるとのこと．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0289.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 15:01:34

@@ -1,0 +1,32 @@
++slide
+section#ID_Inferring_Semantic_Layout_for_Hierarchical_Text-to-Image_Synthesis
+  .paper-abstract
+    .title Inferring Semantic Layout for Hierarchical Text-to-Image Synthesis
+    .info
+      .authors Seunghoon Hong, Dingdong Yang, Jongwook Choi, Honglak Lee
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p テキストからの画像生成において、テキストから画像への写像を直接学習するのではなく、layout generatorよりtextから中間表現としてsemantic layoutを生成するステップと、image generatorによりそれを画像へ変換するステップに分解して画像を生成する枠組みを提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Inferring_Semantic_Layout_for_Hierarchical_Text-to-Image_Synthesis_1.PNG`,alt="Inferring_Semantic_Layout_for_Hierarchical_Text-to-Image_Synthesis_1.PNG")
+          img(src=`${figpath}Inferring_Semantic_Layout_for_Hierarchical_Text-to-Image_Synthesis_2.PNG`,alt="Inferring_Semantic_Layout_for_Hierarchical_Text-to-Image_Synthesis_2.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 意味のある画像をsemantic layoutに基づき生成する点だけでなく、生成画像のアノテーションも自動で行われている点と生成されたsemantic layoutを修正することによるユーザーがコントロールできる生成も可能にしている点が新しく有用である。StackGANのような鳥や花といった特定対象ではなく、より複雑な一般シーンを想定し、Fine-grained semantic layoutが必要であるという問題設定が良い。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 評価の際に、生成された画像のcaptionを生成し、元の文章との類似度を比較しており、納得できる生成モデルの評価をしていた。StackGANでは行われていなかった気がするが、こういった評価は普通？
+          |また画像生成等の中間表現としてSemantic layoutを利用する研究が増えてきた。それゆえ物体の形状とインスタンス情報(この研究で言うところのBox generatorとshape generator)をよりスマートに取得または統合できればと感じる。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Hong_Inferring_Semantic_Layout_CVPR_2018_paper.html") paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 06:58:04

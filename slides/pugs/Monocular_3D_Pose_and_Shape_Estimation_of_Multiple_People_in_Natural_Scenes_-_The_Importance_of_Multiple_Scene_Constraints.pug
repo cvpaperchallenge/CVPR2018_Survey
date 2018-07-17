@@ -1,0 +1,30 @@
++slide
+section#ID_Monocular_3D_Pose_and_Shape_Estimation_of_Multiple_People_in_Natural_Scenes_-_The_Importance_of_Multiple_Scene_Constraints
+  .paper-abstract
+    .title Monocular 3D Pose and Shape Estimation of Multiple People in Natural Scenes - The Importance of Multiple Scene Constraints
+    .info
+      .authors Andrei Zanfir, Elisabeta Marinoiu, Cristian Sminchisescu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Deep Multi-task Neural Networksにより複数人物の3次元姿勢+形状を推定する。直接的に画像のアピアランスから人物姿勢を推定するのみならず、環境の拘束条件や推定された関節情報からコンセンサスを取るように文脈を把握しながら（2次元や）3次元の姿勢+形状を決定していく。ビデオに拡張することも可能で、さらに自然環境下における高精度な人物姿勢推定も実行した。右図は処理フローを示す。初期段階では単一人物の姿勢推定と推定結果のフィードバックを行い、次に複数人物同時最適化を行い、最終的な複数人物の3次元姿勢とその形状を取得する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180709Mono3DPoseShapeEstimation.png`,alt="180709Mono3DPoseShapeEstimation")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 高精度に複数人物の3次元姿勢を推定するとともにその形状も復元可能にした点が貢献点である。さらに、モデルにおいても単一人物/複数人物/環境に関する拘束条件など文脈を把握することにより3次元姿勢や形状を推定した点にも新規性が認められた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 単眼カメラからのモーキャプまでもう少し？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zanfir_Monocular_3D_Pose_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 08:46:45
