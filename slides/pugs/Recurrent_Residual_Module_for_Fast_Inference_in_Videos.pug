@@ -1,0 +1,30 @@
++slide
+section#ID_Recurrent_Residual_Module_for_Fast_Inference_in_Videos
+  .paper-abstract
+    .title Recurrent Residual Module for Fast Inference in Videos
+    .info
+      .authors Bowen Pan, Wuwei Lin, Xiaolin Fang, Chaoqin Huang, Bolei Zhou, Cewu Lu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 高速に動画処理をできるようにするRecurrent Residual Module（RRM）を提案。計算時間を大幅に削減するために、連続するフレーム間で畳み込みによる特徴マップを共有。AlexNetやResNet等と比較すると約2倍は高速であり、ベースラインであるDenseModelと比較すると8--12倍は高速であった。それだけでなく、XNORNetsなどの圧縮モデルにしても9倍高速であることが判明。この枠組みを用いて姿勢推定や動画物体検出のタスクに適用。右図は提案であるRRMの構造を示している。DenseConvolutionは最初のフレームのみであり、後続のフレームは差分の把握とSparseConvolutionによりforwardを実行。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180716RecurrentResidualModule.png`,alt="180716RecurrentResidualModule")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 一番の新規性は動画の連続フレーム間でパラメータを共有して高速かを図るRecurrent Residual Module（RRM）である。同枠組みを姿勢推定や動画物体検出に使用して高精度な推論を実現した。動画物体検出ではYOLOv2+RRMにて61.1@Youtube-BB、姿勢推定ではrt-Pose+RRMにて46.2@MPII-Poseを達成し、ベースラインから精度をほぼ落とさずに高速な処理を実行。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 汎用的に高速化が狙える枠組みの提案は重要。構造に依存しないフレームワークという点がよい！
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Pan_Recurrent_Residual_Module_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 19:45:55
