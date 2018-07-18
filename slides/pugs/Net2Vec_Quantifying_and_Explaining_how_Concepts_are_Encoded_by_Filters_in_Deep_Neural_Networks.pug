@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Net2Vec_Quantifying_and_Explaining_how_Concepts_are_Encoded_by_Filters_in_Deep_Neural_Networks
+  .paper-abstract
+    .title Net2Vec: Quantifying and Explaining how Concepts are Encoded by Filters in Deep Neural Networks
+    .info
+      .authors Ruth Fong, Andrea Vedaldi
+      .paper_id CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 学習済みネットワークの中間層が学習したセマンティックコンセプトを可視化及び統計分析を行う．更にNetwork Dissectionと比較して，一つ一つのフィルタではなく，フィルタの線形コンバインが表せるセマンティックコンセプトを考察した．
+          li CVPR2017論文Network Dissectionが学習済みモデルの各々の中間層フィルタが学習したセマンティックコンセプトについて可視化・統計考察を行った．その結果，各々のフィルタが習得したコンセプトが少ないことから，フィルタの線形コンバインがより豊かなセマンティックコンセプトを表していることを推定し，更にそれを用いてNetwork Dissectionより良い可視化・分析を行う．手法としては，セマンティックコンセプトをfilter responsesのvectorial embeddingにマッピングするネットワークNet2Vecを提案した．セマンティックセグメンテーションタスクによりNet2Vecを学習．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Net2Vec.png`,alt="Net2Vec")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案手法によりmulti-filterの線形結合がNetwork Dissectionに提出したsingle filterより遥かにセマンティックコンセプトを表示できる(IoU)．
+          li いくつか面白い発見があった．①ほとんどの場合，single filterではなくコンセプトがmulti-filtersにより線形表示できる．② filterが一つのコンセプトだけではなく，いくつかのコンセプトを同時に表せることが多い．(いくつかのコンセプトの線形成分の一つに入る)③single filterよりmulti-filterの線形表示によりmeaningfulなコンセプトを表示でき，また異なるconcept間の関係も表示できる
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p Network dissectionと比べ変動がかなり少ない（研究対象を学習済みモデルのfilter->multi filterの線形表示），行った実験もほとんど類似している．
+          li
+            p 提案手法とNetwork dissectionを利用して，学習状態の確認分析が行いやすくなる．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4217.pdf") 論文
+          li
+            p
+              a(href="https://github.com/ruthcfong/net2vec") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 20:27:44

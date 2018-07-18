@@ -1,0 +1,27 @@
++slide
+section#ID_Interactive_Image_Segmentation_with_Latent_Diversity
+  .paper-abstract
+    .title Interactive Image Segmentation with Latent Diversity
+    .info
+      .authors Zhuwen Li, Qifeng Chen, Vladlen Koltun
+
+    .item1
+      .text
+        h1 概要
+        p より少ないインタラクションで高精度なInteractive Image Segmentationを行う論文。インタラクションが少ない場合に発生する曖昧さ（multimodality）の問題に取り組んだ。また従来の手法と同様のインターフェースと互換性のあるシステムとなるような設計を行った。実験では、従来手法より少ないクリック回数で良い精度のセグメンテーションを得ることができるようになった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Interative_Image_Segmentation_with_Latent_Diversity.png`,alt="")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ネットワーク構造はユーザの入力を考慮した複数の異なるセグメンテーション結果を出力するネットワークとそれらから１つのセグメンテーション結果を選択するネットワークで構成される。複数のセグメンテーション結果をランク付けし、それに伴った重み付けを行った損失関数を用いる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Interactive_Image_Segmentation_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 17:34:28

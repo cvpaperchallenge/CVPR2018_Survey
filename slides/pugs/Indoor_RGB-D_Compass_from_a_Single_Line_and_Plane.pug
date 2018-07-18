@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Indoor_RGB-D_Compass_from_a_Single_Line_and_Plane
+  .paper-abstract
+    .title Indoor RGB-D Compass from a Single Line and Plane
+    .info
+      .authors Pyojin Kim, Brian Coltin, H. Jin Kim,
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Manhattan World(MW)の１つの直線及び平面からRGB-Dカメラの3自由度3DoFを推定する手法の提案．
+          li 従来のカメラ3DoF推定手法は少ない平面しか観測されてないシーンに対して，推定がうまくできない場合が多い．このような問題点を対応するため，1つの平面(depth mapから推定)及び1つの線(RGBから推定)しか観測されていない場合でも3DoFを推定できる手法を提案した．
+          li 具体的プロセス：①RGB,Depth画像から直線・平面を検出；②theoretical minimal samplingの線・平面により初期カメラ3DoFを推定;③直線グループのendpointsとMW axesまでの平均orthogonal距離を最小化することで，カメラ3DoFを精密化する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}RGBDCompass-SingleLinePlane.png`,alt="RGBDCompass-SingleLinePlane")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来の3DoF推定手法はスパースな観測(少ない平面しか観測されない)などの場合でうまく行えない．提案手法は一つの平面及びRGBから観測できる直線だけで3DoF推定を行える．また，camera driftに対してロバストである．
+          li ICLNUIM,TUM RGB-Dデータセットで提案手法はSoTAな精度を達成し，また従来手法よりロバストで安定した検出ができる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p DNNを用いないカメラ姿勢推定の手法を紹介した．伝統的手法及びDNNを用いた手法のロバスト性の比較に関する実験が期待している．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3630.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 14:19:17
