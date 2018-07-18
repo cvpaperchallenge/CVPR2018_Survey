@@ -1,0 +1,39 @@
++slide
+section#ID_Optimal_Structured_Light_La_Carte
+  .paper-abstract
+    .title Optimal Structured Light à La Carte
+    .info
+      .authors P. Lei et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        Structured Light方式の3次元計測で用いるプロジェクタの投影パターンの最適化を行う手法を提案．
+        従来は経験的なもので決められていることが多かったが，
+        それに対して提案手法は目的関数を定義することで最適な投影パターンを求めることを可能にしている．
+        投影パターン数をK，エピポーラ線上の画素数をNとして，
+        K×Nの行列であるCode Matrix Cを求める定式化をしている．
+        Cを使ったときのステレオマッチングの誤差が目的関数．
+  
+    .item2
+      img(src=figpath+"Optimal_Structured_Light_La_Carte.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li プロジェクタの投影パターンを最適化するための手法を提案
+          li 計算的に投影パターンをその場で決定することを可能にした
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Mirdehghan_Optimal_Structured_Light_CVPR_2018_paper.html") 論文
+          li 馴染みのない分野なので具体的な中身はそこまでわかっていないです...
+          li 目的関数の中に，画素qに対する真のステレオ対応の点が入っているけど，それが既知な情報になっているのがよくわからない
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 13:14:05
+
+

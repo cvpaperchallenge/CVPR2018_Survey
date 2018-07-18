@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Language-Based_Image_Editing_with_Recurrent_attentive_Models
+  .paper-abstract
+    .title Language-Based Image Editing with Recurrent attentive Models
+    .info
+      .authors Yelong Shen, Jianbo Chen, Jianfeng Gao, JingJing Liu, Xiaodong Liu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 新たなタスク:言語ベースな画像編集(Input descriptionによりInput画像を編集)を提案した．また，2種類のサブタスク：①画像セグメンテーション②画像colorizationを取り扱える通用的フレームワークを提案した．
+          li 提案ネットワークのコアなところは：recurrent attentiveモデルにより画像と言語特徴をfuseし，fixed stepではなく画像リージョンごとにダイナミックで編集を続くかどうかを決めるtermination gateを用いる．また，2種類のサブタスクに対し同じフレームワークを用いられる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}IBIE.png`,alt="IBIE")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新規な問題設定LBIE(言語ベースな画像編集)及び新規なCGデータセットCoSaL(人工言語付き形状着色)の提案．
+          li 3つのデータセットで提案手法の有効性を示した． CoSaLにより提案end-to-endのネットワークの有効性を示し，ReferItデータセットでSoTAな言語ベースな画像セグメンテーションの精度を達成し、Oxford 102 Flowersデータセットにおいて初めての言語ベースなcolorizationを実現した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p Language-and-Visionには様々な応用分野がある．基本的なLanguage-and-Visionモデルを熟練したら，ほかの分野への応用もしやすいと感じた．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1956.pdf") 論文
+          li
+            p
+              a(href="https://www.jianbochen.me/files/poster_LBIE.pdf") ポスター
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 14:31:13
