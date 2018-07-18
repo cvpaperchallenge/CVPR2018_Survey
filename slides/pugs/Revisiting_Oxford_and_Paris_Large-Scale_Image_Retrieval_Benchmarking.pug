@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Revisiting_Oxford_and_Paris_Large-Scale_Image_Retrieval_Benchmarking
+  .paper-abstract
+    .title Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking
+    .info
+      .authors Filip Radenovic, Ahmet Iscen, Giorgos Tolias, Yannis Avrithis, Ondrej Chum
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 画像検索用benchmarks:Oxford 5k, Paris 6kに対し，修正・サイズ拡大・評価方法を加え，新たなbenchmarks: Roxford, Rparis, R1M を提案した．
+          li 従来の画像検索用benchmarksが①アノテーションエラーが含め②データセットサイズが小さい③現在の方法がOxford 5k, Paris 6kに対し完璧な結果を得られるので，quantitative evaluationができないの3つの問題点を指摘した．それぞれに対し①gtの信頼度付きの新たなアノテーションを追加し②Oxford 100k distractor setなどのdistractor setを追加し，データセットのサイズ・難易度を大きくした③更に3種類の新たなevaluation protocolsを提案し(Easy,Medium,Hard)，異なる手法にたい公平的な比較を可能にした．
+    .item2
+      .text
+        p
+          img(src=`${figpath}LargeScale-ImageRetrievalBenchmarking.png`,alt="LargeScale-ImageRetrievalBenchmarking")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像検索用benchmarksに対し徹底的な問題分析・再アノテーション・評価指標の増加などを行った．
+          li 新たなbenchmarksに対し従来のfeature based, CNN basedな画像検索手法の評価を行った．評価結果により，CNN + feature basedな手法が最も良い精度を達成した．また，新たなbenchmarksに対し現在の画像検索方法はまた精度向上の余地があると指摘した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 大規模画像検索用データセットをほかのタスクにも用いられそう．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2730.pdf") 論文
+          li
+            p
+              a(href="https://github.com/filipradenovic/revisitop") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 20:09:31
