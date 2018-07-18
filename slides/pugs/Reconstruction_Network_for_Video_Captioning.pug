@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Reconstruction_Network_for_Video_Captioning
+  .paper-abstract
+    .title Reconstruction Network for Video Captioning
+    .info
+      .authors Bairui Wang, Lin Ma, Wei Zhang, Wei Liu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Encoder-decoder-reconstructor構造のビデオキャプションネットワークRecNetを提案した．ビデオからのキャプション生成とキャプションからビデオrepresentationをreconstruction両方利用した．
+          li 従来のビデオキャプション手法はencoder-decoderによりforwardでビデオからキャプションを生成．生成キャプションのセマンティック情報が利用されなかった．しかし，翻訳などの分野でdual情報がすでに利用されている．そのため，forwardのビデオカラのキャプション生成のencoder-decoder及びbackwardキャプションからのビデオrepresentation復元の-reconstructor構造を用いた手法を提案した．Encoderと類似したvideo representationを復元するのが-reconstructorの目標で，encoder-reconstructorのreconstruction lossesを用いてend-to-endで実現できる．
+          li また，local, globalなvideo representationを生成できる2種類のreconstructor構造を提案した
+    .item2
+      .text
+        p
+          img(src=`${figpath}ReconstructionNetwork-VideoCaptioning.png`,alt="ReconstructionNetwork-VideoCaptioning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新たなencoder-decoder-reconstructor構造のビデオキャプション手法の提案．Reconstructor-video encoder間のreconstruction lossを利用し，ネットワークをend-to-end可能にした．また，backwardキャプションからのビデオ特徴reconstructすることにより，更にinformativeなビデオ特徴抽出を可能にした．
+          li MSR VTT, MSVDの2種類のデータセットで従来のencoder-decoder video captioning手法より良い性能を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p Dual-taskを利用して，精度向上を図る手法が多そう
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2662.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 20:21:11
