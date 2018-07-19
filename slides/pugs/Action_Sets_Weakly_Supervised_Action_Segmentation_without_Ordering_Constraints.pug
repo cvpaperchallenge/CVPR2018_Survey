@@ -1,0 +1,37 @@
++slide
+section#ID_Action_Sets_Weakly_Supervised_Action_Segmentation_without_Ordering_Constraints
+  .paper-abstract
+    .title Action Sets: Weakly Supervised Action Segmentation without Ordering Constraints
+    .info
+      .authors Alexander Richard, Hilde Kuehne, Juergen Gall
+      .conference CVPR 2018
+      .paper_id 1284
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 動画のaction labelingとactionごとのtemporal segmentationをactionラベルと確率モデルによる弱教師学習で行う手法を提案。既存研究では弱教師とはいえほとんどの手法ではactionの順序は与えられていたが、提案手法ではactionラベルのみを用いる。手法は大きく3つに分けられ、context modelによる起こりうるactionの順序の推定、length modelによるactionのtemporal segmentation、multi-task learningによる各actionラベルの推定からなる。context modelの構築方法として以下の3つを検証。1)Naive Grammer、2)Monte-Carlo Grammer：行動が様々な順番で並び替えられた動画を学習3)：Text-Based Grammer：ネット上の本やレシピなどのテキストを利用して順番を学習する。length modelでは以下の2つを検証。1) Naive Approah：全ての行動クラスが一様に同じ時間的長さをもつ、2)Loss-based：行動クラスごとに時間的長さが異なるため、行動クラスごとの平均値を求める。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Action_Sets_Weakly_Supervised_Action_Segmentation_without_Ordering_Constraints.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Breakfast dataset(48クラス)、MPII Cooking 2(67クラス)、Hollywood Extended(16クラス)で実験
+          li context model, length modelのそれぞれの方法の有効性を確認。context modelではmonte-carloとtext-basedの精度が高く、length modelではloss basedの方が精度が高い。
+          li Breakfasta datasetでは23.3%、MPII Cooking 2では10.6%、Hollywood Extendedでは9.3%となり、行動の順序を教師として持つ手法と比べて10%程度精度が落ちなかった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 使用しているデータベースがBreakfastの精度が高いのは、朝食で行う行動の順序はある程度決まっているから？
+          li 完全教師ありの手法ではBreakfast datasetで55%の精度。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1284.pdf") 論文
+          li
+            a(href="https://github.com/alexanderrichard/action-sets") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 01:02:30

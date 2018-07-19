@@ -1,0 +1,35 @@
++slide
+section#ID_Dynamic-structured_Semantic_Propagation_Network
+  .paper-abstract
+    .title Dynamic-structured Semantic Propagation Network
+    .info
+      .authors Xiaodan Liang et al.
+      .conference CVPR2018
+      .paper_id 1803.06067
+    .slide_editor TakumuIkeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li セマンティックセグメンテーションの新たな手法としてDynamic-Structured Semantic Propagetion Network(DSSPN)を提案した．
+          li DSSPNは意味的概念階層をネットワークと結合することでsemantic neuron graphを構築する
+          li それぞれのneuronは食品などのスーパークラスまたはピザのような特定の種類の物体を認識するためのインスタンス化されたモジュールを表現している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}dynamic_graph.PNG`,alt="dynamic_graph.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 4つの公開されているセマンティックセグメンテーションデータセット（ADE20K、COCO-Stuff、Cityscape，Mapillary）を用いて評価実験を行い、最先端のセグメンテーションモデルと比較してDSSPNの優位性を実証した．
+          li 意味的階層を持つネットワークモジュールを明示的に構築している点で新しい.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.06067.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 22:19:17
