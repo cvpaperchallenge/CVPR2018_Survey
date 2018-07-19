@@ -1,0 +1,39 @@
++slide
+section#ID_End-to-end_Recovery_of_Human_Shape_and_Pose
+  .paper-abstract
+    .title End-to-end Recovery of Human Shape and Pose
+    .info
+      .authors Angjoo Kanazawa, Michael J. Black, David W. Jacobs, Jitendra Malik
+      .conference CVPR 2018
+      .paper_id 890
+    .slide_editor OKIMOTO Yusuke
+
+    .item1
+      .text
+        h1 概要
+        p 人物を含む画像から人物の3Dメッシュをend-to-endで推定するframeworkの提案．画像中の人物のキーポイントがアノテーションされたデータと，人物の3Dモデルのパラメータのデータを用い，推定した3Dモデルを画像に投影した際におけるキーポイントの誤差と，3Dモデルが画像から推定したものか，人物の3Dモデルのデータセットから持ってきたものかを識別するDiscriminatorのAdversarial lossの２つを損失関数として学習を行う．Adversaial Lossは，推定した3Dモデルが人物の3Dモデルと自然かどうかの弱教師として働く．
+    .item2
+      .text
+        p
+          img(src=`${figpath}End-to-End_Recovery_of_Human_Shape_and_Pose.png`,alt="overview_image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 人物のメッシュ推定における一般的な評価データセットは存在しないため，他手法との比較は主に人体の関節推定とpart segmentationで行う．この２つのタスクにおいては既存手法とcompetitiveな性能．
+          li 人物の3Dモデルの自然さについての情報を与える，推定した3Dモデルか既存の3Dモデルか識別するdiscriminatorの導入．これにより，直接の教師データが大規模には存在していない，画像からの人物の3Dモデルというタスクに置いて，2Dの人物のキーポイントのデータと，人物の3Dモデルのデータという，それぞれ独立なデータセットを用い，end-to-end推定を行うネットワークを学習させることを可能にした
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 上手にDiscriminatorを設計することで，互いにはunpairな複数の大規模データセットを用いるというアイデイアは，他のタスクでも有用だと思われる．
+          li メッシュ推定というタスクという意味でNeural 3D Renderer(H. Kato et al, CVPR2018)とも関係
+        ol
+          li
+            a(href="https://arxiv.org/abs/1712.06584") 論文
+          li
+            a(href="https://github.com/akanazawa/hmr") code
+          li
+            a(href="http://hiroharu-kato.com/projects/neural_renderer.html") Neural 3D Mesh Renderer紹介ページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 17:37:21
