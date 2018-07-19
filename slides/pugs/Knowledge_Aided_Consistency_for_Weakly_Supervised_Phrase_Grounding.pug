@@ -1,0 +1,37 @@
++slide
+section#ID_Knowledge_Aided_Consistency_for_Weakly_Supervised_Phrase_Grounding
+  .paper-abstract
+    .title Knowledge Aided Consistency for Weakly Supervised Phrase Grounding
+    .info
+      .authors Kan Chen, Jiyang, Gao Ram Nevatia
+      .conference CVPR 2018
+      .paper_id 589
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p phrase groundingを弱教師学習で行う際に、検出された領域と入力された名詞句から推定されるオブジェクトとのvisual consistencyを使用するKnowledge Aided Consistency Network (KAC Net)を提案。phrase groundingとは入力名詞句に相当するオブジェクトを画像中から検出するタスクである。既存手法では検出されたオブジェクトから名詞を推定し直すlanguage consistencyを用いていたが、提案手法ではlanguage consistencyとvisual consistencyの両方を用いる。具体的には、いくつかのカテゴリにおける画像識別をプリトレインしておくことで、オブジェクトの検出精度を高めることができ、かつ言語と画像の対応精度も高くなる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Knowledge_Aided_Consistency_for_Supervised_Phrase_Grounding.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像識別のプリトレーニングを用いてphrase groundingを弱教師学習で行う手法を提案。
+          li 2つのgroundingデータセットFlickr30K EntitiesとReferit Gameで評価。それぞれで38.71%(9.78%の向上)、、15.83%(5.13%の向上)の精度が向上しSoTAを達成。
+          li 特に人に対する精度が高い。一方で、名詞句(e.g. A man is taking a photo of another man and his two dogs on some grassy hills)を入力するよりも名詞単体(e.g. a man)を入力した方が精度が落ちた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li MS COCO（90カテゴリ）とPASCAL VOC2007（20カテゴリ）で画像識別をプリトレーニング。MS COCOでプリトレーニングした方が若干精度が高い。
+          li 識別ではなく検出をプリトレーニングすると制度は上がる？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0589.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/0589-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 00:53:26
