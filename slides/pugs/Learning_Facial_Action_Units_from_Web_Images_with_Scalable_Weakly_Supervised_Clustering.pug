@@ -1,0 +1,33 @@
++slide
+section#ID_Learning_Facial_Action_Units_from_Web_Images_with_Scalable_Weakly_Supervised_Clustering
+  .paper-abstract
+    .title Learning Facial Action Units from Web Images with Scalable Weakly Supervised Clustering
+    .info
+      .authors Kaili Zhao, Wen-Sheng Chu, Aleix M. Martinez
+      .conference CVPR 2018
+      .paper_id 237
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 弱弱教師によるスペクトルクラスタリングによってembedding空間を再形成し、アノテーションを貼り直すことで顔のaction unitの手法を提案。提案手法ではネット上の画像とそのアノテーションを使用することで、画像の見た目とアノテーションのどちらも考慮した手法を提案。教師ありの手法ではどちらか一つの要素しか考慮できず、弱教師だとノイズや外れ値の影響を受けてしまうが、提案手法ではどちらも要素も考慮する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Facial_Action_Units_from_Web_Images_with_Scalable_Weakly_Supervised_Clustering.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li F1 score, S scoreで結果を比較、AlexNet、DRML、GFK、LapSVM、TSVMを用いて検証
+          li そのままのアノテーションを使用するよりも高い精度を達成した。
+          li 教師あり学習と同程度の精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0237.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 00:17:13

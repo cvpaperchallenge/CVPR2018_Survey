@@ -1,0 +1,33 @@
++slide
+section#ID_CLEAR_Cumulative_LEARning_for_One-Shot_One-Class_Image_Recognition
+  .paper-abstract
+    .title CLEAR: Cumulative LEARning for One-Shot One-Class Image Recognition
+    .info
+      .authors Jedrzej Kozerawski and Matthew Turk
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Positiveデータが1枚のみであり、Negativeデータが存在しないOne-Shot One-Class(OSOC)問題を解く方法としてCulmulative LEARning(CLEAR)を提案した。
+          |人間が学習する際、同じことを何度も繰り返すこと、似たような技能を既に修得している場合はそうでない場合よりも上達が早いことに着目した。
+          |学習済みの特徴抽出器から得られた画像特徴より、識別の境界を決定するネットワークによって識別器を構築する。
+          |学習の際には、ImageNetから取って来た1枚の画像に対して境界を決定し、その画像が得られた境界によって正しく識別できているかを見ることで学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}CLEAR_Cumulative_LEARning_for_One-Shot_One-Class_Image_Recognition.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 5種類のデータセット(Caltecb-256, Oxford Flowers, Caltech-UCSD Bird-200-2011, MIT Indoor scene recognition and SUN attribute database)で実験した。
+          |実験の結果、MAP及びF1の指標がランダム出力、One-ClassSVMと比べ精度が良いことを確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Kozerawski_CLEAR_Cumulative_LEARning_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.15 16:53:02

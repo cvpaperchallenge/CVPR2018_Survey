@@ -1,0 +1,38 @@
++slide
+section#ID_Efficient_parametrization_of_multi-domain_deep_neural_networks
+  .paper-abstract
+    .title Efficient parametrization of multi-domain deep neural networks
+    .info
+      .authors Sylvestre-Alvise Rebuffi, Hakan Bilen, Andrea Vedaldi
+      .conference CVPR 2018
+      .paper_id 3009
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p マルチドメインな学習を行うために、少量のドメインに固有なDNNのパラメタを学習する手法を提案。既存手法のresidual adaptorと呼ばれるドメインに固有なパラメタを学習する機構を改良しており、提案手法ではドメインごとに学習すべきパラメタが普遍特徴量に対するバイアス項となっている。既存研究のモデルでは不変特徴量に対する係数となっているので、提案手法の方がより学習が容易になっている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Efficient_parametrization_of_multi-domain_deep_neural_networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 10の異なるデータセットからなるVisual Decathlonを用いて検証。ImageNetでプリトレーニングしたResNetに対し得てVisual Decathlonデータセットを学習する。
+          li top-1 classification、decathlon scoreと呼ばれるマルチドメインに対する評価尺度においてSoTA。
+          li 学習し直す際にかかる時間がファインチューニングの5分の1となった。
+          li 他のデータセットに対する転移学習において、ターゲットとなるデータセットのデータ量が少ない場合にも既存手法と同等かつファインチューニングよりも良い精度を達成。
+          li residual adaptorの位置、有効なregularizationについても検証。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 具体的にパラメタ数はどれくらい減る？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3009.pdf") 論文
+          li
+            a(href="https://github.com/srebuffi/residual_adapters") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:03:34

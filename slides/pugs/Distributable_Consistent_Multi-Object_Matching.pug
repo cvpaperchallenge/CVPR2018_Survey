@@ -1,0 +1,40 @@
++slide
+section#ID_Distributable_Consistent_Multi-Object_Matching
+  .paper-abstract
+    .title Distributable Consistent Multi-Object Matching
+    .info
+      .authors N. Hu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        多物体のマッチングを行うための新たなフレームワークを提案．
+        このようなマッチングにおいては循環制約というものが重要になるが，
+        それを満たす対応を求めると物体数に対してscalableなアルゴリズムとするのが難しい．
+        提案手法のポイントは物体の集合全体で制約を満たすようにするんじゃなくて，
+        重なりのある部分集合に分けてそれぞれで制約を満たすように扱うというもの．
+        部分集合に対して制約が満たされているときにグローバルにも制約が満たされる条件を定義して，
+        それに沿うように部分集合を選ぶようにしている?
+        SOTAに匹敵する精度でありながら高速なマッチングを実現．
+  
+    .item2
+      img(src=figpath+"Distributable_Consistent_Multi-Object_Matching.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 循環制約を満たす多物体のマッチングにおける新しいアプローチを提案
+          li SOTAレベルのマッチング精度でありながら非常に高速な動作を実現
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Distributable_Consistent_Multi-Object_CVPR_2018_paper.html") 論文
+          li 図は，一番下が提案手法で，黄色が正しい，青色が間違ったマッチング
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 13:37:54
+
+
