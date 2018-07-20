@@ -1,0 +1,30 @@
++slide
+section#ID_Harmonious_Attention_Network_for_Person_Re-Identification
+  .paper-abstract
+    .title Harmonious Attention Network for Person Re-Identification
+    .info
+      .authors Wei Li, Xiatian Zhu, Shaogang Gong
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 本論文では人物再同定（Person Re-identification; ReID）においてアテンション機能を用いてbbox中からより良く人物特徴を評価できるような構造とした。従来のReIDはよくも悪くもbbox中から特徴量を抽出しているため、余分な領域が発生して背景特徴が混在したり、人物検出に失敗すると必要な情報が欠落する欠点があった。提案ではHarmonious Attention CNN（HA-CNN）を提案してゆるくピクセルごとに評価（soft pixel attention）と強めに領域を評価（hard regional attention）
+    .item2
+      .text
+        p
+          img(src=`${figpath}180719HarmoniousAttentionNetwork.png`,alt="180719HarmoniousAttentionNetwork")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ReIDのためのアテンション機能を実装したネットワークHA-CNNを提案。CUHK03, Market-1501, DukeMTMC-ReID datasetにてState-of-the-art。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ReIDは特に研究が早く、前のSOTAがひとつの国際会議で何件も越される状況になっている。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Harmonious_Attention_Network_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 00:49:28
