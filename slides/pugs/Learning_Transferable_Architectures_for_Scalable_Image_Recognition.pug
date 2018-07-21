@@ -1,0 +1,41 @@
++slide
+section#ID_Learning_Transferable_Architectures_for_Scalable_Image_Recognition
+  .paper-abstract
+    .title Learning Transferable Architectures for Scalable Image Recognition
+    .info
+      .authors Barret Zoph, Vijay Vasudevan, Jonathon Shlens, Quoc V. Le
+      .conference CVPR 2018
+      .paper_id 3298
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 各データセットに対して最も有効なCNNを構築する手法NASNetを提案。大規模なデータセットを扱う際にはそのまま学習するのではなく、小規模なデータセットで学習したアーキテクチャを用いてスクラッチで学習する。論文では小規模なデータセットとしてCIFAR-10、大規模なデータセットとしてImageNetを使用している。
+          a(href="https://arxiv.org/abs/1611.01578") NAS
+          |と呼ばれるアーキテクチャ探索手法を用いてCNNの各ブロックを構築しており、CNN全体を構築するよりも7倍速く構築することができると主張。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Transferable_Architectures_for_Scalable_Image_Recognition.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 既存の手法とは異なり、小規模なデータセットを学習することで得られたアーキテクチャをそのまま大規模なデータセットに適用することができること。
+          li 画像識別においてCIFAR-10ではエラー率2.4%を達成し、SoTA。ImageNetではパブリッシュされた論文におけるSoTAである82.7% top-1 and 96.2% top-5となり、人間が構築したモデルよりも高い精度を達成した。
+          li NASNetから得られる特徴量を物体検出に用いた結果、COCOで43.1% mAPを達成し、Faster-RCNNよりも4.0%高い精度となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 500GPUで4日間かかるらしい。(それでもアーキテクチャ全体を探索するよりは7倍速い)
+          li
+            a(href="https://arxiv.org/abs/1611.01578") NAS
+            |は主著が同じであるからか、NASについて詳しい説明がなかったのは元論文を読んでね、ということ？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3298.pdf") 論文
+          li 
+            a(href="https://arxiv.org/abs/1611.01578") ソース論文：NEURAL ARCHITECTURE SEARCH WITH REINFORCEMENT LEARNING
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 22:57:47
