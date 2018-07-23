@@ -1,0 +1,38 @@
++slide
+section#ID_CNN_in_MRF_Video_Object_Segmentation_via_Inference_in_A_CNN-Based_Higher-Order_Spatio-Temporal_MRF
+  .paper-abstract
+    .title CNN in MRF: Video Object Segmentation via Inference in A CNN-Based Higher-Order Spatio-Temporal MRF
+    .info
+      .authors Linchao Bao, Baoyuan Wu, Wei Liu
+      .conference CVPR 2018
+      .paper_id 1249
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p ターゲットオブジェクトの初期フレームのマスクが与えられた状態で、動画内のターゲットオブジェクトに対するセグメンテーションをMarkov Random Field (MRF)とCNNを組み合わせて行う手法を提案。CNNを用いた従来の手法では各フレームごとに対してのみしか処理できなかったことに対し、提案手法ではCNNによってエンコードされる空間特徴量をMRFに利用する。また、時間的な情報をもつオプティカルフローを用いることでさらなる精度を向上を達成。
+    .item2
+      .text
+        p
+          img(src=`${figpath}CNN_in_MRF_Video_Object_Segmentation_via_Inference_in_A_CNN-Based_Higher-Order_Spatio-Temporal_MRF.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li データセットごとにファインチューニングを行っていないにも関わらず、多くの設定でSoTA、あるいはSoTAと同等な精度を達成。
+          li appearance-based one-shot segmentation CNNで初期化した場合には、DAVIS 2017 Challengeの優勝モデルよりも高い精度をもつ。
+          li DAVIS 2017, DAVIS 2016, Youtube-Objects, SegTrack v2で実験。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1249.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/CVPR2018.py") Supplementary material 
+            |(CVPR 2018 open access、該当箇所をクリックするとzipのダウンロードが行われます)
+          li
+            a(href="https://arxiv.org/abs/1611.05198") 参考 One-shot video object segmentation (appearance-based one-shot segmentation CNN)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 07:12:21
