@@ -1,0 +1,37 @@
++slide
+section#ID_Non-Linear_Temporal_Subspace_Representations_for_Activity_Recognition
+  .paper-abstract
+    .title Non-Linear Temporal Subspace Representations for Activity Recognition
+    .info
+      .authors S. Vasu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        人物行動認識などの多変数時系列データを扱うための新たなPooling手法を提案．
+        従来はRank Poolingで時系列情報を保持したPoolingがされていたが，
+        ユークリッド空間が仮定されていたり，線形のランク制約が使われていたりと問題があった．
+        そこで，この研究ではKernelized Rank Poolingを提案し，
+        無限次元のKernel Hilbert Spaceにマッピングした上でのPoolingを実現している．
+        RGB動画や人物スケルトンデータを用いた行動認識タスクに置いてSOTAを達成．
+  
+    .item2
+      img(src=figpath+"Non-Linear_Temporal_Subspace_Representations_for_Activity_Recognition.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Rank Poolingをカーネル化して時系列データのPoolingにおいて非線形な扱いを実現
+          li 複数のデータセットでSOTAを達成
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Cherian_Non-Linear_Temporal_Subspace_CVPR_2018_paper.html") 論文
+          li データセットのチョイスがちょっと謎で，UCF-101くらい結果出して欲しかった感がある．やったけどだめだったのか?と疑ってしまう．
+          li HMDB-51でTwo-stream I3Dに勝ったとしているが，KineticsでのPretrainingをなしにした場合の結果で比較した時の話．
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 14:11:55
