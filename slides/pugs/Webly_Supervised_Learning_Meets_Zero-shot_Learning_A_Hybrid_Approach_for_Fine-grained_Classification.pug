@@ -1,0 +1,37 @@
++slide
+section#Webly_Supervised_Learning_Meets_Zero-shot_Learning_A_Hybrid_Approach_for_Fine-grained_Classification
+  .paper-abstract
+    .title Webly Supervised Learning Meets Zero-shot Learning: A Hybrid Approach for Fine-grained Classification
+    .info
+      .authors Li Niu, Ashok Veeraraghavan, Ashutosh Sabharwal
+      .conference CVPR2018
+      .paper_id 949
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p 品種などの微妙な違いでカテゴリを区別されるような細かい画像のクラス分けは膨大なカテゴリ分けの高いコストにより難しいタスクとなっている．
+          |これにより起こるトレーニングデータの不足に対処する研究として以下の二点が存在する．
+          |(1)人のアノテーションが加わっていないフリーなウェブイメージを利用．
+          |(2)Zero-shot Learning(ZSL)を利用．
+          |しかし，(1)ではウェブイメージにラベルノイズ付きが多いこと，(2)ではZSLは未だに従来の学習に比べて精度が良くないという問題点が存在する．
+          |そこでウェブイメージと補助的なラベルデータを用いてトレーニングデータに関連付けられていないテストカテゴリを予測するフレームワークを提案した．
+          |評価にはZSLの評価にもよく使われる3つのデータセット，CNB, SUN, Dogsを使って評価している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Webly_Supervised_Learning_Meets_Zero-shot_Learning_flow.PNG`,alt="Item3Image")
+          img(src=`${figpath}Webly_Supervised_Learning_Meets_Zero-shot_Learning_result.PNG`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法（特にZSL）に比べ格段に精度が上昇している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Niu_Webly_Supervised_Learning_CVPR_2018_paper.html") CVPR2018 open access
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.3 20:31:30
