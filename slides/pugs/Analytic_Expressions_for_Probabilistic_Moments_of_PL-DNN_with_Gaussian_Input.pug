@@ -1,0 +1,44 @@
++slide
+section#ID_Analytic_Expressions_for_Probabilistic_Moments_of_PL-DNN_with_Gaussian_Input
+  .paper-abstract
+    .title Analytic Expressions for Probabilistic Moments of PL-DNN with Gaussian Input
+    .info
+      .authors Adel Bibi, Modar Alfadly, Bernard Ghanem
+      .conference CVPR 2018
+      .paper_id 487
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p (Affine, ReLU, Affine)から構成されるpiecewise linear (PL) network(e.g. LeNet)のガウシアンノイズに対する平均値と分散を解析することで、DNNの性質を調査した論文。理想的には出力される値の確率分布を観測したいがそれは難しいため、平均値と分散に対する解析をおこなう。実験の内容は以下の通り。また以下の実験を通してadversarial attackの生成法についても提案している。
+        ul
+          li 実験1：ランダムに重みが決定された総数のことなるfully connected net、fully convolutional netに対して分散が異なる3種類のガウシアンノイズから生成される7.5x10<sup>4</sup>サンプルの入力を計200回行った
+          li 実験2：LeNet+MNISTに対してガウシアンノイズから生成される7.5x10<sup>4</sup>サンプルの入力を計200回行った
+          li 実験3：AlexNet+ImageNetに対して、画像にVGG16’s universal noiseと、それに加えてガウシアンノイズを乗せた時のfooling rateの関係性を調査。
+          li 実験4：PL-Netの2つのAffineブロックにおけるlinearlizationパラメタの変化に対する、平均と分散の調査。
+    .item2
+      .text
+        p
+          img(src=`${figpath}../figs/Analytic_Expressions_for_Probabilistic_Moments_of_PL-DNN_with_Gaussian_Input.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 実験1、２、４より、様々な設定においてもPL-Netにおける出力と、モンテカルロ法によって計算される平均値と分散に強い正の相関関係が確認でき、PL-Netによる出力は狭い領域にあることを確認することができた。
+          li 実験3より、どちらの設定でもfooling rateがほとんど同じであったため、PL-Netの出力の平均値と分散からfooling rateを推測可能と主張。
+          li 実験1〜4の知見を元に、adversarial attackの生成方法を提案。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 実験3の結果からなぜこのように考察をできるのかがよくわからなかった。
+          li 実験3では分散が 10<sup>-4</sup>のガウシアンノイズが使用されているため、単にガウシアンノイズの影響が小さいという可能性があるのではないか？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0487.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/0487-supp.pdf") Supplementary material
+          li
+            a(href="https://arxiv.org/abs/1610.08401") 参考 Universal adversarial perturbations (universal noise)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 03:29:31
