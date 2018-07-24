@@ -1,0 +1,39 @@
++slide
+section#ID_Resource_Aware_Person_Re-identification_across_Multiple_Resolutions
+  .paper-abstract
+    .title Resource Aware Person Re-identification across Multiple Resolutions
+    .info
+      .authors Y. Wang et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        Person Re-IDでは単純な色とかだけで簡単に認証できる人もいれば，かなり高次の情報を使わないと難しい人もいる．
+        従来手法だとそのようなものを全部含めてCNNで高次特徴表現して使っているが，
+        それは無駄もあるので対象に合わせたレベルの表現を単一のモデルで行う手法を提案．
+        やっていることは単純で，ResNetの各ステージごとにGlobal Average Pooling & FCでベクトルを計算し，
+        ステージごとにLossを計算できるようにする．
+        これにより，途中のステージで十分近いサンプルが見つかるようなクエリは打ち切ることを可能にしている．
+  
+    .item2
+      img(src=figpath+"Resource_Aware_Person_Re-identification_across_Multiple_Resolutions.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 利用可能な計算資源を考慮したPerson Re-IDを実現
+          li 普通のRe-IDの設定でも，複数のデータセットでSOTAを達成
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Resource_Aware_Person_CVPR_2018_paper.html") 論文
+          li
+            | 手法は単純だし，実際イントロでStraightforwardな変更を追加，物体検出やセグメンテーションでは前からあるアイディア，
+            | とかネガティブ表現してる
+          li 計算資源考慮はUbicompとかだと前からよくあったけど，CV分野でも少しずつ増えてきている印象
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.24 09:51:43

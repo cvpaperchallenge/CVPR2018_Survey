@@ -1,0 +1,30 @@
++slide
+section#ID_Wing_Loss_for_Robust_Facial_Landmark_Localisation_With_Convolutional_Neural_Networks
+  .paper-abstract
+    .title Wing Loss for Robust Facial Landmark Localisation With Convolutional Neural Networks
+    .info
+      .authors Zhen-Hua Feng, Josef Kittler, Muhammad Awais, Patrik Huber, Xiao-Jun Wu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 顔に関するランドマーク検出を効果的に行うための誤差（に対する重み付け）関数WingLossを提案。L2,L1とSmoothL1と比較して、より小領域や中領域に対してアテンションをつけるべきというところから発想されており、（-w,w）。の区間でL1誤差からLog関数に切り替えるべきと主張。もうひとつの主張はData Imbalance（顔中心を境に左右どちらかが欠ける問題？）に対して、データ拡張（bboxを並進させるといった解決策）を用意。さらに確実性を高めるため、two-stepによるランドマーク検出を行った。データとしてはAFLWや300Wデータセットを適用した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180718WingLoss.png`,alt="180718WingLoss")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 誤差関数が重要と言われる深層学習の中で、顔ランドマーク検出の問題についてはあまり効果的な策がなかったが、本論文で提案するWingLossは打開策になると主張（従来のL2誤差ではアウトライアに対して弱い）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 良いと言われていた誤差関数、問題ごとに意外とよくないものもあるかも？一個一個調べて欲しい。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Feng_Wing_Loss_for_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 15:11:43
