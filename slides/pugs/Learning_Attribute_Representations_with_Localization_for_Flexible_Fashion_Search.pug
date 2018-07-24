@@ -1,0 +1,36 @@
++slide
+section#ID_Learning_Attribute_Representations_with_Localization_for_Flexible_Fashion_Search
+  .paper-abstract
+    .title Learning Attribute Representations with Localization for Flexible Fashion Search
+    .info
+      .authors Kenan E. Ak, Ashraf A. Kassim, Joo Hwee Lim, and Jo Yew Tham
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p
+          |ファッションアイテムを検索するネットワークとしてFashionSearchNetを提案した。
+          |FashionSearchNetは、クエリ画像に対して、襟の色のみ変えたものなど局所的なattributeを変えたものを検索することを実現する。
+          |入力のファッション画像に対して、各attributeが画像中のどの領域に存在するかを示すAttribute Activation Maps(AAMs)を得る。
+          |次に、AAMsより推定したROI内のconv5層の特徴を取得し、全結合層により各attributeを表す特徴量を得る。
+          |最後に各attributeの特徴を結合して4096次元の特徴ベクトルを得る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Attribute_Representations_with_Localization_for_Flexible_Fashion_Search1.png`,alt="Item3Image")
+          img(src=`${figpath}Learning_Attribute_Representations_with_Localization_for_Flexible_Fashion_Search2.png`,alt="Item4Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ベースラインの手法と比べ、FashionSearchNetは16%正確度が向上した。
+          |GPU計算の場合、60秒で1万枚の画像を処理することが可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Ak_Learning_Attribute_Representations_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 15:19:39
