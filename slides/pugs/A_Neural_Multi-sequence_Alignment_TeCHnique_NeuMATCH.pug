@@ -1,0 +1,39 @@
++slide
+section#ID_A_Neural_Multi-sequence_Alignment_TeCHnique_NeuMATCH
+  .paper-abstract
+    .title A Neural Multi-sequence Alignment TeCHnique (NeuMATCH)
+    .info
+      .authors Pelin Dogan, Boyang Li, Leonid Sigal, Markus Gross
+      .conference CVPR 2018
+      .paper_id 914
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 異なるデータ間同士のアラインメントを4つのLSTMモジュールで行うNeuMATCHを提案。one-to-oneやone-to-manyのアラインメントや、既存手法とは異なり、マッチングの順番が必ずしも時系列通りではないnon-monotonic alignmentを扱うことができる。提案手法では様々なデータを扱うことができるが、特に動画とそのストーリーのアラインメントを行う。提案ネットワークは動画のクリップごとの特徴量を持つLSTM (Video Stack)、ストーリーの各センテンスの特徴量を持つLSTM (Text Stack)、過去にどのようなアラインメントを行ったのかを記憶するLSTM (Action Stack)、過去にマッチングした動画クリップとセンテンスを記憶するLSTM (Matched Stack)の4つのモジュールからなる。提案手法の強みとして、Action StackとMatched Stackによって過去の情報を再利用すること（3番目の動画クリップには必ずセリフを対応させる、など）を主張している。また、動画とテキストのアラインメントに対するデータセットの構築も行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Neural_Multi-sequence_Alignment_TeCHnique_NeuMATCH.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li one-to-oneとone-to-manyの精度をHM-1、HM-2、本論文で構築したYouTube Movie Summaries (YMS) datasetデータセットで実験を行った結果、全ての設定においてSoTAを達成。
+          li Youtubeから集めた映画のクリップと対応する映画の要約テキストからなるYMS datasetを構築した。
+          li ablation studyにより、LSTMの4つのモジュールの有効性を確認した。特にaction stackが重要であった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 論文中でも主張しているが、アラインメントで特に難しいテキストにおいてSoTAを達成していることにインパクトがある。
+          li 精度はまだそれほど高くなく、one-to-oneでもYMSで12.0%、データセットの構築も行ってくれているため、まだまだ発展しそうな分野。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0914.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/0914-supp.pdf") Supplementary material
+          li
+            a(href="https://github.com/pelindogan/NeuMATCH") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 21:59:01
