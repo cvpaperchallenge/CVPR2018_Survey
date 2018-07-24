@@ -1,0 +1,34 @@
++slide
+section#ID_Deep_Group-Shuffling_Random_Walk_for_Person_Re-Identification
+  .paper-abstract
+    .title Deep Group-Shuffling Random Walk for Person Re-Identification
+    .info
+      .authors Yantao Shen, Hongsheng Li, Tong Xiao, Shuai Yi, Dapeng Chen, Xiaogang Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 従来の人物再同定（Person Re-identification; ReID）においてはProbe画像を入力として、Gallery画像内を探索してランクづけを行うことで探索を行う（P2G）。本論文では、Gallery同士の関連性（G2G）も含めて評価することでよりProbe自体の探索を強化させるためのGroup-Shuffling Random Walk Networkを提案。提案のネットワークはEnd-to-Endかつ単純な行列演算でG2Gの関連性からP2Gをより正確に推定するためのリファインメントを行う。特徴のグルーピングとグループのシャッフルを行うことでより良い人物特徴を学習可能とした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180718GroupShufflingRandomWalk.png`,alt="180718GroupShufflingRandomWalk")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 入力と検索画像群を比較するのみならず、検索画像群同士の関連性も記述しておくことで、ReIDのためのよりよい画像検索を実施することに成功した。特徴のグルーピング/ランダムシャッフルにより、より良い特徴評価を行えるように学習した。Market-1501,CUHK03,DukeMTMCデータセットにおいてState-of-the-art。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p SenseTimeが誇る44の研究のうちの一つ。CUHK-SenseTimeは（ひとつ前の会議の）自らの精度を打ち破ればState-of-the-artと言える。世界一である強みを活かしてこれからもどんどんReIDの論文を書いて欲しいと思う。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Deep_Group-Shuffling_Random_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://www.sensetime.jp/single-post/2018/05/15/CVPR-2018%E3%81%AB44%E6%9C%AC%E3%81%AE%E8%AB%96%E6%96%87%E3%81%8C%E6%8E%A1%E6%8A%9E") SenseTimeについて
+          li
+            a(href="http://www.ee.cuhk.edu.hk/~ytshen/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 20:47:20
