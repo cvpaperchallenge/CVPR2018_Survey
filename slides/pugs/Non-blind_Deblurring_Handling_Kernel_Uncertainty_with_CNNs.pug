@@ -1,0 +1,39 @@
++slide
+section#ID_Non-blind_Deblurring_Handling_Kernel_Uncertainty_with_CNNs
+  .paper-abstract
+    .title Non-blind Deblurring: Handling Kernel Uncertainty with CNNs
+    .info
+      .authors S. Vasu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        ブラーのカーネルが既知の状態でモーションブラーを除去するNon-blind Deblurring (NBD) における新手法を提案．
+        従来のブラー除去手法では，得られているブラーカーネルがノイジーな場合，
+        画像のPriorに対する重みを低くするとアーティファクトが多く出るし，
+        逆に高くすると細かい情報が欠損してしまうという性質がある．
+        しかしこれらは相補的に情報を持っていて，これらを組み合わせることできれいに画像を復元できるというのがアイディア．
+        提案手法では，まず従来手法で重みを変化させていくつもの復元画像を生成し，
+        これらの複数画像をCNNに入力して組み合わせることで最終的な復元画像を生成する．
+        これにより従来よりも良い復元画像を得ることに成功した．
+  
+    .item2
+      img(src=figpath+"Non-blind_Deblurring_Handling_Kernel_Uncertainty_with_CNNs.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li ブラーカーネルがノイジーな場合でも高品質なモーションブラーの除去を実現
+          li ノイジーなカーネルを人工的に生成することで大量の学習データを得ることに成功
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Vasu_Non-Blind_Deblurring_Handling_CVPR_2018_paper.html") 論文
+          li 最近の流れ的にEnd-to-Endでやっちゃおうとしていないのは少し意外
+          li 理論的にカッチリわかってるところはボトムアップにしないとかはあって良いとは思うけども
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 14:52:30

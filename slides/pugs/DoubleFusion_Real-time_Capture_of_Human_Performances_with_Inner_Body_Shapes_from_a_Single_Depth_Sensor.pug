@@ -1,0 +1,43 @@
++slide
+section#ID_DoubleFusion_Real-time_Capture_of_Human_Performances_with_Inner_Body_Shapes_from_a_Single_Depth_Sensor
+  .paper-abstract
+    .title DoubleFusion: Real-time Capture of Human Performances with Inner Body Shapes from a Single Depth Sensor
+    .info
+      .authors Tao Yu, Zerong Zheng, Kaiwen Guo, Jianhui Zhao, Qionghai Dai, Hao Li, Gerard Pons-Moll, Yebin Liu
+      .conference CVPR 2018
+      .paper_id 1321
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p パラメトリックな身体形状表現とノードグラフによって表された外側のレイヤーを用いることで、単眼のデプスカメラのみから詳細なジオメトリの復元、非剛体のモーション、人間の内部のshapeの復元をリアルタイムで行う手法を提案。外側のレイヤーで使用されるノードグラフは、体付近の変形を表現するための事前に定義されたものと、体から離れたスカートなどを表すfree-form dynamically changing graphからなる。身体形状表現には
+          a(href="http://files.is.tue.mpg.de/black/papers/SMPL2015.pdf") SMPL
+          |を使用する。身体形状と、外部のノードグラフの最適化を同時に行うことで、身体形状と外側のジオメトリの2つのトラッキングを可能にした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}DoubleFusion_Real-time_Capture_of_Human_Performances_with_Inner_Body_Shapes_from_a_Single_Depth_Sensor.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 既存手法である
+            a(href="http://liuyebin.com/bodyfusion/bodyfusion.htm") BodyFusion
+            |に比べてトラッキングの精度が高い。
+          li 既存手法では欠損やノイズが出るような形状でも、正確にリコンストラクションが可能。
+          li BodyFusionのでも動画と見比べてみると、よりダイナミックな動きにも対応できているように見える。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1321.pdf") 論文
+          li
+            a(href="http://www.liuyebin.com/doublefusion/doublefusion.htm") Project page with a video and software
+          li
+            a(href="http://files.is.tue.mpg.de/black/papers/SMPL2015.pdf") 参考 A skinned multi-person linear model (SMPL)
+          li
+            a(href="http://liuyebin.com/bodyfusion/bodyfusion.htm") 参考 BodyFusion: Real-time Capture of Human Motion and Surface Geometry Using a Single Depth Camera (BodyFusion)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 08:09:15
