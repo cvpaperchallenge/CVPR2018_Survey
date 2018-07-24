@@ -1,0 +1,33 @@
++slide
+section#ID_4D_Human_Body_Correspondences_from_Panoramic_Depth_Maps
+  .paper-abstract
+    .title 4D Human Body Correspondences from Panoramic Depth Maps
+    .info
+      .authors Zhong Li, Minye Wu, Wangyiteng Zhou and Jingyi Yu
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 人間の3次元モデルの時間変化を、頂点の対応付けを行うことによってデータ量を圧縮する手法を提案した。
+          |多視点のdepthマップから作成した、Panoramic Depth Mapsを入力とすることで、3次元モデルの頂点の対応付けを行うネットワークを構築する。
+          |得られた対応付けに基づき、頂点の時間変化を考える。
+          |この時間変化に対するAuto Encoderを考え、中間層の出力を3次元モデルの時間変化として取り扱う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}4D_Human_Body_Correspondences_from_Panoramic_Depth_Maps.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法と比較して、対応付けの誤差が小さく高い圧縮率を実現することに成功した。
+          |PCAベースの圧縮手法と比べ、圧縮の際の誤差を小さくすることに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0345.pdf/") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 02:33:40
