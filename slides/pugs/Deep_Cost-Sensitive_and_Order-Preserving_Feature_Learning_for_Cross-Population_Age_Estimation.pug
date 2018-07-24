@@ -1,0 +1,35 @@
++slide
+section#ID_Deep_Cost-Sensitive_and_Order-Preserving_Feature_Learning_for_Cross-Population_Age_Estimation
+  .paper-abstract
+    .title Deep Cost-Sensitive and Order-Preserving Feature Learning for Cross-Population Age Estimation
+    .info
+      .authors Kai Li, Junliang Xing, Chi Su, Weiming Hu, Yundong Zhang, Steve Maybank
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 他の人種や性別(source)による学習結果を用いることで、学習データが少ないグループ(target)に対しても適用可能な年齢推定手法Deep Cross-Pupulation(DCP) age estimationを提案した。
+          |始めに、データが多いグループ(source)を用いてranking problemとして学習することでグループに依らない共通の特徴(low-level aging features)を取得する。
+          |次に、得られたパラメータからsource, targetそれぞれのネットワークを更新していく。
+          |ここでは、source, targetそれぞれの顔画像を入力として2枚の画像が年齢が同じか異なるかを学習していく。
+          |これにより、グループごとの年齢特徴(high-level aging features)を得る。
+    .item2
+      .text
+        p
+         img(src=`${figpath}0724Age.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法はグループごとに学習していたため、データが少ない人種などには適用が難しかったが、提案手法によりデータが少ない人種への適用が可能になった。
+          |Morph Ⅱ，WebFaceで実験をしてMAEがベースラインと比べ最も小さく(3.1~4.6程度)なった。
+          |targetのデータ数が10%程度の場合でもMAEが5.3となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://www.dcs.bbk.ac.uk/~sjmaybank/DeepCrossPopulationCVPR2018.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.24 18:18:00
