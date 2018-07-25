@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Context_Embedding_Networks
+  .paper-abstract
+    .title Context Embedding Networks
+    .info
+      .authors Kun Ho Kim, Oisin Mac Aodha and Pietro Perona
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p ラベル付けする人の評価尺度やcontextを考慮して画像の類似度を求めるContext Embedding Networksを提案した。
+          |クラウドワーカーによるアノテーションは、個人独自の評価尺度やコンテキストに影響される。
+          |例えば、人物顔画像をクラスタリングする際にはある人は性別によってクラスタリングするが、別の人は表情によってクラスタリングしてしまうと考えられる。
+          |そこで、workerと見せた画像(context)それぞれから、画像のどのような点に注目するかを表すattributeをAttribute Encoderにより求める。
+          |画像の類似度は、2枚の画像それぞれに対してImage Encoderから得られる画像特徴を、attributeによる重みつきの類似度によって求める。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Context_Embedding_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p クラウドワーカーに応じた類似度の算出が可能になった。
+          |各クラウドワーカーがどのattributeに基づいて画像クラスタリングをしているかを予測することに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p クラウドソーシングによるアノテーションにおいて、クラウドワーカーの個人差は避けては通れないので重要な問題になりそう。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1710.01691") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.22 18:15:24
+
+

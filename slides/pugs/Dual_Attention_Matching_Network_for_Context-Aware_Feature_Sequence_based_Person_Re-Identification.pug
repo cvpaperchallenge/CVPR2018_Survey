@@ -1,0 +1,29 @@
++slide
+section#ID_Dual_Attention_Matching_Network_for_Context-Aware_Feature_Sequence_based_Person_Re-Identification
+  .paper-abstract
+    .title Dual Attention Matching Network for Context-Aware Feature Sequence based Person Re-Identification
+    .info
+      .authors Jianlou Si, Honggang Zhang, Chun-Guang Li, Jason Kuen, Xiangfei Kong, Alex C. Kot, Gang Wang
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p Person Re-Identification（ReID）をするためのEnd-to-Endなネットワーク（Dual ATtention Matching network: DuATM）を提案した論文。DuATMのコアとなる要素はdual attention mechanismであり、映像内と映像間のattentionを特徴量の補正とペアリングに用いる。また実験では、いくつかのベンチマークでSoTAを達成した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}DuATM.png`,alt="DuATM")
+    .item3
+      .text
+        h1 手法・新規性
+        p DuATMは大きく２つの構成要素からなる。１つは動画内から特徴量を抽出する要素であり、もう１つはそれらの特徴量のマッチングを行う要素である。後者にdual attention mechanismが導入されており、１つはコンテキストに応じて映像内の特徴量を補正するものでありもう１つは映像間の割り当てを行うものである。DuATMの損失関数はtriplet lossに加えて、de-correlatoin lossとcross-entropy lossを用いており、これに対してsiamese networkを学習する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Si_Dual_Attention_Matching_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 17:52:08

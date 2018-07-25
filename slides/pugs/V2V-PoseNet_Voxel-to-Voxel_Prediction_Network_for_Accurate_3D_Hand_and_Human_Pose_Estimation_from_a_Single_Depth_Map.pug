@@ -1,0 +1,33 @@
++slide
+section#ID_V2V-PoseNet_Voxel-to-Voxel_Prediction_Network_for_Accurate_3D_Hand_and_Human_Pose_Estimation_from_a_Single_Depth_Map
+  .paper-abstract
+    .title V2V-PoseNet: Voxel-to-Voxel Prediction Network for Accurate 3D Hand and Human Pose Estimation from a Single Depth Map
+    .info
+      .authors Moon, Gyeongsik, Ju Yong Chang, and Kyoung Mu Lee
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Depthマップから手の３次元key pointを検出する手法を提案した。
+          |従来手法はdepthマップを２次元画像として扱っているため、2次元への射影時にdistorionが生じる、２次元から３次元への推定は非線形 mappingであるという問題があった。
+          |そこで３次元のボクセルデータから、各ボクセルが３次元のkey pointである確率を推定するV2V-PoseNetを提案した。
+          |２次元のDepthマップをボクセル化することで、V2V-PoseNetによってkey pointを推定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}V2V-PoseNet_Voxel-to-Voxel_Prediction_Network_for_Accurate_3D_Hand_and_Human_Pose_Estimation_from_a_Single_Depth_Map.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 直接key pointの座標を求める手法と比べ、ボクセル毎の確立を求めることで精度が向上した。
+          |具体的には、正解値との誤差、mAPの2つの尺度において従来手法よりも数値的に向上したことを確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://github.com/mks0601/V2V-PoseNet_RELEASE") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.10 14:00:42

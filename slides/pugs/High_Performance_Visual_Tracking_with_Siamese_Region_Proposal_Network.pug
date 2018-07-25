@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_High_Performance_Visual_Tracking_with_Siamese_Region_Proposal_Network
+  .paper-abstract
+    .title High Performance Visual Tracking With Siamese Region Proposal Network
+    .info
+      .authors Bo Li, Junjie Yan, Wei Wu, Zheng Zhu, Xiaolin Hu
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p オフラインで学習させたDNNで得た特徴量を使用した物体追跡手法は、ターゲットの動画に特有の情報を使用していないことから、相関フィルタベースの手法より良い精度が出ていなかった。提案手法は大規模な画像ペアデータを用いて学習し、同じ特徴量抽出器を２つの入力に適応させて得た特徴量の類似度を比較するSiamese NetworkとFaster R-CNNで提案されているRegion Proposal Network（RPN）を組み合わせた上で、物体追跡をlocal one-shot detectionとして定式化することで、高速かつ高精度な追跡を実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Siamese-RPN.png`,alt="Siamese-RPN")
+    .item3
+      .text
+        h1 新規性・結果
+        p 従来のSiamese Networkを利用した手法とは異なり、RPNを用いることで物体の変形に合わせた矩形領域を提示することによって高い精度を出すことが可能である。また物体追跡をlocal one-shot detectionとして定式化する。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_High_Performance_Visual_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    
+
+

@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_VoxelNet_End-to-End_Learning_for_Point_Cloud_Based_3D_Object_Detection
+  .paper-abstract
+    .title VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection
+    .info
+      .authors Yin Zhou, Oncel Tuzel
+      .conference CVPR 2018
+      .paper_id 575
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li LiDARなどのセンサーにより得られるポイントクラウドから3次元検出を行うend-to-endなネットワーク構造VoxelNetの提案．
+          li VoxelNetの全体構造はまずスパースなポイントクラウドから4Dテンサーで特徴を表し，それに対して空間コンテキスト情報を集合する層により処理を行った後，RPN構造により3Dバウンディングボクスの予測を行う．
+          li 提案したポイントクラウド情報抽出するの主なプロセスは①ポイントクラウドをスパース3Dボクセルに変換し②VFE(新規提案)層よりボクセル内のポイントワイズな特徴を集合し，更にVFE層をstackすることにより3D形状の複雑な特徴を抽出する
+    .item2
+      .text
+        p
+          img(src=`${figpath}VoxelNet.png`,alt="VoxelNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案手法はスパースなポイントクラウドを直接処理できる．LiDARポイントクラウド処理の手法の中最も良い性能が得られる．
+          li KITTIデータセットにおいてSoTA.車・人・自転車を高い精度の検出できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p LiDARセンサーから有効的かつ高スピードで識別や検出する研究がまたまた研究の余地があると感じている．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3333.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.5 11:52:56
+
+

@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Learning_to_Find_Good_Correspondences
+  .paper-abstract
+    .title Learning to Find Good Correspondences
+    .info
+      .authors Kwang Moo Yi, Eduard Trulls, Yuki Ono, Vincent Lepetit, Mathieu Salzmann and Pascal Fua
+      .conference CVPR 2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 2枚の画像間の対応点探索を学習ベースで行う方法を提案。
+          |従来のhandcrafted特徴(SIFTなど)による手法は、特徴量により候補を決めた上でRANSACなどのアルゴリズムで対応点かそうでないかを決定する。
+          |本研究では同様に、候補となる対応点の中から実際に対応しているペアをMulti Layer Perceptrons(MLPs)により決定する。
+          |対応点の数は画像によって異なるので、ネットワークには対応点のペア(4変数)毎に実際に対応しているかの判定を行う。
+          |一方で、中間層出力を全ペアの平均と分散により正規化することでglobal contextを考慮する。(Context Normalization)
+          |学習は、ペアの判定が正しいか、判定結果を用いてessential matrixが正しく求められるかによって行う。
+          |その際、学習データに対して対応点のアノテーションを手動で与えるのは非常に時間がかかってしまう。
+          |そこでepipolar distanceを用いた閾値処理により対応点を取得する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Find_Good_Correspondences.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ベースラインと比較して、学習したシーン、学習していないシーンどちらにおいても高い精度ないし同等の精度を出すことに成功。
+          |59枚の学習データのみで学習した場合であっても、ベースラインと比べ高い精度を出すことに成功。
+          |RANSACのみで対応点を決定する場合より、提案手法により候補を絞った上でRANSACにより更に候補を削るほうが17倍計算時間が早い。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.05971") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 01:21:08
+
+

@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Deep_Density_Clustering_of_Unconstrained_Faces
+  .paper-abstract
+    .title Deep Density Clustering of Unconstrained Faces
+    .info
+      .authors Wei-An Lin, Jun-Cheng Chen, Carlos D. Castillo, Rama Chellappa
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p unconstrainedな顔に対してクラスタリングを行うDeep Density Clustering(DDC)を提案。
+          |顔画像をDNNによって単位超級面空間に射影する。続いて、各サンプル2点の類似度を測定する際に、
+          |その2点の近傍に位置するサンプルを考慮することでクラスタの密度を推定することが可能となるため、これに基づいてクラスタリングを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Density_Clustering_of_Unconstrained_Faces.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li YTF, LFW, IJB-Bデータセットを使用して評価。それぞれのデータセットには同一人物の画像が複数枚もつ。
+          li 評価指標はBCubed precision、Bcubed F-measure、NMIで評価。 
+          li 提案手法と同等の精度を持つ既存手法のJULE、DEPICTはクラスタ数を指定する必要があるが、提案手法ではクラスタ数を指定する必要がない。
+          li クラスタリングの際の閾値の変更に対して、既存手法に比べてクラスタ数の変動が小さい。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3208.pdf") 論文
+          li 
+            a(href=" http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3208-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+
+

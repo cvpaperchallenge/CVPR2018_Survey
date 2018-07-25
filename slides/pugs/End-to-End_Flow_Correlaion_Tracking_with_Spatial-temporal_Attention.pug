@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_End-to-End_Flow_Correlaion_Tracking_with_Spatial-temporal_Attention
+  .paper-abstract
+    .title End-to-End Flow Correlation Tracking with Spatial-temporal Attention
+    .info
+      .authors Zheng Zhu, Wei Wu, Wei Zou, Junjie Yan
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 従来のCorrelation Filterベースの物体追跡手法は現在のフレームの見た目しか考慮できておらず、フレーム間の情報や動きの情報を考慮していなかった。本論文ではフロー情報を直接的に考慮することで時間変化に関する情報を考慮することが可能な物体追跡手法を提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}FlowTrack.png`,alt="FlowTrack")
+    .item3
+      .text
+        h1 新規性・結果
+        p 通常のネットワークに対してフロー情報を追加しただけではなく、Spatial AttentionとTemporal Attentionも提案した。これにより空間情報と時間情報を効率的に考慮することが可能となった。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.01124.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    
+
+

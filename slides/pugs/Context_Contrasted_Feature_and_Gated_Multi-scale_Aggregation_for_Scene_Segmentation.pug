@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Context_Contrasted_Feature_and_Gated_Multi-scale_Aggregation_for_Scene_Segmentation
+  .paper-abstract
+    .title Context Contrasted Feature and Gated Multi-scale Aggregation for Scene Segmentation
+    .info
+      .authors H. Ding, X. Jiang, B. Shuai, A.Q. Liu, G. Wang
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p セマンティックセグメンテーションにおいて，FCNの中に2つの機構を取り入れた．
+        ul
+          li Context Contrasted Local feature
+            br
+            |コンテキストを見るには広く見るべきだが，ローカルな特徴も実際必要なので，
+            |そういう構造のカーネルを採用したフィルタを定義．
+          li Gated sum
+            br
+            |それぞれの場所におけるスケールごとに対応したスケールの特徴を選択的に集計．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Context_Contrasted_Feature_and_Gated_Multi-scale_Aggregation_for_Scene_Segmentation.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ３つのセマンティックセグメンテーションのデータベースでSoTA．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1276.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.2 17:44:27
+
+

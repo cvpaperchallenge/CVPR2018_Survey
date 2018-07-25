@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Learning_Compact_Recurrent_Neural_Networks_with_Block-Term_Tensor_Decomposition
+  .paper-abstract
+    .title Learning Compact Recurrent Neural Networks with Block-Term Tensor Decomposition
+    .info
+      .authors Jinmian Ye et al.
+      .conference CVPR 2018
+    .slide_editor Kazuma Matsui
+
+    .item1
+      .text
+        h1 概要
+        p RNNは強力なシーケンスモデリングツールであるが，高次元の入力を扱う場合，RNNのトレーニングはモデルパラメータが大きくなるため計算に時間がかかるという問題がある．これは，RNNがビデオや画像キャプションのアクションレコグニションなど，多くの重要なコンピュータビジョンのタスクを行うことを妨げる．この問題を解決するためにRNNのパラメータを大幅削減し，トレーニング効率を向上させるコンパクトで柔軟な構造「Block-Termテンソル分解(BTD)」を提案し，これをBlock-Term RNN (BT-RNN)と名付ける．テンポトレインRNN (TT-RNN)のような他の低ランク近似とBT-RNNを比較すると，同じランクを使用する場合，より簡潔でより良い近似が可能であり，より少ないパラメータで元のRNNに戻すことが可能である．ビデオ，画像キャプション，画像生成のアクションレコグニションを含む3つの困難なタスクに対し，BT-RNNは予測精度と収束速度の両方でTT-RNNや標準のRNNより優れていると言える．この研究において，BT-LSTMはUCF11データセットのアクションレコグニションのタスクで15.6%以上の精度向上を達成するために，標準LSTMより17,388回少ないパラメータを使用した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Compact_Recurrent_Neural_Networks_with_Block-Term_Tensor_Decomposition.jpg`,alt="Learning_Compact_Recurrent_Neural_Networks_with_Block-Term_Tensor_Decomposition.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p BTDは最適なTT-rankの設定を見つけることを困難にする代わりに次のような利点がある．
+          |・Tucker分解は異なる次元間の相関関係を表し，より良い重み分担を達成するためにコアテンソルを導入している。
+          |・コアテンソルのランクを等しくすることができ，異なる次元での不均衡な重みの共有を避けることができ，かつ入力データの異なる順列に対して頑強なモデルを導くことができる．
+          |・BTDは，複数のTuckerモデルの合計を使用して高次テンソルを近似し，大きなTucker分解をいくつかのより小さいモデルに分割し，ネットワークを広げ，表現能力を高めることができる．
+          |一方で複数のTuckerモデルは、，ノイズの多い入力データに対してより堅牢なRNNモデルを導く．
+          |結果として，BTDを使用してRNNの入力非表示重み行列の接続をプルーニングすることにより，パラメータの数が少なく，フィーチャディメンション間の相関モデリングが強化された新しいRNNモデルが提供され，モデルトレーニングが容易になり，パフォーマンスが向上した．ビデオ行動認識データセットの実験結果は，BT-RNNアーキテクチャが数オーダのパラメータを消費するだけでなく，標準的な従来のLSTMおよびTT-LSTMよりもモデル性能を向上させることを示していると言える．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.05134.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 18:48:30
+
+
