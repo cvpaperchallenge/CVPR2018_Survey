@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Where_and_Why_Are_They_Looking_Jointly_Inferring_Human_Attention_and_Intentions_in_Complex_Tasks
+  .paper-abstract
+    .title Where and Why Are They Looking? Jointly Inferring Human Attention and Intentions in Complex Tasks
+    .info
+      .authors Ping Wei, Yang Liu, Tianmin Shu, Nanning Zheng, Song-Chun Zhu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li RGB-Dビデオからタスク(人が何をしようとしているのか)，attention(人がどこを見ているのか),intention(どうしてそこを見るのか)を推定する新たなタスク，データセット及び手法の提案．
+          li 従来のビデオから行動推定タスクに，更にintention推定を提案した．著者達がintentionをlocate,direct,guide,checkの4種類に分け，一つのintentionをhumanpose-humanAttention-objectsから構成される．Intentionの予測はビデオフレームごとに一つのintention categoryを与える．
+          li 新規な提案タスクに対応する新たなグラフHAOを提案した．HAOがタスク・intention・objectsをunifiedな階層的なフレームワークにより表示できる．タスクがintentions序列から構成される．Beam searchアルゴリズムを用いて，グラフHAOからattention,intention,taskをジョイントで予測できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}WhatAndWhyAreTheyLooking-AttentionIntention.png`,alt="WhatAndWhyAreTheyLooking-AttentionIntention")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のビデオから行動認識と比べて，新たに人の意図の定義し，ビデオから意図の推定も提案した．
+          li 新規なRGB-DデータセットTIF(14tasks, 70intention, 28objects, 809videos)を提案した．
+          li 定性的結果により，提案手法はintention推定に対し良い精度を得られる．また，attention,task推定においてそれぞれTIFデータセットでSoTAな精度を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 行動をグラフ構造によりで更に細かく分解することによって，ほかのタスクに用いることがもっとflexibleになる．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1258.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 15:39:21

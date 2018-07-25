@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Person_Re-identification_with_Cascaded_Pairwise_Convolutions
+  .paper-abstract
+    .title Person Re-identification with Cascaded Pairwise Convolutions
+    .info
+      .authors Yicheng Wang, Zhenzhong Chen, Feng Wu, Gang Wang
+      .conference CVPR 2018
+    .slide_editor Kazushige Okayasu
+
+    .item1
+      .text
+        h1 概要
+        p ・人物再同定のためのネットワークBraidNetの提案
+          |・BraidNetはカメラ間の不整合や色の違いに頑健なWconvをカスケード構造に設計
+          |・学習画像の不均衡問題や勾配消失問題に対応した新しい学習方法Sample Rate Learning (SRL)とChannel Scaling (CS) layerの提案
+    .item2
+      .text
+        p
+          img(src=`${figpath}Person_Re-identification_with_Cascaded_Pairwise_Convolutions.png`,alt="Person_Re-identification_with_Cascaded_Pairwise_Convolutions")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・人物再同定の多くのデータセット(CUHK03-Detected, CUHK03-Labeled, CUHK01, Market-1501 and DukeMTMC-reID datasets)でstate-of-the-art
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Person_Re-Identification_With_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1860-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 13:57:58

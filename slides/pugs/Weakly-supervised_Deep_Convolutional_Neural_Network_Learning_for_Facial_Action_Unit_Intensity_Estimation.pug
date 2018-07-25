@@ -1,0 +1,34 @@
++slide
+section#ID_Weakly-supervised_Deep_Convolutional_Neural_Network_Learning_for_Facial_Action_Unit_Intensity_Estimation
+  .paper-abstract
+    .title Weakly-supervised Deep Convolutional Neural Network Learning for Facial Action Unit Intensity Estimation
+    .info
+      .authors Yong Zhang, Weiming Dong, Bao-Gang Hu, Qiang Ji
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 本論文ではSemi-supervised CNNを提案し、Action Unit（AU; 顔表情の基礎単位をモデル化したもの）推定とその度合いを推定する。ここでは少量のアノテーションを元手に、多量の弱教師を用いて学習することでAU推定+尤度推定を成功させる。弱教師としては、自然に存在するAUに関する拘束条件（相対的なアピアランスの類似性、時間的な尤度の滑らかさ、顔類似度、連続的なアピアランスの相違度）を用いる。FERA2015は2%、DISFAは1%のアノテーションのみを用いた学習でより良い推論に成功した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180720ActionUnitIntensityEstimation.png`,alt="180720ActionUnitIntensityEstimation")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 少量教師学習{Semi-,Weak-} Supervisionにより顔表情の基礎単位であるAUを学習し、その尤度の推定も同時に実行した。AUに関する弱教師としてアピアランス類似度、時間的滑らかさなどを実装して、その有効性が認められCVPR採択に至った。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 研究分野に関する深い洞察力がないと弱教師というのはできない。調査のみならず経験値が必要。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Weakly-Supervised_Deep_Convolutional_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="www") Project
+          li
+            a(href="www") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 10:05:48

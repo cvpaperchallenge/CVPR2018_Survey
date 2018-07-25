@@ -1,0 +1,42 @@
++slide
+section#ID_Structured_Set_Matching_Networks_for_One-Shot_Part_Labeling
+  .paper-abstract
+    .title Structured Set Matching Networks for One-Shot Part Labeling
+    .info
+      .authors Jonghyun Choi, Jayant Krishnamurthy, Aniruddha Kembhavi, Ali Farhadi
+      .conference CVPR 2018
+      .paper_id 2732
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 実画像と線画のオブジェクトに対するパーツ位置推定をCNNによるone-shot学習で行うStructured Set Matching Network (SSMN)を提案。ソース画像とターゲット画像はどちらもパーツのラベルとカテゴリクラスを持つが、ソース画像はラベルとともにパーツ名を持つが、ターゲット画像はパーツ名を持たない。またソース画像は各カテゴリに対して1枚のみ。SSMNではラベルのマッチングを画像の変形で行うことができると仮定し、ラベル位置の局所特徴量と、全ラベルの相対位置の一貫性を考慮することでパーツラベリングを行う。データセットの構築も行っている。また線画を入力とする際には、distance transformationが有効であったと主張。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Structured_Set_Matching_Networks_for_One-Shot_Part_Labeling.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 実画像間、線画間、実画像をソースとした線画へのパーツラベリングの3つの実験を行い、全てにおいてSoTA。
+          li distance transformationやラベルの相対位置の考慮の有効性を主張
+          li 3種類のデータセットを構築
+            ul
+              li Diagram Part Labeling (DiPART)：4921枚、200カテゴリ、10種類のパーツ名とその位置のアノテーションを持つ線画データセット
+              li Pascal Part Matching (PPM)：92780枚、8カテゴリ、10種類のパーツ名とその位置のアノテーションを持つ実画像データセット
+              li Cross-DiPART-PPM：22669枚、5カテゴリ、4つのパーツ名とその位置を持つ実画像と線画のデータセットを構築
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li one-shotで行った理由としてデータ不足をあげているが、正確なアノテーション画像が一枚であれば、ラベリングの任意性を避ける意味では、むしろone-shotの方が都合がいい？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2732.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/2732-supp.pdf") Supplementary Material
+          li
+            a(href="https://allenai.github.io/one-shot-part-labeling/") Project page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 05:32:14
