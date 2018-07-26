@@ -1,0 +1,36 @@
++slide
+section#ID_Decoupled_Networks
+  .paper-abstract
+    .title Decoupled Networks
+    .info
+      .authors Weiyang Liu, Zhen Liu, Zhiding Yu, Bo Dai, Rongmei Lin, Yisen Wang, James M. Rehg, Le Song
+      .conference CVPR 2018
+      .paper_id 4133
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p CNNのコンボリューションにおける内積計算について、より識別精度を高くするためのノルム関数、角度関数を提案。CNNは画像パッチとconvolutional layerとの内積を行い、右図のように、角度方向に異なるクラスを、動径方向に同一クラスを並べる。これに着想を得て、CNNの内積計算を行う際にL2ノルムやcosineの代わりとなるノルム関数、角度関数を提案。ノルムについては大きさが有界な3つの関数、非有界な3つの関数、角度関数については3つの関数を提案。ノルム関数が有界な場合にはadversarial attackに頑健になり、ノルム関数が非有界な場合には様々な種類のインスタンスに対応することが可能となる。モデルに不変であるため、様々なCNNに適用することが可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Decoupled_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CIFAR-10、CIFAR-100に対する物体認識において、提案手法+ResNet32がResNet1001よりも高い精度を達成。
+          li 通常のCNNよりも速く収束することを確認。
+          li White/Black -box adversarial attackのどちらに対しても通常のCNNよりも高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 識別精度を上げるという意味では、角度方向にクラスを並べると原点付近で曖昧さが残ってしまうので、異なるクラスが大きく離れるように学習したほうが精度が上がるように思えるがどうなのだろう？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/4133-supp.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/4133-supp.pdf") Supplementary Material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 01:56:15

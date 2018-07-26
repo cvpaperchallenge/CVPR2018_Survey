@@ -1,0 +1,32 @@
++slide
+section#ID_Defocus_Blur_Detection_via_Multi-Stream_Bottom-Top-Bottom_Fully
+  .paper-abstract
+    .title Defocus Blur Detection via Multi-Stream Bottom-Top-Bottom Fully
+    .info
+      .authors Wenda Zhao, Fan Zhao, Dong Wang and Huchuan Lu
+      .conference CVPR2018
+      .paper_id 386
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p Defocus blur detection （DBD）をEnd-to-endで行うBTBNetを提案．FCNを用いて，入力画像からピクセル単位のDBDマップを直接推論する．Defocusやblurの程度がスケールに影響されやすいことから，異なるスケールの入力画像に対応したマルチストリームBTBNetを用いることで性能を向上させた．また，ボトム・トップにエンコードされたマップをトップ・ボトムにエンコードされたローレベル特徴をマージする．評価用のデータセットの作成も行い，既存のデータセットとあわせて性能評価を行った．
+        p DBD：画像内の焦点が合った領域と焦点が合っていない領域の分割．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180723_BTBNet.jpg`,alt="20180723_BTBNet.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p DBDをEnd-to-endで行う最初の試みである．データセットはShiによるデータセットのみであるため，自らでデータセットの収集を行った．提案データセットは低コントラストの焦点ボケや複雑背景を含むので，非常に挑戦的である．他の手法とF値とMAEを比較して性能が良いことを示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p データセットは近日公開とのこと．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1133.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 16:21:36
