@@ -1,0 +1,33 @@
++slide
+section#ID_Quantization_of_Fully_Convolutional_Networks_for_Accurate_Biomedical_Image_Segmentation
+  .paper-abstract
+    .title Quantization of Fully Convolutional Networks for Accurate Biomedical Image Segmentation
+    .info
+      .authors Xiaowei Xu, Qing Lu, Yu Hu, Lin Yang, Sharon Hu, Danny Chen, Yiyu Shi
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p 既存手法が主に目的としているメモリや計算量の削減のための量子化手法ではなく、FCNの高精度化のためover-fittingを減らすことを目的とした量子化手法を提案。著者らは、元の学習データセットから代表的なアノテーションサンプルを抽出する
+          a(href="https://arxiv.org/abs/1706.04737") suggestive annotation
+          |に焦点を当てており、これをベースとして、提案するframeworkは、suggestive annotationでの量子化(QSA)と、高精度化のためのネットワークの学習の量子化(QNT)と2つの量子化手法から構成される。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Quantization_of_Fully_Convolutional_Networks_for_Accurate_Biomedical_Image_Segmentation.png`,alt="Quantization_of_Fully_Convolutional_Networks_for_Accurate_Biomedical_Image_Segmentation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 医用画像(suggestive annotation)においてFCNはパラメータが余剰であり、これにより過学習に陥り精度の低下を招くことに着目して、量子化を行っている点が賢く、従来手法とは異なる点である。
+          |MICCAI Gland datasetで両方の量子化手法が性能向上を示すことを確認し、提案手法がsotaの性能を1%超えているうえ、メモリ使用量を6.4倍削減している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p suggenstive anntation自体の計算コストが高そうな上、データ数が少なく変動が小さい医用画像だからこその手法にも思える(一般物体への適用できなさそう)。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Xu_Quantization_of_Fully_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 16:23:44
