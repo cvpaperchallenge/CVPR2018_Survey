@@ -1,0 +1,35 @@
++slide
+section#ID_Learning_Deep_Descriptors_with_Scale-Aware_Triplet_Networks
+  .paper-abstract
+    .title Learning Deep Descriptors with Scale-Aware Triplet Networks
+    .info
+      .authors Michel Keller, Zetao Chen, Fabiola Maffra, Patrik Schmuck, Margarita Chli
+      .conference CVPR 2018
+      .paper_id 3673
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p triplet lossをアップデートしたmixed-context lossとサンプリング手法であるscale-aware samplingを提案。triplet lossではサンプルに対するpositiveとnegativeの両方の特徴量距離を同時に学習するため、片方ずつ学習するsiamese lossよりも高い精度を出しやすいことがわかっている。しかしtriple lossで扱う特徴量距離はサンプルごとにローカルに決定されるため、場合によっては右図右から2番目の結果のように、特定クラスに対する結果が良く無い場合がある。提案するmixed-context lossでは、この測定される特徴量距離にバイアス項を加えたtriplet lossとsiamese lossの中間表現をとる。またscale-aware samplingは各バッチごとにpositiveとhard negativeをサンプリング手法であり、ロス関数のスケールを調整することが可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Deep_Descriptors_with_Scale-Aware_Triplet_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li UBC benchmarkを用いた結果、siamese lossとtriplet lossと比較した結果、もっとも良い精度を達成
+          li バイアス項はこの論文ではハイパーパラメタ扱いであるが、future workとして自動で決定したいとのこと。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li バイアス項の値を変化させtriplet lossとsiamese lossの比率の変化による精度の変化を見て見たい。扱う問題にもよるだろうが、triplet lossの比率を多少大きくした方が精度は高い？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3673.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3673-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 17:34:53
