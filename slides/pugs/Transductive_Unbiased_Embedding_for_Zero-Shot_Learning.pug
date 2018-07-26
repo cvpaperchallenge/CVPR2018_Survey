@@ -1,0 +1,33 @@
++slide
+section#ID_Transductive_Unbiased_Embedding_for_Zero-Shot_Learning
+  .paper-abstract
+    .title Transductive Unbiased Embedding for Zero-Shot Learning
+    .info
+      .authors Jie Song, Chengchao Shen, Yezhou Yang, Yang Liu, Mingli Song
+      .conference CVPR 2018
+      .paper_id 1369
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p zero-shot learning(ZSL)で問題となっているソースデータとターゲットデータに対する識別精度のバイアスを緩和するための手法をtransductive ZSLの設定で新しいロス関数を提案。transductive ZSLとはトレーニング中にラベルをもつ画像から成るソースデータと、ラベルを持たない画像から成るターゲットデータを扱う設定である。提案手法では既存研究で用いられている、ソースデータに対するclassificationロス(+正則化項)に加えて、ターゲットデータに対するロス関数として、ターゲットデータがどのターゲットカテゴリに所属するのか、という確率を足しあげlogを取ったものを加える（正確には減算をする）。 実験ではターゲットデータに対する識別精度を算出するZSLの設定と、ソースデータとターゲットデータの両方に対す識別精度を算出するGZSLの設定を検証する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Transductive_Unbiased_Embedding_for_Zero-Shot_Learning.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 評価尺度としてソースデータ、ターゲットデータへのtop1-accuracyのMean Class Accuracy (MCA)、harmonic meanを使用。
+          li inductive/transductive ZSL(inductive ZSLとはトレーニング中にはターゲットデータを一切使用しない手法)の両方の既存研究においてZSL、GZSLの両方の設定で検証した結果、ほとんどの設定において上記の尺度でSoTAを達成しており、バイアスを解消できていると主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li transductive ZSLはトレーニング中にターゲットデータを扱わないinductive ZSLに比べて、ターゲットカテゴリのインスタンスをトレーニング中にしれているという点で有利であり、かつ提案手法ではトレーニング中にターゲットカテゴリのインスタンスをターゲットカテゴリのいずれかに識別するようにロス関数を設定しているため、これは純粋なZSLとは呼べないのではないか？ZSLと呼べる手法の境界はどこにある？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1369.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 02:58:39

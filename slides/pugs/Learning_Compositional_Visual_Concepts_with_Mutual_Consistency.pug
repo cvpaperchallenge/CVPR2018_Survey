@@ -1,0 +1,44 @@
++slide
+section#ID_Learning_Compositional_Visual_Concepts_with_Mutual_Consistency
+  .paper-abstract
+    .title Learning Compositional Visual Concepts with Mutual Consistency
+    .info
+      .authors Yunye Gong, Srikrishna Karanam, Ziyan Wu, Kuan-Chuan Peng, Jan Ernst, Peter C. Doerschuk
+      .conference CVPR 2018
+      .paper_id 1959
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p “handbag vs. shoe”と“photo vs. edge”など複数のconceptを学習する際に、いずれかのサブドメイン(photo handbagなど)のトレーニングデータが無い場合にも、他のサブドメインの学習によって画像を生成することが可能なConceptGANを提案。論文では2つのコンセプトで、一つのサブドメインのトレーニングデータない場合を主に説明してる。CycleGANをベースにサブドメイン間のconsistencyを保つために以下のlossを設定
+        ul
+          li Adversarial  loss：トレーニングデータが存在するサブドメインにおいて実画像vs生成画像のdiscriminatorを導入
+          li pairwise  cycle consistency loss：2つのサブドメイン間でcycle pathによる入力画像と生成画像のL1ロス
+          li (Counter-)Clockwise cycle-consistency：(反)時計回りのパスによって生成された画像と入力画像のL1ロス
+          li commutative loss：右図において対角上のサブドメインの画像を生成する際に時計回りのパスと反時計回りのパスで生成された画像で似た画像を生成するためにL1ロス
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Compositional_Visual_Concepts_with_Mutual_Consistency.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li “smile”と”eyeglass”(両方ありのトレーニングデータがない)、”eyeglass”と”bangs”(両方ありのトレーニングデータがない)、"handbag vs. shoe”と“photo vs. edge”(edge shoeのトレーニングデータがない)のそれぞれにおけるコンセプトにおける生成画像を確認。CycleGANがうまく画像を生成できていない一方で、提案手法ではCycleGANよりも綺麗な画像を生成できている。
+          li ”eyeglass”と”bangs”、"handbag vs. shoe”と“photo vs. edge”のそれぞのコンセプトで生成した画像に対するattribute classificationを行った結果、CycleGANによる生成画像よりも高い精度を達成。
+          li face verificationにおいて、提案手法で生成された画像を用いてトレーニングデータをオーギュメンテーションした結果、テスト結果はより高くなった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 最適化に関するコントリビューションを特に主張していなくて、本当に学習が収束するのかどうかがとても気になる。このConceptGANの学習を安定させ（不安定なら）、より綺麗な画像を生成することができれば新しいGANの知見を得ることができる？
+          li 画像の解像度は64x64
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1959.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1959-supp.pdf") Supplementary material
+          li
+            a(href="https://arxiv.org/abs/1703.10593") 参考 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks (CycleGAN)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 17:29:53

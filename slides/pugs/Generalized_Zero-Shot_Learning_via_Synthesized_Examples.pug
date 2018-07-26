@@ -1,0 +1,36 @@
++slide
+section#ID_Generalized_Zero-Shot_Learning_via_Synthesized_Examples
+  .paper-abstract
+    .title Generalized Zero-Shot Learning via Synthesized Examples
+    .info
+      .authors Vinay Kumar Verma, Gundeep Arora, Ashish Mishra, Piyush Rai
+      .conference CVPR 2018
+      .paper_id 4099
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p Generalized Zero-Shot Learning(GZSL)のバイアスを小さくするためのCVAEとクラスラベルのclassifierを組み合わせたモデルを提案。GZSLとは、テストの際にトレーニングで使用した(seen)クラスとトレーニングでは使用していない(unseen)クラスの両方を扱う問題を指す。既存手法ではトレーニングされたモデルを用いた識別などにおいて、seenクラスに対するバイアスが高いことが問題であった。提案手法ではclassifierのロスをdecoderに流し、かつdecoderによって合成された画像をラベルなし画像として扱い半教師学習を行う。テスト時にはseenクラスとunseenクラスの画像を合成し、合成された画像を用いてSVMを学習しその識別精度を比較する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Generalized_Zero-Shot_Learning_via_Synthesized_Examples.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li unseenなクラスに対する識別と、seen、unseenなクラスに対する識別の平均値でSoTA。一方でseenクラスに対してはSoTAの10%以下。それぞれの精度差は±10%であるため、バイアスがないことも確認している。
+          li 画像のクオリティを定量的に考察するためにt-SNEによる分布を確認しており、合成された画像と実画像の分布がよく重なっているこをを確認している
+          li AwA、SUN、CUB、dataset、ILSVRC 2012/2010 datasetを使用。seen/unseenのクラスラベルの比率はおよそ3:1
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li seenクラスに対して高い識別精度をもつ既存手法ではunseenクラスに対する識別精度が低くバイアスが高いことに注意。
+          li SVMではなく、deep learningを使えば識別精度も相対的に高くなる？
+          li seen/unseenクラスの両方を扱う問題をなぜ”Generalized" Zero-Shot Learningと呼んでいる？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4099.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.24 14:24:26

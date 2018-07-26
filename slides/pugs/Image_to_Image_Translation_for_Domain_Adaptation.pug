@@ -1,0 +1,35 @@
++slide
+section#ID_Image_to_Image_Translation_for_Domain_Adaptation
+  .paper-abstract
+    .title Image to Image Translation for Domain Adaptation
+    .info
+      .authors Zak Murez, Soheil Kolouri, David Kriegman, Ravi Ramamoorthi,  Kyungnam Kim
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p domain adaptationの一般的なフレームワークの提案．
+          |エンコーダーネットワークによって抽出される特徴に制約をかけるために，最近提案されたペアなしのimage-to-image変換に対する新しい利用方法を提案する．
+          |このように制約をかけて得たい特徴は以下のような性質を持つ
+          |・抽出された特徴は２つのドメインでの画像に再び戻せる
+          |・２つのドメイン画像から抽出された特徴の分布は区別できない（Dを騙せる）
+          |実験では，domain adaptationの問題として数字の分類や車載動画のセマンティックセグメンテーションのタスクを取り上げ，state of the artを超えた．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Image_to_Image_Translation_for_Domain_Adaptation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 一つのフレームワークの中で，image-to-imge変換とソース側の分類問題，そしてdomain adaptationを行なっている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 最近の研究は我々の一般的なフレームワークの内の特殊なケースとして見なせる，と強気発言．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.00479") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.26 13:53:05
