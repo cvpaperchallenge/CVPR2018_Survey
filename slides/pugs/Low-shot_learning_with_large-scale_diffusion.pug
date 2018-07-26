@@ -1,0 +1,42 @@
++slide
+section#ID_Low-shot_learning_with_large-scale_diffusion
+  .paper-abstract
+    .title Low-shot learning with large-scale diffusion
+    .info
+      .authors Matthijs Douze, Arthur Szlam, Bharath Hariharan, Herve ́ Je ́gou
+      .conference CVPR 2018
+      .paper_id 1590
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 大規模データセットを用いた古典的な手法による半教師学習の有効性を調査。古典的な手法として
+          a(href="http://mlg.eng.cam.ac.uk/zoubin/papers/zgl.pdf") kNNグラフを用いた拡散アルゴリズム
+          |を使用し、半教師学習としてlow shot learningを扱った。low shot learningとはデータ中にクラスなどのアノテーションが施された画像がごく一部であり大半の画像にはアノテーションがないデータセットを扱う問題を指す。大規模データセットであるImageNetなどでlow shot learningを行い、low shot learningのSoTAと古典的な手法による精度の比較を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Low-shot_learning_with_large-scale_diffusion.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 以下の場合に古典的な手法の方が高い精度となった。
+            ul
+              li ラベルがついた画像とラベル無しの画像が同じデータセットであり、各クラスのラベル有り画像が1、2枚の時
+              li ラベルがついた画像とラベル無しの画像が異なるデータセットであり、各クラスのラベル有り画像が10、20枚の時
+          li データセットしてImageNet、YFC100M datasetを使用。評価尺度は画像識別におけるtop5-accuracy。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 大規模データセットに対する新しい解析方法であり、データセットの使用方法の知見を深めた論文。2003年の手法が2017年の手法に優っているケースはCVでは特に珍しいのではないか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1590.pdf") 論文
+          li 参考 使用された拡散アルゴリズム 
+            a(href="http://mlg.eng.cam.ac.uk/zoubin/papers/zgl.pdf") Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions
+          li low shot learningのSoTA 
+            a(href="https://arxiv.org/abs/1606.02819") Low-shot Visual Recognition by Shrinking and Hallucinating Features
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 19:35:54
