@@ -1,0 +1,30 @@
++slide
+section#ID_Multiple_Granularity_Group_Interaction_Prediction
+  .paper-abstract
+    .title Multiple Granularity Group Interaction Prediction
+    .info
+      .authors Taiping Yao, Minsi Wang, Bingbing Ni, Huawei Wei, Xiaokang Yang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 入力された短期（数秒レベル）の動画像から、グループ行動・インタラクションとして未来の姿勢の状態を推定する枠組みを提案する。モデルとしてはBi-directional LSTMを適用し、グローバル/ローカルな行動を評価できるようにする。ここでは、Bi-directional LSTMに与える情報として関節点と姿勢全体を入力として、内的に動線と行動（action）を予測するように学習される。誤差は行動推定や動線予測との推定の差分により計算する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180718GroupInteractionPrediction.png`,alt="180718GroupInteractionPrediction")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来の行動予測は単一人物に着目されがちであったが、本論文では姿勢としてグループ行動を予測するところに新規性がある。平均誤差（displacement）ではSocial-LSTM、単純なBidirectional-LSTMなどと比較しても提案手法（マルチタスクにより学習するBi-directional LSTM）が総合的にもっとも小さい値となっている（行動ごとにおいても大体において誤差が小さい）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p グループ行動予測とは。。これは思いつきそうで思いつかなかった（やればよかった）。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yao_Multiple_Granularity_Group_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 15:46:27

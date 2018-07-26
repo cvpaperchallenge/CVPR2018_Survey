@@ -1,0 +1,32 @@
++slide
+section#ID_Deformation_Aware_Image_Compression
+  .paper-abstract
+    .title Deformation Aware Image Compression
+    .info
+      .authors Tamar Rott Shaham, Tomer Michaeli
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 変形をできる限り小さくなるように画像圧縮を行う手法を提案する。予め形状変換（Deform）を施してから圧縮（Compress）することで画像容量を抑えつつも形状変化が少なく済む。右図は元画像をそのままJPEG2000形式で圧縮した方式と、形状変換してから圧縮した方式を比較した図である。本論文中では、JPEG、WebP、BPGやDeepNetによる方式において圧縮を行い評価した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180720DeformationAwareImageCompression.png`,alt="180720DeformationAwareImageCompression")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p そのまま画像圧縮するのではなく、人間の見た目にできる限り自然になるよう形状変化させておいてから画像圧縮する。画像圧縮した後も変形が少なくなるようになっていると主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p JPEGスゴい、この時代においてまで引用され続けている。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shaham_Deformation_Aware_Image_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://webee.technion.ac.il/people/tomermic/DeformationAwareCompressionWEB/DeformationAwareImageCompression.htm") プロジェクト
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 14:11:42

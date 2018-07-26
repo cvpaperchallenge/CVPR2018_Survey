@@ -1,0 +1,34 @@
++slide
+section#ID_Shift_A_Zero_FLOP_Zero_Parameter_Alternative_to_Spatial_Convolutions
+  .paper-abstract
+    .title Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions
+    .info
+      .authors Bichen Wu, Alvin Wan, Xiangyu Yue, Peter Jin, Sicheng Zhao, Noah Golmant, Amir Gholaminejad, Joseph Gonzalez, Kurt Keutzer
+      .conference CVPR2018
+      .paper_id 3990
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p convolutionと同じ働きを持ち、パラメタやfloating point operation(FLOPS)が必要ないshift operationを提案。convolutionをshift operation に置き換えることでモデルサイズを小さくすることができる。Shift-operationはconvのようにカーネルをもち、どれか1ピクセルだけ値を1を格納し、それ以外は０を格納しており、１を格納している位置はチャンネルごとに異なる。またカーネルを動かす方向もチャンネルごとに異なる。これに対して1x1convを組み合わせることで、convolutionと同じ機能をもつ。Shift-operationと1x1convを組み合わせたものをshift moduleと呼び、実験では従来のCNNに対してshift moduleを組み込んだネットワークを用いてimage classification、face verification、style transferを行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Shift_A_Zero_FLOP_Zero_Parameter_Alternative_to_Spatial_Convolutions.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ResNetにshift-based moduleを組み込んだところ、CIFAR-10/100に対する識別精度が向上した一方で、パラメタ数を60%削減可能であった。
+          li FaceNetにshift-based moduleを組み込んだところ、同等の精度を保ちつつ、パラメタ数を2.7%程度まで削減可能であった。
+          li style transferでもベースラインの手法とかなり近い画像を生成することが可能となり、パラメタ数を16%程度まで削減可能となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li CNNの保ったままパラメタ数を大幅に削減可能！とはいえ、CNNの人気を考えると今後このネットワークが流行っていくだろうか？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3990.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 23:13:13
