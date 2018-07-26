@@ -1,0 +1,41 @@
++slide
+section#ID_Active_Fixation_Control_to_Predict_Saccade_Sequences
+  .paper-abstract
+    .title Active Fixation Control to Predict Saccade Sequences
+    .info
+      .authors C. Wloka, I. Kotseruba and J.K. Tsotsos
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 人間の目はサッケード運動をしていることが知られている．
+          |これは，意識的に目を動かしていなくても，無意識的に注視点(fixation point)を決めて
+          |そこの間を移動するように高速に眼球運動しているというものである．
+          |このモデリングは過去より行われており，近年では深層学習によって劇的に向上した．
+        p しかし，静止画の上で行う上では，
+          |顕著性マップを通じた非清冽な注視点の推定に大きく依存していた．
+          |人間のようなサッケードの時間的整列済み系列を生成できる改善モデルはほぼない．
+        p そこで，STAR-FCを提案．
+          |これは
+          |中心視野・高レベル物体ベース顕著性と，
+          |周辺視野・低レベル特徴ベース顕著性
+          |の統合による．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Active_Fixation_Control_to_Predict_Saccade_Sequences.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 注視点推定において人間レベルの性能を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 心理学に絡みそうなネタがCVPRに出ていると，個人的にはワクワクする．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3798.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.13 12:05:21
