@@ -1,0 +1,35 @@
++slide
+section#ID_Shape_from_Shading_through_Shape_Evolution
+  .paper-abstract
+    .title Shape from Shading through Shape Evolution
+    .info
+      .authors Dawei Yang and Jia Deng
+      .conference CVPR 2018
+      .paper_id 127
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 実画像のshape-from-shadingをDNNに学習させる際のデータとして、CGのシンプルなプリミティブを用いて作成されたshapeデータを用いる手法を提案。既存手法では全て人手で作成されたデータを用いていた。提案手法ではシンプルなプリミティブを組み合わせて複雑な形状データセットを適宜作成して、DNNの学習を行うことでデータ不足を解決。またバリデーションは実画像で行うため、実画像がもつ形状とかけ離れた形状を持つトレーニングデータは捨てられて行くため、合成画像に対する過学習を防ぐ。ネットワークはstacked hourglass networkを使用。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Shape_from_Shading_through_Shape_Evolution.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li シンプルなプリミティブを組み合わせてデータを増やすことで、トレーニングの際には実画像は一切使っていないにも関わらず、実画像に対するshape-from-shadingにおいてSoTAを達成。
+          li ablation studyにより、提案手法の各モジュールの重要性を確認。
+          li MIT-Berkeleyで評価を行った。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li プリミティブから複雑なshapeを構築するのはgraphicsでは相当古典的であり、温故知新を体感することができ非常に面白い！
+          li プリミティブからデータを構築するごとにネットワークがファインチューニングされていくため、入力に対する最適な結果を見つけるためにはいくつかの重みで検証する必要がある？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0027.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 06:36:05
