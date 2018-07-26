@@ -1,0 +1,34 @@
++slide
+section#ID_Augmented_Skeleton_Space_Transfer_for_Depth-based_Hand_Pose_Estimation
+  .paper-abstract
+    .title Augmented Skeleton Space Transfer for Depth-based Hand Pose Estimation
+    .info
+      .authors Seungryul Baek, Kwang In Kim, Tae-Kyun Kim
+      .conference CVPR 2018
+      .paper_id 128
+    .slide_editor Kauzuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p デプスがアノテーションされた人間の手のポーズのデータオーギュメンテーションを行うために手の骨構造とCycle GANを用いた手法を提案。オーギュメンテーションを行う際に、デプスを変更してしまうと実際にはありえない手の形状になってしまう。そのため、提案手法では手の骨構造を変更することで、データオーギュメンテーションを行う。提案手法はデプスから骨構造を推定するhand pose estimator (HPE)、骨構造からデプスマップを生成するhand pose generator (HPG)、実画像と合成画像を識別するhand pose discriminator(HPD)からなる。まず既存のデータセットを用いてHPEを学習し、次にHPE、HPG、HPDでデプスマップ、骨構造に対してcycle consistencyが保たれるようにGANによる学習を行う。実験では骨構造の推定精度を既存研究と比較する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Augmented_Skeleton_Space_Transfer_for_Depth-based_Hand_Pose_Estimation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li hand pose estimationのベンチマークであるICVL、MSRA、NYU、Big Hand 2.2M datasetsで実験。全てデータセットにおいてSoTAを達成。
+          li 骨構造を入力とすることでデプスマップを生成することができるため、既存データセットに対するデータ数の増加を行うことが可能。
+          li トレーニングデータとは大きくかけ離れたデータに対する精度はまだ高くないことを主張している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Cycle GANをうまく使った論文。ハンドポーズからデプスは恐らく学習が難しいが、デプスからハンドポーズをを推定するHPEの学習が可能なため、Cycle GANの学習もうまくいっていると考えられる。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0128.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.21 23:09:27

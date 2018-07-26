@@ -1,0 +1,32 @@
++slide
+section#ID_A_Bi-directional_Message_Passing_Model_for_Salient_Object_Detection
+  .paper-abstract
+    .title A Bi-directional Message Passing Model for Salient Object Detection
+    .info
+      .authors Lu Zhang, Ju Dai, Huchuan Lu, You He and Gang Wang
+      .conference CVPR2018
+      .paper_id 204
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p Salient object detection（SOD）のために，マルチレベルの特徴を統合するbi-directional message passing modelを提案．Multi-scale Context-aware Feature Extraction Module （MCFEM）を用いて豊富なコンテキストの情報を得て，双方向構造によりマルチレベル特徴の間でメッセージをやり取りするように設計される．その間にはゲート機能があり，メッセージの通過率を制御する．最終的にマルチレベル特徴を統合してsaliencyを予測し，それらを融合して出力を得る．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180723_MCFEM.jpg`,alt="20180723_MCFEM.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SODの研究で未解決課題だったマルチレベルの特徴を統合する手法を提案した．ECSSDやPASCAL-Sなどの5つのデータセットを用いてF値とMAEを比較した結果，全てのデータセットにおいて提案手法が最も良い性能となった．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 複数スケールの特徴マップの統合は例に漏れずこの分野でも用いられている．
+          |（内容とはあまり関係ないが，この分野の論文は結果比較表を結果順に色をつける傾向がある？）
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1366.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 16:25:50

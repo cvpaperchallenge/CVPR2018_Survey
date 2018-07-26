@@ -1,0 +1,31 @@
++slide
+section#ID_Structure_Preserving_Video_Prediction
+  .paper-abstract
+    .title Structure Preserving Video Prediction
+    .info
+      .authors Jingwei Xu, Bingbing Ni, Zefan Li, Shuo Cheng and Xiaokang Yang
+      .conference CVPR2018
+      .paper_id 175
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 細かな動作や境界でも高精度に検出できるvideo prediction手法の提案．このアルゴリズムは，高頻度なビデオコンテンツ（細かい物体や関節運動など）と低頻度なビデオコンテンツ（位置や移動方向など）を別々のストリームで扱う2ストリーム生成アーキテクチャ（図中左側）に加えて，時間で変化する動作パターンやシーン内の小さい物体を取得するtemporal-adaptive畳み込みカーネルを用いたRNN（LSTM）構造（図中右側）を持つ．2ストリームアーキテクチャでは，1段階目ではベースのEncoder-decoderモデルのみ学習し，2段階目および推論時はLSTMブロック部分も学習および推論に用いる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180724_SPVP.jpg`,alt="20180724_SPVP.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 既存のアルゴリズムでは満足な結果を得られなかった，物体境界のような構造情報を持つ場合や，関節運動のような細かな動作でのvideo predictionの精度を向上した．データセットにはUCF-101（のうち，Clean-Jerkと呼ばれるデータ），Human3.6M（人間の細かい動きのデータ），CityScape（市街地動画のセマンティックセグメンテーションのデータ）を用いて評価し，他の手法よりも良い性能を得た．特に，物体境界や細かい動作に頑健な検出が可能である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 一見するとシンプルな作りだが，LSTM部分に多くの工夫が含まれている．結果を見ても，提案手法は細かい部分までpredictできていることがわかる．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1178.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.24 22:29:10
