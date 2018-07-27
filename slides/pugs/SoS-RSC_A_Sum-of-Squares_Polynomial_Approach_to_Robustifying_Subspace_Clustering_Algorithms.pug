@@ -1,0 +1,37 @@
++slide
+section#ID_SoS-RSC_A_Sum-of-Squares_Polynomial_Approach_to_Robustifying_Subspace_Clustering_Algorithms
+  .paper-abstract
+    .title SoS-RSC: A Sum-of-Squares Polynomial Approach to Robustifying Subspace Clustering Algorithms
+    .info
+      .authors Mario Sznaier and Octavia Camps
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p アウトライヤのあるデータについての部分空間クラスタリングでは，
+          |正則化最適化による従来法によればデータサイズに対して計算複雑性が多項式スケールで伸びる．
+          |また，手動チューニングが必要．
+        p 本稿では，データから直に計算できる二乗和の多項式の評価に基づく
+          |外れ値除去アルゴリズムを提案する．
+          |計算量がデータサイズに依存しない特異値分解は2回だけ求めればよく，効率的に計算できる．
+          |インライヤ・アウトライヤ分類の誤り率を出力する枠組みも提供．
+    .item2
+      .text
+        p
+          img(src=`${figpath}SoS-RSC_A_Sum-of-Squares_Polynomial_Approach_to_Robustifying_Subspace_Clustering_Algorithms.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 外れ値除去について，理論的な枠組み，効率的な計算を提供．
+        p 種々のデータセットにおいてSoTA性能を確認．その時の計算時間は従来法より10～50倍速い．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 定式化については数学的に込み入っているので，手法の理解にはちゃんと読む必要がありそう．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2138.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 12:34:31
