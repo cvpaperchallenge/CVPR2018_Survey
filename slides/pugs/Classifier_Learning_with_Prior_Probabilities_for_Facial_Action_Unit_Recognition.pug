@@ -1,0 +1,36 @@
++slide
+section#ID_Classifier_Learning_with_Prior_Probabilities_for_Facial_Action_Unit_Recognition
+  .paper-abstract
+    .title Classifier Learning with Prior Probabilities for Facial Action Unit Recognition
+    .info
+      .authors Yong Zhang, Weiming Dong, Bao-Gang Hu, Qiang Ji
+      .conference CVPR 2018
+      .paper_id 2896
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p facial action units (AUs)のアノテーションを用いず、顔画像から得られるAUsの確率分布を用いてAUsの識別を行う手法を提案。AUsは表情や個人に依存するため、専門家がアノテーションしなければならずデータセットの構築が難しい。提案手法では、解剖学てきな知見から得られるAUsの確率分布と表情に関する研究から得られるAUsの確率分布を使用し、それぞれのAUsの識別器を同時に学習する手法を提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Classifier_Learning_with_Prior_Probabilities_for_Facial_Action_Unit_Recognition.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CK+ database、MMI database、BP4D database、Emotion- Net databaseで実験。
+          li F値を評価尺度としてAUのアノテーションを使用していないSoTAの手法であるHTLよりも高い精度を達成。
+          li 顔のランドーマークで使用する特徴量や、最適化の際のロス関数の違いによる精度の比較を行なっており、いずれの設定でもSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 解剖学や表情の研究という超強力なpriorを用いた手法。他のタスクに応用するのは中々難しそう。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2896.pdf") 論文
+          li
+            a(href="https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Ruiz_From_Emotions_to_ICCV_2015_paper.pdf") 参考 From emotions to action units with hidden and semi-hidden-task learning (HTL)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 00:13:05
