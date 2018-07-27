@@ -1,0 +1,34 @@
++slide
+section#ID_Look_Imagine_and_Match_Improving_Textual-Visual_Cross-Modal_Retrieval_with_Generative_Models
+  .paper-abstract
+    .title Look, Imagine and Match: Improving Textual-Visual Cross-Modal Retrieval with Generative Models
+    .info
+      .authors Jiuxiang Gu, Jianfei Cai, Shafiq Joty, Li Niu, and Gang Wang
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像(orテキスト)からそれに対応するテキスト(or画像)を検索する手法を提案した。
+          |学習の過程はLook, Imagine, Matchの三つのステップに分けられる。
+          |Lookでは、queryとして与えられた画像(orテキスト)から特徴量抽出を行う。
+          |Imagineでは、得られた特徴量からテキスト(or画像)を合成する。
+          |Matchでは、合成したテキスト(or画像)との類似度によってテキスト(or画像)の検索を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Look_Imagine_and_Match_Improving_Textual-Visual_Cross-Modal_Retrieval_with_Generative_Models.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法では画像とテキストの特徴を共通の空間にマッピングしていたのに対し、それぞれを別に扱うことで画像の詳細を考慮することを可能にした。
+          |上位1位、10位のどちらの検索においてもベースラインよりも高い精度での検索を実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.06420") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 18:18:09

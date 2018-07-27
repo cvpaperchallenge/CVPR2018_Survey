@@ -1,0 +1,38 @@
++slide
+section#ID_Beyond_the_Pixel-Wise_Loss_for_Topology-Aware_Delineation
+  .paper-abstract
+    .title Beyond the Pixel-Wise Loss for Topology-Aware Delineation
+    .info
+      .authors A. Mosinska, P. Marquez-Neila, M. Kozinski and P. Fua
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 画像中の（曲）線の構造理解(delineation)において，
+          |常習的に用いられているピクセルワイズのロス（バイナリクロスエントロピー）では行われていない，
+          |穴あきや隣接線の数などの，トポロジカルな構造を考慮したロス（Topology-aware loss）を提案する．
+          |Imagenetで学習済みのVGG19を特徴記述子に使い，それと推定されたdelineationの差を見る．
+          |このペナルティ項をバイナリクロスエントロピーに追加してロス関数を設計する．
+        p また，計算の複雑さを維持したまま，
+          |同モデルにおいて反復的に適用するリファインメントのパイプラインも提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Spline_Error_Weighting_for_Robust_Visual-Inertial_Fusion.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p いくつかのケースではバイナリクロスエントロピーの2倍の性能が出せた．
+          |顕微鏡画像から空撮画像までの幅広いレンジにおいてSoTA性能が出る．
+        p 確かにトポロジカルな構造を見るべきだろうと思うが，
+          |その特徴はImagenetで学習済みなのでそれを使うというのが注目すべきと感じる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2605.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.26 18:26:16
