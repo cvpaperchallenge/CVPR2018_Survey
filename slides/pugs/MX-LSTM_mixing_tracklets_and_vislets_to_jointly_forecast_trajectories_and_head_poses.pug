@@ -1,0 +1,39 @@
++slide
+section#ID_MX-LSTM_mixing_tracklets_and_vislets_to_jointly_forecast_trajectories_and_head_poses
+  .paper-abstract
+    .title MX-LSTM: mixing tracklets and vislets to jointly forecast trajectories and head poses
+    .info
+      .authors Irtiza Hasan, Francesco Setti, Theodore Tsesmelis, Alessio Del Bue, Fabio Galasso, Marco Cri stani
+      .conference CVPR 2018
+      .paper_id 3292
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 人間の軌道予測を行う際に、頭部の向き情報を加えたLSTMベースのネットワークMiXing LSTMを提案。事前実験により人間の歩行軌道と頭部の向きが関係することを明らかにした上で、手法を提案。xy平面状の軌道(tracklets)と頭部の向き(vislets)の両方のstreamを考慮する。また、既存手法である
+          a(href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Alahi_Social_LSTM_Human_CVPR_2016_paper.pdf") Social LSTM
+          | では周りの歩行者の軌道を隠れ変数として考慮していたが、提案手法では推定された頭部の向きを中心とした視野角内に存在する歩行者のみを考慮することで精度の向上を図っている。最適化にはd-variate Gaussian parametersを用いた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}MX-LSTM_mixing_tracklets_and_vislets_to_jointly_forecast_trajectories_and_head_poses.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Mean Average Displacement error, Final Average Displacement errorを評価尺度とした。
+          li UCY sequences (Zara01、Zara02、UCY)、in the TownCentre datasetの全てにおいてSoTAを達成。
+          li 頭部の方向推定についてもSoTAと同等の精度を獲得。
+          li 既存のモデルでは速さが小さいほどエラーが大きかったが、提案手法では比較的、速さに依存せずエラーを抑えることができている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 新しく用いた情報はかなりシンプルで経験的に誰でも思いつきそうだが、それを初めて実装してSoTAを出していることがすごい！このように誰にでも納得できるpriorを取り入れることができたこともアクセプトに繋がった要因かもしれない。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3292.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2016/papers/Alahi_Social_LSTM_Human_CVPR_2016_paper.pdf") 参考 Social LSTM: Human Trajectory Prediction in Crowded Spaces (Social LSTM)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 06:22:35

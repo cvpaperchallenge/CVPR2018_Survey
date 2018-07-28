@@ -1,0 +1,33 @@
++slide
+section#ID_Generative_Adversarial_Image_Synthesis_with_Decision_Tree_Latent_Controller
+  .paper-abstract
+    .title Generative Adversarial Image Synthesis with Decision Tree Latent Controller
+    .info
+      .authors T.Kaneko, K.Hiramatsu and K.Kashino
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 属性を階層的に選びながら画像生成できるDTLC-GANを提案．階層的な構造を課すために，我々はDTLCと呼ばれる新しいアーキテクチャを生成器入力に組み込む．DTLCとは，教師データなしまたは，最上位層の教師データだけで改装の表現を自動で発見できるアルゴリズムである．DTLC-GANをMNIST，CIFAR-10，Tiny ImageNet，3D Faces，CelebAなどのさまざまなデータセットで画像生成や画像検索のタスクの有効性を確認した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Generative_Adversarial_Image_Synthesis_with_Decision_Tree_Latent_Controller.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li アーキテクチャを階層的に使用することにより、上位層の階層に応じて下位層のコードを選択的に使用する潜在空間が得られる．
+          li HCMIと呼ばれる正則化により，単一のDTLC-GANモデルのみを使用して、階層的に絡み合わない表現を学習することが可能になる．
+          li DTANと呼ばれる新しいアーキテクチャをGANに組み込み、階層的な構造を作成する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 画像検索などの他のタスクにも応用できそう
+          li
+            a(href="https://arxiv.org/abs/1805.10603") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 15:40:38
