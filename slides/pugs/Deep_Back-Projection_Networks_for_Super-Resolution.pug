@@ -1,0 +1,31 @@
++slide
+section#ID_Deep_Back-Projection_Networks_for_Super-Resolution
+  .paper-abstract
+    .title Deep Back-Projection Networks for Super-Resolution
+    .info
+      .authors Muhammad Haris, Gregory Shakhnarovich, Norimichi Ukita
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 高解像のタスクに対して、アップサンプリングとダウンサンプリングを交互に繰り返す構造を持つDeep Back-Projection Networks（DBPN）を提案した。従来のネットワークはアップサンプリングを行う方向（feed-forward connection）しか考えておらず、それをダウンサンプリングする方向（feedback connection）を考えていなかったため、大きなスケール変化に対応できていなかった。本論文は1991年のCVGIPで発表された論文に発想を得て、アップサンプリングとダウンサンプリングを交互に繰り返す構造を取り、SoTAを達成した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}DBPN.png`,alt="DBPN")
+    .item3
+      .text
+        h1 手法・新規性
+        p DBPNはup-projection unitとdown-projection unitからなる。up-projection unitの手順は、1) 一つ前の状態の低解像度画像（LR）をスケールアップし高解像度画像（HR）を生成し、2) 次にHRをスケールダウンさせたLRを得る、3) スケールアップとスケールダウンを経て得られたLRと入力のLRの差分を計算した後、4) その差分を元に再度スケールアップをすることでHRを得る、5) 最後にこのHRと最初にスケールアップで得られたHRを足し合わせたものを最終的なHRの出力とする。down-projection unitはこの反対の操作を行う。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Haris_Deep_Back-Projection_Networks_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3606-supp.pdf") Supplemental Material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 18:11:21
