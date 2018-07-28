@@ -1,0 +1,37 @@
++slide
+section#ID_Deep_Mutual_Learning
+  .paper-abstract
+    .title Deep Mutual Learning
+    .info
+      .authors Ying Zhang, Tao Xiang, Timothy M. Hospedales, Huchuan Lu
+      .conference CVPR 2018
+      .paper_id 304
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 複数のネットワークを同時並行で学習し、お互いの情報を共有することで最終的な精度を向上させるDeep Mutual Learning(DML)を提案。論文中では特に識別タスクを扱っている。それぞれのネットワークを通常の識別に関する教師あり学習のロスと、他のネットワークによる推定ラベルの確率分布を事前情報としたKL divergenceをロスとして用いることで学習を行なっていく。比較手法としてネットワークの蒸留をあげており、上流ではteacherネットワークはstudentネットワークよりも小さくなければいけないが、DMLでは小さなネットワークだけで学習を行うことでき、ネットワークのサイズにとらわれない枠組みとなっている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Mutual_Learning.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 蒸留を行なった場合よりも高い精度を達成。
+          li 単体で学習を行うよりもDMLによって学習した場合の方が高い精度を達成。パラメタ数の多いWRN-28-10でも実験しており、DMLを行なったほうが0.5%程度精度が高くなっている。
+          li 同時に学習するネットワークの数が多いほど、最終的な精度も向上。
+          li ImageNetで事前学習を使用した方がさらに高い結果。人物認証ではMobileNet+DML+事前学習で精度が50.15%から70.51%まで向上。
+          li CIFAR-100を持ちいたカテゴリ識別、Market1501における人物認識で検証
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 論文ではネットワークの蒸留などの転移学習と比較しているが、どちらかというとメタ学習に近い？
+          li 1 introductionにて、「提案手法が既存の転移学習に比べて良くなる理由ははっきりとはわかっていない。しかしあり得そうなのは、ネットワークごとに初期条件が異なるため、すぐにラベルの識別を行うことは可能になるがacc@top-2のカテゴリはネットワークごとに異なる問題があるが、DMLではこれを防ぐことができるため、既存の手法に優った」と述べている。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0304.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.26 23:18:20

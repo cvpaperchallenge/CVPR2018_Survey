@@ -1,0 +1,35 @@
++slide
+section#ID_Weakly_Supervised_Action_Localization_by_Sparse_Temporal_Pooling_Network
+  .paper-abstract
+    .title Weakly Supervised Action Localization by Sparse Temporal Pooling Network
+    .info
+      .authors Phuc Nguyen, Ting Liu, Gautam Prasad, Bohyung Han
+      .conference CVPR 2018
+      .paper_id 2013
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p トリミングがされておらず、かつvideo-levelのactionラベル(動画内に存在するactionのラベル)を用いた弱教師学習によって、時系列上のaction localizationを行うSparse Temporal Pooling Network (STPN)を提案。提案手法では一定間隔で取り出された動画のセグメントに対してactionのclassificationロスと、各セグメントごとの、クラスに関わらず、actionのsparsityをL1ロスを用いて考慮することで、actionが存在し得るセグメントをプールしていくことでネットワークのトレーニングを行う。上記をRGBの入力とoptical-flowの入力を用いたtwo-streamで行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Weakly_Supervised_Action_Localization_by_Sparse_Temporal_Pooling_Network.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li THUMOS14 、ActivityNet1.3 datasetにおいて、弱教師学習の手法においてSoTA。また、いくつかの教師あり学習と同等の精度を達成。
+          li 評価尺度はlocalizationのIoUの閾値におけるmAP
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li video-levelのアノテーションはトレーニング時のみ必要であり、テスト時にはあり得そうなactionのラベルから推定してくれることも実用性が高い。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2013.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/2013-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 18:45:01
