@@ -1,0 +1,31 @@
++slide
+section#ID_A_Two-Step_Disentanglement_Method
+  .paper-abstract
+    .title A Two-Step Disentanglement Method
+    .info
+      .authors Naama Hadad, Lior Wolf, Moni Shahar
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p Disentanglementタスクを敵対的ネットワークの構造を利用して行った論文。Disentanglementとは要因を分解するようなタスクであり、手書き文字であれば何の文字が書かれているかという情報と書かれている文字のスタイルを分離するようなタスクである。提案手法は最初に正解ラベルを与えられるようなタスクを学習させた後、それ以外の要素を抽出するようにもう一つのネットワークを学習させることでこれを実現した。実験では、分離した2つの要因を補間したり、掛け合わせたりする検証と2つの要因に相関が無くなっているかを確認するための検索タスクを行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Two-Step_Disentanglement_Method.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p まず初めにネットワークSを正解ラベルの存在するクラス分類のタスクで学習させる。次にSとは異なるネットワークZを学習するのだが、SのエンコーダとZのエンコーダから得られた特徴量からReconstructionするように学習するブランチと、Zのエンコーダから得られた特徴量からできるだけクラス分類の精度が下がるように学習するブランチで学習する。特にクラス分類の精度を下げるように学習する方は、クラス分類に必要な情報をできるだけ忘れるようになっており、Disentanglementのタスクに効いている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hadad_A_Two-Step_Disentanglement_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/naamahadad/A-Two-Step-Disentanglement-Method") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 17:13:40
