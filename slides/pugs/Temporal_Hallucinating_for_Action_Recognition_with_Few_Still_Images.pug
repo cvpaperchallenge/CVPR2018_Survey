@@ -1,0 +1,37 @@
++slide
+section#ID_Temporal_Hallucinating_for_Action_Recognition_with_Few_Still_Images
+  .paper-abstract
+    .title Temporal Hallucinating for Action Recognition with Few Still Images
+    .info
+      .authors Yali Wang, Lei Zhou, Yu, Qiao
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 概要
+          |1枚画像からの行動認識を、類似する動作の記憶を手がかりに行うHybrid Video Memory(HVM)を提案した。
+          |人間は未知の光景に遭遇したとき、過去の記憶を手がかりに類似したものから類推することができる。
+          |HVMは人間のこのプロセスを模倣し、数枚しかない学習データを類似する動作と関連付けることで学習を可能にする。
+          |学習済みTwo-stream CNNに1枚画像を入力し、Memory動画とSpatial Featureを比較することにより類似する動画へ重み付けを行う。
+          |この類似する動作から得られるTemporal Featureの重みつき和を入力画像のTemporal Featureにする。
+          |行動の予測は得られたTemporal Featureと学習画像及びMemory動画のTemporal Featureの類似度により各動画への重みを決定し、学習画像及びMemory動画のラベルの重み付き和を出力ラベルとする。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Temporal_Hallucinating_for_Action_Recognition_with_Few_Still_Images.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p UCF101をMemory動画として、WEB101, VOC, DIFF20の3つの画像データセットに対する行動予測を実施。
+          |いずれのデータセットに関しても、従来手法と比べ提案手法が最も精度が高い(WEB101 35.4%, VOC 42.2%, DIFF20 60.2%)結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p アメフトに類似するMemory動画がバンドマーチングなのはなぜ？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Temporal_Hallucinating_for_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 01:46:05
