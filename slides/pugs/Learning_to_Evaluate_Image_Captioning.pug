@@ -1,0 +1,31 @@
++slide
+section#ID_Learning_to_Evaluate_Image_Captioning
+  .paper-abstract
+    .title Learning to Evaluate Image Captioning
+    .info
+      .authors Yin Cui, Guandao Yang, Andreas Veit, Xun Huang, Serge Belongie
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 人間の判断に基づいた新たな画像キャプショニングの評価指標を提案した。
+          |画像、正解となるキャプション、生成したキャプションの3つを入力とし、生成キャプションが人間の作ったものであるかを判定することで学習を行う。
+          |これにより評価時にはキャプションに対するスコアを出力する。
+          |また、data augmentationの方法として他の画像のキャプションを使う、単語の一部を並び替える、単語の一部を置き換えるの3つを提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_to_Evaluate_Image_Captioning.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来提案されてきた評価指標と比べ人間の評価と相関が高く、Pearson's correlationが0.9を超えた。(従来のものの最大は0.75程度)
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://www.cs.cornell.edu/~xhuang/publication/captioning/") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 00:11:54

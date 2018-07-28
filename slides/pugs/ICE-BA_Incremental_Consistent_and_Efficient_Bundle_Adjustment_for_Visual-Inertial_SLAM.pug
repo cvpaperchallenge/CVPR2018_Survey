@@ -1,0 +1,32 @@
++slide
+section#ID_ICE-BA_Incremental_Consistent_and_Efficient_Bundle_Adjustment_for_Visual-Inertial_SLAM
+  .paper-abstract
+    .title ICE-BA: Incremental, Consistent and Efficient Bundle Adjustment for Visual-Inertial SLAM
+    .info
+      .authors Haomin Liu, Mingyu Chen, Guofeng Zhang, Hujun Bao, Yingze Bao
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Visual-Inertial SLAM(VI-SLAM)の最適化計算に関する研究。
+          |画像情報と慣性情報を用いたポーズ推定は、VI-SLAMの計算時間を大きく左右する。
+          |SLAMはその応用先ゆえにリアルタイムで動くことが求められるため、高速化にはポーズ推定の高速化が求められる。
+          |そこで、従来手法と比べより効率よく最適化する手法を提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}ICE-BA_Incremental_Consistent_and_Efficient_Bundle_Adjustment_for_Visual-Inertial_SLAM.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来法では短期間の情報しか最適化に用いることができなかったのに対し、計算効率を10倍に向上することでより長期的な情報を使用して精度を向上することに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://github.com/baidu/ICE-BA") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.21 02:15:18

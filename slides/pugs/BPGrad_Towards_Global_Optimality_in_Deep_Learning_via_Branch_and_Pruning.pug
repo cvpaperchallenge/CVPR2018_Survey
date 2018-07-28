@@ -1,0 +1,39 @@
++slide
+section#ID_BPGrad_Towards_Global_Optimality_in_Deep_Learning_via_Branch_and_Pruning
+  .paper-abstract
+    .title BPGrad: Towards Global Optimality in Deep Learning via Branch and Pruning
+    .info
+      .authors Z. Zhang, Y. Wu, G. Wang
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 深層学習において大域最適解に導くソルバー（BPGrad）の提案．
+          |Branch & Pruning（分枝限定法）を導入している．
+        p リプシッツ連続性の概念で説明している．
+          |DLの関数がリプシッツ連続になっている，あるいはリプシッツ連続になるように
+          |近似して滑らかにすると，小さくて急峻な崖に陥るのを防げると説明している．
+          |リプシッツ連続を考えると，大域最適解の上限・下限がうかがい知れ，かつ
+          |滑らかにできてよいらしい．
+        p Branch（枝分け）：次に移動すべき勾配方向を提案，
+          |Pruning（枝刈り）： 理論的に大域的最適解が無いと分かっている領域には行かない．
+    .item2
+      .text
+        p
+          img(src=`${figpath}BPGrad_Towards_Global_Optimality_in_Deep_Learning_via_Branch_and_Pruning.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 理論的に大域最適解にアプローチする手法として初出，と主張．（本当？）
+        p 認識，検出，セグメンテーションのタスクにおいて，従来のソルバーより性能が良いことを確認．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p リプシッツ連続：関数の勾配の大きさが常に一定以下になっていること．すなわち，|Δf|/|Δx|<=k
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2138.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 10:53:50
