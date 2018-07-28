@@ -1,0 +1,33 @@
++slide
+section#ID_3D_Registration_of_Curves_and_Surfaces_using_Local_Differential_Information
+  .paper-abstract
+    .title 3D Registration of Curves and Surfaces using Local Differential Information
+    .info
+      .authors Carolina Raposo and Joao P. Barreto
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 3次元の曲線を3次元の表面にregistrationするための手法を提案した。
+          |曲線（表面）上の点を、点に加え微分情報を表すvector(法線もしくは接平面)のpoint＋vector(2-tuplesと呼ぶ)と考える。
+          |2点の2-tuplesを考え、4つのパラメータにより表現して対応曲線と表面上の点が対応しているかの判定を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}3D_Registration_of_Curves_and_Surfaces_using_Local_Differential_Information.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ノイズがある場合、ない場合どちらにおいても、元のデータよりも点の数が減っていると従来手法は精度が下がるのに対して提案手法は点の数が少なくなっても精度が下がりにくい。
+          |計算時間は、オフラインのプロセスが0.3~1.9sであり、オンラインのプロセスは10^0から10^-1のオーダーで計算できる。
+          |curve vs curveやsurface vs surfaceのregistrationにも発展させることが可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00637") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 21:34:35
