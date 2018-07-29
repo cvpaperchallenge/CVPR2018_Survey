@@ -1,4 +1,5 @@
 slide
++slide
 section#ID_Densely_Connected_Pyramid_Dehazing_Network.pug
   .paper-abstract
     .title Densely_Connected_Pyramid_Dehazing_Network.pug
@@ -6,16 +7,17 @@ section#ID_Densely_Connected_Pyramid_Dehazing_Network.pug
       .authors He Zhang, Vishal M. Patel
       .conference CVPR 2018
     .slide_editor Daichi Horita
-      .item1
-        .text
-          h1 概要
-          p 空気汚染などで霞んだ大気などが写っていると認識などのタスクではノイズとなりうるケースがあり、除去する必要がある。
-            |そこで以下の手法を用いてSoTA達成し、End2Endで学習を行える除去方法を提案した。
-            |画像を数式化し、それを解く手法をDensly Connected Pyramid Dehazing Networks(DCPDN)とした。しかし、直接推定するのは難しいので段階的に学習した。
-            |霞んだ画像のEdgeなどの構造(TransmissionMapEstimation)と、霞など(AtmosphericLightEstimation)に分離して特徴量を獲得し、それら2つからDehazeImageを作成。
-            |その後、DehazeImagerとEstimation、2つのペアの構造が似ているかをJoint-Discriminatorで識別し学習する。
-            |また、Edgeは画像に分け目でありImageGraduentsに特徴付けらること、輪郭やEdgeのようなlow-levelな特徴量はCNNの最初の方の層で抽出されることの2つの背景から
-            |Edgeの特徴量を豊富に学習できる、ImageGradientを取る関数、VGGでcontent featureを取る関数の和であるEdge-preserving Lossを提案を提案した。
+
+    .item1
+      .text
+        h1 概要
+        p 霞んだ大気が写っていると認識タスクなどではノイズとなりうるケースがあり、除去する必要がある。
+          |そこで以下の手法を用いてSoTA達成し、End2Endで学習を行える除去方法を提案した。
+          |画像を数式化し、それを解く手法をDensly Connected Pyramid Dehazing Networks(DCPDN)とした
+          |霞んだ画像のEdgeなどの構造(TransmissionMapEstimation)と、霞など(AtmosphericLightEstimation)に分離して特徴量を獲得し、それら2つからDehazeImageを作成。
+          |その後、DehazeImagerとEstimation、2つのペアの構造が似ているかをJoint-Discriminatorで識別し学習する。
+          |また、Edgeは画像に分け目でありImageGraduentsに特徴付けらること、輪郭やEdgeのようなlow-levelな特徴量はCNNの最初の方の層で抽出されることの2つの背景から
+          |Edgeの特徴量を豊富に学習できる、ImageGradientを取る関数、VGGでcontent featureを取る関数の和であるEdge-preserving Lossを提案を提案した。
     .item2
       .text
         p
