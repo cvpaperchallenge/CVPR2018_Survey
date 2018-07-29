@@ -1,0 +1,30 @@
++slide
+section#ID_A_Fast_Resection-Intersection_Method_for_the_Known_Rotation_Problem
+  .paper-abstract
+    .title A Fast Resection-Intersection Method for the Known Rotation Problem
+    .info
+      .authors Qianggong Zhang, Tat-Jun Chin, Huu Minh Le
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p カメラ姿勢の中でも角度が既知であるというStructure-from-Motion（SfM）の中でも特殊な問題を扱う。再投影誤差（Reprojection Errors）に関してMini-Max問題を想定し、この問題について擬似凸プログラミング問題（Pseudo-Convex Programming）として解決する。従来では非常に処理時間がかかる同問題に対して、本論文では（比較的）大規模なデータにおいて高速化を図った。最適化の更新処理においてMinimum Enclosing Ball (MEB)を用いることでメモリ低減と同時に高速化を実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180727FastResectionIntersection.png`,alt="180727FastResectionIntersection")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SfMにおいても特殊と言われる、カメラ角度が既知の状態における擬似凸最適化の問題で、繰り返し最適化手法を考案することで比較的大規模な問題において高速な演算を行うことに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p SfMの問題設定、カメラ角が既知の場合てどんな場面だろう？？どんなシステムを想定した場合既知なのでしょうか。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_A_Fast_Resection-Intersection_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 18:13:45

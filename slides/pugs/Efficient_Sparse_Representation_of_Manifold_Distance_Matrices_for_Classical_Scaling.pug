@@ -1,0 +1,32 @@
++slide
+section#ID_Efficient_Sparse_Representation_of_Manifold_Distance_Matrices_for_Classical_Scaling
+  .paper-abstract
+    .title Efficient, Sparse Representation of Manifold Distance Matrices for Classical Scaling
+    .info
+      .authors Javier S. Turek, Alexander G. Huth
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 本論文では3次元形状において、膨大な空間からマッチングする領域の探索問題を考える。従来では低ランク近似（Low-Rank Approximation）による手法、例としてMDS（Multidimensional Scaling）を適用してきた。本論文ではBiharmonic Interpolationによる測地距離行列を用いたSparse Biharmonic MDS（sBMDS）を提案することでより効率的な探索を実施することができる。sBMDSではデータの多様体を捉えて探索する点を大幅に抑えることができる（1.8Mx1.8M, 26TB => 50,000 landmarks, 20.9GB）。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180723ManifoldDistanceMatrices.png`,alt="180723ManifoldDistanceMatrices")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p スパース補間技術であるsBMDSを提案したことで、マッチングする領域を大幅に減らすことに成功。非剛体のマッチングに要する時間は半分、メモリは20分の1になったと主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ムービーで非剛体3次元のメッシュをマッチングできたら面白い！まだまだ改善が必要であろうか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Turek_Efficient_Sparse_Representation_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/alexhuth/BHA") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 20:30:46
