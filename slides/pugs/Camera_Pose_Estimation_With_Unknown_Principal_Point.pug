@@ -1,0 +1,30 @@
++slide
+section#ID_Camera_Pose_Estimation_With_Unknown_Principal_Point
+  .paper-abstract
+    .title Camera Pose Estimation With Unknown Principal Point
+    .info
+      .authors Viktor Larsson, Zuzana Kukelova, Yinqiang Zheng
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Structure-from-Motion（SfM）やカメラ位置推定の一種である6DOFの姿勢推定の問題について取り組む。大抵の場合、中心座標（Principal Point）は画像の中央と決めているが、ここでは対応する4.5点（P4.5Pfuv）を基にして中心座標や焦点距離を推定する。さらにはアスペクト比を5点対応から、中心座標とレンズディストーションを7点対応から推定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180727P4.5Pfuv.png`,alt="180727P4.5Pfuv")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p カメラ行列に関して多項式の拘束を与えることで、4.5点対応で中心座標や焦点距離を、5点対応でアスペクト比を、7点対応（特にこれが難しい！）からは中心座標とレンズディストーションを推定した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p カメラ情報を推定する際に、対応点てどうやったら減るんだろう？（論文には書いてあるのですが、モチベーションや発想という意味で）
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Larsson_Camera_Pose_Estimation_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 17:41:32
