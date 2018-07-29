@@ -34,35 +34,3 @@ section#ID_Densely_Connected_Pyramid_Dehazing_Network.pug
             a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Densely_Connected_Pyramid_CVPR_2018_paper.pdf") 論文
     .slide_index #{getSlideIndex()}
     .timestamp 2018.7.29 13:30:55
-
-
-
-
-
-        h1 概要
-        p PointNetでは考慮出来ていない, PointCloud の局所的な構造を抽出するために, 新しい２つの演算 (kernel correlation と graph-based pooling) を提案. classification と segmentation のタスクで行った評価実験では PointNet++ と同等以上の結果をより少ないパラメータ数で達成した.
-    .item2
-      .text
-        p
-          img(src=`${figpath}fukuhara-Mining_Point_Cloud_Local_Structures_by_Kernel_Correlation_and_Graph Pooling.png`,alt="fukuhara-Mining_Point_Cloud_Local_Structures_by_Kernel_Correlation_and_Graph Pooling.png")
-    .item3
-      .text
-        h1 新規性・結果・なぜ通ったか？
-        ul
-          li PointNetでは考慮出来ていない, PointCloud の局所的な構造を抽出するための新しい２つの演算を提案
-          li 1つ目として, 局所的な幾何構造の Affinity を測るための kernel correlation を提案
-          li 誤差逆伝播時に kernel point の位置を調整出来るようにすることで, 最も効果的なテンプレートの形状を学習
-          li 2つ目として, 局所的な高次元特徴をみるために, graph-based pooling を提案
-          li classification と segmentation のタスクで評価実験
-          li classification では MVCNN のような画像と volume の両方を入力とする手法と同等の高い精度を達成 (ModelNetを評価に使用)
-          li segmentation では PointNet(追加情報として法線も入力)と同等の結果を達成（ShapeNetを評価に使用）
-     .item4
-      .text
-        h1 コメント・リンク集
-        ul
-          li
-            a(href="https://arxiv.org/pdf/1712.06760.pdf" target="blank") [論文] Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling
-          li
-            a(href="http://www.merl.com/research/ license#KCNet" target="blank") [Code] MITSUBISHI ELECTRIC RESEARCH LABORATORIES
-    .slide_index #{getSlideIndex()}
-    .timestamp 2018.7.28 15:59:55 
