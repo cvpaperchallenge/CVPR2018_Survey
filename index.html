@@ -8,7 +8,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-118576057-1');
-</script><body><div class="reveal"><div class="slides"><slide></slide><section class="pug" id="ID_Densely_Connected_Pyramid_Dehazing_Network"><div class="paper-abstract"><div class="title">Densely_Connected_Pyramid_Dehazing_Network.pug</div><div class="info"><div class="authors">He Zhang, Vishal M. Patel</div><div class="conference">CVPR 2018</div></div><div class="slide_editor">Daichi Horita</div><div class="item1"><div class="text"><h1>概要</h1><p>霞んだ大気が写っていると認識タスクなどではノイズとなりうるケースがあり、除去する必要がある。そこで以下の手法を用いてSoTA達成し、End2Endで学習を行える除去方法を提案した。
+</script><body><div class="reveal"><div class="slides"><slide></slide><section id="ID_Densely_Connected_Pyramid_Dehazing_Network"><div class="paper-abstract"><div class="title">Densely_Connected_Pyramid_Dehazing_Network</div><div class="info"><div class="authors">He Zhang, Vishal M. Patel</div><div class="conference">CVPR 2018</div></div><div class="slide_editor">Daichi Horita</div><div class="item1"><div class="text"><h1>概要</h1><p>霞んだ大気が写っていると認識タスクなどではノイズとなりうるケースがあり、除去する必要がある。そこで以下の手法を用いてSoTA達成し、End2Endで学習を行える除去方法を提案した。
 画像を数式化し、それを解く手法をDensly Connected Pyramid Dehazing Networks(DCPDN)とした
 霞んだ画像のEdgeなどの構造(TransmissionMapEstimation)と、霞など(AtmosphericLightEstimation)に分離して特徴量を獲得し、それら2つからDehazeImageを作成。
 その後、DehazeImagerとEstimation、2つのペアの構造が似ているかをJoint-Discriminatorで識別し学習する。
