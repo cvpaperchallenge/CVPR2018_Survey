@@ -1,0 +1,38 @@
++slide
+section#ID_Pulling_Actions_out_of_Context_Explicit_Separation_for_Effective_Combination
+  .paper-abstract
+    .title Pulling Actions out of Context: Explicit Separation for Effective Combination
+    .info
+      .authors Yang Wang, Minh Hoai
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 動画中からコンテキスト情報を取り除き動作そのものから行動を推定する手法を提案。
+          |行動認識において、背景などのコンテキスト情報は識別のための重要な手がかりである。
+          |しかし、学習データが似たようなコンテキストのものを多く含んでしまうと、実際には動作が違うにもかかわらず背景などによって異なる動作を認識してしまう。
+          |そこで動画を行動とコンテキストに分解し、行動のみから識別を行う。
+          |行動とコンテキストそれぞれのラベルをつけた学習データを用意するのは困難なため、同じ動画からアクションを含む部分(action sample)と含まない部分(conjugate sample)を考える。
+          |ネットワークとして行動に関する特徴とコンテキストに関する特徴を抽出するものを考える。
+          |行動特徴に関しては、conjugate sampleには注目のアクションを含まないため2つのsampleから抽出した特徴が類似しないように学習する。
+          |一方でcontext sampleに関しては２つのsampleは背景などを共有しているため類似するように学習する。
+          |これに加えてaction sampleから得られる2つの特徴を用いた行動識別を考え、classification lossとする。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Pulling_Actions_out_of_Context_Explicit_Separation_for_Effective_Combination.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ActionThread datasetで実験し、13の行動のうち10の行動が提案手法のprecisionが最も高かった。
+          |UCF101, Hollywood2を用いてconjugate sampleをaction sampleの隣接するセグメントにとして行った実験も提案手法の精度がベースラインを上回った。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Pulling_Actions_out_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 23:42:55

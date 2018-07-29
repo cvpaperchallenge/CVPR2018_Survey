@@ -1,0 +1,37 @@
++slide
+section#ID_Revisiting_Video_Saliency_A_Large-scale_Benchmark_and_a_New_Model
+  .paper-abstract
+    .title Revisiting Video Saliency: A Large-scale Benchmark and a New Model
+    .info
+      .authors Wenguan Wang, Jianbing Shen, Fang Duo, Ming-Ming Cheng and Ali Borji
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p この研究では以下に示す3つのことを行なった．
+        ol
+          li 人の視線推定のため，DHF1Kと呼ばれる新しいデータセットを提案．
+          li 動的シーンにおける人の視線推定のため，新たにCNN-LSTMアーキテクチャを提案．
+          li ビデオサリエンシーモデルを分析．
+        p DHF1Kデータセットは，1000個の動画から構成されており，シーン，モーション，アクティビティ等が既存データセットよりも幅広くカバーされている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Revisiting_Video_Saliency_A_Large-scale_Benchmark_and_a_New_Model.png`,alt="Revisiting_Video_Saliency_A_Large-scale_Benchmark_and_a_New_Model.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p DHF1K, Hollywood2, UCF sportsデータセットを用いて実験を行なった結果，提案モデルがSOTAモデルよりも優れていることがわかった．
+          |評価指標としては，Normalized Scanpath Saliency, Similarity Metric, Linear Correlation Coefficient, AUC-Judd, shuffled AUCを用いた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1801.07424.pdf") 論文URL
+          li
+            a(href="https://github.com/wenguanwang/DHF1K") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 17:08:50

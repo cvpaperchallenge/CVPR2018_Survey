@@ -1,0 +1,29 @@
++slide
+section#ID_Viewpoint-aware_Video_Summarization
+  .paper-abstract
+    .title Viewpoint-aware Video Summarization
+    .info
+      .authors Atsushi Kanehira, Luc Van Gool, Yoshitaka Ushiku, Tatsuya Harada
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p そもそも要約動画として１つの最適解が存在するわけではないことを主張し、それぞれの視点に合わせて要約動画を行った研究。本研究では、動画間の類似度に着目し、フィッシャー判別から着想を得て、inner-summary variance、inner-group variance、between-group varianceに関して最適化を行うことで要約映像を生成した。また評価のためのデータセットを構築し、質的評価・量的評価を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Viewpoint-aware_Video_Summarization.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p 要約動画として満たすべき条件として(1)要約動画内で分散があること、(2)同一グループ内の動画を代表することができること、(3)他のグループの動画と識別できることを挙げている。これらに対応する要素がフィッシャー判別から着想を得たinner-summary variance、inner-group variance、between-group varainceである。これらをC3Dで抽出した特徴量に対して計算し、最適化することで解を得る。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Kanehira_Viewpoint-Aware_Video_Summarization_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 19:04:45

@@ -1,0 +1,34 @@
++slide
+section#ID_Deep_Adversarial_Subspace_Clustering
+  .paper-abstract
+    .title Deep Adversarial Subspace Clustering
+    .info
+      .authors Pan Zhou, Yunqing Hou, Jiashi Feng
+      .conference CVPR 2018
+      .paper_id 2635
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p サブスペースクラスタリングを敵対的学習によって行うdeep adversarial subspace clustering (DASC) modelを提案。多くの既存手法ではハンドクラフトな特徴量を使用していたが、提案手法では初めて敵対的学習を教師無しの手法を提案。ネットワークは特徴量を抽出するencoder、画像のリコンストラクションを行うdecoder、sampling layerから得られたfakeデータと実際のデータ(real)を識別するdiscriminatorからなる。discriminatorはデータの識別を行う際に、realを超平面状に射影するような行列を作成しつつ、realは射影するエネルギーが小さいが、fakeは射影するエネルギーが大きいという過程のもとデータを識別。より良い射影行列を作成することでサブスペースクラスタリングを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Adversarial_Subspace_Clustering.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li (MNIST, {ORL, YaleB, Umist}, COIL-20/100) を用いた手書き(文字認識、人物、物体)のクラスタリングにおいてSoTA。
+          li accuracy, normalized mutual information、purityを評価尺度とした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li サブスペースクラスタリングとは、クラスタが違った部分空間に存在すると仮定し，部分空間とクラスタを同時に見つけるクラスタリング手法。
+          li クラスタ毎に超平面への射影可能、という過程がかなり強い効果を発揮している。クラスタ数をさらに増やすと超平面ではクラスタ境界が曖昧になって精度は落ちる？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2635.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 14:47:11

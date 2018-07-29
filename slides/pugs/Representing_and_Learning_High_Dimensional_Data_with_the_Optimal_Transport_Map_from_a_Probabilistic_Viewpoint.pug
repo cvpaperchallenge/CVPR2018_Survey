@@ -1,0 +1,33 @@
++slide
+section#ID_Representing_and_Learning_High_Dimensional_Data_with_the_Optimal_Transport_Map_from_a_Probabilistic_Viewpoint
+  .paper-abstract
+    .title Representing and Learning High Dimensional Data with the Optimal Transport Map from a Probabilistic Viewpoint
+    .info
+      .authors Serim Park, Matthew Thorpe
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Kantorovich-Wasserstein metricに基づいて高次元データを微分同相写像により表現する手法を提案した。
+          |K-meansによりクラスタリングされたK個の接平面毎にテンプレートとなるベクトルをprobablistic PCAにより学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Representing_and_Learning_High_Dimensional_Data_with_the_Optimal_Transport_Map_from_a_Probabilistic_Viewpoint.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p MNIST, ADNI PET, NUCLEIの3つのデータセットにより評価。
+          |少ない学習データから提案手法によりデータ数を増やし識別タスクの精度を上げることに成功した。
+          |確率モデルを考えるためBayesian Classificationを可能とし、Logistic Regressionより精度が高いことを確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p The数学という感じの論文
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3448.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 17:57:59

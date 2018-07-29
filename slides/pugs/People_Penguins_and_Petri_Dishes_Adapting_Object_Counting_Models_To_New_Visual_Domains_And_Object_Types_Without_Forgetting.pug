@@ -1,0 +1,42 @@
++slide
+section#ID_People_Penguins_and_Petri_Dishes_Adapting_Object_Counting_Models_To_New_Visual_Domains_And_Object_Types_Without_Forgetting
+  .paper-abstract
+    .title People, Penguins and Petri Dishes: Adapting Object Counting Models To New Visual Domains And Object Types Without Forgetting
+    .info
+      .authors Mark Marsden et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Multi-domain なパッチベースの object counting の新しいモデルを提案. 提案手法は multi-domain に対応するための domain specific modules を内包しており, 全体のパラメータの内 5% を追加で学習するだけで新しい domain に対応することが出来る. 評価実験では, 単一のモデルで異なる domain に対する数え上げのタスクでSOTAを達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-People_Penguins_and_Petri_Dishes_Adapting_Object_Counting_Models_To_New_Visual_Domains_And_Object_Types_Without_Forgetting.png`,alt="fukuhara-People_Penguins_and_Petri_Dishes_Adapting_Object_Counting_Models_To_New_Visual_Domains_And_Object_Types_Without_Forgetting.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Multi-domain なパッチベースの object counting の新しいモデルを提案
+          li 提案されたネットワークは画像特徴量抽出のための CNN と数え上げのための全結合層のネットワーク（５層）から構成
+          li CNN は学習済みの画像分類のネットワークを使用（実験では MobileNet が最も高精度を達成）
+          li 各全結合層の後には multi-domain に対応するための domain specific modules が配置されており, 新しい domain の学習はこのモジュールのパラメータ（全体の5%程度）を用いて行う
+          //- li 提案手法は人や細胞, ペンギンや車など様々な種類の物体の数え上げに使用可能
+          li Cell Counting のデータセット Dublin Cell Counting (DCC) dataset を公開
+          li 単一のモデルで異なる domain に対する数え上げのタスクでSOTAを達成 (Shanghaitech and Penguins Dataset)
+          //- li 数え上げは 物体認識＋数え上げ回帰
+          //- li パッチベースの物体数え上げ回帰は、 object types and visual domains に対して
+          //-li CNNを用いたパッチベースのmulti-domain物体数え上げ
+          //-li domain adaptation　
+          //-li 画像分類のネットワークで特徴量を抽出、特徴量を全結合のネットワーク（５層）に突っ込んで個数をだす
+          //-li 全結合層の前にdomain-specific module がある
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.05586" target="blank") [論文] People, Penguins and Petri Dishes: Adapting Object Counting Models To New Visual Domains And Object Types Without Forgetting
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 1:04:55
