@@ -1,0 +1,30 @@
++slide
+section#ID_Reconstructing_Thin_Structures_of_Manifold_Surfaces_by_Integrating_Spatial_Curves
+  .paper-abstract
+    .title Reconstructing Thin Structures of Manifold Surfaces by Integrating Spatial Curves
+    .info
+      .authors Shiwei Li, Yao Yao, Tian Fang, Long Quan
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 細い（Thin）構造の物体を3次元復元するためのMulti-View Stereo手法を提案。トポロジーや連結性を考慮して復元を行ない、3次元メッシュ構造を復元することに成功した。3次元カーブ再構成、4面体系（tetrahedra）を復元してCurbe-conformed Delaunay Refinementを実施する。さらに、メッシュが4面体系上に復元される。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180725ReconstructingThinStructure.png`,alt="180725ReconstructingThinStructure")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 形状が細い構造物を合成データ/リアルデータ両方のデータセットにおいて3次元メッシュ復元を可能にした。また、図に示されている通り、（細い形状を含め）表面形状を保存したままの復元に成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 細い構造、3次元再構成の強い手法だけではできなかったのか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Reconstructing_Thin_Structures_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 15:44:53

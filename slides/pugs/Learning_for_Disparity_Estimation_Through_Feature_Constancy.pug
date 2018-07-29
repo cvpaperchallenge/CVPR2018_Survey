@@ -1,0 +1,33 @@
++slide
+section#ID_Learning_for_Disparity_Estimation_Through_Feature_Constancy
+  .paper-abstract
+    .title Learning for Disparity Estimation Through Feature Constancy
+    .info
+      .authors Zhengfa Liang, Yiliu Feng, Yulan Guo, Hengzhu Liu, Wei Chen, Linbo Qiao, Li Zhou, Jianfeng Zhang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p CNNのフォワード（のみ）によりステレオマッチングの出力である距離画像を出力する取り組み。従来のステレオマッチングでは左右画像マッチング、視差計算、距離画像修正により構成されていたが、CNNにより大幅に処理コストを削減する。提案のネットワークでは4つのパーツから構成され、マルチスケールで重みを共有しながら特徴計算を行い（Multi-scale Shared Features）、左右画像のマッチング（Disparity Estimation）、距離画像修正（Disparity Refinement）、距離画像の最終出力（Disparity）を実施する。アーキテクチャについては右図に記載されている通りである。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180723FeatureConstancyStereo.png`,alt="180723FeatureConstancyStereo")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 距離画像計算を一回のCNNのフォワードで実施するネットワークを構築し、ベンチマークであるScene FlowやKITTI datasetにて（論文投稿時）State-of-the-artな精度を実現した。グレースケールの色の一致性、勾配の一致性や特徴空間における恒常性（Feature Constancy）を考慮した結果、CNNによるステレオマッチングの出力が向上したと主張。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Liang_Learning_for_Disparity_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://deeplearn.org/arxiv/30217/learning-for-disparity-estimation-through-feature-constancy") Project
+          li
+            a(href="https://github.com/leonzfa/iResNet") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 15:14:24
