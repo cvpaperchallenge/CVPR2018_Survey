@@ -1,0 +1,34 @@
++slide
+section#ID_FOTS_Fast_Oriented_Text_Spotting_with_a_Unified_Network
+  .paper-abstract
+    .title FOTS: Fast Oriented Text Spotting with a Unified Network
+    .info
+      .authors X.Liu, D.Liang, S.Yan, D.Chen, Y.Qiao and J.Yan
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 既存のテキストの認識手法は，検出と認識を別のタスクとして扱う物が多い，しかし，本研究では，同時に検出と認識をするためのend-to-endで学習可能なFast Oriented Text Spotting（FOTS）を提案する．ICDAR 2015、ICDAR 2017 MLT、およびICDAR 2013を用いた文字の検出，識別の評価実験では既存の手法と比較してSoTAであった．
+    .item2
+      .text
+        p
+          img(src=`${figpath}FOTS_Fast_Oriented_Text_Spotting_with_a_Unified_Network.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li フレームワークをend-to-endとし，畳み込んだ特徴を共有することで，わずかな計算オーバーヘッドで同時にテキストを検出，認識することができ速度が向上．
+          li 畳み込んだ特徴マップから方向付けられたテキスト領域を抽出するためのRoIRotateを導入し，検出と識別の工程を結合．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li YouTubeを見てみたが検出・識別する速度が早い！
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1699.pdf") Paper
+          li
+            a(href="https://www.youtube.com/watch?v=F7TTYlFr2QM") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 02:12:34
