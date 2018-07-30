@@ -1,0 +1,34 @@
++slide
+section#ID_Weakly_Supervised_Phrase_Localization_with_Multi-Scale_Anchored_Transformer_Network
+  .paper-abstract
+    .title Weakly Supervised Phrase Localization with Multi-Scale Anchored Transformer Network
+    .info
+      .authors Fang Zhao et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 弱教師（画像レベルのアノテーション）によって Textual phrase localization を行う研究. 提案手法では anchor constraint の元で fine-grained な Bounding Box を連続的に探すことが可能. Flickr30K Entities と ReferItGane datasets を用いた評価実験では, 既存の弱教師に基づく手法に大きな差をつけてSOTAを達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Weakly_Supervised_Phrase_Localization_with_Multi-Scale_Anchored_Transformer_Network.png`,alt="fukuhara-Weakly_Supervised_Phrase_Localization_with_Multi-Scale_Anchored_Transformer_Network.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像レベルのアノテーションから Textual phrase localization を行うネットワーク, Multi-scale Anchored Transformer Network（MATN）を提案
+          li 提案手法は region proposal から生成された anchor constraint の元で Affine 変換のパラメータを推定
+          li 上記により, fine-grained な Bouding Box を連続的に探すことができる (Bouding Box の候補から選ぶのではなく)
+          li ネットワークは, 画像から連想される他のフレーズとの contrastive reconstruction loss と 同じようなフレーズを持つ画像とのtriplet loss によって学習 
+          li Flickr30K Entities と ReferItGane datasets を用いた評価実験では, GroundeR 等の既存の手法と比較してSOTAを達成. 特に IoU で評価して高い精度を要求される場合は, 提案手法が有効であることを確認.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Weakly_Supervised_Phrase_CVPR_2018_paper.pdf" target="blank") [論文] Weakly Supervised Phrase Localization with Multi-Scale Anchored Transformer Network
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 14:15:55

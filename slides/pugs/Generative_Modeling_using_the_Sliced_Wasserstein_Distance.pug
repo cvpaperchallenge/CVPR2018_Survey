@@ -1,0 +1,44 @@
++slide
+section#ID_Generative_Modeling_using_the_Sliced_Wasserstein_Distance
+  .paper-abstract
+    .title Generative Modeling using the Sliced Wasserstein Distance
+    .info
+      .authors Ishan Deshpande, Ziyu Zhang, Alexander Schwing
+      .conference CVPR 2018
+      .paper_id 3722
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p GANの学習を安定して行うことができるwasserstein distance(WD)から導出されるsliced WDを導入することで、安定したGANの学習方法を提案。一次のデータに対する二次のWDを式(5)に示す。このままでは最適化が難しく、計算コストも大きいが、式(7)、(8)のようにソーティングを行うことで、WDは式(10)のように簡単な数式に置き換えることができる。この式(10)のことをsliced WDと呼ぶ。しかし実際には画像データは一次元ではなく、高次元であるため、random projectionによって画像データを任意の一次元ベクトルに射影することでsliced WDによる学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Generative_Modeling_using_the_Sliced_Wasserstein_Distance.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li sliced wasserstein distanceをgeneratorのロス関数として導入。
+          li 4つのネットワークが異なるgeneratorに対して、GAN loss、WD、sliced WDを用いてMNISTの学習を行ったところ、sliced WDが安定して質の高い画像を生成することができた。
+          li GAN、WGAN、generator+sliced WDのGANにおいてトレーニング時のイテレーションごとのKL-divergenceとsliced WDの値を確認したところ、KL-divergenceは値が増加する一方。sliced WDは値が安定していることを確認。
+          li MNIST、Toronto face dataset、CIFAR-10 dataset、CelebA、LSUN bedroomを用いた画像の生成を行った。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li DNNの研究もかなり成熟してきており、数学的な理解が今後のコントリビューションに不可欠であると再認識させられた。
+          li WGANやwasserstein distanceとの比較が少ないように感じたが、これは自明のこととして書いていない？それとも比較結果があまり芳しくなかったから？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3722.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3722-supp.pdf") Supplementary material
+          li
+            a(href="https://github.com/ishansd/swg") GitHub
+          li
+            a(href="https://arxiv.org/abs/1701.07875") 参考 Wasserstein gan(WGAN)
+          li sliced wasserstein distanceを導入した論文：
+            a(href="https://hal.archives-ouvertes.fr/hal-00881872/document") Sliced and radon wasserstein barycenters of measures. Journal of Mathematical Imaging and Vision
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 02:48:06

@@ -1,0 +1,29 @@
++slide
+section#ID_Matching_Adversarial_Networks
+  .paper-abstract
+    .title Matching Adversarial Networks
+    .info
+      .authors Geller Mattyus, Raquel Urtasun
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p GANで教師あり学習をするタスクにおいて、DiscriminatorにSiamese Networkを適用することで直接教師データを損失関数に導入することが可能なMatching Adversarial Network（MatAN）を提案した。MatANは様々なGANで行う教師あり学習のタスクに適用することが可能であり、実験においてはsemantic segmentation、road network centerline extraction、instance segmentationのタスクに適用し、良い精度を出した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}MatAN.png`,alt="MatAN")
+    .item3
+      .text
+        h1 手法・新規性
+        p DiscriminatorをSiamese Networkにする。2枚の画像ペアのうち、1枚はground truthであり、もう1枚はnegative sampleはGeneratorによって生成された画像もしくはground truthに摂動を加えた画像である。学習の方法自体は、通常のGANと同様に、Discriminatorはrealかfakeかを識別できるように学習し、GeneratorはDiscriminatorの識別率を下げるように学習する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Mattyus_Matching_Adversarial_Networks_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 15:52:05

@@ -1,0 +1,32 @@
++slide
+section#ID_xUnit_Learning_a_Spatial_Activation_Function_for_Efficient_Image_Restoration
+  .paper-abstract
+    .title xUnit: Learning a Spatial Activation Function for Efficient Image Restoration
+    .info
+      .authors Idan Kligvasser, Tamar Rott Shaham, Tomer Michaeli
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 活性化関数であるxUnitを提案し、画像復元タスクを行う論文であり、実際にReLUを置き換えて実験したところPSNRが向上した。提案のxUnitは学習可能であり、より複雑な特徴量を獲得できることで畳み込み層の数を比較的少なくしても同じような精度に到達することが可能である。画像復元タスクでは、ノイズ除去、雨除去、超解像を含んでいる。右図ではReLUとxUnitの構造の比較である。xUnitではReLUを含み、その他BN層Conv層など含まれていて学習可能な非線形活性化関数となっている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180720xUnit.png`,alt="180720xUnit")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 学習可能な非線形活性化関数であるxUnitを提案して画像復元問題（ノイズ除去、雨除去、超解像）に取り組み、より少ない層で比較的高い精度の画像復元に成功した。ベースラインと比較して、3分の1程度のレイヤ数で同程度の精度を実現している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p シンプルだが効果最大限というのがよい？画像復元に慣れた人ならそこまで時間かかっていなさそう（アイディアさえあればうまくいけば2ヶ月くらいで実験して論文書けそう？）。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Kligvasser_xUnit_Learning_a_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/kligvasser/xUnit") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 13:57:18

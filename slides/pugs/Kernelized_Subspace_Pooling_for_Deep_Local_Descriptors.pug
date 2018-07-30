@@ -1,0 +1,29 @@
++slide
+section#ID_Kernelized_Subspace_Pooling_for_Deep_Local_Descriptors
+  .paper-abstract
+    .title Kernelized Subspace Pooling for Deep Local Descriptors
+    .info
+      .authors Xing Wei, Yue Zhang, Yihong Gong, Nanning Zheng
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p CNNの特徴量表現の識別性能を向上させるため、幾何学的変形に不変なプーリング手法であるSubspace Poolingを提案した論文。さらに精度を向上させるため、Marginal Triplet Lossにカーネル法を適用し、Bilinear Poolingより良い精度を少ないメモリ容量で実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Kernelized_Subspace_Pooling_for_Deep_Local_Descriptors.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p Subspace Poolingは特徴量マップを列成分に並べた行列に対してSVDによって次元圧縮を行う。この方法は、行列の行成分の順列（位置に関する入れ替え）に対して不変である。Patch Matchingのような2点距離を測るようなタスクに対しては、Subspace Poolingで得られた特徴量をガウシアンカーネルを用いたカーネル法を適用することができ、これによりさらに精度を向上させた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wei_Kernelized_Subspace_Pooling_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 16:38:21

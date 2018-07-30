@@ -1,0 +1,40 @@
++slide
+section#ID_Feature_Super-Resolution_Make_Machine_See_More_Clearly
+  .paper-abstract
+    .title Feature Super-Resolution: Make Machine See More Clearly
+    .info
+      .authors Weimin Tan, Bo Yan, Bahetiyaer Bare
+      .conference CVPR 2018
+      .paper_id 3408
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 低解像度画像と高解像度画像で同じ特徴量を得るために新しいロス関数focal lossを導入したFeature Super-Resolution Generative Adversarial Network (FSR-GAN)を提案。提案ネットワークは図の通りfeature extractorと低解像度画像の特徴量を高解像度画像の特徴量に似せるgenerator、特徴量のドメインを識別するdiscriminatorからなる。focal lossとはインスタンスごとのL2距離をr乗するというもの。adversarial lossとして
+          a(href="https://arxiv.org/abs/1701.07875") WGAN
+          |で導入されたEarth-Mover distanceを使用。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Feature_Super-Resolution_Make_Machine_See_More_Clearly.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 特徴量による画像検索において、画像サイズが小さくなっても既存手法よりも高いmAPを維持。
+          li low bit-rate画像検索において、低いビットレートの時に既存手法よりも高いmAPを獲得。
+          li WGAN＋L2ノルムではgenerator無しよりも結果が悪いことを確認している
+          li Oxford5K, Paris, Holidays, and Flick100k datasetsで実験、rは2と設定されている。比較している手法は画像の超解像化手法。feature extractorとしてVGG16を使用。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li シンプルなロス関数の提案だが、複数の検証による精度向上を確認している。
+          li WGANとの比較が無いのが気になった。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3408.pdf") 論文
+          li
+            a(href="https://arxiv.org/abs/1701.07875") 参考 Wasserstein gan (WGAN)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 23:19:00
