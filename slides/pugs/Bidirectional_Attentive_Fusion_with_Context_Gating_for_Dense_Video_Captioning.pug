@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Bidirectional_Attentive_Fusion_with_Context_Gating_for_Dense_Video_Captioning
+  .paper-abstract
+    .title Bidirectional Attentive Fusion with Context Gating for Dense Video Captioning
+    .info
+      .authors Jingwen Wang, Wenhao Jiang, Lin Ma, Wei Liu, Yong Xu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Dense Video Captioningタスクのコンテキストヒュージョン，event representationの新たな提案．コンテキストヒュージョンにおいて，過去と将来のコンテキストを利用しevent proposalの予測を行う．また，event descriptionsのdecoderのためのよりinformativeなinputを提案した．
+          li 従来のdense video captioningでは主にforward方向でevent proposalを予測する．著者達が過去と将来のコンテキストからevent proposalを予測できるbidirectional proposal手法を提案した．また，異なるeventが同じ時間に終了する場合従来手法が正しく対応できず，著者達がeventをビデオ特徴のhidden statesのattentive fusionにより表示し，その問題を対応できるようにした．また，動的に現在のeventと周囲のコンテキストを平衡するcontext gatingメカニズムを提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Bi-directionalAttentionFusion-DenseVideoCaptioning.png`,alt="Bi-directionalAttentionFusion-DenseVideoCaptioning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案手法のproposalとcaptioningモジュールを従来のフレームワークに適応することでActivityNet Captions datasetにおいてSoTAな表現を達成した．(Meteor scoreを4.82から9.65にアップした)
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Bidirectionalも最近よく見られるワード．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1289.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 11:47:16
