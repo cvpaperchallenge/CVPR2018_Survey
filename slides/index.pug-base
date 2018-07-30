@@ -1,23 +1,6 @@
 ﻿extends layouts/_layout
 
 block slides
-  include pugs/In-Place_Activated_BatchNorm_for_Memory-Optimized_Training_of_DNNs.pug
-  include pugs/Dynamic-structured_Semantic_Propagation_Network.pug
-  include pugs/Adversarial_Data_Programming_Using_GANs_to_Relax_the_Bottleneck_of_Curated_Labeled_Data.pug
-  include pugs/Improving_Landmark_Localization_With_Semi-Supervised_Learning.pug
-  include pugs/Recurrent_Residual_Module_for_Fast_Inference_in_Videos.pug
-  include pugs/Global_Versus_Localized_Generative_Adversarial_Nets.pug
-  include pugs/Net2Vec_Quantifying_and_Explaining_how_Concepts_are_Encoded_by_Filters_in_Deep_Neural_Networks.pug
-  include pugs/Reconstruction_Network_for_Video_Captioning.pug
-  include pugs/Cascade_R-CNN_Delving_into_High_Quality_Object_Detection.pug
-  include pugs/Revisiting_Oxford_and_Paris_Large-Scale_Image_Retrieval_Benchmarking.pug
-  include pugs/MapNet_An_Allocentric_Spatial_Memory_for_Mapping_Environments.pug
-  include pugs/Learning_a_Discriminative_Prior_for_Blind_Image_Deblurring.pug
-  include pugs/Language-Based_Image_Editing_with_Recurrent_attentive_Models.pug
-  include pugs/PIXOR_Real-time_3D_Object_Detection_from_Point_Clouds.pug
-  include pugs/Indoor_RGB-D_Compass_from_a_Single_Line_and_Plane.pug
-  include pugs/A_PID_Controller_Approach_for_Stochastic_Optimization_of_Deep_Networks.pug
-  include pugs/Optimal_Structured_Light_La_Carte.pug
   include pugs/Dual_Attention_Matching_Network_for_Context-Aware_Feature_Sequence_based_Person_Re-Identification.pug
   include pugs/Tracking_Multiple_Objects_Outside_the_Line_of_Sight_Using_Speckle_Imaging.pug
   include pugs/Interactive_Image_Segmentation_with_Latent_Diversity.pug
