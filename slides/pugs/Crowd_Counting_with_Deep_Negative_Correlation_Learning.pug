@@ -1,0 +1,30 @@
++slide
+section#Crowd_Counting_with_Deep_Negative_Correlation_Learning
+  .paper-abstract
+    .title Crowd Counting with Deep Negative Correlation Learning
+    .info
+      .authors Zenglin Shi，Le Zhang，Yun Liu，Xiaofeng Cao，Yangdong Ye，Ming-Ming Cheng，Guoyan Zheng
+      .conference in CVPR2018
+    .slide_editor Kazuki Tsubura
+
+    .item1
+      .text
+        h1 概要
+        p 深い畳み込みネットワーク（ConvNets）は，多くのコンピュータビジョンタスクで前例のないパフォーマンスを達成しているが，単一の画像を集める集団への彼らの適応はまだ未熟な状態であり，過度の過度のフィッティングに苦しんでいる．ここでは,深い負の相関学習（NCL）によって一般化可能な特徴を生成する新しい学習戦略を提案する．より具体的には，本質的な多様性を管理することによって，健全な一般化能力を持つ無相関回帰変数のプールを深く学習する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Crowd_Counting_with_Deep_Negative_Correlation_Learning.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・差分
+        p 無相関ConvNet（D-ConvNet）という名前の提案方法は，エンドツーエンドで訓練可能であり，バックボーン完全畳み込みネットワークアーキテクチャから独立している．非常に深いVGGNetとカスタマイズされたネットワーク構造に関する広範な実験は，いくつかの最先端の方法と比較した場合のD-ConvNetの優位性を示している．
+    .item4
+      .text
+        h1 結果
+        p Decorrelated ConvNet（D-ConvNet）と名付けた提案方法が，固有の多様性を管理することによって健全な一般化能力を有することを示している．DConvNetは，一般的であり，バックボーン完全畳み込みネットワークアーキテクチャから独立している．非常に深いVGGの広範な実験や，いくつかの難しいデータセットでカスタマイズされたネットワーク構造がD-ConvNetの優位性を実証した．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shi_Crowd_Counting_With_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 19:04:41
