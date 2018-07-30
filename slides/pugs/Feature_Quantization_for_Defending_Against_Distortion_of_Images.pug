@@ -1,0 +1,30 @@
++slide
+section#ID_Feature_Quantization_for_Defending_Against_Distortion_of_Images
+  .paper-abstract
+    .title Feature Quantization for Defending Against Distortion of Images
+    .info
+      .authors Zhun Sun, Mete Ozay, Yan Zhang, Xing Liu and Takayuki Okatani
+      .conference CVPR2018
+    .slide_editor Kazuho Kito
+
+    .item1
+      .text
+        h1 概要
+        p 画像歪みに対するCNNの頑健性を改善する研究．特徴分布の高いモーメント統計は画像の歪みによってシフトする可能性があり，性能低下につながる．この効果を低減するために，特徴量の量子化によるアプローチを提案．1)スケーラブルな分解能を持つフロア関数，2)学習可能な指数を持つパワー関数,3)データ依存指数を用いたパワー関数の3種類の非線形をCNNに採用．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Feature_Quantization_for_Defending_Against_Distortion_of_Images.PNG`,alt="Feature_Quantization_for_Defending_Against_Distortion_of_Images.PNG")
+          img(src=`${figpath}Feature_Quantization_for_Defending_Against_Distortion_of_Images_2.PNG`,alt="Feature_Quantization_for_Defending_Against_Distortion_of_Images_2.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・　提案手法を用いたResNet-50でモーションブラー，塩コショウ，それらの複合の歪みで歪んだ画像を用いたILSVRC-12分類タスクでそれぞれ6.95%，5.26%，5.61%の精度向上．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1001.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:50:32
