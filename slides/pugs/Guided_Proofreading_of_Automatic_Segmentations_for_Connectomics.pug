@@ -1,0 +1,34 @@
++slide
+section#Guided_Proofreading_of_Automatic_Segmentations_for_Connectomics
+  .paper-abstract
+    .title Guided Proofreading of Automatic Segmentations for Connectomics
+    .info
+      .authors Daniel Haehn, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        細胞画像などの、コネクトミックにおける自動的なセマンティックセグメンテーションについて、ガイド付き校正を行う。修正が必要なエラーとして、領域を分けすぎてしまったり、大きく領域を取りすぎてしまうスプリット，マージエラーを対象としている。古典的なCNNアーキテクチャで構成されており、4チャンネル(image、Prob.、Label、Border)を入力として、コンテキスト情報を取り入れながら学習。修正の際、ユーザはYes/Noで回答することで修正できるため、以前の手法と比較して7.5倍高速化に成功。
+
+    .item2
+      img(src=figpath+"180730GPoASfC.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p コネクトミックという神経の分野におけるセマンティックセグメンテーションでは、エラーがたびたび発生する。これらのエラー部分を人間に提示し、マージとスプリットの候補を自動でクラシフィケーションする。CNNで自動セグメンテーションのエラーを学習することで実現。人間がYes/Noを判定する校正が基本だが、確率に閾値を設けることで自動構成モードにも切り替えられる。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p 初心者と専門家による広範囲的な実験で検証。効率化を達成し、校正時間の短縮に成功。
+        ul
+          li: a(href="https://arxiv.org/pdf/1704.00848.pdf") 論文
+        ul
+          li: a(href="https://github.com/VCG/guidedproofreading#readme") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 21:34:05
+
+
