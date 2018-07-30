@@ -11,9 +11,9 @@ section#ID_Differential_Attention_for_Visual_Question_Answering
       .text
         h1 概要
         ul
-          li VQAタスクに用いられる新たなattentionメカニズムdifferential attentionを提案した．これにより，ヒューマンattentionにより近いattentionを得られる．
-          li 従来のVQA手法ではattentionが広く用いられるがヒューマンattentionに関連性が低い．そこで，認知心理学に広く用いられるexemplarベースな手法を用いてsupporting, opposing exemplarsによりdifferential attention領域を求める．
-            |具体的には，①入力画像，質問からreference attention embeddingを求める．②上述したembeddingによりdatabaseからorderを求め，現在の入力と近いsupporting及び遠いexemplarを求める．③前述したexemplar,入力からdifferential attention vectorを求める．
+          li VQAタスクに用いられる新たなattentionメカニズムdifferential attentionを提案した．これにより，人間のattentionにより近いattentionを得られる．
+          li 従来のVQA手法でもattentionが広く用いられるが，人間のattentionに関連性が低かった．そこで，認知心理学に広く用いられるexemplarベースな手法を用いてsupporting, opposing exemplarsによりdifferential attention領域を求める．
+            |具体的には，①入力画像，質問からreference attention embeddingを求める．②このembeddingによりデータベースから順序を求め，現在の入力と近いsupporting exemplar及び遠いsupporting exemplarを求める．③これらexemplarと入力からdifferential attention vectorを求める．
     .item2
       .text
         p
@@ -22,13 +22,13 @@ section#ID_Differential_Attention_for_Visual_Question_Answering
       .text
         h1 新規性・結果・なぜ通ったか？
         ul
-          li VQAタスクに新たな視点をもたらした：exemplar based approach.また，提案したdifferential attentionがヒューマンattentionにより近いと指摘した．
-          li VQA1.0,VQA2.0,HATなどのデータセットにおいてimage attention basedな手法の中で最も良い精度を達成し，Image-Question attention based手法と接近した精度を得られた．
+          li VQAタスクにexemplar based approachという新たな視点をもたらした．また，提案したdifferential attentionが人間のattentionにより近いことを示した．
+          li VQA1.0，VQA2.0，HATなどのデータセットにおいてimage attentionベース手法の中で最も良い精度を達成し，Image-Question attentionベース手法と近い精度が得られた．
     .item4
       .text
         h1 コメント・リンク集
         ul
-          li 認知心理学の知見をVQAタスクに応用した例．今後もヒューマンattentionを詳細的に検討するべきだと思う．
+          li 認知心理学の知見をVQAタスクに応用した例．今後も人間のattentionを詳細に検討するべきだと思う．
           li
             a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3451.pdf") 論文
     .slide_index #{getSlideIndex()}
