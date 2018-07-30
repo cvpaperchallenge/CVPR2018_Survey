@@ -1,0 +1,34 @@
++slide
+section#Deep_Material-aware_Cross-spectral_Stereo_Matching
+  .paper-abstract
+    .title Deep Material-aware Cross-spectral Stereo Matching
+    .info
+      .authors Tiancheng Zhi, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        RGBとNIRによるステレオマッチング手法によって、画像の位置合わせや視差推定を行う研究。深層学習によって異なるスペクトル帯域間の画像を同時に変換し、視差を推定する。視差を推定するDisparity Prediction Network(DPN)とスペクトルを変換するSpectral Translation Network (STN)を提案。DPNの設計は既存の手法だが、入力をRGBとNIRに置き換えている。STNでは，RGB画像をNIR画像に置き換える。
+
+    .item2
+      img(src=figpath+"180730deep_material-aware.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 図に示すようなRGB画像とNIR画像の異なるスペクトル帯域の画像におけるマッチングは、外観変動の影響で困難とされる。DPNには，マテリアル(光源、フロントガラス、光沢のある表面)を意識したロスを設計することによって高精度に視差を推定。また、車載RGB-NIRステレオシステムによって、実際に路上を撮影。データセット(13.7時間)を構築して評価している。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li 自ら作成したデータセットにて、高精度かつリアルタイムに処理できることを実証した。
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhi_Deep_Material-Aware_Cross-Spectral_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:47:23
+
+
