@@ -1,0 +1,30 @@
++slide
+section#ID_Nonlocal_Low-Rank_Tensor_Factor_Analysis_for_Image_Restoration
+  .paper-abstract
+    .title Nonlocal Low-Rank Tensor Factor Analysis for Image Restoration
+    .info
+      .authors Xinyuan Zhang, Xin Yuan and Lawrence Carin
+      .conference CVPR2018
+      .paper_id Masaki Miyamoto
+
+    .item1
+      .text
+        h1 概要
+        p グループ化された画像パッチによって生成された多次元配列に対して低階数の多次元配列因子分析を用いる新しい手法を提案する．低階数多次元配列は、画像再構築をさらに改善するために，代替方向乗算法(ADMM)に送られる．動作アプリケーションは圧縮センシング（CS）であり，深い畳み込みアーキテクチャが採用され，CSアプリケーションにおける高級なマトリックス反転を近似する．NLR-TFAと呼ばれるこの低階数多次元配列の因数分解法に基づく反復アルゴリズムが詳しく示される．
+          |ノイズのないものとノイズのあるCS測定の実験結果は、特に低CSサンプリングレートでの提案手法の優位性を証明する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Nonlocal_Low-Rank_Tensor_Factor_Analysis_for_Image_Restoration.PNG`,alt="Nonlocal_Low-Rank_Tensor_Factor_Analysis_for_Image_Restoration.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p パッチグループ化に基づいて推定画像から多次元配列を生成する．次に多次元配列を分解後に多次元配列を低階数に設定する． この新しい低階数多次元配列は，ADMMによって解決されるグローバルな目的関数に送られる． これらの2つのステップは，何らかの基準を満たすまで繰り返し実行される．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.06795.pdf") URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 21:43:23
