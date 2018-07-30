@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_3D_Semantic_Trajectory_Reconstruction_from_3D_Pixel_Continuum
+  .paper-abstract
+    .title 3D Semantic Trajectory Reconstruction from 3D Pixel Continuum
+    .info
+      .authors Jae Yoon, Ziwei Li, Hyun Park
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 大規模3D synchronizedマルチビデオからヒューマンインターアクションのdense semantic trajectory streamをリコンストラクトする手法の提案．
+          li マルチビデオhuman interaction軌跡を推定するにはself-occlusion,2Dノイズ， 軌跡がfragmentedであるなどの問題点がある．著者達が多視点の中によりconfidenceが高い視点は存在することから，そういうような視点を導くための軌跡のセマンティックラベルの概率分布図3D semantic mapを提案した． 3D semantic mapはvisibilityおよび2D認識のconfidenceをベースとしたview poolingにより生成できる．
+            |また，デンスな軌跡が得られる場合，同じオブジェクトの軌跡をローカル剛体変換により表示できることから， 3D semantic map からlocal rigid transformationを推定することにより長距離軌跡を対応できる軌跡ラベル推定を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}3DSemanticTrajectoryReconstruction.png`,alt="3DSemanticTrajectoryReconstruction")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li リアル環境でオブジェクト，シーンまたは人などとインターアクションする人のセマンティック軌跡推定実験を行い，定性的結果により提案手法が①推定の正しさ②ロバスト性③長距離での有効性などの面においてベースライン手法より良い表現を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 人をVR環境に再生することに用いられそう
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2111.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:45:28
