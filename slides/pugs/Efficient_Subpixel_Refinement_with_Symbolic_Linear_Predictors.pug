@@ -1,0 +1,41 @@
++slide
+section#ID_Efficient_Subpixel_Refinement_with_Symbolic_Linear_Predictors
+  .paper-abstract
+    .title Efficient Subpixel Refinement with Symbolic Linear Predictors
+    .info
+      .authors V. Lui, J. Geeves, W. Yii and T. Drummond
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 学習ベースのサブピクセルリファインメント手法
+          a(href="https://www.inf.ethz.ch/personal/pomarc/pubs/HolzerIJCV14.pdf") Linear Predictiors
+          |において，効率的な計算方法を提案．
+          |テンプレート画像をワープさせて誤差が小さくなるようにワープパラメータを最適化するやり方について扱う．
+        p 新手法Symbolic Linear Predictorsにより，学習ステップの効率化を実現．
+          |一度計算すると複数回異なる画像パッチに対し使いまわせる．
+          |これにより，性能を落とさずにオンラインで実行可能に．SLAMなどで使えるようになる．学習ベース手法の実行時効率性のの恩恵がうけられる．
+          |また，推測可能な誤差尺度を提案．推測することで，テンプレートの位置合わせ時の誤差を小さくすることができるようになる．
+          |従来手法によれば何百も存在するキーポイントにおいて評価が必要であったが，
+          |これにより最良のキーポイント達だけ使えばよくなる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Efficient_Subpixel_Refinement_with_Symbolic_Linear_Predictors.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p SLAM等における有用な手法をアプリケーションレベルに効率化した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Subpixel Refinementが共通認識のように語られているが，まとめ人的には画像上の位置合わせにおけるサブピクセル精度での精整のことだと気づくのに結構時間かかった．勉強不足だろうか．
+        p コントリビューションの明示的主張のない，CVPRでは珍しい論文．
+        p カメラレディ原稿のフォーマットの不備がある．校正頑張ってほしい．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1052.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 17:06:26
