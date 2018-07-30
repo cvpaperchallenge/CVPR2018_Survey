@@ -1,4 +1,4 @@
-﻿+slide
++slide
 section#ID_Face_Detector_Adaptation_without_Negative_Transfer_or_Catastrophic_Forgetting
   .paper-abstract
     .title Face Detector Adaptation without Negative Transfer or Catastrophic Forgetting
@@ -10,14 +10,7 @@ section#ID_Face_Detector_Adaptation_without_Negative_Transfer_or_Catastrophic_Fo
     .item1
       .text
         h1 概要
-        p 顔検出におけるターゲットドメインからソースドメインへのadaptationを、
-          |negative transferとcatastrophic forgettingの両方を引き起こさずに行う手法を提案。
-          |negative transferとはadaptation後のソースドメインにおける検出精度がadaptation前のソースドメインにおける検出精度に劣ることを指し、
-          |catastorophic forgettingとはadaption後におけるソースドメインの検出精度が著しく下がることを指す。
-          |提案手法では、ソースドメインとターゲットドメインの違いを、ロス関数とDNNの重みの差分で表現し、
-          |この差分がなくなるように学習を行う手法を提案。
-          |またターゲットドメインにface or notのラベルがないという状況も考えて教師あり学習だけでなく教師なし学習、
-          |半教師あり学習の結果についても議論を行った。
+        p 顔検出におけるターゲットドメインからソースドメインへのadaptationを、negative transferとcatastrophic forgettingの両方を引き起こさずに行う手法を提案。negative transferとはターゲットドメインに対する検出精度がadaptation後よりも前の方が良い場合を指しし、catastorophic forgettingとはadaption後におけるソースドメインの検出精度が著しく下がることを指す。提案手法では、ソースドメインとターゲットドメインの違いを、ロス関数とDNNの重みの差分で表現し、この差分がなくなるように学習を行う手法を提案。またターゲットドメインにface or notのラベルがないという状況も考えて教師あり学習だけでなく教師なし学習、半教師あり学習の結果についても議論を行った。
     .item2
       .text
         p
@@ -43,5 +36,3 @@ section#ID_Face_Detector_Adaptation_without_Negative_Transfer_or_Catastrophic_Fo
           li
             a(href="http://boqinggong.info/papers/cvpr18-deep-face-supp.pdf") Supplementary
     .slide_index #{getSlideIndex()}
-
-

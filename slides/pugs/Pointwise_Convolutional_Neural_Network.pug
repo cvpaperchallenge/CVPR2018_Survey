@@ -1,0 +1,34 @@
++slide
+section#ID_Pointwise_Convolutional_Neural_Network
+  .paper-abstract
+    .title Pointwise Convolutional Neural Network
+    .info
+      .authors Binh-Son Hua, Minh-Khoi Tran and Sai-Kit Yeung
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p ３次元点群のおけるセマンティックセグメンテーションや物体認識のための、新しい畳み込み操作を提案した論文。これはpointwise convolutionと呼ばれ、点群の各点々に適応可能である。
+          |この操作を用いることにより実装が簡単になり、他のネットワークと同程度の精度を実現できる。
+          |Fig.1に示すように、注目点を中心としてカーネルを設置し、分割されたセル（Fig.1では３X３X３）ごとに平均を計算し、畳み込むという計算を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}pointwise_CNN_img1.png`,alt="pointwise_CNN_img1.png")
+          img(src=`${figpath}pointwise_CNN_img2.png`,alt="pointwise_CNN_img2.png")
+          img(src=`${figpath}pointwise_CNN_img3.png`,alt="pointwise_CNN_img3.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p セマンティックセグメンテーションの結果をTabl2に示す。これより、PointNetと比べて同程度の精度を達成していることが分かる。ここで、評価用データセットにはS3DISを用いた。
+          |物体認識の結果をTable4に示す。これより、SoTAな手法と比べ同程度の精度を達成していることが分かる。ここで、評価用データセットにはModelNet40 datasetを用いた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ol
+          li
+            a(href="hhttp://openaccess.thecvf.com/content_cvpr_2018/papers/Hua_Pointwise_Convolutional_Neural_CVPR_2018_paper.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.24 06:07:32

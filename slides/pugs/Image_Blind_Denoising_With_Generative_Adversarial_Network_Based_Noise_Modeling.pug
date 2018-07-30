@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Image_Blind_Denoising_With_Generative_Adversarial_Network_Based_Noise_Modeling
+  .paper-abstract
+    .title Image Blind Denoising With Generative Adversarial Network Based Noise Modeling
+    .info
+      .authors Jingwen Chen, Jiawei Chen, Hongyang Chao, Ming Yang
+      .conference CVPR 2018
+    .slide_editor Kazushige Okayasu
+
+    .item1
+      .text
+        h1 概要
+        p ・GAN-CNNベースのノイズ除去手法のGAN-CNN Based Blind Denoiser (GCBD)を提案
+          |・GANを用いてノイズ画像生成し，ノイズが無い画像とセットでCNNでノイズ除去
+    .item2
+      .text
+        p
+          img(src=`${figpath}Image_Blind_Denoising_With_Generative_Adversarial_Network_Based_Noise_Modeling.png`,alt="Image_Blind_Denoising_With_Generative_Adversarial_Network_Based_Noise_Modeling")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・未知ノイズの除去に対して初めてGANというアプローチを用いた．
+          |・ノイズ除去のGANのアプローチではノイズ無し画像とノイズ有りのペアが必要だが本手法ではノイズ有りの画像を生成するので，ペア画像を準備する必要ない
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Image_Blind_Denoising_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/2954-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 20:02:47

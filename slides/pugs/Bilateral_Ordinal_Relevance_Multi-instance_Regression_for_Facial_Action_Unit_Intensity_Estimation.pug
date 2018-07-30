@@ -1,0 +1,36 @@
++slide
+section#ID_Bilateral_Ordinal_Relevance_Multi-instance_Regression_for_Facial_Action_Unit_Intensity_Estimation
+  .paper-abstract
+    .title Bilateral Ordinal Relevance Multi-instance Regression for Facial Action Unit Intensity Estimation
+    .info
+      .authors Yong Zhang, Rui Zhao, Weiming Dong, Bao-Gang Hu, Qiang Ji
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Action Unit(AU)の強度を推定するための弱教師学習手法を提案。
+          |表情認識の分野でAUは広く研究されているが、アノテーションの難しさから強度のラベルが付いた大規模データベースは存在しない。
+          |そこで、比較的アノテーションが容易であるピークと谷のアノテーションのみから学習する弱教師つき学習手法を提案する。
+          |アノテーションのついていないフレームについては、ピークと谷とのrelevalenceを考える。
+          |その際、時系列的に近いフレームはrelevalence及びAUの強度は近い値になるようにすることで平滑化する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Bilateral_Ordinal_Relevance_Multi-instance_Regression_for_Facial_Action_Unit_Intensity_Estimation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p FERA 2015, DISFA, PAINの3つのデータベースにより実験を行い、PCC, ICC, MAEの3つの指標を評価した。
+          |FERAは、1つのAUを除いて全ての指標がベースラインよりも良いという結果が得られた。
+          |DISFAについてはPCC, ICCは多くのAUで最も良い数値となったがMAEは1２のAUのうち4つのみが最も良い数値となった。
+          |PAINについては、弱教師つきの従来手法よりはPCC, ICCが良いという結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://www.ecse.rpi.edu/~cvrl/Publication/pdf/Zhang2018a.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.24 19:56:22

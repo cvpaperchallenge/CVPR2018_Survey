@@ -1,0 +1,41 @@
++slide
+section#ID_Accurate_and_Diverse_Sampling_of_Sequences_based_on_a_Best_of_Many_Sample_Objective
+  .paper-abstract
+    .title Accurate and Diverse Sampling of Sequences based on a “Best of Many” Sample Objective
+    .info
+      .authors A. Bhattacharyya, B. Schiele and M. Fritz
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 自動移動エージェントの実世界での走行が成功するには，
+          |環境における将来のイベントや状況の緩和が鍵を握る．
+          |この問題は，系列の外挿問題として定義された．
+          |系列からの将来の推定に，観測の数が使われる．
+        p 実世界シナリオにおいては，不確定さのモデリングが必要となる．
+          |それは時間が経つにつれて不確定さが増大する．
+        p 未来の系列の上で複数モーダルの分布を誘発するシナリオは挑戦的である．
+        p この研究では，Gaussian Latent Variableモデルによって系列推定に挑戦する．
+          |その中心的なアイデアは，「Best of Many」（多くの中から最良を）である．
+          |これにより，より正確かつより多様な推定を導く．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Modifying_Non-Local_Variations_Across_Multiple_Views.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 実験により，交通シーン，天気データなどの3つの多様なタスクにおいて
+          |従来手法を越えたことを示した．
+        p シンプルで強力だが新たな考え方を示している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ICRA感がある．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3890.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.13 11:25:18

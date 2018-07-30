@@ -1,0 +1,32 @@
++slide
+section#ID_Structure_From_Recurrent_Motion_From_Rigidity_to_Recurrency
+  .paper-abstract
+    .title Structure From Recurrent Motion: From Rigidity to Recurrency
+    .info
+      .authors Xiu Li, Hongdong Li, Hanbyul Joo, Yebin Liu, Yaser Sheikh
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 動画像の入力から非剛体に対するSfM（Non-Rigid Structure-from-Motion）に対して再帰的に繰り返し動的行動を復元できる新しい手法を考案する。非剛体の形状変化は再帰的になる傾向があるという性質を利用して形状復元を実施した。この性質を用いると、従来の剛体形状復元の方法をほぼ改編しなくても同じようなモデルで復元を可能とした。右図は再帰性を用いた非剛体推定の例である。フレームによりほぼ同じ姿勢が表れており、この知識を用いると剛体推定と同じような枠組みで非剛体を推定できる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180727SfRM.png`,alt="180727SfRM")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 再帰的な動作を捉えることで、従来の剛体推定とほぼ同じモデルで動画からの非剛体推定ができるという知見を与えた（ことが大きな貢献であり、採択された理由である）。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p この知見面白い！よく思いついた、実装したと思います。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Structure_From_Recurrent_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://www.cs.cmu.edu/~hanbyulj/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 21:26:47
