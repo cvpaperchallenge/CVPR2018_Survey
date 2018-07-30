@@ -11,8 +11,9 @@ section#ID_Learning_Visual_Knowledge_Memory_Networks_for_Visual_Question_Answeri
       .text
         h1 概要
         ul
-          li VQAタスクに用いられるVisual Knowledge Memory Network(VKMN) を提案した． VKMNがhuman knowledgeとディープ視覚特徴をメモリーネットワークのより結合し，VQAの精度を向上できる．
-          li 自然言語処理のTextベースなQAタスクに用いられる方法からpre-built visual knowledgeベースなVKMNを提案した．①Apparent object(答えが画像から直接読める);②Indiscernible(答えが画像中に小さい);③Invisible objectiveの(直接画像から答えられない)3種類の画像―結果の関係を定義した．また，VKMNがknowledge triples(subject, relation, target)と視覚特徴をvisual knowledge featureにエンベディングする．
+          li VQAタスクに用いられるVisual Knowledge Memory Network(VKMN) を提案した． VKMNは人間の知識と深層視覚特徴をメモリーネットワークにより結合し，VQAの精度を向上できる．
+          li 自然言語処理のテキストベースなQAタスクに用いられる方法から，確立済みの視覚の知識に基づくVKMNを提案した．①Apparent object(答えが画像から直接読める);②Indiscernible(答えが画像中で小さい);③Invisible objectiveの(直接画像から答えられない)3種類の画像―結果の関係を定義した．
+            | また，VKMNはknowledge triples(subject, relation, target)と視覚特徴をvisual knowledge featureにembeddingする．
     .item2
       .text
         p
@@ -21,12 +22,12 @@ section#ID_Learning_Visual_Knowledge_Memory_Networks_for_Visual_Question_Answeri
       .text
         h1 新規性・結果・なぜ通ったか？
         ul
-          li VQA1.0,VQA2.0において良い結果を達成し，knowledge-reasoning相関の質問に対してSoTAな結果を得られた．
+          li VQA1.0,VQA2.0において良い結果を達成し，knowledge-reasoningの関係性の質問に対してSoTAな結果を得られた．
     .item4
       .text
         h1 コメント・リンク集
         ul
-          li 自然言語処理系のQAに関する知識をVQAに用いることがセンスある．また，従来Ｖ，Qに向けて様々なVQA方法が提出され，knowledge representationのあたりに力を入れるのも良い方向だと思う．
+          li 自然言語処理系のQAに関する知識をVQAに用いることがセンスある．また，従来のV，Qに向けて様々なVQA方法が提出され，knowledge representationのあたりに力を入れるのも良い方向だと思う．
           li
             a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4255.pdf") 論文
     .slide_index #{getSlideIndex()}
