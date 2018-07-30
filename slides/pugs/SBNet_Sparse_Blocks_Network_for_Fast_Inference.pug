@@ -1,0 +1,38 @@
++slide
+section#ID_SBNet_Sparse_Blocks_Network_for_Fast_Inference
+  .paper-abstract
+    .title SBNet: Sparse Blocks Network for Fast Inference
+    .info
+      .authors Mengye Ren, Andrei Pokrovsky, Bin Yang, Raquel Urtasun
+      .conference CVPR 2018
+      .paper_id 1957
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p オブジェクト画像に対するCNNの計算コストを削減するために、画像の前景に対する離散的なマスクを生成し、convolutionを行うSparse Blocks Networks (SBNet)を提案。従来のCNNでは画像全体に一様にconvolutionの操作を行うため計算コストが高い。また、既存手法では構造的な離散化を行なっていないために、計算コストは小さくなっても実行時間が短くならないという問題点があった。提案手法では多くのオブジェクト画像は周りを背景で囲まれており、一部の領域にオブジェクトが存在するという構造情報に基づいて、前景の可能性が高い領域に対する離散的なマスクを形成する。これを入力テンソルに適用することで小さい計算コストで精度を落とすことなくCNNの学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}SBNet_Sparse_Blocks_Network_for_Fast_Inference.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 様々なスケールのsparsityを使ったマスクにおいて、同様のサイズのカーネルをもつCNNと比較したところ、提案ネットーワークの方が10倍程度速く実行可能。
+          li KITTI Bird’s Eye View (BEV) 2017 Benchmarkにおいて、SoTAと同等の精度を3分の1程度の実行時間17.9msで達成。
+          li 既存研究とは異なり、提案手法がマスクのsparse度合いに比例してテスト時のスピードが向上していることを示しており、提案手法が真に有効なマスクの離散化を行っていることを主張している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 論文中には所狭しと結果の画像と既存研究との比較を行った表が並べられており、徹底した評価を行っている。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1957.pdf") 論文
+          li
+            a(href="https://eng.uber.com/sbnet/") Project page
+          li
+            a(href="https://github.com/uber/sbnet") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 07:23:43

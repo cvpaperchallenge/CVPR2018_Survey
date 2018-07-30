@@ -1,0 +1,46 @@
++slide
+section#ID_Learning_Deep_Sketch_Abstraction
+  .paper-abstract
+    .title Learning Deep Sketch Abstraction
+    .info
+      .authors Umar Riaz Muhammad et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 初のストロークレベルのスケッチ抽象化モデルを提案した. 強化学習の Agent がストロークセグメントを観測し, それを残すか消すか決定する. また, 提案手法を用いた新しい写真からのスケッチ合成手法を提案し, fine-grained SBIR (FG-SBIR) のタスクに置いて upper bound（実際に写真とスケッチの対応データから学習したもの）に類する精度を, 写真だけから学習したモデルで達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Learning_Deep_Sketch_Abstraction.png`,alt="fukuhara-Learning_Deep_Sketch_Abstraction.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 初のストロークレベルのスケッチ抽象化モデルを提案. また, 提案手法を用いた新しい写真からのスケッチ合成手法を提案
+          li 簡潔さ（ストローク数）と認識可能性はトレードオフの関係という仮定に基づいて, 強化学習によってどのストロークが消去可能かを学習
+          li Agent は各ステップでストロークセグメントを観測し, それを残すか消すか決定
+          li Agent は Bi-directional GRU（B-GRU）と Multi Layer Perceptron （MLP）で構成され, B-GRU が状態の時間的遷移から特徴を抽出し, MLPが行動を決定
+          li Agent の学習は Policy Gradient 法を用いる
+          li Raward は各ステップでストロークを消すと小さいマイナス, 最終的なスケッチのクラス識別の結果がGTと同じなら大きなプラスを得る（これ以外にも各ステップでの識別結果のランクに基づいたrewardも用いている）
+          //-li ストロークのサリエンシーをモデル化
+          //- li RNNの abstraction モデルを提案、それぞれのセグメントの重要度と残すかどうかの決定をする
+          //- li bi-directional GRU を使う
+          //-li Agentがストロークセグメントを観測し、それを残すか消すか決定する
+          //-li Agent は２つの部分から構成されている（Bi-directional GRU:B-GRU）とMoving window module (by MLP)
+          //-li B-GRUはInputをコンパクトなベクタに変換する
+          //-li raward は各ステップでストロークを消すと小さいマイナス、最終的なスケッチのクラス識別の結果がGTと同じなら大きいプラス
+          //-li reward は上のにランクの情報も使う
+          li 提案手法は Sketch abstraction や Photo to sketch synthesis 等のタスクで高い認識精度を達成
+          li 特に, fine-grained SBIR (FG-SBIR) に置いては upper bound（実際に写真とスケッチの対応データから学習したもの）に類する精度を, 写真だけから学習したモデルで達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.04804" target="blank") [論文] Learning Deep Sketch Abstraction
+          li
+            a(href="http://sketchx.eecs.qmul.ac.uk/" target="blank") [Project Page] Sketch X
+    .timestamp 2018.7.22 15:49:55

@@ -1,0 +1,35 @@
++slide
+section#ID_Attend_and_Interact_Higher-Order_Object_Interactions_for_Video_Understanding
+  .paper-abstract
+    .title Attend and Interact: Higher-Order Object Interactions for Video Understanding
+    .info
+      .authors Chih-Yao Ma, Asim Kadav, Iain Melvin, Zsolt Kira, Ghassan AIRegib, Hans Peter Graf
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 動画認識のために物体同士のinteractionを表現する方法を提案した。
+          |画像中の物体同士の関係を記述する方法は多く提案されているが、動画の場合全フレームに適用してしまうと情報量が多すぎて現実的ではない。
+          |そこで動画に写っている物体同士の関係を高次な特徴として取得することで動画認識に利用する。
+          |動画の各フレームから物体認識によりROIを取得し、K個のMulti Layer Perceptronに画像特徴とLSTMの過去の出力を入力する。
+          |得られた各特徴をLSTMに入力することで物体同士の関係を表すattentionを得る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Attend_and_Interact_Higher-Order_Object_Interactions_for_Video_Understanding.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 論文中ではAction Recognitionとキャプショニングの2つのタスクを提案した。
+          |Kineticsを用いたAction Recognitionは、既存手法(1FPSにサンプリングした)よりもTop1, 5共に提案手法の方が精度が高い。
+          |キャプショニングはMETEOR, ROUGE-L, CIDEr-D, BLEU@Nの4つのデータセットで実験をし、Validation setの精度は向上したがTest setの精度が高いLSTM-A3には劣る部分がある。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ma_Attend_and_Interact_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 00:48:08

@@ -1,0 +1,35 @@
++slide
+section#ID_Analysis_of_Hand_Segmentation_in_the_Wild
+  .paper-abstract
+    .title Analysis of Hand Segmentation in the Wild
+    .info
+      .authors Aisha Urooj, Ali Borji
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p 一人称視点における(カメラ着用者以外の手も含む)手領域のセグメンテーションに関して包括的な調査、評価した論文。
+          |評価のために、一般シーンでの手領域が含まれている一人称視点データセット(EgoYouTubeHands)と、手と顔という似た外見を持つオクルージョン環境下での評価するためのデータセット(HandOverFace)、EgoHandsから詳細な行動を追加したEgoHands+を作成し、新たに提供している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Analysis_of_Hand_Segmentation_in_the_Wild.png`,alt="Analysis_of_Hand_Segmentation_in_the_Wild.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p EgoYouTubeHands(約1300frames)とHandOverFace(300images)のデータセットの作成。EgoHandsのサブセット(800frames)にpickingやholdingなどより詳細なhand-levelの行動を注釈付け。これらに加え、
+          a(href="http://vision.soic.indiana.edu/projects/egohands/") EgoHands
+          |と
+          a(href="http://www.cbi.gatech.edu/fpv/") GTEA
+          |を使ってRefineNetをfine-tuneし比較実験、そしてEgoHandsにおいて先行研究から精度を26%改善している。またEgoHands+を使って手領域のセグメンテーションマップがactivity recognitionの性能改善に役立つことを確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p HandOverFaceによる手と顔領域の関係の問題設定が良く、結果より肌の色や形状以上のことをCNNが詳細に認識していることがわかる。また大きな手と比較して小さな手はセグメンテーションが困難なことが検証されている。人間にとってもっとも身近なオブジェクトである手に着目して、かつ起こりうる状況を網羅的に実験を行い、手同士のオクルージョン、小さな手、照明条件など新たな問題を提示しており、興味深い論文だった。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Urooj_Analysis_of_Hand_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 18:26:50

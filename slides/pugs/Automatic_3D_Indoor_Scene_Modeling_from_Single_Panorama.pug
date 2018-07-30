@@ -1,0 +1,37 @@
++slide
+section#ID_Automatic_3D_Indoor_Scene_Modeling_from_Single_Panorama
+  .paper-abstract
+    .title Automatic 3D Indoor Scene Modeling from Single Panorama
+    .info
+      .authors Y.Yang, S.Jin, R.Liu, S.B.Kang, J.Yu
+      .conference CVPR 2018
+      .paper_id 516
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p 室内の2Dパノラマ画像1枚から3Dモデルを推定する研究．
+          |本稿ではパノラマ画像から18視点の画像（パノラマの中心点から対象を普通に撮影したような画像），sub-viewを生成する．
+          |それらを入力とし，sub-viewごとに顕著生マップ（Saliency map）とオブジェクト検出から前景と背景を分けると同時に直線検出（Line segment detection）を行いパノラマ画像を解析し，geometric cueとsemantic cueを推定する．
+          |これらから地面の推定，オクルージョンの推定を行い，形状の復元を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180516_0.PNG`,alt="Item3Image1")
+          img(src=`${figpath}180516_1.PNG`,alt="Item3Image2")
+          img(src=`${figpath}180516_2.PNG`,alt="Item3Image3")
+    .item3
+      .text
+        h1 結果
+        p FAROとsyntheticデータセットを使って評価した結果，背景とオブジェクト検出におけるdepth cosine distanceが従来より最先端な結果となった．
+    .item4
+      .text
+        h1 リンク
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1099.pdf") paper
+          li
+            a(href="https://www.microsoft.com/en-us/research/publication/automatic-3d-indoor-scene-modeling-single-panorama/") Project page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 16:23:44

@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Learning_Semantic_Concepts_and_Order_for_Image_and_Sentence_Matching
+  .paper-abstract
+    .title Learning Semantic Concepts and Order for Image and Sentence Matching
+    .info
+      .authors Yan Huang, Qi Wu, Liang Wang
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 画像キャプション生成に用いられるSemantic-enhanced画像―テキストマッチングモデルを提案した．従来の手法より画像からセマンティックコンセプト・コンセプトの順序の学習により良い性能を図る．
+          li 画像キャプション生成において，画像からいかに有用な情報を抽出することはまだ改善の余地がある．従来のキャプション手法では画像からグローバル特徴を抽出するフレームワークを用いる手法が多い．しかし，画像からリージョンベースなセマンティック情報の抽出が良い性能を得る上に重要だと著者達が指摘した．
+          li 提案の手法のプロセスは：①multi-region, multi-label CNNを利用した画像からセマンティックコンセプト(オブジェクト・属性・行動)を抽出する②リージョンベース情報・グローバル情報からcontext gated sentence生成スキームを利用しsemanticのorderを求める③LSTMによりsentenceを生成する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}LearningSemanticConceptsOrder-ImageSentenceMatching.png`,alt="LearningSemanticConceptsOrder-ImageSentenceMatching")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のlanguage-visionタスクに画像認識の側グローバル情報が広く用いられている．著者達がregionベースなsemantic concepts, concepts orderを画像抽出情報としてvisionを表す．
+          li Flickr30k,MSCOCOデータセットにおいて，SoTAなimage annotation and retrieval精度を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 自然言語の面の理解が画像の理解より未だに深いような気がして，Language-and-visionの分解でいかに画像から有用な情報を抽出することが重要と感じている．セマンティックコンセプトだけだはなくて，画像側のもっと深い理解がこの分野に需要されているように思う．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2801.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 15:44:37

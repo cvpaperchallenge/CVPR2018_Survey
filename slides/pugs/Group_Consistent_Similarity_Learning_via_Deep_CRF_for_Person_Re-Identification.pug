@@ -1,0 +1,35 @@
++slide
+section#ID_Group_Consistent_Similarity_Learning_via_Deep_CRF_for_Person_Re-Identification
+  .paper-abstract
+    .title Group Consistent Similarity Learning via Deep CRF for Person Re-Identification
+    .info
+      .authors Dapeng Chen, Dan Xu, Hongsheng Li, Nicu Sebe, Xiaogang Wang
+      .conference CVPR 2018
+      .paper_id 1057
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p person re-identification(RE-ID)を行うために、グラフモデルであるCRFによって構築されたデータセット内の画像全ての類似度を用いる提案。RE-IDとは異なる映像から同一人物を検出することである。既存手法では2組~4組の画像の類似度を学習する手法をとっていたが、データセット全ての関係性を学習する。DNNによって得られた画像特徴量を用いて画像ペア類似度を学習し、このペア類似度とCRFによってグループ類似度を計算する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Group_Consistent_Similarity_Learning_via_Deep_CRF_for_Person_Re-Identification.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li データセットとしてMarket-1501、DukeMTMC-reID、CUHK03を使用。評価指標はrecognitionに対するmAP、top1-accuracy、top5-accuracy。
+          li 全ての状況においてSoTAを達成。mAPは8.5%、top1-accuracyは4.5％ほど向上している。
+          li ablation studyにより、提案手法の有効性を確認。
+          li t-SNEによる可視化により、提案手法を用いた方が特徴量空間で人物をよく分離できていることを確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Market-1501やDukeMTMC-reIDでトレーニングしたモデルをCUHK03でテストした際にもSoTAとなっており、データセットに強く依存しそうなグループ類似度を学習にも関わらずドメインの影響をあまりいけていないのがすごい！それともそれを上回るほどグループ類似度が強力？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1057.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 18:22:11
