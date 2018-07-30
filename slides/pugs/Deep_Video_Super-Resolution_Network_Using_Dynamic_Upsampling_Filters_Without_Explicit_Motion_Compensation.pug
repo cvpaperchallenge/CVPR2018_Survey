@@ -1,0 +1,31 @@
++slide
+section#ID_Deep_Video_Super-Resolution_Network_Using_Dynamic_Upsampling_Filters_Without_Explicit_Motion_Compensation
+  .paper-abstract
+    .title Deep Video Super-Resolution Network Using Dynamic Upsampling Filters Without Explicit Motion Compensation
+    .info
+      .authors Younghyun Jo, Seeing Wug Oh, Jaeyeon Kang and Seon Joo Kim
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p 既存の動画超解像方法とは根本的に異なるフレームワークとして，動的にアップサンプリングフィルタや残差画像を生成するディープニューラルネットワークを新たに提案する．このアプローチにより，入力画像から直接高解像度画像を得ることができる．
+          |新しいデータオーギュメンテーション方法と大量の学習動画を用いることにより，SOTAなパフォーマンスを達成．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Video_Super-Resolution_Network_Using_Dynamic_Upsampling_Filters_Without_Explicit_Motion_Compensation.png`,alt="Deep_Video_Super-Resolution_Network_Using_Dynamic_Upsampling_Filters_Without_Explicit_Motion_Compensation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 図に示すように，提案手法はSOTA手法の一つであるVSRnetと比較して，チラツキが減少していることがわかる．
+          |さらにバイキュービック法やVSRnet，VESPCN等と比較し提案手法は，PSNR，SSIMの両方においても優れていることがわかった．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Jo_Deep_Video_Super-Resolution_CVPR_2018_paper.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 03:32:58

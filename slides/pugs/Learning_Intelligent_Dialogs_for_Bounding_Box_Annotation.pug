@@ -1,0 +1,28 @@
++slide
+section#ID_Learning_Intelligent_Dialogs_for_Bounding_Box_Annotation
+  .paper-abstract
+    .title Learning Intelligent Dialogs for Bounding Box Annotation
+    .info
+      .authors Ksenia Konyushkova, Jasper Uijlings, Christoph Lampert, Vittorio Ferrari
+      .conference CVPR 2018
+    .slide_editor Goshi sasaki
+
+    .item1
+      .text
+        h1 概要
+        p アノテーションには対象領域を矩形で囲むのとその確認作業の2つのステップがある。画像がシンプルで検出領域の信頼性が高い場合は手作業で矩形を付ける作業を行わず、確認作業のみを行ったほうが時間を短縮できる。一方、検出領域が小さく、数多くあると確認作業に時間がかかってしまうため、手作業で矩形をつけたほうがよい。このように画像ごとに最適なアノテーション戦略を練る必要があり、Intelligent Annotation Dialogs (IAD) はこの手助けをする。本論文では2つのIAD手法が提案されている。1つ目は検出領域がアノテーターに受け入れられる確率を考慮して、アノテーション時間をモデル化することで最適化する。2つ目はモデリングを行わず、強化学習により最適な戦略を見つける。
+    .item2
+      .text
+        p
+          img(src=`${figpath}../figs/Learning_Intelligent.png`,alt="architecture")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 物体検出等において精度の高いアノテーションは重要であるがそのコストは高いままである中で、IADを利用することにより既存手法に比べてアノテーション時間を短縮できると示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p **
+          a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3741.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 01:49:58

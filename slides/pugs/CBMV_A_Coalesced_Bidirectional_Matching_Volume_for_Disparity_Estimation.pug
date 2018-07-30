@@ -1,0 +1,37 @@
++slide
+section#ID_CBMV_A_Coalesced_Bidirectional_Matching_Volume_for_Disparity_Estimation
+  .paper-abstract
+    .title CBMV: A Coalesced Bidirectional Matching Volume for Disparity Estimation
+    .info
+      .authors Konstantinos Batsos et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p  stero matching に用いる mathching volume の推定を学習データに依存せずに, ロバストに行うモデルを提案. ４つの matcher から得られた　mathching volume から確信度の高い部分(確信度の計算は双方向から行う)をそれぞれ抽出し, random forest classifier を用いて最終的な mathching volume の生成を行う. 評価実験では MC-CNN と同等の高い精度を達成すると共に, 高い汎化性能を確認した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-CBMV_A_Coalesced_Bidirectional_Matching_Volume_for_Disparity_Estimation.png`,alt="fukuhara-CBMV_A_Coalesced_Bidirectional_Matching_Volume_for_Disparity_Estimation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li mathching volume の推定を学習データに依存せず, ロバストに行うモデルを提案
+          li Census, NCC, ZSAD, SOBEL の４つの matcher を使用して得られた, それぞれの mathching volume から確信度の高い部分を抽出（確信度の計算は双方向から行う）
+          li 抽出された confidence volume に対して random forest classifier を適用して最終的な mathching volume を生成
+          li Middelebury 2014, KITTI 2012, 2015, ETH3D を用いて評価実験を行った
+          li Middelebury 2014 では純粋にdata-drivenな手法（MC-CNN）と同等の精度を達成
+          li Middelebury 2014 で学習したモデルを用いて, ETH3D で SOTA を達成 (高い汎化性能)
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.01967.pdf" target="blank") [論文] CBMV: A Coalesced Bidirectional Matching Volume for Disparity Estimation
+          li
+            a(href="https://github.com/kbatsos/CBMV" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 11:24:55
