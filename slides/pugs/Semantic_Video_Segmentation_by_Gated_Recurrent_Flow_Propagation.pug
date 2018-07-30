@@ -1,0 +1,32 @@
++slide
+section#Semantic_Video_Segmentation_by_Gated_Recurrent_Flow_Propagation
+  .paper-abstract
+    .title Semantic Video Segmentation by Gated Recurrent Flow Propagation
+    .info
+      .authors David Nilsson, Cristian Sminchisescu,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        ラベルなしデータの情報を活用し、セマンティックセグメンテーションの精度を向上させる、End-to-Endで学習できるGated Recurrent Flow Propagation(GRFP)の提案。オプティカルフローによってラベリング情報を時間的に伝搬できるCNNと、時空間的変換を行うリカレントレイヤーを組み合わせる。フローや認識、時間的伝搬モジュールは共同で学習することができ、弱教師付きビデオ学習をすることができる。
+
+    .item2
+      img(src=figpath+"180730SVSbGRFP.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p アノテーションなしで余分な計算を減らしつつ学習する。ラベルのないフレームに存在する情報を順番に利用でき、セグメンテーションの精度と時間的一貫性の両方を改善することに成功。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p CityScapesやCamVidデータセットにおいて精度向上を確認。
+        ul
+          li: a(href="https://arxiv.org/pdf/1612.08871.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 22:19:21
+
+
