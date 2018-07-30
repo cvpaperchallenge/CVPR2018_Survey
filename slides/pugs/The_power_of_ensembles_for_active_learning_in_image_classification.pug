@@ -1,0 +1,31 @@
++slide
+section#ID_The_power_of_ensembles_for_active_learning_in_image_classification
+  .paper-abstract
+    .title The power of ensembles for active learning in image classification
+    .info
+      .authors William H. Beluch, Tim Genewein , Andreas Nurnberger and Jan M. Kohler
+      .conference CVPR2018
+    .slide_editor Tenga Wakamiya
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では高次元のデータと畳み込みニューラルネットワーク分類機を用いたアクティブ学習から最近提案されたいくつかの手法の検討をする．
+          |モンテカルロドロップアウト手法と幾何学手法に対してアンサンブルベースと比較する．
+          |MNISTとCIFAR-10の結果を示し，約12,200個のラベル付き画像で90％のテストセット精度を達成し，ImageNetで初期結果を得た．
+    .item2
+      .text
+        p
+          img(src=`${figpath}The_power_of_ensembles_for_active_learning_in_image_classification.png`,alt="The_power_of_ensembles_for_active_learning_in_image_classification.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p アンサンブルベースの不確かさは，他の不確かさ推定方法（特にMCドロップアウト）よりも一貫して優れていることを示し，MNISTとCIFAR-10の最先端のactivity learningパフォーマンスにつながる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Beluch_The_Power_of_CVPR_2018_paper.pdf") URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:47:28
