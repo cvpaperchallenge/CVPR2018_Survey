@@ -1,0 +1,32 @@
++slide
+section#Classification_Driven_Dynamic_Image_Enhancement
+  .paper-abstract
+    .title Classification Driven Dynamic Image Enhancement
+    .info
+      .authors Vivek Sharma, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        人間の感覚における画像強調ではなく、画像分類精度向上を目的としたImage Enhancement手法の提案。End-to-Endの動的フィルタ学習を介したCNNアーキテクチャとなっている。図のように、画像をCNNに直接入力するのではなく、入力画像を, weighted least squares(WLS)フィルタと畳み込みによって画像を強調し、クラス分類を改善する。 
+
+    .item2
+      img(src=figpath+"180730CDDIE.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p CNNは、画像の質感や構造を利用して、分類するための識別器として使われるが、Image Enhancementによって画像を協調し、CNNの前処理として使用可能。既存の画像強調手法は、人間の画像の知覚向けに設計されている。画像強調のためにCNNを拡張し、画像分類精度が向上するように共同で学習することができる。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p CUB 200-2011、PASCAL VOC2007、MIT Indoor、DTDの4つのベンチマークデータセット(fine-grained, object, scene, and texture classification)で実証。全ての一般的なCNNにおいて精度向上を確認。
+        ul
+          li: a(href="https://arxiv.org/pdf/1710.07558.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 21:52:44
+
+
