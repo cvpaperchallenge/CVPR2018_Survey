@@ -1,0 +1,30 @@
++slide
+section#On_the_Duality_Between_Retinex_and_Image_Dehazing
+  .paper-abstract
+    .title On the Duality Between Retinex and Image Dehazing
+    .info
+      .authors Adrian Galdran, Aitor Alvarez-Gila, Alessandro Bria, Javier Vazquez-Corral, Marcelo Bertalmio
+      .conference CVPR2018
+    .slide_editor Kazuma Matsui
+
+    .item1
+      .text
+        h1 概要
+        p 画像曇り除去は，霧の存在による屋外画像における望ましくない可視性の喪失の除去を扱う．ほとんどのRetinexベースのアルゴリズムは，常に明るさを上げるという特長を持っている．これは、輝度が反転したぼやけた画像にRetinexを直接適用することにより，効果的な画像の曇り除去ができる可能性があることを示している．この論文では、反転強度に対するRetinexが画像の曇りの問題に対する解決策であるという理論的証明を行う．包括的な定性的および定量的結果は，Retinexのいくつかの古典的で現代的な実装が，より複雑なフォグ除去法と対になって競合する画像枯渇アルゴリズムに変換され，この問題に関連する主な課題のいくつかを克服できることを示している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}On_the_Duality_Between_Retinex_and_Image_Dehazing.png`,alt="On_the_Duality_Between_Retinex_and_Image_Dehazing.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 多くの画像枯渇技術は通常、外部の情報源、または同じ場面の複数の画像を必要とする。著者は、2潜在層マルコフランダム場による深度と真の放射輝度の共同確率的推定によって、この必要性を克服する。
+          |この論文では、画像の曇りと不均一な照明分離の問題を結びつける二重の関係を厳密に数学的に証明した．倒立画像にRetinex演算を適用した後，結果を再び反転することにより，ぼかし処理された結果が得られ，逆もまた同様であることが示されている．特定のアルゴリズムに限定されるのではなく，Retinexの広範な手法に対してこれが正式かつ実験的に示されている．定性的および定量的実験は，現在の枯渇アルゴリズムと比較して競合結果を示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.02754") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 17:46:29
