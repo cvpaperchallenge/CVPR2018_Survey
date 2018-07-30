@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_InLoc_Indoor_Visual_Localization_with_Dense_Matching_and_View_Synthesis
+  .paper-abstract
+    .title InLoc: Indoor Visual Localization with Dense Matching and View Synthesis
+    .info
+      .authors Hajime Taira, Masatoshi Okutomi, TTorsten Sattler, Mircea Cimpoi, Marc Pollefeys, Josef Sivic, Tomas Pajdla, Akihiko Torii
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 大規模室内画像の6Dカメラ姿勢推定の手法InLocを提案した．提案手法がquery画像と大規模室内3次元マップからquery画像のカメラ姿勢推定を行う．
+            |新たな大規模室内visual localization手法を提案した．具体的には：①大規模環境から候補姿勢を推定する②dense matchingを用いたテクスチャーレスシーンにも用いられる姿勢推定を行う．③視点合成をベースとした姿勢検証を行い，視点、シーンレイアウト、オクルージョンをロバストで対応できるようにした．
+          li 大規模室内環境の画像の6Dカメラ姿勢推定用データセットを提案した．提案データセットのquery画像が手持ち携帯カメラにより異なる時間帯で収集され，ロバストアルゴリズムに用いられる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}InLoc.png`,alt="InLoc")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 初めてのdense data associationを用いた室内環境localization手法と指摘した．
+          li 提案したデータセットにおいて，従来手法より大幅に精度向上を実現した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 室内の画像6D姿勢推定がかなりchallengingなタスクのように思う．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2096.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:49:59
