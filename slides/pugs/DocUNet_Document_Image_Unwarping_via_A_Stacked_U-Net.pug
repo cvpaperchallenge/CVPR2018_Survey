@@ -1,0 +1,37 @@
++slide
+section#ID_DocUNet_Document_Image_Unwarping_via_A_Stacked_U-Net
+  .paper-abstract
+    .title DocUNet: Document Image Unwarping via A Stacked U-Net
+    .info
+      .authors Ke Ma, Zhixin Shu, Xue Bai, Jue Wang, Dimitris Samaras
+      .conference CVPR 2018
+      .paper_id 596
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p モバイルカメラなどで実際に撮影したレシートや文章などの歪んだ画像をフラットな画像に修正するネットワークを考案．
+          |手法としてはセマンティックセグメンテーションに似ており，画素単位で判別していく．
+          |ネットワークアーキテクチャとしては2組のU-Netを用いて実現している．
+          |1つ目のU-netでは逆畳み込み層部分を分割して，特徴マップを抽出したものとフォワードマップy1を出力する．
+          |これらを合成して2つ目のU-netの入力にする．2つ目のU-netではフラットな画像に修正した画像1枚を出力する．
+          |この処理をLossが小さくなるまで繰り返し行う．
+          |評価方法としては実際にモバイルカメラを用いて論文などのプリントを撮影した画像とそのプリントをスキャンしてGround truthにしたものを90Kほど用いてトレーニングを行っている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180596_0.PNG`,alt="Item3Image1")
+          img(src=`${figpath}180596_1.PNG`,alt="Item3Image2")
+    .item3
+      .text
+        h1 結果
+        p 折れ曲がっている部位や極度に撮影の仕方が悪いものは歪んでしまっているが，それでも文字が読み取れるレベルまで画像が修正できている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Ma_DocUNet_Document_Image_CVPR_2018_paper.html") CVPR 2018 open access
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 16:47:59

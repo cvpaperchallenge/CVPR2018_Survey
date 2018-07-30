@@ -1,0 +1,32 @@
++slide
+section#ID_Multi-Cell_Detection_and_Classification_using_a_Generative_Convolutional_Model
+  .paper-abstract
+    .title Multi-Cell Detection and Classification using a Generative Convolutional Model
+    .info
+      .authors Florence Yellin, Benjamin D. Haeffele, Sophie Roth, Rene Vidal
+      .conference CVPR 2018
+      .paper_id 1126
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p バイオメディカルアプリケーションにおいて，人間の血液中の細胞を検出，測定，分類は重要である．しかし，広範囲に及ぶ細胞の変動や画像を使用した診断にも解像度の限界があるため非常に難しいタスクとなっている．
+          |そこで本稿では，ホログラフィックイメージにおける白血球の検出，測定，分類に新たな手法を提案した．具体的には細胞集合の確率生成モデルをベースとしている．それぞれのクラスのテンプレートは血液の細胞についての静的な分布情報から作られる．
+          |分布についてのパラメータは，患者から得た血液の情報（実際に数えた結果？），セルテンプレートは辞書形学習を拡張させたものを使ってセル分類のクラスから得たセルの画像で学習している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}181126_0.PNG`,alt="Item3Image")
+    .item3
+      .text
+        h1 結果
+        p 実際に20の正常な血液サンプルと12の正常でない血液サンプルを使って実験しており，従来手法ではエラーが30%ほどに対し，提案手法ではを6.8%以下に抑えた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Yellin_Multi-Cell_Detection_and_CVPR_2018_paper.html") CVPR 2018 open access
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 16:19:39
