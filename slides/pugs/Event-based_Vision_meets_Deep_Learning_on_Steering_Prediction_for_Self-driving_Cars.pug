@@ -1,0 +1,34 @@
++slide
+section#Event-based_Vision_meets_Deep_Learning_on_Steering_Prediction_for_Self-driving_Cars
+  .paper-abstract
+    .title Event-based Vision meets Deep Learning on Steering Prediction for Self-driving Cars
+    .info
+      .authors Ana I. Maqueda, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        イベントカメラを用いて自動車のステアリング角度を予測するDNN手法の提案。約1000kmのイベントカメラデータにCNNを適用し、ステアリング角度推定が可能になる理由を定量的および定性的に示す。イベントカメラの出力は、イベントの極(正か負)別にチャンネルを使用し、一定の時間間隔Tごとにフレームを収集。ResNetによってステアリング角度を推定。
+
+    .item2
+      img(src=figpath+"180730EVmDLoSPfSC.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 動き推定タスクにおいて無駄のない情報を得ることができるイベントカメラを用いて、そのポテンシャルを示すことにモチベーションを置いている。イベントセンサーの出力と連携して動作するように設計することで高精度に推定できる。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p イベントベースカメラの方が、標準的なカメラよりも優れていることを実証。特に照明条件や高速な動きにも頑健。
+        ul
+          li: a(href="https://arxiv.org/pdf/1804.01310.pdf") 論文
+        ul
+          li: a(href="https://www.youtube.com/watch?v=_r_bsjkJTHA&feature=youtu.be") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 22:05:22
+
+
