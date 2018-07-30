@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Learning_Visual_Knowledge_Memory_Networks_for_Visual_Question_Answering
+  .paper-abstract
+    .title Learning Visual Knowledge Memory Networks for Visual Question Answering
+    .info
+      .authors Zhou Su, Jianguo Li, Zhiqiang Shen, Yurong Chen
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li VQAタスクに用いられるVisual Knowledge Memory Network(VKMN) を提案した． VKMNがhuman knowledgeとディープ視覚特徴をメモリーネットワークのより結合し，VQAの精度を向上できる．
+          li 自然言語処理のTextベースなQAタスクに用いられる方法からpre-built visual knowledgeベースなVKMNを提案した．①Apparent object(答えが画像から直接読める);②Indiscernible(答えが画像中に小さい);③Invisible objectiveの(直接画像から答えられない)3種類の画像―結果の関係を定義した．また，VKMNがknowledge triples(subject, relation, target)と視覚特徴をvisual knowledge featureにエンベディングする．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Visual_Knowledge_Memory_Networks-VQA.png`,alt="Learning_Visual_Knowledge_Memory_Networks-VQA")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li VQA1.0,VQA2.0において良い結果を達成し，knowledge-reasoning相関の質問に対してSoTAな結果を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 自然言語処理系のQAに関する知識をVQAに用いることがセンスある．また，従来Ｖ，Qに向けて様々なVQA方法が提出され，knowledge representationのあたりに力を入れるのも良い方向だと思う．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4255.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 11:42:34
