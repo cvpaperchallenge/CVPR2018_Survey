@@ -1,0 +1,34 @@
++slide
+section#ID_Learned_Shape-Tailored_Descriptors_for_Segmentation
+  .paper-abstract
+    .title Learned Shape-Tailored Descriptors for Segmentation
+    .info
+      .authors N. Khan and G. Sundaramoorthi
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p テクスチャセグメンテーションにおいて，それぞれのテクスチャ領域において照明条件などの条件に不変な特徴を取りたいが，その時にテクスチャの領域のセグメンテーションがされていないとテクスチャ間の特徴が混ざってしまうという，鶏と卵問題がある．
+        p 本研究では，Shape-Tailored Descriptorを提案．
+          |様々なスケール，任意の形状領域での向き付き勾配の基本特徴を弁別するNNを学習する．
+          |この特徴表現はROIにおける偏微分方程式により定義される．
+          |学習したメトリックにより基本特徴を弁別することで，結合最適化問題の定式化及び最適化を行う．
+          |これは学習した特徴のグルーピングで行われる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learned_Shape-Tailored_Descriptors_for_Segmentation.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 形状もちゃんと考慮された領域の特徴抽出を一つの枠組みで提供できている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2834.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 17:16:18
