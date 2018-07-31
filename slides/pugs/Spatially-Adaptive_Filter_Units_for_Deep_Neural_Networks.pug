@@ -1,0 +1,30 @@
++slide
+section#ID_Spatially-Adaptive_Filter_Units_for_Deep_Neural_Networks
+  .paper-abstract
+    .title Spatially-Adaptive Filter Units for Deep Neural Networks
+    .info
+      .authors Domen Tabernik，Matej kristan，Ales Leonardis
+      .conference in CVPR2018/March, 2018.
+    .slide_editor Kazuki Tsubura
+
+    .item1
+      .text
+        h1 概要
+        p 古典的なD-ConvNetは，パラメータの数の増加を防ぐために，徐々に分解能を低下させるか，手作業で拡張した畳み込みを適用することによって受容野のサイズを増加させる． 本論文では，手作業を必要としない新しい変位型集約ユニット（DAU）を提案する．固定された規則的なグリッド上に配置された単位（ピクセル）を有する古典的なフィルタとは対照的に，DAUの変位が学習され，フィルタが受容野を所与の問題に空間的に適応させる．通常のフィルタを備えたConvNetsと比較して，DAUを備えたConvNetsは，より速いコンバージェンスと，パラメータの最大3倍の低減で同等の性能を実現します．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Spatially-Adaptive_Filter_Units_for_Deep_Neural_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・差分
+        p 分類およびセマンティックセグメンテーションタスクでDAUの強さを広範に実証している．通常のフィルタを備えたConvNetsと比較して，DAUを備えたConvNetsは，より速いコンバージェンスと，パラメータの最大3倍の低減で同等の性能を実現する．さらに，DAUにより，斬新な視点からDeepNetWorkを研究することができる．DAUフィルタの空間分布を研究し，フィルタ内の空間カバレッジに割り当てられるパラメータの数を分析する．
+    .item4
+      .text
+        h1 結果
+        p フィルタごとのパラメータ割り当てに関する包括的な調査では，既存のConvNetsのパラメータの非効率的な割り当てが示された．DAU-ConvNetsは従来のCovnNetsに匹敵する性能をフィルタ当たり3倍少ないパラメータで達成した．分析によれば，増幅係数が最も低いユニットを除去することで，性能を犠牲にすることなくパラメータの10％を節約することができるため，さらなる改善の余地があることがわかる．さらに，完全に接続されたレイヤにDAUを適用するための最近の予備的な作業は，完全に接続されたレイヤのパラメータの節約も可能であることを示している．
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.11473.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 17:13:23

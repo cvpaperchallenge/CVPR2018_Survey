@@ -1,0 +1,32 @@
++slide
+section#ID_A_Biresolution_Spectral_Framework_for_Product_Quantization
+  .paper-abstract
+    .title A Biresolution Spectral Framework for Product Quantization
+    .info
+      .authors Lopamudra Mukherjee, Sathya N. Ravi, Jiming Peng, Vikas Singh
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Product Quantization（PQ; 直積量子化）は与えられたデータを低次元に分解できるため、高次元のエンコーディングに対して有効である。本論文ではPQの直交（orthogonal）時について解析するとともに、Spectral Decompositionについても関係性を調べる。本論文の解析によりスペクトル解析に関する知見が得られることや、計算コストについても言及できる。本論文で提案する定式化により、よりシンプルで効率化されたdecomposition手法を与えることができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730ProductQuantization.png`,alt="180730ProductQuantization")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p PQの課題においてスペクトル解析と関連することを示した（+定式化）ことが最大の貢献である。各種データセット（Sift25K/1M,Mnist,Cifar,VladLong）にて従来法よりも良好な精度を実現するとともに、効率的な計算ができることも示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 本論文では理論的な解法を与えたことが評価された点である。検索問題を考えるとPQは面白そうである。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Mukherjee_A_Biresolution_Spectral_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://yusukematsui.me/project/survey_pq/doc/prmu2016.pdf") 直積量子化サーベイ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 08:35:08
