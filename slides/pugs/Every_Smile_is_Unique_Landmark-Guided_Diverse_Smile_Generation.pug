@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Every_Smile_is_Unique_Landmark-Guided_Diverse_Smile_Generation
+  .paper-abstract
+    .title Every Smile is Unique: Landmark-Guided Diverse Smile Generation
+    .info
+      .authors Wei Wang,Xavier Alameda-Pineda, Dan Xu, Pasal Fua, Elisa Riccia and Nicu Sebe
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 1枚の顔画像から、指定した表情に変化する動画を生成する手法を提案。
+          |たとえ同じ笑顔であっても、作り笑いとそうでない場合など目の動きなど顔の変化は異なる。
+          |そこで、指定された表情に対して複数の動画を生成する手法を提案した。
+          |入力画像とラベルから、指定されたラベルに対して適した顔特徴点の変化を複数のネットワークによって予測する。
+          |その際、各ネットワークの予測がお互いに類似しないように最適化することで動画を複数用意することなく予測することを可能とする。
+          |予測した顔特徴点から各フレームの顔画像を復元することにより、動画の生成を実現する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Every_Smile_is_Unique_Landmark-Guided_Diverse_Smile_Generation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来の動画生成に関する研究と比べ、artifactが少なく与えられた画像の人物の個人性を保った合成を実現した。
+          |ユーザースタディの結果、比較対象とした研究よりも提案手法により生成された動画のほうが圧倒的に好まれるということが分かった。
+          |Action Unit(AU)の変化を調べたところ、提案手法により生成された動画は実際の動画に近い変化をすることが分かった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.01873") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 19:37:44
+
+

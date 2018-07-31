@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Visual_Grounding_via_Accumulated_Attention
+  .paper-abstract
+    .title Visual Grounding via Accumulated Attention
+    .info
+      .authors chaorui Deng, Qi Wu, Fuyuan Hu, Fan Lyu, Mingkui Tan, Qingyao Wu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Visual Groundingタスクに用いられる新たなattentionメカニズムA-ATTを提案した．VGタスクのattentionを①query attention②image attention③objects attentionに分解し，累積をベースとした手法でこの三つのattentionを求める．
+          li 従来のVGタスクは画像・query・objectsの情報をまとめて取り扱うので， 情報が冗長になるという問題がある．そこで，著者達がVGタスクを３つのサブタスク，①クエリ中の主目的の判別②画像中のコンセプトの理解③関連性が最も高い物体の定位，に分解した．
+            | また，この３つのサブタスクを３種類のattention問題として取り扱う．具体的には，A-ATT attentionメカニズムを提案し，それにより累積的に３つのattentionを求め，異なる累積の段階でattentionをリファインする．これによりノイズなどに対してロバストになる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}VisualGrounding-AccumulatedAttention.png`,alt="VisualGrounding-AccumulatedAttention")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案のA-ATTメカニズムによりノイズ，冗長性などが異なる累積段階で影響が減っていく．また，このメカニズムにより提案手法が幅広いタイプのクエリに対応できる．
+          li ReferCOCO, ReferCOCO+,ReferCOCOg,Guesswhat?!の4つのデータセットにおいてSoTAな精度を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 提案のA-ATTメカニズムはVQAにも使えそう．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0186.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 11:55:45

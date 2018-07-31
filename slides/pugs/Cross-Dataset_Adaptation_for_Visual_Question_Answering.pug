@@ -1,0 +1,48 @@
+﻿+slide
+section#ID_Cross-Dataset_Adaptation_for_Visual_Question_Answering
+  .paper-abstract
+    .title Cross-Dataset Adaptation for Visual Question Answering
+    .info
+      .authors Wei-Lun Chao, Hexiang Hu, Fei Sha
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p VQAのデータセットにおけるバイアスを調査した上で、VQAにおけるdomain adaptation(DA)を提案。
+          |提案手法では選択肢の中から解答を選択するVQAを扱う。VQAデータセットは画像、質問、解答選択肢＝正解＋誤答の要素からなる。
+          |それぞれの要素を組み合わせた入力を用いて、その入力がどのデータセットに所属しているのかを調査した結果、
+          |画像はほぼ無相関であることがわかり、質問と解答によってデータセット間にバイアスが生じていることを確認。
+          |この結果に基づき、以下のようにDAを提案。ターゲットドメイン(TD)に質問/解答選択肢のみがある場合、
+          |ソースドメイン(SD)の質問/正解(誤答は任意性があるため使用しない)の特徴量が持つ分布とTDの質問のDNNによる
+          |特徴量が持つ分布のJensen-shannon Divergence(JSD)が小さくなるように学習。TDが質問と正解(＋誤答)を持つ場合、
+          |SDが持つ質問・正解の特徴量分布とTDの質問・正解のDNNによる特徴料が持つJSDが小さくなるように学習。
+          |さらにSDで事前学習を行った質問-正解識別をTDでfine-tuningを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Cross-Dataset_Adaptation_for_Visual_Question_Answering.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 事前実験より与える情報によって、入力データがどちらのデータセットに所属しているかの識別率の変化を確認。
+             |画像、質問、正解解答、解答群(正解+不正解)を与え、与える要素を増やすほど識別率が高くなった。
+             |この結果から、データセットによってバイアスがあることを確認。
+          li 質問に対する正答率を複数のデータセットにおいて既存手法であるADDA、CORALと比較した結果SoTAを達成。
+             |TDが解答選択肢のみ、質問と正解を持つ場合において高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集 
+        ul
+          li TDの正解、誤答のみを使用し質問を使用せずにDAを行った方が高い状況がいくつも確認できる。
+             |これはつまり質問と解答の相関がすでにSDで学習できており、SDの質問がノイズになってしまっているとを示唆している。
+          li VQAをDAしてみた、という実験的な論文であり比較している手法もDAのベンチマークの手法なので、まだまだ新規性を出すことができそう。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4249.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/4249-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+
+

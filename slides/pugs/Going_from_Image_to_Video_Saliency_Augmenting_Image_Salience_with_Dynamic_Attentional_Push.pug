@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Going_from_Image_to_Video_Saliency_Augmenting_Image_Salience_with_Dynamic_Attentional_Push
+  .paper-abstract
+    .title Going from Image to Video Saliency: Augmenting Image Salience with Dynamic Attentional Push
+    .info
+      .authors S. Gorji and J.J. Clark
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p 画像における静的なSaliency Modelを，動的なビデオのSaliencyの予測に使う手法．
+          |この著者らは，前回に写真内に写っている人の注視（Attention）をCNNのAttentionと組み合わせるという
+          a(href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Gorji_Attentional_Push_A_CVPR_2017_paper.pdf") Shared Attentionに関する論文
+          |を出していたが，
+          |今度は写真を撮る人・シーンに映っている人のShared Attentionについて取り組んだ．
+        p マルチストリームCNN-LSTM構造を提案．
+          |これはSoTAなSaliencyをDynamic Attentional Pushに拡張する．
+        p 4つのステージからなる．Saliencyステージと，3つのAttentional Pushステージ．
+          |この複数ステージ構造は，Augmenting ConvNetに従っている．
+          |ConvLSTMの補足（complementary）と時間変化出力組み合わせで学習．
+          |拡張したSaliencyと，ビデオにおける「見ている人」修正パターンの間のRelative Entropyの最小化を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Going_from_Image_to_Video_Saliency_Augmenting_Image_Salience_with_Dynamic_Attentional_Push.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 動画データセットHOLLYWOOD2，UCF-Sport，DIEMにおいて，SoTAな時空間Saliency推定性能を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 発展ネタを自分で出して，しかもCVPR連続当選．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1928.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.21 12:24:09
+
+

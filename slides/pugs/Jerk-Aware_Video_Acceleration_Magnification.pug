@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Jerk-Aware_Video_Acceleration_Magnification
+  .paper-abstract
+    .title Jerk-Aware Video Acceleration Magnification
+    .info
+      .authors Shoichiro Takeda, Kazuki Okami, Dan Mikami, Megumi Isogai and Hideaki Kimata
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 高速で大きな動きに対して加速度法の出力を頑健にするための、ジャーク(振動，ぶれ)の新規利用方法について言及．微小な変化は時間的スケールでの高速な大きな動きよりも滑らかであるという観点・観測に基づき、高速で大きな動きの下でのみ微妙な変化を通過させるジャークフィルタを設計．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180609_jerkVAM1.png`,alt="1")
+          img(src=`${figpath}20180609_jerkVAM3.png`,alt="3")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ジャークフィルタを加速度法に適用することで、最先端のものより優れた結果を確認．
+          img(src=`${figpath}20180609_jerkVAM2.png`,alt="2")
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2767.pdf") link1
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 17:37:53
+
+

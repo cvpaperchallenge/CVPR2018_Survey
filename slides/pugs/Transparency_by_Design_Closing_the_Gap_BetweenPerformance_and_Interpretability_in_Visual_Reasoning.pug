@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Transparency_by_Design_Closing_the_Gap_BetweenPerformance_and_Interpretability_in_Visual_Reasoning
+  .paper-abstract
+    .title Transparency by Design: Closing the Gap Between　Performance and Interpretability in Visual Reasoning
+    .info
+      .authors D. Mascharka et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        モデルの挙動を解釈しやすい，かつ高精度なVQAモデルの提案．
+        Neural Module Networkは結果の解釈がしやすいが，複雑なタスクだと精度が落ちる．
+        それを改善した手法はあるが，解釈性を犠牲にしている．
+        ということで，性能と解釈性のGapを埋めよう，というモチベーション．
+        Moduleに分解するのは従来と同じアイディアなものの，
+        モジュール設計のデザインを工夫することで改善を図っている．
+        なお，Transparencyは途中経過を可視化できるという意味で使っている．
+  
+    .item2
+      img(src=figpath+"Transparency_by_Design_Closing_the_Gap_BetweenPerformance_and_Interpretability_in_Visual_Reasoning.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li VQAのタスクにおいて解釈しやすいモデルでありながらSOTAを達成
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3279.pdf") 論文
+          li ざっと読んだだけだとなぜこの論文のモジュール構成が優れているのかわかりにくい
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.29 18:30:49
+
+

@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Low-Latency_Video_Semantic_Segmentation
+  .paper-abstract
+    .title Low-Latency Video Semantic Segmentation
+    .info
+      .authors Yule Li, et al.
+      .paper_id 1804.00389
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 動画によるセマンティックセグメンテーションにおいて、精度を向上させつつ、処理速度を上げる手法の提案。2つのコンポーネントを組み込んだフレームワークで構成している。1つ目は、時間変化に伴って空間的な畳み込み処理を変化させ、特徴を適応させる特徴伝播モジュール。2つ目は、精度予測に基づいて、計算を動的に割り当てるスケジューラ。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180617LLVSS.jpg`,alt="20180617LLVSS.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 動画のセマンティックセグメンテーションには、高スループットやコスト、低遅延などの問題があり、 自律運転などにおいて重要となる。時間的変化に適応させた処理によって精度向上、処理速度向上を図る。
+    .item4
+      .text
+        h1 結果・リンク集
+        p CityscapesとCamVidにおいて、最新の手法と競合する精度で、遅延を360msから119msに抑えられる結果に。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.00389.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

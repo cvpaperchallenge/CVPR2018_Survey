@@ -1,0 +1,48 @@
+﻿+slide
+section#ID_A_Perceptual_Measure_for_Deep_Single_Image_Camera_Calibration
+  .paper-abstract
+    .title A Perceptual Measure for Deep Single Image Camera Calibration
+    .info
+      .authors Y. Hold-Geoffroy, K. Sunkavalli, J. Eisenmann, M. Fisher, E. Gambaretto, S. Hadap and J.F. Lalonde
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 単画像におけるカメラパラメータのキャリブレーションの話．
+          |事前知識なしに非コントロール環境でもちゃんと動くように，
+          |DCNNによるキャリブレーションパラメータの直接推測手法を提案する．
+        p ImageNet学習済みDenseNetの最終層を３つの分離したヘッドに置き換え，
+          |それぞれ水平角度推定，水平線の中心からの距離，縦方向の場を表すように改造する．
+          |これを，大規模パノラマ画像データセットから自動生成したサンプルにより学習する．
+        p 評価については，実際人がおかしさを感じるかどうかによるので，AMTで聞いてみた
+          |結果から導いた人の誤差モデルをもとに語ってみる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Perceptual_Measure_for_Deep_Single_Image_Camera_Calibration.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 結果はそれなりにできている．
+          |が，それなりっぽく見えてしまうので，人間の感じ方もちゃんと調べて載せた！
+          |というのが評価されているように思う．
+        p ネットワーク構造の簡単な調整で達成できたところが，
+          |DNNの手に掛かれば様々な問題が如何様にも解ける感じを醸し出していておもしろい．
+        p アプリケーション枠狙いにするためか，アプリケーション例をいくつか掲載している．
+          |論文自体，他のアプリケーション系論文と比べて，読んでいて飽きない感じがする．
+          |合わせ技一本，という感じがする．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 速読したからかもしれないが，不思議な構成の論文だった．論点が2つあるからだろうか．
+          |違和感は感じるが，なんとかうまく収めている感じもする．
+        p NVidiaにGPUを寄付してもらったらしい．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2618.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 19:26:49
+
+

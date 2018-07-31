@@ -1,5 +1,5 @@
 ﻿+slide
-section#PointGrid_A_Deep_Network_for_3D_Shape_Understanding
+section#ID_PointGrid_A_Deep_Network_for_3D_Shape_Understanding
   .paper-abstract
     .title PointGrid: A Deep Network for 3D Shape Understanding
     .info
@@ -24,7 +24,7 @@ section#PointGrid_A_Deep_Network_for_3D_Shape_Understanding
         ul
           li 従来の3次元表示方法の①occupacy gridやdistance fieldなどはレギュラー構造であるが，3次元形状の近似方法の特徴により低レベルの3次元局所情報しか表示できない，高レベルの特徴を表示するには高解像度が必要だが，CNNに用いたら処理・メモリ―コストが極めて高くなる．②PointNetがポイントクラウドを直接CNN処理を行えるが，max poolingだけでグローバル特徴の抽出を行っているので，局所的な情報抽出が弱い．以上の問題点から， CNN処理を行えるグリッドとポイント表示をコンバインした構造を提案し，occupacy gridより低解像度で豊かな情報を表示でき， PointNetより局所的情報の抽出が強いPointGridを提案した．
           li 低解像度で有効的に3次元情報を表示できる．例：16，16，16解像度で良い性能を得られる（従来は64，64，64のボリューメトリックグリッド）
-          li Modelnet-50, shape-netで物体識別及びパーツセグメンテーションの2つのタスクで従来の手法と相当レベルの精度を得られた（ボリューメトリックグリッド方法で最もメモリー消耗が少ない）．
+          li Modelnet-40, shape-netで物体識別及びパーツセグメンテーションの2つのタスクで従来の手法と相当レベルの精度を得られた（ボリューメトリックグリッド方法で最もメモリー消耗が少ない）．
     .item4
       .text
         h1 コメント・リンク集
@@ -35,3 +35,5 @@ section#PointGrid_A_Deep_Network_for_3D_Shape_Understanding
             a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Le_PointGrid_A_Deep_CVPR_2018_paper.pdf") 論文
     .slide_index #{getSlideIndex()}
     .timestamp 2018.6.7 13:10:24
+
+

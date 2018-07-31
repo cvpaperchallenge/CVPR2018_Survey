@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_GANerated_Hands_for_Real-Time_3D_Hand_Tracking_From_Monocular_RGB
+  .paper-abstract
+    .title GANerated Hands for Real-Time 3D Hand Tracking From Monocular RGB
+    .info
+      .authors Franziska Mueller, Florian Bernard, Oleksandr Sotnychenko, Dushyant Mehta, Srinath Sridhar, Dan Casas, Christian Theobalt
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p RGBのみの動画入力からリアルタイムに3次元手部関節位置推定を実行する手法を提案。YouTubeのようなコントロールされていない場面においても3次元手部関節位置推定を行うことができる。本論文では3次元のハンドモデルとCNNを組み合わせることによりトラッキングを実行しており、GANによる生成ベース（手の3次元合成データをリアルに変換していることに相当）の手法によりオクルージョンやビューポイントの違いに頑健である。GANはAdversarial LossとCycle-consistency Loss、さらには幾何学的な整合性を保つためにGeometric Consistency Lossを最適化するよう学習。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609GANeratedHand.png`,alt="180609GANeratedHand")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p GANをベースとして合成データからリアル画像を生成、同データで学習したモデルは、RGB-onlyな3次元ハンドトラッキングにおいてState-of-the-artである。敵対的学習を用いたデータ生成手法、YouTube等のあまり校正されていないデータにおいても良好な精度を実現していることが採択された理由であると考える。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 3Dデータを自由に生成できることは、次世代のアイディアを実現するための大きなポイントである。3次元トラッキングのみならず面白いこと考えたい。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Mueller_GANerated_Hands_for_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 18:52:55
+
+

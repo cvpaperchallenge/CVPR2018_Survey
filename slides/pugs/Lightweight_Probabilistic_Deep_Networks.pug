@@ -1,0 +1,49 @@
++slide
+section#ID_Lightweight_Probabilistic_Deep_Networks
+  .paper-abstract
+    .title Lightweight Probabilistic Deep Networks
+    .info
+      .authors Jochen Gast, Stefan Roth
+      .conference CVPR 2018
+      .paper_id 1799
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p DNNに対して活性化や最終層の出力を確率分布で置き換えるモデルを提案。DNNでは要所要所で確率モデルを使用しているが、多くのモデルでは活性化や最終層の出力はサンプリングに終わっている。一方でfull Bayesian networksではパラメタ自体を確率分布に置き換えているが、テストの実行に長い時間がかかってしまう。提案手法ではネットワークの最終層の出力を確率分布で置き換えるprobabilistic output layers (ProbOut)と、
+          a(href="https://arxiv.org/abs/1301.7362") assumed density filtering(ADF)
+          |を導入することで活性化を確率分布で置き換える2つの方法を提案。これを既存のネットワークに組み込むことで、テスト時の実行速度を落とすことなく識別・回帰の両タスクで高い精度を実現。特に識別ではディリクレ分布に基づく出力を行うモデルを提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Lightweight_Probabilistic_Deep_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li オプティカルフローの回帰をベースモデル
+            a(href="https://arxiv.org/abs/1504.06852") FlowNet
+            |で行なった。{最終層の出力のみ, 活性化}を確率的な分布に置き換えたFlowNet{ProbOut, ADF}と、FlowNet、確率モデルのベースラインとして
+            a(href="https://arxiv.org/abs/1506.02557") FLowNetにGaussian dropout
+            |をボトルネックに加えたFlowNetDropOutと比較
+          li Endpoint errorにおいてもっとも高い精度を達成し、テスト時の実行スピードはFlowNetADF/ProbOutそれぞれで38/101fpsとなり、FLowNetの106fpsよりも遅いものの、FlowNetDropOutの3fpsよりも高速に実行可能。
+          li CIFAR10とMNISTの識別を
+            a(href="https://arxiv.org/abs/1412.6806") All-CNN-C
+            |をベースモデルとした。
+          li 提案手法であるADF、ProbOut+ディリクレ分布に基づいた最終層の出力を用いたモデルがもっとも高い精度を達成。
+          li 最終層をsoftmaxにした場合と提案手法によるDirichlet output layerにおけるクロスエントロピーロスと推定時のカテゴリのエントロピの考察を行い、後者の場合に置いて強いそうかんが得られたため、Dirichlet output layerの有用性を主張。
+          li DIFAR-10におけるadversarial attackへの頑健性において比較モデルよりも高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 通常のDNNとfull Bayesian networksの中間的な確率的モデル表現を暑かったDNN。今後はこのような確率的な表現が増えていく？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1799.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1799-supp.pdf") Supplementary material
+          li
+            a(href="https://arxiv.org/abs/1301.7362") 参考 Tractable Inference for Complex Stochastic Processes (assumed density filtering, ADF)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 00:28:11

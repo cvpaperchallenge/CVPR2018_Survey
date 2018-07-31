@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Learning_Strict_Identity_Mappings_in_Deep_Residual_Networks
+  .paper-abstract
+    .title Learning Strict Identity Mappings in Deep Residual Networks
+    .info
+      .authors Xin Yu, Zhiding Yu, Srikumar Ramalingam
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 自動的に冗長なレイヤを除外してくれるε-ResNetを提案し、よりコンパクトなサイズで最大限の認識パフォーマンスを実現する。ε-ResNetでは閾値εを設けて、これよりも小さい値を出力するレイヤに対して誤差を計算しないという方策を取る。提案法であるε-ResNetを実現するために、少量のReLUを加えることで実現した。CIFAR-10,-100,SVHN,ImageNetに対して単一のトレーニングプロセスで学習が成功し、なおかつ約80%ものパラメータ削減を実行した。右図は752層のε-ResNetを実装して最適化した例である。図中の赤ラインは除去されたレイヤ、青ラインは認識に対して必要と判断されたレイヤである。図の例では、CIFAR-100に対するオリジナル（ResNet-752）のエラー率が24.8%、提案法（ε-ResNet-752）のエラー率が23.8%であった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618EpsilonResNet.png`,alt="180618EpsilonResNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ResNetを対象として、レイヤを増加させることによる冗長性を自動的に除去してくれるε-ResNetを提案した。ε-ResNetは従来の枠組みに対して4つのReLUを組み合わせ、閾値カット処理だけで実装可能である。より深い層のモデルに対して有効であり、大体80%くらいの冗長生をカットする。パラメータ数を減らしつつも超ディープなモデルにおいて多少の精度向上が見込める。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 実装が非常に簡単そうであり、すでにDNNフレームワークにおいて実装されていれば、広く使ってもらえそう。また、各タスク（e.g. 物体検出、セグメンテーション、動画認識）において気軽に使用することができれば、広がりがありそう。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_Learning_Strict_Identity_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 20:51:56
+
+

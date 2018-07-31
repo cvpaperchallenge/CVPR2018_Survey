@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_A_Certifiably_Globally_Optimal_Solution_to_the_Non-Minimal_Relative_Pose_Problem
+  .paper-abstract
+    .title A Certifiably Globally Optimal Solution to the Non-Minimal Relative Pose Problem
+    .info
+      .authors Jesus Briales, Laurent Kneip, Javier Gonzalez-Jimenez
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p キャリブレーション済みの２カメラにおける相対姿勢の推定問題を解くための全体最適化法（Globally Optimal Solution）を提案する。局所最適解ではなく、グローバルな最適化が計算できることが新規性である。本論文では、凸最適化の問題においてあらかじめ定義された問題（Shor's Convex Relaxation）としてQuadratically Constrained Quadratic Program (QCQP)を扱うことを実施する。ここに対して、理論的かつ実験的な解答法を提示したことが本論文の貢献である。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609GloballyOptimalSolution.png`,alt="180609GloballyOptimalSolution")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ２カメラの相対姿勢問題の解決のために従来の凸最適化手法を適用して、理論的かつ実験的に解決できることを示したことが新規性であり、CVPRに採択された理由である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p （あまり深く読めていないのと、知識が足りなくて自信がないです。。）
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Briales_A_Certifiably_Globally_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 17:36:01
+
+

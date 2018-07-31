@@ -1,0 +1,29 @@
++slide
+section#ID_Memory_Based_Online_Learning_of_Deep_Representations_From_Video_Streams
+  .paper-abstract
+    .title Memory Based Online Learning of Deep Representations From Video Streams
+    .info
+      .authors Federico Pernici, Federico Bartoli, Matteo Bruni, Alberto Del Bimbo
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 動画から顔認証のための教師なし学習を提案する。メモリベースの学習を顔特徴抽出と同時に行い、時系列の相関性を計算して行く方法で個人認証に関する強力なモデルを構築。手法としてはReverse Nearest Neighbour（サンプルからクラスタを求める逆を行う; 具体的にはせんとロイドからの距離の比が小さくなるようなカテゴリに割り当てる）や冗長な特徴表現に関しては忘却する構造を用いた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180720MemoryBasedOnlineLearning.png`,alt="180720MemoryBasedOnlineLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p オンラインかつ教師なしの動画に対する顔認証を行なった。Reverse Nearest Neighbour（ReNN）や冗長特徴の忘却を実装して高精度な顔認証に寄与した。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Pernici_Memory_Based_Online_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 10:26:50

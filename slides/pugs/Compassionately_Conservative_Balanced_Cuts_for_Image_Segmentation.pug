@@ -1,0 +1,32 @@
++slide
+section#ID_Compassionately_Conservative_Balanced_Cuts_for_Image_Segmentation
+  .paper-abstract
+    .title Compassionately Conservative Balanced Cuts for Image Segmentation
+    .info
+      .authors Nathan D. Cahill, Tyler L. Hayes, Renee T. Meinhold and John F. Hamilton
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p グラフカットの問題において、edgeの重みが他よりも小さい場合そのedgeで切断してしまいnodeが１つしかないクラスができてしまう。
+          |この問題を解決するために、Compassionately Conservative Balanced (CCB) Cut costsを提案した。
+          |クラス間のnode数のバランスを取るための方法として、Compassionately Conservative Ratio CutやCompassionately Conservative Normalized Cutなどが提案されているが、CCBはこれらを一般化したcostとなる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Compassionately_Conservative_Balanced_Cuts_for_Image_Segmentation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法が考慮していなかった3次元的な特徴を考慮することで、歪みなどが存在しない画像を出力することに成功した。
+          |数値評価においても、ground truthとのL1ノルムがベースラインと比べ小さくなっている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.06008") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.14 16:44:14

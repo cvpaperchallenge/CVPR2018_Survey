@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Weakly-Supervised_Semantic_Segmentation_by_Iteratively_Mining_Common_Object_Features
+  .paper-abstract
+    .title Weakly-Supervised Semantic Segmentation by Iteratively Mining Common Object Features
+    .info
+      .authors Xiang Wang, Shaodi You, Xi Li, Huimin Ma
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 弱教師付き学習に対してボトムアップ（物体レベルで似ている特徴量をマイニング）とトップダウン（リファインされた領域をセグメンテーションの教師として学習）のアプローチを組み合わせる手法を考案。右図の（１）RegionNetによる出力/リファイン結果とPixelNetによる出力との比較によりセグメンテーションの誤差を比較、（２）PixelNetによ出力とマイニングした物体マスクと（Class Activation Mappingにより領域抽出された）RegionNetの出力を比較して領域に対する識別の誤差を計算する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623WSSegmentMining.png`,alt="180623WSSegmentMining")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 識別ベースによる物体領域抽出とセグメンテーションの誤差を繰り返し最適化することにより弱教師付きセマンティックセグメンテーションを実行する。SuperPixelの導入、類似物体マイニング、領域のリファインなどが徐々にセグメンテーション結果をよくしていく。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 弱教師付き学習はうまくいくときとうまくいかない時がありそう？なんどもやればランダムで良い結果が得られる？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Weakly-Supervised_Semantic_Segmentation_CVPR_2018_paper.pdf") 論文
+            |￥
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 22:07:14
+
+

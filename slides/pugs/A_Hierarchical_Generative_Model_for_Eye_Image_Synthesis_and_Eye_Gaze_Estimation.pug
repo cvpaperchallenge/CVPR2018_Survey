@@ -1,0 +1,37 @@
++slide
+section#ID_A_Hierarchical_Generative_Model_for_Eye_Image_Synthesis_and_Eye_Gaze_Estimation
+  .paper-abstract
+    .title A Hierarchical Generative Model for Eye Image Synthesis and Eye Gaze Estimation
+    .info
+      .authors Kang Wang, Rui Zhao, Qiang Ji
+      .conference CVPR2018
+      .paper_id 70
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p 与えられた視線方向から視線画像を生成してくれるHierarchical Generative Model(HGM)を提案．
+          |HGMは2つのネットワークから構築されており，KnowledgeベースのHierarchical Generative Shape Model(HGSM)とData-drivenなconditional Bidirectional Generative Adversarial Network(c-BiGAN)から構成されている．
+          |ここで，入力する視線方向は，yaw, pitch, rollである．
+          |HGSMは，与えられた視線方向から目の形状のパラメータを推定する．
+          |c-BiGANでは，2種類の入力によりDiscriminatorを学習する．
+          |Generatorが出力したsynthesized imageとHGSMの出力と，real imageとEncoderで出力した目の形状パラメータであり，これらの入力を用いてDiscriminatorを学習する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}70_overview.jpeg`,alt="70_overview")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 生成されたCGを用いて学習するアプローチ．
+          |SimGANではCGを作った後に学習しているが，この手法では視線方向等のサンプルパラメータのみで学習サンプルの生成&推定が可能である．
+          |この論文では，視線推定だけでなく，表情推定にも応用することができる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1895.pdf") 論文リンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 01:12:34

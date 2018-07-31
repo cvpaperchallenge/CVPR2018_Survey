@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Geometry-Aware_Scene_Text_Detection_with_Instance_Transformation_Network
+  .paper-abstract
+    .title Geometry-Aware Scene Text Detection with Instance Transformation Network
+    .info
+      .authors Fangfang Wang, Liming Zhao, Xi Li, Xinchao Wang and Dacheng Tao
+      .conference CVPR2018
+      .paper_id 167
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 幾何学的な表現を用いたEnd-to-endのシーンテキスト認識アプローチ．シーンテキストインスタンスの幾何学的構成をエンコーディングするため，幾何学的な表現を学習するInstance Transformation Network (ITN)を提案する．右図上部の（a）のように，いくつか並んだサンプルグリッド（橙色）をテキストにフィッティング（青色）する．また，（b）のように入力画像（の特徴マップ）からフィッティングのためのモデルを学習する．ネットワーク構成は，特徴抽出部，インスタンスレベルのアフィン変換を予測する部分，幾何学的表現部からなる．変換の回帰，座標の回帰，分類はマルチタスク学習となる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180619_ITN1.jpg`,alt="20180619_ITN1.jpg")
+          img(src=`${figpath}20180619_ITN2.jpg`,alt="20180619_ITN2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 幾何学的表現で強いアフィン変換がかかっていても頑健なテキスト検出が可能である．データセットにはICDAR2015およびMSRA-TD500を用いて評価を行う．ベースネットワークにResNet50を用いた場合，MSRA-TD500のPrecisionは90.3，F値は80.3と非常に高精度な結果となった．ICDAR2015ではVGG16ベースの方が良い結果となり，Precisionは85.7，F値は79.5である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 幾何学的なドット列をフィッティングする手法は他にも応用が効きそう．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1653.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 03:01:57
+
+

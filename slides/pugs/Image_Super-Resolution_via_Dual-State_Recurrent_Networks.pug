@@ -1,0 +1,42 @@
++slide
+section#ID_Image_Super-Resolution_via_Dual-State_Recurrent_Networks
+  .paper-abstract
+    .title Image Super-Resolution via Dual-State Recurrent Networks
+    .info
+      .authors Wei Han, Shiyu Chang, Ding Liu, Mo Yu, Michael Witbrock, Thomas S. Huang
+      .conference CVPR 2018
+      .paper_id 3225
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 画像の超解像を行うために、高解像度(HR)と低解像度(LR)の2つのstateを持ったRNNベースのモデルであるDual-State Recurrent Network (DSRN)を提案。画像の超解像はCNNで行われることが多いが、パラメタ数が多く、これを削減するためにRNNに着目。RNNを用いた画像の超解像を行う
+          a(href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tai_Image_Super-Resolution_via_CVPR_2017_paper.pdf") DRRN
+          |と異なる点として、提案ネットワークではbottom stateでLRを、top stateでHRをキャプチャし、 delayed feedback mechanismを用いることでLRとHRの双方向のマッピングを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Image_Super-Resolution_via_Dual-State_Recurrent_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li パラメタ数、精度的に
+            a(href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tai_Image_Super-Resolution_via_CVPR_2017_paper.pdf") DRRN
+            |に劣っているが、DRRNはトレーニングに画像が291種類必要なのに対して、提案手法では91枚のみでほぼ同等の精度となるため、提案手法の有効性を主張。
+          li Set5、Set14、B100、Urban100、DIV2K dataset of the NTIRE SR 2017 challengeで検証。PSNR、SSIM、IFCを評価尺度とした。スケールは２、３、4倍を比較。入力は128x128。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 精度としてSoTAと同等であっても、トレーニングに使用する画像が少なければ、CVPR的にはコントリビューションとなることを証明している論文。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3225.pdf") 論文
+          li
+            a(href="https://github.com/weihan3/dsrn") GitHub
+            |(7/27段階では bibtexのみ)
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Tai_Image_Super-Resolution_via_CVPR_2017_paper.pdf") Image Super-Resolution via Deep Recursive Residual Network (DRRN)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 23:41:04

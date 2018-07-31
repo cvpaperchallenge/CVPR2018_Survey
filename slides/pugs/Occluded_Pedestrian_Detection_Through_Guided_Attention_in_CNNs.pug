@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_Occluded_Pedestrian_Detection_Through_Guided_Attention_in_CNNs
+  .paper-abstract
+    .title Occluded Pedestrian Detection Through Guided Attention in CNNs
+    .info
+      .authors Shanshan Zhang, et al.
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p オクルージョンに頑健な、Faster R-CNNベースの歩行者検出手法の提案。歩行者検出について解析することで、CNN特徴の各チャンネルがそれぞれ異なる身体部分を活性化していることに着目。(実際にチャンネルごとにアテンションを取ることで確認)各チャンネルが異なる身体部位を表現しているならば、オクルージョン発生時に身体部位の特定の組み合わせを定式化することができる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180608OPDTGA.jpg`,alt="20180608OPDTGA.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 歩行者検出器におけるCNN特徴について解析することで、歩行者に特化した物体検出を可能にしている。Faster R-CNNにAttention Networkを追加したアーキテクチャを提案。これにより、上位featureの重みパラメータを調節。
+    .item4
+      .text
+        h1 結果・リンク集
+        p アーキテクチャをあまり複雑化せずに精度を向上させている。動物や虫などでも、CNNチャンネルごとに異なる身体部位を表現しているのだろうか。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2198.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Anticipating_Traffic_Accidents_with_Adaptive_Loss_and_Large-scale_Incident_DB
+  .paper-abstract
+    .title Anticipating Traffic Accidents with Adaptive Loss and Large-scale Incident DB
+    .info
+      .authors Hirokatsu Kataoka, Tomoyuki Suzuki, Yoshimitsu Aoki and Yutaka Satoh
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p 交通事故予測のため, 1. loss関数としてAdaptive Loss for Earlay Anticipation (AdaLEA)と2. 予測のためのNear-miss Incident DataBase (NIDB) の提案を行った. AdaLEAにより, モデルが学習過程において, 徐々に早く危険を予測できるように学習される. モデルが交通事故を予測する速さでペナルティを与えることにより, これを実現する. NIDBは, 多くの交通ニアミス動画を含んでおり, 危険と危険要素予測の評価用アノテーションが付けられている.
+    .item2
+      .text
+        p
+          img(src=`${figpath}1804.02675_img1.png`,alt="1804.02675_img1.png")
+          img(src=`${figpath}1804.02675_img2.png`,alt="1804.02675_img2.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ベールモデルとしてDSA, LSTM, QRNN, loss関数としてEL, LEA, AdaLEAを用いて実験した.
+          |その結果, 危険予測では, mAPが6.6%上昇, ATTCが2.36sec速くなった.
+          |また, 危険要素予測では, mAPが4.3%上昇, ATTCが0.70sec速くなった.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.02675.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 20:03:48
+
+
+

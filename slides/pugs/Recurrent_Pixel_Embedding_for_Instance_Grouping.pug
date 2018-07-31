@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Recurrent_Pixel_Embedding_for_Instance_Grouping
+  .paper-abstract
+    .title Recurrent Pixel Embedding for Instance Grouping
+    .info
+      .authors Shu Kong, Charless Fowlkes
+      .conference CVPR2018
+    .slide_editor Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p Instance segmentationのような画素単位のグループ分け問題を行うEnd-to-Endで学習可能な枠組みを提案。同じグループの画素はcosine similarityが高くなるように、異なるグループはmargin以下の値になるように超球面上に回帰(Spherical Embedding Module)し、そこでRNNによるMean-shift clusteringを実行すること(Recurrent Grouping Module)で実現。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Recurrent_Pixel_Embedding_for_Instance_Grouping.PNG`,alt="Recurrent_Pixel_Embedding_for_Instance_Grouping.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 既存のregion proposalやbboxによる組み合わせたinstance segmentationの手法とは大きく異なり新しい。またこれをRNNでMean-shift clusteringを表現することで実現し、End-to-Endな学習を可能としている。加えてhyperparameterの設定に関する理論的分析も提供。instance segmentationやsemantic segmentationだけでなく、様々なpixel-levelのドメインタスクへ応用可能。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 手法もシンプルでかつ効果的で応用先も広い。Fig.11の結果からsemantic segmentationにおいてもinstanceの情報が効果的に利用できそうで試してみたい。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.08273") arxiv
+          li
+            a(href="https://www.ics.uci.edu/~skong2/SMMMSG.html") project_page
+          li
+            a(href="https://github.com/aimerykong/Recurrent-Pixel-Embedding-for-Instance-Grouping") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.11 07:49:04
+
+

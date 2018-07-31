@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Video_Person_Re-identification_with_Competitive_Snippet-similarity_Aggregation_and_Co-attentive_Snippet_Embedding
+  .paper-abstract
+    .title Video Person Re-identification with Competitive Snippet-similarity Aggregation and Co-attentive Snippet Embedding
+    .info
+      .authors Dapeng Chen, Hongsheng Li, Tong Xiao, Shuai Yi, Xiaogang Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 適切な長さの動画分割（Video Snippet; ビデオスニペット）とCo-Attention機構による人物再同定の研究である。動画からの人物再同定では長いフレーム長をそのまま入力するよりもスニペットに分割して、さらには分割動画間のCo-Attentionに着目することで特徴表現を学習する方が認識に有利であることを実証した。スニペット間で類似度が計算され、ランク付が行われる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180623SnippetSimilarityCoAttention.png`,alt="180623SnippetSimilarityCoAttention")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 動画スニペットごとに類似度を計算し、それぞれに対してCo-Attentionを求めて特徴量を学習する方法で複数のデータセットにてSoTA。iLIDS-VIDにてTOP1が85.4、TOP5が96.7（上位に正解が含まれているかどうかであり、TOP5は5人中1人が正解であればよい）であり強い手法が構築できた。PRID2011においてもそれぞれ93.0/99.3、Marsにおいても86.3/94.7である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 人物再同定は数年前までTOP5（〜TOP20）が高い精度であれば許される時代だったがTOP5で95+%（驚くべきは99%も出ているデータセットがあるということ）という数値である。中国の事情もあり、その解決のためにSenseTimeがその役を買っているというわけである。今後はさらなるデータ作成と社会実装の推進が進むと思われる。SenseTime/CUHKの連携ラボの枠組みも整った（CUHK-SenseTime Joint Lab.と著者リストにある）ことで、さらに研究が大規模に進められる。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Video_Person_Re-Identification_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.23 16:51:25
+
+

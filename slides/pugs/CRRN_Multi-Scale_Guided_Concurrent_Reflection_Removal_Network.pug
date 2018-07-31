@@ -1,0 +1,31 @@
++slide
+section#ID_CRRN_Multi-Scale_Guided_Concurrent_Reflection_Removal_Network
+  .paper-abstract
+    .title CRRN: Multi-Scale Guided Concurrent Reflection Removal Network
+    .info
+      .authors R.Wany, B. Shi, L.Duan, A. Tan andA.C.Kotx
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 画像内のガラスの反射は，CV分野にとって脅威となる．この問題を解決するためにConcurrent Reflection Removal Network(CRRN)を提案．人間の知覚に影響を考慮したロス関数を用いて、画像の外観情報とマルチスケールの勾配情報を統合し、多様な実世界のシーンで撮影された3250枚の反射画像を用いて学習したものである．公開されているデータセットを用いて実験したところSoTAを示した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}CRRN_Multi-Scale_Guided_Concurrent_Reflection_Removal_Network.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 反射を同時に除去するための勾配推定ネットワーク(GIN)と画像の外観情報推定ネットワーク(IiN)を並行したフレームワークとして構築
+          li Reflection Image Dataset(RID)と呼ばれる反射画像DB を構築し学習に使用
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1815.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 15:36:48

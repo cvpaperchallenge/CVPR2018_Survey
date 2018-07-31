@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_CSRNet_Dilated_Convolutional_Neural_Networks_for_Understanding_the_Highly_Congested_Scenes
+  .paper-abstract
+    .title CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes
+    .info
+      .authors Yuhong Li, Xiaofan Zhang, Deming Chen
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 混雑状況認識やカウンティング、密度推定のためのネットワークCongested Scene Recognition Network (CSRNet)を提案し、データドリブンで学習する。畳み込みによる特徴抽出とDilated Convにより広範領域から特徴を評価する（ここにおいてプーリング層を置き換えると記述され、純粋に畳み込みそうのみで構成されている）。図はDilated ConvとPoolingの有無によるヒートマップの比較。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180704CSRNet.png`,alt="180704CSRNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p データセットはShanghaiTech, UCF_CC_50, WorldEXPO'10, UCSDを用いて検証した。特にShanghaiTechデータセットではMean Absolute Error (MAE)が47.3%も下がった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3727.pdf") 論文
+          li
+            a(href="https://github.com/leeyeehoo/CSRNet") Project
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.4 08:54:53
+
+

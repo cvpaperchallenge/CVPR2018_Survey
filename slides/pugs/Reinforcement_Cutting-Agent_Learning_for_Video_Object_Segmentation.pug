@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_Reinforcement_Cutting-Agent_Learning_for_Video_Object_Segmentation
+  .paper-abstract
+    .title Reinforcement Cutting-Agent Learning for Video Object Segmentation
+    .info
+      .authors Junwei Han et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p Video Object Segmentation (VOS) を強化学習によって行う研究. Object Segmentation では主に物体の領域とそれらの(周辺との)関係性が重要であるという推量に基づいて, VOS をマルコフ過程として定式化し, Deep Q-Learning を適用した. 評価実験では, state-of-the-art とほぼ同等の結果を達成した. 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Reinforcement-Cutting-Agent-Learning-for-Video-Object-Segmentation.png`,alt="fukuhara-Reinforcement-Cutting-Agent-Learning-for-Video-Object-Segmentation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Video Object Segmentation (VOS) をマルコフ過程 (MDP) として定式化した 
+          li State は動画の現在のフレームの特徴量と過去 k（論文では k=4） フレーム分の action のヒストリーを使用
+          li Action は object searching (9次元) と context embedding (3次元) を使用
+          li Reward は ground truth のマスクと推定されたマスクの IoU の差で評価
+          li 強化学習は Deep Q-Learning (DQN) を使用
+          li DAVIS dataset と YouTube-Objects dataset を用いた評価実験では, state-of-the-art とほぼ同等の結果を達成した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/3342.html" target="blank") [論文] Reinforcement Cutting-Agent Learning for Video Object Segmentation
+          li 
+            a(href="https://davischallenge.org/" target="blank") [Dataset] DAVIS dataset
+          li
+            a(href="https://data.vision.ee.ethz.ch/cvl/youtube-objects/" target="blank") [Dataset] YouTube-Objects dataset
+          li Future work として同様の手法が　Semantic Segmentation, Object Localization, Saliency Estimation, 3D Shape Learning などに適用できる可能性を示唆
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 17:29:55
+
+

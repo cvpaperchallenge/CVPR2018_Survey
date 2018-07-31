@@ -1,0 +1,38 @@
++slide
+section#ID_Eliminating_Background-bias_for_Robust_Person_Re-identification
+  .paper-abstract
+    .title Eliminating Background-bias for Robust Person Re-identification
+    .info
+      .authors M. Tian, S. Yi, H. Li, S. Li, X. Zhang, J. Shi, J. Yan and X. Wang
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 人物再同定の話．
+          |人の領域で丁寧にバウンディングボックスを切ったとしても，やはり背景は映り込んでいて，背景バイアスは免れない．
+          |この事実を，以前作成した人領域をピクセルレベルでセグメンテーションして作ったデータセットで検証した．
+        p そして，背景バイアス問題を解決すべく，3つのパーツに分ける人パージングマップに基づき，人領域をガイドとしたプーリングを行うDNNを構成．
+        p また，人画像とランダム背景を合成するという，トレーニングデータのオーギュメンテーション手法も提案．
+          |背景画像は監視カメラ映像のフレームから100枚選び，対象の人画像と同じ大きさの背景画像をランダムにオンラインでクロップし，人画像とマージ．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Eliminating_Background-bias_for_Robust_Person_Re-identification.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 背景バイアスに関する調査と，それを低減できる人物再同定DNNの提案．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 人領域を自分たちで色塗りしたデータセットを作る力業ができるSensetime x CUHK．
+        p Action recognition without humanは引用してくれなかった．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1989.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1036.pdf") 同じデータセットによる別の論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.10 10:57:36

@@ -1,0 +1,44 @@
+﻿+slide
+section#ID_Look_at_Boundary_A_Boundary-Aware_Face_Alignment_Algorithm
+  .paper-abstract
+    .title Look at Boundary: A Boundary-Aware Face Alignment Algorithm
+    .info
+      .authors Author
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔の境界線を事前分布として使用することで、顔のランドマークを推定する手法を提案。
+          |既存手法でジゼ情報として使用されている顔のパーツは情報が離散的であり、
+          |顔に対するセマンティックセグメンテーションであるface parsingは鼻に対する精度が良くない。
+          |一方で顔の境界線は定義がはっきりしており、かつ顔の形状から推定することが可能。
+          |提案手法では顔の境界線をstacked hourglassをベースとして、オクルージョンに対して頑健になるようにmessage passing layer、
+          |推定精度の向上のためにadversarial netを導入している。推定された顔の境界線を元に、顔のランドマークを推定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Look_at_Boundary_A_Boundary-Aware_Face_Alignment_Algorithm.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 事前実験によって顔の境界線を用いたランドマーク推定がstate-of-the-artよりも優っていることを確認した上で手法を提案。
+          li 300W, COFW, AFLWなどのデータセットにおいてstate-of-the-arttと比較した結果、
+             |全ての場合において提案手法が優位となった。また境界線のGTを使用したランドマーク推定をOracleとして示しており、
+             |Oracleによる推定精度が最も高くなった。
+          li WIDER FaceデータセットをベースにしたWider Facial Landmarks in-the-wild(WFLW)データセットを構築しており、
+             |10000枚の画像に対して98点のランドマーク、オクルージョン、メイク、照明環境、ブラー、表情のアノテーションを持つ。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 事前実験やOracleによって精度向上の理由が明確になっていルため、手法の優位性がはっきりと伝わってくる。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1330.pdf") 論文
+          li
+            a(href="https://wywu.github.io/projects/LAB/LAB.html") Project page(Supplementary material, Demo, Code)
+    .slide_index #{getSlideIndex()}
+
+

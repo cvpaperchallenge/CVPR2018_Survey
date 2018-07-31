@@ -1,0 +1,42 @@
++slide
+section#ID_Depth-Based_3D_Hand_Pose_Estimate_From_Current_Achievements_to_Future_Goals
+  .paper-abstract
+    .title Depth-Based 3D Hand Pose Estimate From Current Achievements to Future Goals
+    .info
+      .authors Shanxin Yuan et al.
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 3D Hand Pose Estimationのサーベイ的論文。主に以下の2つの点に主眼を置いている。
+        ul
+          li デプス画像からの3D Hand Pose Estimationの現状を明らかにする
+          li 次に挑戦するべきである課題は何かを明らかにする
+        p Hands In the Million Challenge (HIM2017)のトップ10の最新手法に関して、3つのタスク（単一画像からの姿勢推定、3次元トラッキング、物体とインタラクション中の姿勢推定）において調査を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Depth-Based_3D_Hand_Pose_Estimation.png`,alt="")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p DNNによる手法が混濁する中で、業界を整理するサーベイ的論文が評価されている（？）。
+          |最終的に、3D Hand Pose Estimationの現状において以下の7点の洞察を得た。
+        ul
+          li 3DCNNを用いた3次元表現は入力のデプス情報の空間的構造を捉えることができ、良い精度を出した。
+          li 検出ベースの手法は回帰ベースの手法より良い精度を出した。しかし、回帰ベースの手法は明示的に空間的制約を加えることで良い精度を出すことができる。
+          li 遮蔽された関節を推定することはほとんどの手法にとってチャレンジングであるが、明示的な構造の制約や関節間の空間的関係性をモデリングすることで、遮蔽なしとありの差を大きく狭めることができる。
+          li 識別的手法はまだ見ぬ手の形に著しく脆弱であり、良い生成能力を持つ機構を組み合わせることで、今後良い方向に進みそう。
+          li 70~120度の見え角では、非常に良い精度を出す一方で、極端な見え角ではエラーが大きくなる。
+          li トラッキングでは、現在の識別的手法においては検出を姿勢推定の2つサブタスクに分けて問題を解いている。
+          li 単一画像からの姿勢推定は100万程度のデータセット上で学習すると良い精度を出すが、物体とのインタラクションには一般化できていない。今後の方針として、より良いセグメンテーション方法をデザインするか、物体とのインタラクションを含む大規模データセットで学習することが挙げられる。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0155.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.12 08:03:19

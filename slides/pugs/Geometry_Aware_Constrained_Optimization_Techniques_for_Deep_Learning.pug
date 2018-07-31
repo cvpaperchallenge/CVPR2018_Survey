@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Geometry_Aware_Constrained_Optimization_Techniques_for_Deep_Learning
+  .paper-abstract
+    .title Geometry Aware Constrained Optimization Techniques for Deep Learning
+    .info
+      .authors Soumava Kumar Roy, Zakaria Mhammedi, Mehrtash Harandi
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 勾配の最適化手法であるStochastic Gradient Descent（SGD）やRMSPropアルゴリズムをRiemannian Optimizationの設定にて一般化する手法を提案する。SGDはDNNでは一般的に用いられるが、勾配の最適化に大きな分散があり、一方でRMSPropやADAMがこの問題を解決するために提案されてきたが決定だとは言えなかった。本論文ではRiemannian Centroidsの計算や深層距離学習（Deep Metric Learning）を考慮して勾配最適化の不安定性に取り組む。詳細画像識別問題に取り組むことで提案手法の有効性を示した。右図は最適化のイメージ図であり、Riemannian多様体空間で勾配計算と誤差最適化を測ることで安定感のある最適化を実現。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618GeometryAwareConstrainedOptimization.png`,alt="180618GeometryAwareConstrainedOptimization")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 多様体空間で最適化を実現するcSGD-M/cRMSPropを提案、問題設定に対して拘束を強めてダイレクトに最適化ができる手法とした。機械学習の文脈において、PCA/DMLの拡張と位置付けられる手法を提案。同枠組みを詳細画像識別問題に適用したところ、Competitiveな結果を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 発想が数学の人、〜を＊＊の枠組みで最適化するというのは得意技？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Roy_Geometry_Aware_Constrained_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 22:31:00
+
+

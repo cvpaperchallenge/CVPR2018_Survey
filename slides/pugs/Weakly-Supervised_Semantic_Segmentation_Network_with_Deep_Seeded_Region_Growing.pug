@@ -1,0 +1,35 @@
++slide
+section#ID_Weakly-Supervised_Semantic_Segmentation_Network_with_Deep_Seeded_Region_Growing
+  .paper-abstract
+    .title Weakly-Supervised Semantic Segmentation Network with Deep Seeded Region Growing
+    .info
+      .authors Zilong Huang, Xinggang Wang, Jiasi Wang, Wenyu Liu, Jingdong Wang
+      .conference CVPR 2018
+      .paper_id 2541
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 画像に対するimage-levelのラベルのみを用いてセマンティックセグメンテーションを行う際に、ラベルを貼る領域をイテレイティブに増やす手法を提案。既存手法ではシードの初期値から一気にラベルを貼っていくが、提案手法では自信が高い領域にのみラベルを貼り、これを繰り返すことでセマンティックセグメンテーションを行う。ラベル(背景含む)の初期値としてclassificationから得られるヒートマップを用いてconfidenceが高いピクセルを使用する。DNNを用いてラベルごとのヒートマップを作成し、一つ前のイテレーションで推定したラベル領域と照らし合わせることでラベルの更新を行う。ロス関数は各ピクセルが各クラスに所属する確率と、物体境界の推定誤差からなる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Weakly-Supervised_Semantic_Segmentation_Network_with_Deep_Seeded_Region_Growing.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li PASCAL VOC 2012, COCOで検証しそれぞれでmIOUが61.4%(既存手法+2.8%)、 26.0%(既存手法+3.6%)となり、弱教師学習においてSoTA。
+          li セグメンテーションを行う際の閾値の変化による結果への影響や、ablation studyを行なっている。VGG16とResNet101で実験。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p li ablation studyより、tableやsofaなどは提案手法によって結果が悪化しているのはなぜだろうか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2541.pdf") 論文
+          li
+            a(href="https://github.com/speedinghzl/DSRG") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:44:00

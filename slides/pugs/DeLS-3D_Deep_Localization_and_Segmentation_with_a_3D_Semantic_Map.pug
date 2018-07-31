@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_DeLS-3D_Deep_Localization_and_Segmentation_with_a_3D_Semantic_Map
+  .paper-abstract
+    .title DeLS-3D: Deep Localization and Segmentation with a 3D Semantic Map
+    .info
+      .authors Peng Wang, Ruigang Yang, Binbin Cao, Wei Xu, Yuanqing Lin
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li GPS IMU，RGBビデオカメラ及び3Dセマンティックマップからカメラ姿勢・自己位置推定及びscene parsingを同時に行えるフレームワークの提案．
+          li 提案フレームワークの概要は:①GPS/IMU及びrenderredセマンティックマップから初期なカメラ姿勢を推定する．② renderredセマンティックマップとRGB画像をpose推定ネットワークに入力し，精密なカメラ姿勢を推定する．またRNNにより更に姿勢推定を精密化する．③推定した精密なカメラ姿勢で新たなセマンティックマップをrenderし， renderredマップとRGB画像を更にsegment CNNによりピクセルレベル精度のセマンティックマップを推定する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}DeLS-3D.png`,alt="DeLS-3D")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li GPS IMU，RGBカメラ，3Ｄセマンティックマップのマルチセンサーの情報をDNNにより有効的かつロバストでに融合できる．
+          li カメラ姿勢推定とScene parsingの2つのタスクを同時に行うことにより，各々で行える場合より良い精度を得られることを実験に通して示した．
+          li gtカメラ姿勢，denseなセマンティックラベル付きのポイントクラウド及びピクセルレベル精度のビデオカメラ画像の室外運転用データセットを提案した(リアルデータ)．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 入力に3Dセマンティックマップがあるので，ある意味ではscene parsingに対して提案手法は入力画像を手掛かりにレンダリングされたセマンティックマップをマイナー修正だけ？
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0936.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.6 16:26:27
