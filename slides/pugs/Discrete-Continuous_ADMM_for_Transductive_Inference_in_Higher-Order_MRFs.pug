@@ -10,7 +10,7 @@ section#ID_Discrete-Continuous_ADMM_for_Transductive_Inference_in_Higher-Order_M
     .item1
       .text
         h1 概要
-        p 高次のMRFsによるトランスダクティブ推論のための新しいアルゴリズムの提案．MRFsでは単項式のエネルギーは可変分類器によってパラメータ化され，連続的な分類子のパラメータと離散的な変数の共同最適化問題として提起される．問題解決のために，凸緩和などの従来手法と対照的にADMMでの効率的な最適化手法として関連目的関数を離散的かつ連続的な問題に切り離すことを提案．離散変数の完全性を保ち，臨界点への大域収束性を保証している.
+        p 高次のMRF(Markov Random Field)によるトランスダクティブ推論のための新しいアルゴリズムの提案．MRFでは単項式のエネルギーは可変分類器によってパラメータ化され，連続的な分類子のパラメータと離散的な変数の共同最適化問題として提起される．問題解決のために，凸緩和などの従来手法と対照的にADMM(Alternating Direction Method of Multipliers)での効率的な最適化手法として関連目的関数を離散的かつ連続的な問題に切り離すことを提案．離散変数の完全性を保ち，臨界点への大域収束性を保証している.
     .item2
       .text
         p
@@ -19,7 +19,7 @@ section#ID_Discrete-Continuous_ADMM_for_Transductive_Inference_in_Higher-Order_M
       .text
         h1 新規性・結果・なぜ通ったか？
         p ・　MAPの推論問題の準最適解を得ることができ，計算上より困難なMRFを考慮することが可能．
-          |・　k-meansと対照的に深い特徴と統合される
+          |・　k-meansと対照的に深層特徴と統合される
           |・　従来手法より一貫した結果となり，ランタイム，メモリ消費について効率的．
     .item4
       .text
