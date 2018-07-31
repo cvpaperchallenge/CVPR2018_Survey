@@ -1,0 +1,30 @@
++slide
+section#ID_Deeply_Learned_Filter_Response_Functions_for_Hyperspectral_Reconstruction
+  .paper-abstract
+    .title Deeply Learned Filter Response Functions for Hyperspectral Reconstruction
+    .info
+      .authors Shijie Nie，Lin Gu，Yinqiang Zheng，Antony Lam，Nobutaka Ono，Imari Sato
+      .conference in CVPR2018
+    .slide_editor Kazuki Tsubura
+
+    .item1
+      .text
+        h1 概要
+        p RGBイメージングからのハイパースペクトル再構成は，疎なコーディングと深い学習を経て著しい進歩を遂げているが，既存のRGBカメラが人間の三色知覚を模倣するように調整されているため，それらのスペクトル応答はハイパースペクトル再構成に必ずしも最適ではない．この論文では，RGBスペクトル応答を使用するのではなく，（ハードウェアで実施される）最適化されたカメラスペクトル応答関数と，エンドツーエンドネットワークを使用するスペクトル再構成のためのマッピングとを同時に学習する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deeply_Learned_Filter_Response_Functions_for_Hyperspectral_Reconstruction.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・差分
+        p 私たちのコアアイデアは，カメラスペクトルフィルタが畳み込み層のように効果的に作用するので，標準的なニューラルネットワークを訓練することによって，それらの応答関数を最適化することができる．我々は，空間モザイク処理を用いない3チップ構成と，Bayer形式の2×2フィルタアレイを用いた単一チップ構成の2種類の設計されたフィルタを提案する．数値シミュレーションは，既存のRGBカメラと比較して深く学習されたスペクトル応答の利点を検証する．
+    .item4
+      .text
+        h1 結果
+        p 深い学習手法を用いて非負の無限大空間におけるフィルタ応答関数を学習する方法を示した．特殊な畳み込みレイヤーをU-netベースの再構成ネットワークに追加し，3つの独立したフィルタとBayerスタイルの2×2フィルタアレイの形で，標準RGBレスポンスより優れた応答関数を確認できた．実際のマルチスペクトルカメラを構築するために，CCDカメラの応答を設計プロセスに組み込んだ．2つのフィルタをうまく設計/実装し，スナップショットハイパースペクトル画像のためのデータに基づいたバイスペクトルカメラを構築しました．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Nie_Deeply_Learned_Filter_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 19:43:43
