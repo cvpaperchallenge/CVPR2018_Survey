@@ -1,0 +1,30 @@
++slide
+section#ID_Single_Image_Dehazing_via_Conditional_Generative_Adversarial_Network
+  .paper-abstract
+    .title Single Image Dehazing via Conditional Generative Adversarial Network
+    .info
+      .authors Runde Li, Jinshan Pan, Zechao Li and Jinhui Tang
+      .conference CVPR2018
+    .slide_editor Kenichiro Wani
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では，かすんでいる画像から鮮明な画像を復元する手法を提案する。既存の手法では伝送マップおよび大気光を推定するために，例えば暗いチャネル，色の視差，最大のコントラストといった手作りの特徴を使用することが多い。本稿ではこの問題を条件付き生成的対立ネットワーク（cGAN）に基づいて解決する。ここで，鮮明な画像は，end-to-endの訓練可能なニューラルネットワークによって推定される。基本的なcGANの生成ネットワークとは異なり，本稿ではより良​​い結果を生み出すことができるように，エンコーダとデコーダのアーキテクチャを提案する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Single_Image_Dehazing_via_Conditional_Generative_Adversarial_Network.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・条件付きGANを用いることにより，かすんでいる画像から鮮明な画像の生成を実現している。
+          |・鮮明な画像を生成するためにVGGフィーチャとL1正規化勾配を事前に導入することによって，基本のcGANフォーメーションをさらに修正している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Li_Single_Image_Dehazing_CVPR_2018_paper.html") link
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 21:17:04
