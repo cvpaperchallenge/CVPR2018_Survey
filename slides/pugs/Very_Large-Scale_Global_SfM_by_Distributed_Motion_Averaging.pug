@@ -1,0 +1,30 @@
++slide
+section#ID_Very_Large-Scale_Global_SfM_by_Distributed_Motion_Averaging
+  .paper-abstract
+    .title Very Large-Scale Global SfM by Distributed Motion Averaging
+    .info
+      .authors Siyu Zhu, Runze Zhang, Lei Zhou, Tianwei Shen, Tian Fang, Ping Tan, Long Quan
+      .conference CVPR 2018
+    .slide_editor Goshi Sasaki
+
+    .item1
+      .text
+        h1 概要
+        p 入力画像をいくつかのグループに分けて、何百万枚のスケールでglobal SfMを行った。最初に入力画像を相関に基づいて複数のパーティションに分割する。次に、パーティションごとに回転や並進といった変換を求めてから全体の最適化を図り、パーティションの境界を明確化したり、1つの座標系ですべてのカメラを表せるようにした。最後に収束するまで部分最適と全体最適をを繰り返す。
+    .item2
+      .text
+        p
+          img(src=`${figpath}../figs/Very_Large-Scale_Global_SfM.png`,alt="architectur")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法より多い数百万の入力画像でglobal SfMを行えるようにした
+          |入力画像が増加した場合に全体最適化で生じるメモリーの飽和を部分最適化を用いることで回避できるようにした
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2018.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 00:15:36
