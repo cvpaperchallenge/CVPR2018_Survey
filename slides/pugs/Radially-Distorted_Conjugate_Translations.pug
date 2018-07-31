@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_Radially-Distorted_Conjugate_Translations
+  .paper-abstract
+    .title Radially-Distorted Conjugate Translations
+    .info
+      .authors James Pritts，Zuzana Kukelova，Viktor Larsson，Ondˇrej Chum
+      .conference CVPR
+    .slide_editor Kazuki Tsubura
+
+    .item1
+      .text
+        h1 概要
+        p 適度に歪んだレンズの画像であっても,，ピンホールカメラモデルを使用した平面補正は不正確または無効である．提案するソルバーは，カメラモデルにレンズ歪みを組み込み，精密な整流をワイドアングル画像に拡張する．これは現在コンシューマカメラにおいて一般的である．ソルバーは，放射状のレンズ歪みのための分割モデルと統合された，撮像されたシーン平面の共役変換によって誘発される制約から導かれる．理想的な彩度を持つ隠れ変数のトリックを使用して制約を再定式化し，Gröbner法で生成されたソルバーが安定し，小さくて速くなるようにする．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Radially-Distorted_Conjugate_Translations.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・差分
+        p 整流およびレンズ歪みは，共役的に翻訳されたアフィン - 共変動特徴または2つの独立して翻訳された類似共変動特徴のいずれかから回復される．提案されたソルバーはRANSACベースの推定器で使用され，少数の反復後に正確な整流が行われる．提案されたソルバーは最先端技術に対して評価され，ノイズの多い測定で大幅に改善された整流を表現する．
+    .item4
+      .text
+        h1 結果
+        p 合成実験では，最先端技術と比較して，提案されたソルバーの整流精度およびレンズ歪み推定の測定に関して，良好な安定性およびノイズに対する優れた堅牢性を実証した．しかしながら，分割モデルによって歪められた共役変換から生じる多項式制約式は，安定したソルバーを生成するために隠れ変数トリックで変換される必要がある，定性的な実像実験では，高度に歪んだ広角レンズのための高品質の整流を表現した．
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.11339.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 10:53:26
