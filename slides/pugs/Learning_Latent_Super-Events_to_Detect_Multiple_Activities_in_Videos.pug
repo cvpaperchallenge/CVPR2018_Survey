@@ -1,0 +1,36 @@
++slide
+section#ID_Learning_Latent_Super-Events_to_Detect_Multiple_Activities_in_Videos
+  .paper-abstract
+    .title Learning Latent Super-Events to Detect Multiple Activities in Videos
+    .info
+      .authors AJ Piergivovanni and Michael S. Ryoo
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 動画中に映る関連した一連のeventの集まりであるsuper-eventsという概念を導入し、Super-eventsに含まれる検出する方法を提案した。
+          |例えば、バスケの試合においてシュートを打つという行動とブロックするという行動は連続して起こる行動であり、関連しあっている。
+          |このような一連の行動(シュートを打つ、ブロックする）をsuper-eventsと呼ぶ。
+          |始めに、動画の各フレーム(or segment)からCNNにより特徴抽出を行う。
+          |得られたCNN特徴から、context情報を考慮するためのTemporal Structure Filterというものを導入することでsuper-eventsを表す特徴を得る。
+          |最後に、各フレームのCNN特徴とsuper-events特徴を用いてフレームごとのイベントを検出する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Latent_Super-Events_to_Detect_Multiple_Activities_in_Videos.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p MultiTHUMOS、Charades、AVAの3つの動画データセットにより実験を行った。
+          |Super-eventsを抽出することで、ベースラインでは検出されないイベントが検出することができるようになった。
+          |I3Dにsuper-eventsを導入したものが最もmAPが高いという結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3795.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 14:52:23

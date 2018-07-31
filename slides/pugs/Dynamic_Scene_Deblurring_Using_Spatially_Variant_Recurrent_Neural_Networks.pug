@@ -1,0 +1,38 @@
++slide
+section#ID_Dynamic_Scene_Deblurring_Using_Spatially_Variant_Recurrent_Neural_Networks
+  .paper-abstract
+    .title Dynamic Scene Deblurring Using Spatially Variant Recurrent Neural Networks
+    .info
+      .authors Jiawei Zhang, Jinshan Pan, Jimmy Ren, Yibing Song, Linchao Ban, Rynson W.H. Lau and Ming-Hsuan Yang
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p この研究で行われたことは以下に示す3つである．
+        ol
+          li ぶれ除去問題は，ディープニューラルネットワークを適応することによりかなり進展した．しかし既存のモデルは大規模で計算コストが高い．そこでこの研究では，新しい空間的に可変なニューラルネットワークを提案する．
+          li ぶれ除去の過程が無限インパルス応答モデルとして記述できることを示す．さらにぶれ除去の過程と提案ネットワークの関係を分析する．
+          li 提案ネットワークを定量的，定性的に評価する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Dynamic_Scene_Deblurring_Using_Spatially_Variant_Recurrent_Neural_Networks.png`,alt="Dynamic_Scene_Deblurring_Using_Spatially_Variant_Recurrent_Neural_Networks.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p GOPRO datasetを用い提案ネットワークを定量的（SSIM, PSNR）に評価した．また，定性的評価には
+          a(href="http://cg.postech.ac.kr/papers/14_Video-Deblurring-for-Hand-held-Cameras-Using-Patch-based-Synthesis.pdf") 参考文献
+          |のreal blurry imageを用いた．
+          |その結果，提案手法がSoTAアルゴリズムと比べ，精度，スピードとモデルサイズにおいて優れていることがわかった．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://faculty.ucmerced.edu/mhyang/papers/cvpr2018_dyanmic_scene_deblurring.pdf") 論文URL
+          li
+            a(href="https://github.com/SeungjunNah/DeepDeblur_release") GOPRO detaset
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 00:35:45

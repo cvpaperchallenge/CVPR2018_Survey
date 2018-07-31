@@ -1,0 +1,40 @@
++slide
+section#ID_Graph-Cut_RANSAC
+  .paper-abstract
+    .title Graph-Cut RANSAC
+    .info
+      .authors D. Barath and J. Matas
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p RANSACのバリアントに，
+          |一番よく見えるモデルが見つかった時に局所最適化でリファインするLO-RANSACがあるが，
+          |この局所最適化の部分を2クラス分類の雄であるGraph-Cutに代替した．
+          |従来法における，ただ最小二乗で局所最適化するより局所最適化の評価回数がかなり少なくなる（理論的にはlog(サンプル＋検証の数)）ようになっており，その結果，CPUでミリ秒単位で動く高速性がある．
+          |実際には，空間的コヒーレンスが効いて理論値より評価回数が更に少ない模様．
+        p ユーザ定義パラメータは少なく，連結とみなす距離r，局所最適化適用しきい値ε_confを決めればよい．
+          |これらは学習可能である．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Graph-Cut_RANSAC.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 特徴として，１．インライヤ・アウトライヤが空間的コヒーレント，２．パラメータは直感的かつ学習可能，４．計算効率がよい，３．収束性がよい．
+        p タイムリミットを置いて比較したとき，ノイジーなデータにおいての正解数が他のLO-RANSAC系手法より優れていることを示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p シンプルで強力な手法に感じたので熟読したが，重複表現が多かったり
+          |誤植があったりして読解性が低く感じた．900本強あるCVPR論文の中，
+          |時間を浪費するのでポスターといえど論文としてのクオリティは最低限維持してほしいと
+          |完全読破チャレンジャーとしては思う．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0362.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 09:14:45

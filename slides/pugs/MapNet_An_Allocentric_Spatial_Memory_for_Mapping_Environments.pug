@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_MapNet_An_Allocentric_Spatial_Memory_for_Mapping_Environments
+  .paper-abstract
+    .title MapNet: An Allocentric Spatial Memory for Mapping Environments
+    .info
+      .authors Joao Henriques, Andrea Vedaldi
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li SLAM, mapping, agent navigationなどに用いられる新たなallocentricな(egocentricではない・観測視点に頼らない)3DスペースのDNN representation及びonlineで行うmapping-localizationネットワークの提案．
+          li 提案手法がシーンmapを2.5Dに表示し，地面に対し垂直の軸の情報をdense 2D ground表示の特徴ベクトルにエンコーディングする．このような表示により，より効率よく地面に垂直する方向に分布しやすいあらゆる室内・室外シーンを表示できる．
+          li 提案手法が2.5D spatial memoryをベースとしていて，移動カメラで撮影された画像に対し情報抽出を行い，更にground に射影し，動的にspatial memoryを更新する．
+          li 提案手法のコアがallocentric spatial memory. RGB-D画像から抽出した特徴tensorをallocentric spatial memoryに入力し，memoryが更新され，outputとしてlocalizationが得られる．localization/registrationがこのメモリースペースのdual convolution/deconvolution pairにformulateされる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}MapNet.png`,alt="MapNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Onlineで行える高精度mapping&localization. Egomotionと独立したallocentricマップ表示の提案．
+          li 従来の複雑なmappingアルゴリズムより簡潔なrepresentationで良い精度・ロバスト性を得られた．また，リアル・CGの2種類のデータセットでbenchmark手法より良い精度を達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 3Dシーンをgroundに射影し， 3Dシーンを2.5Dに表示する手法がある程度優位と感じた．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3966.pdf") 論文
+          li
+            p
+              a(href="http://www.robots.ox.ac.uk/~joao/mapnet/") プロジェクト
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 14:43:31

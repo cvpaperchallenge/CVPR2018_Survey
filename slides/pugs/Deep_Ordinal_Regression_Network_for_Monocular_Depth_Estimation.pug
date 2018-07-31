@@ -1,0 +1,32 @@
++slide
+section#ID_Deep_Ordinal_Regression_Network_for_Monocular_Depth_Estimation
+  .paper-abstract
+    .title Deep Ordinal Regression Network for Monocular Depth Estimation
+    .info
+      .authors Huan Fu, Mingming Gong, Chaohui Wang, Kayhan Batmanghelich and Dacheng Tao
+      .conference CVPR2018
+      .paper_id 231
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p DCNNを用いてdepth画像を推定するとき，depthを離散化して順序回帰問題として解くdeep ordinal regression network（DORN）を提案．Depthの離散化にはspacing-increasing discretization（SID）を導入した．SIDを用いてログスケールで離散化することで，遠い領域のdepth画像を粗く，手前の領域のdepth画像を細かく離散化してロスの減少に貢献する．ネットワークの構成は高解像度な特徴抽出部，マルチスケール特徴学習器（ASPP），フル画像エンコーダおよび順序回帰optimizerからなる．計算コストを削減するために，skip connectionではなくシンプルな構成を採用した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180708_DORN1.jpg`,alt="20180708_DORN1.jpg")
+          img(src=`${figpath}20180708_DORN2.jpg`,alt="20180708_DORN2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p DCNNを用いた高解像度なdepth画像推定は，通常skip connectionや複数のdeconv層が必要だったが，この問題を解決または低減した．KITTI，Make3D，NYU Depth v2などのベンチマークで他の手法を大きく上回りSOTAを達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 単純なログスケールでの離散化だけでなく，depth値の出現頻度を考慮した離散化を行えばより高精度化できそう．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3454.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.8 07:43:29

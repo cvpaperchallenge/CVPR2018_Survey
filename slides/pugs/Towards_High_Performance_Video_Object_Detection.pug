@@ -1,0 +1,34 @@
++slide
+section#ID_Towards_High_Performance_Video_Object_Detection
+  .paper-abstract
+    .title Towards High Performance Video Object Detection
+    .info
+      .authors Xizhou Zhu, Jifeng Dai, Lu Yuan, Yichen Wei
+      .conference CVPR 2018
+      .paper_id 2494
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 既存手法のSparse Feature Propagation、 Dense Feature Aggregationをアップデートした動画に対する物体検出手法を提案。提案手法は以下の3つの要素からなる。1) recursively aggregate feature for key frames：隣合うキーフレームごとに特徴量を抽出する。隣合うキーフレームではフレーム内に大きな変化は少ないため効率的に特徴量を抽出することができる。2)partially update feature for non-key frames：キーフレーム出ないフレームに対して、キーフレームと異なる部分のみに対して特徴量を抽出する。3)temporally-adaptive key frame scheduling：ここまでの処理ではキーフレームに主に学習してしまっているため、過学習を防ぐためにトレーニング動画全体で特徴量抽出器を調整する。なおここでのキーフレームは10フレームごとのフレームを指す。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Towards_High_Performance_Video_Object_Detection.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ImageNet VIDに対して77.8% mAP score と 15.22FPSとなり、SoTAを獲得。
+          li ablation studyにより、手法のハイパーパラメタに寄らず既存手法より良い結果となっていることを示している。
+          li 学習にはResNet101を使用している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li キーフレームを取得する間隔が精度、FPSにどの程度影響するのかが気になった。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2494.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 01:10:37

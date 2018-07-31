@@ -1,0 +1,30 @@
++slide
+section#ID_Weakly_Supervised_Facial_Action_Unit_Recognition_Through_Adversarial_Training
+  .paper-abstract
+    .title Weakly Supervised Facial Action Unit Recognition Through Adversarial Training
+    .info
+      .authors Guozhu Peng, Shangfei Wang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 顔表情の基本構成であるアクションユニット（AU; Action Unit）を弱教師により敵対的学習する論文である。最初に擬似ラベルによりAUを推定し、敵対的学習の枠組みにより高精度にAUを認識できるようにしていく。敵対的学習はAUの認識を行うRと、AUラベルかどうかを見分けるDから構成される（つまり認識した擬似ラベルが本物のラベルかどうか見間違うように学習を進めていく）。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180709WeaklySupervisedFacialActionUnit.png`,alt="180709WeaklySupervisedFacialActionUnit")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ラベルづけが困難なタスクである顔表情のアクションユニットに対して効果的なアルゴリズムを提案し、弱教師付き学習ができるようにした。GANの枠組みを改良し、擬似ラベルを正解として十分にするよう学習できたことが大きな貢献である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 擬似ラベルでも使用可能なレベルに持っていく学習はSelf-Supervised Learningでも使われているし、最初は粗いラベルでも徐々に意味のある教師になっていく様子が確認できる。アイディアは世界で同時多発的に思いついて実装が行われるので、思いついたらすぐにやらないといけない。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Peng_Weakly_Supervised_Facial_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 12:40:17

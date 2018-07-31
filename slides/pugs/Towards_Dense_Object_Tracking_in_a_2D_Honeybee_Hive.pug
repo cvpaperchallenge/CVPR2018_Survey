@@ -1,0 +1,33 @@
++slide
+section#ID_Towards_Dense_Object_Tracking_in_a_2D_Honeybee_Hive
+  .paper-abstract
+    .title Towards Dense Object Tracking in a 2D Honeybee Hive
+    .info
+      .authors Katarzyna Bozek, Laetitia Hebert, Alexander S. Mikheyev, Greg J. Stephens
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 密集した物体を追跡するタスクを行うため、蜂の巣を撮影し、映像中の蜂についてそれぞれの位置と方向がラベル付けされたデータセットを構築したのち、CNNで追跡するタスクを行った論文。実験の結果、人間と同等の精度で密集した蜂を追跡することに成功した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Towards_Dense_Object_Tracking_in_a_2D_Honeybee_Hive.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p セグメンテーションを行うU-Netの構造と類似しているが、ネットワークサイズを94%削減したネットワークに対して、物体の同定と向いている方向に関する損失関数を設計した。向いている方向の精度を向上させるため、再帰的なフレームワークを導入することで人間と同等の精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Bozek_Towards_Dense_Object_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3583-supp.zip") Supplemental Material (zip)
+          li
+            a(href="https://groups.oist.jp/bptu/honeybee-tracking-dataset") データセット
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 15:23:37

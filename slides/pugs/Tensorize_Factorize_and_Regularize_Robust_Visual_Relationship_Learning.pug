@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Tensorize_Factorize_and_Regularize_Robust_Visual_Relationship_Learning
+  .paper-abstract
+    .title Tensorize, Factorize and Regularize: Robust Visual Relationship Learning
+    .info
+      .authors SEONG JAE HWANG, Zirui Tao , Vikas Singh, Hyunwoo Kim, Sathya Ravi, Maxwell Collins
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Visual relationship検出タスクの新たなend-to-endパイプラインを提案した．提案手法が学習データからtensorial representationを探索し，またそれからrelational priorを求める． relational priorにより有効的にrelationship検出学習のpriorとして用いられる．
+          li 従来のVisual relationship用学習データセットのrelationshipがスパースで，学習データから潜在的な関係を学習するのが困難である．このようなスパースな学習relationshipから有効的にrelational priorを導く非学習型の手法(numerical線形代数をベースとした手法)を提案した．
+          li また，提案のVisual relationship検出パイプラインは①入力がぞうからバウンディングボクス，関係などを検出②提案の学習済みrelational priorを利用し，scene graph learningを用いた手法を用いてオブジェクト及び関係を予測する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Tensorize_Factorize_Regularize-VisualRelationshipLearning.png`,alt="Tensorize_Factorize_Regularize-VisualRelationshipLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Relationshipsがスパースな学習データセットからrelational priorを有効的に求める手法を提案した．
+          li 提案のrelational priorを用いたらVisual GenomeデータセットのScene graph予測タスクでSoTAなパフォーマンスを得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li スパースな関係（1%,2%以下）を有効的にrepresentできる代数ベースな手法の提案．詳細は良く理解できていなかった．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1219.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 12:00:29

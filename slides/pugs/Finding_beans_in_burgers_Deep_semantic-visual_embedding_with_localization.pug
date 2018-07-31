@@ -1,0 +1,36 @@
++slide
+section#ID_Finding_beans_in_burgers_Deep_semantic-visual_embedding_with_localization
+  .paper-abstract
+    .title Finding beans in burgers: Deep semantic-visual embedding with localization
+    .info
+      .authors Martin Engilberge, Louis Chevallier, Patrick Pérez, Matthieu Cord
+      .conference CVPR2018, arXive:1804.01720
+      .paper_id 522
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p マルチモーダルに任意の領域を高精度にローカライズする研究．
+          |この研究では画像 & テキストを対象としており，右図のように入力されたテキストに適合した領域をヒートマップで推定している．
+          |画像特徴とテキスト特徴を同一空間に落とし込んでネットワークを学習する．
+          |そして，認識時にテキストの特徴ベクトルと画像の特徴マップを使ってヒートマップを出力する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}522_overview.png`,alt="522_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 方法としては，画像と単語からResNetとRNNを用いて特徴マップ / 特徴ベクトルを抽出し，同一特徴空間にembeddingさせる．
+          |学習では，画像とテキストの特徴からTriplet Ranking Lossを用いて学習させる．
+          |ヒートマップは，画像の特徴マップと文章の特徴ベクトルの掛け合わせから求めることができる．
+          |このローカライゼーションは，非常に高い性能を達成している．また，Zero-shot Learningにも応用できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.01720") 論文リンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.20 19:39:22

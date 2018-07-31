@@ -1,0 +1,30 @@
++slide
+section#ID_Robust_Classification_With_Convolutional_Prototype_Learning
+  .paper-abstract
+    .title Robust Classification With Convolutional Prototype Learning
+    .info
+      .authors Hong-Ming Yang, Xu-Yao Zhang, Fei Yin, Cheng-Lin Liu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p CNNによりロバスト性を与えるための学習手法Convolutional Prototype Learning（CPL）を提案する。識別器が騙されるということが少なくなり、識別問題に対して有効である。複数カテゴリに対して条件を与えること、PrototypeLoss（PL）による正則化を与えることでクラス内のコンパクト性を高めた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730ConvolutionalPrototypeLearning.png`,alt="180730ConvolutionalPrototypeLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 識別のロバスト性を高めるCPLを提案した。CPLではカテゴリを識別するだけでなく、アウトライア除去と新しいカテゴリを追加する機構が備わっている。MNIST/CIFARにて分離性の高い特徴を生成することができた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 自動カテゴリ追加、もっとできるようになって欲しい！
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_Robust_Classification_With_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 09:58:59

@@ -1,0 +1,39 @@
+﻿+slide
+section#ID_Texture_Mapping_for_3D_Reconstruction_with_RGB-D_Sensor
+  .paper-abstract
+    .title Texture Mapping for 3D Reconstruction with RGB-D Sensor
+    .info
+      .authors Yanping Fu, Qingan Yan, Long Yang, Jie Liao, Chunxia Xiao
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li RGB-Dセンサーから収集した画像でリコンストラクションした非剛体の3Dモデルのテクスチャーマッピング手法を提案した．提案手法の入力がRGB-Dビデオ序列，出力はhigh qualityテクスチャー付きのリコンストラクションした3Dモデル．
+          li 幾何errors，デプスセンサーの精度などの原因でRGB-Dセンサーにより得られる3Dモデルのテクスチャーの精度が良くないことがある．この問題を解決するために，著者達がglobal-to-localな最適化手法を提案した(①global最適化でテクスチャーの姿勢を修正，②local最適化でtexture boundariesをリファイン)．
+          li 提案手法の流れは：①preprocessing:RGB-Dセンサーにより得られたDフレームからmeshモデルを作成し，RGBフレームからtexture candidates抽出する．②従来手法より，meshのブロックに対し，最適なtextureを選択する．③Global optimization:ブロック間のカラー・幾何一致性に基づきtextureの姿勢を最適化．④Local optimization:隣接するブロック間のテクスチャー連結部のseamless性によりテクスチャーのboundariesを最適化．
+    .item2
+      .text
+        p
+          img(src=`${figpath}TextureMapping-3DReconstruction.png`,alt="TextureMapping-3DReconstruction")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Kinect V1センサーによりtoy,book,hat,keyboardなどの物体で検証した結果，従来の2種類の手法より良い定性的テクスチャーマッピング結果を得られた．また，処理時間が1桁速い．
+          li 従来のテクスチャーマッピングのblurring artifacts,面のバウンドリーのseam inconsistencyを改善できた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 提案手法は複雑なPre-processingが必要で，ほかの分野の人が使いにくい気がする．
+          li
+            p RGB-Dセンサーの3Dモデルのテクスチャーマッピングを高精度でできるEnd-to-Endな手法が期待している．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3350.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 20:35:29

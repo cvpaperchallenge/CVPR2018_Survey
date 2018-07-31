@@ -1,0 +1,35 @@
++slide
+section#ID_Zero-Shot_Visual_Recognition_using_Semantics-Preserving_Adversarial_Embedding_Networks
+  .paper-abstract
+    .title Zero-Shot Visual Recognition using Semantics-Preserving Adversarial Embedding Networks
+    .info
+      .authors Long Chen, Hanwang Zhang Jun Xiao, Wei Liu, Shih-Fu Chang
+      .conference CVPR 2018
+      .paper_id 2517
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p テスト時にトレーニングでは扱わなかったクラスのインスタンスを扱うzero shot learning(ZSL)において問題視されていたsemantic lossを解決するモデルSemantics-Preserving Adversarial Embedding Network (SP-AEN)を提案。semantic lossとはトレーニングで使用されたデータであるseen classesとテストで初めて扱うデータであるunseen classesにおける分布の違いから、トレーニングされたモデルがテスト時にうまく機能しない問題である。これに対して提案手法ではZSLでそれぞれ独立に提案されていた画像のリコンストラクションを行うencoder E, decoder Dとラベルの識別を行うclassifier C、EとCから得られる特徴量を識別するDを組み合わせたモデルを提案。EとCを用いることでリコンストラクションとラベル識別を独立に行い、かつDをGANベースに学習することで、Cはインスタンスごとの学習に重きを置くEの効力を得ることができるモデルとなっている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Zero-Shot_Visual_Recognition_using_Semantics-Preserving_Adversarial_Embedding_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 多くの設定でSoTAであり、特にseenクラスとunseenクラスに対する識別精度の平均値的な意味をもつharmonic meanは全てのデータセットでSoTAとなった。
+          li リコンストラクションの画像が既存手法に比べて鮮明。
+          li テストの際にはseen classとunseen classのアトリビュートのコサイン類似度を用いて識別精度を検証している。CUB, AWA, SUN and aPY, SP-AENで検証。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 各インスタンスに注目するencoderと、同じラベルを持ったインスタンスには似たような特徴量を与えるclassifierのいいところ取りをdiscriminatorによって実現。
+          li リコンストラクションの結果が、鳥だけやけに綺麗なのはなぜ？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2517.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 01:20:06

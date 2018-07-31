@@ -1,0 +1,32 @@
++slide
+section#ID_FeaStNet_Feature-Steered_Graph_Convolutions_for_3D_Shape_Analysis
+  .paper-abstract
+    .title FeaStNet: Feature-Steered Graph Convolutions for 3D Shape Analysis
+    .info
+      .authors Nitika Verma, Edmond Boyer, Jakob Verbeek
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 固定サイズのグリッドでは扱えない3次元の情報（ここではメッシュデータ）において本論文では新規のGraph Convolutionを含むFeaStNetを提案。3次元情報同士の繋がりを動的かつネットワークにて内的に計算する部分に新規性がある。FAUST 3D Shape Correspondence Benchmarkにて他手法の精度を超える性能を実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180720FeaStNet.png`,alt="180720FeaStNet")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 固定のフィルタを準備する2D画像の畳み込みに対して、3D空間の畳み込みはコネクションが曖昧であり畳み込みが困難だが、本論文では近傍との繋がり自体を動的に計算できるGraph Convolution Networkを提案した。FAUST 3D Shape Correspondence BenchmarkでもSoTAを実現していることも採択された理由である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 3次元のメッシュや点群処理、だれがデファクトスタンダードを勝ち取るか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Verma_FeaStNet_Feature-Steered_Graph_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/nitika-verma/FeaStNet") GitHub(18/7/20時点で構築中？)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 15:04:10

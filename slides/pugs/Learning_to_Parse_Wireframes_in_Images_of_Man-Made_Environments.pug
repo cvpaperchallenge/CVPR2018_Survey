@@ -1,0 +1,37 @@
++slide
+section#ID_Learning_to_Parse_Wireframes_in_Images_of_Man-Made_Environments
+  .paper-abstract
+    .title Learning to Parse Wireframes in Images of Man-Made Environments
+    .info
+      .authors P. Lei et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        環境の3次元構造を推定するのは局所特徴ベースがよく使われるけどテクスチャの少ない人工物の多い環境ではうまくいかない．
+        そのような環境において有効な表現としてWireframe（図参照）という表現とその検出手法を提案．
+        人手で5000枚以上の画像に直線のアノテーションをさせたデータセットを用意してCNNベースの手法を学習することで，
+        End-to-EndにWireframeを検出することを実現．
+        提案手法は直線検出と交差点検出をそれぞれ行ってから結合するという構造のCNN．
+  
+    .item2
+      img(src=figpath+"Learning_to_Parse_Wireframes_in_Images_of_Man-Made_Environments.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Wireframeの検出という新しい問題設定を提案してデータセットも用意
+          li Wireframe（直線と交差点）をEnd-to-Endで検出するためのCNN構造を提案
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Huang_Learning_to_Parse_CVPR_2018_paper.html") 論文
+          li: a(href="https://github.com/huangkuns/wireframe") コード＆データ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 10:41:34
+
+

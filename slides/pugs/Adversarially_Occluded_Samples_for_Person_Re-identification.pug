@@ -1,0 +1,37 @@
++slide
+section#ID_Adversarially_Occluded_Samples_for_Person_Re-identification
+  .paper-abstract
+    .title Adversarially Occluded Samples for Person Re-identification
+    .info
+      .authors Houjing Huang, Dangwei Li, Zhang Zhang, Xiaotang Chen, Kaiqi Huang
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Person re-identification(ReID)のためのdata augmentationの方法を提案した。
+          |ReIDの難しさの一つとして、カメラの違いなどにより様々なocclusionが発生することである。
+          |そこでocclusionを発生させた学習データを作ることで精度向上を計る。
+          |始めに、通常通りReIDの学習を行うことでネットワークが画像のどの領域に注目するかを調べる。
+          |明らかになった注目領域を塗りつぶすことでocclusionとし、学習しなおすことでocclusionに頑健な学習を実現する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Adversarially_Occluded_Samples_for_Person_Re-identification.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法では上半身など画像の一部の領域にのみに注目していたため、注目領域にocclusionがあると精度が下がったのに対して、提案手法により画像全体に注目するようになりocclusionに頑健になった。
+          |実際、Rank1 accuracy, mAPどちらもベースラインと比べ数値が向上したことを示した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 同じCVPR2018に重要な領域だけに注目しようとする研究
+          a(href="https://cvpaperchallenge.github.io/CVPR2018_Survey/#/ID_Attention-Aware_Compositional_Network_for_Person_Re-identification") (URL)
+          |があり、全体に注目するように学習をするこの研究と真逆を進んでいるのが気になる
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2864.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 03:11:16
