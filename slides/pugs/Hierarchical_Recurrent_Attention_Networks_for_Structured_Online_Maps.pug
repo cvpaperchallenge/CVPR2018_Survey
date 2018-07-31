@@ -1,0 +1,32 @@
++slide
+section#ID_Hierarchical_Recurrent_Attention_Networks_for_Structured_Online_Maps
+  .paper-abstract
+    .title Hierarchical Recurrent Attention Networks for Structured Online Maps
+    .info
+      .authors Namdar Homayounfar, Wei-Chiu Ma, Shrinidhi Kowshika Lakshmikanth, Raquel Urtasun
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p スパースな3次元点群データから道路面（レーン検出レベルで）構造を把握するためのHierarchical Recurrent Attention Networkを提案する。また、3次元点群処理において推定したエッジと正解値の微分可能な誤差関数Polyline Lossも提案する。高速道路にて90km/hで移動する車両から92%の確率でレーン検出を可能にした。右図は提案手法であるHierarchical Recurrent Attention Networkの構造を示したものである。基本的には対称のスキップコネクションを含むEncoder-Decoder方式であるが、Encoderの各層からRecurrent Countingを行う層を追加、Decoderとの整合性をとることで精度を高める。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730HierarchicalRecurrentAttentionNetwork.png`,alt="180730HierarchicalRecurrentAttentionNetwork")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 高速道路を想定した環境でも3次元点群処理を高精度に実行するネットワークHierarchical Recurrent Attention Networkを提案した。入力である点群処理からレーン検出を行うことができる。さらに誤差関数PolylineLossを提案することで点群からの推定値と正解値との誤差を計算することができネットワークを学習可能とした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 高速道路のデータは意外と少なかった？高速に移動する車両からの物体検出やセグメンテーションが現状どの程度できているか疑問である。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Homayounfar_Hierarchical_Recurrent_Attention_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://careersinfo.uber.com/cvpr2018") Uber at CVPR
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 08:52:51
