@@ -1,0 +1,30 @@
++slide
+section#ID_Uncalibrated_Photometric_Stereo_Under_Natural_Illumination
+  .paper-abstract
+    .title Uncalibrated Photometric Stereo Under Natural Illumination
+    .info
+      .authors Zhipeng Mo, Boxin Shi, Feng Lu, Sai-Kit Yeung, Yasuyuki Matsushita
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 未校正（w/o calibration）かつ未知照明環境（unknown natural illumination）にてフォトメトリックステレオを実現するため、Equivalent Directional Lighting Modelを提案。滑らかに変化するような表面形状の復元や回転に対する曖昧性を許容した復元を可能にした。回転を考慮することでパッチの統合による曖昧性を排除して全体の表面を最適化した。図は提案手法のフロー図である。最初に光源を推定（Equivalent Directional Lighting）し、次にSVDしつつ局所的な（回転による？）曖昧性を除去、法線の空間にて行列計算・補完を行い出力する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180727UncalibratedPhotometricStereo.png`,alt="180727UncalibratedPhotometricStereo")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 未校正かつ未知照明の環境にて、滑らかな表面形状変化を捉えるフォトメトリックステレオ手法を考案した。パッチ毎に回転の曖昧性を推定して全体の構造を把握することに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 以前まではフォトメトリックステレオはかなり補助があったような気がするが、いつのまにかキャリブレーションなし、未知光源でできている。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Mo_Uncalibrated_Photometric_Stereo_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 17:18:17

@@ -1,0 +1,34 @@
++slide
+section#ID_Inferring_Light_Fields_from_Shadows
+  .paper-abstract
+    .title Inferring Light Fields from Shadows
+    .info
+      .authors Manel Baradad, Vickie Ye, Adam B. Yedidia, Fredo Durand
+      .conference CVPR 2018
+      .paper_id 3977
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 直接観測していない四次元light fieldを観測可能な物体によるディフューズ面に投影された二次元平面上の影から推定する手法を提案。既存研究としてtime-of-flightカメラを用いて二次反射光による観測可能な反射と見えていないシーンを含んだ全てのシーンとの関係性と、ありえそうなシーンの構造を事前情報として用いて観測できないシーンのオブジェクト数を数えるnon-line-of-sight (NLoS) imagingをあげているが、この研究ではよりチャレンジングな目的を達成する。提案手法ではNLoSで使用されている二次反射光に加えて、現実のシーンではスペクトルが低周波成分に集中するという情報を用いることで平面上の影から観測不可能な四次元光を推定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Inferring_Light_Fields_from_Shadows.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li CG空間のモデルと現実空間で撮影された影の画像に対して四次元light fieldの推定を行った。
+          li GTとの復元された画像とのPSNRで比較。既存研究が存在しないためか、比較は行っていないが、良好な結果が得られた。
+          li 観測できる物体として人間と観葉植物で実験しており、観葉植物のような複雑な形状を持っている物体に対しても良好な結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li かなりチャレンジングな目的を達成した論文！しかし、データが揃ったり、効果的な半教師/教師なし学習が考案されれば、この手の問題は制度だけを求めるならばDNNで解決できる？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3977.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 05:04:33

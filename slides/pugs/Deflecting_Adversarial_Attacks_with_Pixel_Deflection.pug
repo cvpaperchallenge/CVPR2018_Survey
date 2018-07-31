@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Deflecting_Adversarial_Attacks_with_Pixel_Deflection
+  .paper-abstract
+    .title Deflecting Adversarial Attacks with Pixel Deflection
+    .info
+      .authors Aaditya Prakash et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="https://twitter.com/tomoyukun") Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p 対象ピクセルを近傍のピクセルと入れ替えるPixel Deflectionを利用した敵対的摂動に対しての防御手法。NNは敵対的摂動ノイズに対しては弱いのに対し、ランダムノイズには強いという経験的な傾向から、敵対的摂動が加わっていないサンプルへの性能をできるだけ保持した状態でノイズを加えるためにPixel Deflection＋ Wavelet Denoisingを行う。既存手法よりも良い防御性能を示した。
+      
+    .item2
+      img(src=figpath+"Deflecting_Adversarial_Attacks_with_Pixel_Deflection.png",alt="Deflecting_Adversarial_Attacks_with_Pixel_Deflection.png")
+    .item3
+      .text
+        h1 詳細・なぜ通ったか？
+        p Pixel Deflectionはある対象ピクセルをその近傍からランダムにサンプルされたピクセル値に置き換える。対象ピクセルを決める際には、正しい識別を行う際に重要となる領域以外からサンプリングする。具体的には敵対的摂動による影響が少ないsaliencyであるRobust CAMを定義し、そのsaliencyが低い領域からサンプル。この背景には敵対的摂動は画像に対して大域的に（物体に関係せず）現れる傾向があるので、できるだけ正しい識別に影響を与えない領域にPixel Deflectionを行いたいという考えがある。
+        
+    .item4
+      .text
+        h1 コメント・リンク集
+        p NNのパラメータに関する変更はせずに入力への変更を行うことで敵対的摂動の種類にかかわらず汎用的に防御できるという点が面白い。手法の裏付けとして敵対的摂動とランダムノイズの識別精度への影響比較も行っており、面白かった。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.08926") 論文
+    .slide_index #{getSlideIndex()}
+
+

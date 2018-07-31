@@ -1,0 +1,34 @@
++slide
+section#ID_Temporal_Deformable_Residual_Networks_for_Action_Segmentation_in_Videos
+  .paper-abstract
+    .title Temporal Deformable Residual Networks for Action Segmentation in Videos
+    .info
+      .authors Peng Lei and Sinisa Todorovic
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p action segmentationのためのネットワーク、Temporal Deformable Residual Networks(TDRN)を提案した。
+          |動画の各フレームからCNNにより抽出した特徴を入力とし、two-streamの構造で特徴を処理していく。
+          |Temporal Residual Streamは、動画のfull scaleのコンテキスト情報を解析する。
+          |Temporal Pooling Streamは、時間方向のPooling, Unpoolingを複数回施すことにより時間方向に関して様々なスケールのコンテキスト情報を解析する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Temporal_Deformable_Residual_Networks_for_Action_Segmentation_in_Videos.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のネットワークは1つのstreamで処理するのに対して提案手法は2つのstreamで処理する。
+          |さらに2つのstreamは独立してるのではなくTemporal Pooling Streamに逐次Temporal Residual Streamから得られた特徴を入力していく。
+          |50Saladas, GTEA, JIGSAWSの3つの動画データセットで評価し、F1, Edit score, Accuracyの3つの指標いずれも従来手法よりも向上した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1925.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 15:13:38

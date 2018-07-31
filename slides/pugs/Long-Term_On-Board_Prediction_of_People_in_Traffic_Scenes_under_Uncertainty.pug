@@ -1,0 +1,33 @@
++slide
+section#ID_Long-Term_On-Board_Prediction_of_People_in_Traffic_Scenes_under_Uncertainty
+  .paper-abstract
+    .title Long-Term On-Board Prediction of People in Traffic Scenes under Uncertainty
+    .info
+      .authors Apratim Bhattacharyya, Mario Fritz, Bernt Schiele
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 車の車載カメラから、人間（歩行者や自転車）の動きを予測する手法を提案した。
+          |人間の動きを予測するBayesian Bounding Box Prediction Streamと、車自体の動きを予測するOdometry Prediction Streamの2つにより構築されたモデルにより長期的な予測を実現する。
+          |人間のBounding Box(BB)は、過去のBB、過去及び予測される車の動きから推定する。
+          |車の動きは、過去の車の動き及び車載カメラの画像特徴から予測する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Long-Term_On-Board_Prediction_of_People_in_Traffic_Scenes_under_Uncertainty.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 人間の動きの不確かさを含めて予測することが可能となった。
+          |Kalman Filterと比べ、提案法はBB、車の動きどちらも高い精度で予測することが可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.09026") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.21 01:34:43

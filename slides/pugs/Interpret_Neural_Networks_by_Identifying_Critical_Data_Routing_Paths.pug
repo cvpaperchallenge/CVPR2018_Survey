@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Interpret_Neural_Networks_by_Identifying_Critical_Data_Routing_Paths
+  .paper-abstract
+    .title Interpret Neural Networks by Identifying Critical Data Routing Paths
+    .info
+      .authors A. Uthors, B. Uthors and C. Uthors
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 新たな視点で学習済みネットワークを解釈(Interpret) する手法の提案．ネットワークの予測プロセスのcritical data routing paths(CDRPs)をidentify及び統計分析することをベースとする．
+          li 学習済みネットワークのテスト画像ごとのCDRPsを得られるためのDGR(Distillation Guided Routing)を提案した．Layersの出力チャネルにscalar control gateを付け， gateによりそのチャネルがcritical nodeかどうかを決める.また，知識蒸留手法からcritical nodeをcontrol gatesの値を最適化する．学習済みのcontrol gatesにより全部のlayersのcritical nodeでDGRを得られる．
+          li 大量な画像からDGRを生成し，クラスタリングによりクラスの分類もできる．著者達がadversarial examplesと元のクラスの高層のDGR clusteringの分布が異なることを発見し， adversarial examplesを検出できる手法を提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}InterpretNN-IdentifyCDRP.png`,alt="InterpretNN-IdentifyCDRP")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のネットワークinterpretに関する研究が各々のフィルタなどを対象とすることが多い．この文章で新たなネットワークinterpretの視点を提案した．
+          li 提案のDGRをクラスでクラスタリングし，それを用いて新たな画像に対し認識を行う場合，元のネットワークより良い精度を得られることを発見した．また，DGRをクラスでクラスタリングによりadversarial examplesをリアルデータを区別できる
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 各々のフィルタの活性化マップによりフィルタが学習できているセマンティックコンセプトに関する研究が多い．この文章で識別する際のcriticalルートからinterpretを行う視点が新しい．今後同じような視点でのinterpretに関する研究が多くなるように思う．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2964.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 15:49:44

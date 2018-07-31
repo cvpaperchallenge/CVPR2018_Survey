@@ -1,0 +1,33 @@
++slide
+section#ID_NAG_Network_for_Adversary_Generation
+  .paper-abstract
+    .title NAG: Network for Adversary Generation
+    .info
+      .authors K.R.Mopuri, U.Ojha, U.Garg and R. V.Babu
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p Adversary perturbationsは機械学習で脅威となりうる．最近の研究では，画像にとらわれずほとんどの自然画像で分類を騙すことができる．本研究では，Adversary perturbationsの分布をモデル化する生成的アプローチを提案．アーキテクチャはGANと類似．我々の訓練されたジェネレータネットワークは、与えられた分類に対するAdversary perturbationsの分布を捉えようと試み、そのようなAdversary perturbationsの幅広い多様性を容易に生成する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}NAG_Network_for_Adversary_Generation.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Adversary perturbationsの未知の分布をモデル化するための簡単に訓練可能なフレームワークを提示．
+          li 生成されたAdversary perturbationsは，SoTAで分類を騙すことができた．
+          li 学習されたモデルが摂動の分布を捉え、多様性、高い騙す能力、および優れたクロスモデルの一般性を示すAdversary perturbationsを生成することを実証．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li アーキテクチャによってAdversary perturbationsが異なることが明白
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0135.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 17:04:38

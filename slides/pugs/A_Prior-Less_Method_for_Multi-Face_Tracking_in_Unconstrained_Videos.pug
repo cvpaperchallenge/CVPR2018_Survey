@@ -1,0 +1,33 @@
++slide
+section#ID_A_Prior-Less_Method_for_Multi-Face_Tracking_in_Unconstrained_Videos
+  .paper-abstract
+    .title A Prior-Less Method for Multi-Face Tracking in Unconstrained Videos
+    .info
+      .authors Chung-Ching Lin and Ying Hung
+      .conference CVPR 2018
+      .paper_id 3502
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 動画内の人数を指定することなく、動画内でメインで登場する人物のIDを保ったmulti-faceトラッキングを行う手法を提案。提案手法は三段階に別れている。まずショット内で顔、頭、胴体、全身の重心、幅、高さを算出しグラフ構造を用いることでショット内、間でIDを保ったトラッキングを行う。次に同一フレーム内のトラッキング軌道を繋げるためにVGG-face descriptorと既に存在する軌道の接続性を見て繋げる。最後にGaussian processによってVGGの特徴量を18次元まで削減した特徴量を使用することで、メインで登場していない人物に対する外れ値認定やトラッキングのリファインメントを行う。検証には人物の見た目の激しい動画やカメラモーションが激しい動画を使用する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Prior-Less_Method_for_Multi-Face_Tracking_in_Unconstrained_Videos.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 顔の見た目の変化や、任意のカメラ向き、ショット変化、早いカメラモーションなどが含まれているミュージックビデオ8本、激しいオクルージョンや多くの暗い画面や正面顔が含まれていないシーンが多く含む4本のBody-worn camera videoで検証。
+          li WCPによってIDのクラスタリング結果を、CLEAR MOTによってトラッキングをそれぞれの評価指標とし、それぞれの既存手法と比較を行った。WCP、CLEAR MOT共にミュージックビデオでは7/8、Body-worn videoでは4/4においてSoTA。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li スリラーでマイケルジャクソンをトラッキングし続けることはできる・・？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3502.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:30:48

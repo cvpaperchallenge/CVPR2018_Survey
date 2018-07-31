@@ -1,0 +1,29 @@
++slide
+section#ID_LAMV_Learning_to_Align_and_Match_Videos_With_Kernelized_Temporal_Layers
+  .paper-abstract
+    .title LAMV: Learning to Align and Match Videos With Kernelized Temporal Layers
+    .info
+      .authors Lorenzo Baraldi, Matthijs Douze, Rita Cucchiara, Hervé Jégou
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p ニューラルネットワークにおけるTemporal Match Kernelを再考し、動画の比較や位置合わせができる学習可能なTemporal Layerを用いた手法（LAMV：Learnable to Align and Match Videos）を提案した論文。Video Alignment、Cody Detection、Event RetrievalのタスクでSoTAを実現した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}LAMV.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p 同じネットワークを通して得られた特徴量を比較するという意味では、LAMVはSiamese Networkと類似したアプローチである。Temporal Match Kernelを微分可能なレイヤーとすることでニューラルネットワークの導入する。損失関数はベースとなる動画と重複部分を持つ動画と重複部分を持たない動画に対してTriplet Lossを取る。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Baraldi_LAMV_Learning_to_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 19:34:20

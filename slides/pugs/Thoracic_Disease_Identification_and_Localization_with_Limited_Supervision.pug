@@ -1,0 +1,34 @@
++slide
+section#ID_Thoracic_Disease_Identification_and_Localization_with_Limited_Supervision
+  .paper-abstract
+    .title Thoracic Disease Identification and Localization with Limited Supervision
+    .info
+      .authors Zhe Li, Chong Wang, Mei Han, Yuan Xue, Wei Wei and Li Fei-Fei
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 医療画像から、病名の特定及び異常箇所の特定を行う手法を提案した。
+          |ResNetにより抽出した特徴を、パッチに分割し各パッチが異常箇所であるかを予測する。
+          |予測したパッチ情報を用いて、病名の判定を行う。
+          |学習時には、病名のみラベルがついていて異常箇所のラベルが付いていない場合がある。
+          |そこで、病名のみしか存在しない場合は少なくとも1つのパッチが異常箇所であると仮定して学習を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Thoracic_Disease_Identification_and_Localization_with_Limited_Supervision.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 病名診断については、14の病名のうち12の病名においてベースラインよりも精度が向上した。
+          |異常箇所の特定については、従来手法と比べ8つの病名全てにおいて精度が向上している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Thoracic_Disease_Identification_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 00:59:33

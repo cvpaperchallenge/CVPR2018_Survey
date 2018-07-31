@@ -1,0 +1,41 @@
++slide
+section#ID_Learning_Pixel-level_Semantic_Affinity_with_Image-level_Supervision_for_Weakly_Supervised_Semantic_Segmentation
+  .paper-abstract
+    .title Learning Pixel-level Semantic Affinity with Image-level Supervision for Weakly Supervised Semantic Segmentation
+    .info
+      .authors Jiwoon Ahn et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 画像レベルのラベルから Semantic Segmentation の学習で使用する画素レベルのラベルを生成する研究. 隣接する領域の意味的な親和性を推定する, AffinityNet を提案. 入力画像の CAM のアクティベーションの情報を AffinityNet で推定された意味的親和性に基づいて伝搬することで, 完全なマスクを生成する. 提案手法によって作成されたラベルによって学習した Semantic Segmentation 手法は PASCAL VOC 2012 において弱教師の手法の中でSOTAを達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Learning_Pixel-level_Semantic_Affinity_with_Image-level_Supervision_for_Weakly_Supervised_Semantic_Segmentation.png`,alt="fukuhara-Learning_Pixel-level_Semantic_Affinity_with_Image-level_Supervision_for_Weakly_Supervised_Semantic_Segmentation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 画像クラスのラベルから Semantic Segmentation の学習で用いる画素レベルのラベルを生成する手法を提案
+          li 隣接する領域の画素レベルでの意味的親和性を推定する AffinityNet を提案
+          li CAMのアクティベーションの情報（弱教師）を AffinityNet によって推定された画素間の意味的親和性に基づいて伝搬し, 完全なマスクを生成する.
+          //-li CAMは局所的にセグメンテーションが出来る. 提案手法ではそれを伝搬させ、完全なマスクを得る.
+          li AffinityNet の学習にはCAMの中で信頼度の高い領域を使用
+          //-li グラフ上のランダムウォークでCAMのアクティベーションを伝搬
+          li 提案手法によって生成した教師データによって学習した, ResNet38 は PASCAL VOC 2012 でSOTAを達成し, FCN（fully supervised）をも上回る結果を達成
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.10464" target="blank") [論文] Learning Pixel-level Semantic Affinity with Image-level Supervision for Weakly Supervised Semantic Segmentation
+          li
+            a(href="https://github.com/jiwoon-ahn/psa" target="blank") [Code] GitHub
+          li
+            a(href="http://mmlab.ie.cuhk.edu.hk/projects/ST-Lattice/" target="blank") [Project page] Optimizing Video Object Detection via a Scale-Time Lattice
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 0:32:55

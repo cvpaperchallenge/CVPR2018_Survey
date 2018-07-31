@@ -1,0 +1,35 @@
++slide
+section#ID_HSA-RNN_Hierarchical_Structure-Adaptive_RNN_for_Video_Summarization
+  .paper-abstract
+    .title HSA-RNN: Hierarchical Structure-Adaptive RNN for Video Summarization
+    .info
+      .authors Bin Zhao, Xuelong Li, Xiaoqiang Lu
+      .conference CVPR 2018
+      .paper_id 2266
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 映像要約を行う際に、ショットセグメンテーションを映像に対して事前に行うHierarchical Structure-Adaptive RNN(HSA-RNN)を提案。既存手法では一定間隔で切り取られたフレーム群をショットとしていたが、提案手法ではショットセグメンテーションを行うことで要約の精度向上を主張。ショット検出はsliding bidirectional LSTMを、映像要約ではショット特徴量とBidirectional LSTMを用いる。映像要約だけでなくショットセグメンテーションでもSoTAを獲得。
+    .item2
+      .text
+        p
+          img(src=`${figpath}HSA-RNN_Hierarchical_Structure-Adaptive_RNN_for_Video_Summarization.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ショットセグメンテーションの精度をBoundary-aware RNNなどの既存手法と比較し、提案手法の精度がもっとも高いことを主張。
+          li ショットセグメンテーションの精度をHierarchical RNNなどの既存手法と比較し、SoTAを獲得。
+          li SumMe, TVsum, CoSum and VTWの4つのデータセットで検証。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 動画に対する意味的なセグメンテーションは行動認識や、物体検出でも効果が期待できそう。
+          li 動画に対する意味的なセグメンテーションはaction recognitionや、object detectionでも効果が期待できそう。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2266.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 16:35:14

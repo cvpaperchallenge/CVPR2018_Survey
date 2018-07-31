@@ -1,0 +1,34 @@
++slide
+section#ID_Self-Supervised_Adversarial_Hashing_Networks_for_Cross-Modal_Retrieval
+  .paper-abstract
+    .title Self-Supervised Adversarial Hashing Networks for Cross-Modal Retrieval
+    .info
+      .authors Chao Li, Cheng Deng, Ning Li, Wei Liu, Xinbo Gao, Dacheng Tao
+      .conference CVPR 2018
+      .paper_id 124
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 画像とテキストのそれぞれから得られるハッシュを用いたクロスモダリティな検索において、中間的な情報である画像のラベルを自己教師として噛ませる手法を提案。DNNによって画像、ラベル、テキストのそれぞれから得られる特徴量をV、L、Tとすると、Lから得られるハッシュを自己教師とすることでVとTのそれぞれから得られるハッシュを同一のものにする。また特徴量分布を近づけるためにVとL、TとLそれぞれについてadversarial learningを行う。ハッシュ化するネットワークのロス関数としてハッシュ値の類似度、ラベルに対するclassificationのロスをとる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Self-Supervised_Adversarial_Hashing_Networks_for_Cross-Modal_Retrieval.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li MIRFLICKR-25K、NUS-WIDE、MSCOCOを使用し、MAP、PR曲線、P@nの3つの指標で評価。既存手法としてshallow/deep structureと比較し、フェアな比較を行うために入力特徴量は全ての手法で統一。
+          li ハッシュ値のビット数に関わらず、画像→テキスト、テキスト→画像の両方におけるMAP、PR曲線、Precision@top1000。
+          li /adversarial learningを用いたクロスモーダル検索手法であるACMRに対しても優位に精度が高い。ただしACMRはハッシュを使用していないことに注意。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li ハッシュを自己教師とすることで、2つのモダリティをうまくつなげる方法。adversarial learningを使用しておりトレンドが反映されている。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0124.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:40:21

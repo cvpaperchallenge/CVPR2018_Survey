@@ -1,0 +1,32 @@
++slide
+section#ID_Deep_Regression_Forests_for_Age_Estimation
+  .paper-abstract
+    .title Deep Regression Forests for Age Estimation
+    .info
+      .authors Wei Shen, Yilu Guo, Yan Wang, Kai Zhao, Bo Wang, Alan L. Yuille
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 顔からの年齢推定は非線形回帰問題であり、この問題をDeep Regression Forests（DRFs）を提案することで解決する。また、DRFsとCNNを中間層で結合して特徴生成や識別を同時学習することで非整備の（inhomogeneous）データにも対応する。同時学習について、まずはDRFsの葉ノードを（CNNの誤差逆伝播法と合わせて）最適化、次にVariational Bounding（参考文献33, 57）によりリーフノードを最適化。複数のスタンダードなデータセットにて良好な精度を実現した。（豆知識：顔年齢の変化について、少年時代は顔の形状、大人になると肌の見えが変化する）
+    .item2
+      .text
+        p
+          img(src=`${figpath}180719DeepRegressionForests.png`,alt="180719DeepRegressionForests")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 深層回帰木（DRFs）とCNNを組み合わせ、さらに同時学習による最適化手法を考案した。MORPH, FGNET, Cross-Age Celebrity Dataset (CACD)にてState-of-the-art。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 現在までにもCNN＋他のモデルを統合する手法は提案されていたが回帰木では稀な例？DRF単体はMNISTなど単純な例には適用されてその有効性が示されていたが、より広い応用ができそうな研究例となった。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Deep_Regression_Forests_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/shenwei1231/caffe-DeepRegressionForests") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 09:48:16

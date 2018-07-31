@@ -1,0 +1,49 @@
++slide
+section#ID_Learning_Markov_Clustering_Networks_for_Scene_Text_Detection
+  .paper-abstract
+    .title Learning Markov Clustering Networks for Scene Text Detection
+    .info
+      .authors Zichuan Liu et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p  ボトムアップに Scene Text Detection を行う手法を提案.  物体検出を Stochastic Flow Graph のクラスタリングとして定式化した. ボトムアップな手法の恩恵として, スケールや回転に頑強になると共に, 並列化による高速化が可能となった. 評価実験では MSRA-TD500 dataset で SOTA を達成し, かつ既存手法の1.5倍(34FPS)高速に動作.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Learning_Markov_Clustering_Networks_for_Scene_Text_Detection.png`,alt="fukuhara-Learning_Markov_Clustering_Networks_for_Scene_Text_Detection.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          //- li 高速で頑強な scene text detection のための Markov Clustering Network (MCN)
+          //- li 画像を Stochastic Flow Graph (SFG) に変換
+          //- li SFGに対してマルコフクラスタリングを適用
+          //- li 任意のサイズと向きの文字に対して事前知識なしで適用可能
+          //- li SFGは物体の局所的な相関関係やsemanticな情報をエンコード
+          //- li 物体は強く結合したノードとしてモデル化されそれが、柔軟なボトムアップな検出を可能にする（スケールや回転に強い）
+          //- li Non-Maximum Suppression を使うことなくBBを生成するのでGPUで並列化可能
+          //- li MSRA-TD500 datasetでSOTA
+          //- li 34FPSで動作, 既存手法の1.5倍高速
+          //- li 物体検出をgaraph-based クラスタリングの問題として定式化（グラフのflow valueを計算してその結合の強さによってクラスタリングする）
+          //- li end-to-end に学習可能なモデルを提案
+          //- li MCNは画像を格子状のグラフ（SFG）に変換する
+          //- li SFGのノードは画像のその点での特徴量
+          li 入力画像は Markov Clustering Network (MCN)によって Stochastic Flow Graph (SFG) に変換される
+          li SFG のノードは格子上に並んでおり, 物体は強く結合したノードとしてモデル化される（SFGは物体の局所的な相関関係やsemanticな情報をencodeしている）
+          li SFG にマルコフクラスタリングを適用し, 各クラスター毎に Bounding Box を生成する
+          li ボトムアップな手法のため, 物体のスケールや回転に頑強かつ並列化による高速化が可能
+          li ICDAR 2013, ICDAR 2015 and MSRA-TD500 を用いて評価実験を行った
+          li MSRA-TD500 dataset では SOTA を達成し, その他の dataset でも既存手法と同等の精度を達成
+          li 速度については同等の精度の既存手法（TextBoxやCTPN）と比較して1.5倍程度高速化（34FPS）
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1805.08365.pdf" target="blank") [論文] Learning Markov Clustering Networks for Scene Text Detection
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 18:56:55

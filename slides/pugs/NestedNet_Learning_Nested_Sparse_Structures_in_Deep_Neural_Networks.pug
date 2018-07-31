@@ -1,0 +1,37 @@
++slide
+section#ID_NestedNet_Learning_Nested_Sparse_Structures_in_Deep_Neural_Networks
+  .paper-abstract
+    .title NestedNet: Learning Nested Sparse Structures in Deep Neural Networks
+    .info
+      .authors Eunwoo Kim, Chanho Ahn, Songhwai Oh
+      .conference CVPR 2018
+      .paper_id 3430
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 入力データの形式や種類に柔軟かつ、ネットワークのサイズを学習し直すことなく柔軟に変更することが可能なnested sparse network (NestedNet)を提案。従来の手法ではネットワークの重みやチャンネル数を削除することで新たなデータ形式やサイズの縮小を行っていたが、新たに学習をし直す必要があった。NestedNetはネスト構造をもつnetwork-in-networkの構造をもち、レベルが低いネットワークはレベルが高いネットワークの一部となる。マルチタスクラーニングを行うことで、低レベルのネットワークはタスクごとに共通な特徴量を学習し、高レベルのネットワークはタスクに特化した特徴量を持つ。そのため、データやサイズの制限によって使用するレベルの上限を変更することで以前学習した内容を保ったままファインチューニングが可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}NestedNet_Learning_Nested_Sparse_Structures_in_Deep_Neural_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ネットワークの有効性を確認するために、adaptive deep compression、knowledge distillation、hierarchical classificationを行った。
+        ul
+          li adaptive deep compression：かくレベルごとに重みとチャンネルを削減した結果、CIFAR-10のclassificationにおいて既存手法よりもネットワークのサイズを小さくしつつ精度を保つことを確認した。
+          li knowledge distillation：NestedNetの内部のネットワークをスクラッチで学習し直すのではなく、knowledge distillationを行った場合の精度をNestedNetとベースラインと比較、CIFAR-10のclassificationにおいて同等の精度を達成。また実行時間も短くなったことを確認。
+          li Hierarchical classification：CIFAR-100におけるhierarchical classificationを行なった結果、NestedNetはベースラインのネットワークやSoTAであるSplitNetよりも高い精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li かなり実用的なネットワーク！ネットワークのサイズ変更に伴って学習をし直さなくていいことは商用的に、かなり価値があると思われる。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3430.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3430-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 19:08:17

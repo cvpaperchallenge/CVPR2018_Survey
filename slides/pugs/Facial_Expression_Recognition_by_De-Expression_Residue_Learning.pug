@@ -1,0 +1,30 @@
++slide
+section#ID_Facial_Expression_Recognition_by_De-Expression_Residue_Learning
+  .paper-abstract
+    .title Facial Expression Recognition by De-Expression Residue Learning
+    .info
+      .authors Huiyuan Yang, Umur Ciftci, Lijun Yin
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 顔表情認識を行うために、De-expression（Happy=>Neutralのように顔表情を打ち消す）を学習することにより特徴表現能力を向上させる。De-expression Residue Learning（DeRL）とよばれる、生成的/識別的な誤差計算を同時に学習可能な枠組みを提案（右図）。DeRLではまずConditional GANによりある表情の顔を無表情の顔に生成するモデルを構築。従来ではピクセルレベル/特徴レベルの違いを見分けていたが、本論文では生成モデルにおける中間層レベルの違いを見分けることにより高精度な表情認識モデルが出来上がる。このうち、Encoder/Decorderの2,3,4,5層、最終識別結果においても誤差を計算。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180709DeexpressionResidueLearning.png`,alt="180709DeexpressionResidueLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 顔表情認識に関して、表情を打ち消すための識別/生成的モデルから誤差を計算するDe-expression Residue Learning（DeRL）により学習を行なった。BU-4DFE/BP4D-spontaneousと2つのデータセットにより事前学習を行い、CK+/Oulu-CASIA/MMI/BU-3DFE/BP4D+にてテストを行なった結果、従来法を超える顔表情認識精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 生成的に顔表情を打ち消す（教師なし）学習が有効とは発想勝ちである。また、それでうまくいく実装力も評価できる。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_Facial_Expression_Recognition_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 09:52:16

@@ -1,0 +1,34 @@
++slide
+section#ID_Geometry-Aware_Network_for_Non-Rigid_Shape_Prediction_From_a_Single_View
+  .paper-abstract
+    .title Geometry-Aware Network for Non-Rigid Shape Prediction From a Single View
+    .info
+      .authors Albert Pumarola, Antonio Agudo, Lorenzo Porzi, Alberto Sanfeliu, Vincent Lepetit, Francesc Moreno-Noguer
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 紙やシャツなど柔軟な物体に対する形状変化を3次元的に捉える手法を提案した。従来法とは異なり、表面形状に関してテンプレートを準備する必要がないこと、テクスチャ欠損や部分的オクルージョンに対して頑健である。幾何的な変化を捉えるために、基本的に深層学習をベースとしており、2次元画像でのメッシュ検出、3次元形状の復元を実行する。形状変化、材質、テクスチャや照明条件の変化が入る空間を含んだ大規模データセットにて深層学習アーキテクチャをEnd-to-Endで学習。右図は提案手法の概要を示している。ネットワークは主に2次元画像中で位置を特定する2D Detection Branch、3次元的な幾何情報を復元するDepth Branch、非剛体形状を復元するShape Branchから構成される。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180723GeometryAwareNetwork.png`,alt="180723GeometryAwareNetwork")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p End-to-Endかつリアルタイムな3次元表面形状復元手法を提案。実空間にて撮影したベンチマークにてState-of-the-artな表面形状トラッキングを実現した。現在まではEnd-to-Endな学習が難しいとされていたが、幾何的な情報を復元するに特化した構造とそのためのデータベースを構築したことが評価された形となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 中間状態として物体位置・距離画像・柔軟形状復元を行なっているけど、それぞれで誤差計算しているのだろうか？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Pumarola_Geometry-Aware_Network_for_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://www.iri.upc.edu/publications/show/2023") Project
+          li
+            a(href="https://www.youtube.com/watch?v=DqE15b7MJto") YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 15:39:51
