@@ -1,0 +1,32 @@
++slide
+section#ID_Detect_Globally_Refine_Locally_A_Novel_Approach_to_Saliency_Detection
+  .paper-abstract
+    .title Detect Globally, Refine Locally: A Novel Approach to Saliency Detection
+    .info
+      .authors Tiantian Wang, Lihe Zhang, Shuo Wang, Huchuan Lu, Gang Yang, Xiang Ruan and Ali Borji
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p salient objectの位置を正確に特定するために重み付けされた応答マップによってコンテキスト情報を利用可能にするネットワークglobal Recurrent Localization Network (RLN)を提案．また，物体境界を正確に把握するために各空間位置について局所的なコンテキスト情報を適応的に学習するlocal Boundary Refinement Network (BRN)を提案．本アプローチが既存のすべての手法に対してSOTAであることを確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180720_Detect_Globally_Refine_Locally.png`,alt="1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li salient object detectionにはコンテキスト情報の効果的な統合が不可欠であるが，既存の方法のほとんどは主にCNNの階層的特徴をどのように統合するかに注力．しかしそれらは高レベルな情報と低レベルな情報組み込むために，予測の質を下げる可能性存在．RLNとBRNによってこれらの問題に対処．
+          li 複数の段階に渡り，CNNの内部構造を漸進的に改良するためにrecurrent moduleを採用
+          li 学習した伝搬係数は、各ピクセルとその近傍との間の関係を最適に捕捉
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2268.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 15:39:52
