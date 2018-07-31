@@ -1,0 +1,39 @@
++slide
+section#ID_Time-resolved_Light_Transport_Decomposition_for_Thermal_Photometric_Stereo
+  .paper-abstract
+    .title Time-resolved Light Transport Decomposition for Thermal Photometric Stereo
+    .info
+      .authors K. Tanaka, N. Ikeya, T. Takatani, H. Kubo, T. Funatomi, Y. Mukaigawa
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 熱画像における経時変化の光伝送分解手法を提案．
+          |熱の伝播の速さは光よりも非常に遅く，遠赤外光の過渡遷移がサーマルカメラで観測可能である．
+          |近似的ににコントロールされた環境における可視光画像と似ているため，
+          |従来のCV技術をストレートフォワードに熱画像に適用できるのが肝．
+        p 熱画像における散乱光成分は分離可能で，したがって物体の表面の法線を推定可能である．
+        p 熱画像を用いれば，黒色，透明，半透明物体に適用可能である．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Efficient_Subpixel_Refinement_with_Symbolic_Linear_Predictors.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 可視光と熱の伝播モデルの差を考慮したCV技術転用のモデル化方法を与えている．
+          |また，遠赤外光の伝播特性の差異を用いた手法は新しい．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 熱変化は実際経時変化が人間にも認識できるレベルの速さなのが特徴的で，
+          |研究には実際専用の知見が必要そう．
+          |適用可能かどうかは実際やってみないと分からないところが多いと思う．頑張ってほしい．
+        p 可視光以外を使っている研究の「黒色，透明，半透明OK」は実際キラーワード．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3375.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 18:04:54

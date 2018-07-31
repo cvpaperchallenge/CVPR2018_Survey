@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Single-Image_Depth_Estimation_Based_on_Fourier_Domain_Analysis
+  .paper-abstract
+    .title Single-Image Depth Estimation Based on Fourier Domain Analysis
+    .info
+      .authors Jae-Han Lee, Minhyeok Heo, Kyung-Rae Kim and Chang-Su Kim
+      .conference CVPR2018
+      .paper_id 59
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p フーリエ周波数領域解析をベースとしたCNNを用いて，単一のRGB画像から距離画像を推定する手法を提案．CNNはResNet-152ベースで，depthbalanced Euclidean lossと呼ばれる損失関数を設計し，広範囲の距離画像を推定できるように学習する．次に，入力画像を複数のアスペクト比で切り取って複数のデプスマップ候補を生成する．アスペクト比の小さい画像は，局所的に信頼できるデプスマップを生成するが，アスペクト比の大きい画像は，大域的なデプスマップを生成する．これらをお互いに補完するために，デプスマップ候補を周波数領域で結合する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180705_single-image_depth_estimation1.jpg`,alt="20180705_single-image_depth_estimation1.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 距離画像推定にフーリエ周波数領域解析を使った（作者の知る限りで）初めての論文である．NYUv2 depth datasetの画像280,000枚を学習し，654枚で評価を行った．fully convolutional residual networksを用いた最新の手法と同等またはそれ以上の性能を得ることができた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 損失関数やフーリエ周波数領域解析がしっかり構築されており説得力のある論文である．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2873.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.5 14:32:07
+
+

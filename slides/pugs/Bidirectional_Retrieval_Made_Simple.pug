@@ -1,0 +1,30 @@
++slide
+section#ID_Bidirectional_Retrieval_Made_Simple
+  .paper-abstract
+    .title Bidirectional Retrieval Made Simple
+    .info
+      .authors Jonatas Wehrmann and Rodrigo C. Barros
+      .conference CVPR2018
+    .slide_editor Masaki Miyamoto
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では、双方向検索モデルを学習するための非常に簡単で効果的な文字レベルのアーキテクチャを示す．マルチモーダルコンテンツを整列させることは、画像と記述との間の意味的対応を見つけることの難易度を考慮すると特に挑戦的である．そこで実際の文字を明確な粒度レベルで畳み込むことによって、テキストセマンティック埋め込みを学ぶために設計された効率的な文字レベルのソースモジュールを示す．私たちのアプローチで生成されたモデルは、単語埋め込みに基づく最先端の戦略よりもはるかに入力ノイズに対して堅牢である． 概念的にもかかわらずはるかに単純であり，より少ないパラメータしか必要としない．
+          |テキスト分類，特に多言語およびノイズが多い分野での堅実なパフォーマンスを示す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Bidirectional_Retrieval_Made_Simple.PNG`,alt="Bidirectional_Retrieval_Made_Simple.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p CHAIN-VSEという生の文字に基づいてテキスト埋め込みを学習できる双方向検索のためのシンプルなアーキテクチャによって，概念的には関連研究よりもはるかに単純なアーキテクチャであってもMS COCOなどを考慮して，テキストからイメージへとテキストからテキストへの両方で最先端の結果が得られる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wehrmann_Bidirectional_Retrieval_Made_CVPR_2018_paper.pdf") URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 19:37:13

@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_3D_Pose_Estimation_and_3D_Model_Retrieval_for_Objects_in_the_Wild
+  .paper-abstract
+    .title 3D Pose Estimation and 3D Model Retrieval for Objects in the Wild
+    .info
+      .authors Alexander Grabner et al.
+      .conference CVPR 2018
+    .slide_editor Pavel A. Savkin
+
+    .item1
+      .text
+        h1 概要
+        p RGB画像から６DOF姿勢推定＋３Dモデル検索を同時に行えるようにする手法。厳密な中身は画像から６DOF姿勢するパートと、その姿勢とRGB画像情報から最適な３Dモデルを検索して見つけてくるパートに分けられる。三次元姿勢推定については既存手法からInspireされ、認識された物体を内包するProjected 3D Bounding Box(16 Parameters)及び3D Scale(3 Parameters)をResNetやVGGをベースとしたCNNで推定し、PnP問題を解いた。これによりモデル既知でないにもかかわらず、Pascal３D＋データセットでState of the artな６DOF姿勢推定精度を実現。３Dモデル検索パートでは、RGB特徴量とDepthImage特徴量の取得を異なるのCNNで定義し、RGB特徴量、対応するDepth特徴量、間違ったDepth特徴量をそれぞれAnchor, Positive, Negativeと扱いTripletLossを計算することで学習。これによりRGB画像とDepth画像という全く異なるドメイン間での特徴量マッチングを実現し、テクスチャレスな３DモデルであったりRGB画像の照明環境不明であっても最適な３Dモデルの検索を行えるようになった。同カテゴリでは似たような形状のモデルが多数存在するにもかかわらず、画像に対する人間のAnnotationに対して約50％の精度での検索結果を実現した。
+ 
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-3D_Pose_Estimation_and_3D_Model_Retrieval_for_Objects_in_the_Wild.png`,alt="fukuhara-3D_Pose_Estimation_and_3D_Model_Retrieval_for_Objects_in_the_Wild.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Projected 3D Bounding Box を用いた６DOF 姿勢推定ではモデル既知でしか解けなかったところをモデル既知でState of the art、モデルなしでもCompatibleな結果を出した点。検索パートではハイコストな３D畳み込みや既知DepthImageを要することなくRGBとDepthImage間の共通記述特徴量の学習・その有効性を示した点。結果については姿勢推定においてはState of the art、検索においては人間のAnnotationに対して50%の精度を実現。６DOF姿勢の高精度推定と、RGB・Depth間の共通記述子を学習することにより画像から３Dモデル検索までを行うシステムを実現したことが通った理由と思われる。
+
+          
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://arxiv.org/abs/1803.11493 " target="blank") [論文] 3D Pose Estimation and 3D Model Retrieval for Objects in the Wild
+          li 共通記述子にはもう少し議論がほしかった印象。TripletLossを使うというアイデアはすごく良かった。３D Bounding Boxという考え方自体も美しい。
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.30 23:18:55
+
+

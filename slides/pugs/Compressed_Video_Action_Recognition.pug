@@ -1,0 +1,29 @@
++slide
+section#ID_Compressed_Video_Action_Recognition
+  .paper-abstract
+    .title Compressed Video Action Recognition
+    .info
+      .authors Chao-Yuan Wu, Manzil Zaheer, Hexiang Hu, R. Manmatha, Alexander J. Smola, Philipp Krahenbuhl
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p MPEG-4やH.264のようなコーデックによって圧縮された映像を直接入力として行動認識を行う論文。背景として、映像には時間方向の冗長性が多く含まれており、その事実はコーデックによって大幅に圧縮できることが挙げられる。圧縮された状態に含まれるmotion vectorとresidualを直接入力とするネットワークCoViARによって、高速かつ高精度な行動認識に成功した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Compressed_Video_Action_Recognition.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p 提案手法の入力として、初期フレームにおいてはRGBの情報を持っており、後続するフレームには初期フレームに対するmotion vectorとresidualを持っている。通常のコーデックでは1つ前のフレームに対するmotion vectorとresidualが格納されているので、初期フレームから注目フレームまで累積することで、初期フレームと累積したmotion vectorとresidualを用いることで現在フレームを復元することできる。実際に推定する際には、初期フレームにおけるRGBから得られた特徴量と、各フレームのmotion vectorとresidualから得られた特徴量を統合して、各フレームの行動認識スコアを出力する。異なる動画間の入力ドメインでの分布を見ると、motion vectorとresidualは領域を共有しており、その結果効率的に学習することができる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wu_Compressed_Video_Action_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.12 17:00:50

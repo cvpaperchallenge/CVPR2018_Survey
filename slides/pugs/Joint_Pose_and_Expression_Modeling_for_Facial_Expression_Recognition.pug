@@ -1,0 +1,36 @@
++slide
+section#ID_Joint_Pose_and_Expression_Modeling_for_Facial_Expression_Recognition
+  .paper-abstract
+    .title Joint Pose and Expression Modeling for Facial Expression Recognition
+    .info
+      .authors Feifei Zhang, Tiznzhu Zhang, Qirong Mao, Changsheng Xu
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 顔向きの違いを含めて学習するGANベースの表情認識手法を提案した。
+          |顔画像から、個性、表情、顔向きをそれぞれ表す特徴量を抽出する。
+          |Generatorによってこれらの特徴量から表情、顔向きを変化させた画像を生成する。
+          |Discriminatorは、個性とアトリビュートを判定する2つを用意する。
+          |個性を判定するものは、顔画像から抽出した個性特徴によって判定を行う。
+          |アトリビュートを判定するものは、顔画像及び表情・顔向き特徴によって判定を行う。
+          |表情の識別器は、学習データに加えGeneratorによって生成した画像を用いて学習する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Joint_Pose_and_Expression_Modeling_for_Facial_Expression_Recognition.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Generatorによって表情、顔向きを変化させた画像を生成することによって、少ない学習データでも表情識別器の学習が可能となった。
+          |Multi-PIE、BU-3DFE、SFEWの3つのデータセット全てにおいて平均の識別率は従来手法と比べ最もよい数値を記録した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1630.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 01:24:55

@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Occlusion_Aware_Unsupervised_Learning_of_Optical_Flow
+  .paper-abstract
+    .title Occlusion Aware Unsupervised Learning of Optical Flow
+    .info
+      .authors Yang Wang, Yi Yang, Zhenheng Yang, Liang Zhao, Peng Wang, Wei Xu
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p オプティカルフローのアノテーションが困難であることから、教師なし学習ベースのオプティカルフロー推定手法が提案されているが、十分な精度が出ていない。そこで問題とされている遮蔽と大きな動きに対応したネットワークを提案。教師なし学習ベースの手法では最も良い精度を出し、教師あり学習ベースの手法とのギャップを埋めた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Occlusion_Aware_Unsupervised_Learning_of_Optical_Flow.png`,alt="Occlusion_Aware_Unsupervised_Learning_of_Optical_Flow")
+    .item3
+      .text
+        h1 新規性・結果
+        p ２枚の画像に対して、１枚目から２枚目へのオプティカルフローと、２枚目から１枚目のオプティカルフローを推定する。２枚目の画像と前者のオプティカルフローを用いて、１枚目の画像を復元する。復元した１枚目の画像のうち遮蔽が発生していない部分に対して、本物の１枚目の画像との差を損失として用いる。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.05890.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    
+
+

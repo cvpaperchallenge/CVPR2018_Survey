@@ -1,0 +1,33 @@
++slide
+section#ID_Joint_Optimization_Framework_for_Learning_with_Noisy_Labels
+  .paper-abstract
+    .title Joint Optimization Framework for Learning with Noisy Labels
+    .info
+      .authors Daiki Tanaka, Daiki Ikami, Toshihiko Yamasaki and Kiyoharu Aizawa
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 学習データのラベルにノイズが含まれている場合の学習方法を提案した。
+          |ネットワークのパラメータを求めるのみならず、ラベルそのものも更新していくことでラベルからノイズを取り除くことを可能とする。
+          |ネットワークのパラメータとラベルの一方を固定した更新を繰り返すことにより最適化していく。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Joint_Optimization_Framework_for_Learning_with_Noisy_Labels.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p CIFAR-10 dataset及びClothing1M datasetにより評価を行った。
+          |CIFAR-10の結果は、ノイズの割合に関わらず提案手法がベースラインと比べ精度が向上し、ノイズが50%含まれる場合でもTest Accuracy84.7%、Recovery Accuracy88.1%を記録した。
+          |Clothing1M datasetもベースラインよりaccuracyが良く、72.23%を記録した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1803.11364") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 02:39:24

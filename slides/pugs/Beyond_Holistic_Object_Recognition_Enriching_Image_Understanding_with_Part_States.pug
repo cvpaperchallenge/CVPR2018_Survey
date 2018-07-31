@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Beyond_Holistic_Object_Recognition_Enriching_Image_Understanding_with_Part_States
+  .paper-abstract
+    .title Beyond Holistic Object Recognition: Enriching Image Understanding with Part States
+    .info
+      .authors Cewu Lu, hao Su, CK Tang
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 新たな画像からPart stateをピクセルレベルで予測するタスク及び手法を提案した．(例:車のドアを入力画像から検出し，状態はopened)
+          li 著者達が物体パーツのセマンティックスペースを離散的なpart stateによりtokenizeし，各々のオブジェクトパートが一組のstateと関連する．推定段階ではピクセルレベルで物体パーツを検出し，stateをphraseにより出力する．また，提案タスクに用いられる新たなデータセットを構築した(画像はPASCAL VOC2010を用いた)．
+          li RGB-S(入力画像と推定したパーツセグメンテーション画像)からinteractiveでparts stateの予測を精密化するネットワークを提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}BeyondHolisticObjectRecognition.png`,alt="BeyondHolisticObjectRecognition")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新たなpart stateデータセットを提案．
+          li 提案手法をオブジェクトrelationship推定タスクにも用いられる．また，実験により提案手法が有効的にセマンティックパーツstatesを予測できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 従来のパーツセグメンテーションより一層理解のレベルが高い．また，提案のパーツstates推定が様々なほかのタスクに用いられる．
+          li VQA, Image captioningなどの画像理解部として用いられそう
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1635.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:53:34

@@ -1,0 +1,32 @@
++slide
+section#ID_Referring_Image_Segmentation_via_Recurrent_Refinement_Networks
+  .paper-abstract
+    .title Referring Image Segmentation via Recurrent Refinement Networks
+    .info
+      .authors Ruiyu Li, Kaican Li, Yi-Chun Kuo, Michelle Shu, Xiaojuan Qi, Xiaoyong Shen, Jiaya Jia
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p 自然言語に基づいてsegmentationするタスク(referring image segmentation)においてmulti-scaleなsemantic情報を取得するRecurrent Refinement Network(RRN)を提案。これは入力にPyramid特徴からの得られる情報を適応的に組み込み、segmentation maskを洗練する。実験では、ReferIt、UNC、UNC+、G-RefのデータセットでベースラインとSoTAより性能が優れていることを確認。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Referring_Image_Segmentation_via_Recurrent_Refinement_Networks.PNG`,alt="Referring_Image_Segmentation_via_Recurrent_Refinement_Networks.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Referring image segementationへmulti-scaleなsemantic情報を含むpyramid特徴を適用し、単純に利用するのではなく、ConvLSTMにより洗練化している点が新しい。そして4つのデータセットでSoTAの性能を達成。包括的な実験により、RRNの有効性を示している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ここでもPyramid特徴が利用され、有効性が示されている。Referring image segmentationにおいて、ConvLSTMにおいてtanhを利用すると大幅な精度改善がみられるのが不思議である。個人的な意見として、maskの生成のためのRefinementに再帰構造を利用するのは自然であり、加えて本論文の結果よりLSTMには、multi-scaleの特徴を適応的に追加・削除する機能があり、これがsegmentation maskに良い影響を与えている点がわかる。興味深い。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Li_Referring_Image_Segmentation_CVPR_2018_paper.html") paper
+          li
+            a(href="https://github.com/liruiyu/referseg_rrn") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 06:00:21

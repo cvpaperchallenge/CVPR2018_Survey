@@ -1,0 +1,37 @@
++slide
+section#ID_Multi-Task_Adversarial_Network_for_Disentangled_Feature_Learning
+  .paper-abstract
+    .title Multi-Task Adversarial Network for Disentangled Feature Learning
+    .info
+      .authors Yang Liu, Zhaowen Wang, Hailin Jin, Ian Wassell
+      .conference CVPR 2018
+      .paper_id 1589
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p ターゲットとなるファクターを認識するmulti-task learningを行う上で、ターゲットとなるファクター(content)を識別可能かつ、それ以外のファクター（style）を識別不可能な特徴量を学習するmulti-task adversarial network (MTAN)を提案。従来のmulti-task learningではファクターごとに共通の特徴量表現を学習していた。提案手法ではencoderから得られた特徴量に対してターゲットとなるファクターの識別が可能なように識別器を学習させる一方で、それ以外のファクターについてはdiscriminatorとadversarial gameを行うことで、識別が不可能なように学習を行う。またターゲットとなるファクターをよく学習するように、ターゲット以外のファクターをアトリビュートとした画像生成を行っている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Multi-Task_Adversarial_Network_for_Disentangled_Feature_Learning.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li fontとfaceのデータセットで実験。font recognition, 及びface recognitionにおいて既存手法よりも高い精度を達成。
+          li スタイルの識別に関するロス関数としてクロスエントロピーではなくWGANを参考にEarth Mover’s Distanceを導入したことで、最適化の安定化を実現。
+          li ablation studyを行った結果、提案したモデルがもっとも高い精度を達成したことを確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li スタイルとコンテンツを同時に学習したことをマルチタスクと読んでいる。ただしアプリケーションとしてはコンテンツの認識と、画像生成。
+          li adversarial gameによる拡張版triplet-lossのような学習方法。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1589.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1589-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.21 18:48:46

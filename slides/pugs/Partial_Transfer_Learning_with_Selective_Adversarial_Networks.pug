@@ -1,0 +1,45 @@
++slide
+section#ID_Partial_Transfer_Learning_with_Selective_Adversarial_Networks
+  .paper-abstract
+    .title Partial Transfer Learning with Selective Adversarial Networks
+    .info
+      .authors Zhangjie Cao, Mingsheng Long, Jianmin Wang, Michael I. Jordan
+      .conference CVPR 2018
+      .paper_id 1363
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 大規模なデータセット(ソースドメイン、SD)で学習したclassifierを、そのデータセットの一部のクラスをもつラベルなしデータセット(ターゲットドメイン、TD)へのdomain adaptationをGANで行うPartial Transfer Learningを提案。既存手法ではデータセットのもつラベル数に関わらずdomain adaptationをおこなっていたため、adaptation後のclassifierが前のclassifierよりも悪い精度をもつnegative transferが起きてしまっていた。提案手法では、右図のように、generatorから得られた特徴量をclassifierは学習するため、SDのインスタンスで識別率が悪いもののクラスはTDに所属していない可能性が高い。そのため、識別率を重みとすることでSDから学ぶべきインスタンスを学習することで、TDへのnegative transferを防ぐ。
+
+    .item2
+      .text
+        p
+          img(src=`${figpath}Partial_Transfer_Learning_with_Selective_Adversarial_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Office-31, Caltech-Office, ImageNet-Caltechで検証。
+            a(href="https://arxiv.org/abs/1702.05464") ADDA
+            |などの既存手法と比較
+          li 画像識別において、全てのデータセットでSoTAを達成。
+          li ターゲットのクラス数を変化させた際の精度を比較しており、
+            a(href="https://arxiv.org/abs/1505.07818") RevGrad
+            |ではクラス数が減るとともに精度も落ちているが提案手法では比較的精度が保たれている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Partial transfer learningを初めて提案した論文。今までの手法や問題提起とは異なり、問題設定自体が面白い。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1363.pdf") 論文
+          li
+            a(href="https://github.com/thuml/SAN") GitHub
+          li
+            a(href="https://arxiv.org/abs/1702.05464") 参考 Adversarial Discriminative Domain Adaptation (ADDA)
+          li
+            a(href="https://arxiv.org/abs/1505.07818") 参考 Domain-Adversarial Training of Neural Networks (RevGrad)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 00:41:20

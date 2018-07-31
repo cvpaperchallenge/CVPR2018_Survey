@@ -1,0 +1,29 @@
++slide
+section#ID_Efficient_Large-Scale_Approximate_Nearest_Neighbor_Search_on_OpenCL_FPGA
+  .paper-abstract
+    .title Efficient Large-Scale Approximate Nearest Neighbor Search on OpenCL FPGA
+    .info
+      .authors Jialiang Zhang, Soroosh Khoram, Jing Li
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 近似的最近傍探索法（Approximated Nearest Neighbor; ANN）をベースにした直積量子化（Product Quantization; PQ）手法を提案する。粗な量子化、直積量子化、回転行列、コードブック計算に量子化法を用い、OpenCL-FPGAを使用したIntel HARPv2プラットフォームにより実装する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730LargeScaleApproximateNN.png`,alt="180730LargeScaleApproximateNN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 大規模かつ高次元のANNにおいて、FPGAによりCPU/GPUのパフォーマンスを越えることに成功した最初の例である。YFCC100M/BigANN/Deep1Bにおいて検証を行なった。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Efficient_Large-Scale_Approximate_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 19:44:24

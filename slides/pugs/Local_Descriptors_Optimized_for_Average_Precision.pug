@@ -1,0 +1,36 @@
++slide
+section#ID_Local_Descriptors_Optimized_for_Average_Precision
+  .paper-abstract
+    .title Local Descriptors Optimized for Average Precision
+    .info
+      .authors Kun He, Yan Lu, Stan Sclaroff
+      .conference CVPR2018, arXive:1804.05312
+      .paper_id 86
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p Deep Neural Networkによる特徴量記述で，ランキングベースでリスト状にパッチの平均精度を直接学習するアプローチを提案．
+          |従来の特徴記述ではTriplet+ランキングベースで正負の３つのパッチで学習する方法が多いが，本手法では最近某探索で検索した複数のパッチから，ランキングベースでクエリとの距離を算出していく．
+          |ランキングベースの最近某探索で学習する際に，Average Precisionを基準に学習する．
+          |UBC Phototour, HPatches, RomePatches Datasetで高い性能を達成．
+    .item2
+      .text
+        p
+          img(src=`${figpath}86_overview.png`,alt="86_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Triplet Lossではパッチの特徴空間の距離に依存しないが，1つのペアで誤認識が発生すると他のペアの学習に影響を与えやすい(らしい．特に類似性の高いパッチのペア)．
+          |しかし，リストベースだと一部のパッチのランキングが入れ替わった場合でも，学習の悪影響を抑制できる．
+          |リストベースにする際にランキングを評価する際に最近某探索をベースにAPを最適化させることで，効率的に大量のパッチを学習できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 特徴記述の知識が乏しすぎて論文を十分に理解できませんでした…勉強します…
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.05312") 論文リンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 19:11:18

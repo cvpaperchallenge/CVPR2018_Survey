@@ -1,0 +1,32 @@
++slide
+section#ID_Efficient_and_Deep_Person_Re-Identification_Using_Multi-Level_Similarity
+  .paper-abstract
+    .title Efficient and Deep Person Re-Identification Using Multi-Level Similarity
+    .info
+      .authors Yiluan Guo, Ngai-Man Cheung
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 複数階層の構造で類似度を計算するEnd-to-EndのFully-Convolutional Siamese Networkを提案して人物再同定（Person Re-identification; ReID）。Siamese Networkは複数画像を入力として、出力を行うネットワークである。また、空間的なアテンションを計算するためにSpatial Transformer Netoworks (STNs)を使用し、Ranking Lossによりネットワークを最適化する。State-of-the-artとは言わないが、コンパクトなネットワークで良好な精度を実現した。右図は2枚の画像入力から類似度計算や複数誤差（ranking-loss/classification-loss）を計算するための構造である。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180720MultiLevelSimilarityReID.png`,alt="180720MultiLevelSimilarityReID")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ReIDを効果的に行うためのFully Convolutional Siamese Networkを提案した。特徴量を階層的に抽出し、最適化するためにRankingLossやClassificationLossを計算した。CMCによる評価において、CUHK03では86.45@TOP1, 97.50@TOP5, 99.10@TOP10という数値を出した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p TOP10で99%！
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Guo_Efficient_and_Deep_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://github.com/handong1587/handong1587.github.io/blob/master/_posts/deep_learning/2015-10-09-re-id.md") GitHub(ReID_Survey)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 13:38:35

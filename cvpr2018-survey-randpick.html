@@ -155,15 +155,16 @@ function pickup_onClick(){
 		//type	title	authors	読んだ人	arxiv	otherurl
 		var i=-1;
 		do{i=Math.floor(Math.random()*eidlist.length);}while(i===cid);
-		$('#type').text(tab[eidlist[i]][0]);
+		$('#type').text(tab[eidlist[i]][9]);
+		$('#session').text(tab[eidlist[i]][10]);
 		$('#title').text(tab[eidlist[i]][1]);
 		$('#authors').text(tab[eidlist[i]][2]);
 		if(tab[eidlist[i]].length>=5 && tab[eidlist[i]][4].length>0)
 			$('#arXiv').html('<a href="'+tab[eidlist[i]][4]+'" target="_blank">'+tab[eidlist[i]][4]+'</a>');
 		else $('#arXiv').text('');
-		if(tab[eidlist[i]].length>=6 && tab[eidlist[i]][5].length>0)
-			$('#otherUrl').html('<a href="'+tab[eidlist[i]][5]+'" target="_blank">'+tab[eidlist[i]][5]+'</a>');
-		else $('#otherUrl').text('');
+		if(tab[eidlist[i]].length>=7 && tab[eidlist[i]][7].length>0)
+			$('#CVF').html('<a href="'+tab[eidlist[i]][7]+'" target="_blank">'+tab[eidlist[i]][7]+'</a>');
+		else $('#CVF').text('');
 		var t=tab[eidlist[i]][1];
 		var tt=t.replace(/[^a-zA-Z0-9]/g,' ').replace(/(^ | $)/g,'').replace(/  +/g,' ').replace(/ /g,'+');
 		$('#search').html(
@@ -218,11 +219,11 @@ function reload_onClick(){
 	return innerproc.then(function(response){
 		return gapi.client.sheets.spreadsheets.values.get({
 			spreadsheetId: spreadsheetId,
-			range: 'main!C:H' // rangeの指定
+			range: 'main!C:M' // rangeの指定
 		}).then(function(response){
 			tab=response.result.values.slice(1); //ヘッダ削除
 			var n=tab.length;
-			//type	title	authors	読んだ人	arxiv	otherurl
+			//type	title	authors	読んだ人	arxiv	otherurl	otherurl2	cvf	comment	type	session_title
 			eidlist=[];
 			for(i=0;i<n;++i){
 				if(tab[i][3]===''){
@@ -315,7 +316,7 @@ function readit_onClick(){
 		throughlist=[];
 		//未読リスト更新
 		//報告したので未読リストから抜く
-		eidlist=eidlist.splice(cid,1);
+		eidlist.splice(cid,1);
 		cid=-1;
 		$('#readit').attr('disabled',true);
 		$("#status").text('Reporting succeeded.');
@@ -375,10 +376,11 @@ function readit_onClick(){
 </p>
 <table>
 <tr><th>type</th><td id="type"></td></tr>
+<tr><th>session</th><td id="session"></td></tr>
 <tr><th>title</th><td id="title"></td></tr>
 <tr><th>authors</th><td id="authors"></td></tr>
 <tr><th>arXiv</th><td id="arXiv"></td></tr>
-<tr><th>other url</th><td id="otherUrl"></td></tr>
+<tr><th>CVF</th><td id="CVF"></td></tr>
 <tr><th>search</th><td id="search"></td></tr>
 </table>
 </body>

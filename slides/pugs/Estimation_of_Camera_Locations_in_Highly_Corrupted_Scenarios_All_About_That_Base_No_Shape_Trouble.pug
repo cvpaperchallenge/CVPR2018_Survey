@@ -1,0 +1,30 @@
++slide
+section#ID_Estimation_of_Camera_Locations_in_Highly_Corrupted_Scenarios_All_About_That_Base_No_Shape_Trouble
+  .paper-abstract
+    .title Estimation of Camera Locations in Highly Corrupted Scenarios: All About That Base, No Shape Trouble
+    .info
+      .authors Yunpeng Shi, Gilad Lerman
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Structure-from-Motion（SfM）にてカメラ位置推定を改善する手法について、本論文ではAll-About-that-Base (AAB) Statisticを提案、重み付けの方法について検討し、カメラ方向についてずれのレベル（ここでいうCorruption levelとは？）を推定しながら位置推定を実現。これによりカメラ方向（Camera Orientation）推定、重み付けについて理論的な証明を行うこと、より高速な手法の提案が展望として考えられる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180724CameraLocationsCorruptedScenarios.png`,alt="180724CameraLocationsCorruptedScenarios")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ２つのカメラにおける誤差を推定して復元する重み付け方法について提案し、カメラの位置推定に寄与した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 数式が多くて最後まで読み解けませんでした。。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shi_Estimation_of_Camera_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 08:50:17

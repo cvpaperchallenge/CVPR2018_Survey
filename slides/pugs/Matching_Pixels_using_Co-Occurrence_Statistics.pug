@@ -1,0 +1,32 @@
++slide
+section#ID_Matching_Pixels_using_Co-Occurrence_Statistics
+  .paper-abstract
+    .title Matching Pixels using Co-Occurrence Statistics
+    .info
+      .authors Rotal Kat, Roy Jevnisck, Shai Avidan
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p ピクセル同士のマッチングをピクセルの共起性に着目して行う手法を提案した。
+          |ピクセルの出現頻度で正規化された共起行列を用いることでテンプレートマッチングを行う。
+          |その際、Multi-dimensional scalingを用いてマッピングを考えることで、画像を別空間に投影して扱うことを可能にする。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Matching_Pixels_using_Co-Occurrence_Statistics.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p RGB空間だけでなくDeep featuresなどピクセルとして表現されるあらゆるものに適用可能である。
+          |したがって、これまでに提案されてきたあらゆるCVの手法(論文中ではLucas-Kanade法及びKCF trackerを紹介)を使用することが可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://www.eng.tau.ac.il/~avidan/papers/CoTM.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 20:59:27

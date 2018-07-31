@@ -1,0 +1,33 @@
++slide
+section#ID_Learning_Answer_Embeddings_for_Visual_Question_Answering
+  .paper-abstract
+    .title Learning Answer Embeddings for Visual Question Answering
+    .info
+      .authors Hexiang Hu, Wei-Lun Chao and Fei Sha
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p VQAの質問と画像、答えそれぞれを表現するembeddingを学習する手法を提案。
+          |従来のVQAは、任意の文章を答えとして出すものと用意された選択肢の中から選択するものの２種類に分けることができる。
+          |前者は答えが合っているか否かは主観的なものである、後者は選択肢に含まれない答えを出力できない、runningとjoggingのように似ている単語の区別が難しいといった問題がある。
+          |そこで質問と画像のペア、答えそれぞれを表現するベクトルを学習することで答え同士の類似度の定義や未知の答えへの対応を可能にする。
+          |具体的には、それぞれのベクトルを用いた確率モデルを構築し、最尤推定を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Answer_Embeddings_for_Visual_Question_Answering.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法では学習の際に設定した答えのみしか出力できず、異なるデータセットに適用することが不可能であったが、提案手法により異なるデータセットなどデータセットに含まれていない答えにも適用可能となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://link.com/link1/") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 00:41:29

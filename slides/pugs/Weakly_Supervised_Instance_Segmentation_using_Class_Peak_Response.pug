@@ -1,0 +1,35 @@
++slide
+section#ID_Weakly_Supervised_Instance_Segmentation_using_Class_Peak_Response
+  .paper-abstract
+    .title Weakly Supervised Instance Segmentation using Class Peak Response
+    .info
+      .authors Yanzhao Zhou, Yi Zhu, Qixiang Ye, Qiang Qiu, Jianbin Jiao
+      .conference CVPR2018, arXive:1804.00880
+      .paper_id 399
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p 弱教師あり学習に畳み込み層のレスポンスを使ってセグメンテーションを行う手法であるPeak Response Map(PRM)を提案．
+          |手法としては，Class Response Mapという各クラスの特徴マップ(Class Activation Mappingのクラス数枚の特徴マップと同意？)からピークを算出し，そのピーク周辺の勾配を各特徴マップから抽出する事でPeak Response Mapを求める．
+          |そして，このピーク等を用いる事でセグメンテーションを行う．Pascal VOCとCOCOにおいて高い性能を達成している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}399_oveerview.png`,alt="399_oveerview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 特徴マップにおける特定のピークと勾配情報を用いる事で，セグメンテーションを可能にしている．
+          |また，弱教師あり学習(セグメンテーションラベルなし)によりセマンティックとインスタンスセグメンテーションをラベルなしに認識できるため，評価が高い．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00880") 論文リンク
+          li
+            a(href="http://yzhou.work/PRM/") オフィシャルページ(コード等あり)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.10 17:23:41

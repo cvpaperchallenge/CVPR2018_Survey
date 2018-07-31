@@ -1,0 +1,29 @@
++slide
+section#ID_Recovering_Realistic_Texture_in_Image_Super-Resolution_by_Deep_Spatial_Feature_Transform
+  .paper-abstract
+    .title Recovering Realistic Texture in Image Super-Resolution by Deep Spatial Feature Transform
+    .info
+      .authors Xintao Wang, Ke Yu, Chao Dong, Chen Change Loy
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 高解像度化タスクはill-posed problemであるため取りうる解が複数あり、GANを用いてもリアルなテクスチャを生成できていないが、特定のカテゴリに特化して学習させたネットワークを用いればリアルなテクスチャが生成できるという事実から、セマンティックセグメンテーションを利用した高解像度化に着目した。しかし、すべてのカテゴリごとに学習したネットワークを用意することは非現実的であるため、Spatial Feature Transform（SFT）層を導入することで、単一のネットワークでカテゴリ情報を考慮した高解像度化を行った。
+    .item2
+      .text
+        p
+          img(src=`${figpath}SFT-GAN.png`,alt="SFT-GAN")
+    .item3
+      .text
+        h1 手法・新規性
+        p SFT層は特徴量をアフィン変換をする層である。そのアフィン変換はスケールとシフトのパラメータで定義され、これらは各カテゴリごとの確率マップから与えられる。SFT層は従来のネットワークに導入することが可能であり、さらにセマンティックセグメンテーションに限らず、あらゆる事前知識（デプス情報など）に対しても適用可能である。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Recovering_Realistic_Texture_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 18:51:06
