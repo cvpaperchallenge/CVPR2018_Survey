@@ -1,0 +1,47 @@
+﻿+slide
+section#ID_Smooth_Neighbors_on_Teacher_Graphs_for_Semi-supervised_Learning
+  .paper-abstract
+    .title Smooth Neighbors on Teacher Graphs for Semi-supervised Learning
+    .info
+      .authors Yucen Luo, Jun Zhu, Mengxi Li, Yong Ren, Bo Zhang
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Self-supervise学習のための学習済みの教師グラフのneighboring pointsをregularizeする手法SNTGを提案した．
+          li 従来のSelf-supervise学習の一つの種類では，data pointにpertubationsを追加する手法がある．このような手法では，従来単一のdata pointに対しpertubationsを追加，data points間のconnetctionsが考えられなかった．このため，従来手法がunlabeled data structureの clusters, manifoldsなどの情報を利用できない．このような問題点から， Smooth Neighbors on Teacher Graphs (SNTG)を提案し，data points間のconnectionsを考慮したdata manifoldのsmoothness手法を提案した．
+          li 具体的には①SNTGが教師モデルの予測をベースにgraphを構築する②構築したgraphを用いてneighboring pointsの相似性を評価する，低い次元のmanifoldでneighboring pointsがsmoothである．このようなプロセスを用いて，
+            |neighboring pointsが相似し，non-neighborが相似しないように学習される．
+    .item2
+      .text
+        p
+          img(src=`${figpath}SmoothNeighborsOnTeacherBraphs-SemiSupervisedLearning.png`,alt="SmoothNeighborsOnTeacherBraphs-SemiSupervisedLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Semi-supervised学習ベンチマークでSoTAな結果を得られた．CIFAR-10(4000 labels):9.89%error rates, SVHN(500 labels):3.99%error rates.
+          li クラス数が少ない場合，大幅に進歩が従来より大きい．MNIST(20 labels)ではerror ratesを4.81%から1.36%に下げた.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Self-supervised学習が面白い
+          li
+            a(href="http://link.com/link1/") link1
+          li
+            a(href="http://link.com/link2/") link2
+          li
+            a(href="http://link.com/link3/") link3
+        ol
+          li
+            a(href="http://link.com/link3/") link3
+          li
+            a(href="http://link.com/link3/") link3
+          li
+            a(href="http://link.com/link3/") link3
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 12:20:27
