@@ -1,0 +1,30 @@
++slide
+section#ID_KIPPI_KInetic_Polygonal_Partitioning_of_Images
+  .paper-abstract
+    .title KIPPI: KInetic Polygonal Partitioning of Images
+    .info
+      .authors Jean-Philippe Bauchet, Florent Lafarge
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p スーパーピクセル（Superpixels）において多角形形状にて画像領域を近似する問題を取り扱う。従来手法（例えばボロノイマップ）では細い形状にて多角形性を失いがちであるが、本論文では克服することに成功し、サイズや形状によらず柔軟な推定が可能である。事前情報として直線のセグメントを計算しておくことで精度が向上することが明らかとなった。実験ではより少ない多角形で幾何学的な特徴を捉えることに成功した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730KIPPI.png`,alt="180730KIPPI")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 画像のスーパーピクセル近似にて、多角形により効率化された計算を可能にした。事前情報として直線検出と組み合わせることにより画像中の情報をよりよく捉えることができる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 特に人工物における形状を効果的に捉えることができる？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Bauchet_KIPPI_KInetic_Polygonal_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 08:00:38
