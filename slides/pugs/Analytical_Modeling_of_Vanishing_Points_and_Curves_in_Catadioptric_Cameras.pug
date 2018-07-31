@@ -1,0 +1,36 @@
++slide
+section#ID_Analytical_Modeling_of_Vanishing_Points_and_Curves_in_Catadioptric_Cameras
+  .paper-abstract
+    .title Analytical Modeling of Vanishing Points and Curves in Catadioptric Cameras
+    .info
+      .authors P. Miraldo, F. Eiras and S. Ramalingam
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 透視投影カメラ画像上の消失点，消失線に関する議論は多く行われてきたが，
+          |反射屈折カメラ画像上での消失点，消失曲線を表現する解析的モデルの開発は行われてきていなかった．
+          |反射屈折カメラ画像上では，一つの消失点から発生する平行曲線は別の消失点に再度収束するというところが透視投影カメラ画像のものとは異なる．
+        p そこで，
+          |カメラのキャリブレーションパラメータ，鏡形状係数，3D空間の平行線の方向ベクトルのパラメータを用いた
+          |パラメトリック方程式を提案．
+          |鏡面は軸対称二次曲面で表現．それを透視投影カメラが観測するような光学モデルのもと，定式化．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Analytical_Modeling_of_Vanishing_Points_and_Curves_in_Catadioptric_Cameras.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 今まで行われてこなかった反射屈折カメラにおける消失点・消失曲線のパラメトリック解析手法を与えた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 凄くすっきりしたネタと論文．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3508.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 12:18:57
