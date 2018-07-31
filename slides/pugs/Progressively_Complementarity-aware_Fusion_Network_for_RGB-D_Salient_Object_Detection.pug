@@ -12,7 +12,7 @@ section#ID_Progressively_Complementarity-aware_Fusion_Network_for_RGB-D_Salient_
         h1 概要
         ul
           li Cross-modal, cross-levelな特徴を融合するEnd-to-EndなRGB-D salient物体検出ネットワークを提案した．
-          li 従来のRGB-Dデータを取り扱うネットワークは直接RGB，Dの特徴を連結するか，深い層の特徴だけfuseする方が多い．著者達が①もっとexplicitly的にcross modalのcomplementary part をモデリングするべき②全部のレベルでcomplementを探索するべきの2つのところから，complementarity awareなネットワーク(CA Fuse)を提案し,CNNの層ごとにcross modalの特徴を結合する． CA Fuseに浅いから深い層までlevel-wiseに監督信号により，cross-levelなcomplementがより良くコンバインできると指摘した．
+          li 従来のRGB-Dデータを取り扱うネットワークは直接RGB，Dの特徴を連結するか，深い層の特徴だけ融合する事が多い．著者達は①もっと明示的にcross modalのcomplementary part をモデリングするべき②全部のレベルでcomplementを探索するべきの2つのところから，complementarity awareなネットワーク(CA Fuse)を提案し，CNNの層ごとにcross modalの特徴を結合する． CA Fuseに浅いから深い層までlevel-wiseに教師信号により，cross-levelなcomplementがより良く組み合わせられると指摘した．
     .item2
       .text
         p
@@ -21,13 +21,13 @@ section#ID_Progressively_Complementarity-aware_Fusion_Network_for_RGB-D_Salient_
       .text
         h1 新規性・結果・なぜ通ったか？
         ul
-          li 提案手法がcross modal, cross levelでRGBとDの情報を結合することにより，より有効的にRGBとDをfuseできる．
+          li 提案手法がcross modal, cross levelでRGBとDの情報を結合することにより，より有効的にRGBとDを融合できる．
           li NLPR, NJUD, STEREOデータセットにおいてSoTAなsalient物体検出パフォーマンスを得られた．
     .item4
       .text
         h1 コメント・リンク集
         ul
-          li RGBとDをいかにfuseした方が良いのかを紹介しているので，一度実装してみたい
+          li RGBとDをいかに融合した方が良いのかを紹介しているので，一度実装してみたい
           li
             a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3219.pdf") 論文
     .slide_index #{getSlideIndex()}
