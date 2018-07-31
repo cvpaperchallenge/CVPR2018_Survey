@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Preserving_Semantic_Relations_for_Zero-Shot_Learning
+  .paper-abstract
+    .title Preserving Semantic Relations for Zero-Shot Learning
+    .info
+      .authors Yashas Annadani, Soma Biswas
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li セマンティック空間の構造を利用したunseen categories識別のための新たなZero-shot learningの手法を提案した．
+          li 従来のrankingベースなZero-shot learningの手法はfixed marginなどの原因で，セマンティック構造が失ってしまう問題点がある．著者達がZero-shot learningタスクに対し①識別能力②unseen categories識別のためにセマンティック空間の特性をinhertingすることの2つが重要と指摘し，識別能力を保ちながら，セマンティック関係も守れる手法を提案した．
+          li 具体的には①semantic space構造をカテゴリ間のrelationsに分解する②relationsを更に3種類に分解する：identical; semantic similar; semantic dissimiar.③指定されたカテゴリに対して，semantic tupleを求め， semantic tupleに現状のカテゴリと3種類の関係を持つほかのクラスのサンプルを記録する．また，embedding spaceのこういった関係を保つようなロス関数を設計した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}PreservingSemanticRelations-ZeroShotLearning.png`,alt="PreservingSemanticRelations-ZeroShotLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li SUN, AWA2, CUB, aPYなどのデータセットにおいてSoTAなzero-shot learningパフォーマンスを得られた．
+          li 提案手法を用いてattribute informationなしのカテゴリに対してsemanticの推定も行えると指摘した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Unseen categoryに対してsemanticを予測するタスクも面白いと思う
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2578.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 12:28:55
