@@ -1,0 +1,29 @@
++slide
+section#ID_Coding_Kendalls_Shape_Trajectories_for_3D_Action_Recognition
+  .paper-abstract
+    .title Coding Kendall's Shape Trajectories for 3D Action Recognition
+    .info
+      .authors Amor Ben Tanfous, Hassen Drira, Boulbaba Ben Amor
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 本論文ではスパースコーディング/辞書学習として著名なKendall's shape spaceを用いて3次元関節点を入力とした人物行動認識に取り組む。Riemannian幾何による形状空間を構築してスパースコーディング/辞書学習を提案。行動認識を実現するために、Fourier temporal pyramidを施した後にBi-directional LSTMやLinear SVMを適用する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180723KendallShapeTrajectories.png`,alt="180723KendallShapeTrajectories")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 3次元関節点を入力とした人物行動認識の文脈において、Riemannian辞書によるスパースコーディングを実装したことで非線形空間をスパースかつ時系列情報のユークリッド空間にて取り扱うことができた。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tanfous_Coding_Kendalls_Shape_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 19:47:41
