@@ -1,0 +1,32 @@
++slide
+section#ID_Learning_TimeMemory-Efficient_Deep_Architectures_with_Budgeted_Super_Networks
+  .paper-abstract
+    .title Learning Time/Memory-Efficient Deep Architectures with Budgeted Super Networks
+    .info
+      .authors T.Veniat and L.Denoyer
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 研究指針の1つとして予測の質に加えて推論コストを考慮に入れることがある．本研究では，予測品質とコストの両方に関して効率的なニューラルネットワークアーキテクチャを発見する問題に焦点を当てるためにBudgeted Super Networks（BSN）と呼ばれるモデルを提案．計算コスト，メモリ消費コスト，および分散コストの3つのコストに対応する技術の能力を分析．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_TimeMemory-Efficient_Deep_Architectures_with_Budgeted_Super_Networks.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 最大認可コストを織り込んだ予測の学習目的関数に適用される勾配降下手法を使用して学習するアプローチ
+          li FAR-10およびCIFAR-100を用いたResNetやConvolutional Neural Fabricsのアーキテクチャよりも低コストで，より正確なニューラルネットワークアーキテクチャを見つけることを実証
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 今後は，メタラーニング等を使ってトレーニング時間を短縮するために適合できるかどうかを検討するようだ．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Veniat_Learning_TimeMemory-Efficient_Deep_CVPR_2018_paper.html") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 13:37:54

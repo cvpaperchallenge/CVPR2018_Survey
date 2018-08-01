@@ -1,0 +1,32 @@
++slide
+section#ID_Learning_a_Discriminative_Filter_Bank_within_a_CNN_for_Fine-grained_Recognition
+  .paper-abstract
+    .title Learning a Discriminative Filter Bank within a CNN for Fine-grained Recognition
+    .info
+      .authors Y.Wang, V.I.Morariu and L.S.Davis
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 本研究では，fine-grained認識でクラス固有の識別パッチを余分な部分や境界ボックスの注釈なしにキャプチャする畳み込みフィルタバンクを学習する．このことで，中間層の表現学習がCNNフレームワーク内で強化されることを示す．  一般的なfine-grained認識のデータセットを対象に評価実験をしたところSoTAを達成．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_a_Discriminative_Filter_Bank_within_a_CNN_for_Fine-grained_Recognition.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li フィルタバンクとは畳み込みフィルタの監視と非ランダムレイヤーの初期化を備えた新規で非対称なマルチストリームアーキテクチャ
+          li このことで適切に差別化を図り学習可能
+          li CUB-200-2011,Stanford Cars and FGVC-Aircraftを対象に評価実験をしたところSoTAを達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2312.pdf") link1
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 11:08:53
