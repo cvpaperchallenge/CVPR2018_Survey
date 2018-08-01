@@ -1,0 +1,35 @@
++slide
+section#ID_Link_and_code_Fast_indexing_with_graphs_and_compact_regression_codes
+  .paper-abstract
+    .title Link and code: Fast indexing with graphs and compact regression codes
+    .info
+      .authors Matthijs Douze, Alexandre Sablayrolles, and Herve Jegou
+      .conference CVPR 2018
+      .paper_id 3659
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 暗号化によるデータ圧縮とグラフ構造を用いた画像の類似度探索手法L&C(link and codeを提案。DNNなどで得られた特徴量をそのまま使用するとデータ容量が大きく、既存手法では精度が低いことを主張。提案手法ではデータ容量を小さくしつつ、検索精度を上げ、検索時間短くする手法を提案。各データベースで与えられている画像特徴量を暗号化を用いて圧縮し、次にHSNWというグラフベースのインデックス手法を用いてグラフを構築。グラフの精度向上のためにエンコードされた画像を復元し、近傍のデータから十分探索可能な場合には余計なデータを付加せず、そうでない場合には周囲のデータによる回帰をオフラインで行い、その回帰係数を格納する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Link_and_code_Fast_indexing_with_graphs_and_compact_regression_codes.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li BIGANN、Deep1Bで実験。画像の検索におけるrecall@1/10/100を評価尺度とした。
+          li BIGANNのrecall@100以外ではSoTAを達成。また検索時間はBIGANNで2ms程度、Deep1Bで3.50ms程度と比較手法よりも短い結果となった。一方で比較手法による各画像のデータ容量は16B程度に対し、提案手法によるデータ容量はBIGANNで72バイト、Deep1Bで108バイトとなった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 比較手法は提案手法よりも精度が低い分各画像のデータ容量が少ないが、比較手法でデータ容量を大きくすると精度が上がる分検索速度が落ちるため、提案手法の方が有利であると主張。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3659.pdf") 論文
+          li
+            a(href="https://arxiv.org/abs/1603.09320") 参考 Hierarchical Navigable Small Worlds (HNSW)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.26 22:02:53

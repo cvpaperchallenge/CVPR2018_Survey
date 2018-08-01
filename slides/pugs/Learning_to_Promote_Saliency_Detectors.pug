@@ -1,0 +1,34 @@
++slide
+section#ID_Learning_to_Promote_Saliency_Detectors
+  .paper-abstract
+    .title Learning to Promote Saliency Detectors
+    .info
+      .authors Yu Zeng et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p  Image-specific な saliency map を得るために, 既存の saliency detector を強化する問題を zero-shot learning として定式化. DNNを用いて, 画像の特徴量マップと各画素のアトリビュートを同じ計量空間に射影し, アトリビュートが射影された点をアンカーとして最近傍探索によって新しい saliency map を得る. ECSSD や PASCAL-S など５つのベンチマークで評価を行いSOTAを達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Learning_to_Promote_Saliency_Detectors.png`,alt="fukuhara-Learning_to_Promote_Saliency_Detectors.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Image-specific な saliency map を得るために, 既存の saliency detector を強化する問題を zero-shot learning として定式化
+          li DNN を各画素値とアトリビュート（サンプリング）を同一の計量空間に射影する, 埋め込み関数として学習させる
+          li 計量空間ではアトリビュートをアンカーとして最近傍探索によって, 新しい saliency map を得る
+          li 上記によって得られた saliency map を再度 DNN の入力とすることで, 再帰的に saliency map を更新（Test時は最初の入力として既存手法によって作成された saliency map を使用) 
+          li ECSSD, PASCAL-S, HKU-IS, SOD, DUTS の5つのデータセットを用いて評価実験を行った (MAE で測ってSOTAを達成)
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://crcv.ucf.edu/papers/cvpr2018/1757.pdf" target="blank") [論文] Learning to Promote Saliency Detectors
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 18:56:55

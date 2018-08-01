@@ -1,0 +1,32 @@
++slide
+section#ID_Unifying_Identification_and_Context_Learning_for_Person_Recognition
+  .paper-abstract
+    .title Unifying Identification and Context Learning for Person Recognition
+    .info
+      .authors Qingqiu Huang, Yu Xiong, Dahua Lin
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 人物自体（e.g. 個人同定、頭部推定）の推定のみでなく、人物に関連するコンテキスト（e.g. イベントと人物、人物間）についても学習できるようなモデルを提案する。本論文ではRegion Attention Networkを提案し、インスタンスごとに関連する視覚特徴を対応づける学習を行う個人の認識だけでなく、個人間やイベントとの関連付けを行う。右図は本論文で行おうとしていることが書かれており、従来型の顔認識（Face）のみでは個人認証に失敗する可能性が高いが、提案のVisualContext/SocialContextを用いることにより、個人認証を成功させる確率が高くなると主張。データセットとしてはPIPA（参考文献27）、本論文にて提案のCast In Movies（CIM）を用いた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180718IdentificationContextLearning.png`,alt="180718IdentificationContextLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p データセットとしてはPIPA（参考文献27）、本論文にて提案のCast In Movies（CIM）に対して処理を実行し、いずれのデータセットについてもState-of-the-artな精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p センスタイム44本のうちの一本である。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Unifying_Identification_and_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://www.sensetime.jp/single-post/2018/05/15/CVPR-2018%E3%81%AB44%E6%9C%AC%E3%81%AE%E8%AB%96%E6%96%87%E3%81%8C%E6%8E%A1%E6%8A%9E") SenseTimeについて
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.18 14:44:31

@@ -1,0 +1,37 @@
++slide
+section#ID_Controllable_Video_Generation_with_Sparse_Trajectories
+  .paper-abstract
+    .title Controllable Video Generation with Sparse Trajectories
+    .info
+      .authors Zekun Hao, Xun Huang, and Serge Belongie
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 動画の初期フレームと、モーションの軌跡を入力することで動画を生成する手法を提案した。
+          |入力画像とフローベクトルから、Flow、Hallucinated output、Maskの3つを予測するネットワークにより実現する。
+          |予測フレームの情報が、入力画像に含まれている場合はFlowによる変形によりピクセル値を取得する。
+          |一方で、初期フレームに映っていない情報や、色の変化についてはFlowによる変形では実現できないため、Hallucinated outputにより取得する。
+          |上記2つの画像のうち、どちらの情報を用いるかをマスクによって指定することで出力を取得する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Controllable_Video_Generation_with_Sparse_Trajectories.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p KITTI、Robotic Pushing、UCF-101の3つのデータセットにより実験を行った。
+          |各データセット中の動画から得られるFlowを入力として実際の動画中のフレームと予測フレームを比較したところ、PSNR、SSIMいずれの手法も提案手法が最も良いことを確認した。
+          |ユーザースタディの結果、Flow、Hallucinated outputのいずれかがない場合よりも両方ある場合の方が圧倒的に高い評価を得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1575.pdf") 論文
+          li
+            a(href="https://github.com/zekunhao1995/ControllableVideoGen") code
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 13:56:02

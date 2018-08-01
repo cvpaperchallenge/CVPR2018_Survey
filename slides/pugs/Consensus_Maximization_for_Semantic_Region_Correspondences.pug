@@ -1,0 +1,37 @@
++slide
+section#ID_Consensus_Maximization_for_Semantic_Region_Correspondences
+  .paper-abstract
+    .title Consensus Maximization for Semantic Region Correspondences
+    .info
+      .authors Pablo Speciale, Danda P. Paudel, Martin R. Oswald, Hayko Riemenschneider, Luc V. Gool, Marc Pollefeys
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p DayとNight、OutdoorとIndoorなど2種類の3次元モデルのregistrationをする手法を提案した。
+          |入力として3次元のsemantic labelを考え、各ラベル領域の点郡を楕円によって近似する。
+          |このとき、点郡から得られるConvex Hullの内側の楕円Inner Ellipsoidと外側の楕円Outer Ellipsoidを考える。
+          |2つの3次元モデルsourceとtargetの楕円をそれぞれInnerとOuterと考え、InnerがOuterの内部に存在する場合をラベル同士が対応していると考える。
+          |この対応してる楕円の数が最大になるような変換を考えることでモデル間のregistrationを実現する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Consensus_Maximization_for_Semantic_Region_Correspondences.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 合成データのテストでは、楕円数が少ないときは１秒以下で計算が可能であり、多い時でも従来手法よりもoutlier ratioが70%程度までは早い計算が可能である。
+          |精度に関してもICPよりRMSEが小さいことを確認した。
+          |リアルデータのテストではrotation errorは最大で3°以下、translation errorとscale errorは３%以下であった。
+          |計算時間はおよそ2から5分程度である。
+          |何故Analyzing Humansのセッションなのだろうか？
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00637") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 22:41:15

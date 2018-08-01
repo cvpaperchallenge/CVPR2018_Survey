@@ -1,0 +1,36 @@
++slide
+section#ID_Tagging_like_Humans_Diverse_and_Distinct_Image_Annotation
+  .paper-abstract
+    .title Tagging like Humans: Diverse and Distinct Image Annotation
+    .info
+      .authors Baoyuan Wu, Weidong Chen, Peng Sun, Wei Liu, Bernard Ghanem, Siwei Lyu
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像に対するアノテーションを自動で生成するdiverse and distinct image annotation(D2IA)を提案した。
+          |クラウドソーシングなどで人間の手によってアノテーションをする場合、人によって基準が異なる。
+          |例えば、同じものを対象にしてもある人は教会と具体的にアノテーションするのに対して別の人には建物とより抽象的にアノテーションする。
+          |他にも、ある人は建物の色に着目をするが別の人は写っている人の持ち物に着目する。
+          |このように、人間のアノテーションの特徴を反映したモデルの構築を目指す。
+          |アノテーションの生成はGANベースのモデルにより学習する。
+          |Generatorは画像からアノテーションを出力し、Discriminatorは画像とアノテーションのペアから適切なアノテーションかを判定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Tagging_like_Humans_Diverse_and_Distinct_Image_Annotation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Precision, Recall, F1で評価し、RecallとF1は従来手法と比べ最も良く、Precisionも最も良いものと比べ差が1%以内だった。
+          |ユーザースタディにおいても提案手法の方がいいと答えた人の方が多かった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00113") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 00:57:27

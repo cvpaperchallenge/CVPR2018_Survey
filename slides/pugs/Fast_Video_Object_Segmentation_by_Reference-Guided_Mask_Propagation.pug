@@ -1,0 +1,31 @@
++slide
+section#ID_Fast_Video_Object_Segmentation_by_Reference-Guided_Mask_Propagation
+  .paper-abstract
+    .title Fast Video Object Segmentation by Reference-Guided Mask Propagation
+    .info
+      .authors Seoung Wug Oh, Joon-Young Lee, Kalyan Sunkavalli and Seon Joo Kim
+      .conference CVPR2018
+      .paper_id 967
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 半教師ありの高速なVideo object segmentation（VOS）手法の提案．VOSでよく使われる物体マスクの伝搬と物体検出の2つを用いたdeep siamese encoder-decoder networkを設計した．少ないデータでも良い精度が出るように，学習時は合成データで事前学習を行い実データで微調整する2段階学習を行い，オンライン学習や後処理は不要である．合成データは，1枚の画像内で物体マスクを用いて物体位置を変更した画像の生成と，背景と物体マスクのペアを用いて背景に物体を合成した画像の2種類を用いている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180720_FVOS1.jpg`,alt="20180720_FVOS1.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 速度を上げながらもSOTAと同等の性能を達成した．DAVIS-2016/2017，SegTrack v2を用いて評価し，性能はSOTA同等だが速度はSOTAが0.3～13secに対して，本手法は0.13secで処理可能である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p タスク的に，合成画像を用いて移動を再現して学習するのは賢いと思った．Adobe Researchのインターン結果とのこと．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1029.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 16:04:03

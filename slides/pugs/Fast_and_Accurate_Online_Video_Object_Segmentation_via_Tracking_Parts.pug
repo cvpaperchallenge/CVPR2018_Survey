@@ -1,0 +1,51 @@
++slide
+section#ID_Fast_and_Accurate_Online_Video_Object_Segmentation_via_Tracking_Parts
+  .paper-abstract
+    .title Fast and Accurate Online Video Object Segmentation via Tracking Parts
+    .info
+      .authors Jingchun Cheng, Yi-Hsuan Tsai, Wei-Chih Hung, Shengjin Wang, Ming-Hsuan Yang
+      .conference CVPR 2018
+      .paper_id 423
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 動画内のターゲットオブジェクトに対するセグメンテーションをオンラインかつ正確に行うために、ターゲットの各パーツに対するトラッキングとセグメンテーションを行う手法を提案。既存手法ではターゲット全体に対するセグメンテーションを学習する必要があったため、動画ごとにネットワークのファインチューニングが必要など、オンラインでセグメンテーションを行うことができたなかった。提案手法は以下の3つの要素から成る。
+        ul
+          li part-based tracking：オクルージョンや形状の変化に対応するため、初期フレームから代表パーツが選択されROIとしてトラッキングを行う。
+          li region-of-interest segmentation：各ROI内の各パーツに対してCNNベースのROI SegNetをトレーニングを行う。
+          li similarity-based aggregation：より精度を高めるために、初期フレームのマスクとトラッキングされたパーツの類似度を測る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fast_and_Accurate_Online_Video_Object_Segmentation_via_Tracking_Parts.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li セグメンテーション結果を既存手法と比較した結果、精度を保ちつつ13倍程度速くなっている。(0.6FPS)
+          li トラッキングの精度においても、IoU-recall curvesを比較尺度として提案手法がもっとも良い結果となっている。
+          li Ours-part：提案手法に加えて
+            a(href="https://arxiv.org/abs/1512.02325") SSD
+            |を用いてターゲットのバウンディングボックスを決定。
+          li Ours-ref：Ours-partに加えて、
+            a(href="https://arxiv.org/abs/1210.5644") dense CRF
+            |によって物体境界の精度を向上。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li similarity-based aggregationは本当に有効なのかどうかが気になる。変形が激しいパーツもある上、グレースケールで類似度が測れるかが疑問。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0423.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/0423-supp.pdf") Supplementary material
+          li
+            a(href="https://github.com/JingchunCheng/FAVOS") GitHub
+          li
+            a(href="https://arxiv.org/abs/1512.02325") 参考 SSD: Single Shot MultiBox Detector (SSD)
+          li
+            a(href="https://arxiv.org/abs/1210.5644") 参考 Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials (dense CRF)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 00:56:58
