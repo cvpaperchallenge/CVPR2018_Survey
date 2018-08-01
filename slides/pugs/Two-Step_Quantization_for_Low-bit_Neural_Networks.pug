@@ -1,0 +1,33 @@
++slide
+section#ID_Two-Step_Quantization_for_Low-bit_Neural_Networks
+  .paper-abstract
+    .title Two-Step Quantization for Low-bit Neural Networks
+    .info
+      .authors Peisong Wang, Qinghao Hu, Yifan Zhang, Chunjie Zhang, Yang Liu and Jian Cheng
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p ネットワーク量子化問題において起こる精度の低下に対処するアプローチを提案．学習コードと学習コードに基づく変換を学習の2つのステップに分割量子化を行うTwo-Step Quantization (TSQ) frameworkを構築．CIFAR-10 と ILSVRC-12 datasetsを用いた網羅的な実験によるTSQの有効性，SOTAであることを確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180725_Two-Step_Quantization.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 既存のネットワーク量子化手法のほとんどは変換と符号化を同時に学習(これによって最適な学習が不可能)．TSQによってこの問題に対処．
+          li コードを学習するためのスパースな量子化手法
+          li 低ビット制約つきの非線形最小二乗法による回帰問題として定式化し，反復的かつ効率的に解くアプローチ
+          li 特にAlexNet(2-bit activation and ternary weight quantization)において，TSQによる精度はオリジナルと比較しても0.5％低い程度(最新の量子化手法と比較しても5％向上)．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1716.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 18:01:43
