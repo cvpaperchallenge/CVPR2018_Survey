@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Deep_Adversarial_Metric_Learning
+  .paper-abstract
+    .title Deep Adversarial Metric Learning
+    .info
+      .authors Yueqi Duan, Wenzhao Zheng, Xudong Lin, Jiwen Lu, Jie Zhou,
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Metric learningに用いられる観測されたnegative examplesからhard negative examplesを生成する手法Deep Adversarial Metric Learning (DAML)を提案した．提案の生成手法を様々な従来metric learning手法に用いられる．
+          li 従来のあらゆるデータセットにはeasy negativesがより多い，hard negativesが相対的少ない特徴がある．Metric learningタスクに対し，難しいのはhard negativesとpositivesの相似性を大きくすることである．そこで，提案手法は大量なeasy negativesからhard negativesを生成する手法を提案し，easy negativesから大量な補充情報を用いる
+          li 提案手法はadversarial mannerで同時にhard negative generatorとfeature embeddingを学習し，生成した大量なhard negativeから有効的なdistance metricsを学習する．また， negative generatorのロスは①合成サンプルはanchorと近い②合成サンプルのアノテーション情報を保持する③合成サンプルはlearned metricをご認識させるの3つをベースに設計した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}deep_adversarial_metric_learning.png`,alt="deep_adversarial_metric_learning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のmetric learning手法は主にeasy negativesをignoreして，提案手法DAMLはeasy negativesをexploitし， easy negativesをhard negativesの生成の補充情報として使用する．これにより生成できるhard negativesはよりpotentialである．
+          li CUB 200-2011, Cars196, Stanford Online Productsの3つのデータセットにおいて実験の結果によりDAMLは従来のmetric learning手法より良いパフォーマンスを得られた
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li Easy negativesを利用したhard negatives生成が面白い．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0350.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 19:36:53
