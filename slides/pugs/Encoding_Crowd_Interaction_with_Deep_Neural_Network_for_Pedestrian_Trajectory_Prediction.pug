@@ -1,0 +1,38 @@
++slide
+section#ID_Encoding_Crowd_Interaction_with_Deep_Neural_Network_for_Pedestrian_Trajectory_Prediction
+  .paper-abstract
+    .title Encoding Crowd Interaction with Deep Neural Network for Pedestrian Trajectory Prediction
+    .info
+      .authors Yanyu Xu, Zhixin Piao, Shenghua Gao
+      .conference CVPR 2018
+    .slide_editor Shusuke Shigenaka
+
+    .item1
+      .text
+        h1 概要
+        p 歩行者ごとで隣接フレーム間の変位を逐次予測するCIDNN(Crowd Interaction Deep Neural Network)を提案．
+          |群衆による歩行者の影響のレベルをLSTMによって重み付けをし，従来の手法に比べ，
+          |対象の歩行者への空間的親和性の重要度を高くしている．
+          |提案手法は以下を可能にし公的に利用可能なデータセットにおいて高精度な軌道予測を実現した．
+        ul
+          li LSTMベースのモーションのエンコード
+          li 位置推定に基づく空間的測定
+          li 座標変位に基づく軌道予測
+    .item2
+      .text
+        p
+          img(src=`${figpath}Encoding_Crowd_Interaction_with_Deep_Neural_Network_for_Pedestrian_Trajectory_Prediction.png`,alt="Encoding_Crowd_Interaction_with_Deep_Neural_Network_for_Pedestrian_Trajectory_Prediction")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 歩行者の軌道に影響を及ぼす可能性を空間的特性を維持しながらレベル感を考慮し軌道予測を行った．
+          li キーフレームにおける外観ベースのキーポイントと組み合わせることで各フレームのキーポイント検出をさけ精度を低下させることなく効率的に行った．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2136.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 12:34:53

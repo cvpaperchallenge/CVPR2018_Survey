@@ -1,0 +1,35 @@
++slide
+section#ID_Fast_Spectral_Ranking_for_Similarity_Search
+  .paper-abstract
+    .title Fast Spectral Ranking for Similarity Search
+    .info
+      .authors Ahmet Iscen, Yannis Avrithis, Giorgos Tolias, Teddy Furon
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Object retrievalにおけるManifold searchの計算コストをEuclidean searchまで下げるためのembeddingを提案した。
+          |nodeが特徴量に対応するものをグラフとして扱い、観測ベクトルyから類似度を表すランキングベクトルxを予測する線形システムを扱う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fast_Spectral_Ranking_for_Similarity_Search.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 10^5オーダーの数ある画像に対して、オフラインプロセスを2,3時間で、オンラインプロセスは従来手法と同等に処理することが可能に。
+          |精度は
+          a(href="https://arxiv.org/abs/1611.05113") 従来手法
+          |と同程度である。
+          |mAPはrank-1kあたりで収束している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p グラフ理論の知識があるともっと読みやすくなる？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Iscen_Fast_Spectral_Ranking_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 01:26:16

@@ -1,0 +1,32 @@
++slide
+section#ID_A_Deeper_Look_at_Power_Normalizations
+  .paper-abstract
+    .title A Deeper Look at Power Normalizations
+    .info
+      .authors Piotr Koniusz, Hongguang Zhang and Fatih Porikli
+      .conference CVPR2018
+      .paper_id 707
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 特徴マップの非線形プーリングにパワー正規化（Power Normalization；PN）を実装する新しい層を導入する．PNは，Bag-of-Wordsのデータ表現コンテキストで非常に有用な非線形オペレータである．CNN（ResNet-50）の最後の畳み込み層で生成された特徴マップの特徴ベクトルφとそれを符号化した空間座標cを組み合わせる．このカーネルを線形化すると，特徴ベクトルの2次統計を獲得するpositive definite matrixが得られる．ここでは，MaxExpとGammaの2つのPN関数について研究する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180730_DLPN_1.jpg`,alt="20180730_DLPN_1.jpg")
+          img(src=`${figpath}20180730_DLPN_2.jpg`,alt="20180730_DLPN_2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ResNet-50モデルにPN層を実装し，fine-grained認識，シーン認識，マテリアル分類の4つのベンチマークを行い，すべてのタスクでパフォーマンスの向上を行うことができた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p DNNでPNはあまり聞き慣れないが，機械学習や信号処理ではよく使われる手法のよう．数式や評価が細部まで行き渡っている．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3244.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 13:08:25

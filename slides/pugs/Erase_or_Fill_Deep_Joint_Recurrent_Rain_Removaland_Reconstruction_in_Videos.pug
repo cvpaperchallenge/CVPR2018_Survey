@@ -1,0 +1,34 @@
++slide
+section#ID_Erase_or_Fill_Deep_Joint_Recurrent_Rain_Removaland_Reconstruction_in_Videos
+  .paper-abstract
+    .title Erase or Fill? Deep Joint Recurrent Rain Removal and Reconstruction in Videos
+    .info
+      .authors Jiaying Liu, Wenhan Yang, Shuai Yang and Zongming Guo
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p RNNを用いた映像中の雨を除去する手法を提案．雨による画質の劣化分類，空間的テクスチャに基づく雨の除去，時間的一貫性に基づく背景の詳細な再構築を同時に行うJoint Recurrent Rain Removal and Reconstruction Network (J4R-Net) を提案．
+          |既存手法を用いた網羅的な実験により，提案手法がSOTAであることを確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180725_Erase_or_Fill1.png`,alt="Image1")
+          img(src=`${figpath}20180725_Erase_or_Fill2.png`,alt="Image2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 分類，除去，構築をend to endに行う手法の構築
+          li 雨の除去と背景の細部再構成感のトレードオフをRNNで再現し，雨の透過率の低さによる背景の詳細が完全に失われる問題に対処
+          li rain degradation classification(分類)によって雨による劣化箇所のバイナリマップを出力，これによって除去箇所を正確に把握
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1118.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 13:36:14
