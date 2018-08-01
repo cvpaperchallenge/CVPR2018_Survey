@@ -1,0 +1,36 @@
++slide
+section#ID_Regularizing_Deep_Networks_by_Modeling_and_Predicting_Label_Structure
+  .paper-abstract
+    .title Regularizing Deep Networks by Modeling and Predicting Label Structure
+    .info
+      .authors Mohammadreza Mostajabi, Michael Maire and Gregory Shakhnarovich
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p DNNの教師あり学習時に使用するカスタム正規化関数を提案．アノテーションセットをオートエンコーダーで学習することで，正規化関数を導出．セマンティックセグメンテーション実験では，スクラッチ学習によるモデルおよびImageNet pre-trained modelを用いたファインチューニングによるモデルの両者においてベースライン以上の精度を確認．また異なるCNNにおいても一貫して精度向上を確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180731_Regularizing_Deep_Networks_by_Modeling_and_Predicting_Label_Structure.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 学習の流れは以下の通り
+        ol
+          li オートエンコーダでラベルをモデル化
+          li オートエンコーダの隠れ層を介して出力を予測する補助ブランチを接続し，ネットワークを学習(学習終了後接続したブランチは削除，通常のネットワークとして使用可能)
+            |利点および新規性
+        ul
+          li 学習終了後，使用するネットワークに接続したオートエンコーダは削除されるため，テスト時の計算コストは本手法を適用する前と同様
+          li ラベル空間の抽象化モデルを構築し，本来のタスクと抽象概念を学習することでよりよいネットワークの重みを学習可能
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.02009.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 18:37:16

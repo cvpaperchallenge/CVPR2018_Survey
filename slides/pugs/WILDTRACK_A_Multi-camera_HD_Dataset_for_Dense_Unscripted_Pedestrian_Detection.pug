@@ -1,0 +1,33 @@
++slide
+section#ID_WILDTRACK_A_Multi-camera_HD_Dataset_for_Dense_Unscripted_Pedestrian_Detection
+  .paper-abstract
+    .title WILDTRACK: A Multi-camera HD Dataset for Dense Unscripted Pedestrian Detection
+    .info
+      .authors Tatjana Chavdarova, Pierre Baque, Stephane Bouquet, Andrii Maksai, Cijo Jose, Timur Bagautdinov, Louis Lettry, Pascal Fua, Luc Van Gool, and Franc¸ois Fleuret
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では複数の同期されたカメラを利用した歩行者検出のための大規模かつ高解像度のデータセットを提案．カメラフレームと合わせて，正確なキャリブレーションと2frame/sの速度で検出するための400種類のアノテーション付きフレーム7種類を確保．これにより，40,000を超えるバウンディングボックスが注目領域に存在するすべての人に作成され、合計で300人以上の人物に対してアノテーションを付与．深層ニューラルネットワークを用いた多視点からの人物検出のベースラインアルゴリズムや非マルコフモデルを用いたベースラインアルゴリズムによるベンチマークテストを実施．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180723_WILDTRACK1.png`,alt="Image1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p
+          img(src=`${figpath}20180723_WILDTRACK2.png`,alt="Image1")
+        ul
+          li 歩行者検出のための他視点からの大規模かつ高解像度のデータセットを構築．
+          li 深層ニューラルネットワークを用いた多視点からの人物検出のベースラインアルゴリズムや非マルコフモデルを用いたベースラインアルゴリズムによるベンチマークテストによる網羅的な調査．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1562.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 17:18:50
