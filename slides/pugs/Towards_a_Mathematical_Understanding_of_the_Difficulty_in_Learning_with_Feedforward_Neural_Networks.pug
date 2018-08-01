@@ -1,0 +1,36 @@
++slide
+section#ID_Towards_a_Mathematical_Understanding_of_the_Difficulty_in_Learning_with_Feedforward_Neural_Networks
+  .paper-abstract
+    .title Towards a Mathematical Understanding of the Difficulty in Learning with Feedforward Neural Networks
+    .info
+      .authors Hao Shen
+      .conference CVPR 2018
+      .paper_id 1462
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p smooth optimisationの観点から、多層パーセプトロンに対する数学的な考察を行なった論文。DNNの学習の際に最もよく使われるアルゴリズムであるバックプロパゲーションは局所最適解に収束する可能性があることと、収束が遅いことが問題視されている。本論文ではロス関数のcritical point（停留点）に対する解析を行うことで、局所最適解に収束することなく帯域最適解に収束する条件を確認。また、より速くネットワークの学習を収束させるために、ヘッシアンに対する解析や、帯域的最適解に二次収束するという点でapproximate Newton’s algorithmと呼ばれるGeneralised Gauss-Newtonアルゴリズムを用いた学習による評価を行なった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Towards_a_Mathematical_Understanding_of_the_Difficulty_in_Learning_with_Feedforward_Neural_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ロス関数の停留点について解析することで、多層パーセプトロンによる学習が局所最適解に収束することなく、帯域的最適解に収束するための条件を確認。また、より収束を速くするためにヘッシアンについても解析を行なった。
+          li Generalised Gauss-Newton algorithmのパフォーマンスを二次平面上の４つのクラス識別によって調査。二次収束し、バックプロパゲーションよりも速く収束することを確認。活性化関数としてSoftPlusやBent identityを使用することで帯域解へ収束することを確認.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 論文の多くのページをMLPについての数学的な解析に割いており、Conclusionチャプターでは”All aspects discussed in this paper require a further systematic and thorough investigation both theoretically and experimentally, and are expected to be also applicable for training recurrent neural networks.”と述べている。
+          li 式40本に対して、図が一つ、表0という数学的な論文。しかし、今後のDNNの発展のためには数学的理解はますます重要と考えられるため、積極的に読んでいく必要がある。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1462.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1462-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 22:45:54
