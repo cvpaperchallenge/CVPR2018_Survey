@@ -1,0 +1,38 @@
++slide
+section#ID_Learning_Multi-Instance_Enriched_Image_Representations_via_Non-Greedy_Ratio_Maximization_of_the_l1-Norm_Distances
+  .paper-abstract
+    .title Learning Multi-Instance Enriched Image Representations via Non-Greedy Ratio Maximization of the l1-Norm Distances
+    .info
+      .authors K. Liu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        Multi-instance learning (MIL) で画像中に複数のインスタンス (patch) があるものを表現する話．
+        従来手法だとインスタンスごとの表現はされるものの画像全体のGlobal表現が落ちているものが多かった．
+        加えて，従来だと複数のベクトルで画像を表現するものがあるが，それはやりづらいので単一のベクトルで表現可能なことが望ましい．
+        そこでこの研究では，複数のインスタンスと全体のコンテキスト情報を合わせて単一の特徴ベクトルで表現するための手法を提案．
+  
+    .item2
+      img(src=figpath+"Learning_Multi-Instance_Enriched_Image_Representations_via_Non-Greedy_Ratio_Maximization_of_the_l1-Norm_Distances.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li MILにおいてインスタンスだけでなく画像全体も合わせて単一のベクトルで特徴表現するための手法を提案
+          li それを実現するための目的関数と最適化方法の部分で理論的に新規性がありそう?
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Liu_Learning_Multi-Instance_Enriched_CVPR_2018_paper.html") 論文
+          li 非Deep論文で，関連研究とか比較手法としてすらDeepの話が一単語も出てこないのすごい．
+          li 特徴表現を提案している論文っぽく見えるのに，実験の比較はSVMなど識別器と比較しているのがちょっとよくわからない．
+          li Non-greedy Ratio Maximization of the L1-norm Distancesという論文の肝っぽいところもよくわかってない...
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 15:45:23
+
+
