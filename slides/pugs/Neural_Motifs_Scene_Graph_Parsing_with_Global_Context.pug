@@ -1,0 +1,31 @@
++slide
+section#ID_Neural_Motifs_Scene_Graph_Parsing_with_Global_Context
+  .paper-abstract
+    .title Neural Motifs: Scene Graph Parsing with Global Context
+    .info
+      .authors Rowan Zellers, Mark Yatskar, Sam Thomson, Yejin Choi,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        画像中のシーンにおいて、構造化されたグラフ表現を生成するMotif Network(MOTIFNET)の提案。シーングラフ解析を、境界領域、領域のラベルおよび関係を予測する段階に分割。各段階の間で、コンテキストをbidirectional LSTMを使用して算出し、その後の段階で使用。検出器によって領域を提案し、領域間のコンテキスト情報を計算して、伝搬する。コンテキストをラベル推定に使用。コンテキスト化された頭、尾、および領域情報を外積と組み合わせることによって、ラベルを割り当てます。
+
+    .item2
+      img(src=figpath+"180731MOTIFNET.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 図の犬、耳、目などのバウンディングボックスにおいて、物体間の関係性を構造化する。モチーフという考え方を利用し、Visual Genome datasetを分析。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="https://arxiv.org/pdf/1711.06640.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 11:01:30
+
+

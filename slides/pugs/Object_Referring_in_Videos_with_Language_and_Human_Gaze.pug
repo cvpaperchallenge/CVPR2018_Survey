@@ -1,0 +1,36 @@
++slide
+section#ID_Object_Referring_in_Videos_with_Language_and_Human_Gaze
+  .paper-abstract
+    .title Object Referring in Videos with Language and Human Gaze
+    .info
+      .authors Arun Balajee Vasudevan, Dengxin Dai and Luc Van Gool
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 人間の視線情報を用いた動画中のObject Referring (OR)を行う．(OR: 言語記述を伴うシーン内のターゲットオブジェクトのローカライズの問題)．物体の外観や動き，注視(視線情報)，時空間コンテキストを1つのネットワークに統合する動画におけるORのための新規のネットワークを提案．提案した手法がモーションキューや人間の視線情報，時空間のテキストを効果的に利用可能であることを確認．従来のOR手法より優れていることを確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180723_Object_Referring_in_Videos_with_Language_and_Human_Gaze.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ORの既存手法では静的物体のみ対応．提案手法では動的な物体にも対応可能．
+          li 人間の視線に着目した手法を提案．
+          li ORのための新規のデータセットを構築(5,000以上のビデオシーケンスに30,000個のオブジェクトの説明文と視線情報のアノテーション)．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1801.01582.pdf") 論文(arxiv)
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1765.pdf") 論文(cvf)
+          li
+            a(href="https://people.ee.ethz.ch/~arunv/ORGaze.html") プロジェクト
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.23 14:20:22

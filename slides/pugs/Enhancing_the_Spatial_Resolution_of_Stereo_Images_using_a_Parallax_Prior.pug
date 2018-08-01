@@ -1,0 +1,40 @@
++slide
+section#ID_Enhancing_the_Spatial_Resolution_of_Stereo_Images_using_a_Parallax_Prior
+  .paper-abstract
+    .title Enhancing the Spatial Resolution of Stereo Images using a Parallax Prior
+    .info
+      .authors D.S. Jeon, S. Baek, I. Choi and M.H. Kim
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 複数枚画像の超解像といえば主に時系列画像で行われてきたが，
+          |本稿ではステレオで行う．
+          |このとき，それぞれのステレオで視差が異なるので，
+          |視差の考慮が必要である．
+          |ステレオ画像から視差は計算できるが，
+          |これを基に超解像を行う従来法によるとサブピクセル精度が出せずジャギーが出てしまう．
+        p 本稿では，End-to-Endにステレオ画像から視差に基づくシフト量と高解像画像の出力を行うDNNを提案する．
+          |構造的には，YCbCrにして照度，カラー成分に分けて2段階で学習するNNを構成，
+          |照度画像で，まずシフトを考慮した高解像照度画像を生成．片方の眼の画像のシフト画像を複数枚用意し，
+          |もう片方の眼の画像と併せてCNNに入力．
+          |出力の高解像照度画像と，低解像のカラー成分画像からCNNで高解像カラー画像を最終的に出力する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Enhancing_the_Spatial_Resolution_of_Stereo_Images_using_a_Parallax_Prior.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のステレオベース手法よりなめらかな高解像画像が出力できている．PSNRでよりよいスコアをマーク．
+          |シフト量，シフト画像の枚数についても議論．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0493.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 12:12:48
