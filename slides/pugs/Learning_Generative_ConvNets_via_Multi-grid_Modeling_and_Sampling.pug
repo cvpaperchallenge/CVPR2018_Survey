@@ -1,0 +1,32 @@
++slide
+section#ID_Learning_Generative_ConvNets_via_Multi-grid_Modeling_and_Sampling
+  .paper-abstract
+    .title Learning Generative ConvNets via Multi-grid Modeling and Sampling
+    .info
+      .authors Ruiqi Gao, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        画像エネルギーベースのCNNモデルを学習するためのマルチグリッド法の提案。各グリッドについて、エネルギー関数が、CNNによって出力するエネルギーベースの確率モデルを学習。提案学習アルゴリズムの各反復における、観察された各訓練画像について、最小1×1バージョンのトレーニング画像から複数のグリッドで合成画像を生成する。各後続グリッドにおける合成画像は、前の粗いグリッドで生成された合成画像から得られる。合成された例を得た後に、複数のグリッドにおけるモデルのパラメータを、合成された例と観測された例との間の差異に基づいて、同時に更新する。
+
+    .item2
+      img(src=figpath+"180731LGCNv.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 本マルチグリッド法は、エネルギーベースのCNNモデルを学習することができ、元のcontrastive divergence(CD)とpersistent CDより高精度。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p 2つの異なるクラスのモデル間の不一致や学習の不安定性などの問題を改善することによって、GAN法の代替え法として有効。
+        ul
+          li: a(href="https://arxiv.org/pdf/1709.08868.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 10:46:15
+
+
