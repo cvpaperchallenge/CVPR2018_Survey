@@ -1,0 +1,36 @@
++slide
+section#ID_Multi-shot_Pedestrian_Re-identification_via_Sequential_Decision_Making
+  .paper-abstract
+    .title Multi-shot Pedestrian Re-identification via Sequential Decision Making
+    .info
+      .authors Jianfu Zhang, Naiyan Wang and Liqing Zhang
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p マルチショット(異なるカメラ間)な人物再同定(Person ReID)問題に解釈可能な強化学習ベースのアプローチを組み込んだ手法の提案．3つのベンチマークテストをでは提案手法は他の最新の手法と比較し，3％〜6％の画像しか使用することなく優れた性能を発揮．提案した手法は効率と性能の両面において，他の手法と比べ有利であると提示．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180725_Sequential_Decision_Making1.png`,alt="Image1")
+          img(src=`${figpath}20180725_Sequential_Decision_Making2.png`,alt="Image2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li RNNのような時系列モデルを使用する既存研究と異なり，強化学習ベースの手法(かつ解釈可能)を適用．
+          li 圧倒的少ない学習データ(既存手法の3％〜6％)で優れた性能を発揮
+          li Re-ID Agentは一対の画像を検証するように設計されており，結果を出力(同一人物か否か)するか，再度検証するために別の画像を要求(出力結果の断定できない場合，決定の延期)
+          li 学習時の報酬を調整することで，速度と精度間のトレードオフを調整可能
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.07257.pdf") 論文(arxiv)
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3981.pdf") 論文(cvf)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 16:20:10

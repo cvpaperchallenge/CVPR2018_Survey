@@ -1,0 +1,37 @@
++slide
+section#ID_Manifold_Learning_in_Quotient_Spaces
+  .paper-abstract
+    .title Manifold Learning in Quotient Spaces
+    .info
+      .authors Eloi Mehr, Andre Lieutier, Fernando Sanchez Bermudez, Vincent Guitteny, Nicolas Thome, Matthieu Cord
+      .conference CVPR 2018
+      .paper_id 2989
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 3D shapeを学習する際にposeに独立なgeometryの潜在変数空間を学習するネットワークであるquotient autoencoder(QAE)を提案。通常のAEに加えて、orbit poolingとquotient lossという2つのアイディアを追加した。orbit poolingでは、入力された3D shapeに対して様々な回転を与えそれらから得られる潜在変数のうち、各成分の最大値をその3D shapeを表現する潜在変数とする。quotient lossでは、リコンストラクションされた3D shapeと参照3D shapeの距離の下限をロスとして採用する。この2つの方法によってposeに不変な潜在変数空間を構築する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Manifold_Learning_in_Quotient_Spaces.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ShapeNet datasetを用いてデータオーギュメンテーションを行なった通常のVAEと比較。
+          li リコンストラクションした際のdepth map、ボクセルの誤差においてもっとも高い精度を達成。
+          li 一度QAEを学習すれば、同一3D shapeに対して任意の回転を与えた出力を行うことが可能。
+          li orbit pooling においてRBFを用いた非剛体変形を学習させることも可能。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 3D shapeに特化したモデル構築ではなく一般的な枠組みなので、他のデータ入力にも対応可能だと考えられる。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2989.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/2989-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:32:01

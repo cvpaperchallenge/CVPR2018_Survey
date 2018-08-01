@@ -1,0 +1,34 @@
++slide
+section#ID_In-Place_Activated_BatchNorm_for_Memory-Optimized_Training_of_DNNs
+  .paper-abstract
+    .title In-Place Activated BatchNorm for Memory-Optimized Training of DNNs
+    .info
+      .authors Samuel Rota Bulò et al.
+      .conference CVPR2018
+      .paper_id 1712.02616
+    .slide_editor TakumuIkeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 近年のDNNの学習におけるメモリフットプリントを大幅に削減する新たな手法としてIn-Place Activated Batch Normalization (INPLACE-ABN)を提案した論文．
+          li INPLACE-ABNは従来のBatch正規化＋活性化層を単一のプラグイン層に置き換えることで，構造を大きく変えることなく，既存のDNNに簡単に適用することができる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}In-Place.PNG`,alt="In-Place.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 0.82%というわずかな計算時間の増加で最大50%のメモリ消費を抑えることができる．
+          li Batch正規化＋活性化層が存在するネットワークに適用することができる新たに独立したINPLACE-ABN層を提案し，近年のDNNの学習におけるメモリ使用率を低減した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.02616.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 16:54:18

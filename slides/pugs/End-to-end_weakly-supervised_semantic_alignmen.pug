@@ -1,0 +1,32 @@
++slide
+section#ID_End-to-end_weakly-supervised_semantic_alignmen
+  .paper-abstract
+    .title End-to-end weakly-supervised semantic alignmen
+    .info
+      .authors Ignacio Rocco, Relja Arandjelović, Josef Sivic,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        画像ペアをマッチングするための、End-to-Endで学習可能なセマンティックアライメント用のCNNアーキテクチャを開発する。クラス内での大きな変動、視点の変化、背景の乱れに頑健。学習時には、画像の対応点の注釈が要らず、同一のクラスであるが異なる画像における外観変化からパラメータを学習できる。
+
+    .item2
+      img(src=figpath+"180730Etew.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 入力画像ペア(図上)において、意味的に一致する密な対応を、幾何学変換とおもに出力し(図中) 、幾何学的に一致しないペアを破棄する(図下) CNNを提案。RANSACからインスパイアされた手法によって、ネットワークアーキテクチャとトレーニング手順を設計し、弱教師付き学習で実装可能。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p 精度は高く、SOTA。しかし、依然として複数のオブジェクトが存在する場合や、違うクラスにおける画像ペアを扱うことができていない。
+        ul
+          li: a(href="https://arxiv.org/pdf/1712.06861.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 22:37:16
+
+

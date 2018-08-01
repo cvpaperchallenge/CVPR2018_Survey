@@ -1,0 +1,33 @@
++slide
+section#ID_Wide_Compression_Tensor_Ring_Nets
+  .paper-abstract
+    .title Wide Compression: Tensor Ring Nets
+    .info
+      .authors Yifan Sun et al.
+      .conference CVPR2018
+      .paper_id 1802.09052
+    .slide_editor TakumuIkeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li DNNにおける全結合層と畳み込み層の両方のパラメータを圧縮するTensor Ring Networks (TR-Nets)を提案した．
+          li 実験によりTR-NetsはLeNet-5を精度の劣化なしに1/11に圧縮できることを示し，Cifar10の画像分類タスクにおいてWide ResNetを2.3%の劣化で1/243に圧縮できることを示した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}TensorRingNets.png`,alt="TensorRingNets.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 既存の手法では主に全結合層のパラメータの圧縮に着目していたが，本研究では層の深いニューラルネットワークにおける全結合層と畳み込み層の多次元のテンソルパラメータを圧縮する手法を提案した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1802.09052.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 23:08:59

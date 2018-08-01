@@ -1,0 +1,48 @@
++slide
+section#ID_High-order_Tensor_Regularization_with_Application_to_Attribute_Ranking
+  .paper-abstract
+    .title High-order Tensor Regularization with Application to Attribute Ranking
+    .info
+      .authors K. Kim, J. Park and J. Tompkin
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 世の中のデータはマニフォールド上にある事が多いので，
+          |ユークリッド空間のような環境空間ではなく，データの表すマニフォールド幾何を考え，
+          |その正規化によって学習できると性能を向上できる．
+          |実際，マニフォールド幾何はテンソルで扱えるのだが，
+          |既存手法ではテンソルの学習における微分可能なマニフォールド幾何の正規化ができていない．
+        p 本稿では，
+          |テンソルの正規化・学習ができるように，リーマン多様体上での学習を考え，
+          |サロゲート（代理）目的関数を導入．
+          |テンソルが表す幾何特徴をカプセル化する．
+          |これにより，非対称かつ高次テンソルの学習ができるようになる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}High-order_Tensor_Regularization_with_Application_to_Attribute_Ranking.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 多様体におけるテンソルの学習ができるようにした．
+          |実際やってみたら予想通り学習もうまくいった．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p
+              a(href="https://www.slideshare.net/kohta/risomap") マニフォールド（多様体）
+              | 局所的にはユークリッド空間とみなせるような空間．地球は丸いけど住民にとっては平面．
+          li
+            p
+              a(href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E5%A4%9A%E6%A7%98%E4%BD%93") リーマン多様体
+              | （超粗く言うと）隣は次どっちにどれだけ離れてるかという情報が定義されている多様体．多様体の基本の表し方の一つ．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1126.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 11:53:00

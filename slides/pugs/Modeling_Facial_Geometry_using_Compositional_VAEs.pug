@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Modeling_Facial_Geometry_using_Compositional_VAEs
+  .paper-abstract
+    .title Modeling Facial Geometry using Compositional VAEs
+    .info
+      .authors Timur Bagautdinov, Chenglei Wu, Jason Saragih, Pascal Fua, Yaser Sheikh
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Compositional VAEを用いた非線形顔幾何representation学習手法を提案した．様々な顔モデルフィッティングタスクに提案顔幾何representation用いられる．
+          li 従来の顔幾何representationがglobal, local linearの2種類に分ける．著者達が顔のglobalとlocal linearモデルがAEと類似することから， Compositional VAEにより顔のglobalとlocal linearモデルを結合できると指摘した．これにより，新たな顔の異なるレベルの詳細を表示できるマルチスケールVAEを提案し，それにより詳細的な顔幾何表現を学習できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}ModelingFacialGeometry-CVAEs.png`,alt="ModelingFacialGeometry-CVAEs")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ①dense デプスマップ②スパース2D,3D対応付け③shadingから形状リコンストラクションの3つのタスクにおいて提案手法を評価し，従来の線形モデル及びVAEをベースとした手法より良いパフォーマンスを得られた．
+          li 提案手法は16人しか含めていないデータセットにより硬質な顔幾何を学習できる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3156.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 19:41:50
