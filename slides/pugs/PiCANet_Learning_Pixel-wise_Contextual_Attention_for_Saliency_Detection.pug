@@ -1,0 +1,29 @@
++slide
+section#ID_PiCANet_Learning_Pixel-wise_Contextual_Attention_for_Saliency_Detection
+  .paper-abstract
+    .title PiCANet: Learning Pixel-wise Contextual Attention for Saliency Detection
+    .info
+      .authors Nian Liu, Junwei Han and Ming-Hsuan Yang
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p コンテキストはサリエンシー検出タスクにおいて重要な役割を果たす．しかし与えられたコンテキスト領域において，全てのcontextual informationが役に立つわけではない．この研究では，ピクセルごとにinformative context locationを選択的に関与することを学習するため，新たにピクセルワイズなcontextual attention network（PiCANet）を提案する．これにより，ピクセルごとにattention mapを生成することができる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}PiCANet_Learning_Pixel-wise_Contextual_Attention_for_Saliency_Detection.png`,alt="PiCANet_Learning_Pixel-wise_Contextual_Attention_for_Saliency_Detection.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p PiCANetにより，サリエンシー検出のパフォーマンスが向上すること確認した．グローバルおよびローカルのPiCANetは，全体的なコントラストと均質性の学習を容易にする．その結果サリエンシーモデルは，物体をより正確かつ均一に検出することができ，SOTA手法に対して有効に機能する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1708.06433.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 03:45:52
