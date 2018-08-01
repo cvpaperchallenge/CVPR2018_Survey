@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Attentional_ShapeContextNet_for_Point_Cloud_Recognition
+  .paper-abstract
+    .title Attentional ShapeContextNet for Point Cloud Recognition
+    .info
+      .authors Saining Xie, Sainan Liu, Zeyu Chen, Zhuowen Tu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li PointCloudデータをCNNにより直接取り扱う新たなネットワークSCN(Shape Context Net)を提案した．クラシックなshape contextを階層的なCNNと組み合わせることをベースとした．
+          li 提案手法は従来のshape contextをCNN Building Blockにした．このblockを積み重ねることにより，局所からグローバル特徴を表せる．Shape Context Blockは具体的には，selection，aggregation，transformationから構成される．① selection：coarseグループとなる局所ポイントを選択する．②aggregation：相対位置の分布を捉えられるrobust descriptorを構築③transformation：異なる領域のポイントグループのdescriptorsを高次な特徴空間に射影する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}AttentionalShapeContextNet-PointCloudRecognition.png`,alt="AttentionalShapeContextNet-PointCloudRecognition")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案のShape context blockをCNNより取り扱えるほか，hand designedな特徴量も適応できる．
+          li 提案のshape context blockをベースとしたpointcloud分類，セマンティックセグメンテーションネットワークはshapenet，modelnet40などのデータセットにおいてSoTAなパフォーマンスを達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li PointNetと類似し，PointNet++より簡潔な構造を持っている．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0100.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:40:36

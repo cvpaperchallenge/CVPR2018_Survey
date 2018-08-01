@@ -1,0 +1,40 @@
++slide
+section#ID_Memory_Matching_Networks_for_One-Shot_Image_Recognition
+  .paper-abstract
+    .title Memory Matching Networks for One-Shot Image Recognition
+    .info
+      .authors Qi Cai, Yingwei Pan, Ting Yao, Chenggang Yan, and Tao Mei
+      .conference CVPR 2018
+      .paper_id 425
+    .slide_editor Yusuke Okimoto
+
+    .item1
+      .text
+        h1 概要
+        p One-shot learningでよく用いられる評価時の設定（C-way k-shot, Cカテゴリで各カテゴリk枚の画像を教師に，入力画像のカテゴリを推定する）と同じ条件で学習を行うため，
+          |Memory Networkとbi-LSTMを用いたMemory Matching Networks(MM-Net)の提案．
+          |学習時，学習データから数カテゴリ・カテゴリ毎数枚の画像が教師データとして選択され(support set)．embeddingされたrepresentationがmemoryに書き込まれる．
+          |入力画像のカテゴリ推定は，メモリから読み出した各教師画像のrepresentationと，入力画像から得たrepresentationの対応(matching)を取って行う．
+          |この際，入力画像からrepresentationを得るCNNのフィルタのパラメータは，メモリから読み出した教師画像のrepresentationの列からbi-LSTMで推定する．
+          |評価時も，学習データからsupport setを選択する操作を除いて，学習時と同じ手順で行う．
+          |Omniglotの多くの条件でSOTA,miniImageNetにおいてもSOTA．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Memory_Matching_Networks_for_One-Shot_Image_Recognition.png`,alt="overview")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Memory Networkとbi-LSTMを上手く用いることで，one-shot learningにおいて，学習時と評価時とを同じ手順で行うことを実現
+          li One-shot learningで最もよく使われるOmniglot datasetでは98.95%から99.28%のaccuracyを達成．また，miniImageNetでは49.21%から53.57%のaccuracyを達成．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li ネットワーク構造，学習手順ともに相当複雑なので，実際に実装して学習の様子を見てみたいところ
+          li
+            a(href="https://arxiv.org/abs/1804.08281") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 22:11:44
+
