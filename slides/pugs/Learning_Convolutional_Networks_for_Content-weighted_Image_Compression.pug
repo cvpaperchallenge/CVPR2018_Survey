@@ -1,0 +1,33 @@
++slide
+section#ID_Learning_Convolutional_Networks_for_Content-weighted_Image_Compression
+  .paper-abstract
+    .title Learning Convolutional Networks for Content-weighted Image Compression
+    .info
+      .authors M.Li, W.Zuo, S.Gu, D.Zhao and D.Zhang
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p 画像圧縮はエンコーダー，デコーダー，量子化器を学習することによるジョイントレート –と歪みとの間の最適化問題として定式化される．CNNベースでの画像圧縮システムを開発することは困難とされているが本論文では，情報コンテンツが画像内で空間的に変わっているという動機づけによって画像空間の重要度マップを作成した，これらの合計を圧縮率を制御するための離散エントロピー推定の連続的代替とした．造類似性（SSIM）における評価としてJPEGおよびJPEG2000よりも著しく優れており，鮮明なエッジ，豊かな質感，および人工っぽさの少ない非常に優れた視覚的結果が得られることが実験によって示されている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Convolutional_Networks_for_Content-weighted_Image_Compression.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li コンテンツの重要度マップと2値量子化を画像圧縮システムに導入する
+          li 重要度マップは、ジョイントレート - 歪み最適化におけるエントロピーレート推定を代用するためのみでなく，ローカルビットレート割り当てを導くためにも用いられる
+          li 2値量子化とプロキシ関数によりend-to-endで学習できJPEGおよびJPEG 2000以上の画質にできる
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 圧縮後でもオリジナルの画像とほぼ同程度の画像になっていた．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0673.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 13:45:35
