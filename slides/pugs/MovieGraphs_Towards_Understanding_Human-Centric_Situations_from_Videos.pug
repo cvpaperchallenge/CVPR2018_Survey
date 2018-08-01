@@ -1,0 +1,32 @@
++slide
+section#ID_MovieGraphs_Towards_Understanding_Human-Centric_Situations_from_Videos
+  .paper-abstract
+    .title MovieGraphs: Towards Understanding Human-Centric Situations from Videos
+    .info
+      .authors Paul Vicol, Makarand Tapaswi, Lluís Castrejón and Sanja Fidler
+      .conference CVPR2018
+    .slide_editor Kazuho Kito
+
+    .item1
+      .text
+        h1 概要
+        p MOVIE graphsという新しいデータセットの提案．映画のクリップ中の社会的状況のグラフベースのアノテーションを詳細に行ったデータセットであり，各グラフは現在誰が写っているのか，感情や体格はどうか，複数人写っている場合の関係は，それらの間のインタラクションはといったさまざまなノードで構成されている．また，データセットの徹底的な分析を行い，時間経過とともにシーンの異なる社会的側面の興味深い常識的な相関関係を示す．グラフを用いてビデオとテキストを照会する方法として１）私たちのグラフは各場面をまとめて複数の意味的に関連する状況を取り出す方法，順序付けと理由の理解を通してインタラクションの理解のための方法を提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}MovieGraphs_Towards_Understanding_Human-Centric_Situations_from_Videos.PNG`,alt="MovieGraphs_Towards_Understanding_Human-Centric_Situations_from_Videos.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・　人間中心の状況の推論された特性に焦点を当てた最初のベンチマークである．
+          |・　各クリップには，シチュエーションラベル，シーンラベル，および支援言語の説明がアノテーションされおり，視覚的かつ時間的に接地されている．グラフのキャラクターはクリップの中の顔のトラックに関連付けられ，ほとんどのインタラクションは発生する時間間隔に関連付けられる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3308.pdf") 論文
+          li
+            a(href="http://moviegraphs.cs.toronto.edu/") Project Page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:47:40
