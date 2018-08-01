@@ -1,0 +1,30 @@
++slide
+section#ID_A_Hybrid_10_Layer_Decomposition_Model_for_Tone_Mapping
+  .paper-abstract
+    .title A Hybrid l_1−l_0 Layer Decomposition Model for Tone Mapping
+    .info
+      .authors Zhetong Liang，Jun Xu，David Zhang，Zisheng Cao，Lei Zhang
+      .conference CVPR2018
+    .slide_editor Kazuki Tsubura
+
+    .item1
+      .text
+        h1 概要
+        p トーンマッピングは，視覚情報が保存された高ダイナミックレンジ画像から標準ダイナミックレンジ画像を再現することを目的とする．最先端のトーンマッピングアルゴリズムは，主に画像を基本レイヤーと詳細レイヤーに分解し，それに応じて処理する．本論文では，これらの問題に対処するハイブリッドl_1−l_0分解モデルを提案する．我々はさらに，我々の層分解モデルに基づいてマルチスケールトーンマッピングスキームを提案する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Hybrid_l_1-l_0_Layer_Decomposition_Model_for_Tone_Mapping.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・差分
+        p 最先端のトーンマッピングアルゴリズムは，主に画像を基本レイヤーと詳細レイヤーに分解し，それに応じて処理します．これらの方法は，2つの層に課せられた適切なプリヤの不足のために，ハローアーティファクトおよび過度の増強の問題を有する可能性がある．本論文では，これらの問題に対処するハイブリッドl_1−l_0分解モデルを提案する．具体的には，基底層には，その区分的な平滑性をモデル化するために，1つの希薄項が課される．ディテールレイヤーには構造優先として「0」の希薄語が課され，これは区分的に一定の効果をもたらす．我々はさらに，我々の層分解モデルに基づいてマルチスケールトーンマッピングスキームを提案する．
+    .item4
+      .text
+        h1 結果
+        p 実験では，トーンマッピングアルゴリズムは，主観評価と客観評価の両方で最先端のトーンマッピングアルゴリズムより優れたハローアーチファクトで視覚的に魅力的な結果を達成した．
+        ul
+          li
+            a(href="https://www4.comp.polyu.edu.hk/~cslzhang/paper/CVPR18_TM.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 12:43:07

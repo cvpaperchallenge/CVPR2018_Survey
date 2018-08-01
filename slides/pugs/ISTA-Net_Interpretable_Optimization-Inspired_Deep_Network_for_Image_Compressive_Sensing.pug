@@ -1,0 +1,43 @@
++slide
+section#ID_ISTA-Net_Interpretable_Optimization-Inspired_Deep_Network_for_Image_Compressive_Sensing
+  .paper-abstract
+    .title ISTA-Net: Interpretable Optimization-Inspired Deep Network for Image Compressive Sensing
+    .info
+      .authors Jian Zhang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p  Compressive sensing (CS) reconstruction の研究. 従来の Iterative Shrinkage-Thresholding Algorithm (ISTA) のイテレーションを end-to-end で学習可能なネットワークに置き換えた, ISTA-Net を提案. 評価実験では幅広い CS Rate において既存の最適化に基づく手法とネットワークに基づく手法の両者よりも優位な結果を達成した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-ISTA-Net_Interpretable_Optimization-Inspired_Deep_Network_for_Image_Compressive_Sensing.png`,alt="fukuhara-ISTA-Net_Interpretable_Optimization-Inspired_Deep_Network_for_Image_Compressive_Sensing.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          //- li 高速かつ正確なcompressive sensing (CS) reconstruction
+          //- li 既存の２つのCS手法のメリットを混合（伝統的最適化ベースの手法の構造の直感性と最近のネットワークベースの手法の速さ）
+          //- li Iterative Shrinkage-Thresholding Algorithm (ISTA) にインスパイヤされたISTA-Net（end-to-end）を提案
+          //- li 一般のL１ノルムをCS reconstruction に最適化する(L1ノルム最小化をネットワークで置き換えた)
+          //- li 従来とは違って非線形変換を学習する
+          //- li 高速な計算時間でSOTAを達成
+          //- li ISTAはlarge-scale linear inverse problemsを解くのに最適
+          li 高速かつ正確な compressive sensing (CS) reconstruction のアーキテクチャ ISTA-Net を提案
+          li 線形逆問題を解くためのアルゴリズムである Iterative Shrinkage-Thresholding Algorithm (ISTA) を Neural Network でモデル化
+          li ISTA-Net では畳み込みと ReLU を組み合わせることで非線形の変換を学習（end-to-end でパラメータの学習が可能）
+          li 評価実験では, TVAL3, D-AMP, IRCNN, SDA, ReconNet と比較を行い, 全ての CS Rate で優位な結果を示した
+          li 計算速度は GPU を使用して, 25FPS 程度 (ReconNet は 62.5FPS)
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1706.07929.pdf" target="blank") [論文] ISTA-Net: Interpretable Optimization-Inspired Deep Network for Image Compressive Sensing
+          li
+            a(href="https://github.com/jianzhangcs/ISTA-Net" target="blank") [Code] GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.29 22:11:55

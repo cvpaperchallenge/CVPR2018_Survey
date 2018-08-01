@@ -1,0 +1,38 @@
++slide
+section#ID_Deep_Hashing_via_Discrepancy_Minimization
+  .paper-abstract
+    .title Deep Hashing via Discrepancy Minimization
+    .info
+      .authors Z. Chen et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        画像検索などに使うハッシングで画像をコンパクトなバイナリ符号に変換するのを学習ベースでやる話．
+        バイナリ制約付きの離散最適化問題はNP困難で大変なので，
+        よくやられるのがバイナリ変数を連続変数に緩和して解くというやり方．
+        でも緩和による目的関数の違い (discrepancy) のせいで求まる解が最適なものから外れてしまうのが問題．
+        そこで，この研究ではこの目的関数の差を最小化するための手法を提案．
+        図のように (a) sgnをtanhに緩和すると (b) のように大きく差が出るのを，
+        最終的に (d) のように差がないように変換している．
+        画像検索で，従来と同等の符号化時間でPrecision, Recallの向上に貢献することを実験から確認．
+  
+    .item2
+      img(src=figpath+"Deep_Hashing_via_Discrepancy_Minimization.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 学習ベースのハッシングにおいてバイナリ制約の緩和の悪影響の最小化を実現
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Chen_Deep_Hashing_via_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 15:45:23
+
+
