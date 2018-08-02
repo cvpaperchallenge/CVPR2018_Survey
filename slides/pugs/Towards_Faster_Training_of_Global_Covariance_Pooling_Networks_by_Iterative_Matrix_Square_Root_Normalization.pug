@@ -1,0 +1,37 @@
++slide
+section#ID_Towards_Faster_Training_of_Global_Covariance_Pooling_Networks_by_Iterative_Matrix_Square_Root_Normalization
+  .paper-abstract
+    .title Towards Faster Training of Global Covariance Pooling Networks by Iterative Matrix Square Root Normalization
+    .info
+      .authors Peihua Li, Jiangtao Xie, Qilong Wang, Zilin Gao
+      .conference CVPR 2018
+      .paper_id 475
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p covariance poolingをNewton-Schulz iterationを用いて高速に行う手法を提案。covariance poolingを行う既存手法の多くでは行列の平方根を行う際に固有値分解と特異値分解を行っているが、これらはGPUで十分にサポートされておらずトレーニング時間を効率的に行うことができなかった。提案手法ではcovariance poolingにおける行列の平方根の計算をGPUでサポートされいているpre-normalization、Newton-Schulz iteration、post-compensationで行う手法を提案。Newton-Schulz iterationでは二つの式の最適化を行い、post-compensationはデータの規模に依存する処理であるpre-normalizationの影響をを緩和するために行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Towards_Faster_Training_of_Global_Covariance_Pooling_Networks_by_Iterative_Matrix_Square_Root_Normalization.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ImageNet LSVRC2012の画像識別、CUB-200- 2011、FGVC-aircraft、Stanford carsのカテゴリ認識を行った。
+          li EIGとSVDを用いるcovariance poolingの既存手法に比べて1.5倍程度高速に計算をすることが可能。
+          li 上記のデータセットにおける識別でtop-1/5 errにおいて既存手法に比べて最も高い精度を達成。
+          li Newton-Schulz iterationsの更新回数は増やすほど精度がよくなるわけではなく、更新を行う回数はハイパーパラメタとなっている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li GPUでサポートされていないため、手法の改善を行った、という珍しい研究背景をもつ論文。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0475.pdf") 論文
+          li
+            a(href="http://www.peihuali.org/iSQRT-COV/") Project page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.2 13:15:53
