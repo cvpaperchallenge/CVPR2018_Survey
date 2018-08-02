@@ -1,0 +1,29 @@
++slide
+section#ID_Learning_Structure_and_Strength_of_CNN_Filters_for_Small_Sample_Size_Training
+  .paper-abstract
+    .title Learning Structure and Strength of CNN Filters for Small Sample Size Training
+    .info
+      .authors Rohit Keshari, Mayank Vatsa, Micha Singh and Afzel Moore
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p CNNのパラメータが多いため，データセットのサイズが小さいと過学習するという問題がある．この研究ではこの問題を解決するため，SSF-CNNを提案する．これは，フィルタの構造と強度を学習することにフォーカスすることにより，CNNのパラメータ数を減らすことができるという方法である．ここでフィルタの構造は，辞書ベースのフィルタ学習アルゴリズムを使用して初期化され，強度は小さなサンプルトレーニングデータを用いて学習される．これによりアーキテクチャーは，小規模および大規模のトレーニングデータベースの両方を使用した柔軟なトレーニングを提供し，小規模のトレーニングデータでも優れた精度を実現することができる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_Structure_and_Strength_of_CNN_Filters_for_Small_Sample_Size_Training.png`,alt="Learning_Structure_and_Strength_of_CNN_Filters_for_Small_Sample_Size_Training.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p このアルゴリズムの効果を確認するため，はじめにMNIST，CIFAR10とNORBのトレーニングデータ数を変化させながら実験を行った．その結果，SSF-CNNはパラメータの数が減少することを確認した．次にデータセットのサイズが小さいIIITD Newborn FaceとOmniglotを用いて実験を行ったところSOTAな結果を得ることができた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://iab-rubric.org/papers/cvpr2018_main-v3.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 03:05:35

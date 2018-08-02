@@ -1,0 +1,31 @@
++slide
+section#ID_Bootstrapping_the_Performance_of_Webly_Supervised_Semantic_Segmentation
+  .paper-abstract
+    .title Bootstrapping the Performance of Webly Supervised Semantic Segmentation
+    .info
+      .authors Tong Shen, Guosheng Lin, Chunhua Shen and Ian Reid
+      .conference CVPR2018
+      .paper_id 165
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 画像のクラスラベルのみを用いてセマンティックセグメンテーションのための高品質な識別器を学習する弱教師あり学習手法を提案．ブートストラップ法を用いて学習画像の正確なピクセルレベルの教師ラベルを作成し，Ground truthの代理として用いる．Domain adaptationのような手法をとり，ターゲットデータはPASCAL VOCなどのラベルつき画像，ソースデータはWebから収集した画像（Web domain）である．Initial-SECを始めに学習して，粗いラベルを作成する．間違ってラベル付けされている画像（ノイズ）はここで除去され，セグメンテーションに適した画像のみ残される．次に，WebSECを学習してWeb画像の粗いラベルを作成し，Grabcutにより細かいラベルを得る．そして，Web-FCNを学習して，Web domain内の特徴を得る．最後に，代理GTを用いてFinal-FCNを学習する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180730_BPWSSS.jpg`,alt="20180730_BPWSSS.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p セマンティックセグメンテーションの教師あり学習に必要な，多大な時間をかけてピクセル単位のクラスマスク教師画像を作成する手間を減らすことができる．ResNetをベースに用いることで，他の弱教師あり学習などと同等またはそれ以上の性能を得ることができた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 多段のDCNNをうまく用いて教師ラベルの削減を行っている．これはEnd-to-endでは難しい？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1401.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 13:03:49

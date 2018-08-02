@@ -1,0 +1,33 @@
++slide
+section#ID_Feedback-prop_Convolutional_Neural_Network_Inference_under_Partial_Evidence
+  .paper-abstract
+    .title Feedback-prop: Convolutional Neural Network Inference under Partial Evidence
+    .info
+      .authors T.Wang, K.Yamaguchi and V.Ordonez
+      .conference CVPR2018
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 既知ラベルが利用可能であるときに、深い畳み込みニューラルネットワーク（CNN）のための推論手順を提案．一般的なフィードバックベースの伝搬手法で重なり合わない任意の組のターゲットラベルの値が分かっている場合に，未知のターゲットラベルの任意の組の予測精度を向上．マルチタスクモデルを使って実験し，feedback-propがすべてのモデルで有効であることを示す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Feedback-prop_Convolutional_Neural_Network_Inference_under_Partial_Evidence.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 以下の3つのステップで構成されている．
+        ul
+          li すべてのラベルの初期スコアを予測する完全順方向伝播
+          li 既知のラベルに基づいて中間層を更新するための逆方向伝播の切り捨て
+          li 未知のラベルのスコアを更新するための順方向伝播
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0618.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 10:42:30

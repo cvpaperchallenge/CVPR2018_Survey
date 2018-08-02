@@ -1,0 +1,29 @@
++slide
+section#ID_Focus_Manipulation_Detection_via_Photometric_Histogram_Analysis
+  .paper-abstract
+    .title Focus Manipulation Detection via Photometric Histogram Analysis
+    .info
+      .authors C.Chen, S.MacCloskey and J.Yu
+      .conference CVPR2018
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 近年画像操作ツールの自動化とリアリティの向上によってソーシャルメディアの誤った情報が増えているため，画像の捜査が重要になる．本手法では画像の人工的なぼかしによる加工を検出し、画像強度と様々な手がかりとの間に非相関な測光関係を生成する．iPhone7Pulsなどのポートレートモードの画像の新しく収集されたデータセットと野外の画像の一般的なデータセットの両方で評価実験をしたところ，既存の手法を上回った．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Focus_Manipulation_Detection_via_Photometric_Histogram_Analysis.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 光度ヒストグラム分類のための小さい2つのCNNを融合することで手がかりを統合する．このことで，自然な画像の非対象部分をぼやかせる浅い被写界深度DoFを持つ画像を区別するため画像の捜査方法を提案
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3869.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 10:26:27

@@ -1,0 +1,33 @@
++slide
+section#ID_Pose_Transferrable_Person_Re-Identification
+  .paper-abstract
+    .title Pose Transferrable Person Re-Identification
+    .info
+      .authors Jinxian Liu, Bingbing Ni, Yichao Yan, Peng Zhou, Shuo Cheng and Jianguo Hu
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p ReIDモデルの学習をより強化するために，Pose transferによるサンプルオーグメンテーションを利用したposetransferrable person ReID frameworkを提案． MARSデータセットのポーズインスタンスを利用し，豊富なポーズバリエーションを持つ新規データを生成，学習することでよりロバストな学習が可能．また従来のGANの識別器に加え，生成した新規データがReIDにおける損失を最適にするguider sub-networkを提案．Market-1501，DukeMTMC-reIDおよびCUHK03において精巧なモデルを使用することなくSOTAであることを確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180720_Pose_Transferrable_Person_Re-Identification1.png`,alt="1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p
+          img(src=`${figpath}20180720_Pose_Transferrable_Person_Re-Identification2.png`,alt="2")
+        ul
+          li 人間の姿勢変動をどのように捕捉するかを考慮したReIDアプローチ
+          li 単にMARSを用いたPose transferをするだけでなく，guider sub-networkによる最適化
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1432.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 16:36:42
