@@ -1,0 +1,31 @@
++slide
+section#Optical_Flow_Guided_Feature_A_Fast_and_Robust_Motion_Representation_for_Video_Action_Recognition
+  .paper-abstract
+    .title Optical Flow Guided Feature: A Fast and Robust Motion Representation for Video Action Recognition
+    .info
+      .authors Shuyang Sun, Zhanghui Kuang, Wanli Ouyang, Lu Sheng and Wei Zhang
+      .conference CVPR2018
+    .slide_editor Kazuho Kito
+
+    .item1
+      .text
+        h1 概要
+        p Optical Flow guided Feature(OFF)という動画の行動認識のための運動表現を提案．OFFはオプティカルフローの定義を基に導出され，オプティカルフローに直交している．deepな特徴マップのピクセル単位の時空勾配を計算することで，わずかな追加コストで既存のCNNベースの動画行動認識のフレームワークに埋め込むことができ，CNNの時空情報を抜き取ることが可能になった．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Optical_Flow_guided_Features.PNG`,alt="Optical_Flow_guided_Features.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・速くロバストな動作表現であり，RGBのみの入力で200fps以上の速度が出る
+          |・OFFを使用したネットワークはend-to-endで訓練させることができる
+          |・UTF-101においてRGB入力のみのOFFを含んだネットワークで93.3%，SoTAな動画認識のフレームワークに埋め込むことで96.0%の精度を達成
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.11152") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.22 17:57:46
