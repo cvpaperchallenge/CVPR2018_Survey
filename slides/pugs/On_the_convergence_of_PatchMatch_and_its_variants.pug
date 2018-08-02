@@ -1,0 +1,31 @@
++slide
+section#ID_On_the_convergence_of_PatchMatch_and_its_variants
+  .paper-abstract
+    .title On the convergence of PatchMatch and its variants
+    .info
+      .authors Thibaud Ehret, Pablo Arias,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        k-nearest neighbor field(k-NNF)を効率的に近似するPatchMatchアルゴリズムとその亜種の収束についての解析調査。亜種とは、文献で見つかった一般的なPatchMatchを指し、処理速度が大幅に改善されたものなどを含む。PatchMachの収束と収束率の領域を網羅的に算出し検討。また、 Coherency Sensitive Hashingについても検討を加えている。
+
+    .item2
+      img(src=figpath+"180802PatchMatch.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 多くのCV分野では、2枚の画像間におけるk-NNFの計算を必要とし、クエリ画像内の各パッチについて、データベース内のk個の最も類似したパッチの位置を決定する。PatchMatchアルゴリズムは、この検索問題を画像パッチの局所的一貫性を利用する共同検索手法によって効率的に近似し、解決した。本論文はこのPatchMatchやその亜種(改良版)について調査している。
+
+    .item4
+      h1 リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ehret_On_the_Convergence_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 9:41:06
+
+
