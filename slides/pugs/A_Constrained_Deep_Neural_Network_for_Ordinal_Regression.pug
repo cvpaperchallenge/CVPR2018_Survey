@@ -1,0 +1,32 @@
++slide
+section#ID_A_Constrained_Deep_Neural_Network_for_Ordinal_Regression
+  .paper-abstract
+    .title A Constrained Deep Neural Network for Ordinal Regression
+    .info
+      .authors Y.Liu, A.W.K.Kong and C.K.Goh
+      .conference CVPR2018
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 順序回帰は、インスタンスをを順序カテゴリに分類することを目的とした教師付き学習の問題である．クラス内情報を表現するための高次な特徴と，序数関係を同時にクラス分けするための機能を自動的に抽出することは困難である．そのためにCNNによる実装が考えられる．本研究では，インスタンスの順序関係によって制約される複数のカテゴリの負の対数尤度を最小にする序数回帰問題の制約付き最適化手法 convolutional neural network with pairwise regularization for ordinal regression (CNNPOR)を提案．4つのベンチマークを用いて実験し，CNNPORは既存手法よりも良い結果であり，SoTAを示した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}A_Constrained_Deep_Neural_Network_for_Ordinal_Regression.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 順序回帰の制約最適化問題を解くためにDNNを適応
+          li 徴抽出や予測のための復号化などの後処理を行わず，end -to-endのアプローチ
+          li 提案手法は，小規模なデータセットに適しており，大規模なデータセットに対してもスケーラブル
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2135.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 10:34:25

@@ -1,0 +1,32 @@
++slide
+section#ID_Interpretable_Video_Captioning_via_Trajectory_Structured_Localization
+  .paper-abstract
+    .title Interpretable Video Captioning via Trajectory Structured Localization
+    .info
+      .authors Xian Wu, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        局所的な時空間表現を統合することで、より精度の良いビデオキャプションを可能にするTrajectory Structured Attentional Encoder-Decoder (TSA-ED)の提案。物体の細かい動き情報と、ビデオキャプションの文構造の両方を探索できる。LSTMによるエンコーダ/デコーダモデルをベースとしており、文章構造と物体の動きをとの相関を学習するスキームを組み込んでいる。これにより、より詳細なキャプションを生成できる。
+
+    .item2
+      img(src=figpath+"180730IVCvTSL.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 既存の手法では、RNNに入力する前にグローバルな画像特徴を取っているだけであると指摘。異なる時間において、顕著な物体に着目することや、微妙な言語表現を学習するために細かい移動や動きに対する関係性を見出す必要がある。Trajectoryレベルでの特徴を統合して学習することにより、動画中の動く物体を精度よく記述できる。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p CharadesとMSVDデータセットで実験し精度向上を確認。また、提案手法は可視化ツールとしてみなすことができ、モデルの解釈能力を向上させることができる。
+        ul
+          li: a(href="http://www.linliang.net/wp-content/uploads/2018/03/CVPR018_VideoCaptioning.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 22:29:43
+
+
