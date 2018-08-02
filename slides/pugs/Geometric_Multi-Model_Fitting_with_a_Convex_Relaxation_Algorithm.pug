@@ -1,0 +1,32 @@
++slide
+section#ID_Geometric_Multi-Model_Fitting_with_a_Convex_Relaxation_Algorithm
+  .paper-abstract
+    .title Geometric Multi-Model Fitting with a Convex Relaxation Algorithm
+    .info
+      .authors P.Amayo, P.Pini´es, L.M. Paz and P.Newman
+      .conference CVPR2018
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 凸緩和を介して複数の幾何モデルを複数の構造データにフィッティングするための新しい方法を提案．COnvex Relaxation Algorithm（CORAL）を用いて多次元データを適合させ、セグメント化するための新しい最適化を行う．
+          |復ごとに同等のアーキテクチャで2桁の速さで最小化されるため、より多くの幾何学的マルチモデルフィッティング問題にリアルタイムで堅牢なパフォーマンスを得た．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Geometric_Multi-Model_Fitting_with_a_Convex_Relaxation_Algorithm.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li COnvex Relaxation Algorithm（CORAL）は幾何学的マルチモデルフィッティングのための最適最小化アルゴリズム
+          li ラベルに対するポイントごとの評価を同時に処理することにより、本質的にランタイムパフォーマンスを向上
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3327.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 21:04:46

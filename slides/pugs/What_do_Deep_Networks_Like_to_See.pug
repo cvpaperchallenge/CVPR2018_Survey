@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_What_do_Deep_Networks_Like_to_See
+  .paper-abstract
+    .title What do Deep Networks Like to See?
+    .info
+      .authors Sebastian Palacio, Joachim Folz, Andreas Dengel, Jörn Hees, Federico Raue
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li クラス識別器がどのような入力信号により識別を行っているかにより新たなDCNN理解・解釈性に関する手法を提案した．
+          li 提案手法は①Auto-Encoderを学習する②評価対象となる物体識別器を学習する③①のencoder,②の識別器のパラメータをfixして，AE+Classifierをfinetuning.④ finetuning後のdecoderの結果を分析することによりDCNNの分析・解釈を行う．
+            |また，提案手法がAE+classifierで行う理由が①decoderがclassifierが使用する有用な情報を保護し，いらない情報を捨てる効果がある②再学習によりAEがノイズなどの元の入力の邪魔になる部分を減衰させる方法で入力を再構成するように学習できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}WhatDoDeepNetworksLikeToSee.png`,alt="WhatDoDeepNetworksLikeToSee")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のDCNN解釈性の方法は主に中間層あるいは出力層の表現より分析を行っている．この文章で入力信号をどれくらい用いるかにより新たな視点でDCNN解釈性を取り組んだ．
+          li 提案手法は実験に用いた全部の識別器が少ない入力信号しか頼らないことを発見した．(例えばResNet:<10%)このようなことから， DCNN識別器がadversarial examplesによりロバストではないことがわかる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 入力画像信号のかなり少ない部分しか識別器の結果に影響する発見が面白い．いかに入力画像の信号をより多く推定に使用することがロバスト識別に重要です．
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1838.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 11:33:24
