@@ -1,0 +1,27 @@
++slide
+section#ID_Boosting_Self_Supervised_Learning_via_Knowledge_Transfer
+  .paper-abstract
+    .title Boosting Self-Supervised Learning via Knowledge Transfer
+    .info
+      .authors Mehdi Noroozi et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="https://twitter.com/tomoyukun") Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p Pretext taskに特化したNNでのSelf-supervised学習(SSL)により獲得した特徴表現をtarget task用のNNに蒸留する手法。従来まではpretext taskに使用したモデルをそのままfine-tuningしていたのでモデル構造の制約が存在したが、二つのtaskそれぞれに適したモデルを選択することができる。さらにjigsawに対して、tailの一つを他の画像に置き換えることによりさらに難度を上げるjigsaw++を提案。
+    .item2
+      img(src=figpath+"Boosting_Self_Supervised_Learning_via_Knowledge_Transfer.png",alt="Boosting_Self_Supervised_Learning_via_Knowledge_Transfer.png")
+    .item3
+      .text
+        h1 詳細・なぜ通ったか？
+        p (a)従来通り何かしらのラベルなし表現学習。(b)ラベルなし特徴抽出&クラスタリング。(c)target taskモデルでクラスタ(pseudo labeling)識別。(d)target taskモデルで本学習。VggからAlexに蒸留した場合は精度向上。 同一モデル同士の蒸留はあまり効果がない。通常の蒸留よりもクラスタ識別させた方が効果がある。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Self-supervisedに獲得した特徴表現ではなくても(HOGでの実験が論文内にあるように)可能なアルゴリズム。単純に蒸留するよりもクラスタ識別にしたほうが良い精度以外での裏付けもみたかった。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.00385") 論文
+    .slide_index #{getSlideIndex()}
