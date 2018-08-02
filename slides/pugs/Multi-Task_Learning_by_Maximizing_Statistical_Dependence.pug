@@ -1,0 +1,30 @@
++slide
+section#ID_Multi-Task_Learning_by_Maximizing_Statistical_Dependence
+  .paper-abstract
+    .title Multi-Task Learning by Maximizing Statistical Dependence
+    .info
+      .authors Youssef A. Mejjati, Darren Cosker, Kwang In Kim
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Multi-task Learning（MTL; 多タスク学習）について、例えばCNNとGaussian ProcessといったHeterogeneousな学習や推定を同時に行う新しい方法を提案する。タスクに依存しないランダムパラメータを求めることができるため、あらかじめタスクごとの知識を前提としないMTLを実現可能である。実空間における回帰やランキングの問題において良好な精度を実現可能である。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730MultiTaskLearning.png`,alt="180730MultiTaskLearning")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 異なるタスク間（CNNとGaussian Processなど）において事前情報を前提としない学習法を提案した。各種データセットにおいて良好な精度を実現した。（表に示す通りであり、大体においてベースラインよりも精度が高い）
+    .item4
+      .text
+        h1 コメント・リンク集
+        p モデル自体も異なる多タスク学習。あまり見ないがそんなこともできるのか、という印象。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Mejjati_Multi-Task_Learning_by_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 09:45:39

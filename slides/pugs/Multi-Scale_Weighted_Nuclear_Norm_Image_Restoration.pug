@@ -1,0 +1,45 @@
++slide
+section#ID_Multi-Scale_Weighted_Nuclear_Norm_Image_Restoration
+  .paper-abstract
+    .title Multi-Scale Weighted Nuclear Norm Image Restoration
+    .info
+      .authors Noam Yair and Tomer Michaeli
+      .conference CVPR 2018
+      .paper_id 3269
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 自然画像が持つ類似パッチを利用した、自然画像のデノイジングを行う
+          a(href="http://www4.comp.polyu.edu.hk/~cslzhang/paper/WNNM_IJCV.pdf") WNNM
+          |を一般の画像の任意のdegradation（ブラー、ピクセルの欠損など）に対するdistortionへ拡張した手法を提案。提案手法では以下のステップを踏んで画像のdistortionを行う
+        ul
+          li 自然画像内の類似パッチを用いたWNNMによってデノイジングを行う。
+          li 自然画像には小さなパッチの模様は様々なスケールで画像に内に存在するという現象を用いて、画像の超解像とブラーのカーネルサイズを推定する。
+          li 最後に、expected patch log-likelihood (EPLL)を用いて全てのパッチに対する正則化を行う。
+            |最後に行う正則化はデータの種類に依存しない操作のため、任意のなdegradationに対応することが可能となる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Multi-Scale_Weighted_Nuclear_Norm_Image_Restoration.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ガウシアンブラー、uniform blur、ピクセルの欠損(25%, 50%, 75%)の全てに対してSoTAを達成。
+          li イテレーションを増やすごとに精度は高くなるが、デブラーリングに関しては1.6分かけた1回のイテレーションによってSoTAを達成することができる。．
+          li PSNRを評価尺度とし、Set5、BSD100 datasetで検証
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li introductionで最近流行しているCNNではdegradationの種類ごとにトレーニングを行わないといけない、と真っ向からトレンドを否定した上でSoTAを達成していることがかっこいい。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3269.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3269-supp.pdf") Supplementary material
+          li
+            a(href="http://www4.comp.polyu.edu.hk/~cslzhang/paper/WNNM_IJCV.pdf") 参考 Weighted nuclear norm minimization with application to image denoising (WNNM)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 23:52:51

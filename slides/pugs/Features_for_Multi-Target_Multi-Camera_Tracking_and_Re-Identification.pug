@@ -1,0 +1,41 @@
++slide
+section#ID_Features_for_Multi-Target_Multi-Camera_Tracking_and_Re-Identification
+  .paper-abstract
+    .title Features for Multi-Target Multi-Camera Tracking and Re-Identification
+    .info
+      .authors Ergys Ristani and Carlo Tomasi
+      .conference CVPR 2018
+      .paper_id 3817
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p Person Re-Identification (Re-ID)に対して有効なtriplet lossによってトレーニングしたCNNによってRe-IDとMulti-Target Multi-Camera Tracking (MTMCT)を行う手法を提案。Re-IDとはカメラに写っている人物をクエリの中にある人物と対応させること、MTMCTとは複数のカメラで撮影された映像を用いて同時刻の複数人の位置を把握することである。CNNをトレーニングする際のtripletの重みをアンカーとの類似度におけるsoftmax/minとする。各バッチにはアンカー画像と、アンカー画像にもっとも類似度が高いhard-negatives、ランダムにサンプルされた画像によって構築する。また、よいトラッキングとよいre-IDのスコアの相関関係を算出することで、両タスクの関係性を調査。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Features_for_Multi-Target_Multi-Camera_Tracking_and_Re-Identification.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li MTMCTにおいて多くの設定でSoTA。（いくつかの設定で
+             a(href="(https://arxiv.org/pdf/1712.09531.pdf") MTMC_ReID
+             |に劣っている）
+          li Re-IDのmAP、rank-1 accuracyにおいてSoTAを達成。
+          li MTMCTのスコアとRe-IDのスコアに相関関係があることを示し、片方の精度をあげることでもう一方の精度も挙げることを主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li MCMCTに関する学習を行っていないのがミソ。トラッキングの際にはRe-IDを行うために学習したCNNの特徴量を用いる。
+          li MCMCTのベンチマークであるDukeMCMCTを配布しているチームによる研究。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3817.pdf") 論文
+          li
+            a(href="http://vision.cs.duke.edu/DukeMTMC/") [Project page] DukeMTMC Project
+          li
+            a(href="https://arxiv.org/pdf/1712.09531.pdf") 参考 Multi-Target, Multi-Camera Tracking by Hierarchical Clustering: Recent Progress on DukeMTMC Project (MTMC_ReID)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.21 20:11:47

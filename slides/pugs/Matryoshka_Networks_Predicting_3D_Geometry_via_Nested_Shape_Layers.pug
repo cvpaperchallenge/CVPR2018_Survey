@@ -1,0 +1,29 @@
++slide
+section#ID_Matryoshka_Networks_Predicting_3D_Geometry_via_Nested_Shape_Layers
+  .paper-abstract
+    .title Matryoshka Networks: Predicting 3D Geometry via Nested Shape Layers
+    .info
+      .authors Stephan R. Richter, Stefan Roth
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 2次元画像から3次元形状を復元する論文。DNNを使って3次元形状を推定する手法は、voxelを直接出力するようになっており、GPUのメモリ容量の制限から高解像度な3次元形状を復元することができなかった。本論文では、メモリ効率を良くするため、特定の方向へ延びるtubeが各ピクセルに対応する二次元表現voxel tubeを出力するshape layerを提案した。またネスト構造を持たせたshape layerを適用することで、自己遮蔽領域への対応したネットワークMatryoshka Networkを提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Matryoshka_Networks.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p shape layerは6軸方向から見た深度画像を出力し、各軸に対応する2つの深度画像に挟まれた領域の共有部分を出力する。この場合、すべての軸から見ても遮蔽されている領域を復元することができないため、マトリョーシカのようなネスト構造を持つshape layerを出力するMatryoshka Networkを提案し、このネットワークは集合の差と和集合を交互に繰り返すネスト構造を持つ。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Richter_Matryoshka_Networks_Predicting_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.12 15:12:46

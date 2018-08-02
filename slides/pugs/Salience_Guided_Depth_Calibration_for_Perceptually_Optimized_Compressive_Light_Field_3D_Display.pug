@@ -1,0 +1,40 @@
++slide
+section#ID_Salience_Guided_Depth_Calibration_for_Perceptually_Optimized_Compressive_Light_Field_3D_Display
+  .paper-abstract
+    .title Salience Guided Depth Calibration for Perceptually Optimized Compressive Light Field 3D Display
+    .info
+      .authors Shizheng Wang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要 
+        p  Multi-layer light field 3D display のための depth calibration の研究. Saliency の高い領域を推定し, その領域の深度を可能な限り表現出来るように calibration することで, Multi-layer light field 3D display の持つ深度表現の制限の元で知覚的に最適化された depth calibration を行う手法を提案. 主観評価実験では既存手法よりも最低でも12%以上良いという結果を達成.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-Salience_Guided_Depth_Calibration_for_Perceptually_Optimized_Compressive_Light_Field_3D_Display.png`,alt="fukuhara-Salience_Guided_Depth_Calibration_for_Perceptually_Optimized_Compressive_Light_Field_3D_Display.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 知覚的に最適化された Multi-layer light field 3D display のための depth calibration の研究
+          //- li depthについての表現の制限 
+          li 深度や色の contrast に基づいて saliency の高い物体を推定する contrast enhanced salience detection を提案
+          li Contrast enhanced salience detection によって light field capture region の中で高い saliency をもつ物体を推定
+          li 高い saliency を持つと推定された物体を multi-layer LCD の copressive display depth region に優先的に投影する
+          //- li 最適なdepth initializationが自動で選ばれる（既存手法は手動でfix）
+          //- li まず, 提案するcontrast enhanced salience detection によって light field capture region の中で高い saliency をもつ物体を特定
+          //- li そしてこれらの物体をmulti-layer LCDsのcopressive display depth region に可能な限りmapする
+          li Saliency detection の精度を評価するために　public light field dataset　を用いて行った評価実験では, SOTAを達成
+          li 主観評価実験（12名）では既存手法よりも最低でも12%良いという結果
+          //- li depth contrast と color contrast と background probability から saliency を決定
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Salience_Guided_Depth_CVPR_2018_paper.pdf" target="blank") [論文] Salience Guided Depth Calibration for Perceptually Optimized Compressive Light Field 3D Display
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 6:50:55

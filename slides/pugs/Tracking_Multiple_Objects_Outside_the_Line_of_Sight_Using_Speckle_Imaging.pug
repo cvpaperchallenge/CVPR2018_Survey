@@ -1,0 +1,31 @@
++slide
+section#ID_Tracking_Multiple_Objects_Outside_the_Line_of_Sight_Using_Speckle_Imaging
+  .paper-abstract
+    .title Tracking Multiple Objects Outside the Line of Sight Using Speckle Imaging
+    .info
+      .authors Brandon M. Smith, Matthew O'Toole, Mohit Gupta
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p スペックル・イメージングを利用して見えていない（non-line-of-sight: NLOS）複数の物体を追跡する手法を提案した論文。安価なコストで角付近に存在する複数の物体を10マイクロメートル程度の精度で追跡可能にした。拡散反射する壁を通して間接的にしかセンシングできない環境において、スペックル・イメージングの方法と動きのモデルを提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Tracking_Multiple_Objects_Outside_the_Line_of_Sight_Using_Speckle_Imaging.png`,alt="")
+    .item3
+      .text
+        h1 手法・新規性
+        p スペックルとはコヒーレント光が荒い表面で反射した際に発生する高周波なノイズのような画像である。提案手法では、このスペックルの動きと実際の物体の動きの関係をモデル化することで、拡散反射する壁から得られる情報から物体追跡を行う。実際には参照画像とそこから物体が移動したことで得られた画像の相関を取り、ピークを得ることで、物体の移動量を得る。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Smith_Tracking_Multiple_Objects_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://youtu.be/FVHcNEipnLU") デモ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 17:12:19

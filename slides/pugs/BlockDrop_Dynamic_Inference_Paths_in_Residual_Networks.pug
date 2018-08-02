@@ -1,0 +1,38 @@
++slide
+section#ID_BlockDrop_Dynamic_Inference_Paths_in_Residual_Networks
+  .paper-abstract
+    .title BlockDrop: Dynamic Inference Paths in Residual Networks
+    .info
+      .authors Zuxuan Wu, Tushar Nagarajan, Abhishek Kumar, Steven Rennie, Larry S. Davis, Kristen Grauman, Rogerio Feris
+      .conference CVPR2018, arXive:1711.08393
+      .paper_id 1213
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p 強化学習を使い，推論時のResNetの不必要な層(ブロック)を取り除いて計算コストを削減するBlockDropを提案．
+          |この研究では，ResNetが特定の層を取り除いた際に性能があまり低下しない能力を利用しており，どのブロックを落とせるかをPolicy Networkにより判定させている．
+          |報酬の設計では，画像認識時により少ないブロックで認識が成功できるほど報酬が高くなるように設計されている．
+          |BlockDropにより，ImageNetにおいてtop-1の性能を76%を保ちつつ，平均で20%の高速化(一部では36%高速化)を実現している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}1213_overview.png`,alt="1213_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 推論時のネットワーク構造を強化学習により最適化させる手法．
+          |強化学習によりネットワーク構造を削減する手法はあまり提案されていないため，新規性が高く評価されたと思われる．
+          |また，BlockDropでは速度を改善するだけでなく，場合によっては若干性能を向上させる事が可能である事を示している(CIFAR, ImageNetで検証)．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 強化学習の新しい使い方で非常に面白い手法．今後，改善や応用が期待できそう．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.08393") 論文リンク
+          li
+            a(href="https://github.com/Tushar-N/blockdrop") コードリンク
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 02:18:31

@@ -1,0 +1,32 @@
++slide
+section#ID_Improving_Landmark_Localization_With_Semi-Supervised_Learning
+  .paper-abstract
+    .title Improving Landmark Localization With Semi-Supervised Learning
+    .info
+      .authors Sina Honari, Pavlo Molchanov, Stephen Tyree, Pascal Vincent, Christopher Pal, Jan Kautz
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 部分的にのみアノテーションが手に入る比較的少量のデータにおいて、顔ランドマーク検出問題にてSemi-Supervised Learningの手法を提案。ラベルなしのデータに対してキーポイントを推定して、誤差逆伝播ができるように構築。さらに、教師なし学習の枠組みでもキーポイント推定ができるようにした。右図は顔キーポイント検出の枠組みであり、上から順に（S）ラベルありのデータにて学習、（M）顔キーポイントからの属性（Attribute）推定、マルチタスク学習により間接的にキーポイント検出を強化、（N）正解画像に対して画像変換を施してデータ拡張。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180716LandmarkLocalizationSSL.png`,alt="180716LandmarkLocalizationSSL")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 半教師あり学習（Semi-Supervised Learning）の枠組みで顔キーポイント検出を実行することを可能にした。特に、AFLW datasetで5%のみのラベルありデータで従来法を超えてState-of-the-artを実現した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 間接ラベルが効くというのは、キーポイント検出にかなり依存している顔表情や頭部位置推定が働いているから？それでも半教師あり学習によりState-of-the-artを実現したことはかなりすごい！間接ラベル、いろいろ使えると思うのでアイディアを出したい。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Honari_Improving_Landmark_Localization_CVPR_2018_paper.html") 論文
+          li
+            a(href="http://jankautz.com/") 著者
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 20:31:44

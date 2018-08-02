@@ -1,0 +1,38 @@
++slide
+section#ID_Image_Collection_Pop-up_3D_Reconstruction_and_Clustering_of_Rigid_and_Non-Rigid_Categories
+  .paper-abstract
+    .title Image Collection Pop-up: 3D Reconstruction and Clustering of Rigid and Non-Rigid Categories
+    .info
+      .authors A. Agudo, M. Pijoan, F. Moreno-Noguer
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 部分的に2Dアノテーションされた複数インスタンスの画像データセットにおいて，
+          |3D形状，カメラ姿勢，物体，変形のタイプのクラスタリングを同時に行う．
+          |また，不明瞭(indistinctly)に剛体・非剛体カテゴリ分類を行う．
+          |これは，クラスタが事前知識であるような既存手法の拡張となる．
+        p 物体変形のモデリングを行う．
+          |小さい領域の動きを，複雑な変形へと橋渡しできるように，
+          |サブスペーススの複数ユニオンに基づく定式化を行う．
+          |このモデルのパラメータは拡張ラグランジュマルチプライヤーで学習する．
+          |完全に教師無しで行え，学習データが不要である．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Image_Collection_Pop-up_3D_Reconstruction_and_Clustering_of_Rigid_and_Non-Rigid_Categories.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 剛体，非剛体カテゴリ，小さい・大きい変形を含む合成データ，実データセットで検証し，3D復元においてSoTA．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ※拡張ラグランジュ関数は条件を満たすと真凸関数．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1203.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.10 12:22:13

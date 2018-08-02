@@ -1,0 +1,36 @@
++slide
+section#ID_Modifying_Non-Local_Variations_Across_Multiple_Views
+  .paper-abstract
+    .title Modifying Non-Local Variations Across Multiple Views
+    .info
+      .authors T. Tlusty, T. Michaeli, T. Dekel and L. Zelnik-Manor
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 繰り返し構造・パターンを持つような同じシーンの複数画像の間での，
+          |小さいNon-local Variationを修正する手法を提案する．
+        p 異なる視点，異なる照明条件で撮影された画像間の一貫性を保つように修正を行うのがポイント．
+          |独立にやってしまうと，繰り返し構造を持っている場合，一貫性が壊れ，幾何学的構造が歪むことを示す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Modifying_Non-Local_Variations_Across_Multiple_Views.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 少しニッチだが，注目されていなかったところで発生する問題を報告し，
+          |更に解決策を正しく与えている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 著者らの前論文の正統進化といえる．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2805.pdf") 論文
+          li
+            a(href="https://dl.acm.org/citation.cfm?id=2818113") 前の論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.13 10:55:31

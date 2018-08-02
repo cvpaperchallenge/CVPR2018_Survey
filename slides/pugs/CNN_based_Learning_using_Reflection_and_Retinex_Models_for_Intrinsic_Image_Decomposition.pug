@@ -1,0 +1,39 @@
++slide
+section#ID_CNN_based_Learning_using_Reflection_and_Retinex_Models_for_Intrinsic_Image_Decomposition
+  .paper-abstract
+    .title CNN based Learning using Reflection and Retinex Models for Intrinsic Image Decomposition
+    .info
+      .authors D. Xu et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        Intrinsic Image Decomposition（画像を反射特性 (Reflectance) や影 (Shading) などの要素に分解）において，
+        Deepベースの手法はブラックボックス過ぎるので画像生成 (Image Formation) の原理なども考慮するような手法を2つ提案．
+        1つ目のIntrinsicNetはEncoder-Decoderのモデルで，DecoderはReflectanceとShadingそれぞれを復元．
+        単なるReflectanceとShadingのLossに加えて，ReflectanceとShadingから復元した画像のLossも利用するのがポイント．
+        2つ目のRetiNetは従来手法のRetinex（画像の勾配の大きさからReflectanceとShadingに分解）のアイディアをDeep手法に導入．
+        勾配の分解をEncoder-Decoderでやった後に元の画像と合わせてReflectanceとShadingを推定する．
+        新しく提供する大規模データセットでモデルを学習して従来よりも高い性能を達成．
+  
+    .item2
+      img(src=figpath+"CNN_based_Learning_using_Reflection_and_Retinex_Models_for_Intrinsic_Image_Decomposition.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Intrinsic Image DecompositionのDeepモデル学習のための大規模データセット（2万画像）を提供
+          li 従来の物理特性を考慮した手法とブラックボックスなDeep手法の良いとこ取りを実現
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Baslamisli_CNN_Based_Learning_CVPR_2018_paper.html") 論文
+          li: a(href="https://ivi.fnwi.uva.nl/cv/retinet") Project Page
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.11 15:45:23
+
+

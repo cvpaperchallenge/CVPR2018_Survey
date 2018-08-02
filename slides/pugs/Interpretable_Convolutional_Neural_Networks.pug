@@ -1,0 +1,42 @@
+﻿+slide
+section#ID_Interpretable_Convolutional_Neural_Networks
+  .paper-abstract
+    .title Interpretable Convolutional Neural Networks
+    .info
+      .authors Quanshi Zhang, Yingnian Wu, Song-Chun Zhu
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 伝統的なCNNに変更を加え，Interpretable性を高める手法の提案．提案したInterpretable CNNの高層Conv層のfiltersがセマンティックコンセプトとのIoUがより大きい．
+          li 学習済みモデルの高層convのfilterがどのようなセマンティック情報を学習されていることを可視化・統計分析によりネットワークに対しある程度のInterpretable性を評価できる．提案手法の目的は高層convのfiltersをできるだけ同じセマンティックコンセプトにしか活性化されないように学習させる．
+          li 具体的には，従来のConv-layerのfiltersの出力feature mapに新たなロスを導入した．提案ロスはinter categoryのentropyを抑え，一つのフィルタが2つ以上のcategoryに活性化されないように学習ができる．また，neural activationsの空間分散のentropyも抑え，一つのフィルタが1つのcategoryに活性化されることように学習させる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}interpretable-cnn.png`,alt="interpretable-cnn")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Pascal VOC part datasetを用いた実験によりInterpretable CNNが従来のCNNと比べ，クラス分類問題において認識精度がほぼ落ちずに高層conv層のfilterのInterpretable性が高い(Alexnet,VGGなどに対して実験)．
+          li 提案の手法をあらゆるネットワークに適応しやすい．追加する監督信号を用いずに，普通のCNNのInterpretable性を高められる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p Interpretable CNNをVision-and-Languageに応用してみたい
+          li
+            p Interpretable CNN構造が高層convのfilterに対して同じセマンティックコンセプトにしか活性化されないように学習するので，このレベルでは“Net2Vec”と逆になっている．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0490.pdf") 論文
+          li
+            p
+              a(href="https://github.com/zqs1022/interpretableCNN") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 20:29:10

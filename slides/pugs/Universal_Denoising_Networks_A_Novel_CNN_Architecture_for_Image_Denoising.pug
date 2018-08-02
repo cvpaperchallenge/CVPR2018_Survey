@@ -1,0 +1,32 @@
++slide
+section#ID_Universal_Denoising_Networks_A_Novel_CNN_Architecture_for_Image_Denoising
+  .paper-abstract
+    .title Universal Denoising Networks: A Novel CNN Architecture for Image Denoising
+    .info
+      .authors Stamatios Lefkimmiatis
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 画像のノイズ除去のためのネットワークを提案。
+          |ネットワークはlocalな情報を見るものとnon-localな情報を見るものの2つを提案した。
+          |ネットワークの評価関数としてはPSNRを用いた。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Universal_Denoising_Networks_A_Novel_CNN_Architecture_for_Image_Denoising.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法と異なり、ノイズのレベルに依らない手法である。
+          |CNNベースの従来手法よりも浅いネットワークにもかかわらず、PSNRの平均は最も高いという結果が得られた。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.07807") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.27 02:19:29

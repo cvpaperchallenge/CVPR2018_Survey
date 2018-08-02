@@ -1,0 +1,36 @@
++slide
+section#ID_Weakly_Supervised_Learning_of_Single-Cell_Feature_Embeddings
+  .paper-abstract
+    .title Weakly Supervised Learning of Single-Cell Feature Embeddings
+    .info
+      .authors Juan C. Caicedo, Claire McQuin, Allen Goodman, Shantanu Singh
+      .conference CVPR 2018
+      .paper_id 4238
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 顕微鏡で撮影された細胞に対して画像的な見た目と生物学的な関係性を推定するために、CNNに対して半教師学習を行う。論文中に行われる実験では変異肺がん細胞の画像から遺伝子を推定するために、化学処理された変異肺がん細胞の画像を用いた化学処理のラベル推定をCNNで学習する。しかし化学処理は対象となる細胞が異なる場合には反応しないこともあるなど、ラベルとしてはかなりノイジーである。そこでRNN-based regularizationとmixup regularizationという２つの正則化を行う。RNN-based regularizationでは同じ化学処理や同じ細胞からは似たような特徴量を得るように学習し、mixup regularizationでは２つの画像をアルファブレンディングした時に、そのソース画像の識別とブレンド率の推定を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Weakly_Supervised_Learning_of_Single-Cell_Feature_Embeddings.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 著者らが用意した細胞の画像において、トレーニング中には陽に学習していない遺伝子のID推定において既存手法よりも高い精度を達成。
+          li BBBC021データセットにおける、化学処理の識別において既存手法よりも高い精度を達成。
+          li ImageNetでプリトレインしたモデルと、ハンドクラフト特徴量による手法と比較。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li データを用意できれば勝ちな研究分野な気がする。手法として完全に新しいのはRNN-based regularizationのようであるが、精度が出ていればCVPR的にはOK？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4238.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/4238-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 17:26:37

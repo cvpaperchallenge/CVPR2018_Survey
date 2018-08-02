@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Parallel_Attention_A_Unified_Framework_for_Visual_Object_Discovery_through_Dialogs_and_Queries
+  .paper-abstract
+    .title Parallel Attention: A Unified Framework for Visual Object Discovery through Dialogs and Queries
+    .info
+      .authors Bohan Zhuang, Qi Wu, Chunhua Shen, Ian Reid, Anton Van den Hengel
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li variable lengthな物体の言語descriptions (一つの単語からmulti-round会話まで)から正しく画像中に物体を参照できるネットワークPLANを提案した．
+          li PLANネットワークは2種類のattentionを用いている:言語descriptionsのパーツと①画像のグローバルコンテンツ②画像の局所的領域ー物体candidatesを関連付けする．
+          li recurrent attentionを用いて，異なる処理段階でのattentionを変更できる．更に， attentionを可視化することにより，システムが異なる処理段階で正しい物体領域をattentionしているかを確認できる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}parallel-attention.png`,alt="parallel-attention")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 言語入力が異なるRefCOCO,RefCOCO+,GuessWhat?!などのデータセットでSoTAな精度を達成．
+          li LSTMとattentionを用いているので，referringプロセスをビジュアライズできて，ネットワークの解釈可能性も高い．
+          li 固定長ではなく長さが異なる言語入力(一つの単語からmulti-round会話まで)から正しく視覚attentionを得られる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p LSTM+attentionもなかなか良さそう
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0234.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.6 16:14:24

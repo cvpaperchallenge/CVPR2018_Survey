@@ -1,0 +1,40 @@
++slide
+section#ID_Scalable_and_Effective_Deep_CCA_via_Soft_Decorrelation
+  .paper-abstract
+    .title Scalable and Effective Deep CCA via Soft Decorrelation
+    .info
+      .authors X. Chang, T. Xiang and T.M. Hospedales
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p 複数視点系の話題で，非線形の設定においては，Canonical Correlation Analysis (CCA) という手法が一般的になってきた．
+          |この既存のDeepなCCAにおいては，典型的には，
+          |一般潜在空間における異なるアピアランスの相関が最大化される前に，
+          |最初にそれぞれのアピアランスにおける特徴次元の間の相関除去を行っている．
+          |このCCAでは，学習イタレーション毎に，逆行列計算に依存する計算コストの高い相関除去の計算が求められる．
+          |しかも，この相関除去のステップは勾配効果最適化の枠組みからは離れており，その結果準最適解に落ち着いてしまう．
+        p 本稿では，Soft CCAを提案する．
+          |Softといっているのは，CCAの計算途中に直交性が求められるところの条件を，SGDで最適化されるソフトなコスト関数に置き換えるというところ．
+          |ミニバッチベースの確率的相関除去ロス（Stochastic Decorrelation Loss; SDL）を導入．
+          |これは，その他目的関数と結合的に最適化される．
+        p このSDLはマルチビュー問題以外にも適用可能である．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Scalable_and_Effective_Deep_CCA_via_Soft_Decorrelation.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 流行の手法の確かな発展．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 計算効率化方向に向かっているネタ．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1124.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.26 15:48:51

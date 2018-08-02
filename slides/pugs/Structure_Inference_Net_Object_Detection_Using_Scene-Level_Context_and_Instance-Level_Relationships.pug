@@ -1,0 +1,32 @@
++slide
+section#ID_Structure_Inference_Net_Object_Detection_Using_Scene-Level_Context_and_Instance-Level_Relationships
+  .paper-abstract
+    .title Structure Inference Net: Object Detection Using Scene-Level Context and Instance-Level Relationships
+    .info
+      .authors Yong Liu, Ruiping Wang, Shiguang Shan and Xilin Chen
+      .conference CVPR2018
+      .paper_id 876
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 画像のシーンコンテキストと，物体の関係の2種類のコンテキストを用いて物体検出を行うアルゴリズムを提案．物体検出をグラフ構造の推論問題として扱い，物体をノード，物体間の関係をエッジとしてモデル化する．これを実現するために，Faster R-CNNのような物体検出フレームワークに組み込む構造推論ネットワーク（Structure Inference Network；SIN）を設計した．SINは，特徴マップとしてプールされたRoIをノードとしてFC層にマッピングする．同様に画像全体の特徴をシーンとして抽出し，RoIを連結してエッジとする．グラフは反復的に更新され，最終状態は物体クラス予測の精度向上に貢献する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180708_SIN1.jpg`,alt="20180708_SIN1.jpg")
+          img(src=`${figpath}20180708_SIN2.jpg`,alt="20180708_SIN2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 物体検出の精度向上のためにコンテキスト（周辺環境，物体の位置関係など）の理解が重要となる．コンテキストをグラフ構造で表して推論する斬新な手法である．VOCとCOCOで評価を行い，一部のクラスはFaster R-CNNよりも高性能であり，全体では76.0mAP（VOC07），73.1mAP（VOC12）とFaster R-CNN（73.2，70.4）よりも高性能であることを示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p グラフ構造で物体検出を扱うものはいくつかあるが，エッジの情報と周辺環境のコンテキストも考慮したものは新しい．コンテキストを考慮した物体検出は，未知の物体を検出するためにも重要な要素となり得る？
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2114.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.8 11:15:43

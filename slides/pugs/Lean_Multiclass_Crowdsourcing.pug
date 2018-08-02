@@ -1,0 +1,35 @@
++slide
+section#ID_Lean_Multiclass_Crowdsourcing
+  .paper-abstract
+    .title Lean Multiclass Crowdsourcing
+    .info
+      .authors Grant Van Horn, Steve Branson, Scott Loarie, Serge Belongie, Pietro Perona
+      .conference CVPR 2018
+      .paper_id 1324
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 実画像に対するマルチクラスアノテーションをクラウドソーシングで行う際に有効な方法を提案。1枚の画像に対して複数のワーカーがアノテーションを行うが、既存手法ではアノテーションに対する各ワーカーの重みは均等に決められていた。これに対し、提案手法ではユーザのスキルやそれまでのアノテーションの実績を考慮して重みを決定する。ワーカーのスキルによるアノテーションのラベルを条件付き分布として扱う。スキルとアノテーションラベルが独立なモデルに加えて、スキルとラベルが独立でないモデルを構築することで、よりワーカーのスキルを反映したクラウドソーシングを行うことが可能。また、スキルとラベルを線形SVMで学習することで、より効率的にデータセットの構築を可能にした。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Lean_Multiclass_Crowdsourcing.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 既存手法に比べて、各画像に対するアノテーションを5.4個減らすことができ、より確信度の高いアノテーションを実現したと主張。
+          li クラウドソーシングの結果を線形SVMで学習したところ、既存のクラウドソーシングよりもエラー率を90%減らすことが可能であったと主張。
+          li 生物学上同じように分類されるクラスのような複雑なアノテーションに対しても低いエラー率を達成することができたことから、ワーカーの有する専門知識を活用できたことを確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li SVMの結果が良いことからトレーニングデータが高品質なことが伺えるため、良いクラウドソーシング手法だと言うことが確認できる。機械学習の結果が良い、ということもクラウドソーシング結果の一つの指標になるかもしれない？
+          li クラウドソーシングの実験に対するGTのアノテーションは誰が行ったのだろうか。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1324.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.22 05:55:16

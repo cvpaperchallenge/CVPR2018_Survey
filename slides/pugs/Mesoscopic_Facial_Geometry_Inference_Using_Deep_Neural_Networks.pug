@@ -1,0 +1,38 @@
++slide
+section#ID_Mesoscopic_Facial_Geometry_Inference_Using_Deep_Neural_Networks
+  .paper-abstract
+    .title Mesoscopic Facial Geometry Inference Using Deep Neural Networks
+    .info
+      .authors Loc Huynh, Weikai Chen, Shunsuke Saito, Jun Xing, Koki Nagano, Andrew Jones, Paul Debevec1 Hao Li
+      .conference CVPR 2018
+      .paper_id 2496
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 深層学習によってLight Stageから得られる1Kの顔のUVテクスチャを入力として4Kのディスプレイスメントマップを推定する手法を提案。事前実験により、テクスチャから全てのディスプレイスメントを推定するのではなく、中周波数帯、高周波数帯のディスプレイスメントをそれぞれ推定した方が精度が高いことを確認しているため、周波数帯ごとに二つのブランチで推定を行う。提案手法ではimage-to-image networkによって1Kのテクスチャを1Kのディスプレイスメントに変換し、super-resolution networkによって高周波数帯のディスプレイスメントを高開画像度化し、中周波数帯に対してはバイキュービック方で高解像度する。最終的には顔の3D meshにディスプレイスメントマップを統合することでリアルな3Dジオメトリモデルを得る。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Mesoscopic_Facial_Geometry_Inference_Using_Deep_Neural_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 中周波数帯のみ、1Kの中・高周波数帯、4Kの中・高周波数帯(提案手法)のディスプレイスメントマップを用いた結果を比較。
+          li 既存手法と比較した結果、提案手法の方がGTに近い復元ができており、定量的にも提案手法の方がよりGTに近い。
+          li 主観評価を行い、提案手法、GT、既存手法のどれが最もリアルかという質問に対して、20.7%、67.2%、12.1%という結果となった。
+          li in-the-wildな顔画像に対してもある程度うまく復元できることを主張。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 手法的に新しいことはないものの、pore-levelと書いてある通り、推定されたディスプレイスメントでは肌の細孔も表現されておりかなり綺麗な結果となっている。とはいえ、主観評価ではGTが圧倒的な評価を集めているため、人間の顔に対する知覚の鋭さに驚いた。
+          li テスト時にはディスプレイスメントの生成に1秒、4K化に5秒程度かかる
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2496.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/2496-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 00:10:47

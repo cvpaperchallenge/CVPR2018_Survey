@@ -1,0 +1,30 @@
++slide
+section#ID_Beyond_Grobner_Bases_Basis_Selection_for_Minimal_Solvers
+  .paper-abstract
+    .title Beyond Grobner Bases: Basis Selection for Minimal Solvers
+    .info
+      .authors Viktor Larsson, Magnus Oskarsson, Kalle Astrom, Alge Wallis, Zuzana Kukelova, Tomas Pajdla
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p CVのアルゴリズムはカメラモーションやシーンにおける3次元構造など幾何的なロバスト推定を要することが多く、RANSACに頼ることも多い。本論文では単項式の選択により高速な多項式計算を実装するための方法について検討する。Grobner基底を利用することにより、効率的な計算を実現する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180730Grobner.png`,alt="180730Grobner")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Grobner基底によりロバスト推定を高速化する方法について提案することに成功。単項式によるサンプリングについてヒューリスティックな方法を実現。幾何推定やカメラ校正問題についてState-of-the-artな方法を高速に実装。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p Grobner（oにウムラウト）という単語があり、CVFのオープンアクセスにリンクできなかった。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.04360.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 10:12:25
