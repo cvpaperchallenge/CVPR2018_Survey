@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_VITAL_VIsual_Tracking_via_Adversarial_Learning
+  .paper-abstract
+    .title VITAL: VIsual Tracking via Adversarial Learning
+    .info
+      .authors Yibing Song, Chao Ma, Xiaohe Wu, Lijun Gong, Linchao Bao, Wangmeng Zuo, Chunhua Shen, Rynson Lau, Ming-Hsuan Yang
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p tracking-by-detectionベースの手法は、(1)各フレームにおけるpositive sampleが空間的に重なった領域を取りやすいため、十分な見た目のばらつきを学習できない点と(2)positive sampleとnegative sampleの不均等さ（class imbalance）が顕著に出てしまうという点が問題である。本論文では、positive sampleのデータ拡張を行うため、GANを用いて長い時間のスパンで頑健な特徴を学習可能なVITALアルゴリズムを提案した。またclass imbalanceを解決するため、識別が容易なnegative sampleを取り除くためのhigh-order cost sensitive lossを提案した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}VITAL.png`,alt="VITAL")
+    .item3
+      .text
+        h1 新規性・結果
+        p 提案手法はCNNで抽出した特徴量に適用するマスクを複数（論文では9個）用意し、マスクを通じて重み付けられた特徴量に対して識別器Dが対象物体か背景かの二値分類を行う。学習時には識別器Dに最も悪い識別性能を出させたマスクを学習させる。テスト時には生成器Gは取り除いておく。また識別が簡単すぎる大量のnegative sampleのロスが合計されて大きくなってしまう現象であるclass imbalanceを、あまり学習に寄与しないようにする。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1804.04273.pdf") 論文
+          li
+            a(href="https://youtu.be/uGMoOom6_90") デモ動画
+          li
+            a(href="https://ybsong00.github.io/cvpr18_tracking/index") プロジェクト
+          li
+            a(href="https://github.com/ybsong00/Vital_release") GitHub
+    .slide_index #{getSlideIndex()}
+    
+
+
