@@ -1,0 +1,32 @@
++slide
+section#ID_Learning_distributions_of_shape_trajectories_from_longitudinal_datasets_a_hierarchical_model_on_a_manifold_of_diffeomorphisms
+  .paper-abstract
+    .title Learning distributions of shape trajectories from longitudinal datasets: a hierarchical model on a manifold of diffeomorphisms
+    .info
+      .authors A.Bone, O.Colliot and Stanley Durrleman
+      .conference CVPR2018
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 複数の時点で繰り返し観測される個々のオブジェクトの集合から形状軌道の分布を学習する方法を提案．非線形混合効果統計モデルを，マニフォールド値の縦方向データの一般統計モデル，マニホールド構造を持つ有限次元の微分同相写像を用いた形状軌道を定義する．評価実験では，アルツハイマー病の進行に関連した2Dシミュレーションデータおよび3D脳構造の大きなデータセットに関する我々の方法を検証し，時空間パターンを分類する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning_distributions_of_shape_trajectories_from_longitudinal_datasets_a_hierarchical_model_on_a_manifold_of_diffeomorphisms.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 形状変化の形状，開始およびペースの変動をそれぞれ記述する空間シフト，時間シフトおよび加速因子の分布とともに，長手方向データセットからの形状変化の平均時空間軌道を推定
+          li 潜在変数の適応ブロックサンプリング、形状輪郭のランダムな局所変位に基づく形状パラメータのための特定のサンプリング戦略、および目標対数尤度の消失テンパリングに適応するためにMCMC-SAEMを導入
+    .item4
+      .text
+        h1 コメント・リンク集
+        p シミュレートされたデータと実際のデータの両方を使用して，MCMC-SAEMアルゴリズムを使用してモデルを推定し自動診断に活用する予定
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3035.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 19:44:20
