@@ -1,0 +1,36 @@
++slide
+section#ID_RoadTracer_Automatic_Extraction_of_Road_Networks_from_Aerial_Images
+  .paper-abstract
+    .title RoadTracer: Automatic Extraction of Road Networks from Aerial Images
+    .info
+      .authors F.Bastani, S.He, S.Abbar, M.Alizadeh, H.Balakrishnan, S.Chawla, S.Madden, D.DeWitt
+      .conference CVPR 2018
+      .paper_id 598
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p 空中画像（aerial image）からオートマッピングするRoadTracerを提案.
+          |従来のセグメンテーション手法ではノイジーなCNNの出力では正確なマッピングが難しいことから高いエラーレートの問題があることを述べている.
+          |提案手法ではセグメンテーション手法ではなく,
+          |CNNを使った決定関数による探索アルゴリズムで道路をマッピングする.
+          |探索はよく知られている道（大きい道？）のある一ヶ所をスタートポイントとして道に沿って探索していき,各ステップごとにCNNによってネットワークにエッジを追加するか1つ前のツリーに戻るか選択を繰り返しさせて探索していく.
+          |提案手法によりセグメンテーション手法より分岐点などにおいて正しくマッピングできるようになり,
+          |DeepRoadMapperやセグメンテーション手法より精度が上昇した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}180598_1.PNG`,alt="Item3Image")
+    .item3
+      .text
+        h1 結果
+        p 15都市の空中画像を用いて実験した結果，DeepRoadMapperでは21%，セグメンテーション手法では58%正しく道をキャプチャできた一方，RoadTracerは72%正しくキャプチャできた．また，エラー率を5％に抑え，都市に存在する分岐点の45％以上をキャプチャすることが可能となった．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1802.03680") arxiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.4 12:25:46
