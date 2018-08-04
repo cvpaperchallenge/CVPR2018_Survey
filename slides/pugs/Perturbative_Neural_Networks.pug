@@ -1,0 +1,27 @@
++slide
+section#ID_Perturbative_Neural_Networks
+  .paper-abstract
+    .title Perturbative Neural Networks
+    .info
+      .authors Felix Juefei-Xu et al., 
+      .conference CVPR 2018
+    .slide_editor Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p Pixel-wiseでの固定ノイズの加算=>ReLU=>1×1convというPerturbative layerを使用したPNNの提案。実験ではPerturbative residual moduleを用いたPNN-Resnetを使用してImageNet, Cifar-10のclassification、Pascal VOCのobject detectionによる評価でそこそこ良い性能を示した。結論としては、今回の実験結果から最適な画像認識用のNNはConvが必要であるとは限らないと言っている。
+    .item2
+      img(src=figpath+"Perturbative_Neural_Networks.png",alt="Perturbative_Neural_Networks.png")
+    .item3
+      .text
+        h1 手法・なぜ通ったか？
+        p 通常のconvの代わりに固定のhand-craftなカーネルを1×1convによる重み付けで近似し、計算コスト・学習パラメータの削減を行うLBCNNを元の発想としている。（固定カーネルがPixel-wiseでの固定ノイズの加算に変わっている）実質、 Perturbative layerでの受容野は1×1領域になるので論文中では(Convは使用しないため)Pooling層などで受容野を拡大すると述べられている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 
+        ul
+          li
+            a(href="https://arxiv.org/abs/1806.01817") 論文
+    .slide_index #{getSlideIndex()}
