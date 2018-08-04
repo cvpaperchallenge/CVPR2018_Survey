@@ -1,0 +1,31 @@
++slide
+section#ID_Decorrelated_Batch_Normalization
+  .paper-abstract
+    .title Decorrelated Batch Normalization
+    .info
+      .authors Lei Huang, Dawei Yang, Bo Lang, Jia Deng
+      .conference CVPR 2018
+    .slide_editor Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 本論文は、Batch Normalizationに白色化を導入したDecorrelated Batch Normalizationを提案した。通常のBatch Normalizationは標準化を行っているが、白色化を行っていない。したがって、白色化を導入することにより、Batch Normalizationよりさらに早く学習を収束させることが可能になった。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Decorrelated_Batch_Normalization.png`,alt="DBN")
+    .item3
+      .text
+        h1 手法・新規性
+        p PCAを用いた白色化を行うとstochastic axis swappingという問題が発生する。データxが与えられたとき、それに対する正規直交基底をDとすると、異なるイテレーションから得られたデータx1とx2に対する正規直交基底D1とD2において、D1=D2とならない現象のことをいう。この現象を避けるため、Decorrelated Batch NormalizationではZCAを用いた白色化を行う。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Decorrelated_Batch_Normalization_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/1134-supp.pdf") Supplemental Materials
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.4 15:27:56
