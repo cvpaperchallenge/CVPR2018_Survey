@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_Interleaved_Structured_Sparse_Convolutional_Neural_Networks
+  .paper-abstract
+    .title Interleaved Structured Sparse Convolutional Neural Networks
+    .info
+      .authors Guotian Xie, Jingdong Wang, Ting Zhang, Jianhuang Lai, Richang Hong,and Guo-Jun Qi
+      .conference CVPR2018
+      .paper_id 1804.06202
+    .slide_editor Kenichiro Wani
+
+    .item1
+      .text
+        h1 概要
+        p 本論文では，畳み込みカーネルの冗長性を排除した効率的な畳み込みニューラルネットワークアーキテクチャの設計問題を検討する。著者らは,IGCV2:Interleaved Structured Sparse Convolutionと呼ばれる連続したグループコンボリューションで構成されるブロックを設計した．このブロックは，構造化スパースカーネルを乗算することとして数学的に定式化されており，それぞれがグループコンボルーションに対応している。相補条件と平衡条件を導入することで，畳み込みカーネルが密集し，モデルサイズ，計算複雑性，分類性能の3つの側面のバランスが良好になる。実験結果は，インターリーブドグループコンボリューションおよびXceptionと比較して，これらの3つの側面のバランス上の利点，および他の最先端のアーキテクチャ設計方法と比較した競合性能を実証している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Interleaved_Structured_Sparse_Convolutional_Neural_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 畳み込みカーネルの冗長性を排除し，密集したカーネルを構成している。また密集したカーネルを構成することにより，モデルサイズ，計算複雑性，分類性能の3つの側面のバランスが良好になる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ol
+          li
+            a(href="https://arxiv.org/abs/1804.06202") link
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.3 14:33:29
