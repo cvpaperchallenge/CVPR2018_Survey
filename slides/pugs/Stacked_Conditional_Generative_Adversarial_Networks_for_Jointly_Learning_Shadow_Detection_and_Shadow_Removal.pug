@@ -1,0 +1,32 @@
++slide
+section#ID_Stacked_Conditional_Generative_Adversarial_Networks_for_Jointly_Learning_Shadow_Detection_and_Shadow_Removal
+  .paper-abstract
+    .title Stacked Conditional Generative Adversarial Networks for Jointly Learning Shadow Detection and Shadow Removal
+    .info
+      .authors Jifeng Wang, Xiang Li, Le Hui, Jian Yang
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 影の検出と除去という二つのタスクを同時に学習するend-to-endのフレームワークを提案．提案するST-CGAN は，２つのcGANがスタック構造になっている．一つ目のcGANで影を検出し，二つ目のcGANで影の除去を行う．影の検出と除去の両方に対応したデータセットも公開．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Stacked_Conditional_Generative_Adversarial_Networks_for_Jointly_Learning_Shadow_Detection_and_Shadow_Removal.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 手法
+        p ・二つのGeneratorはU-net構造．一つ目のGeneratorは影領域を示すマスクを出力とする．二つ目のGeneratorの入力は影付きの画像と出力されたマスクであり，出力は影を取り除いた予測画像である
+          br
+          |・影あり画像，影マスク，影なし画像の３つのペアを持った1870組のデータセットを作成．元々影のない場所で，板や傘を使って自分たちで影を入れて撮影している．そうして上の３つのペアを作成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.02478") arXiv
+          li この手作り感のあるデータセットでも貢献にカウントでき，1870組でも（他の影のデータセットと比べて）大規模と言えることは指標になる．
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 16:07:36

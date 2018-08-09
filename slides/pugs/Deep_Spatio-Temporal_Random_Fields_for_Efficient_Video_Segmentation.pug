@@ -1,0 +1,44 @@
++slide
+section#ID_Deep_Spatio-Temporal_Random_Fields_for_Efficient_Video_Segmentation
+  .paper-abstract
+    .title Deep Spatio-Temporal Random Fields for Efficient Video Segmentation
+    .info
+      .authors Siddhartha Chandra, Camille Couprie, Iasonas Kokkinos
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p ビデオでの領域分割のためのdeep Random Fieldを用いた手法(VideoGCRF)を提案．
+          |Deep Gaussian Conditional Random Fields(GCRFs)を利用し，密接に関係する時空間グラフの推論が時間効率・メモリ効率に優れた手法を提案する．
+          br
+          |・計算効率，メモリ効率
+          br
+          |・固有の大域的最小値を持つ
+          br
+          |・end-to-endで学習が可能
+    .item2
+      .text
+        p
+          img(src=`${figpath}Deep_Spatio-Temporal_Random_Fields_for_Efficient_Video_Segmentation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 手法
+        p ・はじめに，複数枚の入力画像からFCNでピクセルごとのクラスラベルを予測する．同時に空間的な埋め込みベクトルと，時間的な埋め込みベクトルをそれぞれ獲得する
+          br
+          |・埋め込みの内積から，時間的な埋め込みと区間的な埋め込みの位置を結合する
+          br
+          |・最後に線形システムを解く事で，最終的な予測結果を得る
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1807.03148") arXiv
+            br
+            |・デプス推定にも適用することをFuture workとしている
+            br
+            |・全てをディープネットワークに頼るのではなく，これまで研究されてきたCRFような技術も組み込む事も考えるべき
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 16:31:15

@@ -1,0 +1,37 @@
++slide
+section#ID_Generative_Image_Inpainting_with_Contextual_Attention
+  .paper-abstract
+    .title Generative Image Inpainting with Contextual Attention
+    .info
+      .authors Jiahui Yu, Zhe Lin, Jimei Yang, Xiaohui Shen, Xin Lu, Thomas S. Huang
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p アテンションにより周囲の適切な箇所の画像特徴を利用する生成モデルベースの画像補完手法の提案．大きな領域を補完できるgenerative model-baseのアプローチと，周囲との整合性を取りやすい従来のパッチベースのアプローチのいいとこ取りをする．アテンション機構が，背景側のどの領域を参考にして補完領域を生成すべきか予測する．提案するモデル２つあり，アテンション機構を含まないベースラインモデルとアテンション機構を含むモデルである．モデルはfeed-forwardのFCNであるのでテスト時には任意の場所の複数の穴を補完でき，画像のサイズも任意となる．CelebA-HQの顔写真やテクスチャー，風景写真での実験で高い質の補完が行えることを示している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Generative_Image_Inpainting_with_Contextual_Attention.png`,alt="Item3Image")
+          br
+          |各セットの左側が入力画像で，欠損領域が白塗りされている．右側の結果では，木の幹などの構造が崩壊せずに補完できている．
+    .item3
+      .text
+        h1 手法
+        ul
+          li
+            p coarse-to-fineの段階的な構造を採用．学習時は，入力，coarse出力，fine出力ともに256x256のサイズの画像である．
+          li
+            p 従来手法のようにGlobalとLocalのDiscriminatorを持つ．Global Criticが出力画像全体の整合性を評価し，Local Criticが補完領域を中心として局所的な領域の整合性を評価する．Discriminatorが，WGAN-GP adversarial lossを算出するようにしたところが差分．
+          li
+            p contextual attention layerの導入．conv層とdeconv層から成る． 前景のパッチと背景のパッチのマッチングスコアを計算するユニットになっている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1801.07892") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 15:59:24
