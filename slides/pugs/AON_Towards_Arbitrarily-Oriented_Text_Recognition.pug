@@ -1,0 +1,35 @@
++slide
+section#ID_AON_Towards_Arbitrarily-Oriented_Text_Recognition
+  .paper-abstract
+    .title AON: Towards Arbitrarily-Oriented Text Recognition
+    .info
+      .authors Zhanzhan Cheng, Yangliu Xu, Fan Bai, Yi Niu, Shiliang Pu, Shuigeng Zhou
+      .conference CVPR2018
+    .slide_editor Tetsuya Narita
+
+    .item1
+      .text
+        h1 概要
+        p イレギュラー文字の深い特徴を取得するためにarbitrary orientation network(AON)を開発．このネットワークの全体は，画像と単語レベルのみを使用してエンドtoエンドで訓練することができる．様々なベンチマークの実験では，提案されたAONベースの方法が不規則なデータセットでは最先端の性能を達成し，通常のデータセットの主要な既存の方法に匹敵することを示している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}AON.png`,alt="AON.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・文字の四角特徴を4方向に抽出するための任意の方向つけネットワークと，文字配置の手がかり
+          |・フィルタゲート機構を用いて4方向特徴シーケンス
+          |・文字シーケンスを生成するための注意べ―スのデコーダ
+          |の3つを使用
+          |既存研究と異なり，画像からイレギュラー/レギュラーのテキスト両方を効果的に認識できる
+          |通常のベンチマークと不規則なベンチマークの両方を用いた実験では，提案手法の優位性が検証された
+          |将来的には，提案手法を他関連に関するタスクまで拡張する予定
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1711.04226") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.27 09:38:17
