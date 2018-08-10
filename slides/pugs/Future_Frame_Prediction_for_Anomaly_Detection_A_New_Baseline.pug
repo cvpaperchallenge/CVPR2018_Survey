@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Future_Frame_Prediction_for_Anomaly_Detection_A_New_Baseline
+  .paper-abstract
+    .title Future Frame Prediction for Anomaly Detection – A New Baseline
+    .info
+      .authors Wen Liu, Weixin Luo, Dongze Lian, Shenghua Gao
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p 先の（未来の）フレーム予測と異常検知を同時に行う手法を提案する論文。予測したフレームと異常検知の正解値により誤差を計算して最適化を行う。図に本論文で提案するネットワークアーキテクチャの図を示す。U-Netにより画像予測やさらにオプティカルフロー推定を行い、RGB空間、オプティカルフロー空間にて誤差を計算しGANの枠組みでそれらがリアルかフェイクかを判定する。同フレームを用いて異常検知を実施する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180315PredictionAnomaly.png`,alt="180315PredictionAnomaly")
+    .item3
+      .text
+        h1 新規性・結果
+        p 従来は現在フレームを入力として異常検知を行う手法は存在したが、未来フレームを予測して異常検知を行う枠組みは本論文による初めての試みである。異常値の正解値を与えることで画像予測にもフィードバックされるため、画像予測と異常検知の相互学習に良い影響を与える。オープンデータベースにてベンチマークした結果、何れもState-of-the-artな精度を達成。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 生成ベースで画像予測+X（Xは任意タスク）というものはSoTAが出せるくらいにはなってきた。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.09867.pdf") 論文
+          li
+            a(href="https://github.com/StevenLiuWen/ano_pred_cvpr2018") Project
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.15 09:04:03
+
+

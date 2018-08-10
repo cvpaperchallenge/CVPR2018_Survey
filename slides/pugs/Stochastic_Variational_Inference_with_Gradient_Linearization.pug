@@ -1,0 +1,32 @@
++slide
+section#ID_Stochastic_Variational_Inference_with_Gradient_Linearization
+  .paper-abstract
+    .title Stochastic Variational Inference with Gradient Linearization
+    .info
+      .authors Tobias Plötz, Anne S. Wannenwetsch, Stefan Roth,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        stochastic variational inference with gradient linearization (SVIGL)の提案。従来の勾配法による確率的変分推論よりも、収束速度を改善することができ、KL発散の点で同等またはより良い変分近似を可能にする。エネルギー勾配の局所線形化を行えば、確率的変分近似としても同様に使える。
+
+    .item2
+      img(src=figpath+"180801SVIwGL.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p 確率論的アプローチの変分近似は、閉形式変数更新の分析式を導出するというプロセスを排除し、代わりに対数の勾配を計算するだけでよく、人気が高まっている。しかし、ログ勾配において、標準的な勾配法を用いて最適化することは困難な場合がある。図は、オプティカルフローに応用した結果。 Ground truth (上)、フロー予測(中)、不確実性推定(下)。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p オプティカルフロー推定、ポアソンガウスノイズ除去、3D表面再構成の3つのアプリケーションで改善を実証。
+        ul
+          li: a(href="https://arxiv.org/pdf/1803.10586.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 22:00:12
+
+

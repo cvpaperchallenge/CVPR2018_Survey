@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_CodeSLAM_Learning_a_Compact_Optimisable_Representation_for_Dense_Visual_SLAM
+  .paper-abstract
+    .title CodeSLAM — Learning a Compact, Optimisable Representation for Dense Visual SLAM
+    .info
+      .authors Michael Bloesch, Jan Czarnowski, Ronald Clark, Stefan Leutenegger, Andrew Davison
+      .conference CVPR  2018
+      .paper_id 288
+    .slide_editor Yue Qiu
+  
+    .item1
+      .text
+        h1 概要
+        p ・RGB画像の強度データと少数のパラメータを条件に，ほぼリアルタイムで行えるデンスなシーン幾何を推定手法を提案した．
+          |・提案手法UNet構造により強度画像の特徴抽出を行い，更に抽出特徴をauto-encoder構造を用いたデプス情報推定ネットワークに入力することで階層的にデプス情報推定を行う．また，カメラ移動中得られるマルチフレームに対し，フレームごとのデプス推定及びフレーム間のカメラモーションをジョイントで最適化を行う．
+    .item2
+      .text
+        p
+          img(src=`${figpath}codeSLAM.png`,alt="codeSLAM")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・デンスなデプス情報推定を行うことでSLAMシステムの更なる精度向上できると宣言した．
+          |・初めてのほぼリアルタイムで行えるカメラモーションとシーンのデンス幾何をジョイントで推定する研究である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p ・著者たちは将来のワークとして，提案手法をリアルタイムでデンスなSLAMシステムの構築に拡張すると指摘し,将来的な研究を期待している．
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.00874") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.1 14:08:56
+
+

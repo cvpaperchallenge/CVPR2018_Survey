@@ -1,0 +1,35 @@
++slide
+section#ID_Optimizing_Filter_Size_in_Convolutional_Neural_Networks_for_Facial_Action_Unit_Recognition
+  .paper-abstract
+    .title Optimizing Filter Size in Convolutional Neural Networks for Facial Action Unit Recognition
+    .info
+      .authors Shizhong Han, Zibo Meng, Zhiyuan Li, James O’Reilly, Jie Cai, Xiaofeng Wang and Yan Tong
+      .conference CVPR2018
+    .slide_editor Yuta Matsuzaki
+
+    .item1
+      .text
+        h1 概要
+        p 本論文では，CNNの層フィルタサイズと重みを学習データと畳込みフィルタから同時に学習する新規のフィルタサイズ最適化CNN(Optimized Filter Size CNN：OFS-CNN)を提案．実験ではOFS-CNNが様々な画像解像度に対して最適なフィルタサイズを推定し，網羅的な検索によって得られた最良のフィルタサイズを有することを確認．従来手法より優れていること確認．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180725_Optimizing_Filter_Size1.png`,alt="Image1")
+          img(src=`${figpath}20180725_Optimizing_Filter_Size2.png`,alt="Image2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 既存のCNNを用いた顔認識におけるaction unitsは，予め規定された固定値の畳込みフィルタが適応される仕組み．本研究では完全に学習によってフィルタサイズを最適化(ヒューリスティックに設定した規定のフィルタサイズなし)
+          li 本研究のような学習プロセスは層が深くなるにつれ計算コストが増加し効率が下がるが，OFS-CNNでは一般のCNNと比較しより効率的に学習可能
+          li フィルタサイズは連続関数として定義され，トレーニングロスを最小限に抑制し最適化
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1707.08630.pdf") 論文(arxiv)
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2519.pdf") 論文(cvf)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 14:22:26

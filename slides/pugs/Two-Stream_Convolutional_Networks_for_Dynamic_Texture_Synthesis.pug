@@ -1,0 +1,41 @@
++slide
+section#ID_Two-Stream_Convolutional_Networks_for_Dynamic_Texture_Synthesis
+  .paper-abstract
+    .title Two-Stream Convolutional Networks for Dynamic Texture Synthesis
+    .info
+      .authors Matthew Tesfaldet, Marcus A. Brubaker, Konstantinos G. Derpanis
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p 動的なテクスチャー生成のために two-streemのモデルを導入した．
+          |生成される結果は３〜５秒程度の動画で，結果例はプロジェクトサイトに詳しく載っているので参考にされたい．
+          |定量評価として，200人によるUserStudyを行なっている．59組の生成結果と正解動画を見せ，どちらがリアルかの回答を得た．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Two-Stream_Convolutional_Networks_for_Dynamic_Texture_Synthesis.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 手法
+        p ・学習済みモデルを利用し，これを(1)物体認識，(2)オプティカルフロー推定の二つのタスクのために利用．
+          br
+          |・物体認識のストリームで入力テクスチャーのアピアレンスの統計的特徴を獲得し，オプティカルフロー推定のストリームで動きの特徴を獲得する．
+          br
+          |・入力の動的テクスチャーと生成する動的テクスチャーの二つをスタイルトランスファーと同じようにグラム行列をベースとし，最適化問題として解くことで，動的なテクスチャーを生成する．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1706.06982") arXiv
+            br
+            |・動画というかGIF
+            br
+            |・temporal paternの理解，特徴づけの研究は以下のような様々な名称が付いている．urbulent-flow motion, temporal textures, time-varying textures, dynamic textures, textured motion and spacetime textures
+            br
+            |・スタイルトランスファーの論文と同様に，他の手法との比較が難しいと思った．定量的な評価もユーザースタディーに頼るしかなさそう．
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 16:16:48

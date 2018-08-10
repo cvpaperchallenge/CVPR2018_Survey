@@ -1,0 +1,29 @@
+﻿+slide
+section#ID_Robust_Hough_Transform_Based_3D_Reconstruction_from_Circular_Light_Fields
+  .paper-abstract
+    .title Robust Hough Transform Based 3D Reconstruction from Circular Light Fields
+    .info
+      .authors Alessandro Vianello, Robert Bosch GmbH; Jens Ackermann, Robert Bosch GmbH; Maximilian Diebold, Heidelberg University; Bernd Jähne, University of Heidelberg
+      .conference CVPR2018
+    .slide_editor Kenichiro Wani
+
+    .item1
+      .text
+        h1 概要
+        p ライトフィールド画像は，通常のグリッドで撮影された画像に基づいています。したがって，高品質3D再構成は，エピポーラ平面画像（EPI）の方向を分析することによって得ることができる。しかし，そのようなデータは，オブジェクトの片面のみを評価することを可能にする。さらに，各方位に沿った一定の強度は，ほとんどのアプローチにおいて必須である。本論文では，円環状のフィールドと呼ばれる円形のカメラモーションで得られたデータから奥行き情報を再構築することを可能にする新規な方法を提示する。この手法を使用することで，対象物の全360度のビューを決定することを実現する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Robust_Hough_Transform_Based_3D_Reconstruction_from_Circular_Light_Fields.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 使用する画像は，テレセントリックカメラで撮影した画像と標準の遠近両用レンズで撮影した画像の2種類である。従来の線形ライトフィールドとは異なり，円形のライトフィールドを使用している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ol
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Vianello_Robust_Hough_Transform_CVPR_2018_paper.pdf") link
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.2 23:17:28

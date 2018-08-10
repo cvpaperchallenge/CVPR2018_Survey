@@ -1,0 +1,29 @@
+﻿+slide
+section#ID_Discovering_Point_Lights_with_Intensity_Distance_Fields
+  .paper-abstract
+    .title Discovering Point Lights with Intensity Distance Fields
+    .info
+      .authors Edward Zhang, University of Washington; MIchael Cohen, ; Brian Curless, Washington
+      .conference CVPR2018
+    .slide_editor Kenichiro Wani
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では，光の定位問題について考える。シーンは，観測されていない等方点灯のセットによって照らされる。幾何学，材料，およびシーンの照明された外観を考えると，光の局在化の問題は，光の数，位置，および強度を完全に回復することである。最初に，光の可能性が高いシーン変換を提示する。この変換に基づいて，残りのライトを特定してすべての光強度を決定する反復アルゴリズムを開発する。著者らは，2D合成シーンの大きなセットでこの方法の成功を実証し，合成シーンと現実のシーンの両方で3Dにまで拡大することを示している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Discovering_Point_Lights_with_Intensity_Distance_Fields.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 未知数のローカルな離散エミッタの問題の定式化をしている。 シーン内の反射光に基づいて複数の候補光位置を提示する画像変換をしている。位置および強度を含むシーン照明の完全なセットを回復するために光提案を使用する反復アルゴリズムを提案している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ol
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0510.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.3 15:58:07

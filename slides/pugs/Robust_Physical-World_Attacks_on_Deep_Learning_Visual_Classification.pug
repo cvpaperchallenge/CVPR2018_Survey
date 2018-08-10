@@ -1,0 +1,33 @@
++slide
+section#ID_Robust_Physical-World_Attacks_on_Deep_Learning_Visual_Classification
+  .paper-abstract
+    .title Robust Physical-World Attacks on Deep Learning Visual Classification
+    .info
+      .authors K.Eykholt, I.Evtimov, E.Fernandes, B.Li, A.Rahmati, C.Xiao, A.Prakash, T.Kohno and D.Song
+      .conference CVPR 2018
+      .paper_id 192
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p DNNにおいて，システムを混乱させるような攻撃にロバストとなるには，それらの攻撃された画像を学習する必要がある．そこで本稿では，識別する画像に細工を加えることで従来のDNNの識別を間違えさせるアルゴリズムを提案．今回は道路標識の画像に対し環境情報，空間的制約を分析して
+          |画像上に細工を加える．作成した画像をLISA-CNNやGTSRB-CNNに識別させ，その間違えた結果を評価している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180192_0.PNG`,alt="Item3Image1")
+          img(src=`${figpath}180192_1.PNG`,alt="Item3Image2")
+    .item3
+      .text
+        h1 結果
+        p 実際に”STOP”の標識を"Speed Limit 45"などに誤認識させており，さらにその識別結果が80%を越えている．
+          |この事からかなりの精度で攻撃できていることがわかる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1707.08945") arxiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.20 16:17:17

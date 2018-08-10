@@ -1,0 +1,34 @@
++slide
+section#ID_Arbitrary_Style_Transfer_with_Deep_Feature_Reshuffle
+  .paper-abstract
+    .title Arbitrary Style Transfer with Deep Feature Reshuffle
+    .info
+      .authors Shuyang Gu, Congliang Chen, Jing Liao, Lu Yuan
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p style画像のdeep特徴マップをシャッフルすることにより，任意のstyle transferを行う手法の提案．
+          |従来の様々なstyle-transfer手法に対して新しい切り口で分析し，deep feature reshuffleの提案を行なっている．feature domainに於いて逐次的な最適化を行なう．提案手法では，様々な種類の入力画像に対応することができ，質も他手法を超えると主張する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Arbitrary_Style_Transfer_with_Deep_Feature_Reshuffle.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・neural parametricモデルと neural non-parametricモデルはdeep feature reshuffleというアイデアによって統合される．
+          br
+          |・deep feature reshuffleに基づく新しいエネルギー関数を定義．これは，他の手法よりもシンプルで柔軟．
+          br
+          |・ピラミッド法で	feature-domainエネルギー関数を最適化するために新しく，レベルごとのデコーダを学習する
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.04103") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 16:46:29
