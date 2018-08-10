@@ -1,0 +1,29 @@
+﻿+slide
+section#ID_MorphNet_Fast_Simple_Resource-Constrained_Structure_Learning_of_Deep_Networks
+  .paper-abstract
+    .title MorphNet: Fast & Simple Resource-Constrained Structure Learning of Deep Networks
+    .info
+      .authors Ariel Gordon, Elad Eban, Oﬁr Nachum, Bo Chen, Hao Wu, Tien-Ju Yang,and Edward Choi
+      .conference CVPR2018
+    .slide_editor Kenichiro Wani
+
+    .item1
+      .text
+        h1 概要
+        p この論文では，MorphNetと呼ばれるニューラルネットワーク構造の設計を自動化する手法を提案している。 MorphNetはネットワークを繰り返し縮小して拡張し，アクティベーション時にリソースの重み付けされたスパース化レギュラーを介して縮小し，すべてのレイヤーで均一な乗法係数を使用して拡張する。従来のアプローチとは対照的に，本発明の方法は，特定のリソース制約（例えば推論ごとの浮動小数点演算の数）に適合し，ネットワークの性能を高めることができる大規模ネットワークにスケーラブルである。評価実験では，さまざまなデータセットとシードネットワーク設計での自動構造学習のMorphNetアルゴリズムを評価している。FLOPとモデルサイズの制約の分析では，制約と精度との間のトレードオフの形式は特定のリソースに大きく依存し，MorphNetはFLOPまたはモデルサイズのいずれかを対象とするときにこのトレードオフをうまく乗り越えることができることを示した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}MorphNet_Fast_Simple_Resource-Constrained_Structure_Learning_of_Deep_Networks.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ニューラルネットワーク構造の設計を自動化にしている。またリソース制約をすることにより大規模ネットワークに拡張可能になっている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ol
+          li
+            a(href="https://arxiv.org/abs/1711.06798") link
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 22:23:31

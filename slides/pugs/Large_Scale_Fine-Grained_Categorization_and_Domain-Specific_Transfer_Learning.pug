@@ -1,0 +1,45 @@
+﻿+slide
+section#ID_Large_Scale_Fine-Grained_Categorization_and_Domain-Specific_Transfer_Learning
+  .paper-abstract
+    .title Large Scale Fine-Grained Categorization and Domain-Specific Transfer Learning
+    .info
+      .authors Yin Cui Yang Song, Chen Sun, Andrew Howard, Serge Belongie
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 鳥の種族などより細かいラベルを推定するdomain-specific fine-grained visual categorization(FGVC) taskにおいて、
+          |効果的なトレーニングデータセットの構築方法を提案。
+          |事前実験からターゲットドメインの画像の見た目に近い画像を含むソースドメインでトレーニングするほど、
+          |識別精度が高くなるということを発見している。
+          |ターゲットドメインに含まれる画像の見た目に近い画像を多く持つソースドメインのクラスをいくつか選択することで
+          |トレーニングデータセットを構築する。画像の見た目はEarth Mover’s Distanceで測定され、
+          |7つのfine-grainedデータセットにおいて提案手法が効果的であることを示した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Large_Scale_Fine-Grained_Categorization_and_the_Effectiveness_of_Domain-Specific_Transfer_Learning.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li FGVCを行う際のトレーニングスキームとして、
+             |ImageNetのような大規模データセットやクラスごとのデータ数が偏っているiNatを学習するのではなく、
+             |より効果的なトレーニングデータセットを構築する手法を提案。
+          li fine-grainedデータセットCUB200、Stanford Dogs、Flower-102、Stanford Cars、Aircraft、Food101、
+             |NABirdsで検証した結果、5つのデータセットにおいて提案手法によって構築されたトレーニングデータセットで
+             |学習した場合に最も高い精度を達成。
+          li classificationで使用したネットワークはResNet、Inception、
+             |Squeeze-and-Excitationであり識別ネットワーク自体には依存しないことも検証している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 手法自体は単純ながら、事前実験に基づく論文展開や既存手法に対して投げかけた疑問を回収できたところが評価されたと思われる。
+          li
+            a(href="https://vision.cornell.edu/se3/wp-content/uploads/2018/03/FGVC_CVPR_2018.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

@@ -1,0 +1,29 @@
+﻿+slide
+section#ID_Fast_and_Robust_Estimation_for_Unit-Norm_Constrained_Linear_Fitting_Problems
+  .paper-abstract
+    .title Fast and Robust Estimation for Unit-Norm Constrained Linear Fitting Problems
+    .info
+      .authors Daiki Ikami, Toshihiko Yamasaki and Kiyoharu Aizawa
+      .conference CVPR2018
+    .slide_editor Kenichiro Wani
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では特に，ステレオ問題や3D再構成などのコンピュータビジョンアプリケーションで重要なタスクであるロバストな基本行列推定に焦点を当てている。反復的に再重み付けされた最小二乗（IRLS）を使用するM推定器は，ロバスト推定のための最もよく知られた方法の1つである。しかしながら，IRLSは，初期解が不十分であるために基本行列推定などの頑強な単位ノルム制約付き線形フィッティング（UCLF）問題には効果がない。本稿では，反復的に再重み付けされた固有値最小化（IREM）と名づけられた新しい目的関数およびその最適化を開発することによって，この問題を克服する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Fast_and_Robust_Estimation_for_Unit-Norm_Constrained_Linear_Fitting_Problems.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p IRLSが強固なUCLF問題ではうまく機能しない理由を明らかにし，IRLSの問題点を解決するためにIREMという名前の新しいアルゴリズムを提案している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ol
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3552.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.3 15:40:48

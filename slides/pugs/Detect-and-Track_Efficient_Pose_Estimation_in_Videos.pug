@@ -1,0 +1,33 @@
++slide
+section#ID_Detect-and-Track_Efficient_Pose_Estimation_in_Videos
+  .paper-abstract
+    .title Detect-and-Track: Efficient Pose Estimation in Videos
+    .info
+      .authors Rohit Girdhar et al.
+      .conference CVPR2018
+      .paper_id 1712.09184
+    .slide_editor Takumu Ikeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 複数人が写っている動画において動画内に存在するすべての人物のパーツを推定，追跡する新たな手法として，Mask R-CNNのすべての2次元の畳み込みを3次元へ拡張することで3次元の姿勢推定を行う新たなネットワークを提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}3D_mask_rcnn.PNG`,alt="3D_mask_rcnn.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Mask R-CNNを時系列方向に拡張した3D Mask R-CNNを提案した．
+          li Multi-Object Tracking Accuracy (MOTA)がValidation setにおいて55.2 %，Test setにおいて51.8%を達成し，ICCV2017のPoseTrackChallengeでSOTAを達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.09184.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 22:37:44

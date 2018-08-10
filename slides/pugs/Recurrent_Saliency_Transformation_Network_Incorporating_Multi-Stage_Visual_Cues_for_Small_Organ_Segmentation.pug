@@ -1,0 +1,34 @@
++slide
+section#ID_Recurrent_Saliency_Transformation_Network_Incorporating_Multi-Stage_Visual_Cues_for_Small_Organ_Segmentation
+  .paper-abstract
+    .title Recurrent Saliency Transformation Network: Incorporating Multi-Stage Visual Cues for Small Organ Segmentation
+    .info
+      .authors Qihang Yu, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        腹部のCTスキャン画像から、膵臓などの小さな器官をセグメント化する研究。 saliency transformation module(顕著性変換モジュール)を搭載したRecurrent Saliency Transformation Networkを提案。確率分布マップを反復的に変換する。この結果を空間的重みとして、次の反復処理に適応させる。トレーニングは2つのスケール下で共同に行うことができる。テストでは反復的にコンテキスト情報を伝播させていくことで精度向上を図る。
+
+    .item2
+      img(src=figpath+"180730RSTN.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li 画像の大きさに対して小さな物体をセグメント化する場合、従来では1段階目の荒い予測を行い、次に2段階目の細かい予測をすることで精度向上を図っていた。しかし、コンテキスト情報の不足などにより、細かい段階での予測の精度が低い。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li 膵臓のセグメンテーションと多臓器のセグメンテーションの2つのデータセットで精度評価し、SOTA。自ら収集したNIH膵臓セグメンテーションデータセットでも高精度。
+        ul
+          li: a(href="https://arxiv.org/pdf/1709.04518.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 21:04:21
+
+

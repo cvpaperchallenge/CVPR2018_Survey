@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Unsupervised_Cross-dataset_Person_Re-identification_by_Transfer_Learning_of_Spatial-Temporal_Patterns
+  .paper-abstract
+    .title Unsupervised Cross-dataset Person Re-identification by Transfer Learning of Spatial-Temporal Patterns (2)
+    .info
+      .authors Jianming, Lv and Weihang, Chen and Qing, Li and Can, Yang
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+  
+    .item1
+      .text
+        h1 概要
+        p ラベルなし、ドメインが異なる環境に対して人物再同定を行う手法を提案する。モデルであるTFusionは４ステップにより構築（１）教師あり学習により識別器を構築（２）ターゲットであるラベルなしデータにより時空間特徴パターン（Spatio-temporal Pattern）を学習（３）統合モデルFを学習（４）ラベルなしのターゲットデータにて徐々に識別器を学習する（１〜４は図に示されている）。Bayesian Fusionを提案して、時空間特徴パターンと人物のアピアランス特徴を統合してドメイン変換を行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180323CDReID.png`,alt="180323CDReID")
+    .item3
+      .text
+        h1 新規性・結果
+        p 従来の人物再同定の設定では比較的小さいデータセットであり、完全に教師ありの環境を想定していたが、本論文ではラベルなし、ドメインが異なる環境に対して人物再同定を実行するため、非常に難しい問題となる。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.07293.pdf") 論文
+          li
+            a(href="https://github.com/ahangchen/TFusion") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.3.23 20:37:22
+
+

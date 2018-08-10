@@ -1,0 +1,37 @@
++slide
+section#ID_End-to-end_Convolutional_Semantic_Embeddings
+  .paper-abstract
+    .title End-to-end Convolutional Semantic Embeddings
+    .info
+      .authors Quanzeng You, Zhengyou Zhang, Jiebo Luo
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p ・textual CNNを使って、画像とセンテンス両方にCNNを適用する
+          br
+          |・中間表現を使ってglobal semanticの学習をアシストする
+          br
+          |・semantic embeddingがうまくいくことを確認した
+    .item2
+      .text
+        p
+          img(src=`${figpath}End-to-end_Convolutional_Semantic_Embeddings.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・CNNをvisual and textual semantic embeddingに利用した。このネットワークはend-to-endで学習することができる
+          br
+          |・中間の畳み込み特徴と大域的なsemantics特徴を局所的なコンテキスト特徴の学習のために利用する
+          br
+          |・Flickr30kとMS-COCOデータセットを使って提案するモデルが効果的であることを実験で示した
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/You_End-to-End_Convolutional_Semantic_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 16:38:17

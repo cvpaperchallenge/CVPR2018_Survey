@@ -1,0 +1,32 @@
++slide
+section#ID_Seeing_Temporal_Modulation_of_Lights_from_Standard_Cameras
+  .paper-abstract
+    .title Seeing Temporal Modulation of Lights from Standard Cameras
+    .info
+      .authors N.Sakakibara, F.Sakaue and Jun Sato
+      .conference CVPR2018
+    .slide_editor Kota Yoshida
+
+    .item1
+      .text
+        h1 概要
+        p 蛍光灯などの光の見づらいフリッカー模様は市販のカメラと鏡面反射を伴う動く物体の単純な組み合わせによって観測することができることを示し，抽出されたフリッカー模様に基づいて画像内の動きのぼやけを除去するための効率的な方法を提案する．環境光のフリッカー模様により誘発される高い周波数特性と画像のブレを除去することが可能になる．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Seeing_Temporal_Modulation_of_Lights_from_Standard_Cameras.png`,alt="Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 環境光のフリッカパターンを符号化画像の符号化光として用いることにより，高い周波数特性をもつ画像のブレを除去
+          li 高速カメラや特別に設計されたコード露光カメラを用いずに市販のカメラによってモーションブラーを正確かつ効率的に除去するのに非常に有用であることも証明
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 移動車両の車載カメラを用いるだけで、移動車両と交通信号との間の高速可視光通信を実現することができるようだ．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0648.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 10:52:01

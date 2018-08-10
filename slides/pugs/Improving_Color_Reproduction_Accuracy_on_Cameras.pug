@@ -1,0 +1,29 @@
++slide
+section#ID_Improving_Color_Reproduction_Accuracy_on_Cameras
+  .paper-abstract
+    .title Improving Color Reproduction Accuracy on Cameras
+    .info
+      .authors Hakki Can Karaimer and Michael S. Brown
+      .conference CVPR2018
+    .slide_editor Masaki Miyamoto
+
+    .item1
+      .text
+        h1 概要
+        p デジタルカメラで実行される重要な操作の1つに、センサ固有の色空間を標準の知覚色空間にマッピングすることがある．この手順は、ホワイトバランス補正の後に色空間変換を適用することを含む。 この比色マッピングの現在のアプローチは、2つの決まった照度（すなわち，2つのホワイトバランス設定）について計算された事前にキャリブレーションされた色空間変換の補間に基づく． 異なる照度の下で取り込まれた画像は，この補間処理の使用により，色の再現精度が低下する． 本稿では，現在の比色マッピング手法の限界について議論し，色再現精度を向上させる2つの手法を提案する．7つの異なったカメラでアプローチを評価し，色再現誤差の点で最大30％（DSLRカメラ）と59％（携帯電話カメラ）改善した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Improving_Color_Reproduction_Accuracy_on_Cameras.PNG`,alt="Improving_Color_Reproduction_Accuracy_on_Cameras.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 比色マッピング手順を改善する2つの方法として，1つ目は，補間方法における追加のキャリブレーションされた照度を含む補間方法の単純な拡張を行う． 2つ目は、フルカラー補正マトリクスに依存した，すべての入力画像に対して固定CSTマトリクスを使用する方法である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Karaimer_Improving_Color_Reproduction_CVPR_2018_paper.pdf") URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 16:33:49

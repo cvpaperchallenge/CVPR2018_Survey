@@ -1,0 +1,30 @@
++slide
+section#ID_Feature_Generating_Networks_for_Zero-Shot_Learning
+  .paper-abstract
+    .title Feature Generating Networks for Zero-Shot Learning
+    .info
+      .authors Yongqin Xian, Tobias Lorenz, Bernt Schiele and Zeynep Akata
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p 未知クラスのラベル付きサンプルの必要性を回避するため，画像ではなくCNN特徴量を生成するGAN（f-CLSWGAN）を提案する．
+          |クラスレベルのセマンティック情報で条件づけることにより，よりリッチなCNN特徴空間を生成することができるとのこと．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Feature_Generating_Networks_for_Zero-ShsoetenLearning.png`,alt="Feature_Generating_Networks_for_Zero-ShsoetenLearning.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ZSL, GZSLの両方の問題設定において，CUB, FLO, SUN, AWA, ImageNetを用いて実験を行ったところ，提案手法によりSOTA手法の精度が向上した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1712.00981.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.1 01:18:57

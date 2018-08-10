@@ -1,0 +1,32 @@
++slide
+section#ID_EPINET_A_Fully-Convolutional_Neural_Network_Using_Epipolar_Geometry_for_Depth_from_Light_Field_Images
+  .paper-abstract
+    .title EPINET: A Fully-Convolutional Neural Network Using Epipolar Geometry for Depth from Light Field Images
+    .info
+      .authors Changha Shin, et al.,
+      .conference CVPR 2018
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      h1 概要
+      .text.
+        迅速かつ正確に、CNNベースでライトフィールドから深度を推定する取り組み。ライトフィールドの幾何学的形状を考慮したネットワークによって、トレーニングデータの欠落を克服。ビューシフトや回転などのライトフィールドの画像固有データの拡張方法を提案。
+
+    .item2
+      img(src=figpath+"180730EPINET.jpg")
+
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        p ライトフィールドカメラは、光線の空間的性質および角度的性質の両方を取得できる。様々な照明環境のライトフィールドから深度を計算可能。しかし、ハンドヘルドカメラからのライトフィールド画像は、ノイズが多く深度推定が困難。これらを克服したネットワークを提案。
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        p HCI 4D Light Field Benchmarkにて高精度を確認し、実世界のライトフィールド画像に対する手法の有効性を確認。
+        ul
+          li: a(href="https://arxiv.org/abs/1804.02379") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 22:59:01
+
+

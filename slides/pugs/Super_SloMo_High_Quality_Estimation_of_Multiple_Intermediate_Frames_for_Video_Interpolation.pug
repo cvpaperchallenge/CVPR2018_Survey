@@ -1,0 +1,33 @@
++slide
+section#ID_Super_SloMo_High_Quality_Estimation_of_Multiple_Intermediate_Frames_for_Video_Interpolation
+  .paper-abstract
+    .title Super SloMo: High Quality Estimation of Multiple Intermediate Frames for Video Interpolation
+    .info
+      .authors Huaizu Jiang, Deqing Sun, Varun Jampani,  Ming-Hsuan Yang, Erik Learned-Miller, Jan Kautz
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p ２枚の入力画像の中間フレームを必要な数だけ生成することが可能なend-to-end CNNの提案．双方向のオプティカルフローの推定とそれを元にしたフレーム補間のCNNから成る．モーションの補間とオクルージョン領域の推定を同時にモデル化することができる．これらのCNNは時間情報に依存しないので，間のフレームをいくつも作成することができることが特徴．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Super_SloMo_High_Quality_Estimation_of_Multiple_Intermediate_Frames_for_Video_Interpolation.png`,alt="Item")
+    .item3
+      .text
+        h1 手法
+        p ２つの入力フレーム間の双方向オプティカルフローの推定をCNNで行い，その２つのオプティカルフロー場から中間のオプティカルフロー場を近似的に求める．フロー補間のCNNでその近似の質をさらに高め，中間補間のためのsoft visibility mapを予測する．
+          |双方向オプティカルフローの推定のCNNも，フロー補間のCNNもどちらもU-net構造をしている．
+          |それぞれ30万フレームを含む1132本のビデオクリップ（240fps）を使って学習させている．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.00080") arXiv
+            br
+            |オプティカルフローの計算もCNNでやってしまう
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 15:51:53

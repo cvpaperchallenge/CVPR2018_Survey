@@ -1,0 +1,33 @@
++slide
+section#ID_Deep_Lesion_Graphs_in_the_Wild_Relationship_Learning_and_Organization_of_Significant_Radiology_Image_Findings_in_a_Diverse_Large-Scale_Lesion_Database
+  .paper-abstract
+    .title Deep Lesion Graphs in the Wild: Relationship Learning and Organization of Significant Radiology Image Findings in a Diverse Large-Scale Lesion Database
+    .info
+      .authors Ke Yan et al.
+      .conference CVPR2018
+      .paper_id 1711.10535
+    .slide_editor Takumu Ikeya
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 長年にわたって収集した異常や病変のアノテーションを施した放射線画像は基本的にソートされておらず、タイプや位置情報などの意味的なアノテーションがされていない．そこでこの研究では各病気の特徴を学習し，それらを整理，探索することで，重要な放射線画像を含む大規模なデータセットDeepLesionを提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}DeepLesion_Graphs_in_the_Wild.PNG`,alt="DeepLesion_Graphs_in_the_Wild.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li PACSから収集した新たな病変データセットとして，32Kを超える画像枚数と病変のバウンディングボックスとサイズを含むDeepLesionを提案した．
+          li CT画像内で検出された病変間の関係を効果的に検出，整理，学習する手法を開発した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.10535.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 20:12:31

@@ -1,0 +1,40 @@
++slide
+section#ID_Jointly_Optimize_Data_Augmentation_and_Network_Training_Adversarial_Data_Augmentation_in_Human_Pose_Estimation
+  .paper-abstract
+    .title Jointly Optimize Data Augmentation and Network Training: Adversarial Data Augmentation in Human Pose Estimation
+    .info
+      .authors Xi Peng, Zhiqiang Tang, Fei Yang, Rogerio S. Feris, Dimitris Metaxas
+      .conference CVPR2018
+    .slide_editor Naofumi Akimoto
+
+    .item1
+      .text
+        h1 概要
+        p データ拡張とネットワークの学習を敵対的学習の枠組み取り入れ同時に行う．
+          |キーとなるアイデアは，Generator（データ拡張ネットワーク）がDiscriminator（学習対象のネットワーク）にとってのhard exampleをオンラインで生成すること．これによって，GeneratorはDiscriminatorの弱みを探し，よりDiscriminatorの性能を伸ばすことができるようになる.
+          br
+          |同時学習を効率的に行うための報酬や罰則のストラテジーも提案する．
+          br
+          |この論文では，pose estimationのタスクに適用し，state-of-the-artを超えるデータ拡張ができたことを確認した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Jointly_Optimize_Data_Augmentation_and_Network_Training_Adversarial_Data_Augmentation_in_Human_Pose_Estimation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・データ拡張とネットワークの学習は通常切り離されているのに対して，この論文ではこの二つを同時に行うことが新しい．
+          br
+          |・敵対的にデータ拡張を行うことが，オンラインでやられていること
+          br
+          |・同時学習用の報酬や罰則のストラテジーの提案
+          br
+          |・pose-estimationタスクでいいスコア
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.09707") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.9 16:25:13

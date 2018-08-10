@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_SINT_Robust_Visual_Tracking_via_Adversarial_Positive_Instance_Generation
+  .paper-abstract
+    .title SINT++: Robust Visual Tracking via Adversarial Positive Instance Generation
+    .info
+      .authors Xiao Wang, Chenglong Li, Bin Luo, Jin Tang
+      .conference CVPR 2018
+    .slide_editor: a(href="" target="blank") Takahiro Itazuri
+
+    .item1
+      .text
+        h1 概要
+        p 物体追跡タスクでは追跡対象の画像を１フレーム目においてのみ与えられるため、トレーニングデータの多様性が不足していることがDNNを適用する際の障壁となっている。そこで変形や遮蔽といった困難な環境下における正解サンプルを生成する手法（SINT++）を提案した。提案手法は他の物体追跡手法に取り入れることが可能である点も非常に重要である。
+    .item2
+      .text
+        p
+          img(src=`${figpath}SINT_Robust_Visual_Tracking_via_Adversarial_Positive_Instance_Generation.png`,alt="SINT++")
+    .item3
+      .text
+        h1 新規性・結果
+        p VAEを用いて追跡対象の多様体を生成し、その多様体局面上を移動させることで正解サンプルを増やすネットワーク（PSGN）と識別器の認識性能にクリティカルな領域を探すように遮蔽領域を決定する強化学習ネットワーク（HPTN）を用いて、正解サンプルの多様性を増幅させる。追跡器はSINTを用いているため、与えられた追跡対象の画像に対するオフライン学習も、追跡中のオンライン学習も行わない。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_SINT_Robust_Visual_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://sites.google.com/view/cvpr2018sintplusplus") プロジェクト
+    .slide_index #{getSlideIndex()}
+    
+
+
