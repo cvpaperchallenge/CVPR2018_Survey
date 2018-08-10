@@ -1,0 +1,43 @@
+﻿+slide
+section#ID_Im2Struct_Recovering_3D_Shape_Structure_from_a_Single_RGB_Image
+  .paper-abstract
+    .title Im2Struct: Recovering 3D Shape Structure from a Single RGB Image
+    .info
+      .authors Chengjie Niu, Jun Li, Kai Xu
+      .conference CVPR 2018
+      .paper_id 578
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 1枚のRGB画像から3次元形状構造(直方体で物体パーツを表示し，構造をパーツ間の接続性や対称性などの関係で表す)を復元するネットワーク構造を提案した．
+          li 従来1枚のRGB画像からボリューメトリックの復元が広く研究されている．しかし従来の様々な手法より復元された物体はトポロジーや構造が崩れる問題点が多く存在する（特に入力モデルの構造欠損がある場合）．提案手法は画像から形状構造復元を行うため，従来の体積復元の更なる精度向上や3次元形状構造の編集や高レベル画像編集など様々なところに応用できる．
+          li 提案手法のネットワークは①構造マスクを推定するネットワーク②再帰的オートエンコーダーを用いた直方形階層の構造復元ネットワークで構成される．具体的①はskip連結付きなマルチスケールCNNを用いた．②は①の抽出特徴及び元画像の特徴から再帰的なデコーダーを用いた．学習データは3D CADモデルからレンダリング及び構造抽出により作成した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Im2Struct.png`,alt="Im2Struct")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 提案手法が初めての1枚RGB画像から詳細3次元形状構造を復元する手法と指摘した．
+          li 提案の形状構造復元手法がパーツ間の連結や対称性など関係の復元を学習するので，復元された形状の構造の妥当性と汎用性が保証できる．
+          li 構造駆動型3次元体積補間及び構造awareなインタラクティブ画像編集の2つのアプリを開発し，提案手法により復元された形状構造の有効性および妥当性を示した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 画像からの3次元形状構造復元がvolume復元と比べパラメータ数が圧倒的少ないので，問題自体の難しさも低い．しかし実応用を考えると，構造復元がかなり応用場面が多いと思う．問題設定がとても良いと思う
+          li
+            p 逆に今までどうしてやる人がなかったのが分からない
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3941.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.7 16:59:09
+
+

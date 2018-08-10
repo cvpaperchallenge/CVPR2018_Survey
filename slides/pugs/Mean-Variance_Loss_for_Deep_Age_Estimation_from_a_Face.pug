@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Mean-Variance_Loss_for_Deep_Age_Estimation_from_a_Face
+  .paper-abstract
+    .title Mean-Variance Loss for Deep Age Estimation from a Face
+    .info
+      .authors Hongyu Pan, Hu Han, Shiguang Shan, Xilin Chen
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 顔画像から年齢を推定する際に正確に年齢を推定するのではなく、ガウス分布を用いてある程度幅のある推定を行う手法を提案。
+          |大きなコントリビューションはロス関数としてガウス分布の平均値と分散に関するロスをとったことであり、
+          |平均値はGTの年齢との差分をとり、分散は分布がよりシャープになるようにロス関数を設計する。
+          |学習の際には上記2つのロス関数の他に1歳刻みの年齢をそれぞれクラスと見立てソフトマックスロスを取る。
+          |分布を学習する既存手法と異なる点は、提案手法ではGTの平均値、分散を使用しない点である。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Mean-Variance_Loss_for_Deep_Age_Estimation_from_a_Face.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 人間の年齢は正確に推定することは難しいが、ある程度の範囲内であれば推定は容易、という観察に基づいてロス関数を設計。
+          li FG-NET, MORPH Album Ⅱ, CLAP2016, AADBデータセットにおいてMAE、CSを評価指標として使用し多くのテストプロトコルにおいてSoTA。
+          li 照明環境に依存し、顔が赤い光で照らされているなどの特殊な照明環境では推定誤差が大きい。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul 
+          li 年齢推定だけでなく、同様の性質を持つタスクならば適用可能。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2139.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

@@ -1,0 +1,32 @@
++slide
+section#ID_Learning_Patch_Reconstructability_for_Accelerating_Multi-View_Stereo
+  .paper-abstract
+    .title Learning Patch Reconstructability for Accelerating Multi-View Stereo
+    .info
+      .authors Alex Poms, Chenglei Wu, Shoou-I Yu, Yaser Sheikh
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p Multi-view stereo（MVS）による3次元再構成の問題を取り扱う。事前確率による画像パッチにより少量のデータで3次元形状を復元、より高速な処理を可能とした。右図のように3次元再構成を行うために重要なデータを予め抽出することで16%のデータで約6倍高速にMVSによる3次元データを復元するに至った。ニューラルネットベースの手法（I2RNet）やDepthから3次元復元のための重要なデータを選定。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180727LearningPatchReconstructability.png`,alt="180727LearningPatchReconstructability")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p MVSにて事前確率（w/ Depth, I2RNet）を用い少量の重要なデータを用いることで高速な3次元復元を可能とした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p VRに有効に見える。Oculus Researchからの研究。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Poms_Learning_Patch_Reconstructability_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://www.cs.cmu.edu/~apoms/publication/cvpr/2018/05/12/learning-reconstructability.html") Project
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.30 00:46:22

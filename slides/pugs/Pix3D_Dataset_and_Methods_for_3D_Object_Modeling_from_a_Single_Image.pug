@@ -1,0 +1,44 @@
+﻿+slide
+section#ID_Pix3D_Dataset_and_Methods_for_3D_Object_Modeling_from_a_Single_Image
+  .paper-abstract
+    .title Pix3D: Dataset and Methods for 3D Object Modeling from a Single Image
+    .info
+      .authors Xingyuan Sun, Jiajun Wu, Xiuming Zhang, Zhoutong Zhang, Tianfan Xue, Joshua Tenenbaum, William Freeman
+      .conference CVPR 2018
+      .paper_id 375
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 大規模なピクセルレベルに対応付けられたimage-shape pairsデータセットPix3Dの提案及び画像から同時に三次元形状及び姿勢を推定するネットワークの提案．
+          li 従来のimage-shape pairsデータセットは①合成データセットを用いる②image-shapeの対応が精密ではない③データセット規模が小さいなどの問題点がある．そこで，著者達が大規模なピクセルレベルに対応付けられたデータセットを提案した．Pix3Dは395個の3次元物体モデル(9カテゴリ)，10069ペアの画像―形状ペアから構成される．画像と形状のペアはピクセルレベルの精密的に対応付けられている．
+          li データセットの収集段階では:①IKEA及び自撮りで大量な画像―形状ペアを集める②AMTにより画像からキーポイントをアノテーションする③Efficient PnP及びLevenberg-Marquardtを用いて粗い・精密なposeを求める．
+          li 更に，提案手法は画像から同時に姿勢及び3次元形状を予測できるネットワークを提案した．提案ネットワークはまず画像から2.5Dスケッチを推定し，推定したスケッチをエンコーディングする．また，デコーディングにより3次元形状を推定し，同時にview estimatorネットワークにより姿勢を推定する．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Pix3D.png`,alt="Pix3D")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来のデータセットではCGモデルで合成されている方が多く，提案のデータセットが実物体を用い，更にピクセルレベルな精密度の画像―形状対応付けアノテーションがある．
+          li 画像から同時に形状姿勢を推定するフレームワークの定量化結果は提案したデータセットでは3D-VAE-GAN,MarrNetなどの従来手法より良い精度を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 現在の学習データアノテーション段階でAmazon Mechanical Turkを用いている．Semantic Keypointの自動的検出を用いたら自動化できることはデータセットの更なる拡大化につなぎられそう
+          li
+            p
+              a(href="https://arxiv.org/abs/1804.04610") 論文
+          li
+            p
+              a(href="https://github.com/xingyuansun/pix3d") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.24 17:57:53
+
+

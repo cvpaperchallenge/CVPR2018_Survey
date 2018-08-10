@@ -1,0 +1,47 @@
+﻿+slide
+section#ID_Sparse_Smart_Contours_to_Represent_and_Edit_Images
+  .paper-abstract
+    .title Sparse, Smart Contours to Represent and Edit Images
+    .info
+      .authors T. Dekel, D. Krishnan, C. Gan, C. Liu, W. Freeman
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p かなりスパースな輪郭線（元画像の4%程度のデータ量）から大変きれいな画像の復元ができ，
+          |更に輪郭線を調節すると大変きれいにパーツ位置を変えられる．
+          |参照画像も変更できるので，髪を生やせるし，（効果は薄いが）人の鼻を犬っぽくできる．
+        p まず，入力の輪郭線を工夫する．
+          a(href="https://www.microsoft.com/en-us/research/publication/structured-forests-for-fast-edge-detection/") この手法
+          |でスパースな輪郭線を取り，
+          |輪郭線の左右の画素の色(RGB)を色値（RGB×左右＝計6値）とする．
+          |また，画像の各色における勾配を取り，輪郭線の位置におけるRGB×XY成分＝計6値を勾配値とする．
+          |ここからN次元特徴マップを（GANを回している最中に）学習する．
+          |構造は
+          a(href="https://arxiv.org/abs/1606.00915") Deeplab
+          |を参考にしたDilated Conv.による簡素なネットワーク構造による．
+        p この輪郭線特徴を入力として，
+          |2段階の復元用U-Netを生成器に，Dilated-Patch Discriminatorを判別器にしたGANを回す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Sparse_Smart_Contours_to_Represent_and_Edit_Images.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p アプリケーションとしてかなり使い出かあるように見える．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 実験的に見て，N=3がいいらしい．
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0085.pdf") 論文
+          li
+            a(href="https://contour2im.github.io/") プロジェクトページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 10:30:38
+
+

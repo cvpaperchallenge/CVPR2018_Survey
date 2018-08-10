@@ -1,0 +1,33 @@
+﻿+slide
+section#ID_Variational_Autoencoders_for_Deforming_3D_Mesh_Models
+  .paper-abstract
+    .title Variational Autoencoders for Deforming 3D Mesh Models
+    .info
+      .authors Q. Tan, L. Gao, Y. Lai and S. Xia
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        p 3Dメッシュの変形に関して，Variational AutoeEcoder(VAE)を使ってみたという研究．
+          |可能な変形の確率的潜在空間の探索を行う．
+          |学習は簡単で，学習データも少なくて済む（どれくらい？）
+          |事前分布を代替することで，異なる潜在変数の顕著性（Significance）を柔軟に調節可能な拡張モデルも提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Variational_Autoencoders_for_Deforming_3D_Mesh_Models.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 形状生成，形状補完，形状空間埋め込み，形状探索においてSoTA越え．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2701.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.20 10:42:57
+
+

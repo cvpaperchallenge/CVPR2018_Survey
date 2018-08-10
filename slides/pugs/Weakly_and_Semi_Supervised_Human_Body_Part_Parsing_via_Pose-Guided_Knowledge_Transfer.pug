@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Weakly_and_Semi_Supervised_Human_Body_Part_Parsing_via_Pose-Guided_Knowledge_Transfer
+  .paper-abstract
+    .title Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer
+    .info
+      .authors Hao-Shu Fang, Guansong Lu, Xiaolin Fang, Jianwen Xie, Yu-Wing Tai, Cewu Lu
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 人物姿勢推定において「似たような姿勢はほぼ同じセグメント結果を保有する」という前提で弱教師付き/半教師あり学習を実行する。ある対象画像が入力された際にはほぼ同じ姿勢のデータをDBから検索して知識を転用（Pose-guided Knowledge Transfer）学習を実行する。その際に姿勢による拘束条件（Morphological Constraints）を入れ込むことでピクセルベースの姿勢のセグメンテーションを実行。モデルは全層畳み込みネット（Fully Convolutional Networks; FCN)を適用。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180609WeakSemiPoseParsing.png`,alt="180609WeakSemiPoseParsing")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 弱教師付き学習（類似の姿勢を検索して対応づける）/半教師付き学習（少量のデータがあれば学習を実行）、いずれの手法でも姿勢学習を実行することができる。その上でデータ量を確保することに成功し、PASCAL-Part datasetにてmAPが3ポイント向上した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p より少量のアノテーションで、かつ複数の枠組みで（本論文の場合は弱教師付き学習/半教師あり学習）学習が実行できる枠組みが増えてきた。そればかりか、教師あり学習のみよりも精度の高いものができあがりつつある。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Fang_Weakly_and_Semi_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="http://www.stat.ucla.edu/~jxie/") 著者
+          li
+            a(href="whttps://github.com/MVIG-SJTU/WSHPww") GitHub
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.9 09:39:15
+
+

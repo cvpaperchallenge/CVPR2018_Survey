@@ -1,0 +1,35 @@
+﻿+slide
+section#ID_Conditional_Generative_Adversarial_Network_for_Structured_Domain_Adaptation
+  .paper-abstract
+    .title Conditional Generative Adversarial Network for Structured Domain Adaptation
+    .info
+      .authors W.Hong, Z.Wang, M.Yang and J.Yuan
+      .conference CVPR2018
+    .slide_editor KotaYoshida
+
+    .item1
+      .text
+        h1 概要
+        p コンピュータによって学習用のアノテーションを生成し，実画像のような合成画像として用いることが流行．しかし，ドメインの不一致という問題が起きる．それを解決するために，GANをFCNフレームワークに統合することでSemanticSegmentationのためのドメイン適用のための手法を提案．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Conditional_Generative_Adversarial_Network_for_Structured_Domain_Adaptation.png`,alt="画像")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 合成画像の特徴を実画像のように変換する条件付きジェネ−レータとディスクリメーターを学習
+          li ジェネレータは合成画像を実画像のようにディスクリメーターを騙すように学習させることでFCNのパラメータを更新．
+          li 本手法である実際のラベルを用いずに実験を行い，CityscapesデータセットのIoU平均が12〜20上回りSoTA．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li FCN＋GANでSemanticSegmentation
+          li
+            a(href="https://weixianghong.github.io/publications/papers/CVPR_18.pdf") Paper
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.28 15:36:39
+
+

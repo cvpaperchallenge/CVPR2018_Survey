@@ -1,0 +1,44 @@
+﻿+slide
+section#ID_SfSNet_Learning_Shape_Reflectance_and_Illuminance_of_Faces_in_the_Wild
+  .paper-abstract
+    .title SfSNet: Learning Shape, Reflectance and Illuminance of Faces in the Wild
+    .info
+      .authors Soumyadip Sengupta, Angjoo Kanazawa, Carlos D. Castillo, ; David Jacobs
+      .conference CVPR 2018 Spotlight
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p ラベル付き合成顔画像とin-the-wildなラベルなし実顔画像のどちらもトレーニングデータとして使用することで、
+          |実顔画像からシェイプ、リフレクタンス、イルミネーションを推定してリコンストラクションをend-to-endに行うSfSNetを提案。
+          |実顔画像に十分なラベルがついているデータセットが存在しない、という問題を解決。Shape from Shading(SfS)のアイディアに基づき、
+          |低周波成分を合成顔画像から、高周波成分を実顔画像から推定する。リコンストラクションされた画像のL1ロスを取ることで、
+          |トレーニングにおける合成顔画像と実画像の橋渡しが行われる。リコンストラクションにはランバーシアンレンダリングモデルを使用する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}SfSNet_Learning_Shape_Reflectance_and_Illuminance_of_Faces_in_the_Wild.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ラベル付きの合成顔画像とラベルなしの実世界顔画像でトレーニングすることで、実世界顔画像の法線、
+             |アルベド、シェーディングを推定しインバースレンダリングを行うSfSNetを提案。
+          li インバースレンダリングによってリコンストラクションされた画像のロスを取ることで、合成顔画像と実世界顔画像の橋渡しを実現。
+          li インバースレンダリングの見た目がstate-of-the-artよりも良い結果となった。
+          li 法線・シェーディングの推定精度が、法線・シェーディング単体をそれぞれ推定するstate-of-the-artよりも良い結果となった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 画像をリコンストラクションする際によく使われるU-NetではなくResNetを使った理由についても議論されている。
+          li
+            a(href="https://arxiv.org/abs/1712.01261") 論文
+          li
+            a(href="https://senguptaumd.github.io/SfSNet/") Project Page
+          li
+            a(href="https://github.com/senguptaumd/SfSNet") GitHub
+    .slide_index #{getSlideIndex()}
+
+

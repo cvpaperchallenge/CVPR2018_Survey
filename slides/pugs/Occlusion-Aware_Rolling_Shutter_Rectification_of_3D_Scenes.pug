@@ -1,0 +1,34 @@
++slide
+section#ID_Occlusion-Aware_Rolling_Shutter_Rectification_of_3D_Scenes
+  .paper-abstract
+    .title Occlusion-Aware Rolling Shutter Rectification of 3D Scenes
+    .info
+      .authors Subeesh Vasu, Mahesh Mohan M. R. and A. N. Rajagopalan
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p カメラモーションによって生じるdistortionをなくすための手法を提案。
+          |市販のカメラの多くは、撮影時に行ごとに処理を行うためカメラが動いている場合同じ画像であっても各行のカメラの位置は異なるため、distortionが生じてしまう。
+          |そこで画像の各行が異なるカメラ位置として扱い、distortionのない状態への復元を行う。
+          |具体的には、動画の各フレームからdepth mapを推定することで、backgroundの復元を行う。
+          |続いて3次元空間をlayer分けして考え、background以外のlayerに対するマスクを作成することでocclusion領域を埋めていく。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Occlusion-Aware_Rolling_Shutter_Rectification_of_3D_Scenes.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来手法と比べ、ピクセルの推定値を評価するPSNR、カメラモーションの推定値を評価するAPMEどちらも向上した。
+          |特にカメラモーションの推定は従来手法と比べて格段に向上している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Vasu_Occlusion-Aware_Rolling_Shutter_CVPR_2018_paper.pdf") 論文URL
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.15 04:38:09

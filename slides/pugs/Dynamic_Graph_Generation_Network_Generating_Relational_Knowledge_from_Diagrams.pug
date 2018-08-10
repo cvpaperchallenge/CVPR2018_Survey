@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Dynamic_Graph_Generation_Network_Generating_Relational_Knowledge_from_Diagrams
+  .paper-abstract
+    .title Dynamic Graph Generation Network: Generating Relational Knowledge from Diagrams
+    .info
+      .authors Daesik Kim, et al.
+      .paper_id 1711.09528
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 視覚情報とテキストの情報が抽象的に統合された図であるダイアグラムを解析するためのunified diagram parsing network(UDPnet)の提案。入力は様々なイラストやテキスト、レイアウトを持つ図のみ。物体検出器によって、図内のグラフ構造を推論し、新手法であるdynamic graph generation network(DGGN)によってグラフを生成。生成されたグラフからテキストで関係性を出力する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180605_DGGN.jpg`,alt="20180605_DGGN.jpg")
+    .item3
+      .text
+        h1 新規性
+        p ダイアグラムのような図には、豊富な知識が含まれているが、固有の特性やレイアウトの問題から、コンピュータに自動的に理解させる方法はあまり提案されていない。本手法では、物体検出器やRNNを統合し、ダイアグラムから知識をテキストとして生成する。
+    .item4
+      .text
+        h1 結果・リンク集
+        p 自然画像でなく，人間による作為的なグラフ理解において優れている。人間の意図や、人間にとって自然な解釈を学習できているのではないか。
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1711.09528.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

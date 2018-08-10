@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Categorizing_Concepts_with_Basic_Level_for_Vision-to-Language
+  .paper-abstract
+    .title Categorizing Concepts with Basic Level for Vision-to-Language
+    .info
+      .authors Hanzhang Wang, Hanli Wang and Kaisheng Xu
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p Vision and Languageのタスクに、Cognition分野で提唱されているbasic levelという概念を基にしたBasic Concept(BaC)を導入した。
+          |basic levelとは人間が幼少期に行う抽象化であり、本研究では物体のクラスを類似したもの同士を1つにまとめる。
+          |始めに、MSCOCOのキャプションとImageNetのクラスをマッチングすることで、Salient Concept(SaC)というBaCに候補を決定する。
+          |続いて、物体のクラス分類におけるConfusion Matrixを求め、混同されるクラス同士を1つにまとめることでBaCを決定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Categorizing_Concepts_with_Basic_Level_for_Vision-to-Language.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Vision and Languageのタスクとして、Image CaptioningとVQAによって検証を行った。
+          |Image Captioningについては、ベースラインと比較してほとんどの指標において精度が向上し、向上しなかった指標についてもベースラインと大差ない数値を記録した。
+          |VQAについては、ObjectとLocationについて精度の向上を確認した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Categorizing_Concepts_With_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.15 16:40:44
+
+

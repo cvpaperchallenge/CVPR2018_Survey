@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Multimodal_Explanations_Justifying_Decisions_and_Pointing_to_the_Evidence
+  .paper-abstract
+    .title Multimodal Explanations: Justifying Decisions and Pointing to the Evidence
+    .info
+      .authors D. H. Park et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        性能がよく，かつ説明可能なモデルの実現のための新規手法の提案．
+        これまでの説明可能なモデルは視覚的なAttentionのみやテキストの説明のみという単一のmodalだけだったのに対して，
+        この論文では両者を合わせたmulti-modalな説明を出力可能にした．
+        それを行う手法の提案と，学習と評価に使うデータセットを構築したのがこの論文のContribution．
+        データセットはVQAと静止画からのActivity Recognitionのタスクで，
+        従来あったデータセットに，理由のテキスト説明と視覚的な根拠となった領域のアノテーションを追加して作成．
+        手法は，まず答えを出力して，それを元に根拠となった理由を出力するという形式のネットワーク構造を採用．
+  
+    .item2
+      img(src=figpath+"Multimodal_Explanations_Justifying_Decisions_and_Pointing_to_the_Evidence.png",alt="Multimodal_Explanations_Justifying_Decisions_and_Pointing_to_the_Evidence.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li モデルの出力に加えて視覚的，テキストのmulti-modalな根拠説明をする手法を提案
+          li VQAとActivity Recognitionでそれを評価可能なデータセット（追加アノテーション）を構築
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="https://arxiv.org/abs/1802.08129") 論文 (arXiv)
+          li データセットはまだ公開されていない模様
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.8 12:00:18
+
+

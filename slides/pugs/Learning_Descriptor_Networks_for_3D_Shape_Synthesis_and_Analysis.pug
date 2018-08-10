@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Learning_Descriptor_Networks_for_3D_Shape_Synthesis_and_Analysis
+  .paper-abstract
+    .title Learning Descriptor Networks for 3D Shape Synthesis and Analysis
+    .info
+      .authors Jianwen Xie, Zilong Zheng
+      .conference CVPR 2018
+      .paper_id 1093
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 3次元ボリュームデータの形状特徴をモデリングできる深層畳み込みエネルギーベースなdescriptorネットワークを提案した．
+          li 提案の3D DescriptorNetがvoxelized形状の3D形状特徴を抽出できる．具体的には，voxelized形状のprobability density functionを定義した．また，3次元形状を特徴にマッピングできるボトムアップなボリューメトリックConvNetで特徴の統計またはエネルギー関数を定義した．
+          li 提案手法の貢献としては①ボリュームベースな3次元形状特徴をモデリングできる3D DescriptorNetを提案．②提案手法の学習プロセスをモードseeking,shiftingと解釈した．③形状検索に用いられるconditional 3D DescriptorNetを提案した．④3D形状生成モデルの新たな評価メトリクスを提案した．⑤3D GANを代替できる3D cooperative training schemeを提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning-descriptor-for-3D-volumetric.png`,alt="Learning-descriptor-for-3D-volumetric")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 従来あまり提案されていないエネルギーベースな3次元形状descriptorを提案した．
+          li 提案の3D DescriptorNetを3次元形状生成，3次元形状検索，3次元形状スーパー解像度，3次元物体認識などタスクにおいて実験を行った．それぞれstate-of-the-artな性能を得られた．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p コードで実際のネットワーク構造を確認したい．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Xie_Learning_Descriptor_Networks_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.7 13:16:29
+
+

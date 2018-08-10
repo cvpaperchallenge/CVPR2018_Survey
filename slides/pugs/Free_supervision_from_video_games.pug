@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Free_supervision_from_video_games
+  .paper-abstract
+    .title Free supervision from video games
+    .info
+      .authors Philipp Krahenbuhl
+      .conference CVPR2018
+    .slide_editor Masaki Miyamoto
+
+    .item1
+      .text
+        h1 概要
+        p  深層ネットワークでは大量のデータが必要で，ラベル付けされたデータはネットワークのデザイン同様深層ネットワークにとって重要である．しかし手作業の収集はお金と時間がかかる．そこでMicrosoftのDirectXレンダリングAPIを用いてゲームをやりながらリアルタイムでセグメンテーションやオプティカルフローなどのための正解ラベルを作成する手法を提案する．集めたデータセットは他の合成データセットより視覚的に現実世界と近いものになっている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}from_game.PNG`,alt="from_game.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p このシステムはリアルタイムにすべてのラベルを計算するため直接ゲームのレンダリングパイプラインにコードを組み込んでいる．また人によるアノテーションが必要ない．さらに，様々なデザインの複数のゲームにおいてこの手法を用いることができる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2501.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 16:11:51
+
+

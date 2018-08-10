@@ -1,0 +1,40 @@
++slide
+section#ID_Cube_Padding_for_Weakly-Supervised_Saliency_Prediction_in_360_Videos
+  .paper-abstract
+    .title Cube Padding for Weakly-Supervised Saliency Prediction in 360◦ Videos
+    .info
+      .authors Hsien-Tzu Cheng, Chun-Hung Chao, Jin-Dong Dong, Hao-Kai Wen, Tyng-Luh Liu, Min Sun
+      .conference CVPR2018, arXive:1806.01320v1
+      .paper_id 171
+    .slide_editor Hiroshi Fukui
+
+    .item1
+      .text
+        h1 概要
+        p 360°カメラの動画から弱教師あり学習でSailency mapを効率的に求める方法を提案．
+          |方法として，360°のシーンを6つのパネルに分割し，チャンネル方向に結合する事で，ネットワークに入力する．
+          |ここで，シーンをパネルに分割する際にCube Paddingという方法を提案しており，特定パネルの周囲のパネルの一部を，その特定パネルの両端に結合させる．
+          |これにより，パネル間の関連性をネットワークに学習させる事が可能である．
+          |また，360°シーンのデータセットを新たに提案している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}171_overview.png`,alt="171_overview.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 提案しているCube Paddingという広大なシーンに特化した入力方法は，解像度が高い場合においても処理速度の低下を抑制する事が可能である．
+          |また，パネルを分割する際にCube Paddingを導入する事で，パネル間の境界に対してロバストにする事ができる．
+          |今回のタスクに対して新しいデータセット”Wide-360° Dataset”を提案している点も，評価が高い．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 新たな問題設定にチャレンジした研究．
+          |そして，結果の見せ方が凄く良い．(特にオフィシャルページの360°のYouTubeを使った動画デモ)
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Cheng_Cube_Padding_for_CVPR_2018_paper.html") 論文リンク
+          li
+            a(href="http://aliensunmin.github.io/project/360saliency/") オフィシャルページ
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.9 02:08:03

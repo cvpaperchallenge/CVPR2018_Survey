@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_Depth-Aware_Stereo_Video_Retargeting
+  .paper-abstract
+    .title Depth-Aware Stereo Video Retargeting
+    .info
+      .authors Bing Li, Chia-Wen Lin, Boxin Shi, Tiejun Huang, Wen Gao, C.-C. Jay Kuo
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p ステレオビデオ（Stereo Video）に対するリターゲティング（Retargeting）を扱う。ステレオ（かつビデオ）に対するリターゲティングは従来のリターゲティングと比較すると、動画中の顕著性が高い物体の把握やダイナミクスを含むためまだ新しくチャレンジングな課題である。ここに対して、Depth-aware Fidelity Constraint（距離画像から推定される信頼性のようなもの）を適用することで物体の顕著性を把握しつつ3次元空間を再構成することができる（リターゲティングと3次元再構成の同時推定問題）。最適化にはTotalCost関数を適用して物体の顕著性を把握しつつ形状、時間情報、距離画像のディストーションを推定。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180605DepthRetargeting.png`,alt="180605DepthRetargeting")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ステレオビデオの入力から、顕著性の把握、形状推定、時間情報、距離画像のディストーションを同時推定し、従来法であるCVWよりも綺麗なリターゲティング画像を生成することに成功した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p VR/AR、3D映画などに使える！より自然に見せることで映像酔いを軽減することができる？
+        ul
+          li
+            a(href="http://alumni.media.mit.edu/~shiboxin/files/Li_CVPR18.pdf") 論文
+          li
+            a(href="http://alumni.media.mit.edu/~shiboxin/") 著者
+          li
+            a(href="https://news.mynavi.jp/article/computer_vision-43/") リターゲティング（マイナビ記事）
+          li
+            a(href="https://ieeexplore.ieee.org/document/7055924/") CVW（従来手法）
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.5 08:23:28
+
+

@@ -1,0 +1,31 @@
+﻿+slide
+section#ID_Deep_Learning_under_Privileged_Information_Using_Heteroscedastic_Dropout
+  .paper-abstract
+    .title Deep Learning under Privileged Information Using Heteroscedastic Dropout
+    .info
+      .authors John Lambert et al.
+      .conference CVPR 2018
+    .slide_editor: a(href="https://twitter.com/tomoyukun") Tomoyuki Suzuki
+  
+    .item1
+      .text
+        h1 概要
+        p テスト時に入力できる情報に対して、学習時にはより強い情報が使用できる場合にその+αの情報（特権情報）を学習時にうまく活用する研究。テスト時には特権情報が得られないので、特権情報に対して周辺化したものを出力とする方針をとるが、一般にその値を求めるのは難しい。そこで特権情報をGaussian Dropoutの分散の中に埋め込み学習することでテスト時に特別な計算をせずに周辺化することができる。画像認識・機械翻訳で実験し、学習サンプルが少ない状況下で特に効果を発揮する。
+
+    .item2
+      img(src=figpath+"Deep_Learning_under_Privileged_Information_Using_Heteroscedastic_Dropout.png",alt="Deep_Learning_under_Privileged_Information_Using_Heteroscedastic_Dropout.png")
+    .item3
+      .text
+        h1 詳細・なぜ通ったか？
+        p Gaussian Dropout部分での逆伝搬ではVAEなどで用いられるreparameterization trickを利用している。画像認識においては特権情報として物体のbounding boxを与えている。SGDでのNNの最適化が理想的に完了する条件下でデータ効率が上がるという理論的な保証と、実験結果による精度向上が評価されたと考えられる。
+
+    .item4
+      .text
+        h1 コメント・リンク集
+        p マルチタスクでの学習よりもしっかり良い結果となっていて興味ふかい。理論的保証はあるものの、Gaussian noiseが具体的にどのようなサンプルに対してどのように作用しているのかを確認する実験なども欲しかった。
+        ul
+          li
+            a(href="https://arxiv.org/abs/1805.11614") 論文
+    .slide_index #{getSlideIndex()}
+
+

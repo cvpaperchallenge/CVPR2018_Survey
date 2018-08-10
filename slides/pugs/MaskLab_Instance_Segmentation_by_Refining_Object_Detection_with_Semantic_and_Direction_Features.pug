@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_MaskLab_Instance_Segmentation_by_Refining_Object_Detection_with_Semantic_and_Direction_Features
+  .paper-abstract
+    .title MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features
+    .info
+      .authors Liang-Chieh Chen, Alexander Hermans, George Papandreou, Florian Schroff, Peng Wang and Hartwig Adam
+      .conference CVPR2018
+      .paper_id 525
+    .slide_editor: a(href="http://www.mprg.cs.chubu.ac.jp/~ryorsk/") Ryosuke Araki
+
+    .item1
+      .text
+        h1 概要
+        p 物体のBounding-box detection, Semantic segmentationとDirection predictionを同時に行うモデル「MaskLab」を提案する．Faster R-CNN・ResNet-101をベースに，Bounding-box内の前景と背景をわけることでSegmentationを行う．Mask R-CNNと違い，Segmentationを行うときは単純に前景背景分割をするだけでなくクラス分類も行い，また，各ピクセルのDirectionを予測して同じクラスの重なっている物体のInstance segmentationも可能である．また，検出されたBox内でさらに切り出しを行い，小さな物体の検出をしやすくする仕組みも入れている．
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180604_MaskLab1.jpg`,alt="20180604_MaskLab1.jpg")
+          img(src=`${figpath}20180604_MaskLab2.jpg`,alt="20180604_MaskLab2.jpg")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Object detectionとSemantic segmentationを同時にEnd-to-endで解くモデルの提案．それだけでなく，Semantic segmentationではDirectionを考慮して高精度な認識が可能である．MSCOCOで性能評価を行い，FCIS+++（mAP，Seg：33.6），Mask R-CNN（Seg：35.7，Det：38.2）よりも高い性能（学習時にScale augmentationを行いSeg：38.1，Det：43.0）を達成した．Res-NeXtを用いたMask R-CNN（Seg：37.1，Det：39.8）よりも高性能である．
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 最近，Detection + Segmentationがいくつか出てきているので今後に注目．検出速度に関する記述は見当たらなかったが，Faster R-CNNベースなのでそれ相応の速度だと思われる．ワンショット系の検出器に適応してこの精度を保ちつつ高速な検出ができればウケそう？
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.04837") arXiv
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 10:00:39
+
+

@@ -1,0 +1,34 @@
++slide
+section#ID_Revisiting_Dilated_Convolution_A_Simple_Approach_for_Weakly-_and_Semi-_Supervised_Semantic_Segmentation
+  .paper-abstract
+    .title Revisiting Dilated Convolution: A Simple Approach for Weakly- and Semi- Supervised Semantic Segmentation
+    .info
+      .authors Yunchao Wei, Huaxin Xiao, Honghui Shi, Zequn Jie, Jiashi Feng, Thomas S. Huang
+      .conference CVPR 2018
+      .paper_id 812
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 複数のカーネルサイズのdilation conv層をclassification networkに付け足すことで、image-levelのオブジェクトラベルから、オブジェクトごとの密なlocalization mapを生成し、これを元にセマンティックセグメンテーションを行う手法を提案。image-levelのラベルのみが与えられていても、複数サイズのdilated convolutionを組み合わせることで様々なスケールでオブジェクトを探索することが可能。最終的なlocalization mapはとdilated conv層の平均と通常のconv層の推定結果を足し合わせた物を使用する。このlocalization mapとonline mannerのそれぞれから得られたセグメンテーションとを教師とすることでセグメンテーションネットワークを訓練する。localization mapの汎用性を示すために、weakly/semi-supervisedの両方を行っている。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Revisiting_Dilated_Convolution-_A_Simple_Approach_for_Weakly-_and_Semi-Supervised_Semantic_Segmentation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li Pascal VOC 2012(20ラベル)におけるセマンティックセグメンテーションのmIoUにおいてweakly/semi-supervisedが60.8%(既存手法+2.1%)/67.6%(既存手法+1.4%)となりSoTAを達成。
+          li semi-supervisedの設定において、使用するpixel-levelの教師画像が500枚と1400枚ではmIoUが0.9%ほどしか変わらなかったため、localization mapの効果を示している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li dilated convolutionの強力な探索能力を示した論文。シンプルがゆえにCNNの汎用性の高さが伺える。
+          li onlineによるセグメンテーションはどのように得られている？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0812.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:48:11

@@ -1,0 +1,38 @@
+﻿+slide
+section#ID_MobileNetV2_Inverted_Residuals_and_Linear_Bottlenecks
+  .paper-abstract
+    .title MobileNetV2: Inverted Residuals and Linear Bottlenecks
+    .info
+      .authors Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, Liang-Chieh Chen
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p モバイルで動作する新規アーキテクチャMobileNetV2の提案論文、データセットを用いた複数タスクにてState-of-the-artな精度を達成した。物体検出のモデルであるSSDLiteやセマンティックセグメンテーションのモデルであるMobile DeepLabv3を考案した。これらはInverted Residual Structureと呼ばれる、ショートカットコネクションが小さなボトルネックレイヤに挟まれた構造を最小ユニットとして構成される。中間の拡張レイヤは非線形関数として軽量化されたdepthwiseの畳み込みとして実装される。右図に本論文の重要技術であるInverted Residual Blockについて示す。従来のResidual Block（左）は前後のdepthが広いが、提案のInverted Residual Blockは中ふたつがdepthが広く、前後は狭い。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618MobileNetV2.png`,alt="180618MobileNetV2")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p Inverted Residual Blockの提案等によりモバイルサイズのモデルにおいても良好な認識精度のモデルを提案することに成功。認識精度とパラメータ数のトレードオフについても良好で、さらにはCPUにおいても高速に動作することを示しCVPRに採択された。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p モバイルネットv2、応用範囲が広そう。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sandler_MobileNetV2_Inverted_Residuals_CVPR_2018_paper.pdf") 論文
+          li
+            a(href="https://ai.googleblog.com/2018/04/mobilenetv2-next-generation-of-on.html") Google AI Blog
+          li
+            a(href="https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet") GitHub
+          li
+            a(href="https://github.com/xiaochus/MobileNetV2") GitHub2
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 23:07:41
+
+

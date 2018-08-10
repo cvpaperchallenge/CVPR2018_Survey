@@ -1,0 +1,34 @@
++slide
+section#ID_Disentangling_Factors_of_Variation_by_Mixing_Them
+  .paper-abstract
+    .title Disentangling Factors of Variation by Mixing Them
+    .info
+      .authors Qiyang Hu, Attila Szabó, Tiziano Portenier, Matthias Zwicker, Paolo Favaro
+      .conference CVPR2018
+    .slide_editor: a(href="https://aizawan.github.io/") Hiroaki Aizawa
+
+    .item1
+      .text
+        h1 概要
+        p 追加のアノテーションやドメイン知識なしに、disentangleな変動要因からなる表現をunsupervisedに学習することが目標。disentangleな変動要因とは、物体の姿勢や色など画像に渡って一貫して識別できる画像特徴に対応する要因のこと(ここではfeature chunkと呼ぶ)。この論文のポイントと提案手法は次の項目。1)disentangleな変動要因表現は、feature chunkの連結によって構成されるということ。2)autoencoderを利用し、不変的な画像属性とfeature chunkをencodeとdecodeすることを促進する目的関数、3)変動要因を見分けられ、各feature chunkが一貫性を持つ表現を確実にするために分類制約したこと。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Disentangling_Factors_of_Variation_by_Mixing_Them.png`,alt="Disentangling_Factors_of_Variation_by_Mixing_Them.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 前述の2)に関して、図のようなmixing autoencoderとadversarial learningを組み合わせたことが新しい。encoderとdecoderが(画像全体を表現するのに十分であれば)ただ一つのfeature chunkで表現できてしまう問題(
+          a(href="https://arxiv.org/abs/1711.02245") shortcut problem
+          |)を分類制約を加えることで回避したことも新しい。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p この論文のキーアイデアは、論文中のmixされたx1の属性がx3にdecodeされ、再びencodeされたときx1の属性が保存されていることであり、cycle構造のようで、
+          a(href="https://arxiv.org/abs/1711.11586") この論文
+          |に似ていた。これをclassifierと組み合わせてdisentangleな特徴抽出を行ったのはおもしろい。だが、これでdisentangleな特徴が得られているのか、比較が単純なAEだけ(VAEやほかの関連研究との比較が不足)、など評価方法に疑問が残る。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hu_Disentangling_Factors_of_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.31 12:52:58

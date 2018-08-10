@@ -1,0 +1,39 @@
++slide
+section#ID_The_Perception-Distortion_Tradeoff
+  .paper-abstract
+    .title The Perception-Distortion Tradeoff
+    .info
+      .authors Yochai Blau and Tomer Michaeli
+      .conference CVPR 2018
+      .paper_id 2765
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 画像復元手法に対する評価尺度であるdistortion quality(DQ、MSEなど)、peceptual quality(PQ、主観評価、KL-divergenceなど)は反比例関係(どちらの尺度も値が低いほうが良い結果であると設定)にあることを様々な実験により示した論文。DQは復元された画像とオリジナルの画像との類似度を表し、PQはオリジナルの画像とは関係なく復元された画像がいかに自然かを表す。
+    .item2
+      .text
+        p
+          img(src=`${figpath}The_Perception-Distortion_Tradeoff.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li DQとPQが反比例関係にあることは定性的には述べられてきたが、本論文ではこの関係を証明するために定量的な実験を行った。
+          li 自然画像が二項分布などの単純な離散分布から生成されるとし、これに対してガウス分布から生成されるノイズをかけ、ノイズ画像に対してMSEが最小となるような分布を推定すると、自然画像の分布とは大きく異なる。つまりKL-divergenceは大きく異なるため、MSEとKL-divergenceが反比例にあることを示した。
+          li WGANをL2ロスとWasserstein distanceを様々な比率の重みで学習させた際に、生成画像に対する両者のあたいは反比例関係にあった。
+          li 16種類の超解像手法に対してPQとして超解像の評価に特化したMa et al.を、DQとして6種類の尺度を使用した結果は、やはり反比例関係となった。
+          li 画像の復元手法は必ずdistortionとperceptionの両方で比較すべきである、と結論づけている。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li peceputual qualityとして実際の人間の評価を使用した例を見たかった。この場合も本当に反比例になるのだろうか？
+          li 画像の見た目を再現できたところで、ドメインシフトが解消された訳ではなく、むしろ大きくなっていくというのは非常に興味深い。
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2765.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/2765-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:37:29

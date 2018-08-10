@@ -1,0 +1,32 @@
+﻿+slide
+section#ID_Geometric_robustness_of_deep_networks_analysis_and_improvement
+  .paper-abstract
+    .title Geometric robustness of deep networks: analysis and improvement
+    .info
+      .authors Can Kanbak, Seyed-Mohsen Moosavi-Dezfooli, Pascal Frossard
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p 幾何学的な変換に頑健なDNNを考案。従来のDNNでは例えば右図のようなアフィン変換（ここでは主に回転）に対して脆弱であり、上図では馬の種類を答えていたものが、多少の回転を与えるだけで犬の種類を答えてしまう。本論文ではManiFoolというシンプルだがスケーラブル、多様体（Manifold）ベースのアルゴリズムManiFoolを提案、幾何学的な変化に対する不変性や複雑ネットワークに対する評価を行う。さらに、Adversarial Trainingにより幾何学的な変動に頑健なモデルとなるような学習法を実装した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180618GeometricRobustnessDNN.png`,alt="180618GeometricRobustnessDNN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 最小の幾何学的変換により認識を誤ってしまう問題に対して不変性を計測するManiFoolを提案したことがもっとも大きな貢献である。ImageNet等の大規模データに対して幾何学的変換とそのロバスト性を評価した最初の論文である。ManiFoolアルゴリズムをAdversarial Trainingに応用して幾何学的変換に対してロバストな学習法を提案。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 実環境（撮影時のカメラのビューポイント）を多少回転させるのではなく画像をダイレクトなアフィン変換にて回転させるからエラーが生じる？もう少し解析して欲しいような気もする。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Kanbak_Geometric_Robustness_of_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.18 21:28:50
+
+

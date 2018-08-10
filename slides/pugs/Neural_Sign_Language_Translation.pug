@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_Neural_Sign_Language_Translation
+  .paper-abstract
+    .title Neural Sign Language Translation
+    .info
+      .authors Necati Cihan Camgoz, Simon Hadfield, Oscar Koller, Hermann Ney and Richard Bowden
+      .conference CVPR2018
+    .slide_editor: a(href="https://sites.google.com/site/shinatoyamamoto/") Shintaro Yamamoto
+
+    .item1
+      .text
+        h1 概要
+        p 手話動画を言語に翻訳する手法を提案。
+          |手話の各フレーム及び文章中の各単語を表現する特徴ベクトルを取得し、RNNによりそれぞれのsequenceを取得する。
+          |手話動画から得られるsequenceを文章のsequenceに変換することで翻訳を実現する。
+          |その際、手話動画のフレーム数は文章中の単語数と比べて圧倒的に多いため対応付けが難しい。
+          |そこで、Attentionを導入することで手話動画中の重要なフレームに対して重み付けを行う。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Neural_Sign_Language_Translation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来のデータセットは機械学習に用いるには数が少ないため、手話動画、手話の単語、対応するドイツ語の文章を含んだRWTH-PHOENIX=Weather 2014Tというデータセットを提案した。
+          |従来の手話に関する研究は、Recognitionの問題として考えていたのに対して、Sequence間の変換と考えることにより文章を出力することを可能とした。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Camgoz_Neural_Sign_Language_CVPR_2018_paper.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.30 21:07:35
+
+

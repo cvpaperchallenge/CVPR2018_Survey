@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_Deep_Cross-media_Knowledge_Transfer
+  .paper-abstract
+    .title Deep Cross-media Knowledge Transfer
+    .info
+      .authors Xin Huang, et al.
+      .paper_id 1803.03777
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 画像とテキストなどの異なるメディアタイプ間で検索する、クロスメディア検索手法のcross-media knowledge transfer(DCKT)の提案。大規模なクロスメディアデータセットの知識を、小規模なデータセットのモデルに転移学習する。メディアレベルと相関性レベルでのドメインの違いを最小化するために、2レベルでドメイン変換することで精度向上。また、ドメインの違いを徐々に減らすようにトレーニングサンプルを選択することで、モデルがより頑健になる。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180605_DCKT.jpg`,alt="20180605_DCKT.jpg")
+    .item3
+      .text
+        h1 新規性
+        p マルチメディア分野における検索。既存の手法では、ラベル付きデータを学習する方法が多いが、大規模なデータの収集とラベル付けは手間取るため問題とされる。そこで、既存のデータを転移して解決する。
+    .item4
+      .text
+        h1 リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1803.03777.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

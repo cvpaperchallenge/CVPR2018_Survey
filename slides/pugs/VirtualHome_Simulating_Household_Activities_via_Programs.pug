@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_VirtualHome_Simulating_Household_Activities_via_Programs
+  .paper-abstract
+    .title VirtualHome: Simulating Household Activities via Programs
+    .info
+      .authors Xavier Puig et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 家の中の環境をシミミュレーションするための仮想環境 VirtualHome を作成した. また, 家の中で典型的に起こる様々な行動を自然言語とプログラムの形式で表現し, それらを仮想環境上でシミミュレーションした動画を組みにした VirtualHome Activity Dataset を公開した. 加えて, LSTM を用いて動画やテキストからプログラム形式の表現を生成する手法を提案した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-VirtualHome-Simulating-Household-Activities-via-Programs.png`,alt="fukuhara-VirtualHome-Simulating-Household-Activities-via-Programs.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li VirtualHome には様々な種類の間取りや物体（平均357個）があり, Agent も複数の種類が用意されている
+          li dataset では家の中で行われる様々な行動に対して, 名前と自然言語形式での行動の説明と行動をプログラムの形式が与えられている
+          li VirtualHome 上でプログラムをシミュレーションすることで作成された動画には, Agent の姿勢やフロー, 物体のクラスなど様々な情報が与えられている
+          li LSTM を用いた encoder-decoder 型のネットワークに強化学習を適用し, 動画やテキストからプログラム形式の表現を生成する手法を提案
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Puig_VirtualHome_Simulating_Household_CVPR_2018_paper.pdf" target="blank") [論文] VirtualHome: Simulating Household Activities via Programs
+          li
+            a(href="http://www.virtual-home.org/" target="blank") [Project page] VirtualHome: Simulating Household Activities via Programs
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.16 16:40:55
+
+

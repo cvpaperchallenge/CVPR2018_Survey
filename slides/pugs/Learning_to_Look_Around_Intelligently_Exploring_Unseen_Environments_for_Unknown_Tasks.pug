@@ -1,0 +1,41 @@
+﻿+slide
+section#ID_Learning_to_Look_Around_Intelligently_Exploring_Unseen_Environments_for_Unknown_Tasks
+  .paper-abstract
+    .title Learning to Look Around: Intelligently Exploring Unseen Environments for Unknown Tasks
+    .info
+      .authors Dinesh Jayaraman, Kristen Grauman
+      .conference CVPR 2018
+      .paper_id 152
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 新規な問題設定“シーンや物体を有効的に観測できる視点を学習する”及びこの問題を対応できる “アクティブ観測補完”ネットワークの提案．
+          li 従来のCVタスクは主に与えられた観測(画像・ビデオ・ポイントクラウドなど)から視覚性質(クラス分類・検出など)の分析を行う．しかし，リアルな知能はまず環境から目的を達成するための観測を取得することから始まる．また，異なる観測から得られる情報量も異なる．そこで，著者達が“active observation completion”タスクを提案し，未知なシーンかオブジェクトからシーン及び物体のより多く3次元情報が含めた数が限られた観測視点の推定を目標とする．
+          li 提案手法は強化学習を用いる．RNNベースなネットワークを用いて選択された視点からシーンか物体のパーツ情報を統合する．また，統合されたモデルから推定できるunobserved視点とgt間の誤差をベースにロス関数を設定した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}LearningToLookAround.png`,alt="LearningToLookAround")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 学習データを手動でラベリングする必要がないので，大量な学習が行える．
+          li 提案フレームワークを“シーン”の補完及び“物体モデル”の補完の2種類だいぶ異なったタスクに実験を行い，良い精度を達成したので，”提案した“無監督探索的な”フレームワークを遷移学習でほかのタスクに用いられる．
+          li SUN360(Scene dataset)及び”ModelNet” (Object dataset)を用いて，従来のいくつかベースとなる手法より良い精度を達成した．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p Interactive 環境でのVQAタスク(Embodied Question Answeringなど)は環境から“情報量が豊かな画像”を集めるのが重要の一環なので，提案フレームワークを用いられそう．
+          li
+            p
+              a(href="https://arxiv.org/abs/1709.00507") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.24 17:50:58
+
+

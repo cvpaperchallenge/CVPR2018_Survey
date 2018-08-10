@@ -1,0 +1,34 @@
+﻿+slide
+section#ID_Making_Convolutional_Networks_Recurrent_for_Visual_Sequence_Learning
+  .paper-abstract
+    .title Making Convolutional Networks Recurrent for Visual Sequence Learning
+    .info
+      .authors Xiaodong Yang, Pavlo Molchanov, Jan Kautz
+      .conference CVPR 2018
+    .slide_editor: a(href="http://hirokatsukataoka.net/" target="blank") Hirokatsu Kataoka
+
+    .item1
+      .text
+        h1 概要
+        p RNNの改良であり、畳み込み層や全結合層の役割を前処理として構造に入れ込むPreRNNを提案した。従来のRNNとPreRNNの違いは図に示すとおりである（従来型TraditionalなRNNは構造内にfc/conv+avepoolを要するが、PreRNNではそれらを内包している）。このPreRNNを用いて、より有効だと思われるタスクーSequential Face Alighnment, Dynamic Hand Gesture Recognition, Action Recognitionにて適用した。
+    .item2
+      .text
+        p
+          img(src=`${figpath}180604PreRNN.png`,alt="180604PreRNN")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p 従来型のRNNを改善して、fc-layer/conv+avepool-layerをその構造の中に取り込んだPreRNNを提案し、複数タスク（顔アライメント推定、ジェスチャ認識、人物行動認識）にて従来法よりも高い精度を達成した。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p 画像キャプションなどにも効果あり？どのように説明文が改善されるのか試してみたい。
+        ul
+          li
+            a(href="http://xiaodongyang.org/publications/papers/prernn-cvpr18.pdf") 論文
+          li
+            a(href="http://xiaodongyang.org/publications/papers/prernn-supp-cvpr18.pdf") SupplementaryMaterial
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.4 09:29:31
+
+

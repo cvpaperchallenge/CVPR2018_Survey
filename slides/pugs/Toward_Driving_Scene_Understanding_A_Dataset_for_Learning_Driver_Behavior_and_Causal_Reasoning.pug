@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_Toward_Driving_Scene_Understanding_A_Dataset_for_Learning_Driver_Behavior_and_Causal_Reasoning
+  .paper-abstract
+    .title Toward Driving Scene Understanding:A Dataset for Learning Driver Behavior and Causal Reasoning
+    .info
+      .authors Vasili Ramanishka, et al.
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p 自動車の運転シーン理解のためのデータセットであるHonda Research Institute Driving Dataset(HDD)の提案。本データセットはサンフランシスコ・ベイエリアにて、様々なセンサーを備えた自動車を人間が運転したデータが104時間分含まれる。センサはグラスホッパーカメラ、LiDAR、ダイナミックモーションアナライザ、Vehicle Controller Area Network (CAN)の4つ。これらのデータから運転者の行動を基にアノテーションを付加している。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180610HDD.jpg`,alt="20180610HDD.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 様々なセンサを用いて、大規模データを収集しただけでなく、ヒューマンファクタや認知科学に基づいてアノテーションを行っている。アノテーションは、Goal-oriented action, Stimulus-driven action, Cause, Attentionの4つ。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p LSTMを用いたベースラインにおいて、センサを増やすことによって表現力の向上が見られた。評価が難しいアノテーションデータが含まれ、チャレンジングなデータセット。
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3855.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_Learning_to_See_in_the_Dark
+  .paper-abstract
+    .title Learning to See in the Dark
+    .info
+      .authors Chen Chen, Qifeng Chen, Jia Xu and Vladlen Koltun
+      .conference CVPR 2018
+    .slide_editor Kodai Nakashima
+
+    .item1
+      .text
+        h1 概要
+        p 暗い環境において，同じシーンを短時間露光で撮影した暗い画像と長時間露光で撮影した明るい画像のrawデータを集めたデータセットを提案した．
+          |このデータセットは，5094個の暗い画像のrawデータと424個の明るい画像のrawデータが1対多で対応付けられている．
+          |インドアとアウトドアの両方で撮影を行った．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Learning-to-see-in-the-dark-1.PNG`,alt="Learning-to-see-in-the-dark-1.PNG")
+          img(src=`${figpath}Learning-to-see-in-the-dark-2.PNG`,alt="Learning-to-see-in-the-dark-2.PNG")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p このデータセットを用いてFCNをトレーニングし，テストしたところ図に示すような結果が得られた．
+          |このネットワークはrawデータを直接扱うため，図に示すように，従来の画像処理パイプラインの多くの代わりになる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/pdf/1805.01934.pdf") 論文URL
+          li
+            a(href="https://github.com/cchen156/Learning-to-See-in-the-Dark") github
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.2 18:44:28
+
+

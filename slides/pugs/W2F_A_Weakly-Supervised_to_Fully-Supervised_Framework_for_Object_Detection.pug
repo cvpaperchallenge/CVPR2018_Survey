@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_W2F_A_Weakly-Supervised_to_Fully-Supervised_Framework_for_Object_Detection
+  .paper-abstract
+    .title W2F: A Weakly-Supervised to Fully-Supervised Framework for Object Detection
+    .info
+      .authors Yongqiang Zhang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 弱教師ありの物体認識の学習を使用して, 教師あり物体認識を学習を行う研究. 弱教師ありの物体認識は物体中の最も特徴的な領域や, 複数の領域を抽出してしまう傾向があるが, それらの結果から教師データとして最もらしい Pseudo ground-truth を生成する方法を提案.  PASCAL VOC 2007 と 2012 を用いた評価実験では先行研究よりも優位な結果となった.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-W2F-A-Weakly-Supervised-to-Fully-Supervised-Framework-for-Object-Detection.png`,alt="fukuhara-W2F-A-Weakly-Supervised-to-Fully-Supervised-Framework-for-Object-Detection.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li WSDNN [Bilen+ 16] の結果を OICR [Tang+ 17] を用いて改善したものを弱教師ありの物体認識の結果として使用. 
+          li 上の結果に対して Pseudo ground-truth excavation (PGE) というアルゴリズムを適用することで, 物体全体を囲う Bounding Box を生成する.
+          li 更に, region proposal network [Ren+ 15] を用いて上の結果を改善したものを　Pseudo ground-truth とする.
+          li Pseudo ground-truth を用いて, Fast RCNN [Girshick 15] や faster RCNN [Ren+ 15] などの教師あり物体認識の手法の学習を行う.
+          li PASCAL VOC 2007, 2012 を用いて行った評価実験では先行研究 [Tang+ 17] [Krishna+ 16] と比較して mAP に置いて 5% 程度優位な結果となった.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://ivul.kaust.edu.sa/Documents/Publications/2018/W2F%20A%20Weakly-Supervised%20to%20Fully-Supervised%20Framework.pdf" target="blank") [論文] W2F: A Weakly-Supervised to Fully-Supervised Framework for Object Detection
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.1 23:39:55
+
+

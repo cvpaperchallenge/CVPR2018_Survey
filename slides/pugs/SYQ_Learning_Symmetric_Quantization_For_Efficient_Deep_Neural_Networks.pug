@@ -1,0 +1,35 @@
++slide
+section#ID_SYQ_Learning_Symmetric_Quantization_For_Efficient_Deep_Neural_Networks
+  .paper-abstract
+    .title SYQ: Learning Symmetric Quantization For Efficient Deep Neural Networks
+    .info
+      .authors J. Faraone, N. Fraser, M. Blott, P.H.W. Leong
+      .conference CVPR2018
+    .slide_editor Ryota Suzuki
+
+    .item1
+      .text
+        h1 概要
+        p ネットワークの計算省力化に，ネットワークパラメータのデータビット数を下げるやり方がある．
+          |重み・活性化パラメータの分布をコードブックで近似表現することで行われるが，
+          |1-8bitまで量子化すると，フォワード・バックワード関数の大きな勾配ミスマッチが起こるために著しい精度低下が起きていた．
+        p 本研究では，この損失を，特定の重みサブグループにおける
+          |シンメトリックなコードブックの学習によって問題を解決する．
+          |サブグループは，重み行列の中での局所性に基づいて考慮される．
+        p 1-2 bitの重み，2-8 bitの活性化でもうまくいくことを示す．
+    .item2
+      .text
+        p
+          img(src=`${figpath}SYQ_Learning_Symmetric_Quantization_For_Efficient_Deep_Neural_Networks.png`,alt="Figure1")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ひどく量子化してデータ削減してももうまく行っちゃうというすばらしさ．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4227.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.26 15:05:54

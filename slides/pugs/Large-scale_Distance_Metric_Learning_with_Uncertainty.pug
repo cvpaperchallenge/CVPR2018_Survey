@@ -1,0 +1,36 @@
++slide
+section#ID_Large-scale_Distance_Metric_Learning_with_Uncertainty
+  .paper-abstract
+    .title Large-scale Distance Metric Learning with Uncertainty
+    .info
+      .authors Q. Qian et al.,
+      .conference CVPR 2018
+    .slide_editor Kensho Hara
+  
+    .item1
+      h1 概要
+      .text.
+        Triplet Lossを用いて距離尺度を学習する話で，扱うデータがLarge-scaleの場合でもうまくいく手法を提案．
+        Tripletの制約はO(n^3)なのでLarge-scaleの場合は扱うのが大変になる．
+        加えて，データは曖昧なものがあって，サンプルによって姿勢や照明が違ったりノイズが乗っていたりするのも問題になる．
+        提案手法では，少数のキレイなLatent Examples（下図各列の一番左）と距離尺度を同時に学習する手法を提案．
+        Latent Examplesに基づく少数のactive setをベースにtriplet制約を作ることでLarge-scaleであってもうまく扱えるようにしている．
+        加えて，曖昧さの減っているLatent Examplesを元に距離尺度を学習することで本質を捉えた距離尺度の学習も実現．
+        評価実験で高速な学習が可能なことを示したほか，認識精度の向上に寄与することも確認．
+  
+    .item2
+      img(src=figpath+"Large-scale_Distance_Metric_Learning_with_Uncertainty.png")
+    .item3
+      h1 新規性・結果・なぜ通ったか？
+      .text
+        ul
+          li Large-scaleデータでも高速に動作する距離尺度学習の実現
+          li Latent Examplesを距離尺度を同時に学習することで，より本質的な距離尺度の学習にも貢献
+
+    .item4
+      h1 コメント・リンク集
+      .text
+        ul
+          li: a(href="http://openaccess.thecvf.com/content_cvpr_2018/html/Qian_Large-Scale_Distance_Metric_CVPR_2018_paper.html") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.25 16:12:12

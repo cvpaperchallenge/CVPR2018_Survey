@@ -1,0 +1,43 @@
+﻿+slide
+section#ID_An_Unsupervised_Learning_Model_for_Deformable_Medical_Image_Registration
+  .paper-abstract
+    .title An Unsupervised Learning Model for Deformable Medical Image Registration
+    .info
+      .authors Guha Balakrishnan, Amy Zhao, Mert R. Sabuncu, John Guttag, Adrian V. Dalca
+      .conference CVPR 2018 Poster
+    .slide_editor Kazuki Inoue
+  
+    .item1
+      .text
+        h1 概要
+        p 脳の平均3D形状である脳アトラスの各ボクセルが患者の脳3次元データのどの位置に対応するか、
+          |という画像位置合わせ(image registration)をUnetを用いて正解データ無しの教師無し学習で行う手法を提案。
+          |既存手法は最適化ベースだったが、学習ベースの画像位置合わせを初めて提案。トレーニング、検証で使用されているのは脳のMRIデータだが、
+          |他のデータに対する画像位置合わせにも適用することが可能。
+    .item2
+      .text
+        p
+          img(src=`${figpath}An_Unsupervised_Learning_Model_for_Deformable_Medical_Image_Registration.png`)
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li U-netを用いた学習ベースの3次元画像における画像位置合わせ手法を提案。
+          li 比較は最適化ベースの手法である
+             a(href="https://www.sciencedirect.com/science/article/pii/S1361841507000606") SyN
+             |と行った。
+             |SyNと同等の精度を達成し、一方で実行時間はCPU上では約160倍、GPU上では更にその156倍の速度で実行可能。
+          li 教師無し学習のため出力された脳アトラスの全体的な形状は異なっているが、各器官の位置はかなり高い精度で推定できていることが驚き。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 選択分野の勝利？手法に新規性は無く、検証で比較した手法も2008年のものとかなり古いが、
+             |それでも同等の精度で実行時間が速くなれば、それはCV分野としてはOKと判断されたのか？
+          li
+            a(href="https://arxiv.org/abs/1802.02604") 論文
+          li
+            a(href="https://github.com/voxelmorph/voxelmorph") GitHub
+    .slide_index #{getSlideIndex()}
+
+

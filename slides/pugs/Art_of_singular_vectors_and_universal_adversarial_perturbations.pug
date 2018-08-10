@@ -1,0 +1,37 @@
++slide
+section#ID_Art_of_singular_vectors_and_universal_adversarial_perturbations
+  .paper-abstract
+    .title Art of singular vectors and universal adversarial perturbations
+    .info
+      .authors Valentin Khrulkov and Ivan Oseledets
+      .conference CVPR 2018
+      .paper_id 3771
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p ソース画像に不変なadversarial pertubationをCNNの特徴量マップを近似して得られる特異値によって生成する。adversarial petubationとはDNNが画像識別などにおいて誤認識を起こさせるように画像に加えられるパターンのこと。CNNから得られる特徴量マップはヤコビ行列によく近似できることが知られているため、特徴量マップをヤコビ行列に近似し、(p, q)特異値によってpetubationを生成する。行列Aの(p, q)特異値は以下の最適化問題を解くことで得られる。
+        p ||Av||<sub>q</sub> → max, ||v||<sub>p</sub> = 1
+    .item2
+      .text
+        p
+          img(src=`${figpath}Art_of_singular_vectors_and_universal_adversarial_perturbations.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li ILSVRC 2012 validation datasetの64x64の1000クラス画像50000枚を用いた結果を用いており、fooling rateはおよそ40%となり、比較的小さなデータセットから良好な結果が得られたと主張。
+          li 特異値とfooling rateの関係性も調査しており、qが大きくなるほどfooling rateも高くなることを主張。
+          li pertubationの生成と、画像識別のfooling rateの調査ではどちらもVGG16、VGG19、ResNet50を使用している。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li 今回の実験ではトレーニングでもテストでも同じデータセットを使用しているが、生成されるpertubationは使用するデータセットのドメインには依存しないのだろうか？この手法によって、どのデータセット、どのネットワークに対しても同等なfooing rateを保つpertubationは生成できる？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/0963-supp.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/0963-supp.pdf") Supplementary material
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 18:21:01

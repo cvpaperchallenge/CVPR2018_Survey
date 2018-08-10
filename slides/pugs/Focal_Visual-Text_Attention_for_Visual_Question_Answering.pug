@@ -1,0 +1,40 @@
+﻿+slide
+section#ID_Focal_Visual-Text_Attention_for_Visual_Question_Answering
+  .paper-abstract
+    .title Focal Visual-Text Attention for Visual Question Answering
+    .info
+      .authors Junwei Liang, Lu Jiang, Liangliang Cao, Alexander Hauptmann
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li Visual-Text sequencesデータから質問に対して回答するVQAの手法FVTAを提案した．
+          li 携帯の写真集のような，大量な画像―付加情報（GPS,title,caption，time）の情報から質問文に対して応答するタスクに対し，我々人間がまず質問文を答えるためのhintがある画像をlocateして回答する仕組みである．そこで，著者達が質問文に応じで，動的にどの画像・時間帯を注目すべきかを決める階層的な手法FVTAを提案した.  FVTAはまず質問文に基づき相関情報が含めたvisual-text sequencesをlocateし，そしてこういったsequences,questionの抽出情報により答える．
+          li FVTAのプロセスは：①pre-trained CNNモデルにより画像情報抽出，pre-trained word2Vecによりwordsをembedding②Bi-directional LSTMによりwords・質問文の序列情報をエンコーディング③質問文とコンテキスト（画像・テキスト）のhidden statesを用いてFVTA tensorを計算④FVTA attentionにより質問文とコンテキストをそれぞれsingle vectorsに変換し，最終的な答えを生成する．答えはマルチクラス分類問題として解く．
+    .item2
+      .text
+        p
+          img(src=`${figpath}FVTA-VQA.png`,alt="FVTA-VQA")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li MemexQA,MovieQAの2つデータセットにおいて，SoTAなパフォーマンスを得られた．
+          li FVTAが質問文に対して答えるだけではなく，visual-text-question attention kernelにより，答えの根拠となる画像―テキストもpointできる．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p 従来の画像・質問文から回答するVQAより実用性が高い．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1240.pdf") 論文
+          li
+            p
+              a(href="https://github.com/JunweiLiang/FVTA_memoryqa") コード
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.19 20:40:41

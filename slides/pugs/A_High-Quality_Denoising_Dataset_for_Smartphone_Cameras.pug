@@ -1,0 +1,30 @@
+﻿+slide
+section#ID_A_High-Quality_Denoising_Dataset_for_Smartphone_Cameras
+  .paper-abstract
+    .title A High-Quality Denoising Dataset for Smartphone Cameras
+    .info
+      .authors Abdelrahman Abdelhamed, Stephen Lin, Michael S. Brown
+    .slide_editor Munetaka Minoguchi
+  
+    .item1
+      .text
+        h1 概要
+        p スマートフォンで撮影したノイズの多い画像で構成したデータセットSmartphone Image Denoising Dataset (SIDD)の提案。 5つの代表的なスマホカメラを使用し、様々な照明条件下で約30,000枚のノイズの多い画像を収集。ノイズの多い画像だけでなく、ノイズを除去した画像をground truthとして提案。
+    .item2
+      .text
+        p
+          img(src=`${figpath}20180610SIDD.jpg`,alt="20180610SIDD.jpg")
+    .item3
+      .text
+        h1 新規性
+        p 過去10年間で、撮影される画像は一眼レフやコンデジから、スマートフォンに切り替わったことに着目。しかし、口径やセンサ―サイズが小さいため、スマホの写真はノイズを多く含んでいる。このような、ノイズを多く含んだスマホ画像を集めることで新たなデータセットを提案する。
+    .item4
+      .text
+        h1 コメント・リンク集
+        p やはりノイズを含むスマホ画像でのトレーニングよりも、高品質な画像でトレーニングした方が、CNNで高い精度を得た。現在のタスクにおいて「スマホの画像だから精度が出ない」というのはあまり考えにくいが、日常的なアプリケーションには有用なデータセットではないか。
+        ul
+          li
+            a(href="http://www.cse.yorku.ca/~mbrown/pdf/sidd_cvpr2018.pdf") 論文
+    .slide_index #{getSlideIndex()}
+
+

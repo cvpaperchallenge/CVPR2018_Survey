@@ -1,0 +1,36 @@
+﻿+slide
+section#ID_FoldingNet_Point_Cloud_Auto_encoder_via_Deep_Grid_Deformation
+  .paper-abstract
+    .title FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation
+    .info
+      .authors Yaoqing Yang et al.
+      .conference CVPR 2018
+    .slide_editor Yoshihiro Fukuhara
+
+    .item1
+      .text
+        h1 概要
+        p 3次元点群処理のための autoencoder を提案. Folding という新しい decoding 演算を導入することで, 2次元グリッド上の点から3次元点群の表面上への射影を教師なしで学習した.
+    .item2
+      .text
+        p
+          img(src=`${figpath}fukuhara-FoldingNet-Point-Cloud-Auto-encoder-via-Deep-Grid-Deformation.png`,alt="fukuhara-FoldingNet-Point-Cloud-Auto-encoder-via-Deep-Grid-Deformation.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li 新しい end-to-end な3次元点群処理のための deep autoencoder を提案した.
+          li 提案手法のdecoderのパラメータ数は既存手法の7%であるが, これで2次元グリッドと任意の3次元点群表面への写像が構成できることを理論的に証明した.
+          li MN40 や MN10 dataset を用いた classification タスクの評価実験では, 最先端の教師あり手法（Achlioptas+17）などと同等の精度を達成した.
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1712.07262" target="blank") [論文] FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation
+          li
+            a(href="https://www.youtube.com/watch?v=csC6SodV6vk" target="blank") [動画] YouTube
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.5.22 12:19:55
+
+

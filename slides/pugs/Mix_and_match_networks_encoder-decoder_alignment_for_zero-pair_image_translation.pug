@@ -1,0 +1,52 @@
++slide
+section#ID_Mix_and_match_networks_encoder-decoder_alignment_for_zero-pair_image_translation
+  .paper-abstract
+    .title Mix and match networks: encoder-decoder alignment for zero-pair image translation
+    .info
+      .authors Yaxing Wang, Joost van de Weijer, Luis Herranz
+      .conference CVPR 2018
+      .paper_id 3617
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 異なるドメイン間の画像変換において、ある一つのドメインとその他のドメイン間の画像変換をトレーニングすることで、テスト時にはトレーニングを行っていないドメイン間の画像変換を行うmix and match networksを提案。提案ネットワークはautoencoderによって構築される。以下ではdepth(D) to semantic segmentation(S)を行うために、RGB(R) to D, R to Sをトレーニングするロス関数を説明する。
+        ul
+          li Rドメイン：R-S、D-R、R-R間で生成された画像に対するL2ノルム、GAN loss
+          li D(S)ドメイン：R-D(S)間の変換画像、D(S)ドメインにおけるautoencoderの出力画像、とのそれぞれの入力画像におけるBerhu loss
+          li 潜在変数空間：R-S(D)、S(D)-R間のそれぞれの潜在変数のL2ノルム
+    .item2
+      .text
+        p
+          img(src=`${figpath}Mix_and_match_networks_encoder-decoder_alignment_for_zero-pair_image_translation.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li SceneNetRGBDで実験。提案手法でRGBとdepth間、RGBとsemantic segmentation間を学習したモデルにおけるdepth-to-segmentationの精度をmIoU、global scoreで比較。
+          li ablation studyにより、pooling indicesや各ロス関数の重要性を確認。特にpooling indicesによってmIoUの精度が4%向上。
+          li
+            a(href="https://arxiv.org/abs/1703.10593") Cycle GAN
+            |、
+            a(href="https://arxiv.org/abs/1611.07004") 2xpix2pix
+            |よりも高い精度を達成。
+          li カラートランスファー、スタイルトランスファーでも質の高い画像を生成できることを確認。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li ハイパーパラメタが5つあり、これの調整が結構シビア？
+          li どのドメインを起点とするかで結果の精度は変わる？起点をデプスにすると、情報量がRGBよりもないために、精度が落ちるなどといったことはありえる？
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3617.pdf") 論文
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/Supplemental/3617-supp.pdf") Supplementary material
+          li
+            a(href="https://github.com/yaxingwang/Mix-and-match-networks") GitHub
+          li
+            a(href="https://arxiv.org/abs/1611.07004") 参考 Image-to-image translation with conditional adversarial networks (pix2pix)
+          li
+            a(href="https://arxiv.org/abs/1703.10593") 参考 Unpaired image-to-image translation using cycle-consistent adversarial networks (Cycle GAN)
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.28 03:56:24

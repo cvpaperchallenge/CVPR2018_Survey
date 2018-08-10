@@ -1,0 +1,37 @@
+﻿+slide
+section#ID_PIXOR_Real-time_3D_Object_Detection_from_Point_Clouds
+  .paper-abstract
+    .title PIXOR: Real-time 3D Object Detection from Point Clouds
+    .info
+      .authors Bin Yang, Wenjie Luo, Raquel Urtasun
+      .conference CVPR 2018
+    .slide_editor Yue Qiu
+
+    .item1
+      .text
+        h1 概要
+        ul
+          li 自動運転に用いられるLIDARセンサーの点群に対して，リアルタイムで行える3D検出する手法PIXORの提案．
+          li 新たな3Dデータのコンパクト2D　representationを提案した．提案手法はBEV(Bird’s Eye View)視点の点群を用いてBEVでの高さを1つのchannelとして取り扱う．自動運転に対しての検出タスクでは主に地面上の物体を対象とするため，2D BEV representationが計算コストを節約できるほか，物体間のoverlapがほぼなし．
+          li また， 2D BEV 表示からpixel wiseで検出するネットワーク構造PIXORを提案した．
+    .item2
+      .text
+        p
+          img(src=`${figpath}PIXOR.png`,alt="PIXOR")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li KITTIデータセット及びATG4DデータセットでSoTAな精度を達成した．
+          li BEV視点で観測された点群を2次元CNNにより対応できる新たな3Dデータのrepresentation及びネットワークを提案．こういった構造を用いて，提案手法は高スピード(10FPS)で3D検出が行える．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            p BEV視点の3次元表示が自動運転に使いやすいと感じた．
+          li
+            p
+              a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3012.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.17 14:24:04

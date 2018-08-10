@@ -1,0 +1,32 @@
++slide
+section#ID_Probabilistic_Joint_Face-Skull_Modelling_for_Facial_Reconstruction
+  .paper-abstract
+    .title Probabilistic Joint Face-Skull Modelling for Facial Reconstruction
+    .info
+      .authors Dennis Madsen, Marcel Luthi, Andreas Schneider, Thomas Vetter
+      .conference CVPR 2018
+      .paper_id 3236
+    .slide_editor Kazuki Inoue
+
+    .item1
+      .text
+        h1 概要
+        p 骨格のtissue-depth vector(ランドマークにおける皮膚と骨格のデプス)を用いてMCMCによって顔と骨格の統計的形状モデルの同時分布を推定する手法を提案。顔の統計的形状はPCAによって次元削減したものを使用し、求めるべき同時分布をベイズの定理によって骨格の統計的形状に対する事前分布と顔の事後分布に分ける。骨格の事前分布を30の骨格のCTスキャンを使用することで作成。tissu-depth vectorを用いてGTの骨格と推定された顔形状の交差、対応点の一致度を用いて顔に対する事後分布を推定する。
+    .item2
+      .text
+        p
+          img(src=`${figpath}Probabilistic_Joint_Face-Skull_Modelling_for_Facial_Reconstruction.png`,alt="Item3Image")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        ul
+          li MRI画像、3Dスキャンデータ、写真に対するverificationを行うことで精度を検証し、上位30%程度の精度だった。
+          li 顔に対するPCAの次元数に対する考察を行い、50次元程度に圧縮した場合に最も精度が高くなった。
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/3236.pdf") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.7.16 23:34:25
