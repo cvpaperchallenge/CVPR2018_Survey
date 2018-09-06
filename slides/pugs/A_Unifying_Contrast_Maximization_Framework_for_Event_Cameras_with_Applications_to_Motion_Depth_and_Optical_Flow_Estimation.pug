@@ -1,0 +1,37 @@
++slide
+section#ID_A_Unifying_Contrast_Maximization_Framework_for_Event_Cameras_with_Applications_to_Motion_Depth_and_Optical_Flow_Estimation
+  .paper-abstract
+    .title A Unifying Contrast Maximization Framework for Event Cameras, with Applications to Motion, Depth, and Optical Flow Estimation
+    .info
+      .authors G.Gallego, H.Rebecq, D.Scaramuzza
+      .conference CVPR 2018
+      .paper_id 510
+    .slide_editor Kazuma Asano
+
+    .item1
+      .text
+        h1 概要
+        p リンク集に記載している“Event-based, 6-DOF Pose Tracking for High-Speed Maneuvers using a Dynamic Vision Sensor(DVS)”を用いてオプティカルフロー推定，デプス推定，ローテーション推定，モーション推定などの問題に取り組んだ論文．
+          |本論文ではDVSを用いて，ピクセルごとに急激な変化を起こした点とその軌道を認識する（論文内では“event”と定義）．
+          |その点軌道の速さや動いた距離からデプスやオプティカルフローなどの，様々な問題におけるアルゴリズムを提案して評価している．
+    .item2
+      .text
+        p
+          img(src=`${figpath}180510_1.PNG`,alt="Item3Image")
+          img(src=`${figpath}180510_2.PNG`,alt="Item3Image")
+    .item3
+      .text
+        h1 結果
+        p デプス推定において，従来手法であるコントラストからの推定のほうが精度が高いが，1.1～1.8mの距離においては提案手法の方が精度が高いなど，それぞれの問題において提案手法の得意な所を説明し，提案手法のフレームワークの優位性を説明している．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1804.01306") arxiv
+          li
+            a(href="https://www.youtube.com/watch?v=KFMZFhi-9Aw&feature=youtu.be") 本論文のデモ(Youtube)
+          li
+            a(href="http://rpg.ifi.uzh.ch/docs/IROS14_Mueggler.pdf") Event-based, 6-DOF Pose Tracking for High-Speed Maneuvers using a Dynamic Vision Sensor
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.8.13 14:10:16
