@@ -1,0 +1,35 @@
++slide
+section#ID_Benchmarking_6DOF_Outdoor_Visual_Localization_in_Changing_Conditions
+  .paper-abstract
+    .title Benchmarking 6DOF Outdoor Visual Localization in Changing Conditions
+    .info
+      .authors Torsten Sattler,Will Maddern,Carl Toft,Akihiko Torii,Lars Hammarstrand,Erik Stenborg,Daniel Safari,Masatoshi Okutomi,Marc Pollefeys,Josef Sivic,Fredrik Kahl,Tomas Pajdla
+      .conference CVPR2018
+    .slide_editor Tetsuya Narita
+
+    .item1
+      .text
+        h1 概要
+        p 本稿では，環境が視覚的定位に及ぼす影響を分析するために特別に設計されたベンチマークデータセットを紹介．幅広い条件で撮影されたクエリ画像に対して慎重に作成されたグラウンドトゥースポーズを使用して，最先端のローカリゼーション手法を使用した広範な実験を通じて，様々な要因が6DOFカメラの姿勢推定精度に及ぼす影響を評価．
+    .item2
+      .text
+        p
+          img(src=`${figpath}Benchmarking_6DOF.png`,alt="Benchmarking_6DOF.png")
+    .item3
+      .text
+        h1 新規性・結果・なぜ通ったか？
+        p ・3つのあたらしいベンチマークデータセットを紹介
+          |・Active SearchやCSLなどの構造ベースの方法は，都市環境でのほとんどの条件に対して堅牢．しかし，精度の高い領域でのパフォーマンスは，依然として大幅に改善する必要あり．
+          |・昼間の写真から構築されたデータベースに対して，夜間の画像をローカライズすることは，事前の情報が与えられても非常に困難
+          |・過去の情報が与えられている場合でも，多量の植生がある場面は困難
+          |・SfMは上2つの問題を完全に処理しないが，提案したデータセットは解決する機能のベンチマークを容易に提供．
+          |・DenseVLADなどは，自律運転状況で粗いレベルのポーズ推定値を提供が可能．
+          |・姿勢推定に複数の画像を使用することは明確な利点がある．
+    .item4
+      .text
+        h1 コメント・リンク集
+        ul
+          li
+            a(href="https://arxiv.org/abs/1707.09092") 論文
+    .slide_index #{getSlideIndex()}
+    .timestamp 2018.6.19 16:33:38
